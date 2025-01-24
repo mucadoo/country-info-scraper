@@ -14,6 +14,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class WebScraper {
     public static void main(String[] args) {
@@ -71,6 +73,7 @@ public class WebScraper {
         if (infobox != null) {
             Elements rows = infobox.select("tr");
 
+            boolean areaHeaderFound = false;
             boolean areaFound = false;
 
             for (Element row : rows) {
@@ -78,15 +81,16 @@ public class WebScraper {
                 Element data = row.select("td").first();
 
                 // Check for the Area header
-                if (!areaFound && header != null && header.text().toLowerCase().contains("area")) {
-                    areaFound = true;
+                if (!areaHeaderFound && header != null && header.text().toLowerCase().contains("area")) {
+                    areaHeaderFound = true;
                 }
 
                 // Scrape area information if Area header was found
-                if (areaFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
-                    String area = cleanText(data);
-                    countryInfo.addProperty("area", area);
-                    areaFound = false; // Reset the flag after capturing the area
+                if (!areaFound && areaHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
+                    String areaHtml = data.html();
+                    String area = extractKm2(areaHtml);
+                    countryInfo.addProperty("area_km2", area);
+                    areaFound = true; // Reset the flag after capturing the area
                 }
 
                 if (header != null && data != null) {
@@ -139,25 +143,25 @@ public class WebScraper {
                 }
 
                 // Scrape flag and emblem images
-//                Elements imageCells = row.select("td.infobox-image");
-//                for (Element cell : imageCells) {
-//                    Elements images = cell.select("img");
-//                    for (Element img : images) {
-//                        String imgUrl = "https:" + img.attr("src");
-//                        Element parentDiv = img.closest("div");
-//                        if (parentDiv != null) {
-//                            Element descriptionDiv = parentDiv.nextElementSibling();
-//                            if (descriptionDiv != null) {
-//                                String description = descriptionDiv.text().toLowerCase();
-//                                if (description.contains("flag")) {
-//                                    countryInfo.addProperty("flagUrl", imgUrl);
-//                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
-//                                    countryInfo.addProperty("emblemUrl", imgUrl);
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
+                Elements imageCells = row.select("td.infobox-image");
+                for (Element cell : imageCells) {
+                    Elements images = cell.select("img");
+                    for (Element img : images) {
+                        String imgUrl = "https:" + img.attr("src");
+                        Element parentDiv = img.closest("div");
+                        if (parentDiv != null) {
+                            Element descriptionDiv = parentDiv.nextElementSibling();
+                            if (descriptionDiv != null) {
+                                String description = descriptionDiv.text().toLowerCase();
+                                if (description.contains("flag")) {
+                                    countryInfo.addProperty("flagUrl", imgUrl);
+                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
+                                    countryInfo.addProperty("emblemUrl", imgUrl);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -176,5 +180,15 @@ public class WebScraper {
         element.select("sup").remove(); // Remove sup elements
         element.select(".geo-inline").remove(); // Remove coordinates
         return element.text();
+    }
+
+    // Method to extract area in km² from HTML string
+    private static String extractKm2(String html) {
+        Pattern pattern = Pattern.compile("([0-9,]+)&nbsp;km<sup>2</sup>");
+        Matcher matcher = pattern.matcher(html);
+        if (matcher.find()) {
+            return matcher.group(1).replace(",", "") + " km²";
+        }
+        return "";
     }
 }

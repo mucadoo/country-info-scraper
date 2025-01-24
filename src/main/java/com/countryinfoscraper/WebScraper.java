@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import com.google.gson.JsonObject;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -45,14 +46,16 @@ public class WebScraper {
                 }
             }
 
-            // Convert the list of countries to JSON
-            String json = new Gson().toJson(countries);
+            // Create a Gson instance with pretty printing
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            // Convert the list of countries to pretty-printed JSON
+            String json = gson.toJson(countries);
 
             // Write JSON to file
             Path path = Paths.get("src/main/resources/countries.json");
             Files.createDirectories(path.getParent());
             Files.write(path, json.getBytes());
-            System.out.println("JSON file generated at: " + path.toAbsolutePath());
+            System.out.println("Pretty-printed JSON file generated at: " + path.toAbsolutePath());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -76,43 +79,49 @@ public class WebScraper {
 
                     switch (headerText) {
                         case "Capital":
-                            countryInfo.addProperty("capital", data.text());
+                        case "Capital and largest city":
+                            String capital = data.select("a").first().text();
+                            countryInfo.addProperty("capital", capital);
+                            if (headerText.contains("Capital and largest city")) {
+                                countryInfo.addProperty("largest_city", capital);
+                            }
+                            break;
+                        case "Largest city":
+                            String largestCity = data.select("a").first().text();
+                            countryInfo.addProperty("largest_city", largestCity);
                             break;
                         case "Official languages":
-                            countryInfo.addProperty("official_languages", data.text());
-                            break;
-                        case "Ethnic groups":
-                            countryInfo.addProperty("ethnic_groups", data.text());
+                            countryInfo.addProperty("official_languages", cleanText(data));
                             break;
                         case "Religion":
-                            countryInfo.addProperty("religion", data.text());
+                            countryInfo.addProperty("religion", cleanText(data));
                             break;
                         case "Currency":
-                            countryInfo.addProperty("currency", data.text());
+                            countryInfo.addProperty("currency", cleanText(data));
                             break;
                         case "Time zone":
-                            countryInfo.addProperty("time_zone", data.text());
+                            countryInfo.addProperty("time_zone", cleanText(data));
                             break;
                         case "Population":
-                            countryInfo.addProperty("population", data.text());
+                            countryInfo.addProperty("population", cleanText(data));
                             break;
                         case "GDP":
-                            countryInfo.addProperty("GDP", data.text());
+                            countryInfo.addProperty("GDP", cleanText(data));
                             break;
                         case "HDI":
-                            countryInfo.addProperty("HDI", data.text());
+                            countryInfo.addProperty("HDI", cleanText(data));
                             break;
                         case "Drives on":
-                            countryInfo.addProperty("drives_on", data.text());
+                            countryInfo.addProperty("drives_on", cleanText(data));
                             break;
                         case "ISO 3166 code":
-                            countryInfo.addProperty("ISO_code", data.text());
+                            countryInfo.addProperty("ISO_code", cleanText(data));
                             break;
                         case "Internet TLD":
-                            countryInfo.addProperty("internet_TLD", data.text());
+                            countryInfo.addProperty("internet_TLD", cleanText(data));
                             break;
+                        // Add more cases as needed
                         default:
-                            // Handle other headers similarly if needed
                             break;
                     }
 
@@ -140,10 +149,17 @@ public class WebScraper {
         // Scrape the country description
         Element pElement = infobox.nextElementSibling();
         if (pElement != null && pElement.tagName().equals("p")) {
-            String description = pElement.text();
+            String description = cleanText(pElement);
             countryInfo.addProperty("description", description);
         }
 
         return countryInfo;
+    }
+
+    // Method to clean text from unnecessary elements like superscripts and coordinates
+    private static String cleanText(Element element) {
+        element.select("sup").remove(); // Remove sup elements
+        element.select(".geo-inline").remove(); // Remove coordinates
+        return element.text();
     }
 }

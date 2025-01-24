@@ -1,5 +1,7 @@
 [
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/125px-Flag_of_the_Taliban.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Arms_of_the_Islamic_Emirate_of_Afghanistan.svg/85px-Arms_of_the_Islamic_Emirate_of_Afghanistan.svg.png",
     "capital": "Kabul",
     "largest_city": "Kabul",
     "official_languages": "Pashto Dari",
@@ -12,6 +14,8 @@
     "name": "Afghanistan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/125px-Flag_of_Albania.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_arms_of_Albania.svg/60px-Coat_of_arms_of_Albania.svg.png",
     "capital": "Tirana",
     "largest_city": "Tirana",
     "official_languages": "Albanian",
@@ -24,6 +28,8 @@
     "name": "Albania"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/125px-Flag_of_Algeria.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Emblem_Of_Algeria.svg/85px-Emblem_Of_Algeria.svg.png",
     "capital": "Algiers",
     "largest_city": "Algiers",
     "official_languages": "Arabic Berber",
@@ -36,6 +42,8 @@
     "name": "Algeria"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/125px-Flag_of_Andorra.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coat_of_arms_of_Andorra.svg/85px-Coat_of_arms_of_Andorra.svg.png",
     "capital": "Andorra la Vella",
     "largest_city": "Andorra la Vella",
     "official_languages": "Catalan",
@@ -48,6 +56,8 @@
     "name": "Andorra"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/125px-Flag_of_Angola.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Emblem_of_Angola.svg/85px-Emblem_of_Angola.svg.png",
     "capital": "Luanda",
     "largest_city": "Luanda",
     "currency": "Angolan kwanza (AOA)",
@@ -59,6 +69,8 @@
     "name": "Angola"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/125px-Flag_of_Antigua_and_Barbuda.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coat_of_arms_of_Antigua_and_Barbuda.svg/85px-Coat_of_arms_of_Antigua_and_Barbuda.svg.png",
     "capital": "St. John\u0027s",
     "largest_city": "St. John\u0027s",
     "currency": "East Caribbean dollar (XCD)",
@@ -70,6 +82,8 @@
     "name": "Antigua and Barbuda"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/125px-Flag_of_Argentina.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Coat_of_arms_of_Argentina.svg/80px-Coat_of_arms_of_Argentina.svg.png",
     "capital": "Buenos Aires",
     "largest_city": "Buenos Aires",
     "official_languages": "Spanish (de facto)",
@@ -82,6 +96,8 @@
     "name": "Argentina"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/125px-Flag_of_Armenia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Coat_of_arms_of_Armenia.svg/85px-Coat_of_arms_of_Armenia.svg.png",
     "capital": "Yerevan",
     "largest_city": "Yerevan",
     "official_languages": "Armenian",
@@ -94,6 +110,8 @@
     "name": "Armenia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/125px-Flag_of_Australia_%28converted%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Coat_of_Arms_of_Australia.svg/85px-Coat_of_Arms_of_Australia.svg.png",
     "capital": "Canberra",
     "largest_city": "Sydney",
     "currency": "Australian dollar ($) (AUD)",
@@ -105,6 +123,8 @@
     "name": "Australia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/125px-Flag_of_Austria.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Austria_Bundesadler.svg/85px-Austria_Bundesadler.svg.png",
     "capital": "Vienna",
     "largest_city": "Vienna",
     "official_languages": "German",
@@ -116,6 +136,8 @@
     "name": "Austria"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/125px-Flag_of_Azerbaijan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Emblem_of_Azerbaijan.svg/85px-Emblem_of_Azerbaijan.svg.png",
     "capital": "Baku",
     "largest_city": "Baku",
     "official_languages": "Azerbaijani",
@@ -127,6 +149,8 @@
     "name": "Azerbaijan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/125px-Flag_of_the_Bahamas.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Coat_of_arms_of_the_Bahamas.svg/75px-Coat_of_arms_of_the_Bahamas.svg.png",
     "capital": "Nassau",
     "largest_city": "Nassau",
     "official_languages": "English",
@@ -139,6 +163,8 @@
     "name": "Bahamas, The"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/125px-Flag_of_Bahrain.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Coat_of_Arms_of_The_Kingdom_of_Bahrain.svg/95px-Coat_of_Arms_of_The_Kingdom_of_Bahrain.svg.png",
     "capital": "Manama",
     "largest_city": "Manama",
     "currency": "Bahraini dinar (BHD)",
@@ -150,6 +176,8 @@
     "name": "Bahrain"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/125px-Flag_of_Bangladesh.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/National_emblem_of_Bangladesh.svg/85px-National_emblem_of_Bangladesh.svg.png",
     "capital": "Dhaka",
     "largest_city": "Dhaka",
     "currency": "Taka (৳) (BDT)",
@@ -160,6 +188,8 @@
     "name": "Bangladesh"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/125px-Flag_of_Barbados.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Coat_of_arms_of_Barbados_%283%29.svg/85px-Coat_of_arms_of_Barbados_%283%29.svg.png",
     "capital": "Bridgetown",
     "largest_city": "Bridgetown",
     "official_languages": "English",
@@ -172,6 +202,8 @@
     "name": "Barbados"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/125px-Flag_of_Belarus.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Coat_of_arms_of_Belarus_%282020%E2%80%93present%29.svg/85px-Coat_of_arms_of_Belarus_%282020%E2%80%93present%29.svg.png",
     "capital": "Minsk",
     "largest_city": "Minsk",
     "official_languages": "Belarusian Russian",
@@ -184,6 +216,8 @@
     "name": "Belarus"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/125px-Flag_of_Belgium.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Great_coat_of_arms_of_Belgium.svg/85px-Great_coat_of_arms_of_Belgium.svg.png",
     "capital": "City of Brussels",
     "largest_city": "Brussels-Capital Region",
     "official_languages": "Dutch French German",
@@ -196,6 +230,8 @@
     "name": "Belgium"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/125px-Flag_of_Belize.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coat_of_arms_of_Belize.svg/85px-Coat_of_arms_of_Belize.svg.png",
     "capital": "Belmopan",
     "largest_city": "Belize City",
     "official_languages": "English",
@@ -208,6 +244,8 @@
     "name": "Belize"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/125px-Flag_of_Benin.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Coat_of_arms_of_Benin.svg/85px-Coat_of_arms_of_Benin.svg.png",
     "capital": "Porto-Novo",
     "largest_city": "Cotonou",
     "official_languages": "French",
@@ -220,6 +258,8 @@
     "name": "Benin"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/125px-Flag_of_Bhutan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Emblem_of_Bhutan.svg/90px-Emblem_of_Bhutan.svg.png",
     "capital": "Thimphu",
     "largest_city": "Thimphu",
     "official_languages": "Dzongkha",
@@ -231,6 +271,8 @@
     "name": "Bhutan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_Bolivia_%28state%29.svg/125px-Flag_of_Bolivia_%28state%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Escudo_de_Bolivia.svg/100px-Escudo_de_Bolivia.svg.png",
     "capital": "Sucre",
     "largest_city": "Santa Cruz de la Sierra",
     "official_languages": "Spanish Quechua Aymara Guarani Other Indigenous languages",
@@ -243,6 +285,8 @@
     "name": "Bolivia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/130px-Flag_of_Bosnia_and_Herzegovina.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Coat_of_arms_of_Bosnia_and_Herzegovina.svg/65px-Coat_of_arms_of_Bosnia_and_Herzegovina.svg.png",
     "capital": "Sarajevo",
     "largest_city": "Sarajevo",
     "official_languages": "Bosnian Serbian Croatian",
@@ -255,6 +299,8 @@
     "name": "Bosnia and Herzegovina"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/125px-Flag_of_Botswana.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Coat_of_arms_of_Botswana.svg/90px-Coat_of_arms_of_Botswana.svg.png",
     "capital": "Gaborone",
     "largest_city": "Gaborone",
     "official_languages": "English",
@@ -267,6 +313,8 @@
     "name": "Botswana"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/125px-Flag_of_Brazil.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Coat_of_arms_of_Brazil.svg/85px-Coat_of_arms_of_Brazil.svg.png",
     "capital": "Brasília",
     "largest_city": "São Paulo",
     "currency": "Real (R$) (BRL)",
@@ -278,6 +326,8 @@
     "name": "Brazil"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/125px-Flag_of_Brunei.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Emblem_of_Brunei.svg/85px-Emblem_of_Brunei.svg.png",
     "capital": "Bandar Seri Begawan",
     "largest_city": "Bandar Seri Begawan",
     "currency": "Brunei dollar (BND)",
@@ -289,6 +339,8 @@
     "name": "Brunei"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/125px-Flag_of_Bulgaria.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coat_of_arms_of_Bulgaria.svg/100px-Coat_of_arms_of_Bulgaria.svg.png",
     "capital": "Sofia",
     "largest_city": "Sofia",
     "official_languages": "Bulgarian",
@@ -300,6 +352,8 @@
     "name": "Bulgaria"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/125px-Flag_of_Burkina_Faso.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Coat_of_arms_of_Burkina_Faso.svg/85px-Coat_of_arms_of_Burkina_Faso.svg.png",
     "capital": "Ouagadougou",
     "largest_city": "Ouagadougou",
     "official_languages": "Mooré Bissa Dyula Fula",
@@ -312,6 +366,8 @@
     "name": "Burkina Faso"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/125px-Flag_of_Burundi.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Coat_of_arms_of_Burundi.svg/85px-Coat_of_arms_of_Burundi.svg.png",
     "capital": "Gitega",
     "largest_city": "Bujumbura",
     "official_languages": "Kirundi French English Swahili",
@@ -325,6 +381,8 @@
     "name": "Burundi"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/125px-Flag_of_Cambodia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Royal_arms_of_Cambodia.svg/85px-Royal_arms_of_Cambodia.svg.png",
     "capital": "Phnom Penh",
     "largest_city": "Phnom Penh",
     "official_languages": "Khmer",
@@ -335,6 +393,8 @@
     "name": "Cambodia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/125px-Flag_of_Cameroon.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Coat_of_arms_of_Cameroon.svg/85px-Coat_of_arms_of_Cameroon.svg.png",
     "capital": "Yaoundé",
     "largest_city": "Douala",
     "official_languages": "English • French",
@@ -347,6 +407,8 @@
     "name": "Cameroon"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/125px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Coat_of_arms_of_Canada.svg/85px-Coat_of_arms_of_Canada.svg.png",
     "capital": "Ottawa",
     "largest_city": "Toronto",
     "official_languages": "English French",
@@ -357,6 +419,8 @@
     "name": "Canada"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/125px-Flag_of_Cape_Verde.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coat_of_arms_of_Cape_Verde.svg/85px-Coat_of_arms_of_Cape_Verde.svg.png",
     "capital": "Praia",
     "largest_city": "Praia",
     "official_languages": "Portuguese",
@@ -369,6 +433,8 @@
     "name": "Cape Verde"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/125px-Flag_of_the_Central_African_Republic.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Coat_of_arms_of_the_Central_African_Republic.svg/85px-Coat_of_arms_of_the_Central_African_Republic.svg.png",
     "capital": "Bangui",
     "largest_city": "Bangui",
     "official_languages": "French · Sango (co-official)",
@@ -382,6 +448,8 @@
     "name": "Central African Republic"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/125px-Flag_of_Chad.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coat_of_arms_of_Chad.svg/85px-Coat_of_arms_of_Chad.svg.png",
     "capital": "N\u0027Djamena",
     "largest_city": "N\u0027Djamena",
     "official_languages": "Arabic French",
@@ -394,6 +462,8 @@
     "name": "Chad"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/125px-Flag_of_Chile.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Coat_of_arms_of_Chile_%28c%29.svg/115px-Coat_of_arms_of_Chile_%28c%29.svg.png",
     "capital": "Santiago",
     "largest_city": "Santiago",
     "currency": "Chilean peso (CLP)",
@@ -404,6 +474,8 @@
     "name": "Chile"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/125px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/National_Emblem_of_the_People%27s_Republic_of_China_%282%29.svg/85px-National_Emblem_of_the_People%27s_Republic_of_China_%282%29.svg.png",
     "capital": "Beijing",
     "official_languages": "Standard Chinese (de facto)",
     "currency": "Renminbi (元/¥) (CNY)",
@@ -414,6 +486,8 @@
     "name": "China"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/125px-Flag_of_Colombia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Coat_of_arms_of_Colombia.svg/85px-Coat_of_arms_of_Colombia.svg.png",
     "capital": "Bogotá",
     "largest_city": "Bogotá",
     "official_languages": "Spanish",
@@ -426,6 +500,7 @@
     "name": "Colombia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/125px-Flag_of_the_Comoros.svg.png",
     "capital": "Moroni",
     "largest_city": "Moroni",
     "official_languages": "Comorian French Arabic",
@@ -438,6 +513,8 @@
     "name": "Comoros"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/125px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Coat_of_arms_of_the_Democratic_Republic_of_the_Congo_%28black_spear%29.svg/90px-Coat_of_arms_of_the_Democratic_Republic_of_the_Congo_%28black_spear%29.svg.png",
     "capital": "Kinshasa",
     "largest_city": "Kinshasa",
     "official_languages": "French",
@@ -450,6 +527,8 @@
     "name": "Congo, Democratic Republic of the"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/125px-Flag_of_the_Republic_of_the_Congo.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Coat_of_arms_of_the_Republic_of_the_Congo.svg/85px-Coat_of_arms_of_the_Republic_of_the_Congo.svg.png",
     "capital": "Brazzaville",
     "largest_city": "Brazzaville",
     "official_languages": "French",
@@ -462,6 +541,8 @@
     "name": "Congo, Republic of the"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/125px-Flag_of_Costa_Rica.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coat_of_arms_of_Costa_Rica.svg/85px-Coat_of_arms_of_Costa_Rica.svg.png",
     "capital": "San José",
     "largest_city": "San José",
     "official_languages": "Spanish",
@@ -474,6 +555,8 @@
     "name": "Costa Rica"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/125px-Flag_of_Croatia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Coat_of_arms_of_Croatia.svg/70px-Coat_of_arms_of_Croatia.svg.png",
     "capital": "Zagreb",
     "largest_city": "Zagreb",
     "official_languages": "Croatian",
@@ -485,6 +568,8 @@
     "name": "Croatia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/125px-Flag_of_Cuba.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Coat_of_arms_of_Cuba.svg/85px-Coat_of_arms_of_Cuba.svg.png",
     "capital": "Havana",
     "largest_city": "Havana",
     "official_languages": "Spanish",
@@ -496,6 +581,8 @@
     "name": "Cuba"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/125px-Flag_of_Cyprus.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Cyprus_%282006%29.svg/90px-Coat_of_arms_of_Cyprus_%282006%29.svg.png",
     "capital": "Nicosia",
     "largest_city": "Nicosia",
     "official_languages": "Greek Turkish",
@@ -509,6 +596,8 @@
     "name": "Cyprus"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/125px-Flag_of_the_Czech_Republic.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Coat_of_arms_of_the_Czech_Republic.svg/80px-Coat_of_arms_of_the_Czech_Republic.svg.png",
     "capital": "Prague",
     "largest_city": "Prague",
     "currency": "Czech koruna (CZK)",
@@ -520,6 +609,8 @@
     "name": "Czech Republic"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/125px-Flag_of_Denmark.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Royal_coat_of_arms_of_Denmark_%282024%29.svg/85px-Royal_coat_of_arms_of_Denmark_%282024%29.svg.png",
     "capital": "Copenhagen",
     "largest_city": "Copenhagen",
     "official_languages": "Danish Faroese Greenlandic",
@@ -531,6 +622,8 @@
     "name": "Denmark"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/125px-Flag_of_Djibouti.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Emblem_of_Djibouti.svg/85px-Emblem_of_Djibouti.svg.png",
     "capital": "Djibouti City",
     "largest_city": "Djibouti",
     "official_languages": "Arabic French",
@@ -545,6 +638,8 @@
     "name": "Djibouti"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/125px-Flag_of_Dominica.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Coat_of_arms_of_Dominica.svg/95px-Coat_of_arms_of_Dominica.svg.png",
     "capital": "Roseau",
     "largest_city": "Roseau",
     "official_languages": "English",
@@ -557,6 +652,8 @@
     "name": "Dominica"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/125px-Flag_of_the_Dominican_Republic.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/85px-Coat_of_arms_of_the_Dominican_Republic.svg.png",
     "capital": "Santo Domingo",
     "largest_city": "Santo Domingo",
     "official_languages": "Spanish",
@@ -569,6 +666,8 @@
     "name": "Dominican Republic"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/125px-Flag_of_East_Timor.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Coat_of_arms_of_East_Timor.svg/85px-Coat_of_arms_of_East_Timor.svg.png",
     "capital": "Dili",
     "largest_city": "Dili",
     "official_languages": "Portuguese Tetum",
@@ -581,6 +680,8 @@
     "name": "East Timor"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/125px-Flag_of_Ecuador.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Coat_of_arms_of_Ecuador.svg/85px-Coat_of_arms_of_Ecuador.svg.png",
     "capital": "Quito",
     "largest_city": "Guayaquil",
     "official_languages": "Spanish",
@@ -592,6 +693,8 @@
     "name": "Ecuador"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/125px-Flag_of_Egypt.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Coat_of_arms_of_Egypt_%28Official%29.svg/75px-Coat_of_arms_of_Egypt_%28Official%29.svg.png",
     "capital": "Cairo",
     "largest_city": "Cairo",
     "official_languages": "Arabic",
@@ -605,6 +708,8 @@
     "name": "Egypt"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/125px-Flag_of_El_Salvador.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Coat_of_arms_of_El_Salvador.svg/85px-Coat_of_arms_of_El_Salvador.svg.png",
     "capital": "San Salvador",
     "largest_city": "San Salvador",
     "official_languages": "Spanish",
@@ -617,6 +722,8 @@
     "name": "El Salvador"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/125px-Flag_of_Equatorial_Guinea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Coat_of_arms_of_Equatorial_Guinea.svg/85px-Coat_of_arms_of_Equatorial_Guinea.svg.png",
     "capital": "Malabo",
     "largest_city": "Bata",
     "official_languages": "Spanish French Portuguese Italian",
@@ -629,6 +736,8 @@
     "name": "Equatorial Guinea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/125px-Flag_of_Eritrea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Emblem_of_Eritrea_%28or_argent_azur%29.svg/85px-Emblem_of_Eritrea_%28or_argent_azur%29.svg.png",
     "capital": "Asmara",
     "largest_city": "Asmara",
     "official_languages": "None",
@@ -641,6 +750,8 @@
     "name": "Eritrea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/125px-Flag_of_Estonia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Coat_of_arms_of_Estonia.svg/88px-Coat_of_arms_of_Estonia.svg.png",
     "capital": "Tallinn",
     "largest_city": "Tallinn",
     "currency": "Euro (€) (EUR)",
@@ -651,6 +762,8 @@
     "name": "Estonia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/125px-Flag_of_Eswatini.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Coat_of_arms_of_Eswatini.svg/90px-Coat_of_arms_of_Eswatini.svg.png",
     "capital": "Mbabane",
     "largest_city": "Mbabane",
     "official_languages": "Swazi English",
@@ -662,6 +775,8 @@
     "name": "Eswatini"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/125px-Flag_of_Ethiopia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Emblem_of_Ethiopia.svg/85px-Emblem_of_Ethiopia.svg.png",
     "capital": "Addis Ababa",
     "largest_city": "Addis Ababa",
     "official_languages": "Amharic Afar Oromo Somali Tigrinya",
@@ -674,6 +789,8 @@
     "name": "Ethiopia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/125px-Flag_of_Fiji.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Coat_of_arms_of_Fiji.svg/85px-Coat_of_arms_of_Fiji.svg.png",
     "capital": "Suva",
     "largest_city": "Suva",
     "official_languages": "English Fijian Fiji Hindi",
@@ -687,6 +804,8 @@
     "name": "Fiji"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/125px-Flag_of_Finland.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Coat_of_arms_of_Finland_2.svg/75px-Coat_of_arms_of_Finland_2.svg.png",
     "capital": "Helsinki",
     "largest_city": "Helsinki",
     "official_languages": "Finnish Swedish",
@@ -698,16 +817,20 @@
     "name": "Finland"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/125px-Flag_of_France.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Arms_of_the_French_Republic.svg/75px-Arms_of_the_French_Republic.svg.png",
     "capital": "Paris",
     "largest_city": "Paris",
     "currency": "Euro (€) (EUR) CFP franc (XPF)",
     "time_zone": "UTC+1 (CET)",
     "ISO_code": "FR",
     "internet_TLD": ".fr",
-    "description": "France, officially the French Republic, is a country located primarily in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many islands in Oceania and the Indian Ocean, giving it one of the largest discontiguous exclusive economic zones in the world. Metropolitan France shares borders with Belgium and Luxembourg to the north, Germany to the northeast, Switzerland to the east, Italy and Monaco to the southeast, Andorra and Spain to the south, and a maritime border with the United Kingdom to the northwest. Its metropolitan area extends from the Rhine to the Atlantic Ocean and from the Mediterranean Sea to the English Channel and the North Sea. Its eighteen integral regions—five of which are overseas—span a combined area of 643,801 km (248,573 sq mi) and have a total population of nearly 68.4 million as of January 2024. France is a semi-presidential republic and its capital is Paris, which is also the country\u0027s largest city and main cultural and economic centre.",
+    "description": "France, officially the French Republic, is a country located primarily in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many islands in Oceania and the Indian Ocean, giving it one of the largest discontiguous exclusive economic zones in the world. Metropolitan France shares borders with Belgium and Luxembourg to the north, Germany to the northeast, Switzerland to the east, Italy and Monaco to the southeast, Andorra and Spain to the south, and a maritime border with the United Kingdom to the northwest. Its metropolitan area extends from the Rhine to the Atlantic Ocean and from the Mediterranean Sea to the English Channel and the North Sea. Its eighteen integral regions—five of which are overseas—span a combined area of 643,801 km (248,573 sq mi) and have a total population of nearly 68.4 million as of January 2024. France is a semi-presidential republic with its capital in Paris, the country\u0027s largest city and main cultural and economic centre.",
     "name": "France"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/125px-Flag_of_Gabon.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Coat_of_arms_of_Gabon.svg/90px-Coat_of_arms_of_Gabon.svg.png",
     "capital": "Libreville",
     "largest_city": "Libreville",
     "official_languages": "French",
@@ -721,6 +844,8 @@
     "name": "Gabon"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/125px-Flag_of_The_Gambia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Coat_of_arms_of_The_Gambia.svg/85px-Coat_of_arms_of_The_Gambia.svg.png",
     "capital": "Banjul",
     "official_languages": "English",
     "currency": "Gambian dalasi (GMD)",
@@ -732,6 +857,8 @@
     "name": "Gambia, The"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/125px-Flag_of_Georgia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Greater_coat_of_arms_of_Georgia.svg/95px-Greater_coat_of_arms_of_Georgia.svg.png",
     "capital": "Tbilisi",
     "largest_city": "Tbilisi",
     "official_languages": "Georgian",
@@ -744,6 +871,8 @@
     "name": "Georgia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/125px-Flag_of_Germany.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/80px-Coat_of_arms_of_Germany.svg.png",
     "capital": "Berlin",
     "largest_city": "Berlin",
     "official_languages": "German",
@@ -756,6 +885,8 @@
     "name": "Germany"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/125px-Flag_of_Ghana.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Coat_of_arms_of_Ghana.svg/90px-Coat_of_arms_of_Ghana.svg.png",
     "capital": "Accra",
     "largest_city": "Accra",
     "official_languages": "English",
@@ -768,6 +899,8 @@
     "name": "Ghana"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/125px-Flag_of_Greece.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Coat_of_arms_of_Greece.svg/90px-Coat_of_arms_of_Greece.svg.png",
     "capital": "Athens",
     "largest_city": "Athens",
     "currency": "Euro (€) (EUR)",
@@ -779,6 +912,8 @@
     "name": "Greece"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/125px-Flag_of_Grenada.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Coat_of_arms_of_Grenada.svg/85px-Coat_of_arms_of_Grenada.svg.png",
     "capital": "St. George\u0027s",
     "largest_city": "St. George\u0027s",
     "official_languages": "English",
@@ -791,6 +926,8 @@
     "name": "Grenada"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/125px-Flag_of_Guatemala.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coat_of_arms_of_Guatemala.svg/85px-Coat_of_arms_of_Guatemala.svg.png",
     "capital": "Guatemala City",
     "largest_city": "Guatemala City",
     "official_languages": "Spanish",
@@ -803,6 +940,8 @@
     "name": "Guatemala"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/125px-Flag_of_Guinea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Coat_of_Arms_of_Guinea.svg/85px-Coat_of_Arms_of_Guinea.svg.png",
     "capital": "Conakry",
     "largest_city": "Conakry",
     "official_languages": "French",
@@ -815,6 +954,8 @@
     "name": "Guinea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/125px-Flag_of_Guinea-Bissau.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Coat_of_arms_of_Guinea-Bissau_%28variant%29.svg/80px-Coat_of_arms_of_Guinea-Bissau_%28variant%29.svg.png",
     "capital": "Bissau",
     "largest_city": "Bissau",
     "official_languages": "Portuguese",
@@ -827,6 +968,8 @@
     "name": "Guinea-Bissau"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/125px-Flag_of_Guyana.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Coat_of_arms_of_Guyana.svg/85px-Coat_of_arms_of_Guyana.svg.png",
     "capital": "Georgetown",
     "largest_city": "Georgetown",
     "official_languages": "English",
@@ -839,6 +982,8 @@
     "name": "Guyana"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/125px-Flag_of_Haiti.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Coat_of_arms_of_Haiti.svg/85px-Coat_of_arms_of_Haiti.svg.png",
     "capital": "Port-au-Prince",
     "largest_city": "Port-au-Prince",
     "official_languages": "French Haitian Creole",
@@ -852,6 +997,8 @@
     "name": "Haiti"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/125px-Flag_of_Honduras.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Coat_of_arms_of_Honduras.svg/75px-Coat_of_arms_of_Honduras.svg.png",
     "capital": "Tegucigalpa",
     "largest_city": "Tegucigalpa",
     "official_languages": "Spanish",
@@ -864,6 +1011,8 @@
     "name": "Honduras"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/125px-Flag_of_Hungary.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/50px-Coat_of_arms_of_Hungary.svg.png",
     "capital": "Budapest",
     "largest_city": "Budapest",
     "official_languages": "Hungarian",
@@ -875,6 +1024,8 @@
     "name": "Hungary"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/125px-Flag_of_Iceland.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Coat_of_arms_of_Iceland.svg/90px-Coat_of_arms_of_Iceland.svg.png",
     "capital": "Reykjavík",
     "largest_city": "Reykjavík",
     "currency": "Icelandic króna (ISK)",
@@ -886,6 +1037,8 @@
     "name": "Iceland"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/125px-Flag_of_India.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/60px-Emblem_of_India.svg.png",
     "capital": "New Delhi",
     "official_languages": "Hindi English",
     "currency": "Indian rupee (₹) (INR)",
@@ -897,6 +1050,8 @@
     "name": "India"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/125px-Flag_of_Indonesia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/National_emblem_of_Indonesia_Garuda_Pancasila.svg/85px-National_emblem_of_Indonesia_Garuda_Pancasila.svg.png",
     "capital": "Jakarta",
     "largest_city": "Jakarta",
     "official_languages": "Indonesian",
@@ -910,6 +1065,8 @@
     "name": "Indonesia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_Iran_%28official%29.svg/125px-Flag_of_Iran_%28official%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Emblem_of_Iran.svg/85px-Emblem_of_Iran.svg.png",
     "capital": "Tehran",
     "largest_city": "Tehran",
     "official_languages": "Persian",
@@ -920,6 +1077,8 @@
     "name": "Iran"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/125px-Flag_of_Iraq.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Coat_of_arms_of_Iraq.svg/80px-Coat_of_arms_of_Iraq.svg.png",
     "capital": "Baghdad",
     "largest_city": "Baghdad",
     "official_languages": "Arabic Kurdish",
@@ -932,6 +1091,8 @@
     "name": "Iraq"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/130px-Flag_of_Ireland.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Coat_of_arms_of_Ireland.svg/65px-Coat_of_arms_of_Ireland.svg.png",
     "capital": "Dublin",
     "largest_city": "Dublin",
     "official_languages": "Irish English",
@@ -944,6 +1105,8 @@
     "name": "Ireland"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/125px-Flag_of_Israel.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Emblem_of_Israel.svg/80px-Emblem_of_Israel.svg.png",
     "capital": "Jerusalem",
     "largest_city": "Jerusalem",
     "currency": "New shekel (₪) (ILS)",
@@ -955,6 +1118,8 @@
     "name": "Israel"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/125px-Flag_of_Italy.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Emblem_of_Italy.svg/85px-Emblem_of_Italy.svg.png",
     "capital": "Rome",
     "largest_city": "Rome",
     "official_languages": "Italian",
@@ -966,6 +1131,8 @@
     "name": "Italy"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/125px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Coat_of_Arms_of_the_Ivory_Coast.svg/100px-Coat_of_Arms_of_the_Ivory_Coast.svg.png",
     "capital": "Yamoussoukro",
     "largest_city": "Abidjan",
     "official_languages": "French",
@@ -978,6 +1145,8 @@
     "name": "Ivory Coast"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/125px-Flag_of_Jamaica.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Coat_of_arms_of_Jamaica.svg/80px-Coat_of_arms_of_Jamaica.svg.png",
     "capital": "Kingston",
     "largest_city": "Kingston",
     "official_languages": "English",
@@ -992,6 +1161,7 @@
     "name": "Jamaica"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/125px-Flag_of_Japan.svg.png",
     "capital": "Tokyo",
     "largest_city": "Tokyo",
     "currency": "Japanese yen (¥)",
@@ -1003,6 +1173,8 @@
     "name": "Japan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/125px-Flag_of_Jordan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Coat_of_arms_of_Jordan.svg/75px-Coat_of_arms_of_Jordan.svg.png",
     "capital": "Amman",
     "largest_city": "Amman",
     "official_languages": "Arabic",
@@ -1017,6 +1189,8 @@
     "name": "Jordan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/135px-Flag_of_Kazakhstan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Emblem_of_Kazakhstan_3d.svg/85px-Emblem_of_Kazakhstan_3d.svg.png",
     "capital": "Astana",
     "largest_city": "Almaty",
     "official_languages": "Kazakh Russian",
@@ -1029,6 +1203,8 @@
     "name": "Kazakhstan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/125px-Flag_of_Kenya.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/85px-Coat_of_arms_of_Kenya_%28Official%29.svg.png",
     "capital": "Nairobi",
     "largest_city": "Nairobi",
     "official_languages": "Swahili English",
@@ -1041,6 +1217,8 @@
     "name": "Kenya"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/125px-Flag_of_Kiribati.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Coat_of_arms_of_Kiribati.svg/85px-Coat_of_arms_of_Kiribati.svg.png",
     "capital": "Tarawa",
     "largest_city": "South Tarawa",
     "official_languages": "English Gilbertese",
@@ -1053,6 +1231,8 @@
     "name": "Kiribati"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/125px-Flag_of_Kuwait.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/State_of_Kuwait_Logo.svg/85px-State_of_Kuwait_Logo.svg.png",
     "capital": "Kuwait City",
     "largest_city": "Kuwait City",
     "official_languages": "Arabic",
@@ -1065,6 +1245,8 @@
     "name": "Kuwait"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/125px-Flag_of_Kyrgyzstan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Emblem_of_Kyrgyzstan.svg/85px-Emblem_of_Kyrgyzstan.svg.png",
     "capital": "Bishkek",
     "largest_city": "Bishkek",
     "official_languages": "Kyrgyz (state) Russian (official)",
@@ -1077,6 +1259,8 @@
     "name": "Kyrgyzstan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/125px-Flag_of_Laos.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Emblem_of_Laos.svg/90px-Emblem_of_Laos.svg.png",
     "capital": "Vientiane",
     "largest_city": "Vientiane",
     "official_languages": "Lao",
@@ -1090,6 +1274,8 @@
     "name": "Laos"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/125px-Flag_of_Latvia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Coat_of_arms_of_Latvia.svg/100px-Coat_of_arms_of_Latvia.svg.png",
     "capital": "Riga",
     "largest_city": "Riga",
     "official_languages": "Latvian",
@@ -1101,6 +1287,8 @@
     "name": "Latvia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/125px-Flag_of_Lebanon.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_Lebanon.svg/85px-Coat_of_arms_of_Lebanon.svg.png",
     "capital": "Beirut",
     "largest_city": "Beirut",
     "official_languages": "Arabic",
@@ -1113,6 +1301,8 @@
     "name": "Lebanon"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/125px-Flag_of_Lesotho.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Coat_of_arms_of_Lesotho.svg/90px-Coat_of_arms_of_Lesotho.svg.png",
     "capital": "Maseru",
     "largest_city": "Maseru",
     "official_languages": "Sesotho English",
@@ -1124,6 +1314,8 @@
     "name": "Lesotho"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/125px-Flag_of_Liberia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Coat_of_arms_of_Liberia.svg/85px-Coat_of_arms_of_Liberia.svg.png",
     "capital": "Monrovia",
     "largest_city": "Monrovia",
     "official_languages": "English",
@@ -1136,6 +1328,7 @@
     "name": "Liberia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/125px-Flag_of_Libya.svg.png",
     "capital": "Tripoli",
     "largest_city": "Tripoli",
     "official_languages": "Arabic",
@@ -1148,6 +1341,8 @@
     "name": "Libya"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/125px-Flag_of_Liechtenstein.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Staatswappen-Liechtensteins.svg/85px-Staatswappen-Liechtensteins.svg.png",
     "capital": "Vaduz",
     "official_languages": "German",
     "currency": "Swiss franc (CHF)",
@@ -1159,6 +1354,8 @@
     "name": "Liechtenstein"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/125px-Flag_of_Lithuania.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coat_of_arms_of_Lithuania.svg/85px-Coat_of_arms_of_Lithuania.svg.png",
     "capital": "Vilnius",
     "largest_city": "Vilnius",
     "official_languages": "Lithuanian",
@@ -1171,6 +1368,8 @@
     "name": "Lithuania"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/125px-Flag_of_Luxembourg.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Greater_coat_of_arms_of_the_grand-duchy_of_Luxembourg.svg/85px-Greater_coat_of_arms_of_the_grand-duchy_of_Luxembourg.svg.png",
     "capital": "Luxembourg",
     "largest_city": "Luxembourg",
     "official_languages": "National language: Luxembourgish Administrative languages: Luxembourgish German French",
@@ -1181,6 +1380,7 @@
     "name": "Luxembourg"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/125px-Flag_of_Madagascar.svg.png",
     "capital": "Antananarivo",
     "largest_city": "Antananarivo",
     "official_languages": "Malagasy • French",
@@ -1193,6 +1393,8 @@
     "name": "Madagascar"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/125px-Flag_of_Malawi.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Coat_of_arms_of_Malawi.svg/85px-Coat_of_arms_of_Malawi.svg.png",
     "capital": "Lilongwe",
     "largest_city": "Lilongwe",
     "official_languages": "English",
@@ -1204,6 +1406,8 @@
     "name": "Malawi"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/125px-Flag_of_Malaysia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_Malaysia.svg/90px-Coat_of_arms_of_Malaysia.svg.png",
     "capital": "Kuala Lumpur",
     "largest_city": "Kuala Lumpur",
     "currency": "Malaysian ringgit (RM) (MYR)",
@@ -1214,6 +1418,8 @@
     "name": "Malaysia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/125px-Flag_of_Maldives.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Emblem_of_Maldives.svg/85px-Emblem_of_Maldives.svg.png",
     "capital": "Malé",
     "largest_city": "Malé",
     "currency": "Maldivian rufiyaa (MVR)",
@@ -1225,6 +1431,8 @@
     "name": "Maldives"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/125px-Flag_of_Mali.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Coat_of_arms_of_Mali.svg/85px-Coat_of_arms_of_Mali.svg.png",
     "capital": "Bamako",
     "largest_city": "Bamako",
     "official_languages": "13 national languages Bambara Bobo Hassaniya Arabic Bozo Dogon, Toro So Fula Kassonke Maninke Minyanka Senufo, Senara Songhay, Koyraboro Senni Soninke Tamasheq",
@@ -1238,6 +1446,8 @@
     "name": "Mali"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/125px-Flag_of_Malta.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Coat_of_arms_of_Malta.svg/90px-Coat_of_arms_of_Malta.svg.png",
     "capital": "Valletta",
     "official_languages": "Maltese English",
     "currency": "Euro (€) (EUR)",
@@ -1248,6 +1458,7 @@
     "name": "Malta"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_of_the_Marshall_Islands.svg/125px-Flag_of_the_Marshall_Islands.svg.png",
     "capital": "Majuro",
     "largest_city": "Majuro",
     "official_languages": "Marshallese English",
@@ -1260,6 +1471,7 @@
     "name": "Marshall Islands"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/125px-Flag_of_Mauritania.svg.png",
     "capital": "Nouakchott",
     "largest_city": "Nouakchott",
     "official_languages": "Arabic",
@@ -1273,6 +1485,8 @@
     "name": "Mauritania"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/125px-Flag_of_Mauritius.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Coat_of_arms_of_Mauritius_%28Original_version%29.svg/90px-Coat_of_arms_of_Mauritius_%28Original_version%29.svg.png",
     "capital": "Port Louis",
     "largest_city": "Port Louis",
     "official_languages": "None (de jure) English French (de facto)",
@@ -1286,6 +1500,8 @@
     "name": "Mauritius"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/125px-Flag_of_Mexico.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Coat_of_arms_of_Mexico.svg/85px-Coat_of_arms_of_Mexico.svg.png",
     "capital": "Mexico City",
     "largest_city": "Mexico City",
     "official_languages": "Spanish (de facto) None (de jure)",
@@ -1299,6 +1515,7 @@
     "name": "Mexico"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/125px-Flag_of_the_Federated_States_of_Micronesia.svg.png",
     "capital": "Palikir",
     "largest_city": "Weno",
     "currency": "United States dollar (USD)",
@@ -1310,6 +1527,8 @@
     "name": "Micronesia, Federated States of"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/125px-Flag_of_Moldova.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Coat_of_arms_of_Moldova.svg/85px-Coat_of_arms_of_Moldova.svg.png",
     "capital": "Chișinău",
     "largest_city": "Chișinău",
     "currency": "Moldovan leu (MDL)",
@@ -1321,6 +1540,8 @@
     "name": "Moldova"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/120px-Flag_of_Monaco.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Great_coat_of_arms_of_the_house_of_Grimaldi.svg/90px-Great_coat_of_arms_of_the_house_of_Grimaldi.svg.png",
     "capital": "Monaco",
     "official_languages": "French",
     "ethnic_groups": "Monégasques French Italians Occitans",
@@ -1334,6 +1555,8 @@
     "name": "Monaco"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/125px-Flag_of_Mongolia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/State_emblem_of_Mongolia.svg/85px-State_emblem_of_Mongolia.svg.png",
     "capital": "Ulaanbaatar",
     "largest_city": "Ulaanbaatar",
     "official_languages": "Mongolian",
@@ -1345,6 +1568,8 @@
     "name": "Mongolia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/125px-Flag_of_Montenegro.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Coat_of_arms_of_Montenegro.svg/80px-Coat_of_arms_of_Montenegro.svg.png",
     "capital": "Podgorica",
     "largest_city": "Podgorica",
     "official_languages": "Montenegrin",
@@ -1356,6 +1581,8 @@
     "name": "Montenegro"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/125px-Flag_of_Morocco.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Coat_of_arms_of_Morocco.svg/85px-Coat_of_arms_of_Morocco.svg.png",
     "capital": "Rabat",
     "largest_city": "Casablanca",
     "official_languages": "Arabic Tamazight",
@@ -1369,6 +1596,8 @@
     "name": "Morocco"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/125px-Flag_of_Mozambique.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Emblem_of_Mozambique.svg/85px-Emblem_of_Mozambique.svg.png",
     "capital": "Maputo",
     "largest_city": "Maputo",
     "official_languages": "Portuguese",
@@ -1381,6 +1610,7 @@
     "name": "Mozambique"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/125px-Flag_of_Myanmar.svg.png",
     "capital": "Naypyidaw",
     "largest_city": "Yangon",
     "religion": "89.8% Buddhism (official) 6.2% Christianity 2.3% Islam 1.6% other",
@@ -1392,6 +1622,8 @@
     "name": "Myanmar"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/125px-Flag_of_Namibia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Coat_of_arms_of_Namibia.svg/85px-Coat_of_arms_of_Namibia.svg.png",
     "capital": "Windhoek",
     "largest_city": "Windhoek",
     "official_languages": "English",
@@ -1404,6 +1636,8 @@
     "name": "Namibia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Nauru.svg/125px-Flag_of_Nauru.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Coat_of_arms_of_Nauru.svg/85px-Coat_of_arms_of_Nauru.svg.png",
     "capital": "de jure",
     "largest_city": "Denigomodu",
     "official_languages": "Nauruan English",
@@ -1416,6 +1650,8 @@
     "name": "Nauru"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/95px-Flag_of_Nepal.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/120px-Emblem_of_Nepal.svg.png",
     "capital": "Kathmandu",
     "largest_city": "Kathmandu",
     "official_languages": "Nepali",
@@ -1428,6 +1664,8 @@
     "name": "Nepal"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/125px-Flag_of_the_Netherlands.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/85px-Royal_coat_of_arms_of_the_Netherlands.svg.png",
     "capital": "Amsterdam",
     "largest_city": "Amsterdam",
     "official_languages": "Dutch",
@@ -1440,6 +1678,8 @@
     "name": "Netherlands"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/125px-Flag_of_New_Zealand.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Coat_of_arms_of_New_Zealand.svg/85px-Coat_of_arms_of_New_Zealand.svg.png",
     "capital": "Wellington",
     "largest_city": "Auckland",
     "official_languages": "English Māori NZ Sign Language",
@@ -1452,6 +1692,8 @@
     "name": "New Zealand"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/125px-Flag_of_Nicaragua.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Coat_of_arms_of_Nicaragua.svg/85px-Coat_of_arms_of_Nicaragua.svg.png",
     "capital": "Managua",
     "largest_city": "Managua",
     "official_languages": "Spanish",
@@ -1464,6 +1706,8 @@
     "name": "Nicaragua"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/100px-Flag_of_Niger.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Coat_of_arms_of_Niger.svg/110px-Coat_of_arms_of_Niger.svg.png",
     "capital": "Niamey",
     "largest_city": "Niamey",
     "official_languages": "French",
@@ -1476,6 +1720,8 @@
     "name": "Niger"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/130px-Flag_of_Nigeria.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Coat_of_arms_of_Nigeria.svg/90px-Coat_of_arms_of_Nigeria.svg.png",
     "capital": "Abuja",
     "largest_city": "Lagos",
     "official_languages": "English",
@@ -1488,6 +1734,8 @@
     "name": "Nigeria"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/125px-Flag_of_North_Korea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Emblem_of_North_Korea.svg/80px-Emblem_of_North_Korea.svg.png",
     "capital": "Pyongyang",
     "largest_city": "Pyongyang",
     "official_languages": "Korean (Munhwaŏ)",
@@ -1500,6 +1748,8 @@
     "name": "North Korea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/125px-Flag_of_North_Macedonia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Coat_of_arms_of_North_Macedonia.svg/85px-Coat_of_arms_of_North_Macedonia.svg.png",
     "capital": "Skopje",
     "largest_city": "Skopje",
     "official_languages": "Macedonian Albanian",
@@ -1511,6 +1761,8 @@
     "name": "North Macedonia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/125px-Flag_of_Norway.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coat_of_arms_of_Norway.svg/65px-Coat_of_arms_of_Norway.svg.png",
     "capital": "Oslo",
     "largest_city": "Oslo",
     "official_languages": "Norwegian Sámi",
@@ -1523,6 +1775,8 @@
     "name": "Norway"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/125px-Flag_of_Oman.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/National_emblem_of_Oman.svg/85px-National_emblem_of_Oman.svg.png",
     "capital": "Muscat",
     "largest_city": "Muscat",
     "official_languages": "Arabic",
@@ -1535,6 +1789,8 @@
     "name": "Oman"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/125px-Flag_of_Pakistan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/State_emblem_of_Pakistan.svg/85px-State_emblem_of_Pakistan.svg.png",
     "capital": "Islamabad",
     "largest_city": "Karachi",
     "official_languages": "Urdu English",
@@ -1547,6 +1803,7 @@
     "name": "Pakistan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/125px-Flag_of_Palau.svg.png",
     "capital": "Ngerulmud",
     "largest_city": "Koror",
     "official_languages": "Palauan English",
@@ -1559,6 +1816,8 @@
     "name": "Palau"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/125px-Flag_of_Palestine.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Coat_of_arms_of_Palestine.svg/70px-Coat_of_arms_of_Palestine.svg.png",
     "largest_city": "Gaza City",
     "official_languages": "Arabic",
     "ethnic_groups": "Palestinian Arabs",
@@ -1571,6 +1830,8 @@
     "name": "Palestine"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/125px-Flag_of_Panama.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coat_of_arms_of_Panama.svg/85px-Coat_of_arms_of_Panama.svg.png",
     "capital": "Panama City",
     "largest_city": "Panama City",
     "official_languages": "Spanish",
@@ -1583,6 +1844,8 @@
     "name": "Panama"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/125px-Flag_of_Papua_New_Guinea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/National_emblem_of_Papua_New_Guinea.svg/130px-National_emblem_of_Papua_New_Guinea.svg.png",
     "capital": "Port Moresby",
     "largest_city": "Port Moresby",
     "ethnic_groups": "Papuan",
@@ -1595,6 +1858,7 @@
     "name": "Papua New Guinea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/125px-Flag_of_Paraguay.svg.png",
     "capital": "Asunción",
     "largest_city": "Asunción",
     "currency": "Guaraní (PYG)",
@@ -1606,6 +1870,8 @@
     "name": "Paraguay"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/125px-Flag_of_Peru.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Escudo_nacional_del_Per%C3%BA.svg/85px-Escudo_nacional_del_Per%C3%BA.svg.png",
     "capital": "Lima",
     "largest_city": "Lima",
     "official_languages": "Spanish",
@@ -1618,6 +1884,8 @@
     "name": "Peru"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/130px-Flag_of_the_Philippines.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coat_of_arms_of_the_Philippines.svg/85px-Coat_of_arms_of_the_Philippines.svg.png",
     "capital": "Manila",
     "largest_city": "Quezon City",
     "official_languages": "Filipino English",
@@ -1629,6 +1897,8 @@
     "name": "Philippines"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/125px-Flag_of_Poland.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Herb_Polski.svg/85px-Herb_Polski.svg.png",
     "capital": "Warsaw",
     "largest_city": "Warsaw",
     "currency": "Złoty (PLN)",
@@ -1640,6 +1910,8 @@
     "name": "Poland"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/125px-Flag_of_Portugal.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coat_of_arms_of_Portugal.svg/110px-Coat_of_arms_of_Portugal.svg.png",
     "capital": "Lisbon",
     "largest_city": "Lisbon",
     "official_languages": "Portuguese",
@@ -1652,6 +1924,8 @@
     "name": "Portugal"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/135px-Flag_of_Qatar.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Emblem_of_Qatar_%282022%E2%80%93present%29.svg/85px-Emblem_of_Qatar_%282022%E2%80%93present%29.svg.png",
     "capital": "Doha",
     "largest_city": "Doha",
     "official_languages": "Arabic",
@@ -1664,6 +1938,8 @@
     "name": "Qatar"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/125px-Flag_of_Romania.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/70px-Coat_of_arms_of_Romania.svg.png",
     "capital": "Bucharest",
     "largest_city": "Bucharest",
     "official_languages": "Romanian",
@@ -1675,6 +1951,8 @@
     "name": "Romania"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/125px-Flag_of_Russia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Coat_of_Arms_of_the_Russian_Federation.svg/85px-Coat_of_Arms_of_the_Russian_Federation.svg.png",
     "capital": "Moscow",
     "largest_city": "Moscow",
     "currency": "Ruble (₽) (RUB)",
@@ -1686,6 +1964,8 @@
     "name": "Russia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/125px-Flag_of_Rwanda.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Coat_of_arms_of_Rwanda.svg/85px-Coat_of_arms_of_Rwanda.svg.png",
     "capital": "Kigali",
     "largest_city": "Kigali",
     "official_languages": "Kinyarwanda English French Swahili",
@@ -1699,6 +1979,8 @@
     "name": "Rwanda"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/125px-Flag_of_Saint_Kitts_and_Nevis.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coat_of_arms_of_Saint_Kitts_and_Nevis.svg/85px-Coat_of_arms_of_Saint_Kitts_and_Nevis.svg.png",
     "capital": "Basseterre",
     "largest_city": "Basseterre",
     "official_languages": "English",
@@ -1711,6 +1993,8 @@
     "name": "Saint Kitts and Nevis"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/125px-Flag_of_Saint_Lucia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Coat_of_arms_of_Saint_Lucia.svg/85px-Coat_of_arms_of_Saint_Lucia.svg.png",
     "capital": "Castries",
     "largest_city": "Castries",
     "official_languages": "English",
@@ -1723,6 +2007,8 @@
     "name": "Saint Lucia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/125px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Coat_of_arms_of_Saint_Vincent_and_the_Grenadines.svg/75px-Coat_of_arms_of_Saint_Vincent_and_the_Grenadines.svg.png",
     "capital": "Kingstown",
     "largest_city": "Kingstown",
     "official_languages": "English",
@@ -1735,6 +2021,8 @@
     "name": "Saint Vincent and the Grenadines"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/125px-Flag_of_Samoa.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Coat_of_arms_of_Samoa.svg/85px-Coat_of_arms_of_Samoa.svg.png",
     "capital": "Apia",
     "largest_city": "Apia",
     "official_languages": "Samoan, English",
@@ -1747,6 +2035,8 @@
     "name": "Samoa"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/125px-Flag_of_San_Marino.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coat_of_arms_of_San_Marino.svg/80px-Coat_of_arms_of_San_Marino.svg.png",
     "capital": "City of San Marino",
     "official_languages": "Italian",
     "religion": "91.5% Christianity 7.5% no religion 1.0% other",
@@ -1759,6 +2049,8 @@
     "name": "San Marino"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/125px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Coat_of_arms_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/100px-Coat_of_arms_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png",
     "capital": "São Tomé",
     "largest_city": "São Tomé",
     "official_languages": "Portuguese",
@@ -1771,6 +2063,8 @@
     "name": "São Tomé and Príncipe"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/125px-Flag_of_Saudi_Arabia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Emblem_of_Saudi_Arabia.svg/85px-Emblem_of_Saudi_Arabia.svg.png",
     "capital": "Riyadh",
     "largest_city": "Riyadh",
     "official_languages": "Arabic",
@@ -1782,6 +2076,8 @@
     "name": "Saudi Arabia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/125px-Flag_of_Senegal.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Coat_of_arms_of_Senegal.svg/85px-Coat_of_arms_of_Senegal.svg.png",
     "capital": "Dakar",
     "largest_city": "Dakar",
     "official_languages": "French Wolof Pulaar",
@@ -1794,6 +2090,8 @@
     "name": "Senegal"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/125px-Flag_of_Serbia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Coat_of_arms_of_Serbia.svg/85px-Coat_of_arms_of_Serbia.svg.png",
     "capital": "Belgrade",
     "largest_city": "Belgrade",
     "official_languages": "Serbian",
@@ -1805,6 +2103,8 @@
     "name": "Serbia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/125px-Flag_of_Seychelles.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Coat_of_arms_of_Seychelles.svg/85px-Coat_of_arms_of_Seychelles.svg.png",
     "capital": "Victoria",
     "largest_city": "Victoria",
     "official_languages": "Seychellois Creole English French",
@@ -1818,6 +2118,8 @@
     "name": "Seychelles"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/125px-Flag_of_Sierra_Leone.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Coat_of_arms_of_Sierra_Leone.svg/85px-Coat_of_arms_of_Sierra_Leone.svg.png",
     "capital": "Freetown",
     "largest_city": "Freetown",
     "official_languages": "English",
@@ -1830,6 +2132,8 @@
     "name": "Sierra Leone"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/125px-Flag_of_Singapore.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/State_Crest_of_Singapore.png/85px-State_Crest_of_Singapore.png",
     "capital": "city-state",
     "official_languages": "English Malay Mandarin Tamil",
     "currency": "Singapore dollar (S$) (SGD)",
@@ -1840,6 +2144,8 @@
     "name": "Singapore"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/125px-Flag_of_Slovakia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat_of_arms_of_Slovakia.svg/70px-Coat_of_arms_of_Slovakia.svg.png",
     "capital": "Bratislava",
     "largest_city": "Bratislava",
     "official_languages": "Slovak",
@@ -1852,6 +2158,8 @@
     "name": "Slovakia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/125px-Flag_of_Slovenia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Coat_of_arms_of_Slovenia.svg/70px-Coat_of_arms_of_Slovenia.svg.png",
     "capital": "Ljubljana",
     "largest_city": "Ljubljana",
     "official_languages": "Slovene",
@@ -1864,6 +2172,8 @@
     "name": "Slovenia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/125px-Flag_of_the_Solomon_Islands.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coat_of_arms_of_the_Solomon_Islands.svg/75px-Coat_of_arms_of_the_Solomon_Islands.svg.png",
     "capital": "Honiara",
     "largest_city": "Honiara",
     "official_languages": "English Pijin",
@@ -1876,6 +2186,8 @@
     "name": "Solomon Islands"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/125px-Flag_of_Somalia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Coat_of_arms_of_Somalia.svg/100px-Coat_of_arms_of_Somalia.svg.png",
     "capital": "Mogadishu",
     "largest_city": "Mogadishu",
     "official_languages": "Somali",
@@ -1889,6 +2201,8 @@
     "name": "Somalia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/125px-Flag_of_South_Africa.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Coat_of_arms_of_South_Africa_%28heraldic%29.svg/75px-Coat_of_arms_of_South_Africa_%28heraldic%29.svg.png",
     "capital": "Pretoria",
     "largest_city": "Johannesburg",
     "official_languages": "12 languages Afrikaans English Ndebele Sepedi Sesotho Setswana South African Sign Language Swazi Tshivenda Xhosa Xitsonga Zulu Languages with special status Khoe languages Nama Khoisan languages German Greek Gujarati Hindi Portuguese Telugu Tamil Urdu Arabic Hebrew Sanskrit",
@@ -1901,6 +2215,8 @@
     "name": "South Africa"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/125px-Flag_of_South_Korea.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Emblem_of_South_Korea.svg/85px-Emblem_of_South_Korea.svg.png",
     "capital": "Seoul",
     "largest_city": "Seoul",
     "official_languages": "Korean (Pyojuneo) Korean Sign Language",
@@ -1913,6 +2229,8 @@
     "name": "South Korea"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/125px-Flag_of_South_Sudan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coat_of_arms_of_South_Sudan.svg/85px-Coat_of_arms_of_South_Sudan.svg.png",
     "capital": "Juba",
     "largest_city": "Juba",
     "official_languages": "English",
@@ -1925,6 +2243,8 @@
     "name": "South Sudan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/125px-Flag_of_Spain.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Escudo_de_Espa%C3%B1a.svg/85px-Escudo_de_Espa%C3%B1a.svg.png",
     "capital": "Madrid",
     "largest_city": "Madrid",
     "currency": "Euro (€) (EUR)",
@@ -1935,6 +2255,8 @@
     "name": "Spain"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/125px-Flag_of_Sri_Lanka.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Emblem_of_Sri_Lanka.svg/70px-Emblem_of_Sri_Lanka.svg.png",
     "capital": "Sri Jayawardenepura Kotte",
     "largest_city": "Colombo",
     "official_languages": "Sinhala Tamil",
@@ -1946,6 +2268,8 @@
     "name": "Sri Lanka"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/125px-Flag_of_Sudan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Emblem_of_Sudan.svg/85px-Emblem_of_Sudan.svg.png",
     "capital": "Khartoum",
     "largest_city": "Khartoum",
     "official_languages": "Arabic English",
@@ -1959,6 +2283,8 @@
     "name": "Sudan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/125px-Flag_of_Suriname.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Coat_of_arms_of_Suriname.svg/85px-Coat_of_arms_of_Suriname.svg.png",
     "capital": "Paramaribo",
     "largest_city": "Paramaribo",
     "official_languages": "Dutch",
@@ -1971,6 +2297,8 @@
     "name": "Suriname"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/125px-Flag_of_Sweden.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Great_coat_of_arms_of_Sweden.svg/85px-Great_coat_of_arms_of_Sweden.svg.png",
     "capital": "Stockholm",
     "largest_city": "Stockholm",
     "official_languages": "Swedish",
@@ -1983,6 +2311,8 @@
     "name": "Sweden"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/125px-Flag_of_Switzerland_%28Pantone%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Coat_of_Arms_of_Switzerland_%28Pantone%29.svg/85px-Coat_of_Arms_of_Switzerland_%28Pantone%29.svg.png",
     "capital": "de jure",
     "largest_city": "Zurich",
     "official_languages": "German French Italian Romansh",
@@ -1995,6 +2325,8 @@
     "name": "Switzerland"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Flag_of_the_Syrian_revolution.svg/125px-Flag_of_the_Syrian_revolution.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coat_of_arms_of_Syria_%282024%E2%80%93present%29.svg/90px-Coat_of_arms_of_Syria_%282024%E2%80%93present%29.svg.png",
     "capital": "Damascus",
     "largest_city": "Damascus",
     "currency": "Syrian pound (SYP)",
@@ -2006,6 +2338,8 @@
     "name": "Syria"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/125px-Flag_of_Tajikistan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Emblem_of_Tajikistan.svg/85px-Emblem_of_Tajikistan.svg.png",
     "capital": "Dushanbe",
     "largest_city": "Dushanbe",
     "official_languages": "Tajik • Russian",
@@ -2018,6 +2352,8 @@
     "name": "Tajikistan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/125px-Flag_of_Tanzania.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Coat_of_arms_of_Tanzania.svg/85px-Coat_of_arms_of_Tanzania.svg.png",
     "capital": "Dodoma",
     "largest_city": "Dar es Salaam",
     "official_languages": "Swahili English",
@@ -2029,6 +2365,8 @@
     "name": "Tanzania"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/125px-Flag_of_Thailand.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Emblem_of_Thailand.svg/85px-Emblem_of_Thailand.svg.png",
     "capital": "Bangkok",
     "largest_city": "Bangkok",
     "official_languages": "Thai",
@@ -2041,6 +2379,8 @@
     "name": "Thailand"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/125px-Flag_of_Togo.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Armoiries_du_Togo.svg/70px-Armoiries_du_Togo.svg.png",
     "capital": "Lomé",
     "largest_city": "Lomé",
     "official_languages": "French",
@@ -2054,6 +2394,8 @@
     "name": "Togo"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/125px-Flag_of_Tonga.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tongan_coat_of_arms.svg/85px-Tongan_coat_of_arms.svg.png",
     "capital": "Nukuʻalofa",
     "largest_city": "Nukuʻalofa",
     "official_languages": "Tongan English",
@@ -2066,6 +2408,8 @@
     "name": "Tonga"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/125px-Flag_of_Trinidad_and_Tobago.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Coat_of_arms_of_Trinidad_and_Tobago.svg/85px-Coat_of_arms_of_Trinidad_and_Tobago.svg.png",
     "capital": "Port of Spain",
     "largest_city": "Chaguanas",
     "official_languages": "English",
@@ -2078,6 +2422,8 @@
     "name": "Trinidad and Tobago"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/125px-Flag_of_Tunisia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Coat_of_arms_of_Tunisia.svg/70px-Coat_of_arms_of_Tunisia.svg.png",
     "capital": "Tunis",
     "largest_city": "Tunis",
     "official_languages": "Arabic",
@@ -2102,6 +2448,8 @@
     "name": "Turkey"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/120px-Flag_of_Turkmenistan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Emblem_of_Turkmenistan.svg/90px-Emblem_of_Turkmenistan.svg.png",
     "capital": "Ashgabat",
     "largest_city": "Ashgabat",
     "official_languages": "Turkmen",
@@ -2114,6 +2462,8 @@
     "name": "Turkmenistan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tuvalu.svg/125px-Flag_of_Tuvalu.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Coat_of_arms_of_Tuvalu.svg/85px-Coat_of_arms_of_Tuvalu.svg.png",
     "capital": "Funafuti",
     "largest_city": "Funafuti",
     "official_languages": "Tuvaluan English",
@@ -2126,6 +2476,8 @@
     "name": "Tuvalu"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/125px-Flag_of_Uganda.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Coat_of_arms_of_Uganda.svg/85px-Coat_of_arms_of_Uganda.svg.png",
     "capital": "Kampala",
     "largest_city": "Kampala",
     "official_languages": "English Swahili",
@@ -2138,6 +2490,8 @@
     "name": "Uganda"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/125px-Flag_of_Ukraine.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Coat_of_Arms_of_Ukraine.svg/85px-Coat_of_Arms_of_Ukraine.svg.png",
     "capital": "Kyiv",
     "largest_city": "Kyiv",
     "currency": "Hryvnia (₴) (UAH)",
@@ -2149,6 +2503,8 @@
     "name": "Ukraine"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/125px-Flag_of_the_United_Arab_Emirates.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Emblem_of_the_United_Arab_Emirates.svg/85px-Emblem_of_the_United_Arab_Emirates.svg.png",
     "capital": "Abu Dhabi",
     "largest_city": "Dubai",
     "official_languages": "Arabic",
@@ -2171,6 +2527,8 @@
     "name": "United Kingdom"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/125px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Greater_coat_of_arms_of_the_United_States.svg/85px-Greater_coat_of_arms_of_the_United_States.svg.png",
     "capital": "Washington, D.C.",
     "largest_city": "New York City",
     "official_languages": "None at the federal level",
@@ -2183,6 +2541,8 @@
     "name": "United States"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/125px-Flag_of_Uruguay.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Coat_of_arms_of_Uruguay.svg/85px-Coat_of_arms_of_Uruguay.svg.png",
     "capital": "Montevideo",
     "largest_city": "Montevideo",
     "currency": "Uruguayan peso (UYU)",
@@ -2194,6 +2554,8 @@
     "name": "Uruguay"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/125px-Flag_of_Uzbekistan.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Emblem_of_Uzbekistan.svg/85px-Emblem_of_Uzbekistan.svg.png",
     "capital": "Tashkent",
     "largest_city": "Tashkent",
     "official_languages": "Uzbek",
@@ -2206,6 +2568,8 @@
     "name": "Uzbekistan"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/125px-Flag_of_Vanuatu.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coat_of_arms_of_Vanuatu.svg/85px-Coat_of_arms_of_Vanuatu.svg.png",
     "capital": "Port Vila",
     "largest_city": "Port Vila",
     "official_languages": "Bislama English French",
@@ -2217,6 +2581,8 @@
     "name": "Vanuatu"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Flag_of_Vatican_City_%282023%E2%80%93present%29.svg/125px-Flag_of_Vatican_City_%282023%E2%80%93present%29.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Coat_of_arms_of_Vatican_City_%282023%E2%80%93present%29.svg/90px-Coat_of_arms_of_Vatican_City_%282023%E2%80%93present%29.svg.png",
     "capital": "city-state",
     "official_languages": "Italian",
     "religion": "Catholicism (state religion)",
@@ -2228,6 +2594,8 @@
     "name": "Vatican City"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/125px-Flag_of_Venezuela.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Coat_of_arms_of_Venezuela.svg/85px-Coat_of_arms_of_Venezuela.svg.png",
     "capital": "Caracas",
     "largest_city": "Caracas",
     "official_languages": "Spanish",
@@ -2240,6 +2608,8 @@
     "name": "Venezuela"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/125px-Flag_of_Vietnam.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Emblem_of_Vietnam.svg/85px-Emblem_of_Vietnam.svg.png",
     "capital": "Hanoi",
     "currency": "Vietnamese đồng (₫) (VND)",
     "time_zone": "UTC+07:00 (Vietnam Standard Time)",
@@ -2249,6 +2619,8 @@
     "name": "Vietnam"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/125px-Flag_of_Yemen.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Emblem_of_Yemen_%282%29.svg/130px-Emblem_of_Yemen_%282%29.svg.png",
     "capital": "Sanaa",
     "largest_city": "Sanaa",
     "currency": "Yemeni rial (YER)",
@@ -2260,6 +2632,8 @@
     "name": "Yemen"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/125px-Flag_of_Zambia.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Coat_of_arms_of_Zambia.svg/85px-Coat_of_arms_of_Zambia.svg.png",
     "capital": "Lusaka",
     "largest_city": "Lusaka",
     "official_languages": "English",
@@ -2273,6 +2647,8 @@
     "name": "Zambia"
   },
   {
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/125px-Flag_of_Zimbabwe.svg.png",
+    "emblemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Coat_of_arms_of_Zimbabwe.svg/105px-Coat_of_arms_of_Zimbabwe.svg.png",
     "capital": "Harare",
     "largest_city": "Harare",
     "official_languages": "16 languages: Chewa Chibarwe English Kalanga Koisan Nambya Ndau Ndebele Shangani Shona Sotho Tonga Tswana Venda Xhosa Zimbabwean sign language",

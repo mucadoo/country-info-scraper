@@ -93,9 +93,6 @@ public class WebScraper {
                         case "Official languages":
                             countryInfo.addProperty("official_languages", cleanText(data));
                             break;
-                        case "Religion":
-                            countryInfo.addProperty("religion", cleanText(data));
-                            break;
                         case "Currency":
                             countryInfo.addProperty("currency", cleanText(data));
                             break;
@@ -120,26 +117,28 @@ public class WebScraper {
                         case "Internet TLD":
                             countryInfo.addProperty("internet_TLD", cleanText(data));
                             break;
-                        // Add more cases as needed
                         default:
                             break;
                     }
+                }
 
-                    // Scrape flag image URL
-                    if (headerText.contains("Flag")) {
-                        Element flagImg = data.select("img").first();
-                        if (flagImg != null) {
-                            String flagUrl = "https:" + flagImg.attr("src");
-                            countryInfo.addProperty("flagUrl", flagUrl);
-                        }
-                    }
-
-                    // Scrape coat of arms image URL
-                    if (headerText.contains("Emblem") || headerText.contains("Coat of Arms")) {
-                        Element emblemImg = data.select("img").first();
-                        if (emblemImg != null) {
-                            String emblemUrl = "https:" + emblemImg.attr("src");
-                            countryInfo.addProperty("emblemUrl", emblemUrl);
+                // Scrape flag and emblem images
+                Elements imageCells = row.select("td.infobox-image");
+                for (Element cell : imageCells) {
+                    Elements images = cell.select("img");
+                    for (Element img : images) {
+                        String imgUrl = "https:" + img.attr("src");
+                        Element parentDiv = img.closest("div");
+                        if (parentDiv != null) {
+                            Element descriptionDiv = parentDiv.nextElementSibling();
+                            if (descriptionDiv != null) {
+                                String description = descriptionDiv.text().toLowerCase();
+                                if (description.contains("flag")) {
+                                    countryInfo.addProperty("flagUrl", imgUrl);
+                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
+                                    countryInfo.addProperty("emblemUrl", imgUrl);
+                                }
+                            }
                         }
                     }
                 }

@@ -219,12 +219,18 @@ public class WebScraper {
 
     // Method to extract area in km² from HTML string
     private static String extractKm2(String html) {
-        Pattern pattern = Pattern.compile("([0-9,]+)&nbsp;km<sup>2</sup>");
-        Matcher matcher = pattern.matcher(html);
-        if (matcher.find()) {
-            return matcher.group(1).replace(",", "") + " km²";
+        Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*)<sup");
+        Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*)\\s*&nbsp;km<sup>2</sup>");
+
+        Matcher matcher1 = pattern1.matcher(html);
+        Matcher matcher2 = pattern2.matcher(html);
+
+        if (matcher1.find()) {
+            return matcher1.group(1).replace(",", "");
+        } else if (matcher2.find()) {
+            return matcher2.group(1).replace(",", "");
         }
-        return "";
+        return null;
     }
 
     // Method to extract population from HTML string

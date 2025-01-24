@@ -134,7 +134,21 @@ public class WebScraper {
                             countryInfo.addProperty("largest_city", largestCity);
                             break;
                         case "Official languages":
-                            countryInfo.addProperty("official_languages", cleanText(data));
+                        case "Official language":
+                        case "Working languages":
+                        case "Working language":
+                        case "Official language and national language":
+                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
+                            Elements languagesElements = data.select("a");
+                            List<String> languages = new ArrayList<>();
+                            for (Element langElement : languagesElements) {
+                                String language = langElement.text();
+                                if (!language.equalsIgnoreCase("none")) {
+                                    languages.add(language);
+                                }
+                            }
+                            String officialLanguages = String.join(", ", languages);
+                            countryInfo.addProperty("official_languages", officialLanguages);
                             break;
                         case "Currency":
                             countryInfo.addProperty("currency", cleanText(data));

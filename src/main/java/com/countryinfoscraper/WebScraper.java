@@ -71,9 +71,24 @@ public class WebScraper {
         if (infobox != null) {
             Elements rows = infobox.select("tr");
 
+            boolean areaFound = false;
+
             for (Element row : rows) {
                 Element header = row.select("th").first();
                 Element data = row.select("td").first();
+
+                // Check for the Area header
+                if (!areaFound && header != null && header.text().toLowerCase().contains("area")) {
+                    areaFound = true;
+                }
+
+                // Scrape area information if Area header was found
+                if (areaFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
+                    String area = cleanText(data);
+                    countryInfo.addProperty("area", area);
+                    areaFound = false; // Reset the flag after capturing the area
+                }
+
                 if (header != null && data != null) {
                     String headerText = header.text();
 
@@ -117,31 +132,32 @@ public class WebScraper {
                         case "Internet TLD":
                             countryInfo.addProperty("internet_TLD", cleanText(data));
                             break;
+                        // Add more cases as needed
                         default:
                             break;
                     }
                 }
 
                 // Scrape flag and emblem images
-                Elements imageCells = row.select("td.infobox-image");
-                for (Element cell : imageCells) {
-                    Elements images = cell.select("img");
-                    for (Element img : images) {
-                        String imgUrl = "https:" + img.attr("src");
-                        Element parentDiv = img.closest("div");
-                        if (parentDiv != null) {
-                            Element descriptionDiv = parentDiv.nextElementSibling();
-                            if (descriptionDiv != null) {
-                                String description = descriptionDiv.text().toLowerCase();
-                                if (description.contains("flag")) {
-                                    countryInfo.addProperty("flagUrl", imgUrl);
-                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
-                                    countryInfo.addProperty("emblemUrl", imgUrl);
-                                }
-                            }
-                        }
-                    }
-                }
+//                Elements imageCells = row.select("td.infobox-image");
+//                for (Element cell : imageCells) {
+//                    Elements images = cell.select("img");
+//                    for (Element img : images) {
+//                        String imgUrl = "https:" + img.attr("src");
+//                        Element parentDiv = img.closest("div");
+//                        if (parentDiv != null) {
+//                            Element descriptionDiv = parentDiv.nextElementSibling();
+//                            if (descriptionDiv != null) {
+//                                String description = descriptionDiv.text().toLowerCase();
+//                                if (description.contains("flag")) {
+//                                    countryInfo.addProperty("flagUrl", imgUrl);
+//                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
+//                                    countryInfo.addProperty("emblemUrl", imgUrl);
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
             }
         }
 

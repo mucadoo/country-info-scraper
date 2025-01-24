@@ -8,10 +8,13 @@ import com.google.gson.JsonObject;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class WebScraper {
     public static void main(String[] args) {
         try {
             // Connect to the Wikipedia page
@@ -44,7 +47,12 @@ public class App {
 
             // Convert the list of countries to JSON
             String json = new Gson().toJson(countries);
-            System.out.println(json);
+
+            // Write JSON to file
+            Path path = Paths.get("src/main/resources/countries.json");
+            Files.createDirectories(path.getParent());
+            Files.write(path, json.getBytes());
+            System.out.println("JSON file generated at: " + path.toAbsolutePath());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -103,8 +111,8 @@ public class App {
                         case "Internet TLD":
                             countryInfo.addProperty("internet_TLD", data.text());
                             break;
-                        // Add more cases as needed
                         default:
+                            // Handle other headers similarly if needed
                             break;
                     }
 

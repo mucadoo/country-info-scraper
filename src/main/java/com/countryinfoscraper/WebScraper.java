@@ -75,6 +75,9 @@ public class WebScraper {
 
             boolean areaHeaderFound = false;
             boolean areaFound = false;
+            boolean populationHeaderFound = false;
+            boolean populationFound = false;
+            boolean densityFound = false;
 
             for (Element row : rows) {
                 Element header = row.select("th").first();
@@ -91,6 +94,27 @@ public class WebScraper {
                     String area = extractKm2(areaHtml);
                     countryInfo.addProperty("area_km2", area);
                     areaFound = true; // Reset the flag after capturing the area
+                }
+
+                // Check for the Population header
+                if (!populationHeaderFound && header != null && header.text().toLowerCase().contains("population")) {
+                    populationHeaderFound = true;
+                }
+
+                // Scrape population information if Population header was found
+                if (!populationFound && populationHeaderFound && header != null && data != null && (header.select("div").text().toLowerCase().contains("estimate") || header.select("div").text().toLowerCase().contains("census"))) {
+                    String populationHtml = data.html();
+                    String population = extractPopulation(populationHtml);
+                    countryInfo.addProperty("population", population);
+                    populationFound = true; // Capture the first population estimate found
+                }
+
+                // Scrape density information if Population header was found
+                if (!densityFound && populationHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("density")) {
+                    String densityHtml = data.html();
+                    String density = extractDensity(densityHtml);
+                    countryInfo.addProperty("density_km2", density);
+                    densityFound = true; // Capture the density information
                 }
 
                 if (header != null && data != null) {
@@ -117,9 +141,6 @@ public class WebScraper {
                             break;
                         case "Time zone":
                             countryInfo.addProperty("time_zone", cleanText(data));
-                            break;
-                        case "Population":
-                            countryInfo.addProperty("population", cleanText(data));
                             break;
                         case "GDP":
                             countryInfo.addProperty("GDP", cleanText(data));
@@ -185,6 +206,26 @@ public class WebScraper {
     // Method to extract area in km² from HTML string
     private static String extractKm2(String html) {
         Pattern pattern = Pattern.compile("([0-9,]+)&nbsp;km<sup>2</sup>");
+        Matcher matcher = pattern.matcher(html);
+        if (matcher.find()) {
+            return matcher.group(1).replace(",", "") + " km²";
+        }
+        return "";
+    }
+
+    // Method to extract population from HTML string
+    private static String extractPopulation(String html) {
+        Pattern pattern = Pattern.compile("([0-9,]+)(?=<sup|\\s*<)");
+        Matcher matcher = pattern.matcher(html);
+        if (matcher.find()) {
+            return matcher.group(1).replace(",", "");
+        }
+        return "";
+    }
+
+    // Method to extract density in km² from HTML string
+    private static String extractDensity(String html) {
+        Pattern pattern = Pattern.compile("([0-9,]+)\\s*<sup>2</sup>");
         Matcher matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "") + " km²";

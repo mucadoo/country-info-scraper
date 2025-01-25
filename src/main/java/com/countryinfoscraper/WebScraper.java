@@ -210,10 +210,10 @@ public class WebScraper {
             }
         }
 
-        // Scrape the country description
-        Element pElement = infobox.nextElementSibling();
-        if (pElement != null && pElement.tagName().equals("p")) {
-            String description = cleanText(pElement);
+        // Scrape the country description from the first <p> element after the infobox
+        Element descriptionElement = doc.select("table.infobox ~ p").first();
+        if (descriptionElement != null) {
+            String description = cleanText(descriptionElement);
             countryInfo.addProperty("description", description);
         }
 

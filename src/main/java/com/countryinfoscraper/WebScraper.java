@@ -356,7 +356,7 @@ public class WebScraper {
 
     // Method to extract area in km² from HTML string
     private static String extractArea(String html) {
-        Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*)<sup");
+        Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?)(?:<sup|<)");
         Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*)\\s*&nbsp;km<sup>2</sup>");
 
         Matcher matcher1 = pattern1.matcher(html);
@@ -367,6 +367,7 @@ public class WebScraper {
         } else if (matcher2.find()) {
             return matcher2.group(1).replace(",", "");
         }
+
         return "";
     }
 

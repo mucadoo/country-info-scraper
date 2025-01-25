@@ -372,7 +372,8 @@ public class WebScraper {
 
     // Method to extract population from HTML string
     private static String extractPopulation(String html) {
-        Pattern pattern = Pattern.compile("([0-9,]+)(?=<sup|\\s*<)");
+        // Pattern to match population numbers, excluding values within parentheses
+        Pattern pattern = Pattern.compile("([0-9,]+)(?=\\s*(?:<sup|<span|<br|\\(|<))");
         Matcher matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");

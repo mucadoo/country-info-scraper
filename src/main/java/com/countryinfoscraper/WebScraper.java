@@ -307,14 +307,14 @@ public class WebScraper {
         Pattern pattern = Pattern.compile("([0-9,.]+)\\s*/\\s*km<sup>2</sup>");
         Matcher matcher = pattern.matcher(html);
         if (matcher.find()) {
-            return matcher.group(1).replace(",", "") + "/km²";
+            return matcher.group(1).replace(",", "");
         }
 
         // If not found, try to find the value inside parentheses
         pattern = Pattern.compile("\\(([^)]+)\\s*/\\s*km<sup>2</sup>\\)");
         matcher = pattern.matcher(html);
         if (matcher.find()) {
-            return matcher.group(1).replace(",", "") + "/km²";
+            return matcher.group(1).replace(",", "");
         }
 
         return "";

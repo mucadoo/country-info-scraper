@@ -21,9 +21,6 @@ public class WebScraper {
     public static void main(String[] args) {
         try {
 
-            //Enable or disable json pretty print
-            boolean prettyPrint = false;
-
             // Connect to the Wikipedia page
             Document doc = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_sovereign_states").get();
 
@@ -52,25 +49,28 @@ public class WebScraper {
                 }
             }
 
-            // Create a Gson instance
-            Gson gson;
-            if (prettyPrint) {
-                gson = new GsonBuilder().setPrettyPrinting().create();
-            } else {
-                gson = new GsonBuilder().create();
-            }
-            // Convert the list of countries to pretty-printed JSON
-            String json = gson.toJson(countries);
+            // Generate pretty-printed JSON
+            Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+            String prettyJson = prettyGson.toJson(countries);
+            writeToFile("src/main/resources/countries.json", prettyJson);
+            System.out.println("Pretty-printed JSON file generated.");
 
-            // Write JSON to file
-            Path path = Paths.get("src/main/resources/countries.json");
-            Files.createDirectories(path.getParent());
-            Files.write(path, json.getBytes());
-            System.out.println("Pretty-printed JSON file generated at: " + path.toAbsolutePath());
+            // Generate minified JSON
+            Gson minifiedGson = new GsonBuilder().create();
+            String minifiedJson = minifiedGson.toJson(countries);
+            writeToFile("src/main/resources/countries.min.json", minifiedJson);
+            System.out.println("Minified JSON file generated.");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void writeToFile(String filePath, String content) throws IOException {
+        Path path = Paths.get(filePath);
+        Files.createDirectories(path.getParent());
+        Files.write(path, content.getBytes());
+        System.out.println("JSON file generated at: " + path.toAbsolutePath());
     }
 
     private static JsonObject scrapeCountryInfo(String url) throws IOException {
@@ -379,8 +379,9 @@ public class WebScraper {
 
     // Method to extract area in km² from HTML string
     private static String extractArea(String html) {
+        // Pattern to match area values with commas and optional decimal points
         Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?)(?:<sup|<)");
-        Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*)\\s*&nbsp;km<sup>2</sup>");
+        Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?)\\s*&nbsp;km<sup>2</sup>");
 
         Matcher matcher1 = pattern1.matcher(html);
         Matcher matcher2 = pattern2.matcher(html);

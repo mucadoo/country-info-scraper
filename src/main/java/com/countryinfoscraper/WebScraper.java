@@ -175,9 +175,6 @@ public class WebScraper {
                         case "Time zone":
                             countryInfo.addProperty("time_zone", cleanText(data));
                             break;
-                        case "HDI":
-                            countryInfo.addProperty("HDI", cleanText(data));
-                            break;
                         case "ISO 3166 code":
                             countryInfo.addProperty("ISO_code", cleanText(data));
                             break;
@@ -185,6 +182,12 @@ public class WebScraper {
                             countryInfo.addProperty("internet_TLD", cleanText(data));
                             break;
                         default:
+                            if (headerText.toLowerCase().contains("hdi")) {
+                                // Remove unwanted elements and get the HDI value
+                                data.select("sup, br, .nowrap").remove();
+                                String hdiValue = data.text().split(" ")[0];
+                                countryInfo.addProperty("HDI", hdiValue);
+                            }
                             break;
                     }
                 }

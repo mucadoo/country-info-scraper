@@ -311,15 +311,22 @@ public class WebScraper {
 
     // Method to extract density in km² from HTML string
     private static String extractDensity(String html) {
-        // First, try to find the value outside parentheses
-        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*/\\s*km<sup>2</sup>");
+        // Pattern to match the density value outside parentheses
+        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*<sup[^>]*>.*?</sup>\\s*/\\s*km<sup>2</sup>");
         Matcher matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");
         }
 
-        // If not found, try to find the value inside parentheses
-        pattern = Pattern.compile("\\(([^)]+)\\s*/\\s*km<sup>2</sup>\\)");
+        // Pattern to match the density value followed by /km² and additional info
+        pattern = Pattern.compile("([0-9,.]+)\\s*/\\s*km<sup>2</sup>[^<]*");
+        matcher = pattern.matcher(html);
+        if (matcher.find()) {
+            return matcher.group(1).replace(",", "");
+        }
+
+        // Handling cases where density is followed by references or additional information
+        pattern = Pattern.compile("([0-9,.]+)\\s*</?sup>\\s*/\\s*km<sup>2</sup>");
         matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");

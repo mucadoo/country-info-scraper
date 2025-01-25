@@ -191,6 +191,14 @@ public class WebScraper {
                             }
                             break;
                         case "Largest city":
+                        case "Largest city by municipal boundary":
+                        case "Largest city by metropolitan area population":
+                        case "Largest metropolitan area":
+                        case "Largest municipality":
+                        case "Largest administrative unit":
+                        case "Largest quarter":
+                        case "Largest settlement":
+                        case "Largest planning area by population":
                             String largestCity = data.select("a").first().text();
                             countryInfo.addProperty("largest_city", largestCity);
                             break;

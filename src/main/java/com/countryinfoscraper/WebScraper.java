@@ -22,7 +22,7 @@ public class WebScraper {
         try {
 
             //Enable or disable json pretty print
-            boolean prettyPrint = true;
+            boolean prettyPrint = false;
 
             // Connect to the Wikipedia page
             Document doc = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_sovereign_states").get();
@@ -84,9 +84,9 @@ public class WebScraper {
         countryInfo.addProperty("description", "");
         countryInfo.addProperty("capital", "");
         countryInfo.addProperty("largest_city", "");
-        countryInfo.addProperty("population", "");
-        countryInfo.addProperty("area_km2", "");
-        countryInfo.addProperty("density_km2", "");
+        countryInfo.addProperty("population", 0);
+        countryInfo.addProperty("area_km2", 0);
+        countryInfo.addProperty("density_km2", 0);
         countryInfo.addProperty("government", "");
         countryInfo.addProperty("official_language", "");
         countryInfo.addProperty("demonym", "");
@@ -123,7 +123,9 @@ public class WebScraper {
                 if (!areaFound && areaHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
                     String areaHtml = data.html();
                     String area = extractArea(areaHtml);
-                    countryInfo.addProperty("area_km2", area);
+                    if (!area.isEmpty()) {
+                        countryInfo.addProperty("area_km2", Double.parseDouble(area));
+                    }
                     areaFound = true; // Reset the flag after capturing the area
                 }
 
@@ -136,7 +138,9 @@ public class WebScraper {
                 if (!populationFound && populationHeaderFound && header != null && data != null && (header.select("div").text().toLowerCase().contains("estimate") || header.select("div").text().toLowerCase().contains("census"))) {
                     String populationHtml = data.html();
                     String population = extractPopulation(populationHtml);
-                    countryInfo.addProperty("population", population);
+                    if (!population.isEmpty()) {
+                        countryInfo.addProperty("population", Long.parseLong(population));
+                    }
                     populationFound = true; // Capture the first population estimate found
                 }
 
@@ -144,7 +148,9 @@ public class WebScraper {
                 if (!densityFound && populationHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("density")) {
                     String densityHtml = data.html();
                     String density = extractDensity(densityHtml);
-                    countryInfo.addProperty("density_km2", density);
+                    if (!density.isEmpty()) {
+                        countryInfo.addProperty("density_km2", Double.parseDouble(density));
+                    }
                     densityFound = true; // Capture the density information
                 }
 

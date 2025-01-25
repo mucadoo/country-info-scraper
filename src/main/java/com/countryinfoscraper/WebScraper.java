@@ -260,6 +260,14 @@ public class WebScraper {
 
         // Scrape the country description from the first <p> element after the infobox
         Element descriptionElement = doc.select("table.infobox ~ p").first();
+        while (descriptionElement != null && descriptionElement.text().trim().isEmpty()) {
+            // Move to the next sibling element
+            descriptionElement = descriptionElement.nextElementSibling();
+            // Skip non-<p> elements
+            while (descriptionElement != null && !descriptionElement.tagName().equals("p")) {
+                descriptionElement = descriptionElement.nextElementSibling();
+            }
+        }
         if (descriptionElement != null) {
             String description = cleanText(descriptionElement);
 

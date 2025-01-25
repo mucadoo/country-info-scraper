@@ -69,23 +69,24 @@ public class WebScraper {
         JsonObject countryInfo = new JsonObject();
 
         // Initialize with default values
-        countryInfo.addProperty("name", "");
-        countryInfo.addProperty("area_km2", "");
-        countryInfo.addProperty("population", "");
-        countryInfo.addProperty("density_km2", "");
-        countryInfo.addProperty("capital", "");
-        countryInfo.addProperty("largest_city", "");
-        countryInfo.addProperty("official_languages", "");
-        countryInfo.addProperty("currency", "");
-        countryInfo.addProperty("time_zone", "");
-        countryInfo.addProperty("GDP", "");
-        countryInfo.addProperty("HDI", "");
         countryInfo.addProperty("ISO_code", "");
-        countryInfo.addProperty("internet_TLD", "");
+        countryInfo.addProperty("name", "");
         countryInfo.addProperty("flagUrl", "");
         countryInfo.addProperty("description", "");
-        countryInfo.addProperty("demonyms", "");
+        countryInfo.addProperty("capital", "");
+        countryInfo.addProperty("largest_city", "");
+        countryInfo.addProperty("population", "");
+        countryInfo.addProperty("area_km2", "");
+        countryInfo.addProperty("density_km2", "");
+        countryInfo.addProperty("government", "");
+        countryInfo.addProperty("official_language", "");
+        countryInfo.addProperty("demonym", "");
+        countryInfo.addProperty("GDP", "");
+        countryInfo.addProperty("HDI", "");
+        countryInfo.addProperty("currency", "");
+        countryInfo.addProperty("time_zone", "");
         countryInfo.addProperty("calling_code", "");
+        countryInfo.addProperty("internet_TLD", "");
 
         // Scrape the info from the infobox
         Element infobox = doc.select("table.infobox.ib-country.vcard").first();
@@ -215,7 +216,10 @@ public class WebScraper {
                                 }
                             }
                             String demonymString = String.join(", ", demonyms);
-                            countryInfo.addProperty("demonyms", demonymString);
+                            countryInfo.addProperty("demonym", demonymString);
+                            break;
+                        case "Government":
+                            countryInfo.addProperty("government", cleanText(data));
                             break;
                         case "Currency":
                             data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
@@ -271,7 +275,7 @@ public class WebScraper {
                                     }
                                 }
                                 String officialLanguages = String.join(", ", languages);
-                                countryInfo.addProperty("official_languages", officialLanguages);
+                                countryInfo.addProperty("official_language", officialLanguages);
                                 languageFound = true;
                             }
                             break;

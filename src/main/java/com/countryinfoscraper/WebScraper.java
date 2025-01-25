@@ -113,7 +113,7 @@ public class WebScraper {
                 // Scrape area information if Area header was found
                 if (!areaFound && areaHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
                     String areaHtml = data.html();
-                    String area = extractKm2(areaHtml);
+                    String area = extractArea(areaHtml);
                     countryInfo.addProperty("area_km2", area);
                     areaFound = true; // Reset the flag after capturing the area
                 }
@@ -355,7 +355,7 @@ public class WebScraper {
     }
 
     // Method to extract area in km² from HTML string
-    private static String extractKm2(String html) {
+    private static String extractArea(String html) {
         Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*)<sup");
         Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*)\\s*&nbsp;km<sup>2</sup>");
 

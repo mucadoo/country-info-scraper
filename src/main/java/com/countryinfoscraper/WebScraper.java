@@ -221,6 +221,20 @@ public class WebScraper {
                         case "Government":
                             countryInfo.addProperty("government", cleanText(data));
                             break;
+                        case "GDP (nominal)":
+                            while (row != null) {
+                                header = row.select("th").first();
+                                data = row.select("td").first();
+                                if (header != null && header.text().toLowerCase().contains("total") && data != null) {
+                                    // Remove unwanted elements and texts within parentheses
+                                    data.select("span, sup").remove();
+                                    String gdpText = data.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
+                                    countryInfo.addProperty("GDP", gdpText);
+                                    break;
+                                }
+                                row = row.nextElementSibling();
+                            }
+                            break;
                         case "Currency":
                             data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
                             List<String> currencies = new ArrayList<>();

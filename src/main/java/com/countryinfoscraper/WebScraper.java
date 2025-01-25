@@ -97,6 +97,8 @@ public class WebScraper {
             boolean populationHeaderFound = false;
             boolean populationFound = false;
             boolean densityFound = false;
+            boolean languageFound = false;
+            boolean flagFound = false;
 
             for (Element row : rows) {
                 Element header = row.select("th").first();
@@ -191,23 +193,6 @@ public class WebScraper {
                             String largestCity = data.select("a").first().text();
                             countryInfo.addProperty("largest_city", largestCity);
                             break;
-                        case "Official languages":
-                        case "Official language":
-                        case "Working languages":
-                        case "Working language":
-                        case "Official language and national language":
-                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
-                            Elements languagesElements = data.select("a");
-                            List<String> languages = new ArrayList<>();
-                            for (Element langElement : languagesElements) {
-                                String language = langElement.text();
-                                if (!language.equalsIgnoreCase("none")) {
-                                    languages.add(language);
-                                }
-                            }
-                            String officialLanguages = String.join(", ", languages);
-                            countryInfo.addProperty("official_languages", officialLanguages);
-                            break;
                         case "Demonym(s)":
                         case "Demonym":
                             data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
@@ -272,6 +257,23 @@ public class WebScraper {
                                 String hdiValue = data.text().split(" ")[0];
                                 countryInfo.addProperty("HDI", hdiValue);
                             }
+                            if (headerText.toLowerCase().contains("language")) {
+                                if(languageFound || !flagFound){
+                                    break;
+                                }
+                                data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
+                                Elements languagesElements = data.select("a");
+                                List<String> languages = new ArrayList<>();
+                                for (Element langElement : languagesElements) {
+                                    String language = langElement.text();
+                                    if (!language.equalsIgnoreCase("none")) {
+                                        languages.add(language);
+                                    }
+                                }
+                                String officialLanguages = String.join(", ", languages);
+                                countryInfo.addProperty("official_languages", officialLanguages);
+                                languageFound = true;
+                            }
                             break;
                     }
                 }
@@ -283,17 +285,21 @@ public class WebScraper {
                     for (Element img : images) {
                         String imgUrl = "https:" + img.attr("src");
                         Element parentDiv = img.closest("div");
-                        if (parentDiv != null) {
+                        while (parentDiv != null) {
                             Element descriptionDiv = parentDiv.nextElementSibling();
                             if (descriptionDiv != null) {
                                 String description = descriptionDiv.text().toLowerCase();
                                 if (description.contains("flag")) {
                                     countryInfo.addProperty("flagUrl", imgUrl);
+                                    flagFound = true;
+                                    break;
                                 }
                             }
+                            parentDiv = parentDiv.parent();
                         }
                     }
                 }
+
             }
         }
 

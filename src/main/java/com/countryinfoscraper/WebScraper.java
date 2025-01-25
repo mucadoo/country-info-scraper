@@ -20,6 +20,10 @@ import java.util.regex.Pattern;
 public class WebScraper {
     public static void main(String[] args) {
         try {
+
+            //Enable or disable json pretty print
+            boolean prettyPrint = true;
+
             // Connect to the Wikipedia page
             Document doc = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_sovereign_states").get();
 
@@ -48,8 +52,13 @@ public class WebScraper {
                 }
             }
 
-            // Create a Gson instance with pretty printing
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            // Create a Gson instance
+            Gson gson;
+            if (prettyPrint) {
+                gson = new GsonBuilder().setPrettyPrinting().create();
+            } else {
+                gson = new GsonBuilder().create();
+            }
             // Convert the list of countries to pretty-printed JSON
             String json = gson.toJson(countries);
 

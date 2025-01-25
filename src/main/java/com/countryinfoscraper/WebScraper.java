@@ -262,7 +262,14 @@ public class WebScraper {
         Element descriptionElement = doc.select("table.infobox ~ p").first();
         if (descriptionElement != null) {
             String description = cleanText(descriptionElement);
-            countryInfo.addProperty("description", description.replaceAll("\\(([^()]*|\\([^()]*\\))*\\)", ""));
+
+            // Remove anything within parentheses
+            description = description.replaceAll("\\(([^()]*|\\([^()]*\\))*\\)", "").replaceAll("\\s+", " ").trim();
+
+            // Remove any space before commas and periods
+            description = description.replaceAll("\\s+([,.])", "$1");
+
+            countryInfo.addProperty("description", description);
         }
 
         return countryInfo;

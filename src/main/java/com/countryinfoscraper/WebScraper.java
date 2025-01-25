@@ -68,6 +68,25 @@ public class WebScraper {
         Document doc = Jsoup.connect(url).get();
         JsonObject countryInfo = new JsonObject();
 
+        // Initialize with default values
+        countryInfo.addProperty("name", "");
+        countryInfo.addProperty("area_km2", "");
+        countryInfo.addProperty("population", "");
+        countryInfo.addProperty("density_km2", "");
+        countryInfo.addProperty("capital", "");
+        countryInfo.addProperty("largest_city", "");
+        countryInfo.addProperty("official_languages", "");
+        countryInfo.addProperty("currency", "");
+        countryInfo.addProperty("time_zone", "");
+        countryInfo.addProperty("GDP", "");
+        countryInfo.addProperty("HDI", "");
+        countryInfo.addProperty("ISO_code", "");
+        countryInfo.addProperty("internet_TLD", "");
+        countryInfo.addProperty("flagUrl", "");
+        countryInfo.addProperty("description", "");
+        countryInfo.addProperty("demonyms", "");
+        countryInfo.addProperty("calling_code", "");
+
         // Scrape the info from the infobox
         Element infobox = doc.select("table.infobox.ib-country.vcard").first();
         if (infobox != null) {
@@ -156,14 +175,8 @@ public class WebScraper {
                         case "Time zone":
                             countryInfo.addProperty("time_zone", cleanText(data));
                             break;
-                        case "GDP":
-                            countryInfo.addProperty("GDP", cleanText(data));
-                            break;
                         case "HDI":
                             countryInfo.addProperty("HDI", cleanText(data));
-                            break;
-                        case "Drives on":
-                            countryInfo.addProperty("drives_on", cleanText(data));
                             break;
                         case "ISO 3166 code":
                             countryInfo.addProperty("ISO_code", cleanText(data));
@@ -171,7 +184,6 @@ public class WebScraper {
                         case "Internet TLD":
                             countryInfo.addProperty("internet_TLD", cleanText(data));
                             break;
-                        // Add more cases as needed
                         default:
                             break;
                     }
@@ -190,8 +202,6 @@ public class WebScraper {
                                 String description = descriptionDiv.text().toLowerCase();
                                 if (description.contains("flag")) {
                                     countryInfo.addProperty("flagUrl", imgUrl);
-                                } else if (description.contains("emblem") || description.contains("coat of arms")) {
-                                    countryInfo.addProperty("emblemUrl", imgUrl);
                                 }
                             }
                         }

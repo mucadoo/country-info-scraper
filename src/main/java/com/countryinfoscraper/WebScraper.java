@@ -169,6 +169,30 @@ public class WebScraper {
                             String officialLanguages = String.join(", ", languages);
                             countryInfo.addProperty("official_languages", officialLanguages);
                             break;
+                        case "Demonym(s)":
+                        case "Demonym":
+                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
+                            List<String> demonyms = new ArrayList<>();
+                            // Check if the demonyms are in a list
+                            Elements demonymElements = data.select(".hlist ul li");
+                            if (!demonymElements.isEmpty()) {
+                                for (Element demonymElement : demonymElements) {
+                                    String demonym = demonymElement.text();
+                                    demonyms.add(demonym);
+                                }
+                            } else {
+                                // Single demonym case
+                                Elements singleDemonymElement = data.select("a");
+                                if (!singleDemonymElement.isEmpty()) {
+                                    demonyms.add(singleDemonymElement.first().text());
+                                } else {
+                                    // Handle case with no link
+                                    demonyms.add(data.text());
+                                }
+                            }
+                            String demonymString = String.join(", ", demonyms);
+                            countryInfo.addProperty("demonyms", demonymString);
+                            break;
                         case "Currency":
                             countryInfo.addProperty("currency", cleanText(data));
                             break;

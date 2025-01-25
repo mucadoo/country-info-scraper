@@ -199,6 +199,10 @@ public class WebScraper {
                         case "Time zone":
                             countryInfo.addProperty("time_zone", cleanText(data));
                             break;
+                        case "Calling code":
+                            String callingCode = data.select("a").isEmpty() ? data.text() : data.select("a").first().text();
+                            countryInfo.addProperty("calling_code", callingCode);
+                            break;
                         case "ISO 3166 code":
                             countryInfo.addProperty("ISO_code", cleanText(data));
                             break;

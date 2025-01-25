@@ -230,7 +230,7 @@ public class WebScraper {
         } else if (matcher2.find()) {
             return matcher2.group(1).replace(",", "");
         }
-        return null;
+        return "";
     }
 
     // Method to extract population from HTML string

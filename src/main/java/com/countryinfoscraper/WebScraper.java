@@ -142,10 +142,49 @@ public class WebScraper {
                     switch (headerText) {
                         case "Capital":
                         case "Capital and largest city":
-                            String capital = data.select("a").first().text();
-                            countryInfo.addProperty("capital", capital);
+                        case "Capital Administrative center":
+                            // Remove unwanted elements: sup, coordinates
+                            data.select("sup, .geo-inline").remove();
+
+                            // Remove texts in parentheses from the entire data content first
+                            String dataText = data.html().replaceAll("\\s*\\([^)]*\\)\\s*", "");
+
+                            // Parse the cleaned data content for capitals
+                            Document cleanedData = Jsoup.parse(dataText);
+
+                            // Check for multiple capitals
+                            Elements capitalElements = cleanedData.select(".plainlist ul li a");
+                            List<String> capitals = new ArrayList<>();
+                            if (!capitalElements.isEmpty()) {
+                                for (Element capitalElement : capitalElements) {
+                                    String capital = capitalElement.text().trim();
+                                    if (!capital.isEmpty()) {
+                                        capitals.add(capital);
+                                    }
+                                }
+                            } else {
+                                // Handle cases with no links
+                                Elements singleCapitalElements = cleanedData.select("a");
+                                if (!singleCapitalElements.isEmpty()) {
+                                    for (Element singleCapitalElement : singleCapitalElements) {
+                                        String capital = singleCapitalElement.text().trim();
+                                        if (!capital.isEmpty()) {
+                                            capitals.add(capital);
+                                        }
+                                    }
+                                } else {
+                                    // Handle text directly from the td element
+                                    String capital = cleanedData.text().trim();
+                                    if (!capital.isEmpty()) {
+                                        capitals.add(capital);
+                                    }
+                                }
+                            }
+
+                            String capitalString = String.join(", ", capitals).replaceAll("\\s+([,.])", "$1");
+                            countryInfo.addProperty("capital", capitalString);
                             if (headerText.contains("Capital and largest city")) {
-                                countryInfo.addProperty("largest_city", capital);
+                                countryInfo.addProperty("largest_city", capitalString);
                             }
                             break;
                         case "Largest city":

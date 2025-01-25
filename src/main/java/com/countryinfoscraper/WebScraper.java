@@ -262,10 +262,11 @@ public class WebScraper {
         Element descriptionElement = doc.select("table.infobox ~ p").first();
         if (descriptionElement != null) {
             String description = cleanText(descriptionElement);
-            countryInfo.addProperty("description", description);
+            countryInfo.addProperty("description", description.replaceAll("\\(([^()]*|\\([^()]*\\))*\\)", ""));
         }
 
         return countryInfo;
+
     }
 
     // Method to clean text from unnecessary elements like superscripts and coordinates

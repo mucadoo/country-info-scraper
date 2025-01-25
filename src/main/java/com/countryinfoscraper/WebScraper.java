@@ -396,12 +396,38 @@ public class WebScraper {
 
     // Method to extract population from HTML string
     private static String extractPopulation(String html) {
-        // Pattern to match population numbers, excluding values within parentheses
-        Pattern pattern = Pattern.compile("([0-9,]+)(?=\\s*(?:<sup|<span|<br|\\(|<))");
+        // Pattern to match population ranges, excluding values within parentheses
+        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*[–-]\\s*([0-9,.]+)\\s*(million|billion)?(?=\\s*(?:<sup|<span|<br|\\(|<))");
         Matcher matcher = pattern.matcher(html);
+
+        // Check for ranges first
+        if (matcher.find()) {
+            double low = Double.parseDouble(matcher.group(1).replace(",", ""));
+            double high = Double.parseDouble(matcher.group(2).replace(",", ""));
+            double average = (low + high) / 2;
+
+            // Adjust based on the multiplier (million or billion)
+            String multiplier = matcher.group(3);
+            if (multiplier != null) {
+                switch (multiplier.toLowerCase()) {
+                    case "million":
+                        average *= 1_000_000;
+                        break;
+                    case "billion":
+                        average *= 1_000_000_000;
+                        break;
+                }
+            }
+            return String.format("%.0f", average); // Return without decimal places
+        }
+
+        // Fallback pattern to match single population number
+        pattern = Pattern.compile("([0-9,]+)(?=\\s*(?:<sup|<span|<br|\\(|<))");
+        matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");
         }
+
         return "";
     }
 

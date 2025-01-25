@@ -194,7 +194,24 @@ public class WebScraper {
                             countryInfo.addProperty("demonyms", demonymString);
                             break;
                         case "Currency":
-                            countryInfo.addProperty("currency", cleanText(data));
+                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
+                            List<String> currencies = new ArrayList<>();
+                            // Check if the currencies are in a list
+                            Elements currencyElements = data.select(".plainlist ul li a");
+                            if (!currencyElements.isEmpty()) {
+                                for (Element currencyElement : currencyElements) {
+                                    if (!currencyElement.attr("title").equalsIgnoreCase("ISO 4217")) {
+                                        String currency = currencyElement.text().split("\\(")[0].trim();  // Ignore content in parentheses
+                                        currencies.add(currency);
+                                    }
+                                }
+                            } else {
+                                // Single currency case
+                                String singleCurrency = data.text().split("\\(")[0].trim();  // Ignore content in parentheses
+                                currencies.add(singleCurrency);
+                            }
+                            String currencyString = String.join(", ", currencies);
+                            countryInfo.addProperty("currency", currencyString);
                             break;
                         case "Time zone":
                             countryInfo.addProperty("time_zone", cleanText(data));

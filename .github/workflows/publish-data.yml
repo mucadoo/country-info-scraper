@@ -1,6 +1,9 @@
 name: Publish Scraped Data
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
@@ -24,9 +27,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build and Run Scraper
+    - name: Build Project
+      run: mvn clean install -DskipTests
+
+    - name: Run Scraper
       run: |
-        mvn clean install -DskipTests
         mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
 
     - name: 1. Deploy to Data Branch (Live API)

@@ -51,11 +51,17 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Generate date for tag and release name
+        id: date
+        run: |
+          echo "tag=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
+          echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release (Archive + Human-friendly)
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: data-${{ format('{0:yyyy.MM.dd-HHmm}', github.event.repository.pushed_at) }}   # or use date in a run step
-          name: "Data Snapshot: ${{ format('{0:yyyy-MM-dd}', github.event.repository.pushed_at) }}"
+          tag_name: data-${{ steps.date.outputs.tag }}
+          name: "Data Snapshot: ${{ steps.date.outputs.name }}"
           files: |
             src/main/resources/countries.json
             src/main/resources/countries.min.json
@@ -65,9 +71,6 @@ jobs:
             **Live URLs (always up-to-date):**
             - Full: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.json
             - Minified: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.min.json
-
-            **Raw GitHub URLs (fallback):**
-            - https://raw.githubusercontent.com/${{ github.repository }}/data/countries.json (if you keep the data branch)
           draft: false
           prerelease: false
         env:

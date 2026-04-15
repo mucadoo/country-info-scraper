@@ -45,7 +45,15 @@ public class SnapshotDownloader {
             Map.entry("russia", "https://en.wikipedia.org/wiki/Russia"),
             Map.entry("china", "https://en.wikipedia.org/wiki/China"),
             Map.entry("mongolia", "https://en.wikipedia.org/wiki/Mongolia"),
-            Map.entry("vanuatu", "https://en.wikipedia.org/wiki/Vanuatu")
+            Map.entry("vanuatu", "https://en.wikipedia.org/wiki/Vanuatu"),
+            Map.entry("guinea_bissau", "https://en.wikipedia.org/wiki/Guinea-Bissau"),
+            Map.entry("solomon_islands", "https://en.wikipedia.org/wiki/Solomon_Islands"),
+            Map.entry("lebanon", "https://en.wikipedia.org/wiki/Lebanon"),
+            Map.entry("south_korea", "https://en.wikipedia.org/wiki/South_Korea"),
+            Map.entry("senegal", "https://en.wikipedia.org/wiki/Senegal"),
+            Map.entry("equatorial_guinea", "https://en.wikipedia.org/wiki/Equatorial_Guinea"),
+            Map.entry("comoros", "https://en.wikipedia.org/wiki/Comoros"),
+            Map.entry("eritrea", "https://en.wikipedia.org/wiki/Eritrea")
     );
 
     public static void main(String[] args) {

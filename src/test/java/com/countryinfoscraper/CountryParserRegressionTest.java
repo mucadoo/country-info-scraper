@@ -33,19 +33,38 @@ public class CountryParserRegressionTest {
             () -> {
                 if (!countryName.equals("Nauru") && !countryName.equals("Monaco") && !countryName.equals("Vatican City")) {
                     assertFalse(country.getCapital().isEmpty(), "Capital should not be empty for " + countryName);
+                    assertFalse(country.getCapital().contains("°") || country.getCapital().contains("′"), 
+                        "Capital contains raw coordinates: " + country.getCapital());
                 }
             },
-            () -> assertTrue(country.getPopulation() >= 0, "Population should be non-negative"),
+            () -> assertTrue(country.getPopulation() > 0, "Population extraction failed or 0 for " + countryName),
+            () -> assertTrue(country.getAreaKm2() > 0.0, "Area extraction failed or 0.0 for " + countryName),
             () -> assertFalse(country.getDescription().isEmpty(), "Description should not be empty"),
-            () -> assertNotNull(country.getFlagUrl(), "Flag URL should be present")
+            () -> assertNotNull(country.getFlagUrl(), "Flag URL should be present"),
+            () -> assertFalse(country.getFlagUrl().toLowerCase().contains("arms") || 
+                              country.getFlagUrl().toLowerCase().contains("seal"), 
+                              "Extracted a coat of arms or seal instead of the flag: " + country.getFlagUrl()),
+            () -> assertFalse(country.getDemonym().contains("nS") || country.getDemonym().contains("nG"), 
+                              "Demonyms are missing spaces between words: " + country.getDemonym()),
+            () -> assertFalse(country.getOfficialLanguage().matches("^\\d+ languages.*"), 
+                              "Language list includes the numerical summary prefix: " + country.getOfficialLanguage()),
+            () -> assertFalse(country.getOfficialLanguage().equals("federal level"), 
+                              "Extracted footnote text instead of language data"),
+            () -> assertFalse(country.getCallingCode().contains("["), 
+                              "Calling code contains raw footnote brackets: " + country.getCallingCode()),
+            () -> {
+                if (!countryName.equals("Vatican City")) {
+                    assertFalse(country.getGdp().isEmpty(), "GDP is missing for " + countryName);
+                }
+            },
+            () -> assertFalse(country.getCallingCode().isEmpty(), "Calling code is missing for " + countryName)
         );
         
         // Specific edge case validations based on previous data quirks
         if (countryName.equals("Afghanistan")) {
-            assertFalse(country.getCallingCode().isEmpty(), "Afghanistan should have a calling code (+93)");
+            assertTrue(country.getCallingCode().contains("+93"), "Afghanistan calling code should contain +93");
         }
         if (countryName.equals("Canada")) {
-            assertFalse(country.getCallingCode().isEmpty(), "Canada should have a calling code (+1)");
             assertTrue(country.getAreaKm2() > 9000000, "Canada area should be ~9.9 million");
         }
         if (countryName.equals("Russia")) {
@@ -54,15 +73,6 @@ public class CountryParserRegressionTest {
         if (countryName.equals("China")) {
             assertTrue(country.getCallingCode().contains("+86"), "China calling code should be +86");
             assertFalse(country.getInternetTld().isEmpty(), "China should have Internet TLD");
-        }
-        if (countryName.equals("Mongolia") || countryName.equals("Vanuatu") || countryName.equals("Yemen")) {
-            assertFalse(country.getCapital().contains("°"), countryName + " capital contains coordinates: " + country.getCapital());
-        }
-        if (countryName.equals("Denmark") || countryName.equals("Israel")) {
-            assertTrue(country.getAreaKm2() > 0, countryName + " area was extracted as 0");
-        }
-        if (countryName.equals("Sweden")) {
-            assertFalse(country.getCallingCode().isEmpty(), "Sweden should have a calling code (+46)");
         }
         if (countryName.equals("Monaco")) {
             assertTrue(country.getAreaKm2() < 3.0, "Monaco's area should be tiny");
@@ -107,7 +117,15 @@ public class CountryParserRegressionTest {
             Arguments.of("Russia", baseDir + "russia.html"),
             Arguments.of("China", baseDir + "china.html"),
             Arguments.of("Mongolia", baseDir + "mongolia.html"),
-            Arguments.of("Vanuatu", baseDir + "vanuatu.html")
+            Arguments.of("Vanuatu", baseDir + "vanuatu.html"),
+            Arguments.of("Guinea-Bissau", baseDir + "guinea_bissau.html"),
+            Arguments.of("Solomon Islands", baseDir + "solomon_islands.html"),
+            Arguments.of("Lebanon", baseDir + "lebanon.html"),
+            Arguments.of("South Korea", baseDir + "south_korea.html"),
+            Arguments.of("Senegal", baseDir + "senegal.html"),
+            Arguments.of("Equatorial Guinea", baseDir + "equatorial_guinea.html"),
+            Arguments.of("Comoros", baseDir + "comoros.html"),
+            Arguments.of("Eritrea", baseDir + "eritrea.html")
         );
     }
 }

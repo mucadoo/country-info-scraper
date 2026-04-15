@@ -29,60 +29,73 @@ public class CountryParserRegressionTest {
         country.setName(countryName);
 
         assertAll("Validation for " + countryName,
-            () -> assertNotNull(country.getName()),
+            () -> assertNotNull(country.getName(), "Name should not be null"),
             () -> {
                 if (!countryName.equals("Nauru") && !countryName.equals("Monaco") && !countryName.equals("Vatican City")) {
-                    assertFalse(country.getCapital().isEmpty(), "Capital should not be empty for " + countryName);
+                    assertFalse(country.getCapital() == null || country.getCapital().isEmpty(), 
+                        () -> "Capital should not be empty for " + countryName + ". Extracted: '" + country.getCapital() + "'");
                     assertFalse(country.getCapital().contains("°") || country.getCapital().contains("′"), 
-                        "Capital contains raw coordinates: " + country.getCapital());
+                        () -> "Capital contains raw coordinates! Extracted: '" + country.getCapital() + "'");
                 }
             },
-            () -> assertTrue(country.getPopulation() > 0, "Population extraction failed or 0 for " + countryName),
-            () -> assertTrue(country.getAreaKm2() > 0.0, "Area extraction failed or 0.0 for " + countryName),
-            () -> assertFalse(country.getDescription().isEmpty(), "Description should not be empty"),
-            () -> assertNotNull(country.getFlagUrl(), "Flag URL should be present"),
+            () -> assertTrue(country.getPopulation() > 0, 
+                () -> "Population should be > 0. Extracted: " + country.getPopulation() + " for " + countryName),
+            () -> assertTrue(country.getAreaKm2() > 0.0, 
+                () -> "Area should be > 0.0. Extracted: " + country.getAreaKm2() + " for " + countryName),
+            () -> assertFalse(country.getDescription().isEmpty(), 
+                () -> "Description should not be empty for " + countryName),
+            () -> assertTrue(country.getFlagUrl() != null && country.getFlagUrl().startsWith("https://"), 
+                () -> "Flag URL invalid. Extracted: '" + country.getFlagUrl() + "' for " + countryName),
             () -> assertFalse(country.getFlagUrl().toLowerCase().contains("arms") || 
                               country.getFlagUrl().toLowerCase().contains("seal"), 
-                              "Extracted a coat of arms or seal instead of the flag: " + country.getFlagUrl()),
-            () -> assertFalse(country.getDemonym().contains("nS") || country.getDemonym().contains("nG"), 
-                              "Demonyms are missing spaces between words: " + country.getDemonym()),
-            () -> assertFalse(country.getOfficialLanguage().matches("^\\d+ languages.*"), 
-                              "Language list includes the numerical summary prefix: " + country.getOfficialLanguage()),
+                () -> "Extracted a coat of arms/seal instead of the flag! Extracted: '" + country.getFlagUrl() + "' for " + countryName),
+            () -> assertFalse(country.getDemonym().matches(".*[a-z][A-Z].*"), 
+                () -> "Demonyms are missing spaces between words! Extracted: '" + country.getDemonym() + "' for " + countryName),
+            () -> assertFalse(country.getOfficialLanguage().matches("^\\d+\\s+languages.*"), 
+                () -> "Language list includes numerical summary prefix! Extracted: '" + country.getOfficialLanguage() + "' for " + countryName),
             () -> assertFalse(country.getOfficialLanguage().equals("federal level"), 
-                              "Extracted footnote text instead of language data"),
+                () -> "Extracted footnote text instead of language data for " + countryName),
             () -> assertFalse(country.getCallingCode().contains("["), 
-                              "Calling code contains raw footnote brackets: " + country.getCallingCode()),
+                () -> "Calling code contains raw footnote brackets! Extracted: '" + country.getCallingCode() + "' for " + countryName),
             () -> {
                 if (!countryName.equals("Vatican City")) {
-                    assertFalse(country.getGdp().isEmpty(), "GDP is missing for " + countryName);
+                    assertFalse(country.getGdp().isEmpty(), () -> "GDP is missing for " + countryName);
                 }
             },
-            () -> assertFalse(country.getCallingCode().isEmpty(), "Calling code is missing for " + countryName)
+            () -> assertFalse(country.getCallingCode().isEmpty(), () -> "Calling code is missing for " + countryName)
         );
         
         // Specific edge case validations based on previous data quirks
         if (countryName.equals("Afghanistan")) {
-            assertTrue(country.getCallingCode().contains("+93"), "Afghanistan calling code should contain +93");
+            assertTrue(country.getCallingCode().contains("+93"), 
+                () -> "Afghanistan calling code should contain +93. Extracted: '" + country.getCallingCode() + "'");
         }
         if (countryName.equals("Canada")) {
-            assertTrue(country.getAreaKm2() > 9000000, "Canada area should be ~9.9 million");
+            assertTrue(country.getAreaKm2() > 9000000, 
+                () -> "Canada area should be ~9.9 million. Extracted: " + country.getAreaKm2());
         }
         if (countryName.equals("Russia")) {
-            assertTrue(country.getAreaKm2() > 17000000, "Russia area should be ~17 million");
+            assertTrue(country.getAreaKm2() > 17000000, 
+                () -> "Russia area should be ~17 million. Extracted: " + country.getAreaKm2());
         }
         if (countryName.equals("China")) {
-            assertTrue(country.getCallingCode().contains("+86"), "China calling code should be +86");
+            assertTrue(country.getCallingCode().contains("+86"), 
+                () -> "China calling code should be +86. Extracted: '" + country.getCallingCode() + "'");
             assertFalse(country.getInternetTld().isEmpty(), "China should have Internet TLD");
         }
         if (countryName.equals("Monaco")) {
-            assertTrue(country.getAreaKm2() < 3.0, "Monaco's area should be tiny");
+            assertTrue(country.getAreaKm2() < 3.0, 
+                () -> "Monaco's area should be tiny. Extracted: " + country.getAreaKm2());
         }
         if (countryName.equals("Switzerland")) {
-            assertTrue(country.getOfficialLanguage().contains("German"), "Switzerland languages missing");
+            assertTrue(country.getOfficialLanguage().contains("German"), 
+                () -> "Switzerland languages missing German. Extracted: '" + country.getOfficialLanguage() + "'");
         }
         if (countryName.equals("Zimbabwe")) {
-            assertTrue(country.getOfficialLanguage().contains("English") || country.getOfficialLanguage().contains("languages"), "Zimbabwe languages missing");
-            assertTrue(country.getCurrency().contains("dollar"), "Zimbabwe currency missing");
+            assertTrue(country.getOfficialLanguage().contains("English") || country.getOfficialLanguage().contains("languages"), 
+                () -> "Zimbabwe languages missing English or languages. Extracted: '" + country.getOfficialLanguage() + "'");
+            assertTrue(country.getCurrency().contains("dollar"), 
+                () -> "Zimbabwe currency missing dollar. Extracted: '" + country.getCurrency() + "'");
         }
     }
 

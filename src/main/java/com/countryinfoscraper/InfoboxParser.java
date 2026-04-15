@@ -91,61 +91,52 @@ public class InfoboxParser {
     }
 
     private static void processStandardFields(Element header, Element data, Element row, Country country, ParserState state) {
-        Element headerClone = header.clone();
-        headerClone.select("sup, .reference, span.nowrap").remove();
-        String headerText = headerClone.text().replace("\u00A0", " ").replaceAll("\\[.*?\\]", "").trim();
+        // 1. Normalize header text: Replace all whitespace types (NBSP, etc) with standard space
+        String headerText = header.text().replaceAll("[\\s\\u00A0]+", " ").trim();
 
-        if (headerText.contains("Capital") && (headerText.equals("Capital") || headerText.contains("largest city") || headerText.contains("Administrative center"))) {
+        // 2. Handle Capital / Largest City
+        if (headerText.contains("Capital") && (headerText.length() < 15 || headerText.contains("largest city") || headerText.contains("Administrative center"))) {
             parseCapital(data, country, headerText);
             return;
         }
 
-        switch (headerText) {
-            case "Largest city":
-            case "Largest city by municipal boundary":
-            case "Largest city by metropolitan area population":
-            case "Largest metropolitan area":
-            case "Largest municipality":
-            case "Largest administrative unit":
-            case "Largest quarter":
-            case "Largest settlement":
-            case "Largest planning area by population":
-                Element largestCityLink = data.select("a").first();
-                if (largestCityLink != null) country.setLargestCity(largestCityLink.text());
-                break;
-            case "Demonym(s)":
-            case "Demonym":
-                country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
-                break;
-            case "Government":
-                country.setGovernment(ExtractionUtils.cleanText(data));
-                break;
-            case "GDP (nominal)":
-                parseGDP(row, country);
-                break;
-            case "Currency":
-                country.setCurrency(parseCurrency(data));
-                break;
-            case "Time zone":
-                country.setTimeZone(ExtractionUtils.cleanText(data));
-                break;
-            case "Calling code":
-                Element dataClone = data.clone();
-                dataClone.select("sup, .reference, span.plainlinks").remove();
-                String cc = dataClone.text().split("\\[")[0].trim();
-                country.setCallingCode(cc);
-                break;
-            case "ISO 3166 code":
-                country.setIsoCode(ExtractionUtils.cleanText(data));
-                break;
-            case "Internet TLD":
-                Element tldClone = data.clone();
-                tldClone.select("sup, .reference").remove();
-                country.setInternetTld(tldClone.text().split("\\[")[0].trim());
-                break;
-            default:
-                handleOtherFields(headerText, data, country, state);
-                break;
+        // 3. Use flexible matching instead of a strict switch
+        if (headerText.contains("Largest city") || headerText.contains("Largest settlement")) {
+            Element largestCityLink = data.select("a").first();
+            if (largestCityLink != null) country.setLargestCity(largestCityLink.text());
+        } 
+        else if (headerText.equalsIgnoreCase("Demonym") || headerText.contains("Demonym(s)")) {
+            country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
+        } 
+        else if (headerText.equalsIgnoreCase("Government")) {
+            country.setGovernment(ExtractionUtils.cleanText(data));
+        } 
+        else if (headerText.contains("GDP") && headerText.contains("nominal")) {
+            parseGDP(row, country); // This handles India and Canada
+        } 
+        else if (headerText.equalsIgnoreCase("Currency")) {
+            country.setCurrency(parseCurrency(data));
+        } 
+        else if (headerText.equalsIgnoreCase("Time zone")) {
+            country.setTimeZone(ExtractionUtils.cleanText(data));
+        }
+        else if (headerText.equalsIgnoreCase("Calling code")) {
+            // FIX: Don't remove spans! That's where the "+93" or "+91" is.
+            Element dataClone = data.clone();
+            dataClone.select("sup, .reference").remove(); 
+            String cc = dataClone.text().split("\\[")[0].trim();
+            country.setCallingCode(cc);
+        } 
+        else if (headerText.contains("ISO 3166 code")) {
+            country.setIsoCode(ExtractionUtils.cleanText(data));
+        } 
+        else if (headerText.contains("Internet TLD")) {
+            Element tldClone = data.clone();
+            tldClone.select("sup, .reference").remove();
+            country.setInternetTld(tldClone.text().split("\\[")[0].trim());
+        } 
+        else {
+            handleOtherFields(headerText, data, country, state);
         }
     }
 
@@ -191,20 +182,22 @@ public class InfoboxParser {
 
     private static void parseGDP(Element row, Country country) {
         Element curr = row.nextElementSibling();
-        while (curr != null) {
+        // Look ahead up to 3 rows to find the "Total" GDP value
+        for (int i = 0; i < 3 && curr != null; i++) {
             String rowText = curr.text().toLowerCase();
-            if (rowText.contains("gdp") && !rowText.contains("nominal")) break; 
+            
+            // Break if we hit the next major section
             if (rowText.contains("hdi") || rowText.contains("gini") || rowText.contains("currency")) break;
 
-            Elements ths = curr.select("th");
-            Elements tds = curr.select("td");
-            Element labelCell = ths.isEmpty() ? (tds.size() > 1 ? tds.get(0) : null) : ths.first();
-            Element valueCell = tds.isEmpty() ? null : tds.last();
+            Element labelCell = curr.select("th, td").first();
+            Element valueCell = curr.select("td").last();
 
-            if (labelCell != null && labelCell.text().toLowerCase().contains("total") && valueCell != null && labelCell != valueCell) {
+            if (labelCell != null && labelCell.text().toLowerCase().contains("total") && valueCell != null) {
                 Element dClone = valueCell.clone();
-                dClone.select("span, sup, .reference").remove();
-                country.setGdp(dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim());
+                // FIX: Only remove citations and footnotes, NOT spans
+                dClone.select("sup, .reference").remove(); 
+                String gdpValue = dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
+                country.setGdp(gdpValue);
                 break;
             }
             curr = curr.nextElementSibling();

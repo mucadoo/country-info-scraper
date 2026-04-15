@@ -9,8 +9,10 @@ public class ExtractionUtils {
     public static String cleanText(Element element) {
         if (element == null) return "";
         Element clone = element.clone();
-        clone.select("sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, .style, style").remove();
-        return clone.text().trim();
+        // REMOVED 'span' and '.style' from removal list to preserve text within formatted spans
+        clone.select("sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, style").remove();
+        // Normalize spaces (replaces NBSP and multiple spaces with one space)
+        return clone.text().replaceAll("[\\s\\u00A0]+", " ").trim();
     }
 
     public static String extractArea(String html) {

@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -98,25 +99,25 @@ public class SnapshotDownloader {
             Element cleanRoot = doc.createElement("div");
 
             // 2. Grab the Infobox (for InfoboxParser)
-            // We use a broad selector to ensure we catch it
             Element infobox = doc.select("table.infobox").first();
             if (infobox != null) {
                 cleanRoot.appendChild(infobox);
             }
 
             // 3. Grab the first few paragraphs that follow the infobox (for DescriptionParser)
-            // DescriptionParser specifically uses "table.infobox ~ p"
             Elements leadParagraphs = doc.select("table.infobox ~ p");
             if (leadParagraphs.isEmpty()) {
-                // Fallback if structure is slightly different
                 leadParagraphs = doc.select("p");
             }
             
             leadParagraphs.stream().limit(5).forEach(cleanRoot::appendChild);
 
             // 4. Save the "Skeleton" HTML
-            String skeleton = "<html><body>" + cleanRoot.html() + "</body></html>";
-            Files.writeString(Paths.get(SNAPSHOT_DIR, fileName + ".html"), skeleton);
+            // We force LF (\n) by replacing any CRLF and then ensuring the entire string uses \n
+            String skeleton = "<html><body>\n" + cleanRoot.html() + "\n</body></html>";
+            String normalizedSkeleton = skeleton.replace("\r\n", "\n").replace("\r", "\n");
+            
+            Files.writeString(Paths.get(SNAPSHOT_DIR, fileName + ".html"), normalizedSkeleton, StandardCharsets.UTF_8);
 
         } catch (IOException e) {
             logger.error("Failed download for {}: {}", fileName, e.getMessage());

@@ -3,6 +3,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Generated Data
+src/main/resources/countries.json
+src/main/resources/countries.min.json
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws

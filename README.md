@@ -1,88 +1,92 @@
 # Country Info Scraper
 
-A Java-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and exports it to JSON format.
+A modern, high-performance Java-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.
 
 ## Overview
 
-This project scrapes the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states) and then traverses each country's individual page to collect detailed metadata from their infoboxes. The extracted data is cleaned, processed, and saved in both pretty-printed and minified JSON formats.
+This project scrapes the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states) and traverses each country's individual page to collect detailed metadata. The system is designed for **high reliability**, **performance**, and **automated delivery**.
 
 ## Features
 
-- **Automated Discovery**: Automatically finds all sovereign states listed on Wikipedia.
-- **Deep Scraping**: Visits each country's specific page to extract detailed attributes.
-- **Data Points Extracted**:
-    - Basic Info: Name, ISO 3166 code, Flag URL, Description.
-    - Geography: Capital, Largest city, Area (km²), Population, Population Density.
-    - Governance: Government type, Official languages, Demonym.
-    - Economy: GDP (nominal), HDI (Human Development Index), Currency.
-    - Connectivity: Time zone, Calling code, Internet TLD.
-- **Robust Parsing**: Handles complex Wikipedia infobox structures, removing citations, references, and unnecessary parenthetical information.
-- **Dual Output**: Generates both `countries.json` (human-readable) and `countries.min.json` (optimized for production).
+- **High Performance**: Uses Java 21 parallel streams and custom thread pools for rapid scraping.
+- **Resilient**: Implements automatic retries with exponential backoff and connection timeouts.
+- **Data Integrity**: Every scrape is validated against a **JSON Schema** before publication.
+- **Automated Delivery**:
+    - **Live API**: Latest data is automatically published to a dedicated `data` branch.
+    - **Historical Archive**: Daily snapshots are archived as GitHub Releases.
+- **Data Points**: ISO Code, Flag, Capital, Population, Area, GDP, HDI, Currency, Time Zones, and more.
 
-## Technologies Used
+## Use it in your Projects! 🚀
 
-- **Java**: Core programming language.
-- **Maven**: Project management and build tool.
-- **Jsoup**: For HTML parsing and DOM manipulation.
-- **Gson**: For JSON serialization and formatting.
+This repository is a **Public Data Resource**. You don't need to run the scraper yourself to get the data. You can integrate the live JSON directly into your web or mobile applications.
 
-## Prerequisites
+### 1. Live Data (Always Latest)
+Perfect for apps that need up-to-date country information:
+- **JSON**: [https://mucadoo.github.io/country-info-scraper/countries.json](https://mucadoo.github.io/country-info-scraper/countries.json)
+- **Minified**: [https://mucadoo.github.io/country-info-scraper/countries.min.json](https://mucadoo.github.io/country-info-scraper/countries.min.json)
 
-- Java Development Kit (JDK) 8 or higher.
-- Apache Maven.
+### 2. Historical Snapshots
+For researchers or projects requiring stable, versioned data, download a specific snapshot from the **[Releases](https://github.com/mucadoo/country-info-scraper/releases)** page.
 
-## Setup & Usage
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/country-info-scraper.git
-   cd country-info-scraper
-   ```
-
-2. **Build the project**:
-   ```bash
-   mvn clean install
-   ```
-
-3. **Run the scraper**:
-   ```bash
-   mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
-   ```
-
-## Output
-
-The scraper generates two files in `src/main/resources/`:
-
-- `countries.json`: Pretty-printed JSON file for easy inspection.
-- `countries.min.json`: Minified version for application use.
-
-### Sample Data Format
+## Sample Data Format
 
 ```json
-{
-  "name": "France",
-  "ISO_code": "FR",
-  "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/...",
-  "description": "France is a country located primarily in Western Europe...",
-  "capital": "Paris",
-  "largest_city": "Paris",
-  "population": 68373000,
-  "area_km2": 643801.0,
-  "density_km2": 106.0,
-  "government": "Unitary semi-presidential republic",
-  "official_language": "French",
-  "demonym": "French",
-  "GDP": "$3.130 trillion",
-  "HDI": "0.910",
-  "currency": "Euro, CFP franc",
-  "time_zone": "UTC+01:00 (CET)",
-  "calling_code": "+33",
-  "internet_TLD": ".fr"
-}
+[
+  {
+    "name": "France",
+    "ISO_code": "FR",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+    "description": "France is a country located primarily in Western Europe, consisting of metropolitan France and several overseas regions and territories.",
+    "capital": "Paris",
+    "largest_city": "Paris",
+    "population": 68373000,
+    "area_km2": 643801.0,
+    "density_km2": 106.0,
+    "government": "Unitary semi-presidential republic",
+    "official_language": "French",
+    "demonym": "French",
+    "gdp": "$3.130 trillion",
+    "hdi": "0.910",
+    "currency": "Euro, CFP franc",
+    "time_zone": "UTC+01:00 (CET)",
+    "calling_code": "+33",
+    "internet_TLD": ".fr"
+  }
+]
 ```
 
-## Project Structure
+## Development
 
-- `src/main/java/com/countryinfoscraper/WebScraper.java`: Main logic for scraping and data processing.
-- `pom.xml`: Maven configuration and dependencies.
-- `src/main/resources/`: Directory where the resulting JSON files are stored.
+### Prerequisites
+- **Java 21** or higher.
+- **Maven 3.8+**.
+
+### Build & Test
+```bash
+mvn clean install
+```
+
+### Running the Scraper Locally
+```bash
+mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
+```
+
+### Testing Strategy
+- **Unit Tests**: Verify extraction logic in `ExtractionUtils`.
+- **Regression Tests**: Run against local HTML snapshots in `src/test/resources/snapshots`.
+- **Wikipedia Watcher**: A dynamic test factory that checks all 200+ countries live to spot Wikipedia HTML changes.
+
+## CI/CD Pipeline
+This project uses GitHub Actions for:
+1. **Continuous Integration**: Runs full test suite on every PR (Java 21).
+2. **Automated Publishing**: Runs daily at midnight to refresh data and create releases.
+
+## Project Structure
+- `WebScraper`: Orchestrates the scraping and publication flow.
+- `CountryParser`: Delegates parsing to `InfoboxParser` and `DescriptionParser`.
+- `ExtractionUtils`: Clean, reusable regex-based extraction logic.
+- `src/main/resources/country-schema.json`: The source of truth for data validation.
+
+## License
+
+Feel free to use the generated data and the code for your own projects!

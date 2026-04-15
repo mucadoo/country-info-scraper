@@ -91,8 +91,11 @@ public class InfoboxParser {
     }
 
     private static void processStandardFields(Element header, Element data, Element row, Country country, ParserState state) {
-        // 1. Normalize header text: Replace all whitespace types (NBSP, etc) with standard space
-        String headerText = header.text().replaceAll("[\\s\\u00A0]+", " ").trim();
+        // 1. Normalize header text: Replace all whitespace types and STRIP footnotes like [a], [1], etc.
+        String headerText = header.text()
+                .replaceAll("\\[.*?\\]", "") // Removes footnotes from the header name
+                .replaceAll("[\\s\\u00A0]+", " ") 
+                .trim();
 
         // 2. Handle Capital / Largest City
         if (headerText.contains("Capital") && (headerText.length() < 15 || headerText.contains("largest city") || headerText.contains("Administrative center"))) {
@@ -100,19 +103,19 @@ public class InfoboxParser {
             return;
         }
 
-        // 3. Use flexible matching instead of a strict switch
+        // 3. Flexible matching
         if (headerText.contains("Largest city") || headerText.contains("Largest settlement")) {
             Element largestCityLink = data.select("a").first();
             if (largestCityLink != null) country.setLargestCity(largestCityLink.text());
         } 
-        else if (headerText.equalsIgnoreCase("Demonym") || headerText.contains("Demonym(s)")) {
+        else if (headerText.toLowerCase().contains("demonym")) {
             country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
         } 
         else if (headerText.equalsIgnoreCase("Government")) {
             country.setGovernment(ExtractionUtils.cleanText(data));
         } 
         else if (headerText.contains("GDP") && headerText.contains("nominal")) {
-            parseGDP(row, country); // This handles India and Canada
+            parseGDP(row, country); 
         } 
         else if (headerText.equalsIgnoreCase("Currency")) {
             country.setCurrency(parseCurrency(data));
@@ -120,8 +123,8 @@ public class InfoboxParser {
         else if (headerText.equalsIgnoreCase("Time zone")) {
             country.setTimeZone(ExtractionUtils.cleanText(data));
         }
-        else if (headerText.equalsIgnoreCase("Calling code")) {
-            // FIX: Don't remove spans! That's where the "+93" or "+91" is.
+        // FIX: Use contains and lower case to handle "Calling code", "Calling codes", etc.
+        else if (headerText.toLowerCase().contains("calling code")) {
             Element dataClone = data.clone();
             dataClone.select("sup, .reference").remove(); 
             String cc = dataClone.text().split("\\[")[0].trim();

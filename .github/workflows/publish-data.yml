@@ -9,9 +9,9 @@ on:
     - cron: '0 0 * * *'   # daily at midnight UTC
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write      # Required to create releases + tags
+  pages: write         # Already needed for GitHub Pages deployment
+  id-token: write      # Already needed for Pages
 
 jobs:
   scrape-and-deploy:

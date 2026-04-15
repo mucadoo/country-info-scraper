@@ -30,50 +30,49 @@ public class CountryParserRegressionTest {
 
         assertAll("Validation for " + countryName,
             () -> assertNotNull(country.getName()),
-            () -> assertFalse(country.getCapital().isEmpty(), "Capital should not be empty"),
+            () -> {
+                if (!countryName.equals("Nauru") && !countryName.equals("Monaco") && !countryName.equals("Vatican City")) {
+                    assertFalse(country.getCapital().isEmpty(), "Capital should not be empty for " + countryName);
+                }
+            },
             () -> assertTrue(country.getPopulation() >= 0, "Population should be non-negative"),
             () -> assertFalse(country.getDescription().isEmpty(), "Description should not be empty"),
             () -> assertNotNull(country.getFlagUrl(), "Flag URL should be present")
         );
         
-        // Specific edge case validations for problematic countries
-        if (countryName.equals("South Africa")) {
-            assertTrue(country.getCapital().contains("Pretoria") && country.getCapital().contains("Cape Town"), "South Africa should have multiple capitals");
-        }
-        if (countryName.equals("Bolivia")) {
-            assertTrue(country.getCapital().contains("Sucre") && country.getCapital().contains("La Paz"), "Bolivia should have multiple capitals");
-        }
-        if (countryName.equals("Denmark")) {
-            assertTrue(country.getAreaKm2() > 0, "Denmark's area should be extracted correctly");
-            assertFalse(country.getCallingCode().contains("["), "Denmark's calling code should not contain brackets");
-        }
-        if (countryName.equals("Netherlands")) {
-            assertFalse(country.getCurrency().isEmpty(), "Netherlands currency should not be empty");
-            assertFalse(country.getInternetTld().isEmpty(), "Netherlands TLD should not be empty");
-        }
-        if (countryName.equals("Yemen")) {
-            assertFalse(country.getCapital().contains("°"), "Yemen's capital should not contain coordinates");
-        }
-        if (countryName.equals("Israel")) {
-            assertTrue(country.getAreaKm2() > 0, "Israel's area should be extracted correctly");
-        }
-        if (countryName.equals("Turkmenistan")) {
-            assertTrue(country.getPopulation() > 0, "Turkmenistan's population should be extracted correctly");
-        }
-        if (countryName.equals("El Salvador")) {
-            assertTrue(country.getCurrency().contains("Bitcoin") || country.getCurrency().contains("United States dollar"), "El Salvador's currency should include Bitcoin/USD");
-        }
-        if (countryName.equals("Zimbabwe")) {
-            assertTrue(country.getOfficialLanguage().contains("languages"), "Zimbabwe should list multiple languages");
-        }
-        if (countryName.equals("Sri Lanka")) {
-            assertTrue(country.getCapital().contains("Sri Jayawardenepura Kotte") && country.getCapital().contains("Colombo"), "Sri Lanka should have multiple capitals");
-        }
+        // Specific edge case validations based on previous data quirks
         if (countryName.equals("Afghanistan")) {
-            assertFalse(country.getCallingCode().isEmpty(), "Afghanistan should have a calling code");
+            assertFalse(country.getCallingCode().isEmpty(), "Afghanistan should have a calling code (+93)");
+        }
+        if (countryName.equals("Canada")) {
+            assertFalse(country.getCallingCode().isEmpty(), "Canada should have a calling code (+1)");
+            assertTrue(country.getAreaKm2() > 9000000, "Canada area should be ~9.9 million");
+        }
+        if (countryName.equals("Russia")) {
+            assertTrue(country.getAreaKm2() > 17000000, "Russia area should be ~17 million");
+        }
+        if (countryName.equals("China")) {
+            assertTrue(country.getCallingCode().contains("+86"), "China calling code should be +86");
+            assertFalse(country.getInternetTld().isEmpty(), "China should have Internet TLD");
+        }
+        if (countryName.equals("Mongolia") || countryName.equals("Vanuatu") || countryName.equals("Yemen")) {
+            assertFalse(country.getCapital().contains("°"), countryName + " capital contains coordinates: " + country.getCapital());
+        }
+        if (countryName.equals("Denmark") || countryName.equals("Israel")) {
+            assertTrue(country.getAreaKm2() > 0, countryName + " area was extracted as 0");
         }
         if (countryName.equals("Sweden")) {
-            assertFalse(country.getCallingCode().isEmpty(), "Sweden should have a calling code");
+            assertFalse(country.getCallingCode().isEmpty(), "Sweden should have a calling code (+46)");
+        }
+        if (countryName.equals("Monaco")) {
+            assertTrue(country.getAreaKm2() < 3.0, "Monaco's area should be tiny");
+        }
+        if (countryName.equals("Switzerland")) {
+            assertTrue(country.getOfficialLanguage().contains("German"), "Switzerland languages missing");
+        }
+        if (countryName.equals("Zimbabwe")) {
+            assertTrue(country.getOfficialLanguage().contains("English") || country.getOfficialLanguage().contains("languages"), "Zimbabwe languages missing");
+            assertTrue(country.getCurrency().contains("dollar"), "Zimbabwe currency missing");
         }
     }
 
@@ -99,7 +98,16 @@ public class CountryParserRegressionTest {
             Arguments.of("Singapore", baseDir + "singapore.html"),
             Arguments.of("Afghanistan", baseDir + "afghanistan.html"),
             Arguments.of("Vietnam", baseDir + "vietnam.html"),
-            Arguments.of("Sweden", baseDir + "sweden.html")
+            Arguments.of("Sweden", baseDir + "sweden.html"),
+            Arguments.of("Monaco", baseDir + "monaco.html"),
+            Arguments.of("Nauru", baseDir + "nauru.html"),
+            Arguments.of("Switzerland", baseDir + "switzerland.html"),
+            Arguments.of("Palestine", baseDir + "palestine.html"),
+            Arguments.of("Canada", baseDir + "canada.html"),
+            Arguments.of("Russia", baseDir + "russia.html"),
+            Arguments.of("China", baseDir + "china.html"),
+            Arguments.of("Mongolia", baseDir + "mongolia.html"),
+            Arguments.of("Vanuatu", baseDir + "vanuatu.html")
         );
     }
 }

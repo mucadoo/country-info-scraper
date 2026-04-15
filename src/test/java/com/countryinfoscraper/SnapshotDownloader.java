@@ -14,7 +14,7 @@ import java.util.Map;
 public class SnapshotDownloader {
     private static final Logger logger = LoggerFactory.getLogger(SnapshotDownloader.class);
     private static final String SNAPSHOT_DIR = "src/test/resources/snapshots/";
-    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
+    private static final String USER_AGENT = "CountryInfoScraper/1.0 (https://github.com/mucadoo/country-info-scraper; your_email@example.com) Java/21";
 
     private static final Map<String, String> COUNTRIES_TO_SNAPSHOT = Map.ofEntries(
             Map.entry("united_states", "https://en.wikipedia.org/wiki/United_States"),
@@ -29,14 +29,23 @@ public class SnapshotDownloader {
             Map.entry("israel", "https://en.wikipedia.org/wiki/Israel"),
             Map.entry("turkmenistan", "https://en.wikipedia.org/wiki/Turkmenistan"),
             Map.entry("el_salvador", "https://en.wikipedia.org/wiki/El_Salvador"),
-            Map.entry("zimbabwe", "https://en.wikipedia.org/wiki/Zimbabwe"),         // 16 languages, multiple currencies
-            Map.entry("sri_lanka", "https://en.wikipedia.org/wiki/Sri_Lanka"),       // 2 capitals with complex coordinates
-            Map.entry("malaysia", "https://en.wikipedia.org/wiki/Malaysia"),         // 2 capitals (Kuala Lumpur/Putrajaya)
-            Map.entry("ivory_coast", "https://en.wikipedia.org/wiki/Ivory_Coast"),   // 2 capitals, accents in name (Côte d'Ivoire)
-            Map.entry("singapore", "https://en.wikipedia.org/wiki/Singapore"),       // City-state, 4 official languages
-            Map.entry("afghanistan", "https://en.wikipedia.org/wiki/Afghanistan"),   // Current JSON shows missing calling code
-            Map.entry("vietnam", "https://en.wikipedia.org/wiki/Vietnam"),           // Largest city logic (Ho Chi Minh vs Hue)
-            Map.entry("sweden", "https://en.wikipedia.org/wiki/Sweden")              // Current JSON shows empty calling code
+            Map.entry("zimbabwe", "https://en.wikipedia.org/wiki/Zimbabwe"),
+            Map.entry("sri_lanka", "https://en.wikipedia.org/wiki/Sri_Lanka"),
+            Map.entry("malaysia", "https://en.wikipedia.org/wiki/Malaysia"),
+            Map.entry("ivory_coast", "https://en.wikipedia.org/wiki/Ivory_Coast"),
+            Map.entry("singapore", "https://en.wikipedia.org/wiki/Singapore"),
+            Map.entry("afghanistan", "https://en.wikipedia.org/wiki/Afghanistan"),
+            Map.entry("vietnam", "https://en.wikipedia.org/wiki/Vietnam"),
+            Map.entry("sweden", "https://en.wikipedia.org/wiki/Sweden"),
+            Map.entry("monaco", "https://en.wikipedia.org/wiki/Monaco"),
+            Map.entry("nauru", "https://en.wikipedia.org/wiki/Nauru"),
+            Map.entry("switzerland", "https://en.wikipedia.org/wiki/Switzerland"),
+            Map.entry("palestine", "https://en.wikipedia.org/wiki/State_of_Palestine"),
+            Map.entry("canada", "https://en.wikipedia.org/wiki/Canada"),
+            Map.entry("russia", "https://en.wikipedia.org/wiki/Russia"),
+            Map.entry("china", "https://en.wikipedia.org/wiki/China"),
+            Map.entry("mongolia", "https://en.wikipedia.org/wiki/Mongolia"),
+            Map.entry("vanuatu", "https://en.wikipedia.org/wiki/Vanuatu")
     );
 
     public static void main(String[] args) {

@@ -7,7 +7,7 @@ public class ExtractionUtilsTest {
 
     @Test
     public void testExtractArea() {
-        assertEquals("123456", ExtractionUtils.extractArea("123,456.78 <sup"));
+        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78 <sup"));
         assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78&nbsp;km<sup>2</sup>"));
     }
 

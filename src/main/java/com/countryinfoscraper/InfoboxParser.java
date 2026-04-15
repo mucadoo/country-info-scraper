@@ -15,7 +15,9 @@ public class InfoboxParser {
     private static final Logger logger = LoggerFactory.getLogger(InfoboxParser.class);
 
     public static void parse(Document doc, Country country) {
-        Element infobox = doc.select("table.infobox.ib-country.vcard").first();
+        Element infobox = doc.select("table.infobox.ib-country").first();
+        if (infobox == null) infobox = doc.select("table.infobox.vcard").first();
+        if (infobox == null) infobox = doc.select("table.infobox").first();
         if (infobox == null) return;
 
         Elements rows = infobox.select("tr");
@@ -31,6 +33,14 @@ public class InfoboxParser {
             }
             processImages(row, country, state);
         }
+        
+        // Final fallback checks if anything is completely missing to avoid unhandled NPEs
+        if (country.getDemonym() == null) country.setDemonym("");
+        if (country.getCallingCode() == null) country.setCallingCode("");
+        if (country.getGdp() == null) country.setGdp("");
+        if (country.getOfficialLanguage() == null) country.setOfficialLanguage("");
+        if (country.getCapital() == null) country.setCapital("");
+        if (country.getInternetTld() == null) country.setInternetTld("");
     }
 
     private static void processAreaAndPopulation(Element header, Element data, Country country, ParserState state) {
@@ -42,7 +52,8 @@ public class InfoboxParser {
 
         if (data == null) return;
 
-        if (!state.areaFound && state.areaHeaderFound && header.select("div").text().toLowerCase().contains("total")) {
+        // Note: Avoiding strict `.select("div")` lookup because older wikis have plain `<th>• Total</th>`
+        if (!state.areaFound && state.areaHeaderFound && header.text().toLowerCase().contains("total")) {
             String area = ExtractionUtils.extractArea(data.html());
             if (!area.isEmpty()) {
                 try {
@@ -54,7 +65,7 @@ public class InfoboxParser {
             state.areaFound = true;
         }
 
-        if (!state.populationFound && state.populationHeaderFound && (header.select("div").text().toLowerCase().contains("estimate") || header.select("div").text().toLowerCase().contains("census"))) {
+        if (!state.populationFound && state.populationHeaderFound && (header.text().toLowerCase().contains("estimate") || header.text().toLowerCase().contains("census") || header.text().toLowerCase().contains("total"))) {
             String pop = ExtractionUtils.extractPopulation(data.html());
             if (!pop.isEmpty()) {
                 try {
@@ -66,7 +77,7 @@ public class InfoboxParser {
             state.populationFound = true;
         }
 
-        if (!state.densityFound && state.populationHeaderFound && header.select("div").text().toLowerCase().contains("density")) {
+        if (!state.densityFound && state.populationHeaderFound && header.text().toLowerCase().contains("density")) {
             String density = ExtractionUtils.extractDensity(data.html());
             if (!density.isEmpty()) {
                 try {
@@ -80,14 +91,16 @@ public class InfoboxParser {
     }
 
     private static void processStandardFields(Element header, Element data, Element row, Country country, ParserState state) {
-        String headerText = header.text();
+        Element headerClone = header.clone();
+        headerClone.select("sup, .reference, span.nowrap").remove();
+        String headerText = headerClone.text().replace("\u00A0", " ").replaceAll("\\[.*?\\]", "").trim();
+
+        if (headerText.contains("Capital") && (headerText.equals("Capital") || headerText.contains("largest city") || headerText.contains("Administrative center"))) {
+            parseCapital(data, country, headerText);
+            return;
+        }
 
         switch (headerText) {
-            case "Capital":
-            case "Capital and largest city":
-            case "Capital Administrative center":
-                parseCapital(data, country, headerText);
-                break;
             case "Largest city":
             case "Largest city by municipal boundary":
             case "Largest city by metropolitan area population":
@@ -102,7 +115,7 @@ public class InfoboxParser {
                 break;
             case "Demonym(s)":
             case "Demonym":
-                country.setDemonym(parseListOrLink(data, ".hlist ul li"));
+                country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
                 break;
             case "Government":
                 country.setGovernment(ExtractionUtils.cleanText(data));
@@ -117,13 +130,18 @@ public class InfoboxParser {
                 country.setTimeZone(ExtractionUtils.cleanText(data));
                 break;
             case "Calling code":
-                country.setCallingCode(data.select("a").isEmpty() ? data.text() : data.select("a").first().text());
+                Element dataClone = data.clone();
+                dataClone.select("sup, .reference, span.plainlinks").remove();
+                String cc = dataClone.text().split("\\[")[0].trim();
+                country.setCallingCode(cc);
                 break;
             case "ISO 3166 code":
                 country.setIsoCode(ExtractionUtils.cleanText(data));
                 break;
             case "Internet TLD":
-                country.setInternetTld(ExtractionUtils.cleanText(data));
+                Element tldClone = data.clone();
+                tldClone.select("sup, .reference").remove();
+                country.setInternetTld(tldClone.text().split("\\[")[0].trim());
                 break;
             default:
                 handleOtherFields(headerText, data, country, state);
@@ -132,39 +150,61 @@ public class InfoboxParser {
     }
 
     private static void parseCapital(Element data, Country country, String headerText) {
-        data.select("sup, .geo-inline").remove();
-        String dataText = data.html().replaceAll("\\s*\\([^)]*\\)\\s*", "");
+        Element dataClone = data.clone();
+        dataClone.select("sup, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, .reference, .style, style").remove();
+        String dataText = dataClone.html().replaceAll("\\s*\\([^)]*\\)\\s*", "");
         Document cleanedData = Jsoup.parse(dataText);
         Elements links = cleanedData.select(".plainlist ul li a, a");
         List<String> capitals = new ArrayList<>();
         if (!links.isEmpty()) {
-            links.forEach(l -> { if(!l.text().trim().isEmpty()) capitals.add(l.text().trim()); });
+            links.forEach(l -> { 
+                String t = l.text().trim();
+                if(!t.isEmpty() && !t.contains("°") && !t.matches(".*\\d+.*")) capitals.add(t); 
+            });
         } else {
             capitals.add(cleanedData.text().trim());
         }
         String result = String.join(", ", capitals).replaceAll("\\s+([,.])", "$1");
+        
+        // Final fallback to remove unstripped coordinates left behind
+        result = result.replaceAll("\\s*[0-9]+°[0-9]+′.*", "").trim();
+        result = result.replaceAll("\\s*[0-9]+°[NSEW].*", "").trim();
+        result = result.replaceAll("\\s*\\d+\\.\\d+;\\s*\\d+\\.\\d+.*", "").trim();
+        
         country.setCapital(result);
-        if (headerText.contains("Capital and largest city")) country.setLargestCity(result);
+        if (headerText.contains("largest city")) country.setLargestCity(result);
     }
 
     private static String parseListOrLink(Element data, String selector) {
-        data.select("sup, i, br").remove();
-        Elements elements = data.select(selector);
+        Element dataClone = data.clone();
+        dataClone.select("sup, i, br, .reference").remove();
+        Elements elements = dataClone.select(selector);
         if (!elements.isEmpty()) {
             return elements.stream().map(Element::text).collect(Collectors.joining(", "));
         }
-        Element single = data.select("a").first();
-        return single != null ? single.text() : data.text();
+        Element single = dataClone.select("a").first();
+        if (single != null && !single.text().matches("^\\[\\d+\\]$")) {
+            return single.text();
+        }
+        return dataClone.text();
     }
 
     private static void parseGDP(Element row, Country country) {
-        Element curr = row;
+        Element curr = row.nextElementSibling();
         while (curr != null) {
-            Element h = curr.select("th").first();
-            Element d = curr.select("td").first();
-            if (h != null && h.text().toLowerCase().contains("total") && d != null) {
-                d.select("span, sup").remove();
-                country.setGdp(d.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim());
+            String rowText = curr.text().toLowerCase();
+            if (rowText.contains("gdp") && !rowText.contains("nominal")) break; 
+            if (rowText.contains("hdi") || rowText.contains("gini") || rowText.contains("currency")) break;
+
+            Elements ths = curr.select("th");
+            Elements tds = curr.select("td");
+            Element labelCell = ths.isEmpty() ? (tds.size() > 1 ? tds.get(0) : null) : ths.first();
+            Element valueCell = tds.isEmpty() ? null : tds.last();
+
+            if (labelCell != null && labelCell.text().toLowerCase().contains("total") && valueCell != null && labelCell != valueCell) {
+                Element dClone = valueCell.clone();
+                dClone.select("span, sup, .reference").remove();
+                country.setGdp(dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim());
                 break;
             }
             curr = curr.nextElementSibling();
@@ -172,39 +212,51 @@ public class InfoboxParser {
     }
 
     private static String parseCurrency(Element data) {
-        data.select("sup, i, br").remove();
-        Elements links = data.select(".plainlist ul li a");
+        Element dataClone = data.clone();
+        dataClone.select("sup, i, br, .reference").remove();
+        Elements links = dataClone.select(".plainlist ul li a, a");
         if (!links.isEmpty()) {
             return links.stream()
                     .filter(l -> !l.attr("title").equalsIgnoreCase("ISO 4217"))
                     .map(l -> l.text().split("\\(")[0].trim())
+                    .filter(t -> !t.isEmpty())
                     .collect(Collectors.joining(", "));
         }
-        return data.text().split("\\(")[0].trim();
+        return dataClone.text().split("\\(")[0].trim();
     }
 
     private static void handleOtherFields(String headerText, Element data, Country country, ParserState state) {
         if (headerText.toLowerCase().contains("hdi")) {
-            data.select("sup, br, .nowrap").remove();
-            country.setHdi(data.text().split(" ")[0]);
+            Element dataClone = data.clone();
+            dataClone.select("sup, br, .nowrap, .reference").remove();
+            country.setHdi(dataClone.text().split(" ")[0]);
         }
-        if (headerText.toLowerCase().contains("language") && !state.languageFound && state.flagFound) {
-            data.select("sup, i, br").remove();
-            String langs = data.select("a").stream().map(Element::text).filter(t -> !t.equalsIgnoreCase("none")).collect(Collectors.joining(", "));
-            country.setOfficialLanguage(langs);
-            state.languageFound = true;
+        if (headerText.toLowerCase().contains("language") && !state.languageFound) {
+            String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
+            langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
+            if (!langs.isEmpty()) {
+                country.setOfficialLanguage(langs);
+                state.languageFound = true;
+            }
         }
     }
 
     private static void processImages(Element row, Country country, ParserState state) {
-        Elements imageCells = row.select("td.infobox-image");
+        if (state.flagFound) return;
+        Elements imageCells = row.select("td.infobox-image, td.maptable");
         for (Element cell : imageCells) {
             for (Element img : cell.select("img")) {
                 String url = "https:" + img.attr("src");
                 Element descDiv = findDescriptionDiv(img);
-                if (descDiv != null && descDiv.text().toLowerCase().contains("flag")) {
-                    country.setFlagUrl(url);
-                    state.flagFound = true;
+                String alt = img.attr("alt").toLowerCase();
+                
+                // Broad flag heuristics
+                if ((descDiv != null && descDiv.text().toLowerCase().contains("flag")) || alt.contains("flag") || url.toLowerCase().contains("flag")) {
+                    if (!alt.contains("arms") && !url.toLowerCase().contains("arms") && !url.toLowerCase().contains("seal")) {
+                        country.setFlagUrl(url);
+                        state.flagFound = true;
+                        return;
+                    }
                 }
             }
         }

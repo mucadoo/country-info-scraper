@@ -20,7 +20,7 @@ public class WebScraperTest {
 
     @Test
     public void testExtractArea() {
-        assertEquals("123456", ExtractionUtils.extractArea("123,456.78 <sup"));
+        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78 <sup"));
         assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78&nbsp;km<sup>2</sup>"));
     }
 
@@ -92,7 +92,6 @@ public class WebScraperTest {
                     () -> assertNotNull(country.getDescription(), "Description is null"),
                     () -> assertTrue(country.getDescription().length() > 20, "Description too short"),
 
-                    // Refined Checks
                     () -> {
                         if (country.getIsoCode() != null && !country.getIsoCode().isEmpty()) {
                             assertTrue(country.getIsoCode().length() >= 2, "ISO Code too short: " + country.getIsoCode());

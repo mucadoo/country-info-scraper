@@ -2,6 +2,8 @@ package com.countryinfoscraper;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -89,9 +91,33 @@ public class SnapshotDownloader {
 
     private void downloadSnapshot(String fileName, String url) {
         try {
-            logger.info("Downloading: {}", url);
+            logger.info("Downloading and Trimming: {}", url);
             Document doc = Jsoup.connect(url).userAgent(USER_AGENT).timeout(15000).get();
-            Files.writeString(Paths.get(SNAPSHOT_DIR, fileName + ".html"), doc.outerHtml());
+
+            // 1. Create a "Clean" container
+            Element cleanRoot = doc.createElement("div");
+
+            // 2. Grab the Infobox (for InfoboxParser)
+            // We use a broad selector to ensure we catch it
+            Element infobox = doc.select("table.infobox").first();
+            if (infobox != null) {
+                cleanRoot.appendChild(infobox);
+            }
+
+            // 3. Grab the first few paragraphs that follow the infobox (for DescriptionParser)
+            // DescriptionParser specifically uses "table.infobox ~ p"
+            Elements leadParagraphs = doc.select("table.infobox ~ p");
+            if (leadParagraphs.isEmpty()) {
+                // Fallback if structure is slightly different
+                leadParagraphs = doc.select("p");
+            }
+            
+            leadParagraphs.stream().limit(5).forEach(cleanRoot::appendChild);
+
+            // 4. Save the "Skeleton" HTML
+            String skeleton = "<html><body>" + cleanRoot.html() + "</body></html>";
+            Files.writeString(Paths.get(SNAPSHOT_DIR, fileName + ".html"), skeleton);
+
         } catch (IOException e) {
             logger.error("Failed download for {}: {}", fileName, e.getMessage());
         }

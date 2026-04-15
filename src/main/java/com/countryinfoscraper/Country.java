@@ -1,23 +1,33 @@
 package com.countryinfoscraper;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Country {
+    @JsonProperty("ISO_code")
     private String isoCode;
     private String name;
     private String flagUrl;
     private String description;
     private String capital;
+    @JsonProperty("largest_city")
     private String largestCity;
     private long population;
+    @JsonProperty("area_km2")
     private double areaKm2;
+    @JsonProperty("density_km2")
     private double densityKm2;
     private String government;
+    @JsonProperty("official_language")
     private String officialLanguage;
     private String demonym;
     private String gdp;
     private String hdi;
     private String currency;
+    @JsonProperty("time_zone")
     private String timeZone;
+    @JsonProperty("calling_code")
     private String callingCode;
+    @JsonProperty("internet_TLD")
     private String internetTld;
 
     // Getters and Setters

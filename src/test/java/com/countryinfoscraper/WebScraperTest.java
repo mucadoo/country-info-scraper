@@ -36,6 +36,7 @@ public class WebScraperTest {
         assertEquals("100", ExtractionUtils.extractDensity("100 / km<sup>2</sup>"));
     }
 
+    @Tag("integration")
     @TestFactory
     @DisplayName("Wikipedia Watcher: All Countries")
     Stream<DynamicTest> watchAllWikipediaCountries() throws IOException {

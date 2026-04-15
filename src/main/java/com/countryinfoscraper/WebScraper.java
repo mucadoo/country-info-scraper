@@ -1,8 +1,9 @@
 package com.countryinfoscraper;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.GsonBuilder;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.networknt.schema.JsonSchema;
 import com.networknt.schema.JsonSchemaFactory;
 import com.networknt.schema.SpecVersion;
@@ -22,15 +23,20 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.Semaphore;
 import java.util.stream.Collectors;
 
 public class WebScraper {
     private static final Logger logger = LoggerFactory.getLogger(WebScraper.class);
-    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
-    private static final int TIMEOUT_MS = 15000;
-    private static final int MAX_RETRIES = 3;
-    private static final int PARALLELISM = 10; // Optimized for Wikipedia rate limits
+    private static final String USER_AGENT = "CountryInfoScraper/1.0 (https://github.com/mucadoo/country-info-scraper; your_email@example.com) Java/21";
+    private static final int TIMEOUT_MS = Integer.parseInt(System.getProperty("scraper.timeout", "15000"));
+    private static final int MAX_RETRIES = Integer.parseInt(System.getProperty("scraper.retries", "3"));
+    private static final int PARALLELISM = Integer.parseInt(System.getProperty("scraper.parallelism", "10"));
+
+    private final Semaphore semaphore = new Semaphore(PARALLELISM);
 
     public static void main(String[] args) {
         new WebScraper().run();
@@ -49,20 +55,35 @@ public class WebScraper {
             }
 
             Elements rows = table.select("tbody > tr");
-            
-            // Using a custom ForkJoinPool to control parallelism and avoid saturating the common pool
-            ForkJoinPool customThreadPool = new ForkJoinPool(PARALLELISM);
-            List<Country> countries = customThreadPool.submit(() ->
-                rows.parallelStream()
-                    .map(this::processRow)
-                    .filter(Objects::nonNull)
-                    .collect(Collectors.toList())
-            ).get();
-            customThreadPool.shutdown();
 
-            String jsonOutput = serialize(countries);
-            validateSchema(jsonOutput);
-            exportData(jsonOutput);
+            List<Country> countries;
+            try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+                List<Future<Country>> futures = rows.stream()
+                        .map(row -> executor.submit(() -> {
+                            semaphore.acquire();
+                            try {
+                                return processRow(row);
+                            } finally {
+                                semaphore.release();
+                            }
+                        }))
+                        .toList();
+
+                countries = futures.stream()
+                        .map(f -> {
+                            try {
+                                return f.get();
+                            } catch (InterruptedException | ExecutionException e) {
+                                logger.error("Failed to process row", e);
+                                return null;
+                            }
+                        })
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+            }
+
+            validateSchema(serialize(countries, true));
+            exportData(countries);
 
         } catch (Exception e) {
             logger.error("Scraping process failed", e);
@@ -75,7 +96,9 @@ public class WebScraper {
                 return Jsoup.connect(url).userAgent(USER_AGENT).timeout(TIMEOUT_MS).get();
             } catch (IOException e) {
                 logger.warn("Attempt {} failed for {}: {}", i + 1, url, e.getMessage());
-                try { Thread.sleep(1000L * (i + 1)); } catch (InterruptedException ignored) {
+                try {
+                    Thread.sleep(1000L * (i + 1));
+                } catch (InterruptedException ignored) {
                     Thread.currentThread().interrupt();
                 }
             }
@@ -98,23 +121,12 @@ public class WebScraper {
         return country;
     }
 
-    private String serialize(List<Country> countries) {
-        return new GsonBuilder()
-                .setFieldNamingStrategy(f -> {
-                    String name = f.getName();
-                    if (name.equals("isoCode")) return "ISO_code";
-                    if (name.equals("areaKm2")) return "area_km2";
-                    if (name.equals("densityKm2")) return "density_km2";
-                    if (name.equals("internetTld")) return "internet_TLD";
-                    if (name.equals("largestCity")) return "largest_city";
-                    if (name.equals("officialLanguage")) return "official_language";
-                    if (name.equals("timeZone")) return "time_zone";
-                    if (name.equals("callingCode")) return "calling_code";
-                    return name;
-                })
-                .setPrettyPrinting()
-                .create()
-                .toJson(countries);
+    private String serialize(List<Country> countries, boolean pretty) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        if (pretty) {
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        }
+        return mapper.writeValueAsString(countries);
     }
 
     private void validateSchema(String jsonContent) {
@@ -135,10 +147,14 @@ public class WebScraper {
         }
     }
 
-    private void exportData(String json) throws IOException {
-        Path path = Paths.get("src/main/resources/countries.json");
-        Files.createDirectories(path.getParent());
-        Files.write(path, json.getBytes());
-        logger.info("Data exported to {}", path.toAbsolutePath());
+    private void exportData(List<Country> countries) throws IOException {
+        Path prettyPath = Paths.get("src/main/resources/countries.json");
+        Path minPath = Paths.get("src/main/resources/countries.min.json");
+        Files.createDirectories(prettyPath.getParent());
+
+        Files.writeString(prettyPath, serialize(countries, true));
+        Files.writeString(minPath, serialize(countries, false));
+
+        logger.info("Data exported to {} and {}", prettyPath.toAbsolutePath(), minPath.toAbsolutePath());
     }
 }

@@ -4,12 +4,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class InfoboxParser {
+    private static final Logger logger = LoggerFactory.getLogger(InfoboxParser.class);
 
     public static void parse(Document doc, Country country) {
         Element infobox = doc.select("table.infobox.ib-country.vcard").first();
@@ -42,7 +45,11 @@ public class InfoboxParser {
         if (!state.areaFound && state.areaHeaderFound && header.select("div").text().toLowerCase().contains("total")) {
             String area = ExtractionUtils.extractArea(data.html());
             if (!area.isEmpty()) {
-                try { country.setAreaKm2(Double.parseDouble(area)); } catch (NumberFormatException ignored) {}
+                try {
+                    country.setAreaKm2(Double.parseDouble(area));
+                } catch (NumberFormatException e) {
+                    logger.warn("Failed to parse area for {}: '{}'", country.getName(), area);
+                }
             }
             state.areaFound = true;
         }
@@ -50,7 +57,11 @@ public class InfoboxParser {
         if (!state.populationFound && state.populationHeaderFound && (header.select("div").text().toLowerCase().contains("estimate") || header.select("div").text().toLowerCase().contains("census"))) {
             String pop = ExtractionUtils.extractPopulation(data.html());
             if (!pop.isEmpty()) {
-                try { country.setPopulation(Long.parseLong(pop)); } catch (NumberFormatException ignored) {}
+                try {
+                    country.setPopulation(Long.parseLong(pop));
+                } catch (NumberFormatException e) {
+                    logger.warn("Failed to parse population for {}: '{}'", country.getName(), pop);
+                }
             }
             state.populationFound = true;
         }
@@ -58,7 +69,11 @@ public class InfoboxParser {
         if (!state.densityFound && state.populationHeaderFound && header.select("div").text().toLowerCase().contains("density")) {
             String density = ExtractionUtils.extractDensity(data.html());
             if (!density.isEmpty()) {
-                try { country.setDensityKm2(Double.parseDouble(density)); } catch (NumberFormatException ignored) {}
+                try {
+                    country.setDensityKm2(Double.parseDouble(density));
+                } catch (NumberFormatException e) {
+                    logger.warn("Failed to parse density for {}: '{}'", country.getName(), density);
+                }
             }
             state.densityFound = true;
         }

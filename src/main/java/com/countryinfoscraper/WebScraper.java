@@ -1,461 +1,144 @@
 package com.countryinfoscraper;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.GsonBuilder;
+import com.networknt.schema.JsonSchema;
+import com.networknt.schema.JsonSchemaFactory;
+import com.networknt.schema.SpecVersion;
+import com.networknt.schema.ValidationMessage;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import com.google.gson.JsonObject;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.ForkJoinPool;
+import java.util.stream.Collectors;
 
 public class WebScraper {
+    private static final Logger logger = LoggerFactory.getLogger(WebScraper.class);
+    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
+    private static final int TIMEOUT_MS = 15000;
+    private static final int MAX_RETRIES = 3;
+    private static final int PARALLELISM = 10; // Optimized for Wikipedia rate limits
+
     public static void main(String[] args) {
+        new WebScraper().run();
+    }
+
+    public void run() {
         try {
+            logger.info("Starting scraper with parallelism: {}", PARALLELISM);
+            Document doc = fetchWithRetry("https://en.wikipedia.org/wiki/List_of_sovereign_states");
+            if (doc == null) return;
 
-            // Connect to the Wikipedia page
-            Document doc = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_sovereign_states").get();
-
-            // Select the table with the list of countries
             Element table = doc.select("table.wikitable").first();
+            if (table == null) {
+                logger.error("Country list table not found!");
+                return;
+            }
 
-            // Get rows from the table
             Elements rows = table.select("tbody > tr");
+            
+            // Using a custom ForkJoinPool to control parallelism and avoid saturating the common pool
+            ForkJoinPool customThreadPool = new ForkJoinPool(PARALLELISM);
+            List<Country> countries = customThreadPool.submit(() ->
+                rows.parallelStream()
+                    .map(this::processRow)
+                    .filter(Objects::nonNull)
+                    .collect(Collectors.toList())
+            ).get();
+            customThreadPool.shutdown();
 
-            List<JsonObject> countries = new ArrayList<>();
+            String jsonOutput = serialize(countries);
+            validateSchema(jsonOutput);
+            exportData(jsonOutput);
 
-            // Loop through rows and get country links
-            for (Element row : rows) {
-                Elements cols = row.select("td");
-                if (!cols.isEmpty()) {
-                    Element link = cols.get(0).select("a").first();
-                    if (link != null) {
-                        String countryName = link.text();
-                        String countryLink = "https://en.wikipedia.org" + link.attr("href");
-
-                        // Scrape the country page
-                        JsonObject countryInfo = scrapeCountryInfo(countryLink);
-                        countryInfo.addProperty("name", countryName);
-                        countries.add(countryInfo);
-                    }
-                }
-            }
-
-            // Generate pretty-printed JSON
-            Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
-            String prettyJson = prettyGson.toJson(countries);
-            writeToFile("src/main/resources/countries.json", prettyJson);
-            System.out.println("Pretty-printed JSON file generated.");
-
-            // Generate minified JSON
-            Gson minifiedGson = new GsonBuilder().create();
-            String minifiedJson = minifiedGson.toJson(countries);
-            writeToFile("src/main/resources/countries.min.json", minifiedJson);
-            System.out.println("Minified JSON file generated.");
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            logger.error("Scraping process failed", e);
         }
     }
 
-    private static void writeToFile(String filePath, String content) throws IOException {
-        Path path = Paths.get(filePath);
+    private Document fetchWithRetry(String url) {
+        for (int i = 0; i < MAX_RETRIES; i++) {
+            try {
+                return Jsoup.connect(url).userAgent(USER_AGENT).timeout(TIMEOUT_MS).get();
+            } catch (IOException e) {
+                logger.warn("Attempt {} failed for {}: {}", i + 1, url, e.getMessage());
+                try { Thread.sleep(1000L * (i + 1)); } catch (InterruptedException ignored) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+        return null;
+    }
+
+    private Country processRow(Element row) {
+        Element link = row.select("td").first() != null ? row.select("td").first().select("a").first() : null;
+        if (link == null) return null;
+
+        String name = link.text();
+        String url = "https://en.wikipedia.org" + link.attr("href");
+
+        Document countryDoc = fetchWithRetry(url);
+        if (countryDoc == null) return null;
+
+        Country country = CountryParser.parseCountry(countryDoc);
+        country.setName(name);
+        return country;
+    }
+
+    private String serialize(List<Country> countries) {
+        return new GsonBuilder()
+                .setFieldNamingStrategy(f -> {
+                    String name = f.getName();
+                    if (name.equals("isoCode")) return "ISO_code";
+                    if (name.equals("areaKm2")) return "area_km2";
+                    if (name.equals("densityKm2")) return "density_km2";
+                    if (name.equals("internetTld")) return "internet_TLD";
+                    if (name.equals("largestCity")) return "largest_city";
+                    if (name.equals("officialLanguage")) return "official_language";
+                    if (name.equals("timeZone")) return "time_zone";
+                    if (name.equals("callingCode")) return "calling_code";
+                    return name;
+                })
+                .setPrettyPrinting()
+                .create()
+                .toJson(countries);
+    }
+
+    private void validateSchema(String jsonContent) {
+        try (InputStream schemaStream = getClass().getResourceAsStream("/country-schema.json")) {
+            if (schemaStream == null) return;
+            JsonSchema schema = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7).getSchema(schemaStream);
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode node = mapper.readTree(jsonContent);
+            Set<ValidationMessage> errors = schema.validate(node);
+
+            if (errors.isEmpty()) {
+                logger.info("Schema validation passed.");
+            } else {
+                errors.forEach(e -> logger.error("Schema Error: {}", e.getMessage()));
+            }
+        } catch (Exception e) {
+            logger.error("Schema validation execution failed", e);
+        }
+    }
+
+    private void exportData(String json) throws IOException {
+        Path path = Paths.get("src/main/resources/countries.json");
         Files.createDirectories(path.getParent());
-        Files.write(path, content.getBytes());
-        System.out.println("JSON file generated at: " + path.toAbsolutePath());
+        Files.write(path, json.getBytes());
+        logger.info("Data exported to {}", path.toAbsolutePath());
     }
-
-    private static JsonObject scrapeCountryInfo(String url) throws IOException {
-        Document doc = Jsoup.connect(url).get();
-        JsonObject countryInfo = new JsonObject();
-
-        // Initialize with default values
-        countryInfo.addProperty("ISO_code", "");
-        countryInfo.addProperty("name", "");
-        countryInfo.addProperty("flagUrl", "");
-        countryInfo.addProperty("description", "");
-        countryInfo.addProperty("capital", "");
-        countryInfo.addProperty("largest_city", "");
-        countryInfo.addProperty("population", 0);
-        countryInfo.addProperty("area_km2", 0);
-        countryInfo.addProperty("density_km2", 0);
-        countryInfo.addProperty("government", "");
-        countryInfo.addProperty("official_language", "");
-        countryInfo.addProperty("demonym", "");
-        countryInfo.addProperty("GDP", "");
-        countryInfo.addProperty("HDI", "");
-        countryInfo.addProperty("currency", "");
-        countryInfo.addProperty("time_zone", "");
-        countryInfo.addProperty("calling_code", "");
-        countryInfo.addProperty("internet_TLD", "");
-
-        // Scrape the info from the infobox
-        Element infobox = doc.select("table.infobox.ib-country.vcard").first();
-        if (infobox != null) {
-            Elements rows = infobox.select("tr");
-
-            boolean areaHeaderFound = false;
-            boolean areaFound = false;
-            boolean populationHeaderFound = false;
-            boolean populationFound = false;
-            boolean densityFound = false;
-            boolean languageFound = false;
-            boolean flagFound = false;
-
-            for (Element row : rows) {
-                Element header = row.select("th").first();
-                Element data = row.select("td").first();
-
-                // Check for the Area header
-                if (!areaHeaderFound && header != null && header.text().toLowerCase().contains("area")) {
-                    areaHeaderFound = true;
-                }
-
-                // Scrape area information if Area header was found
-                if (!areaFound && areaHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("total")) {
-                    String areaHtml = data.html();
-                    String area = extractArea(areaHtml);
-                    if (!area.isEmpty()) {
-                        countryInfo.addProperty("area_km2", Double.parseDouble(area));
-                    }
-                    areaFound = true; // Reset the flag after capturing the area
-                }
-
-                // Check for the Population header
-                if (!populationHeaderFound && header != null && header.text().toLowerCase().contains("population")) {
-                    populationHeaderFound = true;
-                }
-
-                // Scrape population information if Population header was found
-                if (!populationFound && populationHeaderFound && header != null && data != null && (header.select("div").text().toLowerCase().contains("estimate") || header.select("div").text().toLowerCase().contains("census"))) {
-                    String populationHtml = data.html();
-                    String population = extractPopulation(populationHtml);
-                    if (!population.isEmpty()) {
-                        countryInfo.addProperty("population", Long.parseLong(population));
-                    }
-                    populationFound = true; // Capture the first population estimate found
-                }
-
-                // Scrape density information if Population header was found
-                if (!densityFound && populationHeaderFound && header != null && data != null && header.select("div").text().toLowerCase().contains("density")) {
-                    String densityHtml = data.html();
-                    String density = extractDensity(densityHtml);
-                    if (!density.isEmpty()) {
-                        countryInfo.addProperty("density_km2", Double.parseDouble(density));
-                    }
-                    densityFound = true; // Capture the density information
-                }
-
-                if (header != null && data != null) {
-                    String headerText = header.text();
-
-                    switch (headerText) {
-                        case "Capital":
-                        case "Capital and largest city":
-                        case "Capital Administrative center":
-                            // Remove unwanted elements: sup, coordinates
-                            data.select("sup, .geo-inline").remove();
-
-                            // Remove texts in parentheses from the entire data content first
-                            String dataText = data.html().replaceAll("\\s*\\([^)]*\\)\\s*", "");
-
-                            // Parse the cleaned data content for capitals
-                            Document cleanedData = Jsoup.parse(dataText);
-
-                            // Check for multiple capitals
-                            Elements capitalElements = cleanedData.select(".plainlist ul li a");
-                            List<String> capitals = new ArrayList<>();
-                            if (!capitalElements.isEmpty()) {
-                                for (Element capitalElement : capitalElements) {
-                                    String capital = capitalElement.text().trim();
-                                    if (!capital.isEmpty()) {
-                                        capitals.add(capital);
-                                    }
-                                }
-                            } else {
-                                // Handle cases with no links
-                                Elements singleCapitalElements = cleanedData.select("a");
-                                if (!singleCapitalElements.isEmpty()) {
-                                    for (Element singleCapitalElement : singleCapitalElements) {
-                                        String capital = singleCapitalElement.text().trim();
-                                        if (!capital.isEmpty()) {
-                                            capitals.add(capital);
-                                        }
-                                    }
-                                } else {
-                                    // Handle text directly from the td element
-                                    String capital = cleanedData.text().trim();
-                                    if (!capital.isEmpty()) {
-                                        capitals.add(capital);
-                                    }
-                                }
-                            }
-
-                            String capitalString = String.join(", ", capitals).replaceAll("\\s+([,.])", "$1");
-                            countryInfo.addProperty("capital", capitalString);
-                            if (headerText.contains("Capital and largest city")) {
-                                countryInfo.addProperty("largest_city", capitalString);
-                            }
-                            break;
-                        case "Largest city":
-                        case "Largest city by municipal boundary":
-                        case "Largest city by metropolitan area population":
-                        case "Largest metropolitan area":
-                        case "Largest municipality":
-                        case "Largest administrative unit":
-                        case "Largest quarter":
-                        case "Largest settlement":
-                        case "Largest planning area by population":
-                            String largestCity = data.select("a").first().text();
-                            countryInfo.addProperty("largest_city", largestCity);
-                            break;
-                        case "Demonym(s)":
-                        case "Demonym":
-                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
-                            List<String> demonyms = new ArrayList<>();
-                            // Check if the demonyms are in a list
-                            Elements demonymElements = data.select(".hlist ul li");
-                            if (!demonymElements.isEmpty()) {
-                                for (Element demonymElement : demonymElements) {
-                                    String demonym = demonymElement.text();
-                                    demonyms.add(demonym);
-                                }
-                            } else {
-                                // Single demonym case
-                                Elements singleDemonymElement = data.select("a");
-                                if (!singleDemonymElement.isEmpty()) {
-                                    demonyms.add(singleDemonymElement.first().text());
-                                } else {
-                                    // Handle case with no link
-                                    demonyms.add(data.text());
-                                }
-                            }
-                            String demonymString = String.join(", ", demonyms);
-                            countryInfo.addProperty("demonym", demonymString);
-                            break;
-                        case "Government":
-                            countryInfo.addProperty("government", cleanText(data));
-                            break;
-                        case "GDP (nominal)":
-                            while (row != null) {
-                                header = row.select("th").first();
-                                data = row.select("td").first();
-                                if (header != null && header.text().toLowerCase().contains("total") && data != null) {
-                                    // Remove unwanted elements and texts within parentheses
-                                    data.select("span, sup").remove();
-                                    String gdpText = data.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
-                                    countryInfo.addProperty("GDP", gdpText);
-                                    break;
-                                }
-                                row = row.nextElementSibling();
-                            }
-                            break;
-                        case "Currency":
-                            data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
-                            List<String> currencies = new ArrayList<>();
-                            // Check if the currencies are in a list
-                            Elements currencyElements = data.select(".plainlist ul li a");
-                            if (!currencyElements.isEmpty()) {
-                                for (Element currencyElement : currencyElements) {
-                                    if (!currencyElement.attr("title").equalsIgnoreCase("ISO 4217")) {
-                                        String currency = currencyElement.text().split("\\(")[0].trim();  // Ignore content in parentheses
-                                        currencies.add(currency);
-                                    }
-                                }
-                            } else {
-                                // Single currency case
-                                String singleCurrency = data.text().split("\\(")[0].trim();  // Ignore content in parentheses
-                                currencies.add(singleCurrency);
-                            }
-                            String currencyString = String.join(", ", currencies);
-                            countryInfo.addProperty("currency", currencyString);
-                            break;
-                        case "Time zone":
-                            countryInfo.addProperty("time_zone", cleanText(data));
-                            break;
-                        case "Calling code":
-                            String callingCode = data.select("a").isEmpty() ? data.text() : data.select("a").first().text();
-                            countryInfo.addProperty("calling_code", callingCode);
-                            break;
-                        case "ISO 3166 code":
-                            countryInfo.addProperty("ISO_code", cleanText(data));
-                            break;
-                        case "Internet TLD":
-                            countryInfo.addProperty("internet_TLD", cleanText(data));
-                            break;
-                        default:
-                            if (headerText.toLowerCase().contains("hdi")) {
-                                // Remove unwanted elements and get the HDI value
-                                data.select("sup, br, .nowrap").remove();
-                                String hdiValue = data.text().split(" ")[0];
-                                countryInfo.addProperty("HDI", hdiValue);
-                            }
-                            if (headerText.toLowerCase().contains("language")) {
-                                if(languageFound || !flagFound){
-                                    break;
-                                }
-                                data.select("sup, i, br").remove();  // Remove sup, i (italic), and br (line breaks) elements
-                                Elements languagesElements = data.select("a");
-                                List<String> languages = new ArrayList<>();
-                                for (Element langElement : languagesElements) {
-                                    String language = langElement.text();
-                                    if (!language.equalsIgnoreCase("none")) {
-                                        languages.add(language);
-                                    }
-                                }
-                                String officialLanguages = String.join(", ", languages);
-                                countryInfo.addProperty("official_language", officialLanguages);
-                                languageFound = true;
-                            }
-                            break;
-                    }
-                }
-
-                // Scrape flag and emblem images
-                Elements imageCells = row.select("td.infobox-image");
-                for (Element cell : imageCells) {
-                    Elements images = cell.select("img");
-                    for (Element img : images) {
-                        String imgUrl = "https:" + img.attr("src");
-                        Element parentDiv = img.closest("div");
-                        while (parentDiv != null) {
-                            Element descriptionDiv = parentDiv.nextElementSibling();
-                            if (descriptionDiv != null) {
-                                String description = descriptionDiv.text().toLowerCase();
-                                if (description.contains("flag")) {
-                                    countryInfo.addProperty("flagUrl", imgUrl);
-                                    flagFound = true;
-                                    break;
-                                }
-                            }
-                            parentDiv = parentDiv.parent();
-                        }
-                    }
-                }
-
-            }
-        }
-
-        // Scrape the country description from the first <p> element after the infobox
-        Element descriptionElement = doc.select("table.infobox ~ p").first();
-        while (descriptionElement != null && descriptionElement.text().trim().isEmpty()) {
-            // Move to the next sibling element
-            descriptionElement = descriptionElement.nextElementSibling();
-            // Skip non-<p> elements
-            while (descriptionElement != null && !descriptionElement.tagName().equals("p")) {
-                descriptionElement = descriptionElement.nextElementSibling();
-            }
-        }
-        if (descriptionElement != null) {
-            String description = cleanText(descriptionElement);
-
-            // Remove anything within parentheses
-            description = description.replaceAll("\\(([^()]*|\\([^()]*\\))*\\)", "").replaceAll("\\s+", " ").trim();
-
-            // Remove any space before commas and periods
-            description = description.replaceAll("\\s+([,.])", "$1");
-
-            countryInfo.addProperty("description", description);
-        }
-
-        return countryInfo;
-
-    }
-
-    // Method to clean text from unnecessary elements like superscripts and coordinates
-    private static String cleanText(Element element) {
-        element.select("sup").remove(); // Remove sup elements
-        element.select(".geo-inline").remove(); // Remove coordinates
-        return element.text();
-    }
-
-    // Method to extract area in km² from HTML string
-    private static String extractArea(String html) {
-        // Pattern to match area values with commas and optional decimal points
-        Pattern pattern1 = Pattern.compile("^(\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?)(?:<sup|<)");
-        Pattern pattern2 = Pattern.compile("(\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?)\\s*&nbsp;km<sup>2</sup>");
-
-        Matcher matcher1 = pattern1.matcher(html);
-        Matcher matcher2 = pattern2.matcher(html);
-
-        if (matcher1.find()) {
-            return matcher1.group(1).replace(",", "");
-        } else if (matcher2.find()) {
-            return matcher2.group(1).replace(",", "");
-        }
-
-        return "";
-    }
-
-    // Method to extract population from HTML string
-    private static String extractPopulation(String html) {
-        // Pattern to match population ranges, excluding values within parentheses
-        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*[–-]\\s*([0-9,.]+)\\s*(million|billion)?(?=\\s*(?:<sup|<span|<br|\\(|<))");
-        Matcher matcher = pattern.matcher(html);
-
-        // Check for ranges first
-        if (matcher.find()) {
-            double low = Double.parseDouble(matcher.group(1).replace(",", ""));
-            double high = Double.parseDouble(matcher.group(2).replace(",", ""));
-            double average = (low + high) / 2;
-
-            // Adjust based on the multiplier (million or billion)
-            String multiplier = matcher.group(3);
-            if (multiplier != null) {
-                switch (multiplier.toLowerCase()) {
-                    case "million":
-                        average *= 1_000_000;
-                        break;
-                    case "billion":
-                        average *= 1_000_000_000;
-                        break;
-                }
-            }
-            return String.format("%.0f", average); // Return without decimal places
-        }
-
-        // Fallback pattern to match single population number
-        pattern = Pattern.compile("([0-9,]+)(?=\\s*(?:<sup|<span|<br|\\(|<))");
-        matcher = pattern.matcher(html);
-        if (matcher.find()) {
-            return matcher.group(1).replace(",", "");
-        }
-
-        return "";
-    }
-
-    // Method to extract density in km² from HTML string
-    private static String extractDensity(String html) {
-        // Pattern to match the density value outside parentheses
-        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*<sup[^>]*>.*?</sup>\\s*/\\s*km<sup>2</sup>");
-        Matcher matcher = pattern.matcher(html);
-        if (matcher.find()) {
-            return matcher.group(1).replace(",", "");
-        }
-
-        // Pattern to match the density value followed by /km² and additional info
-        pattern = Pattern.compile("([0-9,.]+)\\s*/\\s*km<sup>2</sup>[^<]*");
-        matcher = pattern.matcher(html);
-        if (matcher.find()) {
-            return matcher.group(1).replace(",", "");
-        }
-
-        // Handling cases where density is followed by references or additional information
-        pattern = Pattern.compile("([0-9,.]+)\\s*</?sup>\\s*/\\s*km<sup>2</sup>");
-        matcher = pattern.matcher(html);
-        if (matcher.find()) {
-            return matcher.group(1).replace(",", "");
-        }
-
-        return "";
-    }
-
 }

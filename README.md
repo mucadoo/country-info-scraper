@@ -86,7 +86,3 @@ The scraper generates two files in `src/main/resources/`:
 - `src/main/java/com/countryinfoscraper/WebScraper.java`: Main logic for scraping and data processing.
 - `pom.xml`: Maven configuration and dependencies.
 - `src/main/resources/`: Directory where the resulting JSON files are stored.
-
-## License
-
-[MIT License](LICENSE) (or specify your license)

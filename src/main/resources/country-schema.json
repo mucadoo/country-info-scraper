@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": { "type": "string", "minLength": 1 },
+      "ISO_code": { "type": "string" },
+      "capital": { "type": "string" },
+      "population": { "type": "integer" },
+      "area_km2": { "type": "number" },
+      "flagUrl": { "type": "string", "format": "uri", "pattern": "^https://.*" }
+    },
+    "required": ["name", "capital", "population", "area_km2"]
+  }
+}

@@ -5,11 +5,14 @@ import org.jsoup.nodes.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class SnapshotDownloader {
     private static final Logger logger = LoggerFactory.getLogger(SnapshotDownloader.class);
@@ -62,12 +65,25 @@ public class SnapshotDownloader {
 
     public void downloadAll() {
         try {
+            cleanSnapshotDirectory();
             Files.createDirectories(Paths.get(SNAPSHOT_DIR));
             for (Map.Entry<String, String> entry : COUNTRIES_TO_SNAPSHOT.entrySet()) {
                 downloadSnapshot(entry.getKey(), entry.getValue());
             }
         } catch (IOException e) {
             logger.error("Failed to setup snapshots", e);
+        }
+    }
+
+    private void cleanSnapshotDirectory() throws IOException {
+        Path path = Paths.get(SNAPSHOT_DIR);
+        if (Files.exists(path)) {
+            logger.info("Cleaning snapshot directory: {}", SNAPSHOT_DIR);
+            try (Stream<Path> walk = Files.walk(path)) {
+                walk.sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+            }
         }
     }
 

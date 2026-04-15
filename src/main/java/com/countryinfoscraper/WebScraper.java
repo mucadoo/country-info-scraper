@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.Semaphore;
@@ -57,7 +58,8 @@ public class WebScraper {
             Elements rows = table.select("tbody > tr");
 
             List<Country> countries;
-            try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+            ExecutorService executor = Executors.newFixedThreadPool(PARALLELISM);
+            try {
                 List<Future<Country>> futures = rows.stream()
                         .map(row -> executor.submit(() -> {
                             semaphore.acquire();
@@ -67,7 +69,7 @@ public class WebScraper {
                                 semaphore.release();
                             }
                         }))
-                        .toList();
+                        .collect(Collectors.toList());
 
                 countries = futures.stream()
                         .map(f -> {
@@ -80,6 +82,8 @@ public class WebScraper {
                         })
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
+            } finally {
+                executor.shutdown();
             }
 
             validateSchema(serialize(countries, true));

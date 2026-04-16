@@ -121,16 +121,18 @@ jobs:
           fi
 
       - name: Update data branch
+        id: update_data
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         run: |
           # Persist the data to the 'data' branch for future diffs
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
           # Use a separate folder to avoid workspace side-effects
           mkdir data-update
           cd data-update
           git init
+          
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+
           git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
           if git fetch origin data --depth=1; then
@@ -147,13 +149,14 @@ jobs:
           git add countries.json countries.min.json
           git commit -m "Data update: $(date -u)" || exit 0
           git push origin data
+          echo "new_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: data-${{ steps.date.outputs.tag_date }}
-          target_commitish: data
+          target_commitish: ${{ steps.update_data.outputs.new_sha }}
           name: ${{ steps.release_name.outputs.name }}
           files: |
             src/main/resources/countries.json

@@ -57,15 +57,15 @@ public class InfoboxParser {
         if (country.getIsoCode() == null || country.getIsoCode().isEmpty()) country.setIsoCode("N/A");
         if (country.getCapital() == null || country.getCapital().isEmpty()) country.setCapital("N/A");
         if (country.getLargestCity() == null || country.getLargestCity().isEmpty()) country.setLargestCity("N/A");
-        if (country.getDemonym() == null) country.setDemonym("N/A");
-        if (country.getCallingCode() == null) country.setCallingCode("N/A");
-        if (country.getGdp() == null) country.setGdp("N/A");
-        if (country.getHdi() == null) country.setHdi("N/A");
-        if (country.getCurrency() == null) country.setCurrency("N/A");
-        if (country.getTimeZone() == null) country.setTimeZone("N/A");
-        if (country.getOfficialLanguage() == null) country.setOfficialLanguage("N/A");
-        if (country.getInternetTld() == null) country.setInternetTld("N/A");
-        if (country.getGovernment() == null) country.setGovernment("N/A");
+        if (country.getDemonym() == null || country.getDemonym().isEmpty()) country.setDemonym("N/A");
+        if (country.getCallingCode() == null || country.getCallingCode().isEmpty()) country.setCallingCode("N/A");
+        if (country.getGdp() == null || country.getGdp().isEmpty()) country.setGdp("N/A");
+        if (country.getHdi() == null || country.getHdi().isEmpty()) country.setHdi("N/A");
+        if (country.getCurrency() == null || country.getCurrency().isEmpty()) country.setCurrency("N/A");
+        if (country.getTimeZone() == null || country.getTimeZone().isEmpty()) country.setTimeZone("N/A");
+        if (country.getOfficialLanguage() == null || country.getOfficialLanguage().isEmpty()) country.setOfficialLanguage("N/A");
+        if (country.getInternetTld() == null || country.getInternetTld().isEmpty()) country.setInternetTld("N/A");
+        if (country.getGovernment() == null || country.getGovernment().isEmpty()) country.setGovernment("N/A");
         if (country.getFlagUrl() == null) country.setFlagUrl("");
         if (country.getDescription() == null) country.setDescription("");
     }
@@ -206,7 +206,7 @@ public class InfoboxParser {
         else if (headerText.contains("ISO 3166 code")) {
             country.setIsoCode(ExtractionUtils.cleanText(data));
         } 
-        else if (headerText.contains("Internet TLD")) {
+        else if (headerText.toLowerCase().contains("internet tld")) {
             Element tldClone = data.clone();
             tldClone.select("sup, .reference").remove();
             country.setInternetTld(tldClone.text().split("\\[")[0].trim());
@@ -284,7 +284,6 @@ public class InfoboxParser {
                 
                 // Fix typos like "$113,494 billion" -> "$113.494 billion"
                 gdpValue = gdpValue.replaceAll("(\\d+),(\\d{3})\\s*(million|billion|trillion)", "$1.$2 $3");
-                
                 country.setGdp(gdpValue);
                 break;
             }

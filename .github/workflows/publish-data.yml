@@ -35,6 +35,15 @@ jobs:
       - name: Run Scraper
         run: mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
 
+      - name: Install JSON Schema Validator
+        run: npm install -g ajv-cli
+
+      - name: Validate Data Quality
+        run: |
+          # This ensures the scraped data matches your strict schema requirements
+          ajv validate -s src/main/resources/country-schema.json -d src/main/resources/countries.json --strict=false
+          echo "Data validation passed. Proceeding to deployment."
+
       # Optional: Add .nojekyll so GitHub Pages doesn't ignore underscore-prefixed files
       - name: Ensure .nojekyll
         run: touch src/main/resources/.nojekyll
@@ -51,17 +60,28 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Generate date for tag and release name
+      - name: Generate dates and release info
         id: date
         run: |
-          echo "tag=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
-          echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+          TODAY=$(date +'%Y-%m-%d')
+          TAG_DATE=$(date +'%Y.%m.%d-%H%M')
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+          echo "tag_date=$TAG_DATE" >> $GITHUB_OUTPUT
 
-      - name: Create GitHub Release (Archive + Human-friendly)
+      - name: Determine release name
+        id: release_name
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            echo "name=Automated Data Update" >> $GITHUB_OUTPUT
+          else
+            echo "name=Data Snapshot: ${{ steps.date.outputs.today }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: data-${{ steps.date.outputs.tag }}
-          name: "Data Snapshot: ${{ steps.date.outputs.name }}"
+          tag_name: data-${{ steps.date.outputs.tag_date }}
+          name: ${{ steps.release_name.outputs.name }}
           files: |
             src/main/resources/countries.json
             src/main/resources/countries.min.json
@@ -69,8 +89,10 @@ jobs:
             Automated data snapshot generated from Wikipedia.
 
             **Live URLs (always up-to-date):**
-            - Full: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.json
-            - Minified: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.min.json
+            - Full JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.json
+            - Minified JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.min.json
+
+            This release was triggered by: **${{ github.event_name }}**
           draft: false
           prerelease: false
         env:

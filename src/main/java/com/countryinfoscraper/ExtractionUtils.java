@@ -10,10 +10,15 @@ public class ExtractionUtils {
     public static String cleanText(Element element) {
         if (element == null) return "";
         Element clone = element.clone();
-        // REMOVED 'span' and '.style' from removal list to preserve text within formatted spans
-        clone.select("sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, style").remove();
-        // Normalize spaces (replaces NBSP and multiple spaces with one space)
-        return clone.text().replaceAll("[\\s\\u00A0]+", " ").trim();
+        // Remove footnotes, references, coordinates, and other non-textual elements
+        clone.select("sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, style, .screenreader-only").remove();
+        
+        // Normalize spaces and remove hidden Unicode markers (LRM, RLM, ZWSP, etc.)
+        String text = clone.text()
+                .replaceAll("[\\s\\u00A0]+", " ")
+                .replaceAll("[\\u200B-\\u200D\\u200E\\u200F\\uFEFF]", "")
+                .trim();
+        return text;
     }
 
     public static String extractArea(String text) {
@@ -51,8 +56,9 @@ public class ExtractionUtils {
     public static String extractPopulation(String text) {
         if (text == null || text.isEmpty()) return "";
         
-        // Normalize text: remove hidden markers
-        String normalized = text.replace("\u200E", "").replace("\u200F", "");
+        // Normalize text: replace commas with dots ONLY if they look like decimal points in multipliers (e.g., 113,494 billion -> 113.494 billion)
+        // This is a common typo in Wikipedia infoboxes for some countries.
+        String normalized = text.replaceAll("(\\d+),(\\d{1,3})\\s*(million|billion)", "$1.$2 $3");
 
         // 1. Range match: "1.2 - 1.5 million"
         Pattern pattern = Pattern.compile("([0-9,.]+)\\s*[–-]\\s*([0-9,.]+)\\s*(million|billion)?(?=\\s*(?:\\(|\\s|$))");
@@ -117,13 +123,19 @@ public class ExtractionUtils {
 
     public static String extractDensity(String text) {
         if (text == null || text.isEmpty()) return "";
-        // Normalize text: remove hidden markers
-        String normalized = text.replace("\u200E", "").replace("\u200F", "");
+        // Extract number followed by /km2 or similar
         Pattern pattern = Pattern.compile("([0-9,.]+)(?=\\s*/?\\s*km)");
-        Matcher matcher = pattern.matcher(normalized);
+        Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");
         }
         return "";
+    }
+
+    public static String normalizeFlagUrl(String url) {
+        if (url == null || url.isEmpty()) return "";
+        if (!url.startsWith("http")) url = "https:" + url;
+        // Normalize thumbnail size to 250px for consistency
+        return url.replaceAll("/\\d+px-", "/250px-");
     }
 }

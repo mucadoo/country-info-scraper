@@ -21,6 +21,15 @@ public class ExtractionUtilsTest {
         assertEquals("1500000", ExtractionUtils.extractPopulation("1-2 million"));
         assertEquals("1404890000", ExtractionUtils.extractPopulation("1,404,890,000 (2020)"));
         assertEquals("5461319", ExtractionUtils.extractPopulation("5,461,319 (2026 estimate)"));
+        // Test typo correction: 113,494 billion -> 113.494 billion -> 113494000000
+        assertEquals("113494000000", ExtractionUtils.extractPopulation("113,494 billion"));
+    }
+
+    @Test
+    public void testNormalizeFlagUrl() {
+        assertEquals("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag.svg/250px-Flag.svg.png", 
+            ExtractionUtils.normalizeFlagUrl("//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag.svg/120px-Flag.svg.png"));
+        assertEquals("https://example.com/flag.png", ExtractionUtils.normalizeFlagUrl("https://example.com/flag.png"));
     }
 
     @Test

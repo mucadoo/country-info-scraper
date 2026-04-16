@@ -34,6 +34,15 @@ public class InfoboxParser {
             processImages(row, country, state);
         }
         
+        // Automated density calculation if missing
+        if (country.getDensityKm2() == 0 && country.getPopulation() > 0 && country.getAreaKm2() > 0) {
+            country.setDensityKm2((double) country.getPopulation() / country.getAreaKm2());
+        }
+
+        if (country.getLargestCity() == null || country.getLargestCity().isEmpty()) {
+            country.setLargestCity(country.getCapital());
+        }
+
         // Final fallback checks if anything is completely missing to avoid unhandled NPEs
         if (country.getDemonym() == null) country.setDemonym("");
         if (country.getCallingCode() == null) country.setCallingCode("");
@@ -41,6 +50,7 @@ public class InfoboxParser {
         if (country.getOfficialLanguage() == null) country.setOfficialLanguage("");
         if (country.getCapital() == null) country.setCapital("");
         if (country.getInternetTld() == null) country.setInternetTld("");
+        if (country.getLargestCity() == null) country.setLargestCity("");
     }
 
     private static void processAreaAndPopulation(Element header, Element data, Country country, ParserState state) {
@@ -132,9 +142,19 @@ public class InfoboxParser {
         }
 
         // 3. Flexible matching
-        if (headerText.contains("Largest city") || headerText.contains("Largest settlement")) {
+        if (headerText.toLowerCase().contains("largest city") || 
+            headerText.toLowerCase().contains("largest settlement") || 
+            headerText.toLowerCase().contains("largest metropolitan area")) {
+            
+            // Try to find the first link, but fallback to text if no link is present
             Element largestCityLink = data.select("a").first();
-            if (largestCityLink != null) country.setLargestCity(largestCityLink.text());
+            String cityText = (largestCityLink != null) ? largestCityLink.text() : ExtractionUtils.cleanText(data);
+            
+            // If it's a list, just take the first one or clean it
+            if (cityText.contains(",")) cityText = cityText.split(",")[0].trim();
+            if (cityText.contains(";")) cityText = cityText.split(";")[0].trim();
+            
+            country.setLargestCity(cityText);
         } 
         else if (headerText.toLowerCase().contains("demonym")) {
             country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
@@ -236,6 +256,10 @@ public class InfoboxParser {
                 // FIX: Only remove citations and footnotes, NOT spans
                 dClone.select("sup, .reference").remove(); 
                 String gdpValue = dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
+                
+                // Fix typos like "$113,494 billion" -> "$113.494 billion"
+                gdpValue = gdpValue.replaceAll("(\\d+),(\\d{3})\\s*(million|billion|trillion)", "$1.$2 $3");
+                
                 country.setGdp(gdpValue);
                 break;
             }
@@ -263,12 +287,18 @@ public class InfoboxParser {
             dataClone.select("sup, br, .nowrap, .reference").remove();
             country.setHdi(dataClone.text().split(" ")[0]);
         }
+        // Ensure we match specific language labels to avoid accidental extraction from headers
         if (headerText.toLowerCase().contains("language") && !state.languageFound) {
-            String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
-            langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
-            if (!langs.isEmpty()) {
-                country.setOfficialLanguage(langs);
-                state.languageFound = true;
+            String lowerHeader = headerText.toLowerCase();
+            if (lowerHeader.equals("official languages") || lowerHeader.equals("official language") || 
+                lowerHeader.equals("national languages") || lowerHeader.equals("languages")) {
+                
+                String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
+                langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
+                if (!langs.isEmpty()) {
+                    country.setOfficialLanguage(langs);
+                    state.languageFound = true;
+                }
             }
         }
     }
@@ -285,7 +315,7 @@ public class InfoboxParser {
                 // Broad flag heuristics
                 if ((descDiv != null && descDiv.text().toLowerCase().contains("flag")) || alt.contains("flag") || url.toLowerCase().contains("flag")) {
                     if (!alt.contains("arms") && !url.toLowerCase().contains("arms") && !url.toLowerCase().contains("seal")) {
-                        country.setFlagUrl(url);
+                        country.setFlagUrl(ExtractionUtils.normalizeFlagUrl(url));
                         state.flagFound = true;
                         return;
                     }

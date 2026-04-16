@@ -13,8 +13,14 @@ public class DescriptionParser {
         }
         if (p != null) {
             String desc = ExtractionUtils.cleanText(p);
+            // Clean up parenthesis and excessive whitespace
             desc = desc.replaceAll("\\(([^()]*|\\([^()]*\\))*\\)", "").replaceAll("\\s+", " ").trim();
             desc = desc.replaceAll("\\s+([,.])", "$1");
+            
+            // Cap length to avoid excessively long descriptions and potential JSON truncation
+            if (desc.length() > 1000) {
+                desc = desc.substring(0, 997) + "...";
+            }
             country.setDescription(desc);
         }
     }

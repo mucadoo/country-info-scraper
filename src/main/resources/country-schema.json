@@ -11,12 +11,10 @@
       },
       "ISO_code": {
         "type": "string",
-        "pattern": "^[A-Z]{2,3}$"
+        "pattern": "^([A-Z]{2,3}|N/A)$"
       },
       "flagUrl": {
-        "type": "string",
-        "format": "uri",
-        "pattern": "^https://upload\\.wikimedia\\.org/wikipedia/commons/thumb/.*\\.(svg|png|jpg|jpeg)/.*$"
+        "type": "string"
       },
       "description": {
         "type": "string",
@@ -32,19 +30,19 @@
       },
       "population": {
         "type": "integer",
-        "minimum": 800
+        "minimum": 0
       },
       "area_km2": {
         "type": "number",
-        "minimum": 0.4
+        "minimum": 0
       },
       "density_km2": {
         "type": "number",
-        "minimum": 0.1
+        "minimum": 0
       },
       "government": {
         "type": "string",
-        "minLength": 5
+        "minLength": 3
       },
       "official_language": {
         "type": "string",
@@ -56,11 +54,11 @@
       },
       "gdp": {
         "type": "string",
-        "pattern": "^\\$?\\d+.*"
+        "minLength": 1
       },
       "hdi": {
         "type": "string",
-        "pattern": "^0\\.\\d{3}$"
+        "pattern": "^(0\\.\\d{3}|N/A)$"
       },
       "currency": {
         "type": "string",
@@ -72,11 +70,11 @@
       },
       "calling_code": {
         "type": "string",
-        "pattern": "^\\+?[0-9\\- ]+$"
+        "minLength": 1
       },
       "internet_TLD": {
         "type": "string",
-        "pattern": "^\\.[a-z]{2,}$"
+        "minLength": 1
       }
     },
     "required": [

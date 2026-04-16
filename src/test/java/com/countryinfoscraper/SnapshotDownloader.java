@@ -22,46 +22,6 @@ public class SnapshotDownloader {
     private static final String SNAPSHOT_DIR = "src/test/resources/snapshots/";
     private static final String USER_AGENT = "CountryInfoScraper/1.0 (https://github.com/mucadoo/country-info-scraper; your_email@example.com) Java/21";
 
-    private static final Map<String, String> COUNTRIES_TO_SNAPSHOT = Map.ofEntries(
-            Map.entry("vatican_city", "https://en.wikipedia.org/wiki/Vatican_City"),
-            Map.entry("denmark", "https://en.wikipedia.org/wiki/Denmark"),
-            Map.entry("bolivia", "https://en.wikipedia.org/wiki/Bolivia"),
-            Map.entry("yemen", "https://en.wikipedia.org/wiki/Yemen"),
-            Map.entry("israel", "https://en.wikipedia.org/wiki/Israel"),
-            Map.entry("turkmenistan", "https://en.wikipedia.org/wiki/Turkmenistan"),
-            Map.entry("el_salvador", "https://en.wikipedia.org/wiki/El_Salvador"),
-            Map.entry("zimbabwe", "https://en.wikipedia.org/wiki/Zimbabwe"),
-            Map.entry("ivory_coast", "https://en.wikipedia.org/wiki/Ivory_Coast"),
-            Map.entry("singapore", "https://en.wikipedia.org/wiki/Singapore"),
-            Map.entry("afghanistan", "https://en.wikipedia.org/wiki/Afghanistan"),
-            Map.entry("monaco", "https://en.wikipedia.org/wiki/Monaco"),
-            Map.entry("nauru", "https://en.wikipedia.org/wiki/Nauru"),
-            Map.entry("switzerland", "https://en.wikipedia.org/wiki/Switzerland"),
-            Map.entry("palestine", "https://en.wikipedia.org/wiki/State_of_Palestine"),
-            Map.entry("canada", "https://en.wikipedia.org/wiki/Canada"),
-            Map.entry("russia", "https://en.wikipedia.org/wiki/Russia"),
-            Map.entry("china", "https://en.wikipedia.org/wiki/China"),
-            Map.entry("vanuatu", "https://en.wikipedia.org/wiki/Vanuatu"),
-            Map.entry("guinea_bissau", "https://en.wikipedia.org/wiki/Guinea-Bissau"),
-            Map.entry("solomon_islands", "https://en.wikipedia.org/wiki/Solomon_Islands"),
-            Map.entry("lebanon", "https://en.wikipedia.org/wiki/Lebanon"),
-            Map.entry("south_korea", "https://en.wikipedia.org/wiki/South_Korea"),
-            Map.entry("equatorial_guinea", "https://en.wikipedia.org/wiki/Equatorial_Guinea"),
-            Map.entry("comoros", "https://en.wikipedia.org/wiki/Comoros"),
-            Map.entry("eritrea", "https://en.wikipedia.org/wiki/Eritrea"),
-            Map.entry("the_gambia", "https://en.wikipedia.org/wiki/The_Gambia"),
-            Map.entry("kiribati", "https://en.wikipedia.org/wiki/Kiribati"),
-            Map.entry("liechtenstein", "https://en.wikipedia.org/wiki/Liechtenstein"),
-            Map.entry("luxembourg", "https://en.wikipedia.org/wiki/Luxembourg"),
-            Map.entry("malta", "https://en.wikipedia.org/wiki/Malta"),
-            Map.entry("north_korea", "https://en.wikipedia.org/wiki/North_Korea"),
-            Map.entry("syria", "https://en.wikipedia.org/wiki/Syria"),
-            Map.entry("indonesia", "https://en.wikipedia.org/wiki/Indonesia"),
-            Map.entry("kyrgyzstan", "https://en.wikipedia.org/wiki/Kyrgyzstan"),
-            Map.entry("mauritania", "https://en.wikipedia.org/wiki/Mauritania"),
-            Map.entry("moldova", "https://en.wikipedia.org/wiki/Moldova")
-    );
-
     public static void main(String[] args) {
         new SnapshotDownloader().downloadAll();
     }
@@ -70,9 +30,30 @@ public class SnapshotDownloader {
         try {
             cleanSnapshotDirectory();
             Files.createDirectories(Paths.get(SNAPSHOT_DIR));
-            for (Map.Entry<String, String> entry : COUNTRIES_TO_SNAPSHOT.entrySet()) {
-                downloadSnapshot(entry.getKey(), entry.getValue());
+            
+            logger.info("Fetching country list from Wikipedia...");
+            Document doc = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_sovereign_states")
+                    .userAgent(USER_AGENT)
+                    .timeout(15000)
+                    .get();
+
+            Element table = doc.select("table.wikitable").first();
+            if (table == null) {
+                logger.error("Country list table not found!");
+                return;
             }
+
+            Elements rows = table.select("tbody > tr");
+            for (Element row : rows) {
+                Element link = row.select("td").first() != null ? row.select("td").first().select("a").first() : null;
+                if (link != null) {
+                    String name = link.text();
+                    String url = "https://en.wikipedia.org" + link.attr("href");
+                    String fileName = name.toLowerCase().replace(" ", "_").replaceAll("[^a-z0-9_]", "");
+                    downloadSnapshot(fileName, url);
+                }
+            }
+            logger.info("Finished downloading all snapshots.");
         } catch (IOException e) {
             logger.error("Failed to setup snapshots", e);
         }

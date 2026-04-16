@@ -116,48 +116,47 @@ public class CountryParserRegressionTest {
             assertTrue(country.getCurrency().contains("dollar"), 
                 () -> "Zimbabwe currency missing dollar. Extracted: '" + country.getCurrency() + "'");
         }
+        if (countryName.equals("Mauritania")) {
+            assertTrue(country.getPopulation() < 10000000, 
+                () -> "Mauritania population should be < 10 million. Extracted: " + country.getPopulation());
+        }
+        if (countryName.equals("United States")) {
+            assertTrue(country.getAreaKm2() > 9000000, 
+                () -> "United States area should be ~9.8 million km2. Extracted: " + country.getAreaKm2());
+        }
+        if (countryName.equals("Liberia")) {
+            assertTrue(country.getAreaKm2() > 100000, 
+                () -> "Liberia area should be ~111k km2. Extracted: " + country.getAreaKm2());
+        }
     }
 
     private static Stream<Arguments> provideLocalHtmlFiles() {
         String baseDir = "src/test/resources/snapshots/";
-        return Stream.of(
-            Arguments.of("Vatican City", baseDir + "vatican_city.html"),
-            Arguments.of("Denmark", baseDir + "denmark.html"),
-            Arguments.of("Bolivia", baseDir + "bolivia.html"),
-            Arguments.of("Yemen", baseDir + "yemen.html"),
-            Arguments.of("Israel", baseDir + "israel.html"),
-            Arguments.of("Turkmenistan", baseDir + "turkmenistan.html"),
-            Arguments.of("El Salvador", baseDir + "el_salvador.html"),
-            Arguments.of("Zimbabwe", baseDir + "zimbabwe.html"),
-            Arguments.of("Ivory Coast", baseDir + "ivory_coast.html"),
-            Arguments.of("Singapore", baseDir + "singapore.html"),
-            Arguments.of("Afghanistan", baseDir + "afghanistan.html"),
-            Arguments.of("Monaco", baseDir + "monaco.html"),
-            Arguments.of("Nauru", baseDir + "nauru.html"),
-            Arguments.of("Switzerland", baseDir + "switzerland.html"),
-            Arguments.of("Palestine", baseDir + "palestine.html"),
-            Arguments.of("Canada", baseDir + "canada.html"),
-            Arguments.of("Russia", baseDir + "russia.html"),
-            Arguments.of("China", baseDir + "china.html"),
-            Arguments.of("Vanuatu", baseDir + "vanuatu.html"),
-            Arguments.of("Guinea-Bissau", baseDir + "guinea_bissau.html"),
-            Arguments.of("Solomon Islands", baseDir + "solomon_islands.html"),
-            Arguments.of("Lebanon", baseDir + "lebanon.html"),
-            Arguments.of("South Korea", baseDir + "south_korea.html"),
-            Arguments.of("Equatorial Guinea", baseDir + "equatorial_guinea.html"),
-            Arguments.of("Comoros", baseDir + "comoros.html"),
-            Arguments.of("Eritrea", baseDir + "eritrea.html"),
-            Arguments.of("Gambia, The", baseDir + "the_gambia.html"),
-            Arguments.of("Kiribati", baseDir + "kiribati.html"),
-            Arguments.of("Liechtenstein", baseDir + "liechtenstein.html"),
-            Arguments.of("Luxembourg", baseDir + "luxembourg.html"),
-            Arguments.of("Malta", baseDir + "malta.html"),
-            Arguments.of("North Korea", baseDir + "north_korea.html"),
-            Arguments.of("Syria", baseDir + "syria.html"),
-            Arguments.of("Indonesia", baseDir + "indonesia.html"),
-            Arguments.of("Kyrgyzstan", baseDir + "kyrgyzstan.html"),
-            Arguments.of("Mauritania", baseDir + "mauritania.html"),
-            Arguments.of("Moldova", baseDir + "moldova.html")
-        );
+        File folder = new File(baseDir);
+        if (!folder.exists() || folder.listFiles() == null) {
+            return Stream.empty();
+        }
+        
+        return Stream.of(folder.listFiles())
+            .filter(f -> f.getName().endsWith(".html"))
+            .map(f -> {
+                String fileName = f.getName().replace(".html", "");
+                // Reconstruct a readable name from the snake_case filename
+                String[] parts = fileName.split("_");
+                StringBuilder sb = new StringBuilder();
+                for (String part : parts) {
+                    if (part.length() > 0) {
+                        sb.append(Character.toUpperCase(part.charAt(0)))
+                          .append(part.substring(1))
+                          .append(" ");
+                    }
+                }
+                String countryName = sb.toString().trim();
+                // Special fixes for names that don't match exactly
+                if (countryName.equals("Vatican City")) countryName = "Vatican City";
+                if (countryName.equals("The Gambia")) countryName = "Gambia, The";
+                
+                return Arguments.of(countryName, f.getAbsolutePath());
+            });
     }
 }

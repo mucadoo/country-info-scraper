@@ -20,8 +20,13 @@ public class InfoboxParser {
         if (infobox == null) infobox = doc.select("table.infobox").first();
         if (infobox == null) return;
 
-        Elements rows = infobox.select("tr");
         ParserState state = new ParserState();
+        
+        // Only process top-level rows of the infobox to avoid picking up data from nested tables (common in Algeria, etc.)
+        Elements rows = infobox.select("> tr, > tbody > tr");
+        if (rows.isEmpty()) {
+            rows = infobox.select("tr");
+        }
 
         for (Element row : rows) {
             Element header = row.select("th").first();
@@ -136,7 +141,7 @@ public class InfoboxParser {
                 .trim();
 
         // 2. Handle Capital / Largest City
-        if (headerText.toLowerCase().contains("capital") && (headerText.length() < 20 || headerText.contains("largest city") || headerText.contains("center"))) {
+        if (headerText.toLowerCase().contains("capital") && (headerText.length() < 30 || headerText.toLowerCase().contains("largest city") || headerText.toLowerCase().contains("center"))) {
             parseCapital(data, country, headerText);
             return;
         }
@@ -153,11 +158,19 @@ public class InfoboxParser {
             // If it's a list, just take the first one or clean it
             if (cityText.contains(",")) cityText = cityText.split(",")[0].trim();
             if (cityText.contains(";")) cityText = cityText.split(";")[0].trim();
+            if (cityText.toLowerCase().contains("locally:")) cityText = cityText.split("(?i)locally:")[0].trim();
             
             country.setLargestCity(cityText);
         } 
         else if (headerText.toLowerCase().contains("demonym")) {
-            country.setDemonym(parseListOrLink(data, ".hlist ul li, .plainlist ul li"));
+            String demonym = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
+            // If the demonym contains "locally:", it might be picking up sub-entities like for Denmark.
+            // Let's try to get the main one which is usually at the start of the text.
+            String fullText = ExtractionUtils.cleanText(data);
+            if (fullText.contains(";")) {
+                demonym = fullText.split(";")[0].trim();
+            }
+            country.setDemonym(demonym);
         } 
         else if (headerText.equalsIgnoreCase("Government")) {
             country.setGovernment(ExtractionUtils.cleanText(data));
@@ -214,7 +227,7 @@ public class InfoboxParser {
         result = result.replaceAll("\\s*\\d+\\.\\d+;\\s*\\d+\\.\\d+.*", "").trim();
         
         country.setCapital(result);
-        if (headerText.contains("largest city")) country.setLargestCity(result);
+        if (headerText.toLowerCase().contains("largest city")) country.setLargestCity(result);
     }
 
     private static String parseListOrLink(Element data, String selector) {
@@ -287,14 +300,21 @@ public class InfoboxParser {
             dataClone.select("sup, br, .nowrap, .reference").remove();
             country.setHdi(dataClone.text().split(" ")[0]);
         }
-        // Ensure we match specific language labels to avoid accidental extraction from headers
+        // Broaden language matching to catch "National language", "Official language and national language", etc.
         if (headerText.toLowerCase().contains("language") && !state.languageFound) {
             String lowerHeader = headerText.toLowerCase();
-            if (lowerHeader.equals("official languages") || lowerHeader.equals("official language") || 
-                lowerHeader.equals("national languages") || lowerHeader.equals("languages")) {
+            // EXCLUDE headers that are about names in those languages (e.g. "Name in official languages")
+            if ((lowerHeader.contains("official") || lowerHeader.contains("national") || lowerHeader.equals("languages")) 
+                 && !lowerHeader.contains("name in") && !lowerHeader.contains("native name")) {
                 
                 String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
                 langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
+                
+                // For countries like Argentina/Brazil/Russia where it might just be text like "Spanish [a]"
+                if (langs.isEmpty()) {
+                    langs = ExtractionUtils.cleanText(data);
+                }
+
                 if (!langs.isEmpty()) {
                     country.setOfficialLanguage(langs);
                     state.languageFound = true;

@@ -51,7 +51,7 @@
   "largest_city" : "Algiers",
   "area_km2" : 2381741.0,
   "density_km2" : 19.0,
-  "official_language" : "الجمهورية الجزائرية الديمقراطية الشعبية",
+  "official_language" : "Arabic, Berber",
   "time_zone" : "UTC+1 (CET)",
   "calling_code" : "+213",
   "internet_TLD" : ".dz .الجزائر"
@@ -115,7 +115,7 @@
 }, {
   "name" : "Argentina",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png",
-  "description" : "Argentina, officially the Argentine Republic, is a country located in the southern cone of South America and with a claimed portion of Antarctica. It covers an area of 2,780,085 km, making it the second-largest country in South America after Brazil, the fourth-largest country in the Americas, and the eighth-largest country in the world. Argentina shares the bulk of the Southern Cone with Chile to the west, and is also bordered by Bolivia and Paraguay to the north, Brazil to the northeast, Uruguay and the South Atlantic Ocean to the east, and the Drake Passage to the south. Argentina is a federal state subdivided into twenty-three provinces, and one autonomous city, which is the federal capital and largest city of the nation, Buenos Aires. The provinces and the capital have their own constitutions, but exist under a federal system. Argentina claims sovereignty over the Falkland Islands, South Georgia and the South Sandwich Islands, the Southern Patagonian Ice Field, and a part of Antarctica.",
+  "description" : "Argentina, officially the Argentine Republic, is a country located in the southern cone of South America and with a claimed portion of Antarctica. It covers an area of 2,780,085 km, making it the second-largest country in South America after Brazil, the fourth-largest country in the Americas, and the eighth-largest country in the world. Argentina shares the bulk of the Southern Cone with Chile to the west, and is also bordered by Bolivia and Paraguay to the north, Brazil to the northeast, Uruguay and the South Atlantic Ocean to the east, and the Drake Passage to the south. Argentina is a federal state subdivided into twenty-three provinces, and one autonomous city, which is the federal capital and largest city of the nation, Buenos Aires. The provinces and the capital have their own constitutions, but exist under a federal system. Argentina claims sovereignty over the Falkland Islands, South Georgia and the South Sandwich Islands, the Southern Patagonian Ice Field, and a part of Ant...",
   "capital" : "Buenos Aires",
   "population" : 46735004,
   "government" : "Federal presidential republic",
@@ -127,7 +127,7 @@
   "largest_city" : "Buenos Aires",
   "area_km2" : 2780085.0,
   "density_km2" : 16.8,
-  "official_language" : "Spanish",
+  "official_language" : "",
   "time_zone" : "UTC– 03:00 (ART)",
   "calling_code" : "+54",
   "internet_TLD" : ".ar"
@@ -165,7 +165,7 @@
   "largest_city" : "Sydney",
   "area_km2" : 7688287.0,
   "density_km2" : 3.7,
-  "official_language" : "English",
+  "official_language" : "",
   "time_zone" : "UTC+8; +9.5; +10 (AWST, ACST, AEST)",
   "calling_code" : "+61",
   "internet_TLD" : ".au"
@@ -241,7 +241,7 @@
   "largest_city" : "Manama",
   "area_km2" : 786.8,
   "density_km2" : 1864.0,
-  "official_language" : "Arabic",
+  "official_language" : "",
   "time_zone" : "UTC+3 (AST)",
   "calling_code" : "+973",
   "internet_TLD" : ".bh"
@@ -260,7 +260,7 @@
   "largest_city" : "Dhaka",
   "area_km2" : 148460.0,
   "density_km2" : 1165.0,
-  "official_language" : "Bengali",
+  "official_language" : "",
   "time_zone" : "UTC+6 (BST)",
   "calling_code" : "+880",
   "internet_TLD" : ".bd .বাংলা"
@@ -381,7 +381,7 @@
 }, {
   "name" : "Bolivia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/250px-Flag_of_Bolivia.svg.png",
-  "description" : "Bolivia, officially the Plurinational State of Bolivia, is a landlocked country located in central South America. Its geography primarily consists of an Andean region to the west and tropical lowlands to the east and north. The country has a diverse environment, including the vast Amazonian plain, the Gran Chaco, temperate valleys, the high-altitude Altiplano plateau, snow-capped peaks, and mountains, encompassing a wide range of climates and biomes across its regions and cities. It includes part of the Pantanal, the largest tropical wetland in the world, along its eastern border. Bolivia is bordered by Brazil to the north and east, Paraguay to the southeast, Argentina to the south, Chile to the southwest, and Peru to the west. The seat of government is La Paz, which contains the executive, legislative, and electoral branches of government, while the constitutional capital is Sucre, the seat of the judiciary. While most population and urban centers lie in the Andean region, the largest city and principal industrial center is Santa Cruz de la Sierra, located in the eastern tropical lowlands.",
+  "description" : "Bolivia, officially the Plurinational State of Bolivia, is a landlocked country located in central South America. Its geography primarily consists of an Andean region to the west and tropical lowlands to the east and north. The country has a diverse environment, including the vast Amazonian plain, the Gran Chaco, temperate valleys, the high-altitude Altiplano plateau, snow-capped peaks, and mountains, encompassing a wide range of climates and biomes across its regions and cities. It includes part of the Pantanal, the largest tropical wetland in the world, along its eastern border. Bolivia is bordered by Brazil to the north and east, Paraguay to the southeast, Argentina to the south, Chile to the southwest, and Peru to the west. The seat of government is La Paz, which contains the executive, legislative, and electoral branches of government, while the constitutional capital is Sucre, the seat of the judiciary. While most population and urban centers lie in the Andean region, the larg...",
   "capital" : "Sucre",
   "population" : 11365333,
   "government" : "Unitary presidential republic",
@@ -412,7 +412,7 @@
   "largest_city" : "Sarajevo",
   "area_km2" : 51209.0,
   "density_km2" : 61.0,
-  "official_language" : "None",
+  "official_language" : "",
   "time_zone" : "UTC+01 (CET)",
   "calling_code" : "+387",
   "internet_TLD" : ".ba"
@@ -450,7 +450,7 @@
   "largest_city" : "São Paulo",
   "area_km2" : 8515767.0,
   "density_km2" : 23.8,
-  "official_language" : "Portuguese",
+  "official_language" : "",
   "time_zone" : "UTC−02:00 to −05:00 (BT)",
   "calling_code" : "+55",
   "internet_TLD" : ".br"
@@ -659,7 +659,7 @@
   "largest_city" : "Santiago",
   "area_km2" : 756101.96,
   "density_km2" : 24.0,
-  "official_language" : "Spanish",
+  "official_language" : "",
   "time_zone" : "UTC−3, −4, −6 (CLST, CLT, EAST)",
   "calling_code" : "+56",
   "internet_TLD" : ".cl"
@@ -685,7 +685,7 @@
 }, {
   "name" : "Colombia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/250px-Flag_of_Colombia.svg.png",
-  "description" : "Colombia, officially the Republic of Colombia, is a country located in South America, with insular regions in North America. Colombia's mainland is bordered by the Caribbean Sea to the north, Venezuela to the east, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is divided into 32 departments. The Capital District of Bogotá is the country's largest city hosting the main financial and cultural hub. Other urban areas include Medellín, Cali, Barranquilla, Cartagena, Bucaramanga, Pereira, Santa Marta, Cúcuta, Ibagué, Villavicencio and Manizales. It covers an area of 1,141,748 square kilometers and has a population of around 52 million. Its rich cultural heritage—including language, religion, cuisine, and art—reflects its history as a colony, fusing cultural elements brought by immigration from Europe and the Middle East, with those brought by the African diaspora, as well as with those of Indigenous civilizations that predate colonization. Spanish is the official language, although Creole, English and 64 other languages are recognized regionally.",
+  "description" : "Colombia, officially the Republic of Colombia, is a country located in South America, with insular regions in North America. Colombia's mainland is bordered by the Caribbean Sea to the north, Venezuela to the east, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is divided into 32 departments. The Capital District of Bogotá is the country's largest city hosting the main financial and cultural hub. Other urban areas include Medellín, Cali, Barranquilla, Cartagena, Bucaramanga, Pereira, Santa Marta, Cúcuta, Ibagué, Villavicencio and Manizales. It covers an area of 1,141,748 square kilometers and has a population of around 52 million. Its rich cultural heritage—including language, religion, cuisine, and art—reflects its history as a colony, fusing cultural elements brought by immigration from Europe and the Middle East, with those brought by the African diaspora, as well as with those of Indigeno...",
   "capital" : "Bogotá",
   "population" : 52695952,
   "government" : "Unitary presidential republic",
@@ -723,7 +723,7 @@
 }, {
   "name" : "Congo, Democratic Republic of the",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/250px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
-  "description" : "The Democratic Republic of the Congo, also known as the DR Congo, Congo-Kinshasa, or simply the Congo or less often Zaire, is a country in Central Africa. By land area, it is the second-largest country in Africa and the 11th-largest in the world. With a population of around 124 million people, the Democratic Republic of the Congo is the fourth-most populous country in Africa and the most populous Francophone country in the world. French is the official and most widely spoken language, though there are over 200 indigenous languages, of which Lingala is the most widely spoken. The capital, largest city, and economic center is Kinshasa. The DRC is bordered by the Republic of the Congo, the Cabinda exclave of Angola, and the South Atlantic Ocean to the west; the Central African Republic and South Sudan to the north; Uganda, Rwanda, Burundi, and Tanzania to the east; and Zambia and Angola to the south. Centered on the Congo Basin, most of the country's terrain is covered by dense rainforests and is crossed by many rivers, while the east and southeast are mountainous.",
+  "description" : "The Democratic Republic of the Congo, also known as the DR Congo, Congo-Kinshasa, or simply the Congo or less often Zaire, is a country in Central Africa. By land area, it is the second-largest country in Africa and the 11th-largest in the world. With a population of around 124 million people, the Democratic Republic of the Congo is the fourth-most populous country in Africa and the most populous Francophone country in the world. French is the official and most widely spoken language, though there are over 200 indigenous languages, of which Lingala is the most widely spoken. The capital, largest city, and economic center is Kinshasa. The DRC is bordered by the Republic of the Congo, the Cabinda exclave of Angola, and the South Atlantic Ocean to the west; the Central African Republic and South Sudan to the north; Uganda, Rwanda, Burundi, and Tanzania to the east; and Zambia and Angola to the south. Centered on the Congo Basin, most of the country's terrain is covered by dense rainfor...",
   "capital" : "Kinshasa",
   "population" : 124388160,
   "government" : "Unitary semi-presidential republic",
@@ -867,7 +867,7 @@
   "ISO_code" : "DK",
   "largest_city" : "Copenhagen",
   "area_km2" : 42926.0,
-  "density_km2" : 0.0,
+  "density_km2" : 140.9304151330196,
   "official_language" : "Faroese, Greenlandic",
   "time_zone" : "List UTC+1 (CET) (Denmark) UTC (WET) (Faroe Islands) UTC-4 to 0 (AST, WGT, EGT, GMT) (Greenland)",
   "calling_code" : "3 codes +45 (Denmark) +298 (Faroe Islands) +299 (Greenland)",
@@ -1096,7 +1096,7 @@
   "largest_city" : "Suva",
   "area_km2" : 18274.0,
   "density_km2" : 46.4,
-  "official_language" : "Fijian, English, Standard Hindi, Fiji Hindi",
+  "official_language" : "",
   "time_zone" : "UTC+12 (FJT)",
   "calling_code" : "+679",
   "internet_TLD" : ".fj"
@@ -1134,7 +1134,7 @@
   "largest_city" : "Paris",
   "area_km2" : 632702.3,
   "density_km2" : 109.0,
-  "official_language" : "French",
+  "official_language" : "",
   "time_zone" : "UTC+1 (CET)",
   "calling_code" : "+33",
   "internet_TLD" : ".fr"
@@ -1169,7 +1169,7 @@
   "hdi" : "0.524",
   "currency" : "Gambian dalasi",
   "ISO_code" : "GM",
-  "largest_city" : null,
+  "largest_city" : "Serrekunda",
   "area_km2" : 11300.0,
   "density_km2" : 227.0,
   "official_language" : "English",
@@ -1222,7 +1222,7 @@
   "population" : 35039451,
   "government" : "Unitary presidential republic",
   "demonym" : "Ghanaian",
-  "gdp" : "$113,494 billion",
+  "gdp" : "$113.494 billion",
   "hdi" : "0.628",
   "currency" : "Cedi",
   "ISO_code" : "GH",
@@ -1609,7 +1609,7 @@
   "largest_city" : "Tokyo",
   "area_km2" : 377975.0,
   "density_km2" : 330.0,
-  "official_language" : "Japanese",
+  "official_language" : "",
   "time_zone" : "UTC+09:00 (JST)",
   "calling_code" : "+81",
   "internet_TLD" : ".jp"
@@ -1682,7 +1682,7 @@
   "hdi" : "0.644",
   "currency" : "Australian dollar",
   "ISO_code" : "KI",
-  "largest_city" : null,
+  "largest_city" : "Tarawa",
   "area_km2" : 811.19,
   "density_km2" : 149.64,
   "official_language" : "English, Gilbertese",
@@ -1853,7 +1853,7 @@
   "hdi" : "0.938",
   "currency" : "Swiss franc",
   "ISO_code" : "LI",
-  "largest_city" : null,
+  "largest_city" : "Vaduz",
   "area_km2" : 160.5,
   "density_km2" : 249.0,
   "official_language" : "German",
@@ -1900,7 +1900,7 @@
   "internet_TLD" : ".lu"
 }, {
   "name" : "Madagascar",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/120px-Flag_of_Madagascar.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/250px-Flag_of_Madagascar.svg.png",
   "description" : "Madagascar, officially the Republic of Madagascar, is an island country in the Indian Ocean that includes the island of Madagascar and numerous smaller peripheral islands. Lying off the southeastern coast of Africa, it is the world's fourth-largest island, the second-largest island country, and the 46th-largest country overall. Its capital and largest city is Antananarivo.",
   "capital" : "Antananarivo",
   "population" : 31964956,
@@ -1951,7 +1951,7 @@
   "largest_city" : "Kuala Lumpur",
   "area_km2" : 330803.0,
   "density_km2" : 101.0,
-  "official_language" : "Malay",
+  "official_language" : "",
   "time_zone" : "UTC+8 (MST)",
   "calling_code" : "+60",
   "internet_TLD" : ".my"
@@ -1970,7 +1970,7 @@
   "largest_city" : "Malé",
   "area_km2" : 298.0,
   "density_km2" : 1728.63,
-  "official_language" : "Dhivehi",
+  "official_language" : "",
   "time_zone" : "UTC+5 (MVT)",
   "calling_code" : "+960",
   "internet_TLD" : ".mv"
@@ -2005,7 +2005,7 @@
   "hdi" : "0.924",
   "currency" : "Euro, €",
   "ISO_code" : "MT",
-  "largest_city" : null,
+  "largest_city" : "Valletta",
   "area_km2" : 316.0,
   "density_km2" : 1649.0,
   "official_language" : "Maltese, English, Maltese Sign Language",
@@ -2122,13 +2122,13 @@
   "largest_city" : "Chișinău",
   "area_km2" : 33843.0,
   "density_km2" : 78.5,
-  "official_language" : "Romanian",
+  "official_language" : "",
   "time_zone" : "UTC+2 (EET)",
   "calling_code" : "+373",
   "internet_TLD" : ".md"
 }, {
   "name" : "Monaco",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/120px-Flag_of_Monaco.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/250px-Flag_of_Monaco.svg.png",
   "description" : "Monaco, officially the Principality of Monaco, is a sovereign city-state and microstate in Western Europe. Situated on the French Riviera, it is a semi-enclave bordered by France to the north, east, and west, with the Mediterranean Sea to the south; the Italian region of Liguria is about 15 km east. With a population of 38,423 living in an area of 2.08 km, Monaco is the second smallest sovereign state in the world, after Vatican City, as well as the most densely populated. It also has the world's shortest national coastline of any non-landlocked nation, at 3.83 km. Fewer than 10,000 of its residents are Monégasque nationals. Although French is the official language of Monaco, Italian and Monégasque are also widely spoken and understood.",
   "capital" : "Monaco",
   "population" : 38423,
@@ -2138,7 +2138,7 @@
   "hdi" : null,
   "currency" : "Euro, €",
   "ISO_code" : "MC",
-  "largest_city" : null,
+  "largest_city" : "Monaco",
   "area_km2" : 2.084,
   "density_km2" : 18446.0,
   "official_language" : "French",
@@ -2280,7 +2280,7 @@
   "internet_TLD" : ".nr"
 }, {
   "name" : "Nepal",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/120px-Flag_of_Nepal.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/250px-Flag_of_Nepal.svg.png",
   "description" : "Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country in South Asia. It is mainly situated in the Himalayas, but also includes parts of the Indo-Gangetic Plain. It borders the Tibet Autonomous Region of China to the north, and India to the south, east, and west, while it is narrowly separated from Bangladesh by the Siliguri Corridor, and from Bhutan by the Indian state of Sikkim. Nepal has a diverse geography, including fertile plains, subalpine forested hills, and eight of the world's ten highest mountains, including Mount Everest, the highest point above mean sea level on Earth. Kathmandu is the nation's capital and its largest city. Nepal is a multi-ethnic, multi-lingual, multi-religious, and multi-cultural sovereign state, with Nepali as the official language.",
   "capital" : "Kathmandu",
   "population" : 31122387,
@@ -2356,7 +2356,7 @@
   "internet_TLD" : ".ni"
 }, {
   "name" : "Niger",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/120px-Flag_of_Niger.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/250px-Flag_of_Niger.svg.png",
   "description" : "The Niger, officially the Republic of the Niger, is a landlocked country in West Africa. It is a unitary state bordered by Libya to the northeast, Chad to the east, Nigeria to the south, Benin and Burkina Faso to the southwest, Mali to the west, and Algeria to the northwest. It covers a land area of almost 1.27 million km, making it the largest landlocked country in West Africa and the second-largest landlocked nation in Africa behind Chad. Over 80% of its land area lies in the Sahara. Its predominantly Muslim population of about 25 million lives mostly in clusters in the south and west of the country. The capital, Niamey, is located in Niger's southwest corner along the namesake Niger River.",
   "capital" : "Niamey",
   "population" : 26342784,
@@ -2711,7 +2711,7 @@
   "largest_city" : "Moscow",
   "area_km2" : 1.7098246E7,
   "density_km2" : 8.4,
-  "official_language" : "Russian",
+  "official_language" : "",
   "time_zone" : "UTC+2 to +12",
   "calling_code" : "+7",
   "internet_TLD" : ".ru .рф"
@@ -2844,14 +2844,14 @@
   "largest_city" : "São Tomé",
   "area_km2" : 964.0,
   "density_km2" : 199.7,
-  "official_language" : "Forro Creole, Angolar Creole, Principense Creole",
+  "official_language" : "",
   "time_zone" : "UTC+0 (GMT)",
   "calling_code" : "+239",
   "internet_TLD" : ".st"
 }, {
   "name" : "Saudi Arabia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/250px-Flag_of_Saudi_Arabia.svg.png",
-  "description" : "Saudi Arabia, officially the Kingdom of Saudi Arabia, is a country in West Asia. Located in the centre of the Middle East, it covers the bulk of the Arabian Peninsula and has a land area of about 2,150,000 km, making it the fifth-largest country in Asia, the largest in the Middle East, and the twelfth-largest in the world. It is bordered by the Red Sea to the west; Jordan, Iraq, and Kuwait to the north; the Persian Gulf, Bahrain, Qatar and the United Arab Emirates to the east; Oman to the southeast; and Yemen to the south. The Gulf of Aqaba in the northwest separates Saudi Arabia from Egypt and Israel. Saudi Arabia is the only country with a coastline along both the Red Sea and the Arabian Gulf, and most of its terrain consists of arid desert, lowland, steppe, and mountains. The capital and largest city is Riyadh; other major cities include Jeddah and the two holiest cities in Islam, Mecca and Medina. With a population of almost 32.2 million, Saudi Arabia is the fourth most populous country in the Arab world.",
+  "description" : "Saudi Arabia, officially the Kingdom of Saudi Arabia, is a country in West Asia. Located in the centre of the Middle East, it covers the bulk of the Arabian Peninsula and has a land area of about 2,150,000 km, making it the fifth-largest country in Asia, the largest in the Middle East, and the twelfth-largest in the world. It is bordered by the Red Sea to the west; Jordan, Iraq, and Kuwait to the north; the Persian Gulf, Bahrain, Qatar and the United Arab Emirates to the east; Oman to the southeast; and Yemen to the south. The Gulf of Aqaba in the northwest separates Saudi Arabia from Egypt and Israel. Saudi Arabia is the only country with a coastline along both the Red Sea and the Arabian Gulf, and most of its terrain consists of arid desert, lowland, steppe, and mountains. The capital and largest city is Riyadh; other major cities include Jeddah and the two holiest cities in Islam, Mecca and Medina. With a population of almost 32.2 million, Saudi Arabia is the fourth most populous...",
   "capital" : "Riyadh",
   "population" : 33702731,
   "government" : "Unitary Islamic absolute monarchy",
@@ -2955,7 +2955,7 @@
   "hdi" : "0.946",
   "currency" : "Singapore dollar",
   "ISO_code" : "SG",
-  "largest_city" : null,
+  "largest_city" : "Singapore",
   "area_km2" : 744.3,
   "density_km2" : 8290.0,
   "official_language" : "English, Malay, Mandarin, Tamil",
@@ -3129,7 +3129,7 @@
   "largest_city" : "Colombo",
   "area_km2" : 67240.0,
   "density_km2" : 337.7,
-  "official_language" : "Sinhala, Tamil",
+  "official_language" : "",
   "time_zone" : "UTC+5:30 (SLST)",
   "calling_code" : "+94",
   "internet_TLD" : ".lk .ලංකා .இலங்கை"
@@ -3364,7 +3364,7 @@
 }, {
   "name" : "Tunisia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/250px-Flag_of_Tunisia.svg.png",
-  "description" : "Tunisia, officially the Republic of Tunisia, is a country in the Maghreb region of North Africa. It is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east. Tunisia also shares maritime borders with Italy through the islands of Sicily and Sardinia to the north and Malta to the east. It features the archaeological sites of Carthage dating back to the 9th century BC, as well as the Great Mosque of Kairouan. Known for its ancient architecture, souks, and blue coasts, it covers 163,610 km, and has a population of 12.1 million. It contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert; much of its remaining territory is arable land. Its 1,300 km of coastline includes the African conjunction of the western and eastern parts of the Mediterranean Basin. Tunisia is home to Africa's northernmost point, Cape Angela. Located on the northeastern coast, Tunis is the capital of the country, which is itself named after Tunis. The official language of Tunisia is Arabic. The vast majority of Tunisia's population is Arab and Muslim. Vernacular Tunisian Arabic is the most spoken language, and French serves as an administrative and educational language in some contexts, but has no official status.",
+  "description" : "Tunisia, officially the Republic of Tunisia, is a country in the Maghreb region of North Africa. It is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east. Tunisia also shares maritime borders with Italy through the islands of Sicily and Sardinia to the north and Malta to the east. It features the archaeological sites of Carthage dating back to the 9th century BC, as well as the Great Mosque of Kairouan. Known for its ancient architecture, souks, and blue coasts, it covers 163,610 km, and has a population of 12.1 million. It contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert; much of its remaining territory is arable land. Its 1,300 km of coastline includes the African conjunction of the western and eastern parts of the Mediterranean Basin. Tunisia is home to Africa's northernmost point, Cape Angela. Located on the northeastern coast, Tunis is the capital of the country, whi...",
   "capital" : "Tunis",
   "population" : 11972169,
   "government" : "Unitary presidential republic",
@@ -3401,7 +3401,7 @@
   "internet_TLD" : ".tr"
 }, {
   "name" : "Turkmenistan",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/120px-Flag_of_Turkmenistan.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/250px-Flag_of_Turkmenistan.svg.png",
   "description" : "Turkmenistan is a landlocked country in Central Asia, bordered by Kazakhstan and Uzbekistan to the north, Afghanistan to the southeast, Iran to the south and southwest, and the Caspian Sea to the west. It is one of six independent Turkic states. Ashgabat is the capital and largest city. With over 7 million people, Turkmenistan is the 35th most-populous country in Asia and has the lowest population of the Central Asian republics while being one of the most sparsely populated nations located on the Asian continent.",
   "capital" : "Ashgabat",
   "population" : 7057841,
@@ -3471,7 +3471,7 @@
   "largest_city" : "Kyiv",
   "area_km2" : 603628.0,
   "density_km2" : 54.4,
-  "official_language" : "Ukrainian",
+  "official_language" : "",
   "time_zone" : "UTC+2 (EET)",
   "calling_code" : "+380",
   "internet_TLD" : ".ua .укр"
@@ -3509,7 +3509,7 @@
   "largest_city" : "London",
   "area_km2" : 244376.0,
   "density_km2" : 285.0,
-  "official_language" : "English",
+  "official_language" : "",
   "time_zone" : "UTC+0 (GMT)",
   "calling_code" : "+44",
   "internet_TLD" : ".uk"
@@ -3591,7 +3591,7 @@
   "internet_TLD" : ".vu"
 }, {
   "name" : "Vatican City",
-  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Flag_of_Vatican_City_%282023%E2%80%93present%29.svg/120px-Flag_of_Vatican_City_%282023%E2%80%93present%29.svg.png",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Flag_of_Vatican_City_%282023%E2%80%93present%29.svg/250px-Flag_of_Vatican_City_%282023%E2%80%93present%29.svg.png",
   "description" : "Vatican City, officially the Vatican City State, often shortened as the Vatican, is a landlocked sovereign city-state. Ruled by the pope, it is an enclave within the city of Rome, Italy, and serves as the administrative centre of the Catholic Church. Vatican City is governed by the See of Rome, commonly known as the Holy See, itself a sovereign entity under international law, which maintains its temporal power, governance, diplomacy, and spiritual independence. Vatican is also used as a metonym for the Holy See, which is the central governing body of the Catholic Church and Vatican City, comprising the pope and the Roman Curia. The independent state of Vatican City came into existence in 1929 via the Lateran Treaty between the Holy See and the Kingdom of Italy, which spoke of it as a creation, not as a vestige of the much larger Papal States, which had previously encompassed much of Central Italy.",
   "capital" : "Vatican City",
   "population" : 882,
@@ -3601,7 +3601,7 @@
   "hdi" : null,
   "currency" : "Euro, €",
   "ISO_code" : "VA",
-  "largest_city" : null,
+  "largest_city" : "Vatican City",
   "area_km2" : 0.49,
   "density_km2" : 1800.0,
   "official_language" : "Italian",
@@ -3661,7 +3661,7 @@
   "largest_city" : "Sanaa",
   "area_km2" : 455503.0,
   "density_km2" : 71.8,
-  "official_language" : "Arabic",
+  "official_language" : "",
   "time_zone" : "UTC+3 (AST)",
   "calling_code" : "+967",
   "internet_TLD" : "List .ye اليمن."

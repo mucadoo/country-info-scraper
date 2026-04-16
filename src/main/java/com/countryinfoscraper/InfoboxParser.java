@@ -300,22 +300,42 @@ public class InfoboxParser {
             dataClone.select("sup, br, .nowrap, .reference").remove();
             country.setHdi(dataClone.text().split(" ")[0]);
         }
+        
         // Broaden language matching to catch "National language", "Official language and national language", etc.
         if (headerText.toLowerCase().contains("language") && !state.languageFound) {
-            String lowerHeader = headerText.toLowerCase();
-            // EXCLUDE headers that are about names in those languages (e.g. "Name in official languages")
-            if ((lowerHeader.contains("official") || lowerHeader.contains("national") || lowerHeader.equals("languages")) 
-                 && !lowerHeader.contains("name in") && !lowerHeader.contains("native name")) {
+            String lowerHeader = headerText.toLowerCase().replaceAll("\\(.*?\\)", "").trim();
+            // EXCLUDE headers that are about names in those languages
+            if ((lowerHeader.contains("official") || lowerHeader.contains("national") || lowerHeader.equals("languages") || lowerHeader.contains("recognized")) 
+                 && !lowerHeader.contains("name") && !lowerHeader.contains("native")) {
                 
                 String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");
-                langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
                 
                 // For countries like Argentina/Brazil/Russia where it might just be text like "Spanish [a]"
-                if (langs.isEmpty()) {
+                if (langs.isEmpty() || langs.equalsIgnoreCase("None")) {
                     langs = ExtractionUtils.cleanText(data);
                 }
 
-                if (!langs.isEmpty()) {
+                // Clean up "None (Bosnian, ...)" cases
+                if (langs.toLowerCase().contains("none") && langs.contains("(")) {
+                    int start = langs.indexOf('(');
+                    int end = langs.lastIndexOf(')');
+                    if (end > start) {
+                        langs = langs.substring(start + 1, end).replaceAll("(?i)\\s*(?:are in use|are used).*", "").trim();
+                    }
+                }
+                
+                // Final clean: remove common year/rank numbers and year range
+                langs = langs.replaceAll("(?i)^\\d+\\s+languages?\\s*,?\\s*", "");
+
+                // Filter out values that are likely country names instead of languages (heuristic)
+                // We check for common words in official country names across languages
+                String lowerLangs = langs.toLowerCase();
+                boolean looksLikeCountryName = lowerLangs.contains("republic") || lowerLangs.contains("kingdom") || 
+                                              lowerLangs.contains("state") || lowerLangs.contains("demokrasih") ||
+                                              lowerLangs.contains("erresuma") || lowerLangs.contains("gonagasriika") ||
+                                              lowerLangs.contains("republiek");
+
+                if (!langs.isEmpty() && !looksLikeCountryName) {
                     country.setOfficialLanguage(langs);
                     state.languageFound = true;
                 }

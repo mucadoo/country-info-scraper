@@ -123,6 +123,24 @@ public class CountryParserRegressionTest {
             assertTrue(country.getOfficialLanguage().contains("German"), 
                 () -> "Switzerland languages missing German. Extracted: '" + country.getOfficialLanguage() + "'");
         }
+        if (countryName.equals("Ethiopia")) {
+            assertTrue(country.getOfficialLanguage().contains("Amharic"), "Ethiopia language should contain Amharic");
+            assertFalse(country.getOfficialLanguage().contains("Federalih"), "Ethiopia language should not contain country name");
+        }
+        if (countryName.equals("Norway")) {
+            assertTrue(country.getOfficialLanguage().contains("Norwegian"), "Norway language should contain Norwegian");
+            assertFalse(country.getOfficialLanguage().contains("gonagasriika"), "Norway language should not contain country name");
+        }
+        if (countryName.equals("South Africa")) {
+            assertTrue(country.getOfficialLanguage().contains("Afrikaans") || country.getOfficialLanguage().contains("Zulu"), "South Africa language missing primary languages");
+            assertFalse(country.getOfficialLanguage().contains("Republiek"), "South Africa language should not contain country name");
+        }
+        if (countryName.equals("Spain")) {
+            assertTrue(country.getOfficialLanguage().contains("Spanish"), "Spain language should contain Spanish");
+        }
+        if (countryName.equals("Bosnia and Herzegovina")) {
+            assertTrue(country.getOfficialLanguage().contains("Bosnian"), "Bosnia language should contain Bosnian");
+        }
         if (countryName.equals("Zimbabwe")) {
             assertTrue(country.getOfficialLanguage().contains("English") || country.getOfficialLanguage().contains("languages"), 
                 () -> "Zimbabwe languages missing English or languages. Extracted: '" + country.getOfficialLanguage() + "'");

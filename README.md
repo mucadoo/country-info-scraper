@@ -6,6 +6,12 @@ A modern, high-performance Java-based web scraper that extracts comprehensive in
 
 This project scrapes the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states) and traverses each country's individual page to collect detailed metadata. The system is designed for **high reliability**, **performance**, and **automated delivery**.
 
+## Project Status & Roadmap
+
+This is an **ongoing project**. We are actively working on:
+- **Multilanguage Support**: Expanding the scraper to extract data from various language versions of Wikipedia.
+- **Data Consistency**: Improving extraction algorithms to handle the diversity of Wikipedia page structures more reliably and consistently.
+
 ## Features
 
 - **High Performance**: Uses Java 21 parallel streams and custom thread pools for rapid scraping.

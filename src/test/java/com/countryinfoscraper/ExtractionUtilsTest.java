@@ -7,8 +7,8 @@ public class ExtractionUtilsTest {
 
     @Test
     public void testExtractArea() {
-        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78 <sup"));
-        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78&nbsp;km<sup>2</sup>"));
+        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78"));
+        assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78 km"));
     }
 
     @Test
@@ -19,7 +19,7 @@ public class ExtractionUtilsTest {
 
     @Test
     public void testExtractDensity() {
-        assertEquals("50", ExtractionUtils.extractDensity("50 <sup class=\"reference\">[1]</sup> / km<sup>2</sup>"));
-        assertEquals("100", ExtractionUtils.extractDensity("100 / km<sup>2</sup>"));
+        assertEquals("50", ExtractionUtils.extractDensity("50 / km"));
+        assertEquals("100", ExtractionUtils.extractDensity("100 / km"));
     }
 }

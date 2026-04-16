@@ -1,6 +1,7 @@
 package com.countryinfoscraper;
 
 import org.jsoup.nodes.Element;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,7 +57,7 @@ public class ExtractionUtils {
                         case "billion": average *= 1_000_000_000; break;
                     }
                 }
-                return String.format("%.0f", average);
+                return String.format(Locale.ROOT, "%.0f", average);
             } catch (NumberFormatException e) {
                 // Ignore and try next pattern
             }
@@ -71,7 +72,7 @@ public class ExtractionUtils {
                 String multiplier = matcher.group(2).toLowerCase();
                 if (multiplier.equals("million")) val *= 1_000_000;
                 else if (multiplier.equals("billion")) val *= 1_000_000_000;
-                return String.format("%.0f", val);
+                return String.format(Locale.ROOT, "%.0f", val);
             } catch (NumberFormatException e) {
                 // Ignore and try next pattern
             }

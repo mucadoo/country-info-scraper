@@ -53,16 +53,16 @@ public class InfoboxParser {
         if (data == null) return;
 
         // Note: Avoiding strict `.select("div")` lookup because older wikis have plain `<th>• Total</th>`
-        if (!state.areaFound && state.areaHeaderFound && header.text().toLowerCase().contains("total")) {
+        if (!state.areaFound && state.areaHeaderFound && (header.text().toLowerCase().contains("total") || header.text().toLowerCase().contains("land"))) {
             String area = ExtractionUtils.extractArea(data.html());
             if (!area.isEmpty()) {
                 try {
                     country.setAreaKm2(Double.parseDouble(area));
+                    state.areaFound = true;
                 } catch (NumberFormatException e) {
                     logger.warn("Failed to parse area for {}: '{}'", country.getName(), area);
                 }
             }
-            state.areaFound = true;
         }
 
         if (!state.populationFound && state.populationHeaderFound && (header.text().toLowerCase().contains("estimate") || header.text().toLowerCase().contains("census") || header.text().toLowerCase().contains("total"))) {
@@ -70,11 +70,11 @@ public class InfoboxParser {
             if (!pop.isEmpty()) {
                 try {
                     country.setPopulation(Long.parseLong(pop));
+                    state.populationFound = true;
                 } catch (NumberFormatException e) {
                     logger.warn("Failed to parse population for {}: '{}'", country.getName(), pop);
                 }
             }
-            state.populationFound = true;
         }
 
         if (!state.densityFound && state.populationHeaderFound && header.text().toLowerCase().contains("density")) {
@@ -98,7 +98,7 @@ public class InfoboxParser {
                 .trim();
 
         // 2. Handle Capital / Largest City
-        if (headerText.contains("Capital") && (headerText.length() < 15 || headerText.contains("largest city") || headerText.contains("Administrative center"))) {
+        if (headerText.toLowerCase().contains("capital") && (headerText.length() < 20 || headerText.contains("largest city") || headerText.contains("center"))) {
             parseCapital(data, country, headerText);
             return;
         }
@@ -171,16 +171,24 @@ public class InfoboxParser {
 
     private static String parseListOrLink(Element data, String selector) {
         Element dataClone = data.clone();
-        dataClone.select("sup, i, br, .reference").remove();
+        dataClone.select("sup, i, .reference").remove();
+        
+        // Handle line breaks by replacing them with a space to avoid merging words
+        dataClone.select("br").append(" ");
+        
         Elements elements = dataClone.select(selector);
         if (!elements.isEmpty()) {
-            return elements.stream().map(Element::text).collect(Collectors.joining(", "));
+            return elements.stream()
+                    .map(Element::text)
+                    .map(String::trim)
+                    .filter(t -> !t.isEmpty())
+                    .collect(Collectors.joining(", "));
         }
         Element single = dataClone.select("a").first();
         if (single != null && !single.text().matches("^\\[\\d+\\]$")) {
-            return single.text();
+            return single.text().trim();
         }
-        return dataClone.text();
+        return dataClone.text().trim();
     }
 
     private static void parseGDP(Element row, Country country) {

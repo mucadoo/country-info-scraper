@@ -34,42 +34,52 @@ jobs:
         run: mvn clean verify
 
       - name: Run Scraper
-        if: github.event_name != 'pull_request'
         run: mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
 
       - name: Install JSON Schema Validator
-        if: github.event_name != 'pull_request'
         run: npm install -g ajv-cli
 
       - name: Validate Data Quality
-        if: github.event_name != 'pull_request'
         run: |
           # This ensures the scraped data matches your strict schema requirements
           ajv validate -s src/main/resources/country-schema.json -d src/main/resources/countries.json --strict=false
           echo "Data validation passed. Proceeding to deployment."
 
+      - name: Check for data changes
+        id: check_changes
+        run: |
+          if git diff --exit-code src/main/resources/countries.json > /dev/null; then
+            echo "data_changed=false" >> $GITHUB_OUTPUT
+            echo "No data changes detected."
+          else
+            echo "data_changed=true" >> $GITHUB_OUTPUT
+            echo "Data changes detected!"
+            git diff --stat src/main/resources/countries.json
+            git diff src/main/resources/countries.json
+          fi
+
       # Optional: Add .nojekyll so GitHub Pages doesn't ignore underscore-prefixed files
       - name: Ensure .nojekyll
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         run: touch src/main/resources/.nojekyll
 
       - name: Setup GitHub Pages
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload artifact for GitHub Pages
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'src/main/resources'   # contains countries.json, countries.min.json, .nojekyll
 
       - name: Deploy to GitHub Pages
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Generate dates and release info
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         id: date
         run: |
           TODAY=$(date +'%Y-%m-%d')
@@ -78,7 +88,7 @@ jobs:
           echo "tag_date=$TAG_DATE" >> $GITHUB_OUTPUT
 
       - name: Determine release name
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         id: release_name
         run: |
           if [[ "${{ github.event_name }}" == "push" ]]; then
@@ -88,7 +98,7 @@ jobs:
           fi
 
       - name: Create GitHub Release
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: data-${{ steps.date.outputs.tag_date }}

@@ -127,7 +127,7 @@
   "largest_city" : "Buenos Aires",
   "area_km2" : 2780085.0,
   "density_km2" : 16.8,
-  "official_language" : "",
+  "official_language" : "Spanish",
   "time_zone" : "UTC– 03:00 (ART)",
   "calling_code" : "+54",
   "internet_TLD" : ".ar"
@@ -165,7 +165,7 @@
   "largest_city" : "Sydney",
   "area_km2" : 7688287.0,
   "density_km2" : 3.7,
-  "official_language" : "",
+  "official_language" : "English",
   "time_zone" : "UTC+8; +9.5; +10 (AWST, ACST, AEST)",
   "calling_code" : "+61",
   "internet_TLD" : ".au"
@@ -241,7 +241,7 @@
   "largest_city" : "Manama",
   "area_km2" : 786.8,
   "density_km2" : 1864.0,
-  "official_language" : "",
+  "official_language" : "Arabic",
   "time_zone" : "UTC+3 (AST)",
   "calling_code" : "+973",
   "internet_TLD" : ".bh"
@@ -260,7 +260,7 @@
   "largest_city" : "Dhaka",
   "area_km2" : 148460.0,
   "density_km2" : 1165.0,
-  "official_language" : "",
+  "official_language" : "Bengali",
   "time_zone" : "UTC+6 (BST)",
   "calling_code" : "+880",
   "internet_TLD" : ".bd .বাংলা"
@@ -412,7 +412,7 @@
   "largest_city" : "Sarajevo",
   "area_km2" : 51209.0,
   "density_km2" : 61.0,
-  "official_language" : "",
+  "official_language" : "None",
   "time_zone" : "UTC+01 (CET)",
   "calling_code" : "+387",
   "internet_TLD" : ".ba"
@@ -450,7 +450,7 @@
   "largest_city" : "São Paulo",
   "area_km2" : 8515767.0,
   "density_km2" : 23.8,
-  "official_language" : "",
+  "official_language" : "Portuguese",
   "time_zone" : "UTC−02:00 to −05:00 (BT)",
   "calling_code" : "+55",
   "internet_TLD" : ".br"
@@ -659,7 +659,7 @@
   "largest_city" : "Santiago",
   "area_km2" : 756101.96,
   "density_km2" : 24.0,
-  "official_language" : "",
+  "official_language" : "Spanish",
   "time_zone" : "UTC−3, −4, −6 (CLST, CLT, EAST)",
   "calling_code" : "+56",
   "internet_TLD" : ".cl"
@@ -860,7 +860,7 @@
   "capital" : "Copenhagen",
   "population" : 6049579,
   "government" : "Unitary parliamentary constitutional monarchy",
-  "demonym" : "Greenlander, Faroe Islander",
+  "demonym" : "Danish",
   "gdp" : "$418.659 billion",
   "hdi" : "0.948",
   "currency" : "Danish krone, Faroese króna",
@@ -1077,7 +1077,7 @@
   "largest_city" : "Addis Ababa",
   "area_km2" : 1104300.0,
   "density_km2" : 92.7,
-  "official_language" : "Afar, Amharic, Oromo, Somali, Tigrinya",
+  "official_language" : "Itiyoppiya Federalih Demokrasih Ummuno",
   "time_zone" : "UTC+3 (EAT)",
   "calling_code" : "+251",
   "internet_TLD" : ".et"
@@ -1096,7 +1096,7 @@
   "largest_city" : "Suva",
   "area_km2" : 18274.0,
   "density_km2" : 46.4,
-  "official_language" : "",
+  "official_language" : "Fijian, English, Standard Hindi, Fiji Hindi",
   "time_zone" : "UTC+12 (FJT)",
   "calling_code" : "+679",
   "internet_TLD" : ".fj"
@@ -1134,7 +1134,7 @@
   "largest_city" : "Paris",
   "area_km2" : 632702.3,
   "density_km2" : 109.0,
-  "official_language" : "",
+  "official_language" : "French",
   "time_zone" : "UTC+1 (CET)",
   "calling_code" : "+33",
   "internet_TLD" : ".fr"
@@ -1609,7 +1609,7 @@
   "largest_city" : "Tokyo",
   "area_km2" : 377975.0,
   "density_km2" : 330.0,
-  "official_language" : "",
+  "official_language" : "Japanese",
   "time_zone" : "UTC+09:00 (JST)",
   "calling_code" : "+81",
   "internet_TLD" : ".jp"
@@ -1951,7 +1951,7 @@
   "largest_city" : "Kuala Lumpur",
   "area_km2" : 330803.0,
   "density_km2" : 101.0,
-  "official_language" : "",
+  "official_language" : "Malay",
   "time_zone" : "UTC+8 (MST)",
   "calling_code" : "+60",
   "internet_TLD" : ".my"
@@ -1970,7 +1970,7 @@
   "largest_city" : "Malé",
   "area_km2" : 298.0,
   "density_km2" : 1728.63,
-  "official_language" : "",
+  "official_language" : "Dhivehi",
   "time_zone" : "UTC+5 (MVT)",
   "calling_code" : "+960",
   "internet_TLD" : ".mv"
@@ -2122,7 +2122,7 @@
   "largest_city" : "Chișinău",
   "area_km2" : 33843.0,
   "density_km2" : 78.5,
-  "official_language" : "",
+  "official_language" : "Romanian",
   "time_zone" : "UTC+2 (EET)",
   "calling_code" : "+373",
   "internet_TLD" : ".md"
@@ -2445,7 +2445,7 @@
   "largest_city" : "Oslo",
   "area_km2" : 385207.0,
   "density_km2" : 14.6,
-  "official_language" : "Norwegian, Sámi",
+  "official_language" : "Norgga gonagasriika",
   "time_zone" : "UTC+1 (CET)",
   "calling_code" : "+47",
   "internet_TLD" : ".no"
@@ -2711,7 +2711,7 @@
   "largest_city" : "Moscow",
   "area_km2" : 1.7098246E7,
   "density_km2" : 8.4,
-  "official_language" : "",
+  "official_language" : "Russian",
   "time_zone" : "UTC+2 to +12",
   "calling_code" : "+7",
   "internet_TLD" : ".ru .рф"
@@ -2844,7 +2844,7 @@
   "largest_city" : "São Tomé",
   "area_km2" : 964.0,
   "density_km2" : 199.7,
-  "official_language" : "",
+  "official_language" : "Portuguese",
   "time_zone" : "UTC+0 (GMT)",
   "calling_code" : "+239",
   "internet_TLD" : ".st"
@@ -3053,7 +3053,7 @@
   "largest_city" : "Johannesburg",
   "area_km2" : 1221037.0,
   "density_km2" : 50.8,
-  "official_language" : "Afrikaans, English, Ndebele, Sepedi, Sesotho, Setswana, South African Sign Language, Swazi, Tshivenda, Xhosa, Xitsonga, Zulu",
+  "official_language" : "Republiek van Suid-Afrika",
   "time_zone" : "UTC+2 (SAST)",
   "calling_code" : "+27",
   "internet_TLD" : ".za"
@@ -3110,7 +3110,7 @@
   "largest_city" : "Madrid",
   "area_km2" : 506030.0,
   "density_km2" : 98.0,
-  "official_language" : "Spanish",
+  "official_language" : "Espainiako Erresuma",
   "time_zone" : "UTC⁠±0 to +1 (WET and CET)",
   "calling_code" : "+34",
   "internet_TLD" : ".es"
@@ -3129,7 +3129,7 @@
   "largest_city" : "Colombo",
   "area_km2" : 67240.0,
   "density_km2" : 337.7,
-  "official_language" : "",
+  "official_language" : "Sinhala, Tamil",
   "time_zone" : "UTC+5:30 (SLST)",
   "calling_code" : "+94",
   "internet_TLD" : ".lk .ලංකා .இலங்கை"
@@ -3471,7 +3471,7 @@
   "largest_city" : "Kyiv",
   "area_km2" : 603628.0,
   "density_km2" : 54.4,
-  "official_language" : "",
+  "official_language" : "Ukrainian",
   "time_zone" : "UTC+2 (EET)",
   "calling_code" : "+380",
   "internet_TLD" : ".ua .укр"
@@ -3509,7 +3509,7 @@
   "largest_city" : "London",
   "area_km2" : 244376.0,
   "density_km2" : 285.0,
-  "official_language" : "",
+  "official_language" : "English",
   "time_zone" : "UTC+0 (GMT)",
   "calling_code" : "+44",
   "internet_TLD" : ".uk"
@@ -3661,7 +3661,7 @@
   "largest_city" : "Sanaa",
   "area_km2" : 455503.0,
   "density_km2" : 71.8,
-  "official_language" : "",
+  "official_language" : "Arabic",
   "time_zone" : "UTC+3 (AST)",
   "calling_code" : "+967",
   "internet_TLD" : "List .ye اليمن."

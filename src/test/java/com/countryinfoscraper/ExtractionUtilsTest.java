@@ -9,7 +9,7 @@ public class ExtractionUtilsTest {
     public void testExtractArea() {
         assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78"));
         assertEquals("123456.78", ExtractionUtils.extractArea("123,456.78 km2"));
-        assertEquals("123456", ExtractionUtils.extractArea("123.456 km2")); // Dot separator
+        assertEquals("123.456", ExtractionUtils.extractArea("123.456 km2")); // Dot as decimal point
         // US/Liberia case: Pick km2 even if sq mi is present
         assertEquals("9833517", ExtractionUtils.extractArea("9,833,517 km2 (3,796,742 sq mi)"));
         assertEquals("111369", ExtractionUtils.extractArea("43,000 sq mi (111,369 km2)"));

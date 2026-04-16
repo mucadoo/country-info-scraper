@@ -48,14 +48,26 @@ public class InfoboxParser {
             country.setLargestCity(country.getCapital());
         }
 
-        // Final fallback checks if anything is completely missing to avoid unhandled NPEs
-        if (country.getDemonym() == null) country.setDemonym("");
-        if (country.getCallingCode() == null) country.setCallingCode("");
-        if (country.getGdp() == null) country.setGdp("");
-        if (country.getOfficialLanguage() == null) country.setOfficialLanguage("");
-        if (country.getCapital() == null) country.setCapital("");
-        if (country.getInternetTld() == null) country.setInternetTld("");
-        if (country.getLargestCity() == null) country.setLargestCity("");
+        // Final fallback checks and cleanup
+        ensureValidValues(country);
+    }
+
+    private static void ensureValidValues(Country country) {
+        if (country.getName() == null) country.setName("Unknown");
+        if (country.getIsoCode() == null || country.getIsoCode().isEmpty()) country.setIsoCode("N/A");
+        if (country.getCapital() == null || country.getCapital().isEmpty()) country.setCapital("N/A");
+        if (country.getLargestCity() == null || country.getLargestCity().isEmpty()) country.setLargestCity("N/A");
+        if (country.getDemonym() == null) country.setDemonym("N/A");
+        if (country.getCallingCode() == null) country.setCallingCode("N/A");
+        if (country.getGdp() == null) country.setGdp("N/A");
+        if (country.getHdi() == null) country.setHdi("N/A");
+        if (country.getCurrency() == null) country.setCurrency("N/A");
+        if (country.getTimeZone() == null) country.setTimeZone("N/A");
+        if (country.getOfficialLanguage() == null) country.setOfficialLanguage("N/A");
+        if (country.getInternetTld() == null) country.setInternetTld("N/A");
+        if (country.getGovernment() == null) country.setGovernment("N/A");
+        if (country.getFlagUrl() == null) country.setFlagUrl("");
+        if (country.getDescription() == null) country.setDescription("");
     }
 
     private static void processAreaAndPopulation(Element header, Element data, Country country, ParserState state) {
@@ -267,7 +279,7 @@ public class InfoboxParser {
             if (labelCell != null && labelCell.text().toLowerCase().contains("total") && valueCell != null) {
                 Element dClone = valueCell.clone();
                 // FIX: Only remove citations and footnotes, NOT spans
-                dClone.select("sup, .reference").remove(); 
+                dClone.select("sup, .reference").remove();
                 String gdpValue = dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
                 
                 // Fix typos like "$113,494 billion" -> "$113.494 billion"
@@ -298,14 +310,18 @@ public class InfoboxParser {
         if (headerText.toLowerCase().contains("hdi")) {
             Element dataClone = data.clone();
             dataClone.select("sup, br, .nowrap, .reference").remove();
-            country.setHdi(dataClone.text().split(" ")[0]);
+            String hdi = dataClone.text().split(" ")[0].trim();
+            // Validate HDI format (0.xxx)
+            if (hdi.matches("0\\.\\d{3}")) {
+                country.setHdi(hdi);
+            }
         }
         
         // Broaden language matching to catch "National language", "Official language and national language", etc.
         if (headerText.toLowerCase().contains("language") && !state.languageFound) {
             String lowerHeader = headerText.toLowerCase().replaceAll("\\(.*?\\)", "").trim();
             // EXCLUDE headers that are about names in those languages
-            if ((lowerHeader.contains("official") || lowerHeader.contains("national") || lowerHeader.equals("languages") || lowerHeader.contains("recognized")) 
+            if ((lowerHeader.contains("official") || lowerHeader.contains("national") || lowerHeader.equals("languages") || lowerHeader.contains("recognized"))
                  && !lowerHeader.contains("name") && !lowerHeader.contains("native")) {
                 
                 String langs = parseListOrLink(data, ".hlist ul li, .plainlist ul li");

@@ -1,17 +1,103 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "array",
-  "minItems": 190,
+  "minItems": 193,
   "items": {
     "type": "object",
     "properties": {
-      "name": { "type": "string", "minLength": 1 },
-      "ISO_code": { "type": "string" },
-      "capital": { "type": "string" },
-      "population": { "type": "integer" },
-      "area_km2": { "type": "number" },
-      "flagUrl": { "type": "string", "format": "uri", "pattern": "^https://.*" }
+      "name": {
+        "type": "string",
+        "minLength": 2
+      },
+      "ISO_code": {
+        "type": "string",
+        "pattern": "^[A-Z]{2,3}$"
+      },
+      "flagUrl": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://upload\\.wikimedia\\.org/wikipedia/commons/thumb/.*\\.(svg|png|jpg|jpeg)/.*$"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 50
+      },
+      "capital": {
+        "type": "string",
+        "minLength": 2
+      },
+      "largest_city": {
+        "type": "string",
+        "minLength": 2
+      },
+      "population": {
+        "type": "integer",
+        "minimum": 800
+      },
+      "area_km2": {
+        "type": "number",
+        "minimum": 0.4
+      },
+      "density_km2": {
+        "type": "number",
+        "minimum": 0.1
+      },
+      "government": {
+        "type": "string",
+        "minLength": 5
+      },
+      "official_language": {
+        "type": "string",
+        "minLength": 2
+      },
+      "demonym": {
+        "type": "string",
+        "minLength": 2
+      },
+      "gdp": {
+        "type": "string",
+        "pattern": "^\\$?\\d+.*"
+      },
+      "hdi": {
+        "type": "string",
+        "pattern": "^0\\.\\d{3}$"
+      },
+      "currency": {
+        "type": "string",
+        "minLength": 3
+      },
+      "time_zone": {
+        "type": "string",
+        "minLength": 3
+      },
+      "calling_code": {
+        "type": "string",
+        "pattern": "^\\+?[0-9\\- ]+$"
+      },
+      "internet_TLD": {
+        "type": "string",
+        "pattern": "^\\.[a-z]{2,}$"
+      }
     },
-    "required": ["name", "capital", "population", "area_km2"]
+    "required": [
+      "name",
+      "ISO_code",
+      "flagUrl",
+      "description",
+      "capital",
+      "largest_city",
+      "population",
+      "area_km2",
+      "density_km2",
+      "government",
+      "official_language",
+      "demonym",
+      "gdp",
+      "hdi",
+      "currency",
+      "time_zone",
+      "calling_code",
+      "internet_TLD"
+    ]
   }
 }

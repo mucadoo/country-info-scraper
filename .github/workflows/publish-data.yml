@@ -48,15 +48,38 @@ jobs:
       - name: Check for data changes
         id: check_changes
         run: |
-          if git diff --exit-code src/main/resources/countries.json > /dev/null; then
-            echo "data_changed=false" >> $GITHUB_OUTPUT
-            echo "No data changes detected."
+          # Fetch the data branch to compare against
+          # This is the industry standard 'Data Branch' pattern for scrapers
+          git fetch origin data:data || echo "Data branch not found. This might be the first run."
+          
+          # Fetch tags to identify the last data release for comparison
+          git fetch --tags origin || true
+
+          if git show data:countries.json > countries_old.json 2>/dev/null; then
+            echo "Found previous data on 'data' branch."
+          else
+            echo "No previous data found on 'data' branch."
+          fi
+
+          if [ -f countries_old.json ]; then
+            if git diff --no-index --exit-code countries_old.json src/main/resources/countries.json > /dev/null; then
+              echo "data_changed=false" >> $GITHUB_OUTPUT
+              echo "No data changes detected compared to 'data' branch."
+            else
+              echo "data_changed=true" >> $GITHUB_OUTPUT
+              echo "Data changes detected!"
+              echo "Summary of changes:"
+              git diff --no-index --stat countries_old.json src/main/resources/countries.json || true
+            fi
           else
             echo "data_changed=true" >> $GITHUB_OUTPUT
-            echo "Data changes detected!"
-            git diff --stat src/main/resources/countries.json
-            git diff src/main/resources/countries.json
+            echo "No previous data found. Assuming data changed."
           fi
+
+          # Find the last tag starting with 'data-' for comparison links
+          LAST_TAG=$(git tag -l "data-*" --sort=-v:refname | head -n 1)
+          echo "last_tag=$LAST_TAG" >> $GITHUB_OUTPUT
+          echo "Previous data tag found: $LAST_TAG"
 
       # Optional: Add .nojekyll so GitHub Pages doesn't ignore underscore-prefixed files
       - name: Ensure .nojekyll
@@ -97,11 +120,40 @@ jobs:
             echo "name=Data Snapshot: ${{ steps.date.outputs.today }}" >> $GITHUB_OUTPUT
           fi
 
+      - name: Update data branch
+        if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
+        run: |
+          # Persist the data to the 'data' branch for future diffs
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Use a separate folder to avoid workspace side-effects
+          mkdir data-update
+          cd data-update
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+          if git fetch origin data --depth=1; then
+            git checkout data
+          else
+            git checkout --orphan data
+            git rm -rf . || true
+          fi
+
+          # Copy files from parent workspace
+          cp ../src/main/resources/countries.json .
+          cp ../src/main/resources/countries.min.json .
+
+          git add countries.json countries.min.json
+          git commit -m "Data update: $(date -u)" || exit 0
+          git push origin data
+
       - name: Create GitHub Release
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: data-${{ steps.date.outputs.tag_date }}
+          target_commitish: data
           name: ${{ steps.release_name.outputs.name }}
           files: |
             src/main/resources/countries.json
@@ -109,11 +161,16 @@ jobs:
           body: |
             Automated data snapshot generated from Wikipedia.
 
+            **Changes:**
+            ${{ steps.check_changes.outputs.last_tag != '' && format('- [View JSON Diff](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- _First data release_' }}
+
             **Live URLs (always up-to-date):**
             - Full JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.json
             - Minified JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.min.json
 
-            This release was triggered by: **${{ github.event_name }}**
+            **Source Context:**
+            - Scraper Code: [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
+            - Triggered by: **${{ github.event_name }}**
           draft: false
           prerelease: false
         env:

@@ -82,10 +82,28 @@ mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
 - **Regression Tests**: Run against local HTML snapshots in `src/test/resources/snapshots`.
 - **Wikipedia Watcher**: A dynamic test factory that checks all 200+ countries live to spot Wikipedia HTML changes.
 
-## CI/CD Pipeline
-This project uses GitHub Actions for:
-1. **Continuous Integration**: Runs full test suite on every PR (Java 21).
-2. **Automated Publishing**: Runs daily at midnight to refresh data and create releases.
+## CI/CD Strategy: Validation-Gated Deployment
+
+This project implements an industry-standard **Validation-Gated Deployment** pipeline. To ensure data reliability, the publishing process is strictly controlled by multiple quality gates.
+
+### 1. Quality Gates
+- **Code Verification**: Runs `mvn verify` to ensure all unit and regression tests pass before any scraping begins.
+- **Schema Enforcement**: Every scraped dataset is validated against a strict [JSON Schema](src/main/resources/country-schema.json) using `ajv-cli`.
+    - **Integrity Check**: Rejects updates if the number of countries drops suspiciously (min. 150 countries).
+    - **Type Safety**: Enforces strict regex patterns for URLs and numeric constraints for population/area.
+- **Change Detection**: The pipeline uses a `git diff` mechanism to compare new results with the current live data. If no meaningful changes are detected, it skips redundant releases.
+
+### 2. The "Data Branch" Pattern
+We use a dedicated, orphan `data` branch to store the scraped results. This provides several advantages:
+- **Clean Main Branch**: The `main` branch remains focused strictly on the scraper's source code.
+- **Immutable History**: Provides a full, Git-native audit trail of every data change over time.
+- **High Availability**: Data is served directly from the `data` branch via GitHub Pages, acting as a stable, versioned API.
+
+### 3. Automated Publishing Flow
+The [Publish Workflow](.github/workflows/publish-data.yml) runs daily and handles:
+- **Environment Context**: Automatically switches release naming between "Daily Snapshots" (scheduled) and "Automated Updates" (manual push).
+- **GitHub Releases**: Packages the validated `countries.json` and `countries.min.json` as downloadable assets.
+- **Deployment**: Synchronizes the `data` branch and updates the live API endpoints.
 
 ## Project Structure
 - `WebScraper`: Orchestrates the scraping and publication flow.

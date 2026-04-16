@@ -115,7 +115,7 @@
 }, {
   "name" : "Argentina",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png",
-  "description" : "Argentina, officially the Argentine Republic, is a country located in the southern cone of South America and with a claimed portion of Antarctica. It covers an area of 2,780,085 km, making it the second-largest country in South America after Brazil, the fourth-largest country in the Americas, and the eighth-largest country in the world. Argentina shares the bulk of the Southern Cone with Chile to the west, and is also bordered by Bolivia and Paraguay to the north, Brazil to the northeast, Uruguay and the South Atlantic Ocean to the east, and the Drake Passage to the south. Argentina is a federal state subdivided into twenty-three provinces, and one autonomous city, which is the federal capital and largest city of the nation, Buenos Aires. The provinces and the capital have their own constitutions, but exist under a federal system. Argentina claims sovereignty over the Falkland Islands, South Georgia and the South Sandwich Islands, the Southern Patagonian Ice Field, and a part of Ant...",
+  "description" : "Argentina, officially the Argentine Republic, is a country located in the southern cone of South America and with a claimed portion of Antarctica. It covers an area of 2,780,085 km, making it the second-largest country in South America after Brazil, the fourth-largest country in the Americas, and the eighth-largest country in the world. Argentina shares the bulk of the Southern Cone with Chile to the west, and is also bordered by Bolivia and Paraguay to the north, Brazil to the northeast, Uruguay and the South Atlantic Ocean to the east, and the Drake Passage to the south. Argentina is a federal state subdivided into twenty-three provinces, and one autonomous city, which is the federal capital and largest city of the nation, Buenos Aires. The provinces and the capital have their own constitutions, but exist under a federal system. Argentina claims sovereignty over the Falkland Islands, South Georgia and the South Sandwich Islands, the Southern Patagonian Ice Field, and a part of Antarctica.",
   "capital" : "Buenos Aires",
   "population" : 46735004,
   "government" : "Federal presidential republic",
@@ -381,7 +381,7 @@
 }, {
   "name" : "Bolivia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/250px-Flag_of_Bolivia.svg.png",
-  "description" : "Bolivia, officially the Plurinational State of Bolivia, is a landlocked country located in central South America. Its geography primarily consists of an Andean region to the west and tropical lowlands to the east and north. The country has a diverse environment, including the vast Amazonian plain, the Gran Chaco, temperate valleys, the high-altitude Altiplano plateau, snow-capped peaks, and mountains, encompassing a wide range of climates and biomes across its regions and cities. It includes part of the Pantanal, the largest tropical wetland in the world, along its eastern border. Bolivia is bordered by Brazil to the north and east, Paraguay to the southeast, Argentina to the south, Chile to the southwest, and Peru to the west. The seat of government is La Paz, which contains the executive, legislative, and electoral branches of government, while the constitutional capital is Sucre, the seat of the judiciary. While most population and urban centers lie in the Andean region, the larg...",
+  "description" : "Bolivia, officially the Plurinational State of Bolivia, is a landlocked country located in central South America. Its geography primarily consists of an Andean region to the west and tropical lowlands to the east and north. The country has a diverse environment, including the vast Amazonian plain, the Gran Chaco, temperate valleys, the high-altitude Altiplano plateau, snow-capped peaks, and mountains, encompassing a wide range of climates and biomes across its regions and cities. It includes part of the Pantanal, the largest tropical wetland in the world, along its eastern border. Bolivia is bordered by Brazil to the north and east, Paraguay to the southeast, Argentina to the south, Chile to the southwest, and Peru to the west. The seat of government is La Paz, which contains the executive, legislative, and electoral branches of government, while the constitutional capital is Sucre, the seat of the judiciary. While most population and urban centers lie in the Andean region, the largest city and principal industrial center is Santa Cruz de la Sierra, located in the eastern tropical lowlands.",
   "capital" : "Sucre",
   "population" : 11365333,
   "government" : "Unitary presidential republic",
@@ -685,7 +685,7 @@
 }, {
   "name" : "Colombia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/250px-Flag_of_Colombia.svg.png",
-  "description" : "Colombia, officially the Republic of Colombia, is a country located in South America, with insular regions in North America. Colombia's mainland is bordered by the Caribbean Sea to the north, Venezuela to the east, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is divided into 32 departments. The Capital District of Bogotá is the country's largest city hosting the main financial and cultural hub. Other urban areas include Medellín, Cali, Barranquilla, Cartagena, Bucaramanga, Pereira, Santa Marta, Cúcuta, Ibagué, Villavicencio and Manizales. It covers an area of 1,141,748 square kilometers and has a population of around 52 million. Its rich cultural heritage—including language, religion, cuisine, and art—reflects its history as a colony, fusing cultural elements brought by immigration from Europe and the Middle East, with those brought by the African diaspora, as well as with those of Indigeno...",
+  "description" : "Colombia, officially the Republic of Colombia, is a country located in South America, with insular regions in North America. Colombia's mainland is bordered by the Caribbean Sea to the north, Venezuela to the east, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is divided into 32 departments. The Capital District of Bogotá is the country's largest city hosting the main financial and cultural hub. Other urban areas include Medellín, Cali, Barranquilla, Cartagena, Bucaramanga, Pereira, Santa Marta, Cúcuta, Ibagué, Villavicencio and Manizales. It covers an area of 1,141,748 square kilometers and has a population of around 52 million. Its rich cultural heritage—including language, religion, cuisine, and art—reflects its history as a colony, fusing cultural elements brought by immigration from Europe and the Middle East, with those brought by the African diaspora, as well as with those of Indigenous civilizations that predate colonization. Spanish is the official language, although Creole, English and 64 other languages are recognized regionally.",
   "capital" : "Bogotá",
   "population" : 52695952,
   "government" : "Unitary presidential republic",
@@ -723,7 +723,7 @@
 }, {
   "name" : "Congo, Democratic Republic of the",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/250px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
-  "description" : "The Democratic Republic of the Congo, also known as the DR Congo, Congo-Kinshasa, or simply the Congo or less often Zaire, is a country in Central Africa. By land area, it is the second-largest country in Africa and the 11th-largest in the world. With a population of around 124 million people, the Democratic Republic of the Congo is the fourth-most populous country in Africa and the most populous Francophone country in the world. French is the official and most widely spoken language, though there are over 200 indigenous languages, of which Lingala is the most widely spoken. The capital, largest city, and economic center is Kinshasa. The DRC is bordered by the Republic of the Congo, the Cabinda exclave of Angola, and the South Atlantic Ocean to the west; the Central African Republic and South Sudan to the north; Uganda, Rwanda, Burundi, and Tanzania to the east; and Zambia and Angola to the south. Centered on the Congo Basin, most of the country's terrain is covered by dense rainfor...",
+  "description" : "The Democratic Republic of the Congo, also known as the DR Congo, Congo-Kinshasa, or simply the Congo or less often Zaire, is a country in Central Africa. By land area, it is the second-largest country in Africa and the 11th-largest in the world. With a population of around 124 million people, the Democratic Republic of the Congo is the fourth-most populous country in Africa and the most populous Francophone country in the world. French is the official and most widely spoken language, though there are over 200 indigenous languages, of which Lingala is the most widely spoken. The capital, largest city, and economic center is Kinshasa. The DRC is bordered by the Republic of the Congo, the Cabinda exclave of Angola, and the South Atlantic Ocean to the west; the Central African Republic and South Sudan to the north; Uganda, Rwanda, Burundi, and Tanzania to the east; and Zambia and Angola to the south. Centered on the Congo Basin, most of the country's terrain is covered by dense rainforests and is crossed by many rivers, while the east and southeast are mountainous.",
   "capital" : "Kinshasa",
   "population" : 124388160,
   "government" : "Unitary semi-presidential republic",
@@ -1077,7 +1077,7 @@
   "largest_city" : "Addis Ababa",
   "area_km2" : 1104300.0,
   "density_km2" : 92.7,
-  "official_language" : "Itiyoppiya Federalih Demokrasih Ummuno",
+  "official_language" : "Afar, Amharic, Oromo, Somali, Tigrinya",
   "time_zone" : "UTC+3 (EAT)",
   "calling_code" : "+251",
   "internet_TLD" : ".et"
@@ -1723,7 +1723,7 @@
   "largest_city" : "Bishkek",
   "area_km2" : 200105.0,
   "density_km2" : 37.0,
-  "official_language" : "Kyrgyz (state) Russian (official)",
+  "official_language" : "",
   "time_zone" : "UTC+6 (KGT)",
   "calling_code" : "+996",
   "internet_TLD" : ".kg"
@@ -2445,7 +2445,7 @@
   "largest_city" : "Oslo",
   "area_km2" : 385207.0,
   "density_km2" : 14.6,
-  "official_language" : "Norgga gonagasriika",
+  "official_language" : "Norwegian, Sámi",
   "time_zone" : "UTC+1 (CET)",
   "calling_code" : "+47",
   "internet_TLD" : ".no"
@@ -2851,7 +2851,7 @@
 }, {
   "name" : "Saudi Arabia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/250px-Flag_of_Saudi_Arabia.svg.png",
-  "description" : "Saudi Arabia, officially the Kingdom of Saudi Arabia, is a country in West Asia. Located in the centre of the Middle East, it covers the bulk of the Arabian Peninsula and has a land area of about 2,150,000 km, making it the fifth-largest country in Asia, the largest in the Middle East, and the twelfth-largest in the world. It is bordered by the Red Sea to the west; Jordan, Iraq, and Kuwait to the north; the Persian Gulf, Bahrain, Qatar and the United Arab Emirates to the east; Oman to the southeast; and Yemen to the south. The Gulf of Aqaba in the northwest separates Saudi Arabia from Egypt and Israel. Saudi Arabia is the only country with a coastline along both the Red Sea and the Arabian Gulf, and most of its terrain consists of arid desert, lowland, steppe, and mountains. The capital and largest city is Riyadh; other major cities include Jeddah and the two holiest cities in Islam, Mecca and Medina. With a population of almost 32.2 million, Saudi Arabia is the fourth most populous...",
+  "description" : "Saudi Arabia, officially the Kingdom of Saudi Arabia, is a country in West Asia. Located in the centre of the Middle East, it covers the bulk of the Arabian Peninsula and has a land area of about 2,150,000 km, making it the fifth-largest country in Asia, the largest in the Middle East, and the twelfth-largest in the world. It is bordered by the Red Sea to the west; Jordan, Iraq, and Kuwait to the north; the Persian Gulf, Bahrain, Qatar and the United Arab Emirates to the east; Oman to the southeast; and Yemen to the south. The Gulf of Aqaba in the northwest separates Saudi Arabia from Egypt and Israel. Saudi Arabia is the only country with a coastline along both the Red Sea and the Arabian Gulf, and most of its terrain consists of arid desert, lowland, steppe, and mountains. The capital and largest city is Riyadh; other major cities include Jeddah and the two holiest cities in Islam, Mecca and Medina. With a population of almost 32.2 million, Saudi Arabia is the fourth most populous country in the Arab world.",
   "capital" : "Riyadh",
   "population" : 33702731,
   "government" : "Unitary Islamic absolute monarchy",
@@ -3053,7 +3053,7 @@
   "largest_city" : "Johannesburg",
   "area_km2" : 1221037.0,
   "density_km2" : 50.8,
-  "official_language" : "Republiek van Suid-Afrika",
+  "official_language" : "Afrikaans, English, Ndebele, Sepedi, Sesotho, Setswana, South African Sign Language, Swazi, Tshivenda, Xhosa, Xitsonga, Zulu",
   "time_zone" : "UTC+2 (SAST)",
   "calling_code" : "+27",
   "internet_TLD" : ".za"
@@ -3110,7 +3110,7 @@
   "largest_city" : "Madrid",
   "area_km2" : 506030.0,
   "density_km2" : 98.0,
-  "official_language" : "Espainiako Erresuma",
+  "official_language" : "Spanish",
   "time_zone" : "UTC⁠±0 to +1 (WET and CET)",
   "calling_code" : "+34",
   "internet_TLD" : ".es"
@@ -3364,7 +3364,7 @@
 }, {
   "name" : "Tunisia",
   "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/250px-Flag_of_Tunisia.svg.png",
-  "description" : "Tunisia, officially the Republic of Tunisia, is a country in the Maghreb region of North Africa. It is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east. Tunisia also shares maritime borders with Italy through the islands of Sicily and Sardinia to the north and Malta to the east. It features the archaeological sites of Carthage dating back to the 9th century BC, as well as the Great Mosque of Kairouan. Known for its ancient architecture, souks, and blue coasts, it covers 163,610 km, and has a population of 12.1 million. It contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert; much of its remaining territory is arable land. Its 1,300 km of coastline includes the African conjunction of the western and eastern parts of the Mediterranean Basin. Tunisia is home to Africa's northernmost point, Cape Angela. Located on the northeastern coast, Tunis is the capital of the country, whi...",
+  "description" : "Tunisia, officially the Republic of Tunisia, is a country in the Maghreb region of North Africa. It is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east. Tunisia also shares maritime borders with Italy through the islands of Sicily and Sardinia to the north and Malta to the east. It features the archaeological sites of Carthage dating back to the 9th century BC, as well as the Great Mosque of Kairouan. Known for its ancient architecture, souks, and blue coasts, it covers 163,610 km, and has a population of 12.1 million. It contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert; much of its remaining territory is arable land. Its 1,300 km of coastline includes the African conjunction of the western and eastern parts of the Mediterranean Basin. Tunisia is home to Africa's northernmost point, Cape Angela. Located on the northeastern coast, Tunis is the capital of the country, which is itself named after Tunis. The official language of Tunisia is Arabic. The vast majority of Tunisia's population is Arab and Muslim. Vernacular Tunisian Arabic is the most spoken language, and French serves as an administrative and educational language in some contexts, but has no official status.",
   "capital" : "Tunis",
   "population" : 11972169,
   "government" : "Unitary presidential republic",

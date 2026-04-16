@@ -15,20 +15,20 @@ public class ExtractionUtils {
         return clone.text().replaceAll("[\\s\\u00A0]+", " ").trim();
     }
 
-    public static String extractArea(String html) {
-        if (html == null || html.isEmpty()) return "";
+    public static String extractArea(String text) {
+        if (text == null || text.isEmpty()) return "";
         // Support both comma and dot as thousands separators, and handle decimal dots.
         // prioritized for English Wikipedia (comma thousands, dot decimal)
-        Pattern pattern = Pattern.compile("([0-9]{1,3}(?:,[0-9]{3})*(?:\\.\\d+)?)(?:\\s*<sup|\\s*<|\\s*&nbsp;km|\\s*km|\\s*sq\\s*mi)");
-        Matcher matcher = pattern.matcher(html);
+        Pattern pattern = Pattern.compile("([0-9]{1,3}(?:,[0-9]{3})*(?:\\.\\d+)?)(?:\\s*km|\\s*sq\\s*mi|\\s*<|\\s*$)");
+        Matcher matcher = pattern.matcher(text);
 
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");
         }
         
         // Fallback for cases using dots as thousands separators (e.g. 1.234.567)
-        pattern = Pattern.compile("([0-9]{1,3}(?:\\.[0-9]{3})+)(?:\\s*<sup|\\s*<|\\s*&nbsp;km|\\s*km|\\s*sq\\s*mi)");
-        matcher = pattern.matcher(html);
+        pattern = Pattern.compile("([0-9]{1,3}(?:\\.[0-9]{3})+)(?:\\s*km|\\s*sq\\s*mi|\\s*<|\\s*$)");
+        matcher = pattern.matcher(text);
         if (matcher.find()) {
             return matcher.group(1).replace(".", "");
         }
@@ -36,43 +36,51 @@ public class ExtractionUtils {
         return "";
     }
 
-    public static String extractPopulation(String html) {
-        if (html == null || html.isEmpty()) return "";
+    public static String extractPopulation(String text) {
+        if (text == null || text.isEmpty()) return "";
         
         // 1. Range match: "1.2 - 1.5 million"
-        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*[–-]\\s*([0-9,.]+)\\s*(million|billion)?(?=\\s*(?:<sup|<span|<br|\\(|<|\\s|$))");
-        Matcher matcher = pattern.matcher(html);
+        Pattern pattern = Pattern.compile("([0-9,.]+)\\s*[–-]\\s*([0-9,.]+)\\s*(million|billion)?(?=\\s*(?:\\(|\\s|$))");
+        Matcher matcher = pattern.matcher(text);
 
         if (matcher.find()) {
-            double low = Double.parseDouble(matcher.group(1).replace(",", ""));
-            double high = Double.parseDouble(matcher.group(2).replace(",", ""));
-            double average = (low + high) / 2;
+            try {
+                double low = Double.parseDouble(matcher.group(1).replace(",", ""));
+                double high = Double.parseDouble(matcher.group(2).replace(",", ""));
+                double average = (low + high) / 2;
 
-            String multiplier = matcher.group(3);
-            if (multiplier != null) {
-                switch (multiplier.toLowerCase()) {
-                    case "million": average *= 1_000_000; break;
-                    case "billion": average *= 1_000_000_000; break;
+                String multiplier = matcher.group(3);
+                if (multiplier != null) {
+                    switch (multiplier.toLowerCase()) {
+                        case "million": average *= 1_000_000; break;
+                        case "billion": average *= 1_000_000_000; break;
+                    }
                 }
+                return String.format("%.0f", average);
+            } catch (NumberFormatException e) {
+                // Ignore and try next pattern
             }
-            return String.format("%.0f", average);
         }
 
         // 2. Single value with million/billion: "1.5 million"
-        pattern = Pattern.compile("([0-9,.]+)\\s*(million|billion)(?=\\s*(?:<sup|<span|<br|\\(|<|\\s|$))");
-        matcher = pattern.matcher(html);
+        pattern = Pattern.compile("([0-9,.]+)\\s*(million|billion)(?=\\s*(?:\\(|\\s|$))");
+        matcher = pattern.matcher(text);
         if (matcher.find()) {
-            double val = Double.parseDouble(matcher.group(1).replace(",", ""));
-            String multiplier = matcher.group(2).toLowerCase();
-            if (multiplier.equals("million")) val *= 1_000_000;
-            else if (multiplier.equals("billion")) val *= 1_000_000_000;
-            return String.format("%.0f", val);
+            try {
+                double val = Double.parseDouble(matcher.group(1).replace(",", ""));
+                String multiplier = matcher.group(2).toLowerCase();
+                if (multiplier.equals("million")) val *= 1_000_000;
+                else if (multiplier.equals("billion")) val *= 1_000_000_000;
+                return String.format("%.0f", val);
+            } catch (NumberFormatException e) {
+                // Ignore and try next pattern
+            }
         }
 
         // 3. Regular numbers with commas or dots as thousands separators
         // Matches 1,234,567 or 1.234.567 or 1234567
-        pattern = Pattern.compile("([0-9]{1,3}(?:[.,][0-9]{3})+|[0-9]{4,})(?=\\s*(?:<sup|<span|<br|\\(|<|\\s|$))");
-        matcher = pattern.matcher(html);
+        pattern = Pattern.compile("([0-9]{1,3}(?:[.,][0-9]{3})+|[0-9]{4,})(?=\\s*(?:\\(|\\s|$))");
+        matcher = pattern.matcher(text);
         while (matcher.find()) {
             String match = matcher.group(1).replace(",", "").replace(".", "");
             // Filter out common year-like numbers (19xx, 20xx) unless they are very long
@@ -82,8 +90,8 @@ public class ExtractionUtils {
         }
         
         // 4. Fallback for very small populations (under 1000)
-        pattern = Pattern.compile("([0-9]+)(?=\\s*(?:<sup|<span|<br|\\(|<|\\s|$))");
-        matcher = pattern.matcher(html);
+        pattern = Pattern.compile("([0-9]+)(?=\\s*(?:\\(|\\s|$))");
+        matcher = pattern.matcher(text);
         if (matcher.find()) {
             return matcher.group(1);
         }
@@ -91,10 +99,10 @@ public class ExtractionUtils {
         return "";
     }
 
-    public static String extractDensity(String html) {
-        if (html == null || html.isEmpty()) return "";
-        Pattern pattern = Pattern.compile("([0-9,.]+)(?=\\s*(?:<sup[^>]*>.*?</sup>\\s*)?/?\\s*km)");
-        Matcher matcher = pattern.matcher(html);
+    public static String extractDensity(String text) {
+        if (text == null || text.isEmpty()) return "";
+        Pattern pattern = Pattern.compile("([0-9,.]+)(?=\\s*/?\\s*km)");
+        Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {
             return matcher.group(1).replace(",", "");
         }

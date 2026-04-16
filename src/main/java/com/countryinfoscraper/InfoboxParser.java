@@ -45,48 +45,76 @@ public class InfoboxParser {
 
     private static void processAreaAndPopulation(Element header, Element data, Country country, ParserState state) {
         if (header == null) return;
-        String text = header.text().toLowerCase();
+        String text = header.text().toLowerCase().trim();
 
-        if (!state.areaHeaderFound && text.contains("area")) state.areaHeaderFound = true;
-        if (!state.populationHeaderFound && text.contains("population")) state.populationHeaderFound = true;
+        // 1. Detect section transitions (main headers)
+        // Main headers typically have colspan=2 and/or infobox-header class
+        boolean isMainHeader = header.hasClass("infobox-header") || (header.hasAttr("colspan") && header.attr("colspan").equals("2"));
+
+        if (isMainHeader) {
+            if (text.contains("area")) {
+                state.currentSection = "area";
+                state.areaHeaderFound = true;
+            } else if (text.contains("population")) {
+                state.currentSection = "population";
+                state.populationHeaderFound = true;
+            } else if (text.contains("gdp") || text.contains("hdi") || text.contains("government") || text.contains("demographics") || text.contains("geography")) {
+                state.currentSection = "other";
+            }
+        } else if (state.currentSection == null) {
+            // Fallback for flat infoboxes - use exact match to avoid accidental hits like "Largest city by population"
+            if (text.equals("area")) {
+                state.currentSection = "area";
+                state.areaHeaderFound = true;
+            } else if (text.equals("population")) {
+                state.currentSection = "population";
+                state.populationHeaderFound = true;
+            }
+        }
 
         if (data == null) return;
 
-        // Note: Avoiding strict `.select("div")` lookup because older wikis have plain `<th>• Total</th>`
-        if (!state.areaFound && state.areaHeaderFound && (header.text().toLowerCase().contains("total") || header.text().toLowerCase().contains("land"))) {
-            String area = ExtractionUtils.extractArea(data.html());
-            if (!area.isEmpty()) {
-                try {
-                    country.setAreaKm2(Double.parseDouble(area));
-                    state.areaFound = true;
-                } catch (NumberFormatException e) {
-                    logger.warn("Failed to parse area for {}: '{}'", country.getName(), area);
+        // 2. Extract based on current section
+        if ("area".equals(state.currentSection) && !state.areaFound) {
+            // Broaden to handle Moldova's "• Incl. Transnistria" or flat "Area" rows
+            if (text.contains("total") || text.contains("land") || text.contains("•") || text.equals("area")) {
+                String area = ExtractionUtils.extractArea(ExtractionUtils.cleanText(data));
+                if (!area.isEmpty()) {
+                    try {
+                        country.setAreaKm2(Double.parseDouble(area));
+                        state.areaFound = true;
+                    } catch (NumberFormatException e) {
+                        logger.warn("Failed to parse area for {}: '{}'", country.getName(), area);
+                    }
                 }
             }
         }
 
-        if (!state.populationFound && state.populationHeaderFound && (header.text().toLowerCase().contains("estimate") || header.text().toLowerCase().contains("census") || header.text().toLowerCase().contains("total"))) {
-            String pop = ExtractionUtils.extractPopulation(data.html());
-            if (!pop.isEmpty()) {
-                try {
-                    country.setPopulation(Long.parseLong(pop));
-                    state.populationFound = true;
-                } catch (NumberFormatException e) {
-                    logger.warn("Failed to parse population for {}: '{}'", country.getName(), pop);
+        if ("population".equals(state.currentSection) && !state.populationFound) {
+            // Broaden to handle sub-rows or flat "Population" rows
+            if (text.contains("estimate") || text.contains("census") || text.contains("total") || text.contains("•") || text.equals("population")) {
+                String pop = ExtractionUtils.extractPopulation(ExtractionUtils.cleanText(data));
+                if (!pop.isEmpty()) {
+                    try {
+                        country.setPopulation(Long.parseLong(pop));
+                        state.populationFound = true;
+                    } catch (NumberFormatException e) {
+                        logger.warn("Failed to parse population for {}: '{}'", country.getName(), pop);
+                    }
                 }
             }
         }
 
-        if (!state.densityFound && state.populationHeaderFound && header.text().toLowerCase().contains("density")) {
-            String density = ExtractionUtils.extractDensity(data.html());
+        if (!state.densityFound && "population".equals(state.currentSection) && text.contains("density")) {
+            String density = ExtractionUtils.extractDensity(ExtractionUtils.cleanText(data));
             if (!density.isEmpty()) {
                 try {
                     country.setDensityKm2(Double.parseDouble(density));
+                    state.densityFound = true;
                 } catch (NumberFormatException e) {
                     logger.warn("Failed to parse density for {}: '{}'", country.getName(), density);
                 }
             }
-            state.densityFound = true;
         }
     }
 
@@ -278,5 +306,6 @@ public class InfoboxParser {
 
     private static class ParserState {
         boolean areaHeaderFound, areaFound, populationHeaderFound, populationFound, densityFound, languageFound, flagFound;
+        String currentSection = null;
     }
 }

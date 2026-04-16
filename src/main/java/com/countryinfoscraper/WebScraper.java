@@ -1,6 +1,9 @@
 package com.countryinfoscraper;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.util.DefaultIndenter;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -38,6 +41,9 @@ public class WebScraper {
     private static final int PARALLELISM = Integer.parseInt(System.getProperty("scraper.parallelism", "10"));
 
     private final Semaphore semaphore = new Semaphore(PARALLELISM);
+    private final ObjectMapper mapper = new ObjectMapper()
+            .setSerializationInclusion(JsonInclude.Include.NON_NULL)
+            .enable(SerializationFeature.INDENT_OUTPUT);
 
     public static void main(String[] args) {
         new WebScraper().run();
@@ -86,7 +92,8 @@ public class WebScraper {
                 executor.shutdown();
             }
 
-            validateSchema(serialize(countries, true));
+            String prettyJson = serialize(countries, true);
+            validateSchema(prettyJson);
             exportData(countries);
 
         } catch (Exception e) {
@@ -126,18 +133,18 @@ public class WebScraper {
     }
 
     private String serialize(List<Country> countries, boolean pretty) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
         if (pretty) {
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            DefaultPrettyPrinter printer = new DefaultPrettyPrinter();
+            printer.indentArraysWith(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
+            return mapper.writer(printer).writeValueAsString(countries);
         }
-        return mapper.writeValueAsString(countries);
+        return mapper.writer().without(SerializationFeature.INDENT_OUTPUT).writeValueAsString(countries);
     }
 
     private void validateSchema(String jsonContent) {
         try (InputStream schemaStream = getClass().getResourceAsStream("/country-schema.json")) {
             if (schemaStream == null) return;
             JsonSchema schema = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7).getSchema(schemaStream);
-            ObjectMapper mapper = new ObjectMapper();
             JsonNode node = mapper.readTree(jsonContent);
             Set<ValidationMessage> errors = schema.validate(node);
 

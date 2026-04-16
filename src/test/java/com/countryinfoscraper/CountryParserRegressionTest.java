@@ -77,6 +77,10 @@ public class CountryParserRegressionTest {
                     () -> "Afghanistan calling code should contain +93. Extracted: '" + country.getCallingCode() + "'");
             }
         }
+        if (countryName.equals("Denmark")) {
+            assertTrue(country.getAreaKm2() > 40000, 
+                () -> "Denmark area should be > 40,000. Extracted: " + country.getAreaKm2());
+        }
         if (countryName.equals("Canada")) {
             assertTrue(country.getAreaKm2() > 9000000, 
                 () -> "Canada area should be ~9.9 million. Extracted: " + country.getAreaKm2());
@@ -89,6 +93,14 @@ public class CountryParserRegressionTest {
             assertTrue(country.getCallingCode().contains("+86"), 
                 () -> "China calling code should be +86. Extracted: '" + country.getCallingCode() + "'");
             assertFalse(country.getInternetTld().isEmpty(), "China should have Internet TLD");
+            assertTrue(country.getPopulation() > 1000000000L, 
+                () -> "China population should be > 1 billion. Extracted: " + country.getPopulation());
+        }
+        if (countryName.equals("Indonesia")) {
+            assertTrue(country.getPopulation() > 250000000, 
+                () -> "Indonesia population should be > 250 million. Extracted: " + country.getPopulation());
+            assertTrue(country.getAreaKm2() > 1800000, 
+                () -> "Indonesia area should be > 1.8 million. Extracted: " + country.getAreaKm2());
         }
         if (countryName.equals("Monaco")) {
             assertTrue(country.getAreaKm2() < 3.0, 
@@ -109,26 +121,17 @@ public class CountryParserRegressionTest {
     private static Stream<Arguments> provideLocalHtmlFiles() {
         String baseDir = "src/test/resources/snapshots/";
         return Stream.of(
-            Arguments.of("United States", baseDir + "united_states.html"),
-            Arguments.of("France", baseDir + "france.html"),
-            Arguments.of("India", baseDir + "india.html"),
             Arguments.of("Vatican City", baseDir + "vatican_city.html"),
-            Arguments.of("South Africa", baseDir + "south_africa.html"),
             Arguments.of("Denmark", baseDir + "denmark.html"),
-            Arguments.of("Netherlands", baseDir + "netherlands.html"),
             Arguments.of("Bolivia", baseDir + "bolivia.html"),
             Arguments.of("Yemen", baseDir + "yemen.html"),
             Arguments.of("Israel", baseDir + "israel.html"),
             Arguments.of("Turkmenistan", baseDir + "turkmenistan.html"),
             Arguments.of("El Salvador", baseDir + "el_salvador.html"),
             Arguments.of("Zimbabwe", baseDir + "zimbabwe.html"),
-            Arguments.of("Sri Lanka", baseDir + "sri_lanka.html"),
-            Arguments.of("Malaysia", baseDir + "malaysia.html"),
             Arguments.of("Ivory Coast", baseDir + "ivory_coast.html"),
             Arguments.of("Singapore", baseDir + "singapore.html"),
             Arguments.of("Afghanistan", baseDir + "afghanistan.html"),
-            Arguments.of("Vietnam", baseDir + "vietnam.html"),
-            Arguments.of("Sweden", baseDir + "sweden.html"),
             Arguments.of("Monaco", baseDir + "monaco.html"),
             Arguments.of("Nauru", baseDir + "nauru.html"),
             Arguments.of("Switzerland", baseDir + "switzerland.html"),
@@ -136,16 +139,25 @@ public class CountryParserRegressionTest {
             Arguments.of("Canada", baseDir + "canada.html"),
             Arguments.of("Russia", baseDir + "russia.html"),
             Arguments.of("China", baseDir + "china.html"),
-            Arguments.of("Mongolia", baseDir + "mongolia.html"),
             Arguments.of("Vanuatu", baseDir + "vanuatu.html"),
             Arguments.of("Guinea-Bissau", baseDir + "guinea_bissau.html"),
             Arguments.of("Solomon Islands", baseDir + "solomon_islands.html"),
             Arguments.of("Lebanon", baseDir + "lebanon.html"),
             Arguments.of("South Korea", baseDir + "south_korea.html"),
-            Arguments.of("Senegal", baseDir + "senegal.html"),
             Arguments.of("Equatorial Guinea", baseDir + "equatorial_guinea.html"),
             Arguments.of("Comoros", baseDir + "comoros.html"),
-            Arguments.of("Eritrea", baseDir + "eritrea.html")
+            Arguments.of("Eritrea", baseDir + "eritrea.html"),
+            Arguments.of("Gambia, The", baseDir + "the_gambia.html"),
+            Arguments.of("Kiribati", baseDir + "kiribati.html"),
+            Arguments.of("Liechtenstein", baseDir + "liechtenstein.html"),
+            Arguments.of("Luxembourg", baseDir + "luxembourg.html"),
+            Arguments.of("Malta", baseDir + "malta.html"),
+            Arguments.of("North Korea", baseDir + "north_korea.html"),
+            Arguments.of("Syria", baseDir + "syria.html"),
+            Arguments.of("Indonesia", baseDir + "indonesia.html"),
+            Arguments.of("Kyrgyzstan", baseDir + "kyrgyzstan.html"),
+            Arguments.of("Mauritania", baseDir + "mauritania.html"),
+            Arguments.of("Moldova", baseDir + "moldova.html")
         );
     }
 }

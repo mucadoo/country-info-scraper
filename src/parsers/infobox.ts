@@ -20,6 +20,7 @@ export class InfoboxParser {
   static parse($: CheerioAPI, country: Partial<Country>, lang: string = 'en'): void {
     let infobox = $('table.infobox.ib-country').first();
     if (infobox.length === 0) infobox = $('table.infobox.vcard').first();
+    if (infobox.length === 0) infobox = $('table.infobox_v2').first();
     if (infobox.length === 0) infobox = $('table.infobox').first();
     if (infobox.length === 0) return;
 

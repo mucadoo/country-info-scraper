@@ -31,6 +31,14 @@ export class DescriptionParser {
       desc = desc.replace(/\s+([,.])/g, '$1');
 
       country.description = { [lang]: desc };
+      
+      // Fallback: Try to extract capital if it's explicitly mentioned in the description
+      if (!(country.capital as any)?.[lang]) {
+        const capitalMatch = desc.match(/(?:capitale|capital).*?([A-Z][a-z]+)/i);
+        if (capitalMatch) {
+            country.capital = { ...country.capital, [lang]: capitalMatch[1] };
+        }
+      }
     }
   }
 }

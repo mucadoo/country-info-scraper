@@ -178,8 +178,17 @@ export class InfoboxParser {
       country.ISO_code = ExtractionUtils.cleanText(data);
     } else if (lowerHeaderText.includes('internet tld')) {
       const tldClone = data.clone();
-      tldClone.find('sup, .reference').remove();
-      country.internet_TLD = tldClone.text().split('[')[0].trim();
+      tldClone.find('sup, .reference, style, script, link, meta').remove();
+      const tlds: string[] = [];
+      tldClone.find('li').each((_, li) => {
+        const text = $(li).text().trim();
+        if (text) tlds.push(text);
+      });
+      if (tlds.length > 0) {
+        country.internet_TLD = tlds.join(', ');
+      } else {
+        country.internet_TLD = tldClone.text().split('[')[0].trim();
+      }
     } else {
       this.handleOtherFields(headerText, data, country, state);
     }

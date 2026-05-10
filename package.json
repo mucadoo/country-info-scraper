@@ -1,7 +1,7 @@
 {
-  "name": "country-info-scraper",
+  "name": "wikigeo-data-scraper",
   "version": "1.0.0",
-  "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.",
+  "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia and publishes it as a live JSON API.",
   "type": "module",
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mucadoo/country-info-scraper.git"
+    "url": "git+https://github.com/mucadoo/wikigeo-data-scraper.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mucadoo/country-info-scraper/issues"
+    "url": "https://github.com/mucadoo/wikigeo-data-scraper/issues"
   },
-  "homepage": "https://github.com/mucadoo/country-info-scraper#readme",
+  "homepage": "https://github.com/mucadoo/wikigeo-data-scraper#readme",
   "dependencies": {
     "better-sqlite3": "^12.9.0",
     "cheerio": "^1.2.0",

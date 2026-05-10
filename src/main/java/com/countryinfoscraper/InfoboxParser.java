@@ -59,8 +59,6 @@ public class InfoboxParser {
         if (country.getLargestCity() == null || country.getLargestCity().isEmpty()) country.setLargestCity("N/A");
         if (country.getDemonym() == null || country.getDemonym().isEmpty()) country.setDemonym("N/A");
         if (country.getCallingCode() == null || country.getCallingCode().isEmpty()) country.setCallingCode("N/A");
-        if (country.getGdp() == null || country.getGdp().isEmpty()) country.setGdp("N/A");
-        if (country.getHdi() == null || country.getHdi().isEmpty()) country.setHdi("N/A");
         if (country.getCurrency() == null || country.getCurrency().isEmpty()) country.setCurrency("N/A");
         if (country.getTimeZone() == null || country.getTimeZone().isEmpty()) country.setTimeZone("N/A");
         if (country.getOfficialLanguage() == null || country.getOfficialLanguage().isEmpty()) country.setOfficialLanguage("N/A");
@@ -264,6 +262,35 @@ public class InfoboxParser {
         return dataClone.text().trim();
     }
 
+    private static Double parseNumericValue(String text) {
+        if (text == null || text.isEmpty()) return null;
+        
+        // Remove everything except digits, dots, and common magnitude words
+        String cleaned = text.replaceAll("[^\\d.\\w\\s]", "").trim().toLowerCase();
+        double multiplier = 1.0;
+        
+        if (cleaned.contains("trillion")) {
+            multiplier = 1_000_000_000_000.0;
+            cleaned = cleaned.replace("trillion", "").trim();
+        } else if (cleaned.contains("billion")) {
+            multiplier = 1_000_000_000.0;
+            cleaned = cleaned.replace("billion", "").trim();
+        } else if (cleaned.contains("million")) {
+            multiplier = 1_000_000.0;
+            cleaned = cleaned.replace("million", "").trim();
+        }
+        
+        // Extract the first numeric-looking part
+        String[] parts = cleaned.split("\\s+");
+        for (String part : parts) {
+            try {
+                return Double.parseDouble(part) * multiplier;
+            } catch (NumberFormatException ignored) {}
+        }
+        
+        return null;
+    }
+
     private static void parseGDP(Element row, Country country) {
         Element curr = row.nextElementSibling();
         // Look ahead up to 3 rows to find the "Total" GDP value
@@ -284,7 +311,7 @@ public class InfoboxParser {
                 
                 // Fix typos like "$113,494 billion" -> "$113.494 billion"
                 gdpValue = gdpValue.replaceAll("(\\d+),(\\d{3})\\s*(million|billion|trillion)", "$1.$2 $3");
-                country.setGdp(gdpValue);
+                country.setGdp(parseNumericValue(gdpValue));
                 break;
             }
             curr = curr.nextElementSibling();
@@ -309,10 +336,12 @@ public class InfoboxParser {
         if (headerText.toLowerCase().contains("hdi")) {
             Element dataClone = data.clone();
             dataClone.select("sup, br, .nowrap, .reference").remove();
-            String hdi = dataClone.text().split(" ")[0].trim();
+            String hdiStr = dataClone.text().split(" ")[0].trim();
             // Validate HDI format (0.xxx)
-            if (hdi.matches("0\\.\\d{3}")) {
-                country.setHdi(hdi);
+            if (hdiStr.matches("0\\.\\d{3}")) {
+                try {
+                    country.setHdi(Double.valueOf(hdiStr));
+                } catch (NumberFormatException ignored) {}
             }
         }
         

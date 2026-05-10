@@ -53,12 +53,10 @@
         "minLength": 2
       },
       "gdp": {
-        "type": "string",
-        "minLength": 1
+        "type": ["number", "null"]
       },
       "hdi": {
-        "type": "string",
-        "pattern": "^(0\\.\\d{3}|N/A)$"
+        "type": ["number", "null"]
       },
       "currency": {
         "type": "string",

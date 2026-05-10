@@ -26,8 +26,8 @@ public class Country {
     @JsonProperty("official_language")
     private String officialLanguage;
     private String demonym;
-    private String gdp;
-    private String hdi;
+    private Double gdp;
+    private Double hdi;
     private String currency;
     @JsonProperty("time_zone")
     private String timeZone;
@@ -73,11 +73,11 @@ public class Country {
     public String getDemonym() { return demonym; }
     public void setDemonym(String demonym) { this.demonym = demonym; }
 
-    public String getGdp() { return gdp; }
-    public void setGdp(String gdp) { this.gdp = gdp; }
+    public Double getGdp() { return gdp; }
+    public void setGdp(Double gdp) { this.gdp = gdp; }
 
-    public String getHdi() { return hdi; }
-    public void setHdi(String hdi) { this.hdi = hdi; }
+    public Double getHdi() { return hdi; }
+    public void setHdi(Double hdi) { this.hdi = hdi; }
 
     public String getCurrency() { return currency; }
     public void setCurrency(String currency) { this.currency = currency; }

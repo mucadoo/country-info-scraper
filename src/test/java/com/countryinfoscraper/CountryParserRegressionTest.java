@@ -67,7 +67,8 @@ public class CountryParserRegressionTest {
                 () -> "Calling code contains raw footnote brackets! Extracted: '" + country.getCallingCode() + "' for " + countryName),
             () -> {
                 if (!countryName.equals("Vatican City")) {
-                    assertFalse(country.getGdp().isEmpty(), () -> "GDP is missing for " + countryName);
+                    assertNotNull(country.getGdp(), () -> "GDP is missing for " + countryName);
+                    assertTrue(country.getGdp() > 0, () -> "GDP should be > 0 for " + countryName + ". Extracted: " + country.getGdp());
                 }
             },
             () -> {

@@ -1,6 +1,6 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
-import { Country, CountrySchema } from './types/country.js';
+import { CountrySchema } from './types/country.js';
 import Database from 'better-sqlite3';
 import fs from 'fs';
 import path from 'path';
@@ -29,7 +29,6 @@ const crawler = new CheerioCrawler({
         const link = $(row).find('td').first().find('a').first();
         if (link.length > 0) {
           const href = link.attr('href');
-          const name = link.text();
           if (href) {
             links.push(`https://en.wikipedia.org${href}`);
           }

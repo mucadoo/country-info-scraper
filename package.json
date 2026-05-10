@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",
     "build": "tsc",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' 'tests/**/*.ts' --fix",
     "scrape": "node dist/main.js",
     "canary": "node --loader ts-node/esm src/canary.ts",
     "test": "vitest run",
@@ -31,9 +33,14 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
     "@vitest/ui": "^4.1.5",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"

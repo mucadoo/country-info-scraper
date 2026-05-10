@@ -13,17 +13,60 @@ describe('Regression Tests', () => {
   }
 
   const files = fs.readdirSync(snapshotsDir).filter(f => f.endsWith('.html'));
+  const grouped: Record<string, Record<string, string>> = {};
 
   files.forEach(file => {
-    it(`should correctly parse ${file}`, () => {
-      const html = fs.readFileSync(path.join(snapshotsDir, file), 'utf-8');
-      const $ = cheerio.load(html);
-      const country = CountryParser.parseCountry($ as any);
-      
-      expect(country.name).toBeDefined();
-      expect(country.capital).toBeDefined();
-      expect(country.population).toBeGreaterThan(0);
-      expect(country.area_km2).toBeGreaterThan(0);
+    const [country, lang] = file.replace('.html', '').split('_');
+    if (!grouped[country]) grouped[country] = {};
+    grouped[country][lang] = file;
+  });
+
+  Object.entries(grouped).forEach(([countryName, langs]) => {
+    describe(`Country: ${countryName}`, () => {
+      const countryData: any = { name: {}, description: {}, capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} };
+
+      Object.entries(langs).forEach(([lang, filename]) => {
+        it(`should parse ${lang} snapshot`, () => {
+          const html = fs.readFileSync(path.join(snapshotsDir, filename), 'utf-8');
+          const $ = cheerio.load(html);
+          
+          // Use our updated InfoboxParser logic
+          const partialCountry: any = {};
+          CountryParser.parseCountry($ as any, partialCountry, lang);
+          
+          // Map partial data to aggregate
+          Object.keys(countryData).forEach(key => {
+            if (partialCountry[key]?.[lang]) {
+              countryData[key][lang] = partialCountry[key][lang];
+            }
+          });
+
+          // Metrics checks (only for English)
+          if (lang === 'en') {
+            expect(partialCountry.population).toBeGreaterThan(0);
+            expect(partialCountry.area_km2).toBeGreaterThan(0);
+          }
+
+          // Localized fields checks
+          expect(partialCountry.name?.[lang]).toBeDefined();
+          expect(partialCountry.capital?.[lang]).toBeDefined();
+        });
+      });
+
+      it('should have all 5 languages populated', () => {
+        ['en', 'pt', 'fr', 'it', 'es'].forEach(lang => {
+          expect(countryData.name[lang]).toBeDefined();
+          expect(countryData.capital[lang]).toBeDefined();
+        });
+      });
+
+      // Hardcoded specific checks
+      if (countryName === 'france') {
+        it('should have France specific data', () => {
+          expect(countryData.capital.fr).toContain('Paris');
+          expect(countryData.name.es).toBe('Francia');
+        });
+      }
     });
   });
 });

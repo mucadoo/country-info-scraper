@@ -4,7 +4,8 @@ import { Country } from '../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 
 export class DescriptionParser {
-  static parse($: CheerioAPI, country: Partial<Country>): void {
+  static parse($: CheerioAPI, country: Partial<Country>, lang: string = 'en'): void {
+    // Find the first paragraph outside the infobox
     let infobox = $('table.infobox').first();
     let p: Cheerio<AnyNode> | null = null;
 
@@ -16,6 +17,7 @@ export class DescriptionParser {
       p = $('p').first();
     }
 
+    // Skip empty paragraphs
     while (p && p.length > 0 && p.text().trim() === '') {
       p = p.nextAll('p').first();
     }
@@ -28,7 +30,7 @@ export class DescriptionParser {
         .trim();
       desc = desc.replace(/\s+([,.])/g, '$1');
 
-      country.description = desc;
+      country.description = { [lang]: desc };
     }
   }
 }

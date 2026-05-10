@@ -32,7 +32,7 @@ const crawler = new CheerioCrawler({
       log.info(`Canary check for ${name}...`);
       
       const countryData = CountryParser.parseCountry($);
-      countryData.name = name;
+      countryData.name = { en: name };
 
       // Validate with Zod - if this fails, the process exits with 1, failing the CI
       CountrySchema.parse(countryData);

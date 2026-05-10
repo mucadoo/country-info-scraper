@@ -4,7 +4,7 @@ import { Country } from '../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 import { parseListOrLink } from './utils.js';
 
-export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, headerText: string): void {
+export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
   const dataClone = data.clone();
   dataClone.find('sup, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, .reference, .style, style').remove();
   let dataText = dataClone.html()?.replace(/\s*\([^)]*\)\s*/g, '') || '';
@@ -24,12 +24,14 @@ export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Par
   result = result.replace(/\s*[0-9]+°[NSEW].*/g, '').trim();
   result = result.replace(/\s*\d+\.\d+;\s*\d+\.\d+.*/g, '').trim();
 
-  country.capital = result;
-  if (headerText.toLowerCase().includes('largest city')) country.largest_city = result;
+  country.capital = { [lang]: result };
 }
 
-export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: any): void {
-  if (headerText.toLowerCase().includes('hdi')) {
+export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: any, lang: string = 'en'): void {
+  const lowerHeader = headerText.toLowerCase();
+
+  // Keep HDI parsing only for English (metrics)
+  if (lang === 'en' && lowerHeader.includes('hdi')) {
     const dataClone = data.clone();
     dataClone.find('sup, br, .nowrap, .reference').remove();
     const hdiStr = dataClone.text().split(' ')[0].trim();
@@ -39,35 +41,26 @@ export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, co
     }
   }
 
-  if (headerText.toLowerCase().includes('language') && !state.languageFound) {
-    const lowerHeader = headerText.toLowerCase().replace(/\(.*\)/g, '').trim();
-    if ((lowerHeader.includes('official') || lowerHeader.includes('national') || lowerHeader === 'languages' || lowerHeader.includes('recognized'))
-         && !lowerHeader.includes('name') && !lowerHeader.includes('native')) {
-      
+  // Language parsing
+  const languageKeywords = {
+    en: ['language'],
+    pt: ['língua'],
+    fr: ['langue'],
+    it: ['lingua'],
+    es: ['idioma'],
+  };
+
+  const isLanguageField = languageKeywords[lang as keyof typeof languageKeywords]?.some(k => lowerHeader.includes(k));
+
+  if (isLanguageField && !state.languageFound) {
       let langs = parseListOrLink(data, '.hlist ul li, .plainlist ul li');
       if (!langs || langs.toLowerCase() === 'none') {
         langs = ExtractionUtils.cleanText(data);
       }
-
-      if (langs.toLowerCase().includes('none') && langs.includes('(')) {
-        const start = langs.indexOf('(');
-        const end = langs.lastIndexOf(')');
-        if (end > start) {
-          langs = langs.substring(start + 1, end).replace(/\s*(?:are in use|are used).*/gi, '').trim();
-        }
-      }
       
-      langs = langs.replace(/^\d+\s+languages?\s*,?\s*/gi, '');
-      const lowerLangs = langs.toLowerCase();
-      const looksLikeCountryName = lowerLangs.includes('republic') || lowerLangs.includes('kingdom') || 
-                                  lowerLangs.includes('state') || lowerLangs.includes('demokrasih') ||
-                                  lowerLangs.includes('erresuma') || lowerLangs.includes('gonagasriika') ||
-                                  lowerLangs.includes('republiek');
-
-      if (langs && !looksLikeCountryName) {
-        country.official_language = langs;
+      if (langs) {
+        country.official_language = { [lang]: langs };
         state.languageFound = true;
       }
-    }
   }
 }

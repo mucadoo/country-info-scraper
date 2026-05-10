@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.math.BigDecimal;
+
 @JsonPropertyOrder({
     "name", "ISO_code", "flagUrl", "description", "capital", "largest_city",
     "population", "area_km2", "density_km2", "government", "official_language",
@@ -28,9 +30,9 @@ public class Country {
     private String officialLanguage;
     private String demonym;
     @JsonInclude(JsonInclude.Include.ALWAYS)
-    private Double gdp;
+    private BigDecimal gdp;
     @JsonInclude(JsonInclude.Include.ALWAYS)
-    private Double hdi;
+    private BigDecimal hdi;
     private String currency;
     @JsonProperty("time_zone")
     private String timeZone;
@@ -76,11 +78,11 @@ public class Country {
     public String getDemonym() { return demonym; }
     public void setDemonym(String demonym) { this.demonym = demonym; }
 
-    public Double getGdp() { return gdp; }
-    public void setGdp(Double gdp) { this.gdp = gdp; }
+    public BigDecimal getGdp() { return gdp; }
+    public void setGdp(BigDecimal gdp) { this.gdp = gdp; }
 
-    public Double getHdi() { return hdi; }
-    public void setHdi(Double hdi) { this.hdi = hdi; }
+    public BigDecimal getHdi() { return hdi; }
+    public void setHdi(BigDecimal hdi) { this.hdi = hdi; }
 
     public String getCurrency() { return currency; }
     public void setCurrency(String currency) { this.currency = currency; }

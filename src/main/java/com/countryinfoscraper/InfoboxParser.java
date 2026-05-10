@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -262,21 +263,21 @@ public class InfoboxParser {
         return dataClone.text().trim();
     }
 
-    private static Double parseNumericValue(String text) {
+    private static BigDecimal parseNumericValue(String text) {
         if (text == null || text.isEmpty()) return null;
         
         // Remove everything except digits, dots, and common magnitude words
         String cleaned = text.replaceAll("[^\\d.\\w\\s]", "").trim().toLowerCase();
-        double multiplier = 1.0;
+        BigDecimal multiplier = BigDecimal.ONE;
         
         if (cleaned.contains("trillion")) {
-            multiplier = 1_000_000_000_000.0;
+            multiplier = new BigDecimal("1000000000000");
             cleaned = cleaned.replace("trillion", "").trim();
         } else if (cleaned.contains("billion")) {
-            multiplier = 1_000_000_000.0;
+            multiplier = new BigDecimal("1000000000");
             cleaned = cleaned.replace("billion", "").trim();
         } else if (cleaned.contains("million")) {
-            multiplier = 1_000_000.0;
+            multiplier = new BigDecimal("1000000");
             cleaned = cleaned.replace("million", "").trim();
         }
         
@@ -284,7 +285,7 @@ public class InfoboxParser {
         String[] parts = cleaned.split("\\s+");
         for (String part : parts) {
             try {
-                return Double.parseDouble(part) * multiplier;
+                return new BigDecimal(part).multiply(multiplier);
             } catch (NumberFormatException ignored) {}
         }
         
@@ -293,8 +294,8 @@ public class InfoboxParser {
 
     private static void parseGDP(Element row, Country country) {
         Element curr = row.nextElementSibling();
-        // Look ahead up to 3 rows to find the "Total" GDP value
-        for (int i = 0; i < 3 && curr != null; i++) {
+        // Look ahead up to 5 rows to find a numeric GDP value
+        for (int i = 0; i < 5 && curr != null; i++) {
             String rowText = curr.text().toLowerCase();
             
             // Break if we hit the next major section
@@ -303,16 +304,22 @@ public class InfoboxParser {
             Element labelCell = curr.select("th, td").first();
             Element valueCell = curr.select("td").last();
 
-            if (labelCell != null && labelCell.text().toLowerCase().contains("total") && valueCell != null) {
-                Element dClone = valueCell.clone();
-                // FIX: Only remove citations and footnotes, NOT spans
-                dClone.select("sup, .reference").remove();
-                String gdpValue = dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
-                
-                // Fix typos like "$113,494 billion" -> "$113.494 billion"
-                gdpValue = gdpValue.replaceAll("(\\d+),(\\d{3})\\s*(million|billion|trillion)", "$1.$2 $3");
-                country.setGdp(parseNumericValue(gdpValue));
-                break;
+            if (labelCell != null && valueCell != null) {
+                String labelText = labelCell.text().toLowerCase();
+                // Match "Total" or rows that look like a year estimate (e.g. "2025 estimate")
+                if (labelText.contains("total") || labelText.matches(".*\\d{4}.*")) {
+                    Element dClone = valueCell.clone();
+                    dClone.select("sup, .reference").remove();
+                    String gdpValue = dClone.text().replaceAll("\\s*\\([^)]*\\)\\s*", "").trim();
+                    
+                    // Fix typos like "$113,494 billion" -> "$113.494 billion"
+                    gdpValue = gdpValue.replaceAll("(\\d+),(\\d{3})\\s*(million|billion|trillion)", "$1.$2 $3");
+                    BigDecimal parsed = parseNumericValue(gdpValue);
+                    if (parsed != null) {
+                        country.setGdp(parsed);
+                        break;
+                    }
+                }
             }
             curr = curr.nextElementSibling();
         }
@@ -340,7 +347,7 @@ public class InfoboxParser {
             // Validate HDI format (0.xxx)
             if (hdiStr.matches("0\\.\\d{3}")) {
                 try {
-                    country.setHdi(Double.valueOf(hdiStr));
+                    country.setHdi(new BigDecimal(hdiStr));
                 } catch (NumberFormatException ignored) {}
             }
         }

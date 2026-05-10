@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Stream;
@@ -68,7 +69,7 @@ public class CountryParserRegressionTest {
             () -> {
                 if (!countryName.equals("Vatican City")) {
                     assertNotNull(country.getGdp(), () -> "GDP is missing for " + countryName);
-                    assertTrue(country.getGdp() > 0, () -> "GDP should be > 0 for " + countryName + ". Extracted: " + country.getGdp());
+                    assertTrue(country.getGdp().compareTo(BigDecimal.ZERO) > 0, () -> "GDP should be > 0 for " + countryName + ". Extracted: " + country.getGdp());
                 }
             },
             () -> {

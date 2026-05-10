@@ -10,9 +10,9 @@ on:
     - cron: '0 0 * * *'   # daily at midnight UTC
 
 permissions:
-  contents: write      # Required to create releases + tags
-  pages: write         # Already needed for GitHub Pages deployment
-  id-token: write      # Already needed for Pages
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   scrape-and-deploy:
@@ -38,22 +38,35 @@ jobs:
       - name: Build project
         run: npm run build
 
+      # NEW: Run the multilingual snapshot tests!
+      - name: Run Tests
+        run: npm test
+
+      # NEW: Ensure a completely fresh database
+      - name: Clean old database
+        run: rm -f scraper.db
+
       - name: Run Scraper
         run: npm run scrape
+
+      # NEW: Upload the SQLite DB as an artifact if the scraper fails so you can debug it locally
+      - name: Upload Database on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-db-failure
+          path: scraper.db
 
       - name: Check for data changes
         id: check_changes
         run: |
-          # Fetch the data branch to compare against
           git fetch origin data:data || echo "Data branch not found."
           
-          # Try to get the old data and normalize it
           if git show data:countries.json > countries_old_raw.json 2>/dev/null; then
             echo "Found previous data."
             jq -S . countries_old_raw.json > countries_old.json
           fi
 
-          # Normalize the newly scraped data
           jq -S . data/countries.json > data/countries_normalized.json
 
           if [ -f countries_old.json ]; then
@@ -142,7 +155,7 @@ jobs:
             data/countries.json
             data/countries.min.json
           body: |
-            Automated data snapshot generated from Wikipedia.
+            Automated multilingual data snapshot generated from Wikipedia.
 
             **Changes:**
             ${{ steps.check_changes.outputs.last_tag != '' && format('- [View JSON Diff](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- _First data release_' }}

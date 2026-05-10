@@ -8,24 +8,35 @@ import path from 'path';
 const db = new Database('scraper.db');
 
 // Initialize database
-db.exec(`
-  CREATE TABLE IF NOT EXISTS countries (
-    name TEXT PRIMARY KEY,
-    data TEXT
-  )
-`);
-
+try {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS countries (
+      name TEXT PRIMARY KEY,
+      data TEXT
+    )
+  `);
+  log.info('Database initialized successfully.');
+} catch (e) {
+  log.error('Database initialization failed: ' + e);
+}
 const insertCountry = db.prepare('INSERT OR REPLACE INTO countries (name, data) VALUES (?, ?)');
 const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
+const writeLocks: Record<string, Promise<void>> = {};
+
 const mergeCountryData = (existingJson: string | null, newData: Partial<Country>, lang: string): Country => {
-  let country: Country = existingJson ? JSON.parse(existingJson) : { name: { en: newData.name?.en } };
+// ...
+
+  let country: Country = existingJson ? JSON.parse(existingJson) : {
+    name: {}, description: {}, capital: {}, largest_city: {},
+    government: {}, official_language: {}, demonym: {}, currency: {}
+  };
   
   // Merge localized fields
   const localizedFields = ['name', 'description', 'capital', 'largest_city', 'government', 'official_language', 'demonym', 'currency'] as const;
   
   localizedFields.forEach(field => {
-    if (newData[field]) {
+    if (newData[field] && (newData[field] as any)[lang]) {
       country[field] = { ...country[field], [lang]: (newData[field] as any)[lang] };
     }
   });
@@ -74,14 +85,7 @@ const crawler = new CheerioCrawler({
       // Map to localized fields
       const localizedData: Partial<Country> = {
         name: { [lang]: name },
-        description: { [lang]: countryData.description as any },
-        capital: { [lang]: countryData.capital as any },
-        largest_city: { [lang]: countryData.largest_city as any },
-        government: { [lang]: countryData.government as any },
-        official_language: { [lang]: countryData.official_language as any },
-        demonym: { [lang]: countryData.demonym as any },
-        currency: { [lang]: countryData.currency as any },
-        // ... copy root fields
+        ...countryData,
       };
       
       // Enqueue interlanguage links if base language
@@ -108,15 +112,25 @@ const crawler = new CheerioCrawler({
       }
 
       // Update DB
-      const existing = getCountry.get(request.userData.baseName || name) as { data: string } | undefined;
-      const merged = mergeCountryData(existing?.data || null, localizedData, lang);
+      const countryId = request.userData.baseName || name;
       
-      try {
-        const validated = CountrySchema.parse(merged);
-        insertCountry.run(request.userData.baseName || name, JSON.stringify(validated));
-      } catch (e) {
-        log.error(`Validation failed for ${name}: ${e}`);
+      if (!writeLocks[countryId]) {
+        writeLocks[countryId] = Promise.resolve();
       }
+
+      writeLocks[countryId] = writeLocks[countryId].then(async () => {
+        const existing = getCountry.get(countryId) as { data: string } | undefined;
+        const merged = mergeCountryData(existing?.data || null, localizedData, lang);
+        
+        try {
+          const validated = CountrySchema.parse(merged);
+          insertCountry.run(countryId, JSON.stringify(validated));
+        } catch (e) {
+          log.error('Validation failed for ' + name + ': ' + e);
+        }
+      });
+
+      await writeLocks[countryId];
     }
   },
 });

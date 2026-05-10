@@ -92,23 +92,21 @@ const crawler = new CheerioCrawler({
       if (lang === 'en') {
         const interLinks = $('.interlanguage-link-target');
         const languages = ['pt', 'fr', 'it', 'es'];
-        const linksToEnqueue: { url: string, userData: any }[] = [];
         
-        interLinks.each((_, el) => {
-          const langCode = $(el).attr('lang');
-          if (langCode && languages.includes(langCode)) {
-            linksToEnqueue.push({ 
-              url: $(el).attr('href')!, 
-              userData: { baseName: request.userData.baseName || name, lang: langCode } 
+        for (const el of interLinks.toArray()) {
+          const $el = $(el);
+          const langCode = $el.attr('lang');
+          const href = $el.attr('href');
+          
+          if (langCode && languages.includes(langCode) && href) {
+            await enqueueLinks({
+              urls: [href],
+              label: 'country',
+              userData: { baseName: request.userData.baseName || name, lang: langCode },
+              strategy: 'all',
             });
           }
-        });
-        
-        await enqueueLinks({
-          urls: linksToEnqueue.map(l => l.url),
-          label: 'country',
-          userData: linksToEnqueue.map(l => l.userData)
-        });
+        }
       }
 
       // Update DB

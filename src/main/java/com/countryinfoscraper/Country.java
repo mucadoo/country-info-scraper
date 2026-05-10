@@ -1,5 +1,6 @@
 package com.countryinfoscraper;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -26,7 +27,9 @@ public class Country {
     @JsonProperty("official_language")
     private String officialLanguage;
     private String demonym;
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     private Double gdp;
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     private Double hdi;
     private String currency;
     @JsonProperty("time_zone")

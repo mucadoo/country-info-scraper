@@ -1,13 +1,14 @@
-import { Cheerio, AnyNode } from 'crawlee';
+import { Cheerio } from 'crawlee';
+import { AnyNode } from 'domhandler';
 import { Country } from '../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 
 export function processImages($: any, row: Cheerio<AnyNode>, country: Partial<Country>, state: any): void {
   if (state.flagFound) return;
   const imageCells = row.find('td.infobox-image, td.maptable');
-  imageCells.each((_, cell) => {
+  imageCells.each((_: number, cell: AnyNode) => {
     const $cell = $(cell);
-    $cell.find('img').each((_, img) => {
+    $cell.find('img').each((__: number, img: AnyNode) => {
       const $img = $(img);
       const url = 'https:' + ($img.attr('src') || '');
       const alt = ($img.attr('alt') || '').toLowerCase();
@@ -20,7 +21,9 @@ export function processImages($: any, row: Cheerio<AnyNode>, country: Partial<Co
           return false; // break
         }
       }
+      return true;
     });
     if (state.flagFound) return false;
+    return true;
   });
 }

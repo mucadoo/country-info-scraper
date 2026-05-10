@@ -1,5 +1,5 @@
-import { Cheerio, AnyNode } from 'crawlee';
-import { Country } from '../../types/country.js';
+import { Cheerio } from 'crawlee';
+import { AnyNode } from 'domhandler';
 
 export function parseCurrency(data: Cheerio<AnyNode>): string {
   const dataClone = data.clone();

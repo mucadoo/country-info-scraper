@@ -1,5 +1,5 @@
-import { Cheerio, AnyNode } from 'crawlee';
-import { ExtractionUtils } from '../../utils/extraction.js';
+import { Cheerio } from 'crawlee';
+import { AnyNode } from 'domhandler';
 
 export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): string {
   const dataClone = data.clone();

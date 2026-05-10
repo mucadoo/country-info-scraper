@@ -1,4 +1,5 @@
-import { Cheerio, AnyNode } from 'crawlee';
+import { Cheerio } from 'crawlee';
+import { AnyNode } from 'domhandler';
 import { Country } from '../../types/country.js';
 
 function parseNumericValue(text: string): number | null {

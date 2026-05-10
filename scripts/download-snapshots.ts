@@ -9,18 +9,31 @@ const axiosInstance = axios.create({
   headers: { 'User-Agent': 'Mozilla/5.0 (compatible; WikiGeoScraper/1.0; +https://github.com/mucadoo/wikigeo-data-scraper)' }
 });
 
-async function downloadSnapshot(url: string, filename: string) {
+async function downloadMinimalSnapshot(url: string, filename: string) {
   try {
     const { data } = await axiosInstance.get(url);
     const $ = cheerio.load(data);
     
-    // Remove heavy/unnecessary elements
-    $('script, style, link[rel="stylesheet"], noscript, svg, .mw-editsection').remove();
+    // Extract required elements
+    const h1 = $('h1#firstHeading');
+    const infobox = $('table.infobox');
+    const paragraphs = $('#mw-content-text .mw-parser-output > p').slice(0, 5);
     
-    fs.writeFileSync(path.join(OUTPUT_DIR, filename), $.html());
-    console.log(`Saved ${filename}`);
+    // Construct minimal HTML
+    const minimalHtml = `
+      <html>
+        <body>
+          ${h1.toString()}
+          ${infobox.toString()}
+          ${paragraphs.toString()}
+        </body>
+      </html>
+    `;
+    
+    fs.writeFileSync(path.join(OUTPUT_DIR, filename), minimalHtml);
+    console.log(`Saved minimal snapshot: ${filename}`);
   } catch (err) {
-    console.error(`Failed to download ${url}: ${err instanceof Error ? err.message : err}`);
+    console.error(`Failed to download/process ${url}: ${err instanceof Error ? err.message : err}`);
   }
 }
 
@@ -36,13 +49,13 @@ async function run() {
       const $ = cheerio.load(data);
       
       // Save English snapshot
-      await downloadSnapshot(enUrl, `${country.toLowerCase()}_en.html`);
+      await downloadMinimalSnapshot(enUrl, `${country.toLowerCase()}_en.html`);
       
       // Find interlanguage links
       for (const lang of ['pt', 'fr', 'it', 'es']) {
         const link = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
         if (link) {
-          await downloadSnapshot(link, `${country.toLowerCase()}_${lang}.html`);
+          await downloadMinimalSnapshot(link, `${country.toLowerCase()}_${lang}.html`);
         } else {
           console.log(`Link for ${lang} not found for ${country}`);
         }

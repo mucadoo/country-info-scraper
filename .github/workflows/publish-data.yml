@@ -56,6 +56,7 @@ jobs:
         with:
           name: scraper-db-failure
           path: scraper.db
+          if-no-files-found: ignore
 
       - name: Check for data changes
         id: check_changes

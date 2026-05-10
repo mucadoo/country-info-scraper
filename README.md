@@ -1,22 +1,23 @@
 # Country Info Scraper
 
-A modern, high-performance Java-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.
+A modern, high-performance TypeScript-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.
 
 ## Overview
 
-This project scrapes the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states) and traverses each country's individual page to collect detailed metadata. The system is designed for **high reliability**, **performance**, and **automated delivery**.
+This project scrapes the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states) and traverses each country's individual page to collect detailed metadata. The system is designed for **high reliability**, **performance**, and **automated delivery** using the 2026 recommended stack: TypeScript, Node.js, Crawlee, and Zod.
 
 ## Project Status & Roadmap
 
 This is an **ongoing project**. We are actively working on:
 - **Multilanguage Support**: Expanding the scraper to extract data from various language versions of Wikipedia.
 - **Data Consistency**: Improving extraction algorithms to handle the diversity of Wikipedia page structures more reliably and consistently.
+- **Data Crossing**: Extending the architecture to join country data with other Wikipedia resources (Cities, Leaders, etc.) using an intermediate SQLite layer.
 
 ## Features
 
-- **High Performance**: Uses Java 21 parallel streams and custom thread pools for rapid scraping.
-- **Resilient**: Implements automatic retries with exponential backoff and connection timeouts.
-- **Data Integrity**: Every scrape is validated against a **JSON Schema** before publication.
+- **High Performance**: Uses **Crawlee** with **CheerioCrawler** for rapid, lightweight HTML parsing without the overhead of a full browser.
+- **Resilient**: Implements automatic retries, request queuing, and state persistence.
+- **Data Integrity**: Every scrape is validated against a strict **Zod Schema** before being stored or published.
 - **Automated Delivery**:
     - **Live API**: Latest data is automatically published to a dedicated `data` branch.
     - **Historical Archive**: Daily snapshots are archived as GitHub Releases.
@@ -51,8 +52,8 @@ For researchers or projects requiring stable, versioned data, download a specifi
     "government": "Unitary semi-presidential republic",
     "official_language": "French",
     "demonym": "French",
-    "gdp": "$3.130 trillion",
-    "hdi": "0.910",
+    "gdp": 3130000000000,
+    "hdi": 0.910,
     "currency": "Euro, CFP franc",
     "time_zone": "UTC+01:00 (CET)",
     "calling_code": "+33",
@@ -64,33 +65,36 @@ For researchers or projects requiring stable, versioned data, download a specifi
 ## Development
 
 ### Prerequisites
-- **Java 21** or higher.
-- **Maven 3.8+**.
+- **Node.js 20+**
+- **npm**
 
 ### Build & Test
 ```bash
-mvn clean install
+npm install
+npm run build
 ```
 
 ### Running the Scraper Locally
 ```bash
-mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
+# Development mode (ts-node)
+npm run start
+
+# Production mode (after build)
+npm run scrape
 ```
 
 ### Testing Strategy
-- **Unit Tests**: Verify extraction logic in `ExtractionUtils`.
-- **Regression Tests**: Run against local HTML snapshots in `src/test/resources/snapshots`.
-- **Wikipedia Watcher**: A dynamic test factory that checks all 200+ countries live to spot Wikipedia HTML changes.
+- **Validation**: Every scrape is validated against a strict **Zod schema** in `src/types/country.ts`.
+- **Wikipedia Watcher**: A scheduled GitHub Action job checks for Wikipedia HTML structure changes by running a limited scrape.
 
 ## CI/CD Strategy: Validation-Gated Deployment
 
 This project implements an industry-standard **Validation-Gated Deployment** pipeline. To ensure data reliability, the publishing process is strictly controlled by multiple quality gates.
 
 ### 1. Quality Gates
-- **Code Verification**: Runs `mvn verify` to ensure all unit and regression tests pass before any scraping begins.
-- **Schema Enforcement**: Every scraped dataset is validated against a strict [JSON Schema](src/main/resources/country-schema.json) using `ajv-cli`.
+- **Code Verification**: Runs `npm run build` and schema validation before any scraping begins.
+- **Schema Enforcement**: Every scraped dataset is validated against a strict [JSON Schema](src/main/resources/country-schema.json) using `ajv-cli` and internally via **Zod**.
     - **Integrity Check**: Rejects updates if the number of countries drops suspiciously (min. 150 countries).
-    - **Type Safety**: Enforces strict regex patterns for URLs and numeric constraints for population/area.
 - **Change Detection**: The pipeline uses a `git diff` mechanism to compare new results with the current live data. If no meaningful changes are detected, it skips redundant releases.
 
 ### 2. The "Data Branch" Pattern
@@ -106,10 +110,11 @@ The [Publish Workflow](.github/workflows/publish-data.yml) runs daily and handle
 - **Deployment**: Synchronizes the `data` branch and updates the live API endpoints.
 
 ## Project Structure
-- `WebScraper`: Orchestrates the scraping and publication flow.
-- `CountryParser`: Delegates parsing to `InfoboxParser` and `DescriptionParser`.
-- `ExtractionUtils`: Clean, reusable regex-based extraction logic.
-- `src/main/resources/country-schema.json`: The source of truth for data validation.
+- `src/main.ts`: Orchestrates the scraping and publication flow using Crawlee.
+- `src/parsers/country-parser.ts`: Delegates parsing to `InfoboxParser` and `DescriptionParser`.
+- `src/utils/extraction.ts`: Clean, reusable regex-based extraction logic.
+- `src/types/country.ts`: Zod schema definitions.
+- `scraper.db`: Intermediate SQLite storage for crossing data.
 
 ## License
 

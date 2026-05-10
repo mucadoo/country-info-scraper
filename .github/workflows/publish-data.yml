@@ -23,68 +23,45 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: maven
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Build and Verify
-        run: mvn clean verify
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
 
       - name: Run Scraper
-        run: mvn exec:java -Dexec.mainClass="com.countryinfoscraper.WebScraper"
-
-      - name: Install JSON Schema Validator
-        run: npm install -g ajv-cli
-
-      - name: Validate Data Quality
-        run: |
-          # This ensures the scraped data matches your strict schema requirements
-          ajv validate -s src/main/resources/country-schema.json -d src/main/resources/countries.json --strict=false
-          echo "Data validation passed. Proceeding to deployment."
+        run: npm run scrape
 
       - name: Check for data changes
         id: check_changes
         run: |
           # Fetch the data branch to compare against
-          # This is the industry standard 'Data Branch' pattern for scrapers
-          git fetch origin data:data || echo "Data branch not found. This might be the first run."
+          git fetch origin data:data || echo "Data branch not found."
           
-          # Fetch tags to identify the last data release for comparison
-          git fetch --tags origin || true
-
           if git show data:countries.json > countries_old.json 2>/dev/null; then
-            echo "Found previous data on 'data' branch."
-          else
-            echo "No previous data found on 'data' branch."
+            echo "Found previous data."
           fi
 
           if [ -f countries_old.json ]; then
-            if git diff --no-index --exit-code countries_old.json src/main/resources/countries.json > /dev/null; then
+            if git diff --no-index --exit-code countries_old.json data/countries.json > /dev/null; then
               echo "data_changed=false" >> $GITHUB_OUTPUT
-              echo "No data changes detected compared to 'data' branch."
             else
               echo "data_changed=true" >> $GITHUB_OUTPUT
-              echo "Data changes detected!"
-              echo "Summary of changes:"
-              git diff --no-index --stat countries_old.json src/main/resources/countries.json || true
+              git diff --no-index --stat countries_old.json data/countries.json || true
             fi
           else
             echo "data_changed=true" >> $GITHUB_OUTPUT
-            echo "No previous data found. Assuming data changed."
           fi
 
-          # Find the last tag starting with 'data-' for comparison links
-          LAST_TAG=$(git tag -l "data-*" --sort=-v:refname | head -n 1)
-          echo "last_tag=$LAST_TAG" >> $GITHUB_OUTPUT
-          echo "Previous data tag found: $LAST_TAG"
-
-      # Optional: Add .nojekyll so GitHub Pages doesn't ignore underscore-prefixed files
       - name: Ensure .nojekyll
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
-        run: touch src/main/resources/.nojekyll
+        run: touch data/.nojekyll
 
       - name: Setup GitHub Pages
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
@@ -94,7 +71,7 @@ jobs:
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'src/main/resources'   # contains countries.json, countries.min.json, .nojekyll
+          path: 'data'
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
@@ -124,15 +101,11 @@ jobs:
         id: update_data
         if: github.event_name != 'pull_request' && steps.check_changes.outputs.data_changed == 'true'
         run: |
-          # Persist the data to the 'data' branch for future diffs
-          # Use a separate folder to avoid workspace side-effects
           mkdir data-update
           cd data-update
           git init
-          
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
-
           git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
           if git fetch origin data --depth=1; then
@@ -142,9 +115,8 @@ jobs:
             git rm -rf . || true
           fi
 
-          # Copy files from parent workspace
-          cp ../src/main/resources/countries.json .
-          cp ../src/main/resources/countries.min.json .
+          cp ../data/countries.json .
+          cp ../data/countries.min.json .
 
           git add countries.json countries.min.json
           git commit -m "Data update: $(date -u)" || exit 0
@@ -159,8 +131,8 @@ jobs:
           target_commitish: ${{ steps.update_data.outputs.new_sha }}
           name: ${{ steps.release_name.outputs.name }}
           files: |
-            src/main/resources/countries.json
-            src/main/resources/countries.min.json
+            data/countries.json
+            data/countries.min.json
           body: |
             Automated data snapshot generated from Wikipedia.
 

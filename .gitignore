@@ -30,5 +30,5 @@ Thumbs.db
 .junie/
 .gemini/
 
-# Generated Data (optional: remove if you want to track changes in main)
-# data/
+# Generated Data
+data/

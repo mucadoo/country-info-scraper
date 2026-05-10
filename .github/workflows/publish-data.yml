@@ -47,16 +47,21 @@ jobs:
           # Fetch the data branch to compare against
           git fetch origin data:data || echo "Data branch not found."
           
-          if git show data:countries.json > countries_old.json 2>/dev/null; then
+          # Try to get the old data and normalize it
+          if git show data:countries.json > countries_old_raw.json 2>/dev/null; then
             echo "Found previous data."
+            jq -S . countries_old_raw.json > countries_old.json
           fi
 
+          # Normalize the newly scraped data
+          jq -S . data/countries.json > data/countries_normalized.json
+
           if [ -f countries_old.json ]; then
-            if git diff --no-index --exit-code countries_old.json data/countries.json > /dev/null; then
+            if git diff --no-index --exit-code countries_old.json data/countries_normalized.json > /dev/null; then
               echo "data_changed=false" >> $GITHUB_OUTPUT
             else
               echo "data_changed=true" >> $GITHUB_OUTPUT
-              git diff --no-index --stat countries_old.json data/countries.json || true
+              git diff --no-index --stat countries_old.json data/countries_normalized.json || true
             fi
           else
             echo "data_changed=true" >> $GITHUB_OUTPUT

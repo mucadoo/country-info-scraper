@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' 'tests/**/*.ts' --fix",
-    "scrape": "node dist/main.js",
+    "scrape": "node dist/src/main.js",
     "canary": "node --loader ts-node/esm src/canary.ts",
     "test": "vitest run",
     "test:watch": "vitest"

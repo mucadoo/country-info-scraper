@@ -11,7 +11,7 @@ This project scrapes the [Wikipedia List of sovereign states](https://en.wikiped
 This is an **ongoing project**. We are actively working on:
 - **Multilanguage Support**: Expanding the scraper to extract data from various language versions of Wikipedia.
 - **Data Consistency**: Improving extraction algorithms to handle the diversity of Wikipedia page structures more reliably and consistently.
-- **Data Crossing**: Extending the architecture to join country data with other Wikipedia resources (Cities, Leaders, etc.) using an intermediate SQLite layer.
+- **Data Crossing**: Extending the architecture to join country data with other Wikipedia resources (Cities, Leaders, etc.) using an intermediate SQLite layer (`scraper.db`).
 
 ## Features
 
@@ -93,7 +93,7 @@ This project implements an industry-standard **Validation-Gated Deployment** pip
 
 ### 1. Quality Gates
 - **Code Verification**: Runs `npm run build` and schema validation before any scraping begins.
-- **Schema Enforcement**: Every scraped dataset is validated against a strict [JSON Schema](src/main/resources/country-schema.json) using `ajv-cli` and internally via **Zod**.
+- **Schema Enforcement**: Every scraped dataset is validated against a strict **Zod Schema** (defined in `src/types/country.ts`).
     - **Integrity Check**: Rejects updates if the number of countries drops suspiciously (min. 150 countries).
 - **Change Detection**: The pipeline uses a `git diff` mechanism to compare new results with the current live data. If no meaningful changes are detected, it skips redundant releases.
 

@@ -1,7 +1,7 @@
 {
   "name": "country-info-scraper",
   "version": "1.0.0",
-  "description": "A modern, high-performance Java-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.",
+  "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive information about sovereign states from Wikipedia and publishes it as a live JSON API.",
   "type": "module",
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",

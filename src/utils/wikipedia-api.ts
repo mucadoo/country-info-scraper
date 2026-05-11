@@ -15,33 +15,35 @@ export class WikipediaAPI {
     
     for (let i = 0; i < articles.length; i += chunkSize) {
       const chunk = articles.slice(i, i + chunkSize);
-      const url = `https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&lllimit=max&redirects=1&format=json&titles=${chunk.map(encodeURIComponent).join('|')}`;
       
-      try {
-        const response = await axios.get(url, {
-          headers: { 'User-Agent': 'WikiGeoDataScraper/1.0 (mucadoo@personal.dev)' }
-        });
-        const query = response.data.query;
-        const pages = query.pages;
+      for (const targetLang of targetLangs) {
+        const url = `https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&lllang=${targetLang}&lllimit=max&redirects=1&format=json&titles=${chunk.map(encodeURIComponent).join('|')}`;
         
-        // Map redirects back to original requested title
-        const redirectMap: Record<string, string> = {};
-        query.redirects?.forEach((r: any) => { redirectMap[r.to] = r.from; });
-
-        Object.values(pages).forEach((page: any) => {
-          const originalTitle = redirectMap[page.title] || page.title;
-          if (!mapping[originalTitle]) mapping[originalTitle] = {};
+        try {
+          const response = await axios.get(url, {
+            headers: { 'User-Agent': 'WikiGeoDataScraper/1.0 (mucadoo@personal.dev)' }
+          });
+          const query = response.data.query;
+          if (!query || !query.pages) continue;
+          const pages = query.pages;
           
-          if (page.langlinks) {
-            page.langlinks.forEach((link: any) => {
-              if (targetLangs.includes(link.lang)) {
+          // Map redirects back to original requested title
+          const redirectMap: Record<string, string> = {};
+          query.redirects?.forEach((r: any) => { redirectMap[r.to] = r.from; });
+
+          Object.values(pages).forEach((page: any) => {
+            const originalTitle = redirectMap[page.title] || page.title;
+            if (!mapping[originalTitle]) mapping[originalTitle] = {};
+            
+            if (page.langlinks) {
+              page.langlinks.forEach((link: any) => {
                 mapping[originalTitle][link.lang] = link['*'];
-              }
-            });
-          }
-        });
-      } catch (error) {
-        console.error(`Failed to fetch translations for chunk: ${error}`);
+              });
+            }
+          });
+        } catch (error) {
+          console.error(`Failed to fetch translations for chunk: ${error}`);
+        }
       }
     }
 

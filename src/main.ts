@@ -29,7 +29,7 @@ const writeLocks: Record<string, Promise<void>> = {};
 type LocalizedFieldKey = 'name' | 'description' | 'government';
 type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency';
 
-const mergeCountryData = (existingJson: string | null, newData: Partial<Country>, lang: string): Country => {
+const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
   const existing: Country = existingJson ? JSON.parse(existingJson) : {
     name: {}, description: {}, capital: {}, largest_city: {},
     government: {}, official_language: {}, demonym: {}, currency: {}
@@ -43,29 +43,24 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
   
   localizedStringFields.forEach(field => {
     const newVal = newData[field] as Record<string, string> | undefined;
-    if (newVal && newVal[lang]) {
-      const currentVal = (country[field] || {}) as Record<string, string>;
-      const merged = { ...currentVal, [lang]: newVal[lang] };
-      if (field === 'name') country.name = merged;
-      else if (field === 'description') country.description = merged;
-      else if (field === 'government') country.government = merged;
+    if (newVal) {
+      (country as any)[field] = { ...(country[field] || {}), ...newVal };
     }
   });
 
   localizedArrayFields.forEach(field => {
     const newVal = newData[field] as Record<string, {text: string, articleId?: string}[]> | undefined;
-    if (newVal && newVal[lang]) {
-      const currentVal = (country[field] || {}) as Record<string, {text: string, articleId?: string}[]>;
-      const oldArr = currentVal[lang] || [];
-      const newArr = newVal[lang];
-      // Dedup by text
-      const mergedArr = Array.from(new Map([...oldArr, ...newArr].map(i => [i.text, i])).values());
-      const merged = { ...currentVal, [lang]: mergedArr };
-      if (field === 'capital') country.capital = merged;
-      else if (field === 'largest_city') country.largest_city = merged;
-      else if (field === 'official_language') country.official_language = merged;
-      else if (field === 'demonym') country.demonym = merged;
-      else if (field === 'currency') country.currency = merged;
+    if (newVal) {
+      if (!country[field]) (country as any)[field] = {};
+      const currentVal = country[field] as Record<string, {text: string, articleId?: string}[]>;
+      
+      Object.keys(newVal).forEach(lang => {
+        const oldArr = currentVal[lang] || [];
+        const newArr = newVal[lang];
+        // Dedup by text
+        const mergedArr = Array.from(new Map([...oldArr, ...newArr].map(i => [i.text, i])).values());
+        currentVal[lang] = mergedArr;
+      });
     }
   });
 
@@ -103,15 +98,21 @@ const crawler = new CheerioCrawler({
       }).filter(l => l.title && l.href && !l.href.includes('redlink=1'));
 
       const titles = countryLinks.map(l => l.title!) as string[];
+      log.info(`Found ${titles.length} countries. Fetching translations...`);
       const languages = ['pt', 'fr', 'it', 'es'];
       const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
+      log.info(`Fetched translations for ${Object.keys(allLangLinks).length} countries.`);
+      log.info(`Sample titles from links: ${titles.slice(0, 5).join(', ')}`);
+      log.info(`Sample keys from translations: ${Object.keys(allLangLinks).slice(0, 5).join(', ')}`);
 
+      let enqueuedLocalized = 0;
       for (const link of countryLinks) {
         const baseName = link.title!;
         const enUrl = `https://en.wikipedia.org${link.href}`;
         
+        const requests = [];
         // Enqueue English
-        await enqueueLinks({ urls: [enUrl], label: 'country', userData: { baseName, lang: 'en' } });
+        requests.push({ url: enUrl, label: 'country', userData: { baseName, lang: 'en' } });
         
         // Enqueue Localized
         const langLinks = allLangLinks[baseName];
@@ -119,11 +120,16 @@ const crawler = new CheerioCrawler({
           for (const lang of languages) {
             if (langLinks[lang]) {
               const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
-              await enqueueLinks({ urls: [locUrl], label: 'country', userData: { baseName, lang } });
+              requests.push({ url: locUrl, label: 'country', userData: { baseName, lang } });
+              enqueuedLocalized++;
             }
           }
+        } else {
+          log.warning(`No translations found for country: ${baseName}`);
         }
+        await crawler.addRequests(requests);
       }
+      log.info(`Enqueued ${countryLinks.length} English and ${enqueuedLocalized} localized pages.`);
       return;
     }
 
@@ -131,48 +137,62 @@ const crawler = new CheerioCrawler({
     const name = $('h1#firstHeading').text();
     const countryId = request.userData.baseName || name;
 
-    if (lang === 'en') {
-      const countryData = CountryParser.parseCountry($, {}, lang);
-      const articleIds = new Set([
-          ...(countryData.capital?.en?.map(i => i.articleId) || []),
-          ...(countryData.largest_city?.en?.map(i => i.articleId) || []),
-          ...(countryData.official_language?.en?.map(i => i.articleId) || []),
-          ...(countryData.currency?.en?.map(i => i.articleId) || [])
-      ].filter(Boolean) as string[]);
-      
-      const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
-      
-      const localizedData: Partial<Country> = {
-        name: { en: name },
-        ...countryData,
-      };
+    // Use a simple lock to prevent race conditions during database updates
+    if (!writeLocks[countryId]) {
+      writeLocks[countryId] = Promise.resolve();
+    }
 
-      // Fill translations
-      ['capital', 'largest_city', 'official_language', 'currency'].forEach(field => {
-        const key = field as LocalizedArrayFieldKey;
-        const data = (localizedData[key] as any)?.en || [];
-        ['pt', 'fr', 'it', 'es'].forEach(l => {
-            const translated = data.map((item: any) => {
-                const articleId = item.articleId?.replace(/_/g, ' ');
-                const translation = articleId ? translations[articleId]?.[l] : null;
-                return {
-                    text: translation || item.text,
-                    articleId: item.articleId
-                };
-            });
-            if (!localizedData[key]) (localizedData as any)[key] = {};
-            (localizedData[key] as any)[l] = translated;
+    await writeLocks[countryId];
+    let resolveLock: () => void;
+    writeLocks[countryId] = new Promise((resolve) => { resolveLock = resolve; });
+
+    try {
+      if (lang === 'en') {
+        const countryData = CountryParser.parseCountry($, {}, lang);
+        const articleIds = new Set([
+            ...(countryData.capital?.en?.map(i => i.articleId) || []),
+            ...(countryData.largest_city?.en?.map(i => i.articleId) || []),
+            ...(countryData.official_language?.en?.map(i => i.articleId) || []),
+            ...(countryData.currency?.en?.map(i => i.articleId) || [])
+        ].filter(Boolean) as string[]);
+        
+        const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
+        
+        const localizedData: Partial<Country> = {
+          name: { en: name },
+          ...countryData,
+        };
+
+        // Fill translations
+        ['capital', 'largest_city', 'official_language', 'currency'].forEach(field => {
+          const key = field as LocalizedArrayFieldKey;
+          const data = (localizedData[key] as any)?.en || [];
+          ['pt', 'fr', 'it', 'es'].forEach(l => {
+              const translated = data.map((item: any) => {
+                  const articleId = item.articleId?.replace(/_/g, ' ');
+                  const translation = articleId ? translations[articleId]?.[l] : null;
+                  return {
+                      text: translation || item.text,
+                      articleId: item.articleId
+                  };
+              });
+              if (!localizedData[key]) (localizedData as any)[key] = {};
+              (localizedData[key] as any)[l] = translated;
+          });
         });
-      });
 
-      const merged = mergeCountryData(null, localizedData, 'en');
-      insertCountry.run(countryId, JSON.stringify(merged));
-    } else {
-      const localizedData: Partial<Country> = { name: { [lang]: name } };
-      DescriptionParser.parse($, localizedData, lang);
-      const existing = getCountry.get(countryId) as { data: string } | undefined;
-      const merged = mergeCountryData(existing?.data || null, localizedData, lang);
-      insertCountry.run(countryId, JSON.stringify(merged));
+        const existing = getCountry.get(countryId) as { data: string } | undefined;
+        const merged = mergeCountryData(existing?.data || null, localizedData);
+        insertCountry.run(countryId, JSON.stringify(merged));
+      } else {
+        const localizedData: Partial<Country> = { name: { [lang]: name } };
+        DescriptionParser.parse($, localizedData, lang);
+        const existing = getCountry.get(countryId) as { data: string } | undefined;
+        const merged = mergeCountryData(existing?.data || null, localizedData);
+        insertCountry.run(countryId, JSON.stringify(merged));
+      }
+    } finally {
+      resolveLock!();
     }
   },
 });

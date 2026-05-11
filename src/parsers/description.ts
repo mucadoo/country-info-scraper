@@ -41,8 +41,8 @@ export class DescriptionParser {
       country.description = { [lang]: desc };
       
       // Fallback: Try to extract capital if it's explicitly mentioned in the description
-      const capital = country.capital as Record<string, string | null | undefined>;
-      if (!capital?.[lang]) {
+      const capital = country.capital as Record<string, string[] | null | undefined>;
+      if (!capital?.[lang] || capital[lang].length === 0) {
         const capitalKeywords = {
             en: 'capital',
             pt: 'capital',
@@ -53,7 +53,8 @@ export class DescriptionParser {
         const keyword = capitalKeywords[lang as keyof typeof capitalKeywords] || 'capital';
         const capitalMatch = desc.match(new RegExp(`(?:${keyword}).*?([A-Z][a-z]+)`, 'i'));
         if (capitalMatch) {
-            country.capital = { ...country.capital, [lang]: capitalMatch[1] };
+            const currentCapitals = capital?.[lang] || [];
+            country.capital = { ...country.capital, [lang]: [...currentCapitals, capitalMatch[1]] };
         }
       }
     }

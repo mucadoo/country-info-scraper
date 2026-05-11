@@ -1,6 +1,8 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
+import { DescriptionParser } from './parsers/description.js';
 import { CountrySchema, Country } from './types/country.js';
+import { WikipediaAPI } from './utils/wikipedia-api.js';
 import Database from 'better-sqlite3';
 import fs from 'fs';
 import path from 'path';
@@ -24,7 +26,8 @@ const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-type LocalizedFieldKey = 'name' | 'description' | 'capital' | 'largest_city' | 'government' | 'official_language' | 'demonym' | 'currency';
+type LocalizedFieldKey = 'name' | 'description' | 'government';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency';
 
 const mergeCountryData = (existingJson: string | null, newData: Partial<Country>, lang: string): Country => {
   const existing: Country = existingJson ? JSON.parse(existingJson) : {
@@ -34,20 +37,32 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
   
   const country = { ...existing };
   
-  // Merge localized fields
-  const localizedFields: LocalizedFieldKey[] = ['name', 'description', 'capital', 'largest_city', 'government', 'official_language', 'demonym', 'currency'];
+  // Merge fields
+  const localizedStringFields: LocalizedFieldKey[] = ['name', 'description', 'government'];
+  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency'];
   
-  localizedFields.forEach(field => {
+  localizedStringFields.forEach(field => {
     const newVal = newData[field] as Record<string, string> | undefined;
     if (newVal && newVal[lang]) {
       const currentVal = (country[field] || {}) as Record<string, string>;
       const merged = { ...currentVal, [lang]: newVal[lang] };
-      // Exhaustive assignment to avoid any
       if (field === 'name') country.name = merged;
       else if (field === 'description') country.description = merged;
-      else if (field === 'capital') country.capital = merged;
-      else if (field === 'largest_city') country.largest_city = merged;
       else if (field === 'government') country.government = merged;
+    }
+  });
+
+  localizedArrayFields.forEach(field => {
+    const newVal = newData[field] as Record<string, {text: string, articleId?: string}[]> | undefined;
+    if (newVal && newVal[lang]) {
+      const currentVal = (country[field] || {}) as Record<string, {text: string, articleId?: string}[]>;
+      const oldArr = currentVal[lang] || [];
+      const newArr = newVal[lang];
+      // Dedup by text
+      const mergedArr = Array.from(new Map([...oldArr, ...newArr].map(i => [i.text, i])).values());
+      const merged = { ...currentVal, [lang]: mergedArr };
+      if (field === 'capital') country.capital = merged;
+      else if (field === 'largest_city') country.largest_city = merged;
       else if (field === 'official_language') country.official_language = merged;
       else if (field === 'demonym') country.demonym = merged;
       else if (field === 'currency') country.currency = merged;
@@ -62,7 +77,11 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
   if (newData.density_km2 !== undefined) country.density_km2 = newData.density_km2;
   if (newData.gdp !== undefined) country.gdp = newData.gdp;
   if (newData.hdi !== undefined) country.hdi = newData.hdi;
-  if (newData.time_zone !== undefined) country.time_zone = newData.time_zone;
+  
+  const mergeArrays = (oldArr: string[] | null | undefined, newArr: string[] | null | undefined) => 
+    Array.from(new Set([...(oldArr || []), ...(newArr || [])]));
+
+  if (newData.time_zone !== undefined) country.time_zone = mergeArrays(country.time_zone, newData.time_zone);
   if (newData.calling_code !== undefined) country.calling_code = newData.calling_code;
   if (newData.internet_TLD !== undefined) country.internet_TLD = newData.internet_TLD;
 
@@ -73,104 +92,72 @@ const crawler = new CheerioCrawler({
   maxConcurrency: 10,
   requestHandler: async ({ $, request, enqueueLinks }) => {
     if (request.url.includes('List_of_sovereign_states')) {
-      log.info('Processing country list...');
       const table = $('table.wikitable').first();
-      const links: string[] = [];
-      
-      table.find('tbody > tr').each((_, row) => {
-        const link = $(row).find('td').first().find('a').first();
-        if (link.length > 0) {
-          const href = link.attr('href');
-          if (href) {
-            links.push(`https://en.wikipedia.org${href}`);
-          }
-        }
-      });
-      
-      await enqueueLinks({
-        urls: links,
-        label: 'country',
-      });
+      const links = table.find('tbody > tr').toArray().map(r => $(r).find('td').first().find('a').attr('href')).filter(Boolean) as string[];
+      await enqueueLinks({ urls: links.map(h => `https://en.wikipedia.org${h}`), label: 'country' });
       return;
     }
 
-    if (request.label === 'country') {
-      const lang = request.userData.lang || 'en';
-      const name = $('h1#firstHeading').text();
-      log.info(`Scraping ${name} (${lang})...`);
-      
+    const lang = request.userData.lang || 'en';
+    const name = $('h1#firstHeading').text();
+    const countryId = request.userData.baseName || name;
+
+    if (lang === 'en') {
       const countryData = CountryParser.parseCountry($, {}, lang);
-      // Map to localized fields
+      const articleIds = new Set([
+          ...(countryData.capital?.en?.map(i => i.articleId) || []),
+          ...(countryData.official_language?.en?.map(i => i.articleId) || []),
+          ...(countryData.currency?.en?.map(i => i.articleId) || [])
+      ].filter(Boolean) as string[]);
+      
+      const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
+      
       const localizedData: Partial<Country> = {
-        name: { [lang]: name },
+        name: { en: name },
         ...countryData,
       };
-      
-      // Enqueue interlanguage links
-      const interLinks = $('.interlanguage-link-target');
-      const languages = ['pt', 'fr', 'it', 'es'];
-      
-      // If we are EN, we discover all localized versions
-      if (lang === 'en') {
-        for (const el of interLinks.toArray()) {
-          const $el = $(el);
-          const langCode = $el.attr('lang');
-          const href = $el.attr('href');
-          
-          if (langCode && languages.includes(langCode) && href) {
-            await enqueueLinks({
-              urls: [href],
-              label: 'country',
-              userData: { baseName: request.userData.baseName || name, lang: langCode },
-              strategy: 'all',
-            });
-          }
-        }
-      }
 
-      // Update DB
-      const countryId = request.userData.baseName || name;
-      
-      if (!writeLocks[countryId]) {
-        writeLocks[countryId] = Promise.resolve();
-      }
-
-      writeLocks[countryId] = writeLocks[countryId].then(async () => {
-        const existing = getCountry.get(countryId) as { data: string } | undefined;
-        const merged = mergeCountryData(existing?.data || null, localizedData, lang);
-        
-        try {
-          const validated = CountrySchema.parse(merged);
-          insertCountry.run(countryId, JSON.stringify(validated));
-        } catch (e) {
-          log.error('Validation failed for ' + name + ': ' + e);
-        }
+      // Fill translations
+      ['capital', 'official_language', 'currency'].forEach(field => {
+        const key = field as LocalizedArrayFieldKey;
+        const data = (localizedData[key] as any)?.en || [];
+        ['pt', 'fr', 'it', 'es'].forEach(l => {
+            const translated = data.map((item: any) => ({
+                text: item.articleId && translations[item.articleId]?.[l] ? translations[item.articleId][l] : item.text,
+                articleId: item.articleId
+            }));
+            if (!localizedData[key]) (localizedData as any)[key] = {};
+            (localizedData[key] as any)[l] = translated;
+        });
       });
 
-      await writeLocks[countryId];
+      // Enqueue interlanguage
+      const languages = ['pt', 'fr', 'it', 'es'];
+      for (const el of $('.interlanguage-link-target').toArray()) {
+        const langCode = $(el).attr('lang');
+        const href = $(el).attr('href');
+        if (langCode && languages.includes(langCode) && href) {
+          await enqueueLinks({ urls: [href], label: 'country', userData: { baseName: name, lang: langCode } });
+        }
+      }
+
+      const merged = mergeCountryData(null, localizedData, 'en');
+      insertCountry.run(countryId, JSON.stringify(merged));
+    } else {
+      const localizedData: Partial<Country> = { name: { [lang]: name } };
+      DescriptionParser.parse($, localizedData, lang);
+      const existing = getCountry.get(countryId) as { data: string } | undefined;
+      const merged = mergeCountryData(existing?.data || null, localizedData, lang);
+      insertCountry.run(countryId, JSON.stringify(merged));
     }
   },
 });
 
 async function run() {
-  log.info('Starting scraper...');
   await crawler.run(['https://en.wikipedia.org/wiki/List_of_sovereign_states']);
-  
-  log.info('Exporting data...');
-  const allCountries = db.prepare('SELECT data FROM countries').all() as { data: string }[];
-  const countries = allCountries.map(row => JSON.parse(row.data));
-  
-  const prettyPath = 'data/sovereign-states.json';
-  const minPath = 'data/sovereign-states.min.json';
-  
-  fs.mkdirSync(path.dirname(prettyPath), { recursive: true });
-  fs.writeFileSync(prettyPath, JSON.stringify(countries, null, 2));
-  fs.writeFileSync(minPath, JSON.stringify(countries));
-  
-  log.info(`Exported ${countries.length} countries.`);
+  const countries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data));
+  fs.mkdirSync('data', { recursive: true });
+  fs.writeFileSync('data/sovereign-states.json', JSON.stringify(countries, null, 2));
 }
 
-run().catch(err => {
-  log.error('Scraper failed', err);
-  process.exit(1);
-});
+run().catch(err => { log.error('Scraper failed', err); process.exit(1); });

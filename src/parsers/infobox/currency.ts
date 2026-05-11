@@ -1,7 +1,7 @@
 import { Cheerio } from 'crawlee';
 import { AnyNode, isTag, isText } from 'domhandler';
 
-export function parseCurrency(data: Cheerio<AnyNode>): string {
+export function parseCurrency(data: Cheerio<AnyNode>): { text: string, articleId?: string }[] {
   const dataClone = data.clone();
   dataClone.find('sup, i, br, .reference').remove();
   const links = dataClone.find('.plainlist ul li a, a');
@@ -9,14 +9,16 @@ export function parseCurrency(data: Cheerio<AnyNode>): string {
     return links.toArray().map((l: AnyNode) => {
       if (isTag(l)) {
         const title = l.attribs?.title || '';
-        if (title.toLowerCase() === 'iso 4217') return '';
+        if (title.toLowerCase() === 'iso 4217') return { text: '' };
+        const articleId = l.attribs?.href?.replace('/wiki/', '');
         const firstChild = l.children[0];
         if (firstChild && isText(firstChild)) {
-          return firstChild.data.split('(')[0].trim();
+          return { text: firstChild.data.split('(')[0].trim(), articleId };
         }
       }
-      return '';
-    }).filter(t => t).join(', ');
+      return { text: '' };
+    }).filter(item => item.text);
   }
-  return dataClone.text().split('(')[0].trim();
+  const text = dataClone.text().split('(')[0].trim();
+  return text ? [{ text }] : [];
 }

@@ -111,16 +111,28 @@ export class InfoboxParser {
     const matches = (key: string) => HEADER_MAPPINGS[key]?.[lang]?.some(m => lowerHeaderText.includes(m)) ?? false;
 
     if (matches('capital')) {
-      parseCapital($, data, country, lang);
+      const capitals = data.find('a').toArray().map(l => ({
+        text: $(l).text().trim(),
+        articleId: $(l).attr('href')?.replace('/wiki/', '')
+      })).filter(i => i.text);
+      if (capitals.length === 0) {
+        const text = ExtractionUtils.cleanText(data);
+        if (text) capitals.push({ text });
+      }
+      country.capital = { [lang]: capitals };
     } else if (matches('largest_city')) {
-      const largestCityLink = data.find('a').first();
-      let cityText = largestCityLink.length > 0 ? largestCityLink.text() : ExtractionUtils.cleanText(data);
-      if (cityText.includes(',')) cityText = cityText.split(',')[0].trim();
-      country.largest_city = { [lang]: cityText };
+      const cities = data.find('a').toArray().map(l => ({
+        text: $(l).text().trim(),
+        articleId: $(l).attr('href')?.replace('/wiki/', '')
+      })).filter(i => i.text);
+      if (cities.length === 0) {
+        const text = ExtractionUtils.cleanText(data);
+        if (text) cities.push({ text });
+      }
+      country.largest_city = { [lang]: cities };
     } else if (matches('demonym')) {
-      let demonym = ExtractionUtils.cleanText(data);
-      if (demonym.includes(';')) demonym = demonym.split(';')[0].trim();
-      country.demonym = { [lang]: demonym };
+      const demonyms = ExtractionUtils.cleanText(data).split(/[;,]/).map(d => ({ text: d.trim() })).filter(d => d.text);
+      country.demonym = { [lang]: demonyms };
     } else if (matches('government')) {
       country.government = { [lang]: ExtractionUtils.cleanText(data) };
     } else if (lang === 'en' && lowerHeaderText.includes('gdp') && lowerHeaderText.includes('nominal')) {
@@ -128,20 +140,19 @@ export class InfoboxParser {
     } else if (matches('currency')) {
       country.currency = { [lang]: parseCurrency(data) };
     } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
-      country.time_zone = ExtractionUtils.cleanText(data);
+      country.time_zone = ExtractionUtils.cleanText(data).split(/[;,]/).map(t => t.trim()).filter(t => t);
     } else if (lang === 'en' && lowerHeaderText.includes('calling code')) {
       const dataClone = data.clone();
       dataClone.find('sup, .reference').remove();
-      country.calling_code = dataClone.text().split('[')[0].trim();
+      country.calling_code = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);
     } else if (lang === 'en' && headerText.includes('ISO 3166 code')) {
       country.ISO_code = ExtractionUtils.cleanText(data);
     } else if (lang === 'en' && lowerHeaderText.includes('internet tld')) {
       const tldClone = data.clone();
       tldClone.find('sup, .reference, style, script, link, meta').remove();
-      country.internet_TLD = tldClone.text().split('[')[0].trim();
+      country.internet_TLD = tldClone.text().split('[')[0].trim().split(/[;,]/).map(t => t.trim()).filter(t => t);
     } else {
       handleOtherFields(headerText, data, country, state, lang);
     }
-    }
-
+  }
 }

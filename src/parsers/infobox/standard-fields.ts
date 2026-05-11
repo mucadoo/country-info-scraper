@@ -11,21 +11,30 @@ export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Par
   let dataText = dataClone.html()?.replace(/\s*\([^)]*\)\s*/g, '') || '';
   const cleanedData = $.load(dataText);
   const links = cleanedData('.plainlist ul li a, a');
-  const capitals: string[] = [];
+  const capitals: { text: string, articleId?: string }[] = [];
   if (links.length > 0) {
     links.each((_, l) => {
       const t = $(l).text().trim();
-      if (t && !t.includes('°') && !/\d+/.test(t)) capitals.push(t);
+      if (t && !t.includes('°') && !/\d+/.test(t)) {
+        capitals.push({
+          text: t,
+          articleId: $(l).attr('href')?.replace('/wiki/', '')
+        });
+      }
     });
   } else {
-    capitals.push(cleanedData.root().text().trim());
+    const text = cleanedData.root().text().trim();
+    if (text) capitals.push({ text });
   }
-  let result = capitals.join(', ').replace(/\s+([,.])/g, '$1');
-  result = result.replace(/\s*[0-9]+°[0-9]+′.*/g, '').trim();
-  result = result.replace(/\s*[0-9]+°[NSEW].*/g, '').trim();
-  result = result.replace(/\s*\d+\.\d+;\s*\d+\.\d+.*/g, '').trim();
+  
+  const results = capitals
+    .map(c => ({
+      ...c,
+      text: c.text.replace(/\s*[0-9]+°[0-9]+′.*/g, '').replace(/\s*[0-9]+°[NSEW].*/g, '').replace(/\s*\d+\.\d+;\s*\d+\.\d+.*/g, '').trim()
+    }))
+    .filter(c => c.text.length > 0);
 
-  country.capital = { [lang]: result };
+  country.capital = { [lang]: results };
 }
 
 export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {
@@ -55,11 +64,12 @@ export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, co
 
   if (isLanguageField && !state.languageFound) {
       let langs = parseListOrLink(data, '.hlist ul li, .plainlist ul li');
-      if (!langs || langs.toLowerCase() === 'none') {
-        langs = ExtractionUtils.cleanText(data);
+      if (langs.length === 0) {
+        const text = ExtractionUtils.cleanText(data);
+        if (text && text.toLowerCase() !== 'none') langs = [{ text }];
       }
       
-      if (langs) {
+      if (langs.length > 0) {
         country.official_language = { [lang]: langs };
         state.languageFound = true;
       }

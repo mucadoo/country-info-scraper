@@ -1,69 +1,91 @@
-import axios from 'axios';
-import * as cheerio from 'cheerio';
+// file: scripts/download-snapshots.ts
+import { CheerioCrawler, log } from 'crawlee';
 import fs from 'fs';
 import path from 'path';
+import * as cheerio from 'cheerio';
 
-const COUNTRIES = ['Brazil', 'France', 'Japan', 'Switzerland'];
-const OUTPUT_DIR = 'tests/snapshots';
-const axiosInstance = axios.create({
-  headers: { 'User-Agent': 'Mozilla/5.0 (compatible; WikiGeoScraper/1.0; +https://github.com/mucadoo/wikigeo-data-scraper)' }
-});
+const OUTPUT_BASE = 'tests/snapshots';
+const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
 
-async function downloadMinimalSnapshot(url: string, filename: string) {
-  try {
-    const { data } = await axiosInstance.get(url);
-    const $ = cheerio.load(data);
-    
-    // Extract required elements
-    const h1 = $('h1#firstHeading');
-    const infobox = $('table.infobox');
-    const paragraphs = $('#mw-content-text .mw-parser-output > p').slice(0, 5);
-    
-    // Construct minimal HTML
-    const minimalHtml = `
-      <html>
-        <body>
-          ${h1.toString()}
-          ${infobox.toString()}
-          ${paragraphs.toString()}
-        </body>
-      </html>
-    `;
-    
-    fs.writeFileSync(path.join(OUTPUT_DIR, filename), minimalHtml);
-    console.log(`Saved minimal snapshot: ${filename}`);
-  } catch (err) {
-    console.error(`Failed to download/process ${url}: ${err instanceof Error ? err.message : err}`);
-  }
+// Ensure directories exist
+for (const lang of LANGS) {
+  const dir = path.join(OUTPUT_BASE, lang);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-async function run() {
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+function getMinimalHtml($: cheerio.CheerioAPI): string {
+  const h1 = $('h1#firstHeading');
+  const infoboxes = $('table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3');
+  const paragraphs = $('#mw-content-text .mw-parser-output > p').slice(0, 10);
+  
+  return `
+    <html>
+      <head><meta charset="utf-8"></head>
+      <body>
+        ${h1.toString()}
+        ${infoboxes.map((_, el) => $(el).toString()).get().join('\n')}
+        ${paragraphs.map((_, el) => $(el).toString()).get().join('\n')}
+      </body>
+    </html>
+  `;
+}
 
-  for (const country of COUNTRIES) {
-    const enUrl = `https://en.wikipedia.org/wiki/${country.replace(/ /g, '_')}`;
-    console.log(`Processing ${country}...`);
+const crawler = new CheerioCrawler({
+  maxConcurrency: 10,
+  requestHandler: async ({ $, request, enqueueLinks }) => {
     
-    try {
-      const { data } = await axiosInstance.get(enUrl);
-      const $ = cheerio.load(data);
+    if (request.label === 'list') {
+      log.info('Fetching sovereign states list...');
+      const links: string[] = [];
+      $('table.wikitable').first().find('tbody > tr').each((_, row) => {
+        const link = $(row).find('td').first().find('a').first();
+        const href = link.attr('href');
+        if (href && !href.includes('redlink=1')) {
+          links.push(`https://en.wikipedia.org${href}`);
+        }
+      });
       
-      // Save English snapshot
-      await downloadMinimalSnapshot(enUrl, `${country.toLowerCase()}_en.html`);
+      await enqueueLinks({ urls: links, label: 'country_en' });
+      return;
+    }
+
+    if (request.label === 'country_en') {
+      const baseName = request.url.split('/').pop()?.replace(/_/g, ' ') || $('h1').text();
+      log.info(`Saving EN snapshot for ${baseName}...`);
       
-      // Find interlanguage links
+      fs.writeFileSync(path.join(OUTPUT_BASE, 'en', `${baseName}.html`), getMinimalHtml($));
+
       for (const lang of ['pt', 'fr', 'it', 'es']) {
-        const link = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
-        if (link) {
-          await downloadMinimalSnapshot(link, `${country.toLowerCase()}_${lang}.html`);
-        } else {
-          console.log(`Link for ${lang} not found for ${country}`);
+        const href = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
+        if (href) {
+          const url = href.startsWith('//') ? `https:${href}` : href;
+          await crawler.addRequests([{
+            url,
+            label: 'country_lang',
+            userData: { baseName, lang }
+          }]);
         }
       }
-    } catch (err) {
-      console.error(`Error processing ${country}: ${err instanceof Error ? err.message : err}`);
+    }
+
+    if (request.label === 'country_lang') {
+      const { baseName, lang } = request.userData;
+      if (!lang) {
+        log.error(`Missing lang for ${request.url}`);
+        return;
+      }
+      log.info(`Saving ${lang.toUpperCase()} snapshot for ${baseName}...`);
+      fs.writeFileSync(path.join(OUTPUT_BASE, lang, `${baseName}.html`), getMinimalHtml($));
     }
   }
+});
+
+async function run() {
+  log.info('Starting Organized Snapshot Downloader...');
+  await crawler.run([
+    { url: 'https://en.wikipedia.org/wiki/List_of_sovereign_states', label: 'list' }
+  ]);
+  log.info('Finished downloading all snapshots!');
 }
 
 run();

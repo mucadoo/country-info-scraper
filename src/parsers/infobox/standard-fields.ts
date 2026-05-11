@@ -3,6 +3,7 @@ import { AnyNode } from 'domhandler';
 import { Country } from '../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 import { parseListOrLink } from './utils.js';
+import { ParserState } from './area-population.js';
 
 export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
   const dataClone = data.clone();
@@ -27,7 +28,7 @@ export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Par
   country.capital = { [lang]: result };
 }
 
-export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: any, lang: string = 'en'): void {
+export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {
   const lowerHeader = headerText.toLowerCase();
 
   // Keep HDI parsing only for English (metrics)
@@ -43,11 +44,11 @@ export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, co
 
   // Language parsing
   const languageKeywords = {
-    en: ['language'],
-    pt: ['língua'],
-    fr: ['langue'],
-    it: ['lingua'],
-    es: ['idioma'],
+    en: ['language', 'languages'],
+    pt: ['língua', 'idioma', 'línguas'],
+    fr: ['langue', 'langues'],
+    it: ['lingua', 'lingue'],
+    es: ['idioma', 'lengua', 'lenguas'],
   };
 
   const isLanguageField = languageKeywords[lang as keyof typeof languageKeywords]?.some(k => lowerHeader.includes(k));

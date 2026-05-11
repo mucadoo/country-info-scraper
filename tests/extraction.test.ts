@@ -86,7 +86,8 @@ describe('Infobox Utilities', () => {
     it('should handle single link with complex href', () => {
       const html = '<a href="/wiki/Item_1#Anchor">Item 1</a>';
       const $ = cheerio.load(html);
-      const result = parseListOrLink($('a'), 'li');
+      const result = parseListOrLink($('a'), 'a');
+      console.log('DEBUG result:', JSON.stringify(result));
       expect(result).toEqual([{ text: 'Item 1', articleId: 'Item_1#Anchor' }]);
     });
   });

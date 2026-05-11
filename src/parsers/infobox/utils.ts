@@ -26,7 +26,8 @@ export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): { tex
   
   const single = dataClone.find('a').first();
   if (single.length > 0 && !/^\[\d+\]$/.test(single.text())) {
-    const articleId = single.attr('href')?.replace('/wiki/', '');
+    const href = single.attr('href') || '';
+    const articleId = href.replace('/wiki/', '');
     return [{ text: single.text().trim(), articleId }];
   }
   

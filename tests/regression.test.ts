@@ -28,17 +28,21 @@ describe('Regression Tests', () => {
 
   Object.entries(grouped).forEach(([countryName, langs]) => {
     describe(`Country: ${countryName}`, () => {
-      const countryData: any = { name: {}, description: {}, capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} };
+      const countryData: any = { 
+        name: {}, description: {}, 
+        capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} 
+      };
 
       // 1. Process EN Pass
       if (langs['en']) {
         it('should process EN infobox and map translations', () => {
           const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
           const $ = cheerio.load(html);
-          const partialData = CountryParser.parseCountry($ as any, {}, 'en');
+          const partialData: any = {};
+          CountryParser.parseCountry($ as any, partialData, 'en');
           
           ['capital', 'official_language', 'currency'].forEach(field => {
-            const data = (partialData as any)[field]?.en || [];
+            const data = partialData[field]?.en || [];
             countryData[field] = { en: data };
             
             ['pt', 'fr', 'it', 'es'].forEach(l => {
@@ -61,12 +65,16 @@ describe('Regression Tests', () => {
           it(`should process ${lang} localized description`, () => {
             const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
             const $ = cheerio.load(html);
-            countryData.name[lang] = $('h1#firstHeading').text().trim();
-            DescriptionParser.parse($ as any, countryData, lang);
             
+            const locData: any = { name: { [lang]: '' }, description: { [lang]: '' } };
+            locData.name[lang] = $('h1#firstHeading').text().trim();
+            DescriptionParser.parse($ as any, locData, lang);
+
+            countryData.name[lang] = locData.name[lang];
+            countryData.description[lang] = locData.description[lang];
+
             expect(countryData.name[lang]).toBeDefined();
-            expect(countryData.description[lang]).toBeDefined();
-          });
+            expect(countryData.description[lang]).toBeDefined();          });
         }
       });
 

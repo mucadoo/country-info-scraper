@@ -26,8 +26,8 @@ const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-type LocalizedFieldKey = 'name' | 'description' | 'government';
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency';
+type LocalizedFieldKey = 'name' | 'description';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
 
 const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
   const existing: Country = existingJson ? JSON.parse(existingJson) : {
@@ -38,8 +38,8 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
   const country = { ...existing };
   
   // Merge fields
-  const localizedStringFields: LocalizedFieldKey[] = ['name', 'description', 'government'];
-  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency'];
+  const localizedStringFields: LocalizedFieldKey[] = ['name', 'description'];
+  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government'];
   
   localizedStringFields.forEach(field => {
     const newVal = newData[field] as Record<string, string> | undefined;
@@ -153,7 +153,9 @@ const crawler = new CheerioCrawler({
             ...(countryData.capital?.en?.map(i => i.articleId) || []),
             ...(countryData.largest_city?.en?.map(i => i.articleId) || []),
             ...(countryData.official_language?.en?.map(i => i.articleId) || []),
-            ...(countryData.currency?.en?.map(i => i.articleId) || [])
+            ...(countryData.currency?.en?.map(i => i.articleId) || []),
+            ...(countryData.demonym?.en?.map(i => i.articleId) || []),
+            ...(countryData.government?.en?.map(i => i.articleId) || [])
         ].filter(Boolean) as string[]);
         
         const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
@@ -164,7 +166,7 @@ const crawler = new CheerioCrawler({
         };
 
         // Fill translations
-        ['capital', 'largest_city', 'official_language', 'currency'].forEach(field => {
+        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
           const key = field as LocalizedArrayFieldKey;
           const data = (localizedData[key] as any)?.en || [];
           ['pt', 'fr', 'it', 'es'].forEach(l => {

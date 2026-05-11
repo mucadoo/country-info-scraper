@@ -6,7 +6,8 @@ import { ExtractionUtils } from '../utils/extraction.js';
 export class DescriptionParser {
   static parse($: CheerioAPI, country: Partial<Country>, lang: string = 'en'): void {
     // Find the first few paragraphs outside the infobox
-    let infobox = $('table.infobox').first();
+    const infoboxSelector = 'table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3';
+    let infobox = $(infoboxSelector).first();
     let paragraphs: Cheerio<AnyNode>[] = [];
 
     if (infobox.length > 0) {

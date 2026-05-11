@@ -8,13 +8,13 @@ import { Country } from '../src/types/country.js';
 const SNAPSHOT_BASE = 'tests/snapshots';
 const translations = JSON.parse(fs.readFileSync(path.join(SNAPSHOT_BASE, 'translations.json'), 'utf-8'));
 
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
 
 const mergeCountryData = (country: Country, newData: Partial<Country>, lang: string): Country => {
   const newCountry = { ...country };
   
   // Merge localized string fields
-  ['name', 'description', 'government'].forEach(field => {
+  ['name', 'description'].forEach(field => {
     const newVal = newData[field as keyof Country] as Record<string, string> | undefined;
     if (newVal) {
         Object.entries(newVal).forEach(([l, val]) => {
@@ -24,7 +24,7 @@ const mergeCountryData = (country: Country, newData: Partial<Country>, lang: str
   });
 
   // Merge array fields
-  ['capital', 'largest_city', 'official_language', 'demonym', 'currency'].forEach(field => {
+  ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government'].forEach(field => {
     const newVal = newData[field as keyof Country] as Record<string, {text: string, articleId?: string}[]> | undefined;
     if (newVal) {
         Object.entries(newVal).forEach(([l, val]) => {
@@ -57,7 +57,7 @@ async function debugFlow(countryName: string) {
   const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...countryData };
   
   // Apply translations
-  ['capital', 'official_language', 'currency'].forEach(field => {
+  ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
     const data = (localizedDataEn[key] as any)?.en || [];
     ['pt', 'fr', 'it', 'es'].forEach(l => {

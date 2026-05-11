@@ -39,7 +39,7 @@ export const CountrySchema = z.object({
   population: z.number().int().nullable().optional(),
   area_km2: z.number().nullable().optional(),
   density_km2: z.number().nullable().optional(),
-  government: LocalizedField,
+  government: LinkedArrayField,
   official_language: LinkedArrayField,
   demonym: LinkedArrayField,
   gdp: z.number().nullable().optional(),

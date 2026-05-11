@@ -4,6 +4,7 @@ import { Country } from '../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 import { processAreaAndPopulation, ParserState } from './infobox/area-population.js';
 import { parseCapital, parseLargestCity, handleOtherFields } from './infobox/standard-fields.js';
+import { parseListOrLink } from './infobox/utils.js';
 import { parseGDP } from './infobox/gdp.js';
 import { parseCurrency } from './infobox/currency.js';
 import { processImages } from './infobox/images.js';
@@ -115,10 +116,11 @@ export class InfoboxParser {
     } else if (matches('largest_city')) {
       parseLargestCity($, data, country, lang);
     } else if (matches('demonym')) {
-      const demonyms = ExtractionUtils.cleanText(data).split(/[;,]/).map(d => ({ text: d.trim() })).filter(d => d.text);
+      const demonyms = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
       country.demonym = { [lang]: demonyms };
     } else if (matches('government')) {
-      country.government = { [lang]: ExtractionUtils.cleanText(data) };
+      const gov = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
+      country.government = { [lang]: gov };
     } else if (lang === 'en' && lowerHeaderText.includes('gdp') && lowerHeaderText.includes('nominal')) {
       parseGDP($, row, country);
     } else if (matches('currency')) {

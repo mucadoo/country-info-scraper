@@ -145,7 +145,7 @@ export class InfoboxParser {
       dataClone.find('sup, .reference').remove();
       country.calling_code = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);
     } else if (lang === 'en' && headerText.includes('ISO 3166 code')) {
-      country.ISO_code = ExtractionUtils.cleanText(data);
+      country.iso_code = ExtractionUtils.cleanText(data);
     } else if (lang === 'en' && lowerHeaderText.includes('internet tld')) {
       const tldClone = data.clone();
       tldClone.find('sup, .reference, style, script, link, meta').remove();

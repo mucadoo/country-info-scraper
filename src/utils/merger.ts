@@ -50,7 +50,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   });
 
   // Keep root fields if present
-  if (newData.ISO_code !== undefined) country.ISO_code = newData.ISO_code;
+  if (newData.iso_code !== undefined) country.iso_code = newData.iso_code;
   if (newData.flagUrl !== undefined) country.flagUrl = newData.flagUrl;
   if (newData.population !== undefined) country.population = newData.population;
   if (newData.area_km2 !== undefined) country.area_km2 = newData.area_km2;

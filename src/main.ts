@@ -138,7 +138,16 @@ const crawler = new CheerioCrawler({
 
 async function run() {
   await crawler.run(['https://en.wikipedia.org/wiki/List_of_sovereign_states']);
-  const countries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data));
+  const rawCountries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data) as Country);
+  
+  // Sort by ISO code and ensure iso_code is the first property
+  const countries = rawCountries
+    .sort((a, b) => (a.iso_code || '').localeCompare(b.iso_code || ''))
+    .map(country => {
+      const { iso_code, ...rest } = country;
+      return { iso_code, ...rest };
+    });
+
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync('data/sovereign-states.json', JSON.stringify(countries, null, 2));
   fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(countries));

@@ -62,6 +62,10 @@ jobs:
         id: check_changes
         run: |
           git fetch origin data:data || echo "Data branch not found."
+          git fetch --tags
+          
+          LATEST_TAG=$(git describe --tags --abbrev=0 --match "data-*" 2>/dev/null || echo "")
+          echo "last_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
           
           if git show data:sovereign-states.json > countries_old_raw.json 2>/dev/null; then
             echo "Found previous data."
@@ -75,7 +79,10 @@ jobs:
               echo "data_changed=false" >> $GITHUB_OUTPUT
             else
               echo "data_changed=true" >> $GITHUB_OUTPUT
-              git diff --no-index --stat countries_old.json data/countries_normalized.json || true
+              DIFF_STAT=$(git diff --no-index --stat countries_old.json data/countries_normalized.json || true)
+              echo "diff_stat<<EOF" >> $GITHUB_OUTPUT
+              echo "$DIFF_STAT" >> $GITHUB_OUTPUT
+              echo "EOF" >> $GITHUB_OUTPUT
             fi
           else
             echo "data_changed=true" >> $GITHUB_OUTPUT
@@ -156,16 +163,22 @@ jobs:
             data/sovereign-states.json
             data/sovereign-states.min.json
           body: |
-            Automated multilingual data snapshot generated from Wikipedia.
-
-            **Changes:**
-            ${{ steps.check_changes.outputs.last_tag != '' && format('- [View JSON Diff](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- _First data release_' }}
-
-            **Live URLs (always up-to-date):**
-            - Full JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.json
-            - Minified JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.min.json
-
-            Triggered by: **${{ github.event_name }}**
+            ### 🌍 Multilingual Data Snapshot
+            
+            Automated geographical data snapshot extracted from Wikipedia (EN, PT, FR, IT, ES).
+            
+            #### 📊 Change Summary
+            ```text
+            ${{ steps.check_changes.outputs.diff_stat || 'Initial data release' }}
+            ```
+            
+            #### 🔗 Links
+            ${{ steps.check_changes.outputs.last_tag != '' && format('- [🔍 View Comparison](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- 🆕 _First data release_' }}
+            - [📄 Full JSON](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.json)
+            - [🗜️ Minified JSON](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.min.json)
+            
+            ---
+            *Generated on ${{ steps.date.outputs.today }} via ${{ github.event_name }}*
           draft: false
           prerelease: false
         env:

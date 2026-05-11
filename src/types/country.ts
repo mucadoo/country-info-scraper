@@ -16,8 +16,8 @@ export const MultiLangLinkField = z.object({
 export const LinkedArrayField = z.array(MultiLangLinkField);
 
 export const CountrySchema = z.object({
+  iso_code: z.string().nullable().optional(),
   name: LocalizedField,
-  ISO_code: z.string().nullable().optional(),
   flagUrl: z.string().nullable().optional(),
   description: LocalizedField,
   capital: LinkedArrayField,

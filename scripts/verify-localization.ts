@@ -11,7 +11,7 @@ const LOCALIZED_FIELDS = [
   'largest_city',
   'official_language',
   'currency',
-  'government_type',
+  'government',
   'demonym'
 ];
 
@@ -38,11 +38,17 @@ async function main() {
       if (!fieldData) continue;
 
       const missingLangs = LANGUAGES.filter(lang => {
-        const langData = fieldData[lang];
-        if (langData === undefined) return true;
-        if (Array.isArray(langData) && langData.length === 0) return true;
-        if (typeof langData === 'string' && langData.trim() === '') return true;
-        return false;
+        if (Array.isArray(fieldData)) {
+          // New structure: array of objects with name: LocalizedField
+          if (fieldData.length === 0) return true;
+          return fieldData.some(item => !item.name[lang] || item.name[lang].trim() === '');
+        } else {
+          // Old/Localized structure: record of lang to value
+          const langData = fieldData[lang];
+          if (langData === undefined) return true;
+          if (typeof langData === 'string' && langData.trim() === '') return true;
+          return false;
+        }
       });
 
       if (missingLangs.length > 0 && missingLangs.length < LANGUAGES.length) {

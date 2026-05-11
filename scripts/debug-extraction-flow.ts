@@ -25,16 +25,27 @@ const mergeCountryData = (country: Country, newData: Partial<Country>): Country 
 
   // Merge array fields
   ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government'].forEach(field => {
-    const newVal = newData[field as keyof Country] as Record<string, {text: string, articleId?: string}[]> | undefined;
+    const newVal = newData[field as keyof Country] as any[] | undefined;
     if (newVal) {
-        Object.entries(newVal).forEach(([l, val]) => {
-            if (val) {
-                const current = (newCountry as any)[field]?.[l] || [];
-                // Dedup by text
-                const merged = Array.from(new Map([...current, ...val].map(i => [i.text, i])).values());
-                (newCountry as any)[field] = { ...(newCountry as any)[field], [l]: merged };
+        const currentVal = (newCountry[field as keyof Country] as any[]) || [];
+        const mergedMap = new Map<string, any>();
+        
+        currentVal.forEach(item => {
+            const key = item.articleId ? `id:${item.articleId}` : `text:${item.name.en}`;
+            mergedMap.set(key, item);
+        });
+        
+        newVal.forEach(newItem => {
+            const key = newItem.articleId ? `id:${newItem.articleId}` : `text:${newItem.name.en}`;
+            const existingItem = mergedMap.get(key);
+            if (existingItem) {
+                existingItem.name = { ...existingItem.name, ...newItem.name };
+            } else {
+                mergedMap.set(key, newItem);
             }
         });
+        
+        (newCountry as any)[field] = Array.from(mergedMap.values());
     }
   });
 
@@ -43,14 +54,19 @@ const mergeCountryData = (country: Country, newData: Partial<Country>): Country 
 
 async function debugFlow(countryName: string) {
   let mergedResult: Country = {
-    name: {}, description: {}, capital: {}, largest_city: {},
-    government: {}, official_language: {}, demonym: {}, currency: {}
+    name: {}, description: {}, capital: [], largest_city: [],
+    government: [], official_language: [], demonym: [], currency: []
   };
 
   console.log(`\n--- Debugging Flow for: ${countryName} ---`);
 
   // 1. English Pass
-  const enHtml = fs.readFileSync(path.join(SNAPSHOT_BASE, 'en', 'sovereign_states', `${countryName.toLowerCase().replace(/ /g, '_')}.html`), 'utf-8');
+  const enHtmlPath = path.join(SNAPSHOT_BASE, 'en', 'sovereign_states', `${countryName.toLowerCase().replace(/ /g, '_')}.html`);
+  if (!fs.existsSync(enHtmlPath)) {
+      console.error(`English snapshot not found: ${enHtmlPath}`);
+      return;
+  }
+  const enHtml = fs.readFileSync(enHtmlPath, 'utf-8');
   const $en = cheerio.load(enHtml);
   const countryData = CountryParser.parseCountry($en as any, {}, 'en');
   
@@ -59,14 +75,17 @@ async function debugFlow(countryName: string) {
   // Apply translations
   ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
-    const data = (localizedDataEn[key] as any)?.en || [];
-    ['pt', 'fr', 'it', 'es'].forEach(l => {
-        const translated = data.map((item: any) => ({
-            text: item.articleId && translations[item.articleId]?.[l] ? translations[item.articleId][l] : item.text,
-            articleId: item.articleId
-        }));
-        if (!localizedDataEn[key]) (localizedDataEn as any)[key] = {};
-        (localizedDataEn[key] as any)[l] = translated;
+    const items = localizedDataEn[key] as any[] || [];
+    items.forEach(item => {
+      const articleId = item.articleId?.replace(/_/g, ' ');
+      ['pt', 'fr', 'it', 'es'].forEach(l => {
+        const translation = articleId ? translations[articleId]?.[l] : null;
+        if (translation) {
+          item.name[l] = translation;
+        } else if (!item.name[l]) {
+          item.name[l] = item.name.en;
+        }
+      });
     });
   });
 

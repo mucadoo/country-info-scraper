@@ -13,13 +13,12 @@ const LocalizedField = z.object({
   es: z.string().nullable().optional(),
 });
 
-const LinkedArrayField = z.object({
-  en: z.array(LinkField).nullable().optional(),
-  pt: z.array(LinkField).nullable().optional(),
-  fr: z.array(LinkField).nullable().optional(),
-  it: z.array(LinkField).nullable().optional(),
-  es: z.array(LinkField).nullable().optional(),
+const MultiLangLinkField = z.object({
+  articleId: z.string().nullable().optional(),
+  name: LocalizedField,
 });
+
+const LinkedArrayField = z.array(MultiLangLinkField);
 
 export const CountrySchema = z.object({
   name: LocalizedField,

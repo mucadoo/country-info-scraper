@@ -117,14 +117,23 @@ export class InfoboxParser {
       parseLargestCity($, data, country, lang);
     } else if (matches('demonym')) {
       const demonyms = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.demonym = { [lang]: demonyms };
+      country.demonym = demonyms.map(item => ({
+        articleId: item.articleId,
+        name: { [lang]: item.text }
+      }));
     } else if (matches('government')) {
       const gov = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.government = { [lang]: gov };
+      country.government = gov.map(item => ({
+        articleId: item.articleId,
+        name: { [lang]: item.text }
+      }));
     } else if (lang === 'en' && lowerHeaderText.includes('gdp') && lowerHeaderText.includes('nominal')) {
       parseGDP($, row, country);
     } else if (matches('currency')) {
-      country.currency = { [lang]: parseCurrency(data) };
+      country.currency = parseCurrency(data).map(item => ({
+        articleId: item.articleId,
+        name: { [lang]: item.text }
+      }));
     } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
       country.time_zone = ExtractionUtils.cleanText(data).split(/[;,]/).map(t => t.trim()).filter(t => t);
     } else if (lang === 'en' && lowerHeaderText.includes('calling code')) {

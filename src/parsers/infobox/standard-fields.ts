@@ -52,11 +52,19 @@ export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>): { text: st
 }
 
 export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
-  country.capital = { [lang]: parseCityList($, data) };
+  const list = parseCityList($, data);
+  country.capital = list.map(item => ({
+    articleId: item.articleId,
+    name: { [lang]: item.text }
+  }));
 }
 
 export function parseLargestCity($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
-  country.largest_city = { [lang]: parseCityList($, data) };
+  const list = parseCityList($, data);
+  country.largest_city = list.map(item => ({
+    articleId: item.articleId,
+    name: { [lang]: item.text }
+  }));
 }
 
 export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {
@@ -92,7 +100,10 @@ export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, co
       }
       
       if (langs.length > 0) {
-        country.official_language = { [lang]: langs };
+        country.official_language = langs.map(item => ({
+          articleId: item.articleId,
+          name: { [lang]: item.text }
+        }));
         state.languageFound = true;
       }
   }

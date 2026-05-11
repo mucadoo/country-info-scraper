@@ -71,7 +71,7 @@ const crawler = new CheerioCrawler({
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
       const countryData = CountryParser.parseCountry($ as any, {}, 'en');
-      [...(countryData.capital?.en || []), ...(countryData.official_language?.en || []), ...(countryData.currency?.en || [])]
+      [...(countryData.capital || []), ...(countryData.official_language || []), ...(countryData.currency || [])]
         .forEach(i => { if (i.articleId) allArticleIds.add(i.articleId); });
     }
 

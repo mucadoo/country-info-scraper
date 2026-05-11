@@ -30,8 +30,8 @@ type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' |
 
 const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
   const existing: Country = existingJson ? JSON.parse(existingJson) : {
-    name: {}, description: {}, capital: {}, largest_city: {},
-    government: {}, official_language: {}, demonym: {}, currency: {}
+    name: {}, description: {}, capital: [], largest_city: [],
+    government: [], official_language: [], demonym: [], currency: []
   };
   
   const country = { ...existing };
@@ -48,26 +48,29 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
   });
 
   localizedArrayFields.forEach(field => {
-    const newVal = newData[field] as Record<string, {text: string, articleId?: string}[]> | undefined;
+    const newVal = newData[field] as any[] | undefined;
     if (newVal) {
-      if (!country[field]) (country as any)[field] = {};
-      const currentVal = country[field] as Record<string, {text: string, articleId?: string}[]>;
+      const currentVal = (country[field] as any[]) || [];
+      const mergedMap = new Map<string, any>();
       
-      Object.keys(newVal).forEach(lang => {
-        const oldArr = currentVal[lang] || [];
-        const newArr = newVal[lang];
-        // Dedup by articleId if present, otherwise by text
-        const mergedMap = new Map<string, {text: string, articleId?: string}>();
-        [...oldArr, ...newArr].forEach(item => {
-          const key = item.articleId ? `id:${item.articleId}` : `text:${item.text}`;
-          const existing = mergedMap.get(key);
-          // Prefer items with articleId or translated text
-          if (!existing || (!existing.articleId && item.articleId)) {
-            mergedMap.set(key, item);
-          }
-        });
-        currentVal[lang] = Array.from(mergedMap.values());
+      // Seed with existing
+      currentVal.forEach(item => {
+        const key = item.articleId ? `id:${item.articleId}` : `text:${item.name.en}`;
+        mergedMap.set(key, item);
       });
+      
+      // Merge new
+      newVal.forEach(newItem => {
+        const key = newItem.articleId ? `id:${newItem.articleId}` : `text:${newItem.name.en}`;
+        const existingItem = mergedMap.get(key);
+        if (existingItem) {
+          existingItem.name = { ...existingItem.name, ...newItem.name };
+        } else {
+          mergedMap.set(key, newItem);
+        }
+      });
+      
+      (country as any)[field] = Array.from(mergedMap.values());
     }
   });
 
@@ -149,12 +152,12 @@ const crawler = new CheerioCrawler({
       if (lang === 'en') {
         const countryData = CountryParser.parseCountry($, {}, lang);
         const articleIds = new Set([
-            ...(countryData.capital?.en?.map(i => i.articleId) || []),
-            ...(countryData.largest_city?.en?.map(i => i.articleId) || []),
-            ...(countryData.official_language?.en?.map(i => i.articleId) || []),
-            ...(countryData.currency?.en?.map(i => i.articleId) || []),
-            ...(countryData.demonym?.en?.map(i => i.articleId) || []),
-            ...(countryData.government?.en?.map(i => i.articleId) || [])
+            ...(countryData.capital?.map(i => i.articleId) || []),
+            ...(countryData.largest_city?.map(i => i.articleId) || []),
+            ...(countryData.official_language?.map(i => i.articleId) || []),
+            ...(countryData.currency?.map(i => i.articleId) || []),
+            ...(countryData.demonym?.map(i => i.articleId) || []),
+            ...(countryData.government?.map(i => i.articleId) || [])
         ].filter(Boolean) as string[]);
         
         const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
@@ -167,18 +170,17 @@ const crawler = new CheerioCrawler({
         // Fill translations
         ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
           const key = field as LocalizedArrayFieldKey;
-          const data = (localizedData[key] as any)?.en || [];
-          ['pt', 'fr', 'it', 'es'].forEach(l => {
-              const translated = data.map((item: any) => {
-                  const articleId = item.articleId?.replace(/_/g, ' ');
-                  const translation = articleId ? translations[articleId]?.[l] : null;
-                  return {
-                      text: translation || item.text,
-                      articleId: item.articleId
-                  };
-              });
-              if (!localizedData[key]) (localizedData as any)[key] = {};
-              (localizedData[key] as any)[l] = translated;
+          const items = localizedData[key] as any[] || [];
+          items.forEach(item => {
+            const articleId = item.articleId?.replace(/_/g, ' ');
+            ['pt', 'fr', 'it', 'es'].forEach(l => {
+              const translation = articleId ? translations[articleId]?.[l] : null;
+              if (translation) {
+                item.name[l] = translation;
+              } else if (!item.name[l]) {
+                item.name[l] = item.name.en;
+              }
+            });
           });
         });
 

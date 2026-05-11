@@ -45,10 +45,11 @@ data.forEach(country => {
     }
   };
 
-  // We only check name, capital, largest_city for brackets
-  checkBrackets(country.name, 'name');
-  checkBrackets(country.capital, 'capital');
-  checkBrackets(country.largest_city, 'largest_city');
+  // We only check these fields for brackets
+  const bracketCheckFields: (keyof Country)[] = ['name', 'capital', 'largest_city', 'official_language', 'government', 'demonym', 'currency'];
+  bracketCheckFields.forEach(field => {
+    checkBrackets(country[field], field as string);
+  });
 
   // Check for suspicious populations (e.g. 0 or 1 for a country)
   if (country.population === 0 && name !== 'Vatican City') {

@@ -30,7 +30,7 @@ describe('Regression Tests', () => {
     describe(`Country: ${countryName}`, () => {
       const countryData: any = { 
         name: {}, description: {}, 
-        capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} 
+        capital: [], largest_city: [], government: [], official_language: [], demonym: [], currency: [] 
       };
 
       // 1. Process EN Pass
@@ -42,20 +42,23 @@ describe('Regression Tests', () => {
           CountryParser.parseCountry($ as any, partialData, 'en');
           
           ['capital', 'official_language', 'currency'].forEach(field => {
-            const data = partialData[field]?.en || [];
-            countryData[field] = { en: data };
+            const items = partialData[field] || [];
+            countryData[field] = items;
             
-            ['pt', 'fr', 'it', 'es'].forEach(l => {
-              countryData[field][l] = data.map((item: any) => ({
-                text: item.articleId && translations[item.articleId]?.[l] ? translations[item.articleId][l] : item.text,
-                articleId: item.articleId
-              }));
+            items.forEach((item: any) => {
+              ['pt', 'fr', 'it', 'es'].forEach(l => {
+                if (item.articleId && translations[item.articleId]?.[l]) {
+                  item.name[l] = translations[item.articleId][l];
+                } else if (!item.name[l]) {
+                  item.name[l] = item.name.en;
+                }
+              });
             });
           });
           
-          expect(countryData.capital.en[0]).toHaveProperty('text');
-          expect(countryData.capital.en[0]).toHaveProperty('articleId');
-          expect(countryData.capital.fr).toBeDefined();
+          expect(countryData.capital[0].name).toHaveProperty('en');
+          expect(countryData.capital[0]).toHaveProperty('articleId');
+          expect(countryData.capital[0].name.fr).toBeDefined();
         });
       }
 
@@ -80,7 +83,7 @@ describe('Regression Tests', () => {
 
       if (countryName === 'france') {
         it('should have correct French specific translations', () => {
-          expect(countryData.capital.fr[0].text).toBe('Paris');
+          expect(countryData.capital[0].name.fr).toBe('Paris');
           expect(countryData.name.es).toBe('Francia');
           expect(countryData.description.es).toBeDefined();
         });

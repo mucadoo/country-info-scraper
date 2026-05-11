@@ -38,44 +38,75 @@ This repository serves as a **Public Data Resource**. You can integrate the live
 
 ## 📊 Sample Data Format
 
-Our schema unifies multilingual data into a single, clean object:
+Our schema unifies multilingual data into a single, clean object using `camelCase` keys:
 
 ```json
 {
-  "name": {
-    "en": "France",
-    "pt": "França",
-    "fr": "France",
-    "it": "Francia",
-    "es": "Francia"
+  "metadata": {
+    "generatedAt": "2026-05-11T19:54:00Z",
+    "version": "1.0.2",
+    "license": "ISC",
+    "source": "Wikipedia"
   },
-  "capital": [
+  "data": [
     {
-      "articleId": "Paris",
+      "isoCode": "FR",
       "name": {
-        "en": "Paris",
-        "pt": "Paris",
-        "fr": "Paris",
-        "it": "Parigi",
-        "es": "París"
-      }
+        "en": "France",
+        "pt": "França",
+        "fr": "France",
+        "it": "Francia",
+        "es": "Francia"
+      },
+      "capital": [
+        {
+          "articleId": "Paris",
+          "name": {
+            "en": "Paris",
+            "pt": "Paris",
+            "fr": "Paris",
+            "it": "Parigi",
+            "es": "París"
+          }
+        }
+      ],
+      "officialLanguage": [
+        {
+          "articleId": "French_language",
+          "name": {
+            "en": "French",
+            "pt": "Língua francesa",
+            "fr": "Français",
+            "it": "Lingua francese",
+            "es": "Idioma francés"
+          }
+        }
+      ],
+      "currency": [
+        {
+          "articleId": "Euro",
+          "isoCode": "EUR",
+          "name": {
+            "en": "Euro",
+            "pt": "Euro",
+            "fr": "Euro",
+            "it": "Euro",
+            "es": "Euro"
+          }
+        }
+      ],
+      "population": 68373000
     }
-  ],
-  "official_language": [
-    {
-      "articleId": "French_language",
-      "name": {
-        "en": "French",
-        "pt": "Língua francesa",
-        "fr": "Français",
-        "it": "Lingua francese",
-        "es": "Idioma francés"
-      }
-    }
-  ],
-  "population": 68373000
+  ]
 }
 ```
+
+## 🚀 Roadmap
+
+We are constantly improving the dataset to reach the "gold standard". Future updates include:
+
+- [ ] **ISO 3166-1 alpha-3**: Adding 3-letter country codes (e.g., `FRA`).
+- [ ] **IANA Time Zone IDs**: Mapping Wikipedia time zones to standard IDs (e.g., `Europe/Paris`).
 
 ## 🏗️ How it Works
 

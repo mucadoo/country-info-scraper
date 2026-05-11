@@ -10,12 +10,12 @@ import { mergeCountryData } from '../src/utils/merger.js';
 const SNAPSHOT_BASE = 'tests/snapshots';
 WikipediaAPI.useSnapshots(path.join(SNAPSHOT_BASE, 'translations.json'));
 
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
+type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 async function debugFlow(countryName: string) {
   let mergedResult: Country = {
-    name: {}, description: {}, capital: [], largest_city: [],
-    government: [], official_language: [], demonym: [], currency: [], time_zone: []
+    name: {}, description: {}, capital: [], largestCity: [],
+    government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
   };
 
   console.log(`\n--- Debugging Flow for: ${countryName} ---`);
@@ -33,12 +33,12 @@ async function debugFlow(countryName: string) {
   const translations = await WikipediaAPI.fetchTranslations(
     [
         ...(countryData.capital?.map(i => i.articleId) || []),
-        ...(countryData.largest_city?.map(i => i.articleId) || []),
-        ...(countryData.official_language?.map(i => i.articleId) || []),
+        ...(countryData.largestCity?.map(i => i.articleId) || []),
+        ...(countryData.officialLanguage?.map(i => i.articleId) || []),
         ...(countryData.currency?.map(i => i.articleId) || []),
         ...(countryData.demonym?.map(i => i.articleId) || []),
         ...(countryData.government?.map(i => i.articleId) || []),
-        ...(countryData.time_zone?.map(i => i.articleId) || [])
+        ...(countryData.timeZone?.map(i => i.articleId) || [])
     ].filter(Boolean) as string[],
     ['pt', 'fr', 'it', 'es']
   );
@@ -46,7 +46,7 @@ async function debugFlow(countryName: string) {
   const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...countryData };
   
   // Apply translations
-  ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
+  ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
     const items = localizedDataEn[key] as any[] || [];
     items.forEach(item => {

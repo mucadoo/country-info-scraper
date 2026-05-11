@@ -16,24 +16,26 @@ export const MultiLangLinkField = z.object({
 export const LinkedArrayField = z.array(MultiLangLinkField);
 
 export const CountrySchema = z.object({
-  iso_code: z.string().nullable().optional(),
+  isoCode: z.string().nullable().optional(),
   name: LocalizedField,
   flagUrl: z.string().nullable().optional(),
   description: LocalizedField,
-  capital: LinkedArrayField,
-  largest_city: LinkedArrayField,
+  capital: z.array(MultiLangLinkField).nullable().optional(),
+  largestCity: LinkedArrayField,
   population: z.number().int().nullable().optional(),
-  area_km2: z.number().nullable().optional(),
-  density_km2: z.number().nullable().optional(),
+  areaKm2: z.number().nullable().optional(),
+  densityKm2: z.number().nullable().optional(),
   government: LinkedArrayField,
-  official_language: LinkedArrayField,
+  officialLanguage: LinkedArrayField,
   demonym: LinkedArrayField,
   gdp: z.number().nullable().optional(),
   hdi: z.number().nullable().optional(),
-  currency: LinkedArrayField,
-  time_zone: LinkedArrayField,
-  calling_code: z.array(z.string()).nullable().optional(),
-  internet_TLD: z.array(z.string()).nullable().optional(),
+  currency: z.array(MultiLangLinkField.extend({
+    isoCode: z.string().nullable().optional(),
+  })).nullable().optional(),
+  timeZone: LinkedArrayField,
+  callingCode: z.array(z.string()).nullable().optional(),
+  internetTld: z.array(z.string()).nullable().optional(),
 });
 
 export type Country = z.infer<typeof CountrySchema>;

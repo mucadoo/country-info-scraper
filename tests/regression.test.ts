@@ -36,7 +36,7 @@ describe('Regression Tests', () => {
     it(`should process all languages for ${countryName}`, async () => {
       let countryData: Country = { 
         name: {}, description: {}, 
-        capital: [], largest_city: [], government: [], official_language: [], demonym: [], currency: [], time_zone: [] 
+        capital: [], largestCity: [], government: [], officialLanguage: [], demonym: [], currency: [], timeZone: [] 
       };
 
       // 1. Process EN Pass
@@ -48,19 +48,19 @@ describe('Regression Tests', () => {
         const translations = await WikipediaAPI.fetchTranslations(
           [
               ...(rawParsed.capital?.map(i => i.articleId) || []),
-              ...(rawParsed.largest_city?.map(i => i.articleId) || []),
-              ...(rawParsed.official_language?.map(i => i.articleId) || []),
+              ...(rawParsed.largestCity?.map(i => i.articleId) || []),
+              ...(rawParsed.officialLanguage?.map(i => i.articleId) || []),
               ...(rawParsed.currency?.map(i => i.articleId) || []),
               ...(rawParsed.demonym?.map(i => i.articleId) || []),
               ...(rawParsed.government?.map(i => i.articleId) || []),
-              ...(rawParsed.time_zone?.map(i => i.articleId) || [])
+              ...(rawParsed.timeZone?.map(i => i.articleId) || [])
           ].filter(Boolean) as string[],
           ['pt', 'fr', 'it', 'es']
         );
 
         const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...rawParsed };
         
-        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
+        ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
           const items = (localizedDataEn as any)[field] || [];
           items.forEach((item: any) => {
             const articleId = item.articleId?.replace(/_/g, ' ');

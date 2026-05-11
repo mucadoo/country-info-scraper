@@ -17,7 +17,7 @@ const HEADER_MAPPINGS: Record<string, Record<string, string[]>> = {
     it: ['capitale'], 
     es: ['capital', 'sede'] 
   },
-  largest_city: { 
+  largestCity: { 
     en: ['largest city', 'largest settlement'], 
     pt: ['maior cidade'], 
     fr: ['plus grande ville'], 
@@ -38,7 +38,7 @@ const HEADER_MAPPINGS: Record<string, Record<string, string[]>> = {
     it: ['forma di governo', 'governo'], 
     es: ['gobierno', 'forma de estado'] 
   },
-  official_language: { 
+  officialLanguage: { 
     en: ['official language', 'languages'], 
     pt: ['idioma oficial', 'língua oficial', 'línguas'], 
     fr: ['langue officielle', 'langues'], 
@@ -95,13 +95,13 @@ export class InfoboxParser {
     });
 
     if (lang === 'en') {
-        if (!country.density_km2 && country.population && country.area_km2) {
-          country.density_km2 = country.population / country.area_km2;
+        if (!country.densityKm2 && country.population && country.areaKm2) {
+          country.densityKm2 = country.population / country.areaKm2;
         }
     }
 
-    if (!country.largest_city) {
-      country.largest_city = country.capital;
+    if (!country.largestCity) {
+      country.largestCity = country.capital;
     }
   }
 
@@ -113,7 +113,7 @@ export class InfoboxParser {
 
     if (matches('capital')) {
       parseCapital($, data, country, lang);
-    } else if (matches('largest_city')) {
+    } else if (matches('largestCity')) {
       parseLargestCity($, data, country, lang);
     } else if (matches('demonym')) {
       const demonyms = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
@@ -132,24 +132,25 @@ export class InfoboxParser {
     } else if (matches('currency')) {
       country.currency = parseCurrency(data).map(item => ({
         articleId: item.articleId,
-        name: { [lang]: item.text }
+        name: { [lang]: item.text },
+        isoCode: item.isoCode
       }));
     } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
       const tz = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.time_zone = tz.map(item => ({
+      country.timeZone = tz.map(item => ({
         articleId: item.articleId,
         name: { [lang]: item.text }
       }));
     } else if (lang === 'en' && lowerHeaderText.includes('calling code')) {
       const dataClone = data.clone();
       dataClone.find('sup, .reference').remove();
-      country.calling_code = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);
+      country.callingCode = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);
     } else if (lang === 'en' && headerText.includes('ISO 3166 code')) {
-      country.iso_code = ExtractionUtils.cleanText(data);
+      country.isoCode = ExtractionUtils.cleanText(data);
     } else if (lang === 'en' && lowerHeaderText.includes('internet tld')) {
       const tldClone = data.clone();
       tldClone.find('sup, .reference, style, script, link, meta').remove();
-      country.internet_TLD = tldClone.text().split('[')[0].trim().split(/[;,]/).map(t => t.trim()).filter(t => t);
+      country.internetTld = tldClone.text().split('[')[0].trim().split(/[;,]/).map(t => t.trim()).filter(t => t);
     } else {
       handleOtherFields(headerText, data, country, state, lang);
     }

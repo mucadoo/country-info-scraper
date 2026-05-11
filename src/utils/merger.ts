@@ -1,19 +1,28 @@
-import { Country } from '../types/country.js';
+import { Country, CountrySchema } from '../types/country.js';
 
 type LocalizedFieldKey = 'name' | 'description';
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
+type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 export const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
-  const existing: Country = existingJson ? JSON.parse(existingJson) : {
-    name: {}, description: {}, capital: [], largest_city: [],
-    government: [], official_language: [], demonym: [], currency: [], time_zone: []
-  };
+  let existing: Country;
+  try {
+    existing = existingJson ? CountrySchema.parse(JSON.parse(existingJson)) : {
+      name: {}, description: {}, capital: [], largestCity: [],
+      government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
+    } as Country;
+  } catch (e) {
+    // Fallback if parsing fails (e.g. old schema or invalid data)
+    existing = {
+      name: {}, description: {}, capital: [], largestCity: [],
+      government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
+    } as Country;
+  }
   
   const country = { ...existing };
   
   // Merge fields
   const localizedStringFields: LocalizedFieldKey[] = ['name', 'description'];
-  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government', 'time_zone'];
+  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largestCity', 'officialLanguage', 'demonym', 'currency', 'government', 'timeZone'];
   
   localizedStringFields.forEach(field => {
     const newVal = newData[field] as Record<string, string> | undefined;
@@ -40,6 +49,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
         const existingItem = mergedMap.get(key);
         if (existingItem) {
           existingItem.name = { ...existingItem.name, ...newItem.name };
+          if (newItem.isoCode) existingItem.isoCode = newItem.isoCode;
         } else {
           mergedMap.set(key, newItem);
         }
@@ -50,16 +60,16 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   });
 
   // Keep root fields if present
-  if (newData.iso_code !== undefined) country.iso_code = newData.iso_code;
+  if (newData.isoCode !== undefined) country.isoCode = newData.isoCode;
   if (newData.flagUrl !== undefined) country.flagUrl = newData.flagUrl;
   if (newData.population !== undefined) country.population = newData.population;
-  if (newData.area_km2 !== undefined) country.area_km2 = newData.area_km2;
-  if (newData.density_km2 !== undefined) country.density_km2 = newData.density_km2;
+  if (newData.areaKm2 !== undefined) country.areaKm2 = newData.areaKm2;
+  if (newData.densityKm2 !== undefined) country.densityKm2 = newData.densityKm2;
   if (newData.gdp !== undefined) country.gdp = newData.gdp;
   if (newData.hdi !== undefined) country.hdi = newData.hdi;
   
-  if (newData.calling_code !== undefined) country.calling_code = newData.calling_code;
-  if (newData.internet_TLD !== undefined) country.internet_TLD = newData.internet_TLD;
+  if (newData.callingCode !== undefined) country.callingCode = newData.callingCode;
+  if (newData.internetTld !== undefined) country.internetTld = newData.internetTld;
 
   return country;
 };

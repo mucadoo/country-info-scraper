@@ -1,6 +1,6 @@
 {
   "name": "wikigeo-data-scraper",
-  "version": "1.0.0",
+  "version": "0.1",
   "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia and publishes it as a live JSON API.",
   "type": "module",
   "scripts": {

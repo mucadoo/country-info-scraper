@@ -8,12 +8,12 @@ const LOCALIZED_FIELDS = [
   'name',
   'description',
   'capital',
-  'largest_city',
-  'official_language',
+  'largestCity',
+  'officialLanguage',
   'currency',
   'government',
   'demonym',
-  'time_zone'
+  'timeZone'
 ];
 
 async function main() {
@@ -22,7 +22,8 @@ async function main() {
     process.exit(1);
   }
 
-  const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+  const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+  const data = Array.isArray(rawData) ? rawData : rawData.data;
   const issues: any[] = [];
   const fieldIssuesCount: any = {};
 

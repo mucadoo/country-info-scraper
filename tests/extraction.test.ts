@@ -99,5 +99,12 @@ describe('Infobox Utilities', () => {
       const result = parseCurrency($('div') as any);
       expect(result).toEqual([{ text: 'Euro', articleId: 'Euro' }]);
     });
+
+    it('should extract ISO code from text', () => {
+      const html = '<div><a href="/wiki/Euro">Euro</a> (EUR)</div>';
+      const $ = cheerio.load(html);
+      const result = parseCurrency($('div') as any);
+      expect(result).toEqual([{ text: 'Euro', articleId: 'Euro', isoCode: 'EUR' }]);
+    });
   });
 });

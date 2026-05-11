@@ -26,7 +26,7 @@ const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
+type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 const crawler = new CheerioCrawler({
   maxConcurrency: 10,
@@ -88,12 +88,12 @@ const crawler = new CheerioCrawler({
         const countryData = CountryParser.parseCountry($, {}, lang);
         const articleIds = new Set([
             ...(countryData.capital?.map(i => i.articleId) || []),
-            ...(countryData.largest_city?.map(i => i.articleId) || []),
-            ...(countryData.official_language?.map(i => i.articleId) || []),
+            ...(countryData.largestCity?.map(i => i.articleId) || []),
+            ...(countryData.officialLanguage?.map(i => i.articleId) || []),
             ...(countryData.currency?.map(i => i.articleId) || []),
             ...(countryData.demonym?.map(i => i.articleId) || []),
             ...(countryData.government?.map(i => i.articleId) || []),
-            ...(countryData.time_zone?.map(i => i.articleId) || [])
+            ...(countryData.timeZone?.map(i => i.articleId) || [])
         ].filter(Boolean) as string[]);
         
         const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
@@ -104,7 +104,7 @@ const crawler = new CheerioCrawler({
         };
 
         // Fill translations
-        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
+        ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
           const key = field as LocalizedArrayFieldKey;
           const items = localizedData[key] as any[] || [];
           items.forEach(item => {
@@ -140,17 +140,29 @@ async function run() {
   await crawler.run(['https://en.wikipedia.org/wiki/List_of_sovereign_states']);
   const rawCountries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data) as Country);
   
-  // Sort by ISO code and ensure iso_code is the first property
+  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+  // Sort by ISO code and ensure isoCode is the first property
   const countries = rawCountries
-    .sort((a, b) => (a.iso_code || '').localeCompare(b.iso_code || ''))
+    .sort((a, b) => (a.isoCode || '').localeCompare(b.isoCode || ''))
     .map(country => {
-      const { iso_code, ...rest } = country;
-      return { iso_code, ...rest };
+      const { isoCode, ...rest } = country;
+      return { isoCode, ...rest };
     });
 
+  const output = {
+    metadata: {
+      generatedAt: new Date().toISOString(),
+      version: pkg.version,
+      license: pkg.license,
+      source: 'Wikipedia'
+    },
+    data: countries
+  };
+
   fs.mkdirSync('data', { recursive: true });
-  fs.writeFileSync('data/sovereign-states.json', JSON.stringify(countries, null, 2));
-  fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(countries));
+  fs.writeFileSync('data/sovereign-states.json', JSON.stringify(output, null, 2));
+  fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(output));
 }
 
 run().catch(err => { log.error('Scraper failed', err); process.exit(1); });

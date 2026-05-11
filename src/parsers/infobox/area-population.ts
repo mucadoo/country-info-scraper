@@ -51,7 +51,7 @@ export function processAreaAndPopulation(
     if (text.includes('total') || text.includes('land') || text.includes('•') || text === 'area') {
       const area = ExtractionUtils.extractArea(ExtractionUtils.cleanText(data));
       if (area) {
-        country.area_km2 = parseFloat(area);
+        country.areaKm2 = parseFloat(area);
         state.areaFound = true;
       }
     }
@@ -70,7 +70,7 @@ export function processAreaAndPopulation(
   if (!state.densityFound && state.currentSection === 'population' && text.includes('density')) {
     const density = ExtractionUtils.extractDensity(ExtractionUtils.cleanText(data));
     if (density) {
-      country.density_km2 = parseFloat(density);
+      country.densityKm2 = parseFloat(density);
       state.densityFound = true;
     }
   }

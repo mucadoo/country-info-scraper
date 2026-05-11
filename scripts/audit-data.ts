@@ -9,7 +9,8 @@ if (!fs.existsSync(DATA_PATH)) {
   process.exit(1);
 }
 
-const data: Country[] = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+const data: Country[] = Array.isArray(rawData) ? rawData : rawData.data;
 
 interface Issue {
   name: string | null | undefined;
@@ -24,7 +25,7 @@ data.forEach(country => {
   const name = country.name.en;
   
   // Check for NaN or null in critical numeric fields
-  const numericFields: (keyof Country)[] = ['population', 'area_km2'];
+  const numericFields: (keyof Country)[] = ['population', 'areaKm2'];
   numericFields.forEach(field => {
     const value = country[field];
     if (value === null || value === undefined || (typeof value === 'number' && isNaN(value as number))) {
@@ -46,7 +47,7 @@ data.forEach(country => {
   };
 
   // We only check these fields for brackets
-  const bracketCheckFields: (keyof Country)[] = ['name', 'capital', 'largest_city', 'official_language', 'government', 'demonym', 'currency', 'time_zone'];
+  const bracketCheckFields: (keyof Country)[] = ['name', 'capital', 'largestCity', 'officialLanguage', 'government', 'demonym', 'currency', 'timeZone'];
   bracketCheckFields.forEach(field => {
     checkBrackets(country[field], field as string);
   });

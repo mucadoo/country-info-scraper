@@ -99,7 +99,7 @@ const crawler = new CheerioCrawler({
       const name = $('h1#firstHeading').text();
       log.info(`Scraping ${name} (${lang})...`);
       
-      const countryData = CountryParser.parseCountry($);
+      const countryData = CountryParser.parseCountry($, {}, lang);
       // Map to localized fields
       const localizedData: Partial<Country> = {
         name: { [lang]: name },

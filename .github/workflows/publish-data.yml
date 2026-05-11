@@ -63,12 +63,12 @@ jobs:
         run: |
           git fetch origin data:data || echo "Data branch not found."
           
-          if git show data:countries.json > countries_old_raw.json 2>/dev/null; then
+          if git show data:sovereign-states.json > countries_old_raw.json 2>/dev/null; then
             echo "Found previous data."
             jq -S . countries_old_raw.json > countries_old.json
           fi
 
-          jq -S . data/countries.json > data/countries_normalized.json
+          jq -S . data/sovereign-states.json > data/countries_normalized.json
 
           if [ -f countries_old.json ]; then
             if git diff --no-index --exit-code countries_old.json data/countries_normalized.json > /dev/null; then
@@ -137,10 +137,10 @@ jobs:
             git rm -rf . || true
           fi
 
-          cp ../data/countries.json .
-          cp ../data/countries.min.json .
+          cp ../data/sovereign-states.json .
+          cp ../data/sovereign-states.min.json .
 
-          git add countries.json countries.min.json
+          git add sovereign-states.json sovereign-states.min.json
           git commit -m "Data update: $(date -u)" || exit 0
           git push origin data
           echo "new_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
@@ -153,8 +153,8 @@ jobs:
           target_commitish: ${{ steps.update_data.outputs.new_sha }}
           name: ${{ steps.release_name.outputs.name }}
           files: |
-            data/countries.json
-            data/countries.min.json
+            data/sovereign-states.json
+            data/sovereign-states.min.json
           body: |
             Automated multilingual data snapshot generated from Wikipedia.
 
@@ -162,8 +162,8 @@ jobs:
             ${{ steps.check_changes.outputs.last_tag != '' && format('- [View JSON Diff](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- _First data release_' }}
 
             **Live URLs (always up-to-date):**
-            - Full JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.json
-            - Minified JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/countries.min.json
+            - Full JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.json
+            - Minified JSON → https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.min.json
 
             Triggered by: **${{ github.event_name }}**
           draft: false

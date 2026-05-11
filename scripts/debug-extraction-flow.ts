@@ -1,4 +1,3 @@
-// file: scripts/debug-extraction-flow.ts
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';

@@ -159,8 +159,8 @@ async function run() {
   const allCountries = db.prepare('SELECT data FROM countries').all() as { data: string }[];
   const countries = allCountries.map(row => JSON.parse(row.data));
   
-  const prettyPath = 'data/countries.json';
-  const minPath = 'data/countries.min.json';
+  const prettyPath = 'data/sovereign-states.json';
+  const minPath = 'data/sovereign-states.min.json';
   
   fs.mkdirSync(path.dirname(prettyPath), { recursive: true });
   fs.writeFileSync(prettyPath, JSON.stringify(countries, null, 2));

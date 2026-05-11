@@ -12,22 +12,27 @@ describe('Regression Tests', () => {
     return;
   }
 
-  const files = fs.readdirSync(snapshotsDir).filter(f => f.endsWith('.html'));
   const grouped: Record<string, Record<string, string>> = {};
-
-  files.forEach(file => {
-    const [country, lang] = file.replace('.html', '').split('_');
-    if (!grouped[country]) grouped[country] = {};
-    grouped[country][lang] = file;
+  
+  ['en', 'pt', 'fr', 'it', 'es'].forEach(lang => {
+    const langDir = path.join(snapshotsDir, lang, 'sovereign_states');
+    if (fs.existsSync(langDir)) {
+      const files = fs.readdirSync(langDir).filter(f => f.endsWith('.html'));
+      files.forEach(file => {
+        const country = file.replace('.html', '');
+        if (!grouped[country]) grouped[country] = {};
+        grouped[country][lang] = path.join(lang, 'sovereign_states', file);
+      });
+    }
   });
 
   Object.entries(grouped).forEach(([countryName, langs]) => {
     describe(`Country: ${countryName}`, () => {
       const countryData: any = { name: {}, description: {}, capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} };
 
-      Object.entries(langs).forEach(([lang, filename]) => {
+      Object.entries(langs).forEach(([lang, relativePath]) => {
         it(`should parse ${lang} snapshot`, () => {
-          const html = fs.readFileSync(path.join(snapshotsDir, filename), 'utf-8');
+          const html = fs.readFileSync(path.join(snapshotsDir, relativePath), 'utf-8');
           const $ = cheerio.load(html);
           
           const partialCountry: any = {};
@@ -38,10 +43,6 @@ describe('Regression Tests', () => {
           if (!partialCountry.name) {
             partialCountry.name = { [lang]: name };
           }
-          // Special hack for France FR snapshot
-          if (countryName === 'france' && lang === 'fr') {
-              partialCountry.capital = { fr: 'Paris' };
-          }
 
           // Aggregate
           Object.keys(countryData).forEach(key => {
@@ -49,19 +50,6 @@ describe('Regression Tests', () => {
               countryData[key][lang] = partialCountry[key][lang];
             }
           });
-
-
-          if (countryName === 'france' && lang === 'fr') {
-              console.log('France partialCountry capital:', JSON.stringify(partialCountry.capital));
-          }
-
-
-          // Core metric checks (English only)
-          if (lang === 'en') {
-            // Note: Minimal snapshots don't contain population/area metrics if removed by parser
-            // We just ensure the fields are objects/values
-            expect(partialCountry.name).toBeDefined();
-          }
 
           // Localized fields checks
           expect(partialCountry.name?.[lang]).toBeDefined();

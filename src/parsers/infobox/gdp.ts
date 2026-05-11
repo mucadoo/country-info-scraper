@@ -1,4 +1,4 @@
-import { Cheerio } from 'crawlee';
+import { Cheerio, CheerioAPI } from 'crawlee';
 import { AnyNode } from 'domhandler';
 import { Country } from '../../types/country.js';
 
@@ -28,7 +28,7 @@ function parseNumericValue(text: string): number | null {
   return null;
 }
 
-export function parseGDP($: any, row: Cheerio<AnyNode>, country: Partial<Country>): void {
+export function parseGDP($: CheerioAPI, row: Cheerio<AnyNode>, country: Partial<Country>): void {
   let curr = row.next();
   for (let i = 0; i < 5 && curr.length > 0; i++) {
     const rowText = curr.text().toLowerCase();

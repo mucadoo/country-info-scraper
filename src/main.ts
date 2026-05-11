@@ -24,29 +24,47 @@ const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-const mergeCountryData = (existingJson: string | null, newData: Partial<Country>, lang: string): Country => {
-// ...
+type LocalizedFieldKey = 'name' | 'description' | 'capital' | 'largest_city' | 'government' | 'official_language' | 'demonym' | 'currency';
 
-  let country: Country = existingJson ? JSON.parse(existingJson) : {
+const mergeCountryData = (existingJson: string | null, newData: Partial<Country>, lang: string): Country => {
+  const existing: Country = existingJson ? JSON.parse(existingJson) : {
     name: {}, description: {}, capital: {}, largest_city: {},
     government: {}, official_language: {}, demonym: {}, currency: {}
   };
   
+  const country = { ...existing };
+  
   // Merge localized fields
-  const localizedFields = ['name', 'description', 'capital', 'largest_city', 'government', 'official_language', 'demonym', 'currency'] as const;
+  const localizedFields: LocalizedFieldKey[] = ['name', 'description', 'capital', 'largest_city', 'government', 'official_language', 'demonym', 'currency'];
   
   localizedFields.forEach(field => {
-    if (newData[field] && (newData[field] as any)[lang]) {
-      country[field] = { ...country[field], [lang]: (newData[field] as any)[lang] };
+    const newVal = newData[field] as Record<string, string> | undefined;
+    if (newVal && newVal[lang]) {
+      const currentVal = (country[field] || {}) as Record<string, string>;
+      const merged = { ...currentVal, [lang]: newVal[lang] };
+      // Exhaustive assignment to avoid any
+      if (field === 'name') country.name = merged;
+      else if (field === 'description') country.description = merged;
+      else if (field === 'capital') country.capital = merged;
+      else if (field === 'largest_city') country.largest_city = merged;
+      else if (field === 'government') country.government = merged;
+      else if (field === 'official_language') country.official_language = merged;
+      else if (field === 'demonym') country.demonym = merged;
+      else if (field === 'currency') country.currency = merged;
     }
   });
 
   // Keep root fields if present
-  Object.keys(newData).forEach(key => {
-    if (!localizedFields.includes(key as any)) {
-      (country as any)[key] = (newData as any)[key];
-    }
-  });
+  if (newData.ISO_code !== undefined) country.ISO_code = newData.ISO_code;
+  if (newData.flagUrl !== undefined) country.flagUrl = newData.flagUrl;
+  if (newData.population !== undefined) country.population = newData.population;
+  if (newData.area_km2 !== undefined) country.area_km2 = newData.area_km2;
+  if (newData.density_km2 !== undefined) country.density_km2 = newData.density_km2;
+  if (newData.gdp !== undefined) country.gdp = newData.gdp;
+  if (newData.hdi !== undefined) country.hdi = newData.hdi;
+  if (newData.time_zone !== undefined) country.time_zone = newData.time_zone;
+  if (newData.calling_code !== undefined) country.calling_code = newData.calling_code;
+  if (newData.internet_TLD !== undefined) country.internet_TLD = newData.internet_TLD;
 
   return country;
 };

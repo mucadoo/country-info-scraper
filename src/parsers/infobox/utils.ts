@@ -1,5 +1,5 @@
 import { Cheerio } from 'crawlee';
-import { AnyNode } from 'domhandler';
+import { AnyNode, isText, isTag } from 'domhandler';
 
 export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): string {
   const dataClone = data.clone();
@@ -8,7 +8,15 @@ export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): strin
 
   const elements = dataClone.find(selector);
   if (elements.length > 0) {
-    return elements.map((_, el) => (el as any).children[0]?.data?.trim() || '').get().filter(t => t).join(', ');
+    return elements.toArray().map((el: AnyNode) => {
+      if (isTag(el)) {
+        const firstChild = el.children?.[0];
+        if (firstChild && isText(firstChild)) {
+          return firstChild.data.trim();
+        }
+      }
+      return '';
+    }).filter(t => t).join(', ');
   }
   const single = dataClone.find('a').first();
   if (single.length > 0 && !/^\[\d+\]$/.test(single.text())) {

@@ -1,8 +1,12 @@
-// file: scripts/download-snapshots.ts
 import { CheerioCrawler, log } from 'crawlee';
 import fs from 'fs';
 import path from 'path';
-import * as cheerio from 'cheerio';
+import type { Element } from 'domhandler';
+
+interface GenericCheerioAPI {
+  (selector: any): any;
+  toString(): string;
+}
 
 const OUTPUT_BASE = 'tests/snapshots';
 const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
@@ -21,18 +25,21 @@ for (const lang of LANGS) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-function getMinimalHtml($: cheerio.CheerioAPI): string {
+function getMinimalHtml($: GenericCheerioAPI): string {
   const h1 = $('h1#firstHeading');
   const infoboxes = $('table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3');
   const paragraphs = $('#mw-content-text .mw-parser-output > p').slice(0, 10);
-  
+
+  const infoboxHtml = infoboxes.toArray().map((el: Element) => $(el).toString()).join('\n');
+  const paragraphsHtml = paragraphs.toArray().map((el: Element) => $(el).toString()).join('\n');
+
   return `
     <html>
       <head><meta charset="utf-8"></head>
       <body>
         ${h1.toString()}
-        ${infoboxes.map((_, el) => $(el).toString()).get().join('\n')}
-        ${paragraphs.map((_, el) => $(el).toString()).get().join('\n')}
+        ${infoboxHtml}
+        ${paragraphsHtml}
       </body>
     </html>
   `;

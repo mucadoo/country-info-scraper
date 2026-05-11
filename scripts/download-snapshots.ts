@@ -6,10 +6,18 @@ import * as cheerio from 'cheerio';
 
 const OUTPUT_BASE = 'tests/snapshots';
 const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
+const CATEGORY = 'sovereign_states';
+
+function sanitize(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
 
 // Ensure directories exist
 for (const lang of LANGS) {
-  const dir = path.join(OUTPUT_BASE, lang);
+  const dir = path.join(OUTPUT_BASE, lang, CATEGORY);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
@@ -32,7 +40,7 @@ function getMinimalHtml($: cheerio.CheerioAPI): string {
 
 const crawler = new CheerioCrawler({
   maxConcurrency: 10,
-  requestHandler: async ({ $, request, enqueueLinks }) => {
+  requestHandler: async ({ $, request }) => {
     
     if (request.label === 'list') {
       log.info('Fetching sovereign states list...');
@@ -45,15 +53,18 @@ const crawler = new CheerioCrawler({
         }
       });
       
-      await enqueueLinks({ urls: links, label: 'country_en' });
+      for (const url of links) {
+        await crawler.addRequests([{ url, label: 'country_en' }]);
+      }
       return;
     }
 
     if (request.label === 'country_en') {
       const baseName = request.url.split('/').pop()?.replace(/_/g, ' ') || $('h1').text();
+      const fileName = `${sanitize(baseName)}.html`;
       log.info(`Saving EN snapshot for ${baseName}...`);
       
-      fs.writeFileSync(path.join(OUTPUT_BASE, 'en', `${baseName}.html`), getMinimalHtml($));
+      fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
 
       for (const lang of ['pt', 'fr', 'it', 'es']) {
         const href = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
@@ -74,14 +85,15 @@ const crawler = new CheerioCrawler({
         log.error(`Missing lang for ${request.url}`);
         return;
       }
+      const fileName = `${sanitize(baseName)}.html`;
       log.info(`Saving ${lang.toUpperCase()} snapshot for ${baseName}...`);
-      fs.writeFileSync(path.join(OUTPUT_BASE, lang, `${baseName}.html`), getMinimalHtml($));
+      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, fileName), getMinimalHtml($));
     }
   }
 });
 
 async function run() {
-  log.info('Starting Organized Snapshot Downloader...');
+  log.info('Starting Refined Snapshot Downloader...');
   await crawler.run([
     { url: 'https://en.wikipedia.org/wiki/List_of_sovereign_states', label: 'list' }
   ]);

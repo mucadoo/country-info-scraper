@@ -78,7 +78,7 @@ const crawler = new CheerioCrawler({
 
     if (request.label === 'country_lang') {
       const { baseName, lang } = request.userData;
-      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, `${sanitize(baseName)}.html`), getMinimalHtml($, false));
+      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, `${sanitize(baseName)}.html`), getMinimalHtml($, true));
     }
   }
 });

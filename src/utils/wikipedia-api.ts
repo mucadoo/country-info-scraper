@@ -15,7 +15,7 @@ export class WikipediaAPI {
     
     for (let i = 0; i < articles.length; i += chunkSize) {
       const chunk = articles.slice(i, i + chunkSize);
-      const url = `https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&lllimit=max&redirects=1&format=json&titles=${chunk.join('|')}`;
+      const url = `https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&lllimit=max&redirects=1&format=json&titles=${chunk.map(encodeURIComponent).join('|')}`;
       
       try {
         const response = await axios.get(url, {

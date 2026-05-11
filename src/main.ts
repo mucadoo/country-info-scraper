@@ -135,6 +135,7 @@ const crawler = new CheerioCrawler({
       const countryData = CountryParser.parseCountry($, {}, lang);
       const articleIds = new Set([
           ...(countryData.capital?.en?.map(i => i.articleId) || []),
+          ...(countryData.largest_city?.en?.map(i => i.articleId) || []),
           ...(countryData.official_language?.en?.map(i => i.articleId) || []),
           ...(countryData.currency?.en?.map(i => i.articleId) || [])
       ].filter(Boolean) as string[]);
@@ -147,14 +148,18 @@ const crawler = new CheerioCrawler({
       };
 
       // Fill translations
-      ['capital', 'official_language', 'currency'].forEach(field => {
+      ['capital', 'largest_city', 'official_language', 'currency'].forEach(field => {
         const key = field as LocalizedArrayFieldKey;
         const data = (localizedData[key] as any)?.en || [];
         ['pt', 'fr', 'it', 'es'].forEach(l => {
-            const translated = data.map((item: any) => ({
-                text: item.articleId && translations[item.articleId]?.[l] ? translations[item.articleId][l] : item.text,
-                articleId: item.articleId
-            }));
+            const translated = data.map((item: any) => {
+                const articleId = item.articleId?.replace(/_/g, ' ');
+                const translation = articleId ? translations[articleId]?.[l] : null;
+                return {
+                    text: translation || item.text,
+                    articleId: item.articleId
+                };
+            });
             if (!localizedData[key]) (localizedData as any)[key] = {};
             (localizedData[key] as any)[l] = translated;
         });
@@ -164,7 +169,7 @@ const crawler = new CheerioCrawler({
       insertCountry.run(countryId, JSON.stringify(merged));
     } else {
       const localizedData: Partial<Country> = { name: { [lang]: name } };
-      CountryParser.parseCountry($, localizedData, lang);
+      DescriptionParser.parse($, localizedData, lang);
       const existing = getCountry.get(countryId) as { data: string } | undefined;
       const merged = mergeCountryData(existing?.data || null, localizedData, lang);
       insertCountry.run(countryId, JSON.stringify(merged));

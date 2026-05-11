@@ -5,25 +5,32 @@ import { ExtractionUtils } from '../utils/extraction.js';
 
 export class DescriptionParser {
   static parse($: CheerioAPI, country: Partial<Country>, lang: string = 'en'): void {
-    // Find the first paragraph outside the infobox
+    // Find the first few paragraphs outside the infobox
     let infobox = $('table.infobox').first();
-    let p: Cheerio<AnyNode> | null = null;
+    let paragraphs: Cheerio<AnyNode>[] = [];
 
     if (infobox.length > 0) {
-      p = infobox.nextAll('p').first();
+      paragraphs = infobox.nextAll('p').slice(0, 5).toArray().map(p => $(p));
     }
 
-    if (!p || p.length === 0) {
-      p = $('p').first();
+    if (paragraphs.length === 0) {
+      paragraphs = $('p').slice(0, 5).toArray().map(p => $(p));
     }
 
-    // Skip empty paragraphs
-    while (p && p.length > 0 && p.text().trim() === '') {
-      p = p.nextAll('p').first();
+    // Combine paragraphs for search but keep the first non-empty for description
+    let fullTextForExtraction = '';
+    let firstDesc = '';
+
+    for (const p of paragraphs) {
+      const text = ExtractionUtils.cleanText(p);
+      if (text) {
+        if (!firstDesc) firstDesc = text;
+        fullTextForExtraction += text + ' ';
+      }
     }
 
-    if (p && p.length > 0) {
-      let desc = ExtractionUtils.cleanText(p);
+    if (firstDesc) {
+      let desc = firstDesc;
       
       // FIX: Safely remove parentheses (even nested ones) without ReDoS
       let previous = '';
@@ -39,27 +46,6 @@ export class DescriptionParser {
       desc = desc.replace(/\s+([,.])/g, '$1');
 
       country.description = { ...country.description, [lang]: desc };
-      
-      // Fallback: Try to extract capital if it's explicitly mentioned in the description
-      const capital = country.capital as Record<string, {text: string}[] | null | undefined>;
-      if (!capital?.[lang] || capital[lang].length === 0) {
-        const capitalKeywords = {
-            en: 'capital',
-            pt: 'capital',
-            fr: 'capitale',
-            it: 'capitale',
-            es: 'capital'
-        };
-        const keyword = capitalKeywords[lang as keyof typeof capitalKeywords] || 'capital';
-        const capitalMatch = desc.match(new RegExp(`(?:${keyword}).*?is\\s+([^,.;]+)`, 'i'));
-        if (capitalMatch) {
-            const capitalText = capitalMatch[1].replace(/\s+(?:and|as|with|at).*/, '').trim();
-            if (capitalText && capitalText.length > 2 && /^[A-Z\xC0-\xFF]/.test(capitalText)) {
-                const currentCapitals = capital?.[lang] || [];
-                country.capital = { ...country.capital, [lang]: [...currentCapitals, { text: capitalText }] };
-            }
-        }
-      }
     }
   }
 }

@@ -16,16 +16,25 @@ const mergeCountryData = (country: Country, newData: Partial<Country>, lang: str
   // Merge localized string fields
   ['name', 'description', 'government'].forEach(field => {
     const newVal = newData[field as keyof Country] as Record<string, string> | undefined;
-    if (newVal?.[lang]) {
-        (newCountry as any)[field] = { ...(newCountry as any)[field], [lang]: newVal[lang] };
+    if (newVal) {
+        Object.entries(newVal).forEach(([l, val]) => {
+            if (val) (newCountry as any)[field] = { ...(newCountry as any)[field], [l]: val };
+        });
     }
   });
 
   // Merge array fields
   ['capital', 'largest_city', 'official_language', 'demonym', 'currency'].forEach(field => {
     const newVal = newData[field as keyof Country] as Record<string, {text: string, articleId?: string}[]> | undefined;
-    if (newVal?.[lang]) {
-        (newCountry as any)[field] = { ...(newCountry as any)[field], [lang]: newVal[lang] };
+    if (newVal) {
+        Object.entries(newVal).forEach(([l, val]) => {
+            if (val) {
+                const current = (newCountry as any)[field]?.[l] || [];
+                // Dedup by text
+                const merged = Array.from(new Map([...current, ...val].map(i => [i.text, i])).values());
+                (newCountry as any)[field] = { ...(newCountry as any)[field], [l]: merged };
+            }
+        });
     }
   });
 

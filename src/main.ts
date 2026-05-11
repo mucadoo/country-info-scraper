@@ -93,8 +93,37 @@ const crawler = new CheerioCrawler({
   requestHandler: async ({ $, request, enqueueLinks }) => {
     if (request.url.includes('List_of_sovereign_states')) {
       const table = $('table.wikitable').first();
-      const links = table.find('tbody > tr').toArray().map(r => $(r).find('td').first().find('a').attr('href')).filter(Boolean) as string[];
-      await enqueueLinks({ urls: links.map(h => `https://en.wikipedia.org${h}`), label: 'country' });
+      const rows = table.find('tbody > tr').toArray();
+      const countryLinks = rows.map(r => {
+        const a = $(r).find('td').first().find('a');
+        return { 
+          title: a.attr('title'), 
+          href: a.attr('href') 
+        };
+      }).filter(l => l.title && l.href && !l.href.includes('redlink=1'));
+
+      const titles = countryLinks.map(l => l.title!) as string[];
+      const languages = ['pt', 'fr', 'it', 'es'];
+      const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
+
+      for (const link of countryLinks) {
+        const baseName = link.title!;
+        const enUrl = `https://en.wikipedia.org${link.href}`;
+        
+        // Enqueue English
+        await enqueueLinks({ urls: [enUrl], label: 'country', userData: { baseName, lang: 'en' } });
+        
+        // Enqueue Localized
+        const langLinks = allLangLinks[baseName];
+        if (langLinks) {
+          for (const lang of languages) {
+            if (langLinks[lang]) {
+              const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
+              await enqueueLinks({ urls: [locUrl], label: 'country', userData: { baseName, lang } });
+            }
+          }
+        }
+      }
       return;
     }
 
@@ -131,21 +160,11 @@ const crawler = new CheerioCrawler({
         });
       });
 
-      // Enqueue interlanguage
-      const languages = ['pt', 'fr', 'it', 'es'];
-      for (const el of $('.interlanguage-link-target').toArray()) {
-        const langCode = $(el).attr('lang');
-        const href = $(el).attr('href');
-        if (langCode && languages.includes(langCode) && href) {
-          await enqueueLinks({ urls: [href], label: 'country', userData: { baseName: name, lang: langCode } });
-        }
-      }
-
       const merged = mergeCountryData(null, localizedData, 'en');
       insertCountry.run(countryId, JSON.stringify(merged));
     } else {
       const localizedData: Partial<Country> = { name: { [lang]: name } };
-      DescriptionParser.parse($, localizedData, lang);
+      CountryParser.parseCountry($, localizedData, lang);
       const existing = getCountry.get(countryId) as { data: string } | undefined;
       const merged = mergeCountryData(existing?.data || null, localizedData, lang);
       insertCountry.run(countryId, JSON.stringify(merged));

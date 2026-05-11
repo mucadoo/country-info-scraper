@@ -6,7 +6,7 @@ export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): { tex
   dataClone.find('sup, i, .reference').remove();
   dataClone.find('br').append(' ');
 
-  let elements = dataClone.find(selector);
+  let elements: Cheerio<AnyNode> = dataClone.find(selector);
   if (elements.length === 0 && data.is(selector)) {
     elements = dataClone;
   }

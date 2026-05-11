@@ -32,32 +32,53 @@ const crawler = new CheerioCrawler({
   maxConcurrency: 10,
   requestHandler: async ({ $, request }) => {
     if (request.label === 'list') {
-      const links = $('table.wikitable').first().find('tbody > tr').toArray().map(r => $(r).find('td').first().find('a').attr('href')).filter(h => h && !h.includes('redlink=1')) as string[];
-      await crawler.addRequests(links.map(h => ({ url: `https://en.wikipedia.org${h}`, label: 'country_en' })));
+      const rows = $('table.wikitable').first().find('tbody > tr').toArray();
+      const countryLinks = rows.map(r => {
+        const a = $(r).find('td').first().find('a');
+        return { 
+          title: a.attr('title'), 
+          href: a.attr('href') 
+        };
+      }).filter(l => l.title && l.href && !l.href.includes('redlink=1'));
+
+      const titles = countryLinks.map(l => l.title!) as string[];
+      const languages = ['pt', 'fr', 'it', 'es'];
+      const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
+
+      for (const link of countryLinks) {
+        const baseName = link.title!;
+        const enUrl = `https://en.wikipedia.org${link.href}`;
+        
+        // Enqueue English
+        await crawler.addRequests([{ url: enUrl, label: 'country_en', userData: { baseName } }]);
+        
+        // Enqueue Localized
+        const langLinks = allLangLinks[baseName];
+        if (langLinks) {
+          for (const lang of languages) {
+            if (langLinks[lang]) {
+              const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
+              await crawler.addRequests([{ url: locUrl, label: 'country_lang', userData: { baseName, lang } }]);
+            }
+          }
+        }
+      }
       return;
     }
 
     if (request.label === 'country_en') {
-      const baseName = request.url.split('/').pop()?.replace(/_/g, ' ') || $('h1').text();
+      const baseName = request.userData.baseName;
       const fileName = `${sanitize(baseName)}.html`;
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
       const countryData = CountryParser.parseCountry($ as any, {}, 'en');
       [...(countryData.capital?.en || []), ...(countryData.official_language?.en || []), ...(countryData.currency?.en || [])]
         .forEach(i => { if (i.articleId) allArticleIds.add(i.articleId); });
-
-      for (const lang of ['pt', 'fr', 'it', 'es']) {
-        const href = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
-        if (href) {
-          const url = href.startsWith('//') ? `https:${href}` : href;
-          await crawler.addRequests([{ url, label: 'country_lang', userData: { baseName, lang } }]);
-        }
-      }
     }
 
     if (request.label === 'country_lang') {
       const { baseName, lang } = request.userData;
-      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, `${sanitize(baseName)}.html`), getMinimalHtml($, true));
+      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, `${sanitize(baseName)}.html`), getMinimalHtml($, false));
     }
   }
 });

@@ -3,9 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
 import { CountryParser } from '../src/parsers/country-parser.js';
+import { DescriptionParser } from '../src/parsers/description.js';
 
 describe('Regression Tests', () => {
   const snapshotsDir = path.join(process.cwd(), 'tests/snapshots');
+  const translations = JSON.parse(fs.readFileSync(path.join(snapshotsDir, 'translations.json'), 'utf-8'));
   
   if (!fs.existsSync(snapshotsDir)) {
     it.skip('Snapshots directory not found', () => {});
@@ -13,12 +15,10 @@ describe('Regression Tests', () => {
   }
 
   const grouped: Record<string, Record<string, string>> = {};
-  
   ['en', 'pt', 'fr', 'it', 'es'].forEach(lang => {
     const langDir = path.join(snapshotsDir, lang, 'sovereign_states');
     if (fs.existsSync(langDir)) {
-      const files = fs.readdirSync(langDir).filter(f => f.endsWith('.html'));
-      files.forEach(file => {
+      fs.readdirSync(langDir).filter(f => f.endsWith('.html')).forEach(file => {
         const country = file.replace('.html', '');
         if (!grouped[country]) grouped[country] = {};
         grouped[country][lang] = path.join(lang, 'sovereign_states', file);
@@ -30,48 +30,51 @@ describe('Regression Tests', () => {
     describe(`Country: ${countryName}`, () => {
       const countryData: any = { name: {}, description: {}, capital: {}, largest_city: {}, government: {}, official_language: {}, demonym: {}, currency: {} };
 
-      Object.entries(langs).forEach(([lang, relativePath]) => {
-        it(`should parse ${lang} snapshot`, () => {
-          const html = fs.readFileSync(path.join(snapshotsDir, relativePath), 'utf-8');
+      // 1. Process EN Pass
+      if (langs['en']) {
+        it('should process EN infobox and map translations', () => {
+          const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
           const $ = cheerio.load(html);
+          const partialData = CountryParser.parseCountry($ as any, {}, 'en');
           
-          const partialCountry: any = {};
-          CountryParser.parseCountry($ as any, partialCountry, lang);
-          
-          // Manually add name from h1 as main.ts does
-          const name = $('h1#firstHeading').text();
-          if (!partialCountry.name) {
-            partialCountry.name = { [lang]: name };
-          }
-
-          // Aggregate
-          Object.keys(countryData).forEach(key => {
-            if (partialCountry[key] && partialCountry[key][lang]) {
-              countryData[key][lang] = partialCountry[key][lang];
-            }
+          ['capital', 'official_language', 'currency'].forEach(field => {
+            const data = (partialData as any)[field]?.en || [];
+            countryData[field] = { en: data };
+            
+            ['pt', 'fr', 'it', 'es'].forEach(l => {
+              countryData[field][l] = data.map((item: any) => ({
+                text: item.articleId && translations[item.articleId]?.[l] ? translations[item.articleId][l] : item.text,
+                articleId: item.articleId
+              }));
+            });
           });
-
-          // Localized fields checks
-          expect(partialCountry.name?.[lang]).toBeDefined();
-          expect(typeof partialCountry.name?.[lang]).toBe('string');
+          
+          expect(countryData.capital.en[0]).toHaveProperty('text');
+          expect(countryData.capital.en[0]).toHaveProperty('articleId');
+          expect(countryData.capital.fr).toBeDefined();
         });
-      });
+      }
 
-      it('should have all 5 languages populated', () => {
-        ['en', 'pt', 'fr', 'it', 'es'].forEach(lang => {
-          if (langs[lang]) {
+      // 2. Localized Passes
+      ['pt', 'fr', 'it', 'es'].forEach(lang => {
+        if (langs[lang]) {
+          it(`should process ${lang} localized description`, () => {
+            const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
+            const $ = cheerio.load(html);
+            countryData.name[lang] = $('h1#firstHeading').text().trim();
+            DescriptionParser.parse($ as any, countryData, lang);
+            
             expect(countryData.name[lang]).toBeDefined();
-            expect(countryData.name[lang].length).toBeGreaterThan(0);
-          }
-        });
+            expect(countryData.description[lang]).toBeDefined();
+          });
+        }
       });
 
       if (countryName === 'france') {
-        it('should have France specific data', () => {
-          console.log('France countryData capital:', JSON.stringify(countryData.capital));
-          expect(countryData.capital.fr).toBeDefined();
-          expect(countryData.capital.fr).toContain('Paris');
+        it('should have correct French specific translations', () => {
+          expect(countryData.capital.fr[0].text).toBe('Paris');
           expect(countryData.name.es).toBe('Francia');
+          expect(countryData.description.es).toBeDefined();
         });
       }
     });

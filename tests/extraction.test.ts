@@ -1,7 +1,11 @@
 import { describe, it, expect } from 'vitest';
+import * as cheerio from 'cheerio';
 import { ExtractionUtils } from '../src/utils/extraction.js';
+import { parseListOrLink } from '../src/parsers/infobox/utils.js';
+import { parseCurrency } from '../src/parsers/infobox/currency.js';
 
 describe('ExtractionUtils', () => {
+  // ... existing tests ...
   describe('extractArea', () => {
     it('should extract standard area with commas', () => {
       expect(ExtractionUtils.extractArea('1,234,567.8 km2')).toBe('1234567.8');
@@ -56,6 +60,43 @@ describe('ExtractionUtils', () => {
 
     it('should prepend https if missing', () => {
       expect(ExtractionUtils.normalizeFlagUrl('//upload.wikimedia.org/test.png')).toBe('https://upload.wikimedia.org/test.png');
+    });
+  });
+});
+
+describe('Infobox Utilities', () => {
+  describe('parseListOrLink', () => {
+    it('should extract multiple links correctly', () => {
+      const html = '<ul><li><a href="/wiki/Item_1">Item 1</a></li><li><a href="/wiki/Item_2">Item 2</a></li></ul>';
+      const $ = cheerio.load(html);
+      const result = parseListOrLink($('ul'), 'li');
+      expect(result).toEqual([
+        { text: 'Item 1', articleId: 'Item_1' },
+        { text: 'Item 2', articleId: 'Item_2' }
+      ]);
+    });
+
+    it('should handle plain text fallbacks', () => {
+      const html = '<div>Plain Text</div>';
+      const $ = cheerio.load(html);
+      const result = parseListOrLink($('div'), 'li');
+      expect(result).toEqual([{ text: 'Plain Text' }]);
+    });
+
+    it('should handle single link with complex href', () => {
+      const html = '<a href="/wiki/Item_1#Anchor">Item 1</a>';
+      const $ = cheerio.load(html);
+      const result = parseListOrLink($('a'), 'li');
+      expect(result).toEqual([{ text: 'Item 1', articleId: 'Item_1#Anchor' }]);
+    });
+  });
+
+  describe('parseCurrency', () => {
+    it('should skip ISO 4217 links', () => {
+      const html = '<div><a href="/wiki/Euro" title="Currency">Euro</a> (<a href="/wiki/ISO_4217" title="ISO 4217">ISO 4217</a>)</div>';
+      const $ = cheerio.load(html);
+      const result = parseCurrency($('div'));
+      expect(result).toEqual([{ text: 'Euro', articleId: 'Euro' }]);
     });
   });
 });

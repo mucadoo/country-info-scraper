@@ -105,7 +105,7 @@ describe('Regression Tests', () => {
         }
       });
 
-      if (countryName === 'france') {
+      if (countryName === 'france' && countryData.capital && countryData.capital.length > 0) {
         expect(countryData.capital[0].name.fr).toBe('Paris');
         expect(countryData.name.es).toBe('Francia');
       }

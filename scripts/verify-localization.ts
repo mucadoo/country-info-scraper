@@ -52,7 +52,7 @@ async function main() {
           return fieldData.some(item => !item.name[lang] || item.name[lang].trim() === '');
         } else {
           // Old/Localized structure: record of lang to value
-          const langData = fieldData[lang];
+          const langData = (fieldData as Record<string, unknown>)[lang];
           if (langData === undefined) return true;
           if (typeof langData === 'string' && langData.trim() === '') return true;
           return false;

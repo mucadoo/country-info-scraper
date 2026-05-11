@@ -101,7 +101,7 @@ export class InfoboxParser {
     }
 
     if (!country.largestCity) {
-      country.largestCity = country.capital;
+      country.largestCity = country.capital ?? [];
     }
   }
 

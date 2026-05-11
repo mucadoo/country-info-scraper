@@ -24,8 +24,16 @@ export class DescriptionParser {
 
     if (p && p.length > 0) {
       let desc = ExtractionUtils.cleanText(p);
+      
+      // FIX: Safely remove parentheses (even nested ones) without ReDoS
+      let previous = '';
+      while (desc !== previous) {
+        previous = desc;
+        // This safe regex removes only innermost paired parentheses
+        desc = desc.replace(/\([^()]*\)/g, '');
+      }
+
       desc = desc
-        .replace(/\(([^()]*|\([^()]*\))*\)/g, '')
         .replace(/\s+/g, ' ')
         .trim();
       desc = desc.replace(/\s+([,.])/g, '$1');

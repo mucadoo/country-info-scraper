@@ -9,6 +9,11 @@ const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
 const CATEGORY = 'sovereign_states';
 
 function sanitize(name: string): string {
+  try {
+    name = decodeURIComponent(name);
+  } catch (e) {
+    // Ignore decode errors
+  }
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
 }
 
@@ -20,7 +25,7 @@ for (const lang of LANGS) {
 function getMinimalHtml($: any, skipInfobox: boolean = false): string {
   const h1 = $('h1#firstHeading');
   const infoboxes = skipInfobox ? '' : $('table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3').toString();
-  const paragraphs = $('#mw-content-text .mw-parser-output > p').slice(0, 10).toString();
+  const paragraphs = $('#mw-content-text p').slice(0, 10).toString();
 
   return `<html><head><meta charset="utf-8"></head><body>${h1.toString()}${infoboxes}${paragraphs}</body></html>`;
 }
@@ -71,8 +76,16 @@ const crawler = new CheerioCrawler({
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
       const countryData = CountryParser.parseCountry($ as any, {}, 'en');
-      [...(countryData.capital || []), ...(countryData.official_language || []), ...(countryData.currency || [])]
-        .forEach(i => { if (i.articleId) allArticleIds.add(i.articleId); });
+      const linkedFields = [
+        'capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'
+      ];
+
+      linkedFields.forEach(field => {
+        const items = (countryData as any)[field] || [];
+        items.forEach((i: any) => { 
+          if (i.articleId) allArticleIds.add(i.articleId.replace(/_/g, ' ')); 
+        });
+      });
     }
 
     if (request.label === 'country_lang') {

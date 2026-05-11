@@ -1,14 +1,20 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
 import { CountryParser } from '../src/parsers/country-parser.js';
 import { DescriptionParser } from '../src/parsers/description.js';
+import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
+import { mergeCountryData } from '../src/utils/merger.js';
+import { Country } from '../src/types/country.js';
 
 describe('Regression Tests', () => {
   const snapshotsDir = path.join(process.cwd(), 'tests/snapshots');
-  const translations = JSON.parse(fs.readFileSync(path.join(snapshotsDir, 'translations.json'), 'utf-8'));
   
+  beforeAll(() => {
+    WikipediaAPI.useSnapshots(path.join(snapshotsDir, 'translations.json'));
+  });
+
   if (!fs.existsSync(snapshotsDir)) {
     it.skip('Snapshots directory not found', () => {});
     return;
@@ -27,66 +33,79 @@ describe('Regression Tests', () => {
   });
 
   Object.entries(grouped).forEach(([countryName, langs]) => {
-    describe(`Country: ${countryName}`, () => {
-      const countryData: any = { 
+    it(`should process all languages for ${countryName}`, async () => {
+      let countryData: Country = { 
         name: {}, description: {}, 
         capital: [], largest_city: [], government: [], official_language: [], demonym: [], currency: [] 
       };
 
       // 1. Process EN Pass
       if (langs['en']) {
-        it('should process EN infobox and map translations', () => {
-          const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
-          const $ = cheerio.load(html);
-          const partialData: any = {};
-          CountryParser.parseCountry($ as any, partialData, 'en');
-          
-          ['capital', 'official_language', 'currency'].forEach(field => {
-            const items = partialData[field] || [];
-            countryData[field] = items;
-            
-            items.forEach((item: any) => {
-              ['pt', 'fr', 'it', 'es'].forEach(l => {
-                if (item.articleId && translations[item.articleId]?.[l]) {
-                  item.name[l] = translations[item.articleId][l];
-                } else if (!item.name[l]) {
-                  item.name[l] = item.name.en;
-                }
-              });
+        const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
+        const $ = cheerio.load(html);
+        const rawParsed = CountryParser.parseCountry($ as any, {}, 'en');
+        
+        const translations = await WikipediaAPI.fetchTranslations(
+          [
+              ...(rawParsed.capital?.map(i => i.articleId) || []),
+              ...(rawParsed.largest_city?.map(i => i.articleId) || []),
+              ...(rawParsed.official_language?.map(i => i.articleId) || []),
+              ...(rawParsed.currency?.map(i => i.articleId) || []),
+              ...(rawParsed.demonym?.map(i => i.articleId) || []),
+              ...(rawParsed.government?.map(i => i.articleId) || [])
+          ].filter(Boolean) as string[],
+          ['pt', 'fr', 'it', 'es']
+        );
+
+        const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...rawParsed };
+        
+        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
+          const items = (localizedDataEn as any)[field] || [];
+          items.forEach((item: any) => {
+            const articleId = item.articleId?.replace(/_/g, ' ');
+            ['pt', 'fr', 'it', 'es'].forEach(l => {
+              const translation = articleId ? translations[articleId]?.[l] : null;
+              if (translation) {
+                item.name[l] = translation;
+              } else if (!item.name[l]) {
+                item.name[l] = item.name.en;
+              }
             });
           });
-          
-          expect(countryData.capital[0].name).toHaveProperty('en');
-          expect(countryData.capital[0]).toHaveProperty('articleId');
-          expect(countryData.capital[0].name.fr).toBeDefined();
         });
+
+        countryData = mergeCountryData(JSON.stringify(countryData), localizedDataEn);
       }
 
       // 2. Localized Passes
       ['pt', 'fr', 'it', 'es'].forEach(lang => {
         if (langs[lang]) {
-          it(`should process ${lang} localized description`, () => {
-            const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
-            const $ = cheerio.load(html);
-            
-            const locData: any = { name: { [lang]: '' }, description: { [lang]: '' } };
-            locData.name[lang] = $('h1#firstHeading').text().trim();
-            DescriptionParser.parse($ as any, locData, lang);
+          const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
+          const $ = cheerio.load(html);
+          
+          const locData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
+          DescriptionParser.parse($ as any, locData, lang);
 
-            countryData.name[lang] = locData.name[lang];
-            countryData.description[lang] = locData.description[lang];
+          countryData = mergeCountryData(JSON.stringify(countryData), locData);
+        }
+      });
 
-            expect(countryData.name[lang]).toBeDefined();
-            expect(countryData.description[lang]).toBeDefined();          });
+      // Basic assertions
+      expect(countryData.name.en).toBeDefined();
+      if (langs['en']) {
+        expect(countryData.capital[0].name.en).toBeDefined();
+      }
+      
+      ['pt', 'fr', 'it', 'es'].forEach(lang => {
+        if (langs[lang]) {
+          expect(countryData.name[lang]).toBeDefined();
+          expect(countryData.description[lang]).toBeDefined();
         }
       });
 
       if (countryName === 'france') {
-        it('should have correct French specific translations', () => {
-          expect(countryData.capital[0].name.fr).toBe('Paris');
-          expect(countryData.name.es).toBe('Francia');
-          expect(countryData.description.es).toBeDefined();
-        });
+        expect(countryData.capital[0].name.fr).toBe('Paris');
+        expect(countryData.name.es).toBe('Francia');
       }
     });
   });

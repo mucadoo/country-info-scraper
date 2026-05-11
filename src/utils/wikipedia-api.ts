@@ -1,6 +1,22 @@
 import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
 
 export class WikipediaAPI {
+  private static snapshotData: Record<string, Record<string, string>> | null = null;
+  private static isSnapshotMode = false;
+
+  /**
+   * Enables snapshot mode and loads translations from a file.
+   * Useful for offline tests.
+   */
+  static useSnapshots(filePath: string = 'tests/snapshots/translations.json'): void {
+    this.isSnapshotMode = true;
+    if (fs.existsSync(filePath)) {
+      this.snapshotData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    }
+  }
+
   /**
    * Fetches translations for given Wikipedia article titles.
    * @param articles List of Wikipedia article titles (e.g., 'Paris', 'Euro').
@@ -9,6 +25,17 @@ export class WikipediaAPI {
    */
   static async fetchTranslations(articles: string[], targetLangs: string[]): Promise<Record<string, Record<string, string>>> {
     if (articles.length === 0) return {};
+
+    if (this.isSnapshotMode && this.snapshotData) {
+      const result: Record<string, Record<string, string>> = {};
+      articles.forEach(article => {
+        const normalized = article.replace(/_/g, ' ');
+        if (this.snapshotData![normalized]) {
+          result[normalized] = this.snapshotData![normalized];
+        }
+      });
+      return result;
+    }
 
     const mapping: Record<string, Record<string, string>> = {};
     const chunkSize = 50;

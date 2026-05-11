@@ -13,14 +13,6 @@ const LocalizedField = z.object({
   es: z.string().nullable().optional(),
 });
 
-const LocalizedArrayField = z.object({
-  en: z.array(z.string()).nullable().optional(),
-  pt: z.array(z.string()).nullable().optional(),
-  fr: z.array(z.string()).nullable().optional(),
-  it: z.array(z.string()).nullable().optional(),
-  es: z.array(z.string()).nullable().optional(),
-});
-
 const LinkedArrayField = z.object({
   en: z.array(LinkField).nullable().optional(),
   pt: z.array(LinkField).nullable().optional(),

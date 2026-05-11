@@ -11,7 +11,10 @@
     "scrape": "node dist/src/main.js",
     "canary": "node --loader ts-node/esm src/canary.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "audit": "npx tsx scripts/audit-data.ts",
+    "verify:loc": "npx tsx scripts/verify-localization.ts",
+    "validate": "npm run audit && npm run verify:loc"
   },
   "repository": {
     "type": "git",

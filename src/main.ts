@@ -1,11 +1,10 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
 import { DescriptionParser } from './parsers/description.js';
-import { CountrySchema, Country } from './types/country.js';
+import { Country } from './types/country.js';
 import { WikipediaAPI } from './utils/wikipedia-api.js';
 import Database from 'better-sqlite3';
 import fs from 'fs';
-import path from 'path';
 
 const db = new Database('scraper.db');
 
@@ -93,7 +92,7 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
 
 const crawler = new CheerioCrawler({
   maxConcurrency: 10,
-  requestHandler: async ({ $, request, enqueueLinks }) => {
+  requestHandler: async ({ $, request }) => {
     if (request.url.includes('List_of_sovereign_states')) {
       const table = $('table.wikitable').first();
       const rows = table.find('tbody > tr').toArray();

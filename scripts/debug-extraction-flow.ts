@@ -10,7 +10,7 @@ const translations = JSON.parse(fs.readFileSync(path.join(SNAPSHOT_BASE, 'transl
 
 type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
 
-const mergeCountryData = (country: Country, newData: Partial<Country>, lang: string): Country => {
+const mergeCountryData = (country: Country, newData: Partial<Country>): Country => {
   const newCountry = { ...country };
   
   // Merge localized string fields
@@ -70,7 +70,7 @@ async function debugFlow(countryName: string) {
     });
   });
 
-  mergedResult = mergeCountryData(mergedResult, localizedDataEn, 'en');
+  mergedResult = mergeCountryData(mergedResult, localizedDataEn);
 
   // 2. Localized Passes
   for (const lang of ['pt', 'fr', 'it', 'es']) {
@@ -82,7 +82,7 @@ async function debugFlow(countryName: string) {
     const localizedData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
     DescriptionParser.parse($ as any, localizedData, lang);
     
-    mergedResult = mergeCountryData(mergedResult, localizedData, lang);
+    mergedResult = mergeCountryData(mergedResult, localizedData);
   }
 
   console.log('\n--- Final Merged Record ---');

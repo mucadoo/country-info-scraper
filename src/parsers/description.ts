@@ -19,14 +19,12 @@ export class DescriptionParser {
     }
 
     // Combine paragraphs for search but keep the first non-empty for description
-    let fullTextForExtraction = '';
     let firstDesc = '';
 
     for (const p of paragraphs) {
       const text = ExtractionUtils.cleanText(p);
       if (text) {
         if (!firstDesc) firstDesc = text;
-        fullTextForExtraction += text + ' ';
       }
     }
 

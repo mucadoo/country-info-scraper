@@ -5,7 +5,7 @@ import { ExtractionUtils } from '../../utils/extraction.js';
 import { parseListOrLink } from './utils.js';
 import { ParserState } from './area-population.js';
 
-export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>, lang: string): { text: string, articleId?: string }[] {
+export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>): { text: string, articleId?: string }[] {
   const dataClone = data.clone();
   // Remove coordinates, references, and styles
   dataClone.find('sup, .geo-inline, .geo-default, .geo-dms, .geo-dec, .geo, span.plainlinks, .reference, .style, style, .as_of').remove();
@@ -52,11 +52,11 @@ export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>, lang: strin
 }
 
 export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
-  country.capital = { [lang]: parseCityList($, data, lang) };
+  country.capital = { [lang]: parseCityList($, data) };
 }
 
 export function parseLargestCity($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
-  country.largest_city = { [lang]: parseCityList($, data, lang) };
+  country.largest_city = { [lang]: parseCityList($, data) };
 }
 
 export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {

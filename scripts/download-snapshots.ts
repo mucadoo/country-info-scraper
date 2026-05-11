@@ -7,7 +7,6 @@ import path from 'path';
 const OUTPUT_BASE = 'tests/snapshots';
 const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
 const CATEGORY = 'sovereign_states';
-const translationsCache: Record<string, Record<string, string>> = {};
 
 function sanitize(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');

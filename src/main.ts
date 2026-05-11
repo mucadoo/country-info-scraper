@@ -19,7 +19,7 @@ try {
   `);
   log.info('Database initialized successfully.');
 } catch (e) {
-  log.error('Database initialization failed: ' + e);
+  log.error('Database initialization failed: ' + (e instanceof Error ? e.message : String(e)));
 }
 const insertCountry = db.prepare('INSERT OR REPLACE INTO countries (name, data) VALUES (?, ?)');
 const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
@@ -106,7 +106,7 @@ const crawler = new CheerioCrawler({
         // Fill translations
         ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
           const key = field as LocalizedArrayFieldKey;
-          const items = localizedData[key] as any[] || [];
+          const items = (localizedData[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
           items.forEach(item => {
             const articleId = item.articleId?.replace(/_/g, ' ');
             ['pt', 'fr', 'it', 'es'].forEach(l => {

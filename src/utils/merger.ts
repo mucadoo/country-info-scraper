@@ -10,7 +10,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
       name: {}, description: {}, capital: [], largestCity: [],
       government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
     } as Country;
-  } catch (e) {
+  } catch {
     // Fallback if parsing fails (e.g. old schema or invalid data)
     existing = {
       name: {}, description: {}, capital: [], largestCity: [],
@@ -25,17 +25,17 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largestCity', 'officialLanguage', 'demonym', 'currency', 'government', 'timeZone'];
   
   localizedStringFields.forEach(field => {
-    const newVal = newData[field] as Record<string, string> | undefined;
+    const newVal = newData[field] as Record<string, string | null | undefined> | undefined;
     if (newVal) {
-      (country as any)[field] = { ...(country[field] || {}), ...newVal };
+      country[field] = { ...(country[field] || {}), ...newVal } as Country[LocalizedFieldKey];
     }
   });
 
   localizedArrayFields.forEach(field => {
-    const newVal = newData[field] as any[] | undefined;
+    const newVal = newData[field] as { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }[] | undefined;
     if (newVal) {
-      const currentVal = (country[field] as any[]) || [];
-      const mergedMap = new Map<string, any>();
+      const currentVal = (country[field] as { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }[]) || [];
+      const mergedMap = new Map<string, { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }>();
       
       // Seed with existing
       currentVal.forEach(item => {
@@ -55,7 +55,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
         }
       });
       
-      (country as any)[field] = Array.from(mergedMap.values());
+      Object.assign(country, { [field]: Array.from(mergedMap.values()) });
     }
   });
 

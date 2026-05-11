@@ -1,4 +1,4 @@
-import { CheerioCrawler, log } from 'crawlee';
+import { CheerioCrawler, log, CheerioAPI } from 'crawlee';
 import { CountryParser } from '../src/parsers/country-parser.js';
 import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
 import fs from 'fs';
@@ -22,7 +22,7 @@ for (const lang of LANGS) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-function getMinimalHtml($: any, skipInfobox: boolean = false): string {
+function getMinimalHtml($: CheerioAPI, skipInfobox: boolean = false): string {
   const h1 = $('h1#firstHeading');
   const infoboxes = skipInfobox ? '' : $('table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3').toString();
   const paragraphs = $('#mw-content-text p').slice(0, 10).toString();
@@ -75,14 +75,14 @@ const crawler = new CheerioCrawler({
       const fileName = `${sanitize(baseName)}.html`;
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
-      const countryData = CountryParser.parseCountry($ as any, {}, 'en');
-      const linkedFields = [
-        'capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'
+      const countryData = CountryParser.parseCountry($, {}, 'en');
+      const linkedFields: (keyof typeof countryData)[] = [
+        'capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'
       ];
 
       linkedFields.forEach(field => {
-        const items = (countryData as any)[field] || [];
-        items.forEach((i: any) => { 
+        const items = (countryData[field] as { articleId?: string | null }[]) || [];
+        items.forEach((i) => { 
           if (i.articleId) allArticleIds.add(i.articleId.replace(/_/g, ' ')); 
         });
       });

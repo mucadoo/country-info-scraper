@@ -43,7 +43,7 @@ describe('Regression Tests', () => {
       if (langs['en']) {
         const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
         const $ = cheerio.load(html);
-        const rawParsed = CountryParser.parseCountry($ as any, {}, 'en');
+        const rawParsed = CountryParser.parseCountry($ as unknown as Parameters<typeof CountryParser.parseCountry>[0], {}, 'en');
         
         const translations = await WikipediaAPI.fetchTranslations(
           [
@@ -61,8 +61,9 @@ describe('Regression Tests', () => {
         const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...rawParsed };
         
         ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
-          const items = (localizedDataEn as any)[field] || [];
-          items.forEach((item: any) => {
+          const key = field as keyof Country;
+          const items = (localizedDataEn[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
+          items.forEach((item) => {
             const articleId = item.articleId?.replace(/_/g, ' ');
             ['pt', 'fr', 'it', 'es'].forEach(l => {
               const translation = articleId ? translations[articleId]?.[l] : null;
@@ -85,7 +86,7 @@ describe('Regression Tests', () => {
           const $ = cheerio.load(html);
           
           const locData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
-          DescriptionParser.parse($ as any, locData, lang);
+          DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], locData, lang);
 
           countryData = mergeCountryData(JSON.stringify(countryData), locData);
         }
@@ -94,13 +95,13 @@ describe('Regression Tests', () => {
       // Basic assertions
       expect(countryData.name.en).toBeDefined();
       if (langs['en']) {
-        expect(countryData.capital[0].name.en).toBeDefined();
+        expect(countryData.capital?.[0]?.name?.en).toBeDefined();
       }
       
       ['pt', 'fr', 'it', 'es'].forEach(lang => {
         if (langs[lang]) {
-          expect((countryData.name as any)[lang]).toBeDefined();
-          expect((countryData.description as any)[lang]).toBeDefined();
+          expect((countryData.name as Record<string, string | null | undefined>)[lang]).toBeDefined();
+          expect((countryData.description as Record<string, string | null | undefined>)[lang]).toBeDefined();
         }
       });
 

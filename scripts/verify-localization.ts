@@ -1,6 +1,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { Country } from '../src/types/country.js';
 
 const DATA_PATH = path.join(process.cwd(), 'data/sovereign-states.json');
 const LANGUAGES = ['en', 'pt', 'fr', 'it', 'es'];
@@ -16,6 +17,11 @@ const LOCALIZED_FIELDS = [
   'timeZone'
 ];
 
+interface CountryIssue {
+  country: string | null | undefined;
+  missing_translations: Record<string, string[]>;
+}
+
 async function main() {
   if (!fs.existsSync(DATA_PATH)) {
     console.error(`File not found: ${DATA_PATH}`);
@@ -23,12 +29,12 @@ async function main() {
   }
 
   const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
-  const data = Array.isArray(rawData) ? rawData : rawData.data;
-  const issues: any[] = [];
-  const fieldIssuesCount: any = {};
+  const data = (Array.isArray(rawData) ? rawData : rawData.data) as Country[];
+  const issues: CountryIssue[] = [];
+  const fieldIssuesCount: Record<string, number> = {};
 
   for (const country of data) {
-    const countryIssues: any = {
+    const countryIssues: CountryIssue = {
       country: country.name.en,
       missing_translations: {}
     };
@@ -36,7 +42,7 @@ async function main() {
     let hasIssue = false;
 
     for (const field of LOCALIZED_FIELDS) {
-      const fieldData = country[field];
+      const fieldData = (country as unknown as Record<string, unknown>)[field];
       if (!fieldData) continue;
 
       const missingLangs = LANGUAGES.filter(lang => {

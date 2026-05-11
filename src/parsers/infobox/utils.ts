@@ -1,5 +1,5 @@
 import { Cheerio } from 'crawlee';
-import { AnyNode, isText, isTag } from 'domhandler';
+import { AnyNode, isText, isTag, Element } from 'domhandler';
 
 export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): { text: string, articleId?: string }[] {
   const dataClone = data.clone();
@@ -14,16 +14,18 @@ export function parseListOrLink(data: Cheerio<AnyNode>, selector: string): { tex
   if (elements.length > 0) {
     return elements.toArray().map((el: AnyNode) => {
       if (isTag(el)) {
-        const link = el.name === 'a' ? el : el.children?.find(c => isTag(c) && c.name === 'a') as any;
+        const tagEl = el as Element;
+        const link = tagEl.name === 'a' ? tagEl : tagEl.children?.find(c => isTag(c) && (c as Element).name === 'a') as Element | undefined;
         if (link) {
             const href = link.attribs?.href || '';
             const articleId = href.startsWith('/wiki/') ? href.replace('/wiki/', '') : href;
-            const text = link.children[0]?.data?.trim() || el.attribs?.title || '';
+            const firstChild = link.children[0];
+            const text = (firstChild && isText(firstChild)) ? firstChild.data.trim() : link.attribs?.title || '';
             return { text, articleId };
         }
-        const text = (el as any).children?.[0];
-        if (text && isText(text)) {
-          return { text: text.data.trim() };
+        const firstChild = tagEl.children?.[0];
+        if (firstChild && isText(firstChild)) {
+          return { text: firstChild.data.trim() };
         }
       }
       return { text: '' };

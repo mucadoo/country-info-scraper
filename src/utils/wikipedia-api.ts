@@ -1,6 +1,28 @@
 import axios from 'axios';
 import fs from 'fs';
 
+interface WikipediaLangLink {
+  lang: string;
+  '*': string;
+}
+
+interface WikipediaPage {
+  title: string;
+  langlinks?: WikipediaLangLink[];
+}
+
+interface WikipediaRedirect {
+  from: string;
+  to: string;
+}
+
+interface WikipediaQueryResponse {
+  query?: {
+    pages?: Record<string, WikipediaPage>;
+    redirects?: WikipediaRedirect[];
+  };
+}
+
 export class WikipediaAPI {
   private static snapshotData: Record<string, Record<string, string>> | null = null;
   private static isSnapshotMode = false;
@@ -51,33 +73,34 @@ export class WikipediaAPI {
             const response = await axios.get(url, {
               headers: { 'User-Agent': 'WikiGeoDataScraper/1.0 (mucadoo@personal.dev)' }
             });
-            const query = response.data.query;
+            const query = (response.data as WikipediaQueryResponse).query;
             if (!query || !query.pages) break;
             const pages = query.pages;
             
             // Map redirects back to original requested title
             const redirectMap: Record<string, string> = {};
-            query.redirects?.forEach((r: any) => { redirectMap[r.to] = r.from; });
+            query.redirects?.forEach((r) => { redirectMap[r.to] = r.from; });
 
-            Object.values(pages).forEach((page: any) => {
+            Object.values(pages).forEach((page) => {
               const originalTitle = redirectMap[page.title] || page.title;
               if (!mapping[originalTitle]) mapping[originalTitle] = {};
               
               if (page.langlinks) {
-                page.langlinks.forEach((link: any) => {
+                page.langlinks.forEach((link) => {
                   mapping[originalTitle][link.lang] = link['*'];
                 });
               }
             });
             break; // Success
-          } catch (error: any) {
-            if (error.response?.status === 429 && retries > 1) {
+          } catch (error: unknown) {
+            if (axios.isAxiosError(error) && error.response?.status === 429 && retries > 1) {
               const delay = (4 - retries) * 2000;
               await new Promise(resolve => setTimeout(resolve, delay));
               retries--;
               continue;
             }
-            console.error(`Failed to fetch translations for chunk (${targetLang}): ${error.message}`);
+            const message = error instanceof Error ? error.message : String(error);
+            console.error(`Failed to fetch translations for chunk (${targetLang}): ${message}`);
             break;
           }
         }

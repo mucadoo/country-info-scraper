@@ -28,7 +28,7 @@ async function debugFlow(countryName: string) {
   }
   const enHtml = fs.readFileSync(enHtmlPath, 'utf-8');
   const $en = cheerio.load(enHtml);
-  const countryData = CountryParser.parseCountry($en as any, {}, 'en');
+  const countryData = CountryParser.parseCountry($en as unknown as Parameters<typeof CountryParser.parseCountry>[0], {}, 'en');
   
   const translations = await WikipediaAPI.fetchTranslations(
     [
@@ -48,7 +48,7 @@ async function debugFlow(countryName: string) {
   // Apply translations
   ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
-    const items = localizedDataEn[key] as any[] || [];
+    const items = (localizedDataEn[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
     items.forEach(item => {
       const articleId = item.articleId?.replace(/_/g, ' ');
       ['pt', 'fr', 'it', 'es'].forEach(l => {
@@ -72,7 +72,7 @@ async function debugFlow(countryName: string) {
     const html = fs.readFileSync(filePath, 'utf-8');
     const $ = cheerio.load(html);
     const localizedData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
-    DescriptionParser.parse($ as any, localizedData, lang);
+    DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], localizedData, lang);
     
     mergedResult = mergeCountryData(JSON.stringify(mergedResult), localizedData);
   }

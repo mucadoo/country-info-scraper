@@ -69,7 +69,7 @@ describe('Infobox Utilities', () => {
     it('should extract multiple links correctly', () => {
       const html = '<ul><li><a href="/wiki/Item_1">Item 1</a></li><li><a href="/wiki/Item_2">Item 2</a></li></ul>';
       const $ = cheerio.load(html);
-      const result = parseListOrLink($('ul') as any, 'li');
+      const result = parseListOrLink($('ul') as unknown as Parameters<typeof parseListOrLink>[0], 'li');
       expect(result).toEqual([
         { text: 'Item 1', articleId: 'Item_1' },
         { text: 'Item 2', articleId: 'Item_2' }
@@ -79,14 +79,14 @@ describe('Infobox Utilities', () => {
     it('should handle plain text fallbacks', () => {
       const html = '<div>Plain Text</div>';
       const $ = cheerio.load(html);
-      const result = parseListOrLink($('div') as any, 'li');
+      const result = parseListOrLink($('div') as unknown as Parameters<typeof parseListOrLink>[0], 'li');
       expect(result).toEqual([{ text: 'Plain Text' }]);
     });
 
     it('should handle single link with complex href', () => {
       const html = '<a href="/wiki/Item_1#Anchor">Item 1</a>';
       const $ = cheerio.load(html);
-      const result = parseListOrLink($('a') as any, 'a');
+      const result = parseListOrLink($('a') as unknown as Parameters<typeof parseListOrLink>[0], 'a');
       console.log('DEBUG result:', JSON.stringify(result));
       expect(result).toEqual([{ text: 'Item 1', articleId: 'Item_1#Anchor' }]);
     });
@@ -96,14 +96,14 @@ describe('Infobox Utilities', () => {
     it('should skip ISO 4217 links', () => {
       const html = '<div><a href="/wiki/Euro" title="Currency">Euro</a> (<a href="/wiki/ISO_4217" title="ISO 4217">ISO 4217</a>)</div>';
       const $ = cheerio.load(html);
-      const result = parseCurrency($('div') as any);
+      const result = parseCurrency($('div') as unknown as Parameters<typeof parseCurrency>[0]);
       expect(result).toEqual([{ text: 'Euro', articleId: 'Euro' }]);
     });
 
     it('should extract ISO code from text', () => {
       const html = '<div><a href="/wiki/Euro">Euro</a> (EUR)</div>';
       const $ = cheerio.load(html);
-      const result = parseCurrency($('div') as any);
+      const result = parseCurrency($('div') as unknown as Parameters<typeof parseCurrency>[0]);
       expect(result).toEqual([{ text: 'Euro', articleId: 'Euro', isoCode: 'EUR' }]);
     });
   });

@@ -57,9 +57,17 @@ const mergeCountryData = (existingJson: string | null, newData: Partial<Country>
       Object.keys(newVal).forEach(lang => {
         const oldArr = currentVal[lang] || [];
         const newArr = newVal[lang];
-        // Dedup by text
-        const mergedArr = Array.from(new Map([...oldArr, ...newArr].map(i => [i.text, i])).values());
-        currentVal[lang] = mergedArr;
+        // Dedup by articleId if present, otherwise by text
+        const mergedMap = new Map<string, {text: string, articleId?: string}>();
+        [...oldArr, ...newArr].forEach(item => {
+          const key = item.articleId ? `id:${item.articleId}` : `text:${item.text}`;
+          const existing = mergedMap.get(key);
+          // Prefer items with articleId or translated text
+          if (!existing || (!existing.articleId && item.articleId)) {
+            mergedMap.set(key, item);
+          }
+        });
+        currentVal[lang] = Array.from(mergedMap.values());
       });
     }
   });
@@ -101,11 +109,7 @@ const crawler = new CheerioCrawler({
       log.info(`Found ${titles.length} countries. Fetching translations...`);
       const languages = ['pt', 'fr', 'it', 'es'];
       const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
-      log.info(`Fetched translations for ${Object.keys(allLangLinks).length} countries.`);
-      log.info(`Sample titles from links: ${titles.slice(0, 5).join(', ')}`);
-      log.info(`Sample keys from translations: ${Object.keys(allLangLinks).slice(0, 5).join(', ')}`);
 
-      let enqueuedLocalized = 0;
       for (const link of countryLinks) {
         const baseName = link.title!;
         const enUrl = `https://en.wikipedia.org${link.href}`;
@@ -121,15 +125,11 @@ const crawler = new CheerioCrawler({
             if (langLinks[lang]) {
               const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
               requests.push({ url: locUrl, label: 'country', userData: { baseName, lang } });
-              enqueuedLocalized++;
             }
           }
-        } else {
-          log.warning(`No translations found for country: ${baseName}`);
         }
         await crawler.addRequests(requests);
       }
-      log.info(`Enqueued ${countryLinks.length} English and ${enqueuedLocalized} localized pages.`);
       return;
     }
 

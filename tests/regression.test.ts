@@ -36,7 +36,7 @@ describe('Regression Tests', () => {
     it(`should process all languages for ${countryName}`, async () => {
       let countryData: Country = { 
         name: {}, description: {}, 
-        capital: [], largest_city: [], government: [], official_language: [], demonym: [], currency: [] 
+        capital: [], largest_city: [], government: [], official_language: [], demonym: [], currency: [], time_zone: [] 
       };
 
       // 1. Process EN Pass
@@ -52,14 +52,15 @@ describe('Regression Tests', () => {
               ...(rawParsed.official_language?.map(i => i.articleId) || []),
               ...(rawParsed.currency?.map(i => i.articleId) || []),
               ...(rawParsed.demonym?.map(i => i.articleId) || []),
-              ...(rawParsed.government?.map(i => i.articleId) || [])
+              ...(rawParsed.government?.map(i => i.articleId) || []),
+              ...(rawParsed.time_zone?.map(i => i.articleId) || [])
           ].filter(Boolean) as string[],
           ['pt', 'fr', 'it', 'es']
         );
 
         const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...rawParsed };
         
-        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
+        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
           const items = (localizedDataEn as any)[field] || [];
           items.forEach((item: any) => {
             const articleId = item.articleId?.replace(/_/g, ' ');
@@ -98,8 +99,8 @@ describe('Regression Tests', () => {
       
       ['pt', 'fr', 'it', 'es'].forEach(lang => {
         if (langs[lang]) {
-          expect(countryData.name[lang]).toBeDefined();
-          expect(countryData.description[lang]).toBeDefined();
+          expect((countryData.name as any)[lang]).toBeDefined();
+          expect((countryData.description as any)[lang]).toBeDefined();
         }
       });
 

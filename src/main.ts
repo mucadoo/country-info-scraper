@@ -26,7 +26,7 @@ const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
 
 const crawler = new CheerioCrawler({
   maxConcurrency: 10,
@@ -92,7 +92,8 @@ const crawler = new CheerioCrawler({
             ...(countryData.official_language?.map(i => i.articleId) || []),
             ...(countryData.currency?.map(i => i.articleId) || []),
             ...(countryData.demonym?.map(i => i.articleId) || []),
-            ...(countryData.government?.map(i => i.articleId) || [])
+            ...(countryData.government?.map(i => i.articleId) || []),
+            ...(countryData.time_zone?.map(i => i.articleId) || [])
         ].filter(Boolean) as string[]);
         
         const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
@@ -103,7 +104,7 @@ const crawler = new CheerioCrawler({
         };
 
         // Fill translations
-        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
+        ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
           const key = field as LocalizedArrayFieldKey;
           const items = localizedData[key] as any[] || [];
           items.forEach(item => {

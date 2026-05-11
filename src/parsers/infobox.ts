@@ -135,7 +135,11 @@ export class InfoboxParser {
         name: { [lang]: item.text }
       }));
     } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
-      country.time_zone = ExtractionUtils.cleanText(data).split(/[;,]/).map(t => t.trim()).filter(t => t);
+      const tz = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
+      country.time_zone = tz.map(item => ({
+        articleId: item.articleId,
+        name: { [lang]: item.text }
+      }));
     } else if (lang === 'en' && lowerHeaderText.includes('calling code')) {
       const dataClone = data.clone();
       dataClone.find('sup, .reference').remove();

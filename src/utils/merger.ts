@@ -1,19 +1,19 @@
 import { Country, MultiLangLinkField } from '../types/country.js';
 
 type LocalizedFieldKey = 'name' | 'description';
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
 
 export const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
   const existing: Country = existingJson ? JSON.parse(existingJson) : {
     name: {}, description: {}, capital: [], largest_city: [],
-    government: [], official_language: [], demonym: [], currency: []
+    government: [], official_language: [], demonym: [], currency: [], time_zone: []
   };
   
   const country = { ...existing };
   
   // Merge fields
   const localizedStringFields: LocalizedFieldKey[] = ['name', 'description'];
-  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government'];
+  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largest_city', 'official_language', 'demonym', 'currency', 'government', 'time_zone'];
   
   localizedStringFields.forEach(field => {
     const newVal = newData[field] as Record<string, string> | undefined;
@@ -61,7 +61,6 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   const mergeArrays = (oldArr: string[] | null | undefined, newArr: string[] | null | undefined) => 
     Array.from(new Set([...(oldArr || []), ...(newArr || [])]));
 
-  if (newData.time_zone !== undefined) country.time_zone = mergeArrays(country.time_zone, newData.time_zone);
   if (newData.calling_code !== undefined) country.calling_code = newData.calling_code;
   if (newData.internet_TLD !== undefined) country.internet_TLD = newData.internet_TLD;
 

@@ -51,12 +51,6 @@
     "it": "Dollaro dei Caraibi Orientali",
     "es": "Dólar del Caribe Oriental"
   },
-  "Federalism": {
-    "pt": "Federalismo",
-    "fr": "Fédéralisme",
-    "it": "Federalismo",
-    "es": "Federalismo"
-  },
   "Kabul": {
     "pt": "Cabul",
     "fr": "Kaboul",
@@ -74,12 +68,6 @@
     "fr": "Espagnol",
     "it": "Lingua spagnola",
     "es": "Idioma español"
-  },
-  "Sydney": {
-    "pt": "Sydney",
-    "fr": "Sydney",
-    "it": "Sydney",
-    "es": "Sídney"
   },
   "St. John's, Antigua and Barbuda": {
     "pt": "São João (Antiga e Barbuda)",
@@ -111,12 +99,6 @@
     "it": "Lingua dari",
     "es": "Darí"
   },
-  "Canberra": {
-    "pt": "Camberra",
-    "fr": "Canberra",
-    "it": "Canberra",
-    "es": "Camberra"
-  },
   "Andorra la Vella": {
     "pt": "Andorra-a-Velha",
     "fr": "Andorre-la-Vieille",
@@ -128,12 +110,6 @@
     "fr": "Principauté",
     "it": "Principato (diritto)",
     "es": "Principado"
-  },
-  "Australian dollar": {
-    "pt": "Dólar australiano",
-    "fr": "Dollar australien",
-    "it": "Dollaro australiano",
-    "es": "Dólar australiano"
   },
   "Pashto": {
     "pt": "Língua pastó",
@@ -196,6 +172,12 @@
     "it": "Peso argentino",
     "es": "Peso (moneda de Argentina)"
   },
+  "Central European Time": {
+    "pt": "Horário da Europa Central",
+    "fr": "Heure normale d'Europe centrale",
+    "it": "Central European Time",
+    "es": "Hora central europea"
+  },
   "Angolan Portuguese": {
     "pt": "Português angolano",
     "es": "Portugués angoleño"
@@ -212,6 +194,10 @@
     "it": "Kwanza angolano",
     "es": "Kuanza angoleño"
   },
+  "Atlantic Time Zone": {
+    "pt": "Horário Padrão do Atlântico",
+    "es": "Zona horaria del Atlántico (América del Norte)"
+  },
   "Algerian dinar": {
     "pt": "Dinar argelino",
     "fr": "Dinar algérien",
@@ -223,7 +209,7 @@
     "it": "Simbolo dell'euro",
     "es": "Símbolo del euro"
   },
-  "$": {
+  "Dollar sign": {
     "pt": "Dólar (sinal)",
     "fr": "Symbole dollar",
     "it": "Simbolo del dollaro",
@@ -232,22 +218,20 @@
   "Algerians": {
     "fr": "Algériens"
   },
+  "Time in Argentina": {
+    "es": "Hora oficial argentina"
+  },
+  "West Africa Time": {
+    "pt": "Horário da África Ocidental",
+    "fr": "Heure d'Afrique occidentale",
+    "it": "West Africa Time",
+    "es": "Tiempo de África Occidental"
+  },
   "English language": {
     "pt": "Língua inglesa",
     "fr": "Anglais",
     "it": "Lingua inglese",
     "es": "Idioma inglés"
-  },
-  "Australians": {
-    "pt": "Australianos",
-    "fr": "Australiens",
-    "it": "Australiani"
-  },
-  "Melbourne": {
-    "pt": "Melbourne",
-    "fr": "Melbourne",
-    "it": "Melbourne",
-    "es": "Melbourne"
   },
   "Albanian language": {
     "pt": "Língua albanesa",
@@ -255,7 +239,17 @@
     "it": "Lingua albanese",
     "es": "Idioma albanés"
   },
+  "Armenia Time": {
+    "es": "Horario en Armenia"
+  },
   "Armenian dram sign": {},
+  "Coordinated Universal Time": {
+    "pt": "Tempo Universal Coordenado",
+    "fr": "Temps universel coordonné",
+    "it": "Tempo coordinato universale",
+    "es": "Tiempo universal coordinado"
+  },
+  "Afghanistan Time": {},
   "Argentines": {
     "pt": "Argentinos",
     "fr": "Argentins",
@@ -281,7 +275,7 @@
     "it": "Baku",
     "es": "Bakú"
   },
-  "Parliamentary constitutional monarchy": {
+  "Semi-constitutional monarchy": {
     "pt": "Monarquia constitucional",
     "fr": "Monarchie constitutionnelle",
     "it": "Monarchia costituzionale",
@@ -293,11 +287,11 @@
     "it": "Lingua francese",
     "es": "Idioma francés"
   },
-  "German language": {
-    "pt": "Língua alemã",
-    "fr": "Allemand",
-    "it": "Lingua tedesca",
-    "es": "Idioma alemán"
+  "Federalism": {
+    "pt": "Federalismo",
+    "fr": "Fédéralisme",
+    "it": "Federalismo",
+    "es": "Federalismo"
   },
   "Manama": {
     "pt": "Manama",
@@ -317,6 +311,12 @@
     "it": "Lingua russa",
     "es": "Idioma ruso"
   },
+  "Sydney": {
+    "pt": "Sydney",
+    "fr": "Sydney",
+    "it": "Sydney",
+    "es": "Sídney"
+  },
   "Belarusians": {
     "pt": "Bielorrussos",
     "fr": "Biélorusses",
@@ -335,17 +335,17 @@
     "it": "Minsk",
     "es": "Minsk"
   },
+  "Canberra": {
+    "pt": "Camberra",
+    "fr": "Canberra",
+    "it": "Canberra",
+    "es": "Camberra"
+  },
   "Vienna": {
     "pt": "Viena",
     "fr": "Vienne (Autriche)",
     "it": "Vienna",
     "es": "Viena"
-  },
-  "Belmopan": {
-    "pt": "Belmopan",
-    "fr": "Belmopan",
-    "it": "Belmopan",
-    "es": "Belmopán"
   },
   "Bridgetown": {
     "pt": "Bridgetown",
@@ -353,40 +353,22 @@
     "it": "Bridgetown",
     "es": "Bridgetown"
   },
-  "Cotonou": {
-    "pt": "Cotonu",
-    "fr": "Cotonou",
-    "it": "Cotonou",
-    "es": "Cotonú"
-  },
   "Dhaka": {
     "pt": "Daca",
     "fr": "Dacca",
     "it": "Dacca",
     "es": "Daca"
   },
-  "Porto-Novo": {
-    "pt": "Porto Novo (Benim)",
-    "fr": "Porto-Novo",
-    "it": "Porto-Novo",
-    "es": "Porto Novo"
-  },
-  "Thimphu": {
-    "pt": "Thimbu",
-    "fr": "Thimphou",
-    "it": "Thimphu",
-    "es": "Timbu"
-  },
   "Demographics of Bahrain": {
     "pt": "Demografia do Barém",
     "fr": "Démographie de Bahreïn",
     "es": "Demografía de Baréin"
   },
-  "Belize City": {
-    "pt": "Cidade de Belize",
-    "fr": "Belize City",
-    "it": "Belize (città)",
-    "es": "Ciudad de Belice"
+  "Australian dollar": {
+    "pt": "Dólar australiano",
+    "fr": "Dollar australien",
+    "it": "Dollaro australiano",
+    "es": "Dólar australiano"
   },
   "Austrians": {
     "pt": "Austríacos",
@@ -399,12 +381,6 @@
     "fr": "Azéri",
     "it": "Lingua azera",
     "es": "Idioma azerí"
-  },
-  "Presidential system": {
-    "pt": "Presidencialismo",
-    "fr": "Régime présidentiel",
-    "it": "Repubblica presidenziale",
-    "es": "Presidencialismo"
   },
   "Hereditary dictatorship": {
     "pt": "Dinastia",
@@ -424,17 +400,17 @@
     "it": "Dollaro delle Bahamas",
     "es": "Dólar bahameño"
   },
-  "Belize dollar": {
-    "pt": "Dólar de Belize",
-    "fr": "Dollar bélizien",
-    "it": "Dollaro del Belize",
-    "es": "Dólar beliceño"
-  },
   "Bangladeshi taka": {
     "pt": "Taka",
     "fr": "Taka",
     "it": "Taka bangladese",
     "es": "Taka bangladesí"
+  },
+  "Eastern Time Zone": {
+    "pt": "Zona de Tempo Oriental",
+    "fr": "Heure de l'Est",
+    "it": "Ora standard orientale",
+    "es": "Horario del este de América del Norte"
   },
   "City of Brussels": {
     "pt": "Cidade de Bruxelas",
@@ -448,11 +424,11 @@
     "it": "Manat azero",
     "es": "Manat azerbaiyano"
   },
-  "Belgians": {
-    "pt": "Belgas",
-    "fr": "Belges (nationalité)",
-    "it": "Belgi (popolo moderno)",
-    "es": "Belgas"
+  "Moscow Time": {
+    "pt": "Horário de Moscovo",
+    "fr": "Heure de Moscou",
+    "it": "Fuso orario di Mosca",
+    "es": "Hora de Moscú"
   },
   "Bahraini dinar": {
     "pt": "Dinar bareinita",
@@ -478,20 +454,44 @@
     "it": "Dollaro di Barbados",
     "es": "Dólar barbadense"
   },
-  "West African CFA franc": {
-    "pt": "Franco CFA da África Ocidental",
-    "fr": "Franc CFA (UEMOA)",
-    "es": "Franco CFA de África Occidental"
+  "$": {
+    "pt": "Dólar (sinal)",
+    "fr": "Symbole dollar",
+    "it": "Simbolo del dollaro",
+    "es": "$"
   },
-  "Federal monarchy": {
-    "pt": "Monarquia federal",
-    "fr": "Monarchie fédérale",
-    "it": "Monarchia federale",
-    "es": "Monarquía federal"
+  "Arabia Standard Time": {
+    "pt": "UTC+3",
+    "fr": "UTC+03:00",
+    "it": "UTC+3",
+    "es": "UTC+03:00"
+  },
+  "Time in Australia": {
+    "pt": "Fusos horários na Austrália",
+    "fr": "Heure en Australie",
+    "es": "Husos horarios de Australia"
   },
   "Barbadians": {},
   "Bahamian English": {},
-  "Belizeans": {},
+  "Bangladesh Standard Time": {
+    "pt": "Bangladesh Standard Time"
+  },
+  "Australians": {
+    "pt": "Australianos",
+    "fr": "Australiens",
+    "it": "Australiani"
+  },
+  "Melbourne": {
+    "pt": "Melbourne",
+    "fr": "Melbourne",
+    "it": "Melbourne",
+    "es": "Melbourne"
+  },
+  "Azerbaijan Time": {
+    "pt": "Horário do Azerbaijão",
+    "fr": "Heure en Azerbaïdjan",
+    "es": "Hora de Azerbaiyán"
+  },
   "Bahamians": {},
   "Dutch language": {
     "pt": "Língua neerlandesa",
@@ -511,36 +511,29 @@
     "it": "Lingua bengali",
     "es": "Idioma bengalí"
   },
-  "Belizean English": {
-    "es": "Inglés beliceño"
-  },
   "English in Barbados": {},
   "Bangladeshis": {
     "it": "Bangladesi"
   },
   "৳": {},
-  "Demographics of Burundi": {
-    "pt": "Burundi#Demografia",
-    "fr": "Démographie du Burundi",
-    "es": "Demografía de Burundi"
-  },
-  "Bulgarian language": {
-    "pt": "Língua búlgara",
-    "fr": "Bulgare",
-    "it": "Lingua bulgara",
-    "es": "Idioma búlgaro"
-  },
+  "UTC%2B03:00": {},
   "Brasília": {
     "pt": "Brasília",
     "fr": "Brasilia",
     "it": "Brasilia",
     "es": "Brasilia"
   },
-  "Khmer language": {
-    "pt": "Língua quemer",
-    "fr": "Khmer",
-    "it": "Lingua khmer",
-    "es": "Idioma jemer"
+  "Parliamentary constitutional monarchy": {
+    "pt": "Monarquia constitucional",
+    "fr": "Monarchie constitutionnelle",
+    "it": "Monarchia costituzionale",
+    "es": "Monarquía constitucional"
+  },
+  "German language": {
+    "pt": "Língua alemã",
+    "fr": "Allemand",
+    "it": "Lingua tedesca",
+    "es": "Idioma alemán"
   },
   "Portuguese language": {
     "pt": "Língua portuguesa",
@@ -566,23 +559,17 @@
     "it": "Sucre",
     "es": "Sucre"
   },
-  "Phnom Penh": {
-    "pt": "Phnom Penh",
-    "fr": "Phnom Penh",
-    "it": "Phnom Penh",
-    "es": "Nom Pen"
+  "Belmopan": {
+    "pt": "Belmopan",
+    "fr": "Belmopan",
+    "it": "Belmopan",
+    "es": "Belmopán"
   },
-  "Ouagadougou": {
-    "pt": "Uagadugu",
-    "fr": "Ouagadougou",
-    "it": "Ouagadougou",
-    "es": "Uagadugú"
-  },
-  "Bujumbura": {
-    "pt": "Bujumbura",
-    "fr": "Bujumbura",
-    "it": "Bujumbura",
-    "es": "Buyumbura"
+  "Cotonou": {
+    "pt": "Cotonu",
+    "fr": "Cotonou",
+    "it": "Cotonou",
+    "es": "Cotonú"
   },
   "Gaborone": {
     "pt": "Gaborone",
@@ -590,11 +577,17 @@
     "it": "Gaborone",
     "es": "Gaborone"
   },
-  "Sofia": {
-    "pt": "Sófia",
-    "fr": "Sofia",
-    "it": "Sofia",
-    "es": "Sofía"
+  "Porto-Novo": {
+    "pt": "Porto Novo (Benim)",
+    "fr": "Porto-Novo",
+    "it": "Porto-Novo",
+    "es": "Porto Novo"
+  },
+  "Thimphu": {
+    "pt": "Thimbu",
+    "fr": "Thimphou",
+    "it": "Thimphu",
+    "es": "Timbu"
   },
   "Bhutanese people": {
     "fr": "Démographie du Bhoutan",
@@ -610,17 +603,17 @@
     "fr": "Guarani paraguayen",
     "es": "Guaraní paraguayo (dialecto)"
   },
-  "Bulgarians": {
-    "pt": "Búlgaros",
-    "fr": "Bulgares",
-    "it": "Bulgari",
-    "es": "Pueblo búlgaro"
+  "Belize City": {
+    "pt": "Cidade de Belize",
+    "fr": "Belize City",
+    "it": "Belize (città)",
+    "es": "Ciudad de Belice"
   },
-  "Military junta": {
-    "pt": "Junta militar",
-    "fr": "Junte militaire",
-    "it": "Giunta militare",
-    "es": "Junta militar"
+  "Presidential system": {
+    "pt": "Presidencialismo",
+    "fr": "Régime présidentiel",
+    "it": "Repubblica presidenziale",
+    "es": "Presidencialismo"
   },
   "Aymara language": {
     "pt": "Língua aimará",
@@ -628,28 +621,28 @@
     "it": "Lingua aymara",
     "es": "Idioma aimara"
   },
-  "Belgian French": {
-    "fr": "Français de Belgique",
-    "it": "Dialetto francese belga",
-    "es": "Francés de Bélgica"
-  },
   "Dzongkha": {
     "pt": "Língua butanesa",
     "fr": "Dzongkha",
     "it": "Lingua dzongkha",
     "es": "Idioma dzongkha"
   },
-  "Kirundi": {
-    "pt": "Língua rundi",
-    "fr": "Kirundi",
-    "it": "Lingua kirundi",
-    "es": "Kirundi"
-  },
   "São Paulo": {
     "pt": "São Paulo",
     "fr": "São Paulo",
     "it": "San Paolo (Brasile)",
     "es": "São Paulo"
+  },
+  "Belize dollar": {
+    "pt": "Dólar de Belize",
+    "fr": "Dollar bélizien",
+    "it": "Dollaro del Belize",
+    "es": "Dólar beliceño"
+  },
+  "Central Time Zone": {
+    "pt": "Horário Padrão Central",
+    "fr": "Heure du Centre",
+    "es": "Hora estándar del centro"
   },
   "Indian rupee": {
     "pt": "Rupia indiana",
@@ -681,23 +674,11 @@
     "it": "Santa Cruz de la Sierra",
     "es": "Santa Cruz de la Sierra"
   },
-  "Gitega": {
-    "pt": "Guitega",
-    "fr": "Gitega",
-    "it": "Gitega",
-    "es": "Guitega"
-  },
-  "Mossi language": {
-    "pt": "Língua more",
-    "fr": "Mooré",
-    "it": "Lingua more",
-    "es": "Idioma mossi"
-  },
-  "Cambodian riel": {
-    "pt": "Riel cambojano",
-    "fr": "Riel",
-    "it": "Riel cambogiano",
-    "es": "Riel camboyano"
+  "Belgians": {
+    "pt": "Belgas",
+    "fr": "Belges (nationalité)",
+    "it": "Belgi (popolo moderno)",
+    "es": "Belgas"
   },
   "Bolivian boliviano": {
     "pt": "Boliviano (moeda)",
@@ -705,16 +686,8 @@
     "it": "Boliviano",
     "es": "Boliviano (moneda)"
   },
-  "Burundian franc": {
-    "pt": "Franco do Burundi",
-    "fr": "Franc burundais",
-    "it": "Franco del Burundi",
-    "es": "Franco burundés"
-  },
-  "€": {
-    "fr": "Symbole euro",
-    "it": "Simbolo dell'euro",
-    "es": "Símbolo del euro"
+  "Bhutan Time": {
+    "es": "Hora de Bután"
   },
   "Directorial system": {
     "pt": "Sistema diretorial",
@@ -722,10 +695,29 @@
     "it": "Repubblica direttoriale",
     "es": "Sistema directorial"
   },
+  "West African CFA franc": {
+    "pt": "Franco CFA da África Ocidental",
+    "fr": "Franc CFA (UEMOA)",
+    "es": "Franco CFA de África Occidental"
+  },
+  "Time in Brazil": {
+    "pt": "Fusos horários no Brasil",
+    "es": "Husos horarios de Brasil"
+  },
+  "Federal monarchy": {
+    "pt": "Monarquia federal",
+    "fr": "Monarchie fédérale",
+    "it": "Monarchia federale",
+    "es": "Monarquía federal"
+  },
   "Languages of Bolivia": {
     "pt": "Idiomas da Bolívia",
     "fr": "Langues en Bolivie",
     "es": "Lenguas de Bolivia"
+  },
+  "Central Africa Time": {
+    "pt": "Horário da África Central",
+    "fr": "Heure d'Afrique centrale"
   },
   "Brazilians": {
     "pt": "Brasileiros",
@@ -733,17 +725,15 @@
     "it": "Brasiliani",
     "es": "Brasileños"
   },
+  "Belizeans": {},
   "Herzegovina": {
     "pt": "Herzegovina",
     "fr": "Herzégovine",
     "it": "Erzegovina",
     "es": "Herzegovina"
   },
-  "Authoritarianism": {
-    "pt": "Autoritarismo",
-    "fr": "Autoritarisme",
-    "it": "Stato autoritario",
-    "es": "Autoritarismo"
+  "Belizean English": {
+    "es": "Inglés beliceño"
   },
   "Bosnians": {
     "pt": "Bósnios",
@@ -769,8 +759,232 @@
   "//en.wikipedia.org/wiki/Malay language": {},
   "//en.wikipedia.org/wiki/Brunei dollar": {},
   "//en.wikipedia.org/wiki/Bruneian people": {},
+  "UTC%E2%88%9204:00": {},
+  "Demographics of Burundi": {
+    "pt": "Burundi#Demografia",
+    "fr": "Démographie du Burundi",
+    "es": "Demografía de Burundi"
+  },
+  "Bulgarian language": {
+    "pt": "Língua búlgara",
+    "fr": "Bulgare",
+    "it": "Lingua bulgara",
+    "es": "Idioma búlgaro"
+  },
+  "Khmer language": {
+    "pt": "Língua quemer",
+    "fr": "Khmer",
+    "it": "Lingua khmer",
+    "es": "Idioma jemer"
+  },
+  "Cambodian people": {
+    "fr": "Démographie du Cambodge",
+    "es": "Demografía de Camboya"
+  },
+  "Canadian English": {
+    "pt": "Inglês canadense",
+    "fr": "Anglais canadien",
+    "it": "Inglese canadese",
+    "es": "Inglés canadiense"
+  },
+  "Greenwich Mean Time": {
+    "pt": "Tempo Médio de Greenwich",
+    "fr": "Temps moyen de Greenwich",
+    "it": "Ora media di Greenwich",
+    "es": "Hora media de Greenwich"
+  },
+  "Ottawa": {
+    "pt": "Ottawa",
+    "fr": "Ottawa",
+    "it": "Ottawa",
+    "es": "Ottawa"
+  },
+  "Westminster parliamentary system": {
+    "pt": "Sistema Westminster",
+    "fr": "Système de Westminster",
+    "it": "Sistema Westminster",
+    "es": "Sistema de Westminster"
+  },
+  "Phnom Penh": {
+    "pt": "Phnom Penh",
+    "fr": "Phnom Penh",
+    "it": "Phnom Penh",
+    "es": "Nom Pen"
+  },
+  "Ouagadougou": {
+    "pt": "Uagadugu",
+    "fr": "Ouagadougou",
+    "it": "Ouagadougou",
+    "es": "Uagadugú"
+  },
+  "Bangui": {
+    "pt": "Bangui",
+    "fr": "Bangui",
+    "it": "Bangui",
+    "es": "Bangui"
+  },
+  "Bujumbura": {
+    "pt": "Bujumbura",
+    "fr": "Bujumbura",
+    "it": "Bujumbura",
+    "es": "Buyumbura"
+  },
+  "Praia": {
+    "pt": "Praia (Cabo Verde)",
+    "fr": "Praia",
+    "it": "Praia",
+    "es": "Praia"
+  },
+  "Sofia": {
+    "pt": "Sófia",
+    "fr": "Sofia",
+    "it": "Sofia",
+    "es": "Sofía"
+  },
+  "Toronto": {
+    "pt": "Toronto",
+    "fr": "Toronto",
+    "it": "Toronto",
+    "es": "Toronto"
+  },
+  "Canadian dollar": {
+    "pt": "Dólar canadense",
+    "fr": "Dollar canadien",
+    "it": "Dollaro canadese",
+    "es": "Dólar canadiense"
+  },
+  "Bulgarians": {
+    "pt": "Búlgaros",
+    "fr": "Bulgares",
+    "it": "Bulgari",
+    "es": "Pueblo búlgaro"
+  },
+  "Dynasty": {
+    "pt": "Dinastia",
+    "fr": "Dynastie",
+    "it": "Dinastia",
+    "es": "Dinastía"
+  },
+  "Military junta": {
+    "pt": "Junta militar",
+    "fr": "Junte militaire",
+    "it": "Giunta militare",
+    "es": "Junta militar"
+  },
+  "Elective monarchy": {
+    "pt": "Monarquia eletiva",
+    "fr": "Monarchie élective",
+    "it": "Monarchia elettiva",
+    "es": "Monarquía electiva"
+  },
+  "Belgian French": {
+    "fr": "Français de Belgique",
+    "it": "Dialetto francese belga",
+    "es": "Francés de Bélgica"
+  },
+  "Kirundi": {
+    "pt": "Língua rundi",
+    "fr": "Kirundi",
+    "it": "Lingua kirundi",
+    "es": "Kirundi"
+  },
+  "Sango language": {
+    "pt": "Língua sango",
+    "fr": "Sango",
+    "it": "Lingua sango",
+    "es": "Idioma sango"
+  },
+  "Gitega": {
+    "pt": "Guitega",
+    "fr": "Gitega",
+    "it": "Gitega",
+    "es": "Guitega"
+  },
+  "Mossi language": {
+    "pt": "Língua more",
+    "fr": "Mooré",
+    "it": "Lingua more",
+    "es": "Idioma mossi"
+  },
+  "Eastern European Time": {
+    "pt": "Horário do Leste Europeu",
+    "fr": "Heure normale d'Europe de l'Est",
+    "it": "Eastern European Time",
+    "es": "Hora de Europa Oriental"
+  },
+  "Cambodian riel": {
+    "pt": "Riel cambojano",
+    "fr": "Riel",
+    "it": "Riel cambogiano",
+    "es": "Riel camboyano"
+  },
+  "Burundian franc": {
+    "pt": "Franco do Burundi",
+    "fr": "Franc burundais",
+    "it": "Franco del Burundi",
+    "es": "Franco burundés"
+  },
+  "€": {
+    "fr": "Symbole euro",
+    "it": "Simbolo dell'euro",
+    "es": "Símbolo del euro"
+  },
+  "Cape Verdean escudo": {
+    "pt": "Escudo cabo-verdiano",
+    "fr": "Escudo cap-verdien",
+    "it": "Escudo capoverdiano",
+    "es": "Escudo caboverdiano"
+  },
+  "Indochina Time": {
+    "pt": "UTC+7",
+    "fr": "UTC+07:00",
+    "it": "UTC+7",
+    "es": "UTC+07:00"
+  },
+  "Cape Verdean Portuguese": {
+    "pt": "Português cabo-verdiano"
+  },
+  "Cape Verde Time": {
+    "pt": "Horário de Cabo Verde"
+  },
+  "Canadian French": {
+    "pt": "Francês canadense",
+    "fr": "Français canadien",
+    "it": "Dialetto francese canadese",
+    "es": "Francés canadiense"
+  },
+  "United States dollar": {
+    "pt": "Dólar dos Estados Unidos",
+    "fr": "Dollar américain",
+    "it": "Dollaro statunitense",
+    "es": "Dólar estadounidense"
+  },
+  "Canadians": {
+    "pt": "Canadenses",
+    "fr": "Canadiens (peuple)",
+    "es": "Canadienses"
+  },
+  "Authoritarianism": {
+    "pt": "Autoritarismo",
+    "fr": "Autoritarisme",
+    "it": "Stato autoritario",
+    "es": "Autoritarismo"
+  },
+  "Cape Verdeans": {
+    "pt": "Cabo-verdianos"
+  },
   "//en.wikipedia.org/wiki/Absolute monarchy": {},
+  "//en.wikipedia.org/wiki/Coordinated Universal Time": {},
+  "//en.wikipedia.org/wiki/Time in Brunei": {},
+  "//en.wikipedia.org/wiki/Douala": {},
+  "//en.wikipedia.org/wiki/French language": {},
+  "//en.wikipedia.org/wiki/Central African CFA franc": {},
+  "//en.wikipedia.org/wiki/Cameroonians": {},
+  "//en.wikipedia.org/wiki/Presidential republic": {},
+  "//en.wikipedia.org/wiki/Dictatorship": {},
+  "//en.wikipedia.org/wiki/West Africa Time": {},
   "Burkinab%C3%A9 people": {},
+  "//en.wikipedia.org/wiki/Yaound%C3%A9": {},
   "Arabic": {
     "pt": "Língua árabe",
     "fr": "Arabe",
@@ -782,20 +996,21 @@
     "fr": "Démographie du Tchad",
     "es": "Demografía de Chad"
   },
-  "Cambodian people": {
-    "fr": "Démographie du Cambodge",
-    "es": "Demografía de Camboya"
-  },
   "Demographics of the Central African Republic": {
     "pt": "Demografia da República Centro-Africana",
     "fr": "Démographie de la République centrafricaine",
     "es": "Demografía de la República Centroafricana"
   },
-  "Canadian English": {
-    "pt": "Inglês canadense",
-    "fr": "Anglais canadien",
-    "it": "Inglese canadese",
-    "es": "Inglés canadiense"
+  "Cypriot people": {
+    "pt": "Demografia do Chipre",
+    "fr": "Démographie de Chypre",
+    "it": "Demografia di Cipro",
+    "es": "Demografía de Chipre"
+  },
+  "Demographics of the Democratic Republic of the Congo": {
+    "pt": "Demografia da República Democrática do Congo",
+    "fr": "Démographie de la république démocratique du Congo",
+    "es": "Demografía de la República Democrática del Congo"
   },
   "Dictatorship": {
     "pt": "Ditadura",
@@ -803,11 +1018,11 @@
     "it": "Dittatura",
     "es": "Dictadura"
   },
-  "Ottawa": {
-    "pt": "Ottawa",
-    "fr": "Ottawa",
-    "it": "Ottawa",
-    "es": "Ottawa"
+  "Greek language": {
+    "pt": "Língua grega",
+    "fr": "Grec",
+    "it": "Lingua greca",
+    "es": "Idioma griego"
   },
   "Standard Chinese": {
     "pt": "Mandarim padrão",
@@ -815,17 +1030,21 @@
     "it": "Lingua cinese standard",
     "es": "Mandarín estándar"
   },
+  "Demographics of the Republic of the Congo": {
+    "fr": "Démographie de la république du Congo",
+    "es": "Demografía de la República del Congo"
+  },
   "Shanghai": {
     "pt": "Xangai",
     "fr": "Shanghai",
     "it": "Shanghai",
     "es": "Shanghái"
   },
-  "Westminster parliamentary system": {
-    "pt": "Sistema Westminster",
-    "fr": "Système de Westminster",
-    "it": "Sistema Westminster",
-    "es": "Sistema de Westminster"
+  "Turkish language": {
+    "pt": "Língua turca",
+    "fr": "Turc",
+    "it": "Lingua turca",
+    "es": "Idioma turco"
   },
   "Kinshasa": {
     "pt": "Quinxassa",
@@ -833,17 +1052,29 @@
     "it": "Kinshasa",
     "es": "Kinsasa"
   },
+  "Havana": {
+    "pt": "Havana",
+    "fr": "La Havane",
+    "it": "L'Avana",
+    "es": "La Habana"
+  },
   "Santiago": {
     "pt": "Santiago (Chile)",
     "fr": "Santiago",
     "it": "Santiago del Cile",
     "es": "Santiago de Chile"
   },
-  "Bangui": {
-    "pt": "Bangui",
-    "fr": "Bangui",
-    "it": "Bangui",
-    "es": "Bangui"
+  "Brazzaville": {
+    "pt": "Brazavile",
+    "fr": "Brazzaville",
+    "it": "Brazzaville",
+    "es": "Brazzaville"
+  },
+  "Zagreb": {
+    "pt": "Zagreb",
+    "fr": "Zagreb",
+    "it": "Zagabria",
+    "es": "Zagreb"
   },
   "N'Djamena": {
     "pt": "Jamena",
@@ -851,17 +1082,11 @@
     "it": "N'Djamena",
     "es": "Yamena"
   },
-  "Praia": {
-    "pt": "Praia (Cabo Verde)",
-    "fr": "Praia",
-    "it": "Praia",
-    "es": "Praia"
-  },
-  "Toronto": {
-    "pt": "Toronto",
-    "fr": "Toronto",
-    "it": "Toronto",
-    "es": "Toronto"
+  "Nicosia": {
+    "pt": "Nicósia",
+    "fr": "Nicosie",
+    "it": "Nicosia",
+    "es": "Nicosia"
   },
   "Renminbi": {
     "pt": "Renminbi",
@@ -869,23 +1094,17 @@
     "it": "Renminbi cinese",
     "es": "Renminbi"
   },
-  "Canadian dollar": {
-    "pt": "Dólar canadense",
-    "fr": "Dollar canadien",
-    "it": "Dollaro canadese",
-    "es": "Dólar canadiense"
+  "Croat": {
+    "pt": "Croatas",
+    "fr": "Croates",
+    "it": "Croati",
+    "es": "Pueblo croata"
   },
   "Chilean peso": {
     "pt": "Peso chileno",
     "fr": "Peso chilien",
     "it": "Peso cileno",
     "es": "Peso (moneda de Chile)"
-  },
-  "Dynasty": {
-    "pt": "Dinastia",
-    "fr": "Dynastie",
-    "it": "Dinastia",
-    "es": "Dinastía"
   },
   "Bogotá": {
     "pt": "Bogotá",
@@ -899,23 +1118,17 @@
     "it": "Stato comunista",
     "es": "Estado comunista"
   },
-  "Elective monarchy": {
-    "pt": "Monarquia eletiva",
-    "fr": "Monarchie élective",
-    "it": "Monarchia elettiva",
-    "es": "Monarquía electiva"
+  "San José, Costa Rica": {
+    "pt": "San José (Costa Rica)",
+    "fr": "San José (Costa Rica)",
+    "it": "San José",
+    "es": "San José (Costa Rica)"
   },
   "Moroni, Comoros": {
     "pt": "Moroni",
     "fr": "Moroni (Comores)",
     "it": "Moroni (Comore)",
     "es": "Moroni (Comoras)"
-  },
-  "Sango language": {
-    "pt": "Língua sango",
-    "fr": "Sango",
-    "it": "Lingua sango",
-    "es": "Idioma sango"
   },
   "Chinese people": {
     "pt": "Chineses",
@@ -935,11 +1148,28 @@
     "it": "Peso colombiano",
     "es": "Peso (moneda de Colombia)"
   },
+  "Cuban peso": {
+    "pt": "Peso cubano",
+    "fr": "Peso cubain",
+    "it": "Peso cubano",
+    "es": "Peso (moneda de Cuba)"
+  },
   "Congolese franc": {
     "pt": "Franco congolês",
     "fr": "Franc congolais",
     "it": "Franco congolese",
     "es": "Franco congoleño"
+  },
+  "Cubans": {
+    "pt": "Cubanos",
+    "fr": "Cubains",
+    "es": "Cubanos"
+  },
+  "Costa Rican colón": {
+    "pt": "Colón costa-riquenho",
+    "fr": "Colón costaricien",
+    "it": "Colón costaricano",
+    "es": "Colón (moneda de Costa Rica)"
   },
   "Comorian franc": {
     "pt": "Franco comoriano",
@@ -947,14 +1177,8 @@
     "it": "Franco delle Comore",
     "es": "Franco comorense"
   },
-  "Cape Verdean escudo": {
-    "pt": "Escudo cabo-verdiano",
-    "fr": "Escudo cap-verdien",
-    "it": "Escudo capoverdiano",
-    "es": "Escudo caboverdiano"
-  },
-  "Cape Verdean Portuguese": {
-    "pt": "Português cabo-verdiano"
+  "Time in China": {
+    "it": "Tempo in Cina"
   },
   "Chilean Spanish": {
     "pt": "Espanhol chileno",
@@ -967,6 +1191,21 @@
     "fr": "Franc CFA (CEMAC)",
     "es": "Franco CFA de África Central"
   },
+  "Time in Chile": {
+    "pt": "Hora oficial do Chile",
+    "fr": "Heure au Chili",
+    "es": "Hora oficial de Chile"
+  },
+  "Cuban Spanish": {
+    "pt": "Espanhol cubano",
+    "fr": "Espagnol cubain",
+    "es": "Español cubano"
+  },
+  "East Africa Time": {
+    "pt": "Horário da África Oriental",
+    "fr": "Heure d'Afrique orientale",
+    "es": "Tiempo de África Oriental"
+  },
   "Colombians": {
     "pt": "Colombianos",
     "es": "Colombianos"
@@ -975,12 +1214,6 @@
     "pt": "Chilenos",
     "fr": "Chiliens",
     "es": "Chilenos"
-  },
-  "Canadian French": {
-    "pt": "Francês canadense",
-    "fr": "Français canadien",
-    "it": "Dialetto francese canadese",
-    "es": "Francés canadiense"
   },
   "Colombian Spanish": {
     "fr": "Espagnol colombien",
@@ -992,38 +1225,29 @@
     "it": "Pechino",
     "es": "Pekín"
   },
-  "United States dollar": {
-    "pt": "Dólar dos Estados Unidos",
-    "fr": "Dollar américain",
-    "it": "Dollaro statunitense",
-    "es": "Dólar estadounidense"
+  "Costa Rican Spanish": {
+    "fr": "Espagnol costaricain",
+    "es": "Español costarricense"
   },
-  "Canadians": {
-    "pt": "Canadenses",
-    "fr": "Canadiens (peuple)",
-    "es": "Canadienses"
+  "Croatian language": {
+    "pt": "Língua croata",
+    "fr": "Croate",
+    "it": "Lingua croata",
+    "es": "Idioma croata"
   },
-  "Cape Verdeans": {
-    "pt": "Cabo-verdianos"
+  "Time in Colombia": {
+    "es": "Hora legal de Colombia"
   },
-  "//en.wikipedia.org/wiki/Douala": {},
-  "//en.wikipedia.org/wiki/French language": {},
-  "//en.wikipedia.org/wiki/Central African CFA franc": {},
-  "//en.wikipedia.org/wiki/Cameroonians": {},
-  "//en.wikipedia.org/wiki/Presidential republic": {},
-  "//en.wikipedia.org/wiki/Dictatorship": {},
-  "//en.wikipedia.org/wiki/Yaound%C3%A9": {},
+  "Costa Ricans": {
+    "es": "Pueblo costarricense"
+  },
+  "UTC%2B08:00": {},
+  "UTC%E2%88%9205:00": {},
   "Copenhagen": {
     "pt": "Copenhaga",
     "fr": "Copenhague",
     "it": "Copenaghen",
     "es": "Copenhague"
-  },
-  "Cypriot people": {
-    "pt": "Demografia do Chipre",
-    "fr": "Démographie de Chypre",
-    "it": "Demografia di Cipro",
-    "es": "Demografía de Chipre"
   },
   "Cairo": {
     "pt": "Cairo",
@@ -1037,15 +1261,15 @@
     "it": "Lingua ceca",
     "es": "Idioma checo"
   },
-  "Demographics of the Democratic Republic of the Congo": {
-    "pt": "Demografia da República Democrática do Congo",
-    "fr": "Démographie de la république démocratique du Congo",
-    "es": "Demografía de la República Democrática del Congo"
-  },
   "Demographics of Dominica": {
     "pt": "Demografia da Dominica",
     "fr": "Démographie de la Dominique",
     "es": "Demografía de Dominica"
+  },
+  "Demographics of Equatorial Guinea": {
+    "pt": "Demografia da Guiné Equatorial",
+    "fr": "Démographie de la Guinée équatoriale",
+    "es": "Demografía de Guinea Ecuatorial"
   },
   "East Caribbean dollar": {
     "pt": "Dólar do Caribe Oriental",
@@ -1059,51 +1283,17 @@
     "it": "Lingua faroense",
     "es": "Idioma feroés"
   },
-  "Greek language": {
-    "pt": "Língua grega",
-    "fr": "Grec",
-    "it": "Lingua greca",
-    "es": "Idioma griego"
-  },
   "Prague": {
     "pt": "Praga",
     "fr": "Prague",
     "it": "Praga",
     "es": "Praga"
   },
-  "Demographics of the Republic of the Congo": {
-    "fr": "Démographie de la république du Congo",
-    "es": "Demografía de la República del Congo"
-  },
-  "Turkish language": {
-    "pt": "Língua turca",
-    "fr": "Turc",
-    "it": "Lingua turca",
-    "es": "Idioma turco"
-  },
-  "Havana": {
-    "pt": "Havana",
-    "fr": "La Havane",
-    "it": "L'Avana",
-    "es": "La Habana"
-  },
-  "Brazzaville": {
-    "pt": "Brazavile",
-    "fr": "Brazzaville",
-    "it": "Brazzaville",
-    "es": "Brazzaville"
-  },
-  "Zagreb": {
-    "pt": "Zagreb",
-    "fr": "Zagreb",
-    "it": "Zagabria",
-    "es": "Zagreb"
-  },
-  "Nicosia": {
-    "pt": "Nicósia",
-    "fr": "Nicosie",
-    "it": "Nicosia",
-    "es": "Nicosia"
+  "Asmara": {
+    "pt": "Asmara",
+    "fr": "Asmara",
+    "it": "Asmara",
+    "es": "Asmara"
   },
   "Roseau": {
     "pt": "Roseau",
@@ -1123,23 +1313,11 @@
     "it": "Santo Domingo",
     "es": "Santo Domingo"
   },
-  "Croat": {
-    "pt": "Croatas",
-    "fr": "Croates",
-    "it": "Croati",
-    "es": "Pueblo croata"
-  },
   "Czechs": {
     "pt": "Checos",
     "fr": "Tchèques",
     "it": "Cechi",
     "es": "Pueblo checo"
-  },
-  "San José, Costa Rica": {
-    "pt": "San José (Costa Rica)",
-    "fr": "San José (Costa Rica)",
-    "it": "San José",
-    "es": "San José (Costa Rica)"
   },
   "Danish krone": {
     "pt": "Coroa dinamarquesa",
@@ -1158,6 +1336,12 @@
     "it": "Danesi",
     "es": "Pueblo danés"
   },
+  "Western European Time": {
+    "pt": "Horário da Europa Ocidental",
+    "fr": "Heure d'Europe de l'Ouest",
+    "it": "Western European Time",
+    "es": "Hora de Europa Occidental"
+  },
   "Greenlandic language": {
     "pt": "Língua groenlandesa",
     "fr": "Groenlandais",
@@ -1170,11 +1354,9 @@
     "it": "Gibuti (città)",
     "es": "Ciudad de Yibuti"
   },
-  "Cuban peso": {
-    "pt": "Peso cubano",
-    "fr": "Peso cubain",
-    "it": "Peso cubano",
-    "es": "Peso (moneda de Cuba)"
+  "Atlantic Standard Time": {
+    "pt": "Horário Padrão do Atlântico",
+    "es": "Zona horaria del Atlántico (América del Norte)"
   },
   "Dominican peso": {
     "pt": "Peso dominicano",
@@ -1188,22 +1370,17 @@
     "it": "Sterlina egiziana",
     "es": "Libra egipcia"
   },
-  "Cubans": {
-    "pt": "Cubanos",
-    "fr": "Cubains",
-    "es": "Cubanos"
-  },
   "Czech koruna": {
     "pt": "Coroa checa",
     "fr": "Couronne tchèque",
     "it": "Corona ceca",
     "es": "Corona checa"
   },
-  "Costa Rican colón": {
-    "pt": "Colón costa-riquenho",
-    "fr": "Colón costaricien",
-    "it": "Colón costaricano",
-    "es": "Colón (moneda de Costa Rica)"
+  "Salvadoran colón": {
+    "pt": "Colón do Salvador",
+    "fr": "Colon salvadorien",
+    "it": "Colón salvadoregno",
+    "es": "Colón (moneda de El Salvador)"
   },
   "Faroe Islander": {
     "pt": "Faroeses",
@@ -1216,57 +1393,74 @@
     "it": "Corona delle Fær Øer",
     "es": "Corona feroesa"
   },
+  "Bata, Equatorial Guinea": {
+    "pt": "Bata (Guiné Equatorial)",
+    "fr": "Bata (Guinée équatoriale)",
+    "it": "Bata (Guinea Equatoriale)",
+    "es": "Bata (Guinea Ecuatorial)"
+  },
   "Djiboutian franc": {
     "pt": "Franco do Jibuti",
     "fr": "Franc Djibouti",
     "it": "Franco gibutiano",
     "es": "Franco yibutiano"
   },
-  "Greenlanders": {},
-  "Cuban Spanish": {
-    "pt": "Espanhol cubano",
-    "fr": "Espagnol cubain",
-    "es": "Español cubano"
+  "UTC-04:00": {
+    "pt": "UTC−04:00",
+    "fr": "UTC−04:00",
+    "it": "UTC-4",
+    "es": "UTC-04:00"
   },
+  "Greenlanders": {},
   "Dominican Spanish": {
     "fr": "Espagnol dominicain",
     "it": "Spagnolo dominicano",
     "es": "Español dominicano"
   },
+  "Salvadoran": {},
   "Help:IPA/English": {
     "pt": "Wikipédia:AFI para inglês",
     "fr": "Aide:Alphabet phonétique anglais",
     "it": "Aiuto:IPA per l'inglese",
     "es": "Ayuda:AFI/Inglés"
   },
-  "Djiboutians": {},
-  "Costa Rican Spanish": {
-    "fr": "Espagnol costaricain",
-    "es": "Español costarricense"
+  "Equatoguinean Spanish": {
+    "pt": "Castelhano equato-guineense",
+    "fr": "Espagnol guinéo-équatorien",
+    "es": "Español ecuatoguineano"
   },
-  "Croatian language": {
-    "pt": "Língua croata",
-    "fr": "Croate",
-    "it": "Lingua croata",
-    "es": "Idioma croata"
+  "Djiboutians": {},
+  "Salvadoran Spanish": {
+    "fr": "Espagnol salvadorien",
+    "es": "Español salvadoreño"
   },
   "Egyptian people": {
     "pt": "Egípcios",
     "fr": "Égyptiens",
     "es": "Pueblo egipcio"
   },
-  "Costa Ricans": {
-    "es": "Pueblo costarricense"
+  "Ciudad de la Paz": {
+    "pt": "Cidade da Paz",
+    "fr": "Ciudad de la Paz",
+    "it": "Ciudad de la Paz",
+    "es": "Ciudad de la Paz"
   },
+  "East Greenland Time": {},
+  "Equatoguinean Portuguese": {},
   "//en.wikipedia.org/wiki/Quito": {},
   "//en.wikipedia.org/wiki/Guayaquil": {},
   "//en.wikipedia.org/wiki/Spanish language": {},
   "//en.wikipedia.org/wiki/United States dollar": {},
   "//en.wikipedia.org/wiki/Ecuadorians": {},
-  "Demographics of Equatorial Guinea": {
-    "pt": "Demografia da Guiné Equatorial",
-    "fr": "Démographie de la Guinée équatoriale",
-    "es": "Demografía de Guinea Ecuatorial"
+  "//en.wikipedia.org/wiki/Time in Ecuador": {},
+  "//en.wikipedia.org/wiki/UTC%E2%88%9205:00": {},
+  "//en.wikipedia.org/wiki/UTC%E2%88%9206:00": {},
+  "//en.wikipedia.org/wiki/Gal%C3%A1pagos Time": {},
+  "Berlin": {
+    "pt": "Berlim",
+    "fr": "Berlin",
+    "it": "Berlino",
+    "es": "Berlín"
   },
   "Estonian language": {
     "pt": "Língua estoniana",
@@ -1278,6 +1472,10 @@
     "pt": "Demografia da Finlândia",
     "fr": "Démographie de la Finlande",
     "es": "Demografía de Finlandia"
+  },
+  "Demographics of Grenada": {
+    "fr": "Démographie de la Grenade",
+    "es": "Demografía de Granada"
   },
   "Standard Hindi": {
     "pt": "Língua hindi",
@@ -1338,17 +1536,23 @@
     "fr": "Démographie des Fidji",
     "es": "Demografía de Fiyi"
   },
-  "Asmara": {
-    "pt": "Asmara",
-    "fr": "Asmara",
-    "it": "Asmara",
-    "es": "Asmara"
+  "Accra": {
+    "pt": "Acra",
+    "fr": "Accra",
+    "it": "Accra",
+    "es": "Acra"
   },
   "Libreville": {
     "pt": "Libreville",
     "fr": "Libreville",
     "it": "Libreville",
     "es": "Libreville"
+  },
+  "St. George's, Grenada": {
+    "pt": "São Jorge (Granada)",
+    "fr": "Saint-Georges (Grenade)",
+    "it": "Saint George's",
+    "es": "Saint George (Granada)"
   },
   "Banjul": {
     "pt": "Banjul",
@@ -1359,6 +1563,12 @@
   "Gambian people": {
     "pt": "Demografia da Gâmbia",
     "fr": "Démographie de la Gambie"
+  },
+  "Germans": {
+    "pt": "Alemães",
+    "fr": "Allemands",
+    "it": "Tedeschi",
+    "es": "Pueblo alemán"
   },
   "Georgian language": {
     "pt": "Língua georgiana",
@@ -1371,6 +1581,12 @@
     "fr": "Franc Pacifique",
     "it": "Franco CFP",
     "es": "Franco CFP"
+  },
+  "Ghanaian cedi": {
+    "pt": "Cedi",
+    "fr": "Cedi",
+    "it": "Cedi ghanese",
+    "es": "Cedi"
   },
   "Estonian people": {
     "pt": "Estonianos",
@@ -1414,12 +1630,6 @@
     "it": "Francesi",
     "es": "Pueblo francés"
   },
-  "Salvadoran colón": {
-    "pt": "Colón do Salvador",
-    "fr": "Colon salvadorien",
-    "it": "Colón salvadoregno",
-    "es": "Colón (moneda de El Salvador)"
-  },
   "Gambian dalasi": {
     "pt": "Dalasi",
     "fr": "Dalasi",
@@ -1438,12 +1648,6 @@
     "it": "Nacfa eritreo",
     "es": "Nakfa"
   },
-  "Bata, Equatorial Guinea": {
-    "pt": "Bata (Guiné Equatorial)",
-    "fr": "Bata (Guinée équatoriale)",
-    "it": "Bata (Guinea Equatoriale)",
-    "es": "Bata (Guinea Ecuatorial)"
-  },
   "Fiji Hindi": {
     "pt": "Hindi fijiano",
     "fr": "Hindi des Fidji",
@@ -1460,32 +1664,19 @@
     "es": "República parlamentaria"
   },
   "Eritreans": {},
-  "Salvadoran": {},
-  "Equatoguinean Spanish": {
-    "pt": "Castelhano equato-guineense",
-    "fr": "Espagnol guinéo-équatorien",
-    "es": "Español ecuatoguineano"
-  },
   "Finnish language": {
     "pt": "Língua finlandesa",
     "fr": "Finnois",
     "it": "Lingua finlandese",
     "es": "Idioma finés"
   },
-  "Salvadoran Spanish": {
-    "fr": "Espagnol salvadorien",
-    "es": "Español salvadoreño"
+  "Georgia Time": {
+    "es": "Hora de Georgia"
   },
-  "Ciudad de la Paz": {
-    "pt": "Cidade da Paz",
-    "fr": "Ciudad de la Paz",
-    "it": "Ciudad de la Paz",
-    "es": "Ciudad de la Paz"
-  },
+  "Ghanaian people": {},
   "Hermann Immongault": {
     "fr": "Hermann Immongault"
   },
-  "Equatoguinean Portuguese": {},
   "//en.wikipedia.org/wiki/Mbabane": {},
   "//en.wikipedia.org/wiki/Lobamba": {},
   "//en.wikipedia.org/wiki/Swazi language": {},
@@ -1494,27 +1685,24 @@
   "//en.wikipedia.org/wiki/South African rand": {},
   "//en.wikipedia.org/wiki/Swazi people": {},
   "//en.wikipedia.org/wiki/Diarchic": {},
+  "//en.wikipedia.org/wiki/South African Standard Time": {},
   "Athens": {
     "pt": "Atenas",
     "fr": "Athènes",
     "it": "Atene",
     "es": "Atenas"
   },
-  "Berlin": {
-    "pt": "Berlim",
-    "fr": "Berlin",
-    "it": "Berlino",
-    "es": "Berlín"
+  "Baghdad": {
+    "pt": "Bagdá",
+    "fr": "Bagdad",
+    "it": "Baghdad",
+    "es": "Bagdad"
   },
   "Guatemala City": {
     "pt": "Cidade da Guatemala",
     "fr": "Guatemala (ville)",
     "it": "Città del Guatemala",
     "es": "Ciudad de Guatemala"
-  },
-  "Demographics of Grenada": {
-    "fr": "Démographie de la Grenade",
-    "es": "Demografía de Granada"
   },
   "Guinean people": {
     "fr": "Démographie de la Guinée",
@@ -1562,6 +1750,12 @@
     "it": "Delhi",
     "es": "Delhi"
   },
+  "Kurdish language": {
+    "pt": "Língua curda",
+    "fr": "Kurde",
+    "it": "Lingua curda",
+    "es": "Idioma kurdo"
+  },
   "Greeks": {
     "pt": "Gregos",
     "fr": "Grecs",
@@ -1592,41 +1786,17 @@
     "it": "Georgetown (Guyana)",
     "es": "Georgetown"
   },
-  "Accra": {
-    "pt": "Acra",
-    "fr": "Accra",
-    "it": "Accra",
-    "es": "Acra"
-  },
   "Port-au-Prince": {
     "pt": "Porto Príncipe",
     "fr": "Port-au-Prince",
     "it": "Port-au-Prince",
     "es": "Puerto Príncipe"
   },
-  "St. George's, Grenada": {
-    "pt": "São Jorge (Granada)",
-    "fr": "Saint-Georges (Grenade)",
-    "it": "Saint George's",
-    "es": "Saint George (Granada)"
-  },
-  "Tehran": {
-    "pt": "Teerã",
-    "fr": "Téhéran",
-    "it": "Teheran",
-    "es": "Teherán"
-  },
   "Icelandic króna": {
     "pt": "Coroa islandesa",
     "fr": "Couronne islandaise",
     "it": "Corona islandese",
     "es": "Corona islandesa"
-  },
-  "Germans": {
-    "pt": "Alemães",
-    "fr": "Allemands",
-    "it": "Tedeschi",
-    "es": "Pueblo alemán"
   },
   "Guatemalan quetzal": {
     "pt": "Quetzal (moeda)",
@@ -1640,16 +1810,16 @@
     "it": "Fiorino ungherese",
     "es": "Forinto húngaro"
   },
+  "Iraqi dinar": {
+    "pt": "Dinar iraquiano",
+    "fr": "Dinar irakien",
+    "it": "Dinaro iracheno",
+    "es": "Dinar iraquí"
+  },
   "Indian English": {
     "pt": "Inglês indiano",
     "fr": "Anglais indien",
     "es": "Inglés indio"
-  },
-  "Ghanaian cedi": {
-    "pt": "Cedi",
-    "fr": "Cedi",
-    "it": "Cedi ghanese",
-    "es": "Cedi"
   },
   "Indonesian rupiah": {
     "pt": "Rupia indonésia",
@@ -1662,6 +1832,17 @@
     "fr": "Créole haïtien",
     "it": "Lingua creola haitiana",
     "es": "Criollo haitiano"
+  },
+  "Eastern Standard Time": {
+    "pt": "Zona de Tempo Oriental",
+    "fr": "Heure de l'Est",
+    "it": "Ora standard orientale",
+    "es": "Horario del este de América del Norte"
+  },
+  "Indian Standard Time": {
+    "pt": "Horário Padrão da Índia",
+    "fr": "Heure normale de l'Inde",
+    "es": "Huso horario de la India"
   },
   "Names for India": {
     "pt": "Nomes da Índia",
@@ -1698,6 +1879,14 @@
     "it": "Franco guineano",
     "es": "Franco guineano"
   },
+  "Guyana Time": {
+    "pt": "UTC−04:00",
+    "fr": "UTC−04:00",
+    "it": "UTC-4",
+    "es": "UTC-04:00"
+  },
+  "Iraqis": {},
+  "Time in Indonesia": {},
   "Indonesians": {
     "fr": "Indonésiens"
   },
@@ -1749,15 +1938,8 @@
     "fr": "Haïtiens",
     "es": "Pueblo haitiano"
   },
-  "Ghanaian people": {},
   "Haitian French": {
     "fr": "Français haïtien"
-  },
-  "Baghdad": {
-    "pt": "Bagdá",
-    "fr": "Bagdad",
-    "it": "Baghdad",
-    "es": "Bagdad"
   },
   "Ivorian people": {
     "pt": "Demografia da Costa do Marfim",
@@ -1804,10 +1986,6 @@
     "fr": "Démographie du Kenya",
     "es": "Demografía de Kenia"
   },
-  "Demographics of Kuwait": {
-    "fr": "Démographie du Koweït",
-    "es": "Demografía de Kuwait"
-  },
   "Nairobi": {
     "pt": "Nairóbi",
     "fr": "Nairobi",
@@ -1850,12 +2028,6 @@
     "it": "Kingston",
     "es": "Kingston"
   },
-  "Kurdish language": {
-    "pt": "Língua curda",
-    "fr": "Kurde",
-    "it": "Lingua curda",
-    "es": "Idioma kurdo"
-  },
   "Amman": {
     "pt": "Amã",
     "fr": "Amman",
@@ -1868,11 +2040,11 @@
     "it": "Astana",
     "es": "Astaná"
   },
-  "Kuwait City": {
-    "pt": "Kuwait (cidade)",
-    "fr": "Koweït (ville)",
-    "it": "Al Kuwait",
-    "es": "Kuwait (ciudad)"
+  "Tehran": {
+    "pt": "Teerã",
+    "fr": "Téhéran",
+    "it": "Teheran",
+    "es": "Teherán"
   },
   "Demographics of Iran": {
     "pt": "Demografia do Irão",
@@ -1904,17 +2076,17 @@
     "it": "Giapponesi",
     "es": "Pueblo japonés"
   },
+  "Japan Standard Time": {
+    "pt": "Hora legal japonesa",
+    "fr": "Heure normale du Japon",
+    "it": "Japan Standard Time",
+    "es": "Huso horario estándar de Japón"
+  },
   "Islamic republic": {
     "pt": "República islâmica",
     "fr": "République islamique",
     "it": "Repubblica islamica",
     "es": "República islámica"
-  },
-  "Kuwaiti dinar": {
-    "pt": "Dinar kuwaitiano",
-    "fr": "Dinar koweïtien",
-    "it": "Dinaro kuwaitiano",
-    "es": "Dinar kuwaití"
   },
   "Israeli new shekel": {
     "pt": "Novo shekel israelense",
@@ -1927,12 +2099,6 @@
     "fr": "Tenge kazakh",
     "it": "Tenge kazako",
     "es": "Tenge kazajo"
-  },
-  "Iraqi dinar": {
-    "pt": "Dinar iraquiano",
-    "fr": "Dinar irakien",
-    "it": "Dinaro iracheno",
-    "es": "Dinar iraquí"
   },
   "¥": {
     "pt": "¥",
@@ -1997,11 +2163,14 @@
     "it": "Scellino keniota",
     "es": "Chelín keniano"
   },
+  "Israel Standard Time": {
+    "fr": "Heure normale d'Israël"
+  },
   "Status of Jerusalem": {
     "pt": "Posições sobre Jerusalém",
     "it": "Status di Gerusalemme"
   },
-  "Iraqis": {},
+  "Iran Standard Time": {},
   "Irish language": {
     "pt": "Língua irlandesa",
     "fr": "Irlandais",
@@ -2020,17 +2189,18 @@
   },
   "Parliamentary republic with an executive president": {},
   "https://en.wiktionary.org/wiki/%D8%B1%DB%8C%D8%A7%D9%84#Persian": {},
+  "UTC%2B05:00": {},
+  "UTC%2B12:00": {},
+  "UTC%2B13:00": {},
   "Bishkek": {
     "pt": "Bisqueque",
     "fr": "Bichkek",
     "it": "Biškek",
     "es": "Biskek"
   },
-  "Kuala Lumpur": {
-    "pt": "Kuala Lumpur",
-    "fr": "Kuala Lumpur",
-    "it": "Kuala Lumpur",
-    "es": "Kuala Lumpur"
+  "Demographics of Kuwait": {
+    "fr": "Démographie du Koweït",
+    "es": "Demografía de Kuwait"
   },
   "Laotian people": {
     "fr": "Démographie du Laos",
@@ -2092,6 +2262,12 @@
     "it": "Antananarivo",
     "es": "Antananarivo"
   },
+  "Kuwait City": {
+    "pt": "Kuwait (cidade)",
+    "fr": "Koweït (ville)",
+    "it": "Al Kuwait",
+    "es": "Kuwait (ciudad)"
+  },
   "Lilongwe": {
     "pt": "Lilongué",
     "fr": "Lilongwe",
@@ -2152,6 +2328,12 @@
     "it": "Lingua lao",
     "es": "Idioma lao"
   },
+  "Kuwaiti dinar": {
+    "pt": "Dinar kuwaitiano",
+    "fr": "Dinar koweïtien",
+    "it": "Dinaro kuwaitiano",
+    "es": "Dinar kuwaití"
+  },
   "Monrovia": {
     "pt": "Monróvia",
     "fr": "Monrovia",
@@ -2176,12 +2358,6 @@
     "it": "Lettoni",
     "es": "Pueblo letón"
   },
-  "Malaysian ringgit": {
-    "pt": "Ringuite",
-    "fr": "Ringgit",
-    "it": "Ringgit malaysiano",
-    "es": "Ringgit"
-  },
   "Swiss franc": {
     "pt": "Franco suíço",
     "fr": "Franc suisse",
@@ -2205,18 +2381,6 @@
     "fr": "Gouvernement provisoire",
     "it": "Governo provvisorio",
     "es": "Gobierno provisional"
-  },
-  "Malaysian Malay": {
-    "pt": "Língua malásia",
-    "fr": "Malaisien (langue)",
-    "it": "Lingua malaysiana",
-    "es": "Idioma malasio"
-  },
-  "Malagasy ariary": {
-    "pt": "Ariary malgaxe",
-    "fr": "Ariary",
-    "it": "Ariary malgascio",
-    "es": "Ariari malgache"
   },
   "Lao kip": {
     "pt": "Kip",
@@ -2245,11 +2409,9 @@
   "Luxembourgers": {
     "fr": "Luxembourgeois (peuple)"
   },
-  "Malagasy peoples": {
-    "pt": "Malgaxes",
-    "fr": "Malgaches",
-    "it": "Popoli del Madagascar",
-    "es": "Etnias de Madagascar"
+  "South African Standard Time": {
+    "pt": "Hora Legal da África do Sul",
+    "fr": "Heure normale d'Afrique du Sud"
   },
   "Lebanese people": {
     "pt": "Libaneses",
@@ -2274,63 +2436,43 @@
     "es": "Alemán estándar suizo"
   },
   "Liechtensteiner": {},
-  "Malagasy language": {
-    "pt": "Língua malgaxe",
-    "fr": "Malgache",
-    "it": "Lingua malgascia",
-    "es": "Idioma malgache"
-  },
   "Vientiane": {
     "pt": "Vientiane",
     "fr": "Vientiane",
     "it": "Vientiane",
     "es": "Vientián"
   },
-  "Malaysians": {},
+  "Kyrgyzstan Time": {},
+  "Time in Laos": {},
   "Government of National Unity (Libya)": {
     "pt": "Governo de Unidade Nacional (Líbia)",
     "fr": "Gouvernement Dbeibah",
     "it": "Governo di unità nazionale (Libia)"
   },
-  "Council of the Presidency for the Re-Foundation of the Republic of Madagascar": {
-    "pt": "Conselho Presidencial para a Refundação da República de Madagascar",
-    "fr": "Conseil présidentiel de la refondation de la république de Madagascar",
-    "es": "Consejo de la Presidencia para la Refundación de la República de Madagascar"
-  },
+  "UTC%2B14:00": {},
+  "UTC%2B03:00#Arabia Standard Time": {},
   "Bambara language": {
     "pt": "Língua bambara",
     "fr": "Bambara",
     "it": "Lingua bambara",
     "es": "Idioma bambara"
   },
-  "Mexico City": {
-    "pt": "Cidade do México",
-    "fr": "Mexico",
-    "it": "Città del Messico",
-    "es": "Ciudad de México"
+  "Kuala Lumpur": {
+    "pt": "Kuala Lumpur",
+    "fr": "Kuala Lumpur",
+    "it": "Kuala Lumpur",
+    "es": "Kuala Lumpur"
   },
   "Demographics of Mali": {
     "pt": "Demografia do Mali",
     "fr": "Démographie du Mali",
     "es": "Demografía de Mali"
   },
-  "Romanian language": {
-    "pt": "Língua romena",
-    "fr": "Roumain",
-    "it": "Lingua romena",
-    "es": "Idioma rumano"
-  },
   "Bamako": {
     "pt": "Bamaco",
     "fr": "Bamako",
     "it": "Bamako",
     "es": "Bamako"
-  },
-  "Chișinău": {
-    "pt": "Quixinau",
-    "fr": "Chișinău",
-    "it": "Chișinău",
-    "es": "Chisináu"
   },
   "Majuro": {
     "pt": "Majuro",
@@ -2350,27 +2492,11 @@
     "it": "Port Louis",
     "es": "Port Louis"
   },
-  "Palikir": {
-    "pt": "Paliquir",
-    "fr": "Palikir",
-    "it": "Palikir",
-    "es": "Palikir"
-  },
-  "Mexican peso": {
-    "pt": "Peso mexicano",
-    "fr": "Peso mexicain",
-    "it": "Peso messicano",
-    "es": "Peso (moneda de México)"
-  },
-  "Assembly-independent republic": {
-    "pt": "Lista de países por sistema de governo",
-    "fr": "Liste de pays par forme de gouvernement",
-    "it": "Stati per forma di governo"
-  },
-  "Non-partisan democracy": {
-    "pt": "Democracia não partidária",
-    "fr": "Démocratie non partisane",
-    "es": "Democracia sin partidos"
+  "Malaysian ringgit": {
+    "pt": "Ringuite",
+    "fr": "Ringgit",
+    "it": "Ringgit malaysiano",
+    "es": "Ringgit"
   },
   "Maldivian rufiyaa": {
     "pt": "Rupia maldívia",
@@ -2390,34 +2516,29 @@
     "it": "Rupia mauriziana",
     "es": "Rupia de Mauricio"
   },
-  "Moldovan leu": {
-    "pt": "Leu moldávio",
-    "fr": "Leu moldave",
-    "it": "Leu moldavo",
-    "es": "Leu moldavo"
-  },
-  "Mexicans": {
-    "pt": "Mexicanos",
-    "fr": "Mexicains",
-    "it": "Messicani (etnia)",
-    "es": "Mexicanos"
-  },
   "Marshallese language": {
     "pt": "Língua marshallesa",
     "fr": "Marshallais",
     "it": "Lingua marshallese",
     "es": "Idioma marshalés"
   },
+  "Malaysian Malay": {
+    "pt": "Língua malásia",
+    "fr": "Malaisien (langue)",
+    "it": "Lingua malaysiana",
+    "es": "Idioma malasio"
+  },
   "Marshallese people": {
     "fr": "Micronésiens"
   },
+  "Malagasy ariary": {
+    "pt": "Ariary malgaxe",
+    "fr": "Ariary",
+    "it": "Ariary malgascio",
+    "es": "Ariari malgache"
+  },
   "Minyanka language": {
     "fr": "Mamara"
-  },
-  "Mexican Spanish": {
-    "pt": "Espanhol mexicano",
-    "fr": "Espagnol mexicain",
-    "es": "Español mexicano"
   },
   "Fula language": {
     "pt": "Língua fula",
@@ -2426,12 +2547,6 @@
     "es": "Idioma fula"
   },
   "Escarpment Dogon": {},
-  "Weno": {
-    "pt": "Weno",
-    "fr": "Weno",
-    "it": "Weno",
-    "es": "Weno"
-  },
   "Bozo language": {
     "fr": "Bozo (langue)",
     "it": "Lingue bozo"
@@ -2442,15 +2557,27 @@
     "it": "Lingua soninke",
     "es": "Idioma soninké"
   },
+  "Malagasy peoples": {
+    "pt": "Malgaxes",
+    "fr": "Malgaches",
+    "it": "Popoli del Madagascar",
+    "es": "Etnias de Madagascar"
+  },
+  "Malaysian Standard Time": {
+    "fr": "Heure en Malaisie"
+  },
   "Maninka language": {
     "pt": "Línguas manincas",
     "fr": "Malinké (langue)",
     "it": "Lingua maninka"
   },
-  "Mauritian": {
-    "fr": "Mauriciens"
-  },
   "Kassonke language": {},
+  "Malagasy language": {
+    "pt": "Língua malgaxe",
+    "fr": "Malgache",
+    "it": "Lingua malgascia",
+    "es": "Idioma malgache"
+  },
   "Maldivians": {},
   "Maldivian language": {
     "pt": "Língua diveí",
@@ -2470,7 +2597,14 @@
     "fr": "Tamasheq",
     "es": "Idioma tamashek"
   },
+  "Time in Maldives": {},
+  "Malaysians": {},
   "Sovereign Currency Act of 2018": {},
+  "Council of the Presidency for the Re-Foundation of the Republic of Madagascar": {
+    "pt": "Conselho Presidencial para a Refundação da República de Madagascar",
+    "fr": "Conseil présidentiel de la refondation de la république de Madagascar",
+    "es": "Consejo de la Presidencia para la Refundación de la República de Madagascar"
+  },
   "//en.wikipedia.org/wiki/Valletta": {},
   "//en.wikipedia.org/wiki/Maltese language": {},
   "//en.wikipedia.org/wiki/Maltese Sign Language": {},
@@ -2478,40 +2612,31 @@
   "//en.wikipedia.org/wiki/Euro sign": {},
   "//en.wikipedia.org/wiki/Maltese people": {},
   "//en.wikipedia.org/wiki/Unitary parliamentary republic": {},
+  "//en.wikipedia.org/wiki/Central European Time": {},
   "//en.wikipedia.org/wiki/Nouakchott": {},
   "//en.wikipedia.org/wiki/Modern Standard Arabic": {},
   "//en.wikipedia.org/wiki/Mauritanian ouguiya": {},
   "//en.wikipedia.org/wiki/Demographics of Mauritania": {},
   "//en.wikipedia.org/wiki/Islamic republic": {},
-  "Aruba": {
-    "pt": "Aruba",
-    "fr": "Aruba",
-    "it": "Aruba",
-    "es": "Aruba"
-  },
-  "Amsterdam": {
-    "pt": "Amesterdão",
-    "fr": "Amsterdam",
-    "it": "Amsterdam",
-    "es": "Ámsterdam"
-  },
+  "//en.wikipedia.org/wiki/Greenwich Mean Time": {},
+  "UTC%2B8": {},
   "Casablanca": {
     "pt": "Casablanca",
     "fr": "Casablanca",
     "it": "Casablanca",
     "es": "Casablanca"
   },
-  "Kathmandu": {
-    "pt": "Catmandu",
-    "fr": "Katmandou",
-    "it": "Katmandu",
-    "es": "Katmandú"
-  },
   "Mongols": {
     "pt": "Mongóis",
     "fr": "Mongols",
     "it": "Mongoli",
     "es": "Mongoles"
+  },
+  "Mexico City": {
+    "pt": "Cidade do México",
+    "fr": "Mexico",
+    "it": "Città del Messico",
+    "es": "Ciudad de México"
   },
   "Mozambican people": {
     "pt": "Demografia de Moçambique",
@@ -2523,17 +2648,28 @@
     "fr": "Démographie de la Namibie",
     "es": "Demografía de Namibia"
   },
-  "Wellington": {
-    "pt": "Wellington",
-    "fr": "Wellington",
-    "it": "Wellington",
-    "es": "Wellington"
+  "Romanian language": {
+    "pt": "Língua romena",
+    "fr": "Roumain",
+    "it": "Lingua romena",
+    "es": "Idioma rumano"
+  },
+  "Ramadan": {
+    "pt": "Ramadão",
+    "fr": "Ramadan",
+    "es": "Ramadán"
   },
   "De facto": {
     "pt": "De facto",
     "fr": "De facto",
     "it": "De facto",
     "es": "De facto"
+  },
+  "Chișinău": {
+    "pt": "Quixinau",
+    "fr": "Chișinău",
+    "it": "Chișinău",
+    "es": "Chisináu"
   },
   "Maputo": {
     "pt": "Maputo",
@@ -2559,23 +2695,11 @@
     "it": "Windhoek",
     "es": "Windhoek"
   },
-  "European Netherlands": {
-    "pt": "Províncias dos Países Baixos",
-    "fr": "Provinces des Pays-Bas",
-    "it": "Province dei Paesi Bassi",
-    "es": "Provincias de los Países Bajos"
-  },
   "Yaren": {
     "pt": "Iarém",
     "fr": "Yaren",
     "it": "Yaren",
     "es": "Distrito de Yaren"
-  },
-  "Curaçao": {
-    "pt": "Curaçau",
-    "fr": "Curaçao",
-    "it": "Curaçao",
-    "es": "Curazao"
   },
   "Ulaanbaatar": {
     "pt": "Ulã Bator",
@@ -2583,23 +2707,34 @@
     "it": "Ulan Bator",
     "es": "Ulán Bator"
   },
+  "Palikir": {
+    "pt": "Paliquir",
+    "fr": "Palikir",
+    "it": "Palikir",
+    "es": "Palikir"
+  },
   "City-state": {
     "pt": "Cidade-estado",
     "fr": "Cité-État",
     "it": "Città-Stato",
     "es": "Ciudad-Estado"
   },
-  "Devolution": {
-    "pt": "Devolução",
-    "fr": "Dévolution du pouvoir",
-    "it": "Devoluzione (politica)",
-    "es": "Devolución de poder"
+  "Mexican peso": {
+    "pt": "Peso mexicano",
+    "fr": "Peso mexicain",
+    "it": "Peso messicano",
+    "es": "Peso (moneda de México)"
   },
   "Podgorica": {
     "pt": "Podgoritza",
     "fr": "Podgorica",
     "it": "Podgorica",
     "es": "Podgorica"
+  },
+  "Assembly-independent republic": {
+    "pt": "Lista de países por sistema de governo",
+    "fr": "Liste de pays par forme de gouvernement",
+    "it": "Stati per forma di governo"
   },
   "Burmese language": {
     "pt": "Língua birmanesa",
@@ -2619,23 +2754,34 @@
     "it": "Denigomodu",
     "es": "Distrito de Denigomodu"
   },
+  "Non-partisan democracy": {
+    "pt": "Democracia não partidária",
+    "fr": "Démocratie non partisane",
+    "es": "Democracia sin partidos"
+  },
   "Nauruan language": {
     "pt": "Língua nauruana",
     "fr": "Nauruan",
     "it": "Lingua nauruana",
     "es": "Idioma nauruano"
   },
-  "Nepalese rupee": {
-    "pt": "Rupia nepalesa",
-    "fr": "Roupie népalaise",
-    "it": "Rupia nepalese",
-    "es": "Rupia nepalí"
-  },
   "Montenegrins": {
     "pt": "Montenegrinos",
     "fr": "Monténégrins",
     "it": "Montenegrini",
     "es": "Pueblo montenegrino"
+  },
+  "Moldovan leu": {
+    "pt": "Leu moldávio",
+    "fr": "Leu moldave",
+    "it": "Leu moldavo",
+    "es": "Leu moldavo"
+  },
+  "Mexicans": {
+    "pt": "Mexicanos",
+    "fr": "Mexicains",
+    "it": "Messicani (etnia)",
+    "es": "Mexicanos"
   },
   "Monaco City": {
     "pt": "Monaco-Ville",
@@ -2648,6 +2794,9 @@
     "fr": "Monténégrin",
     "it": "Lingua montenegrina",
     "es": "Idioma montenegrino"
+  },
+  "Micronesian people": {
+    "fr": "Micronésiens"
   },
   "Myanmar kyat": {
     "pt": "Quiate",
@@ -2667,11 +2816,10 @@
     "it": "Lingua buriata",
     "es": "Idioma buriato"
   },
-  "Dutch people": {
-    "pt": "Neerlandeses",
-    "fr": "Néerlandais (peuple)",
-    "it": "Olandesi",
-    "es": "Pueblo neerlandés"
+  "Mexican Spanish": {
+    "pt": "Espanhol mexicano",
+    "fr": "Espagnol mexicain",
+    "es": "Español mexicano"
   },
   "Mozambican metical": {
     "pt": "Metical",
@@ -2698,11 +2846,11 @@
     "it": "Naypyidaw",
     "es": "Naipyidó"
   },
-  "Aruban florin": {
-    "pt": "Florim arubano",
-    "fr": "Florin arubais",
-    "it": "Fiorino arubano",
-    "es": "Florín arubeño"
+  "Weno": {
+    "pt": "Weno",
+    "fr": "Weno",
+    "it": "Weno",
+    "es": "Weno"
   },
   "Oirat language": {
     "pt": "Língua oirata",
@@ -2711,47 +2859,38 @@
   "Khalkha Mongolian": {
     "fr": "Khalkha"
   },
-  "Nauruans": {
-    "pt": "Nauruanos",
-    "fr": "Nauruans",
-    "es": "Nauruanos"
-  },
   "Moroccans": {
     "pt": "Marroquinos",
     "fr": "Marocains"
   },
-  "Sint Maarten": {
-    "pt": "São Martinho (Países Baixos)",
-    "fr": "Saint-Martin (royaume des Pays-Bas)",
-    "it": "Sint Maarten",
-    "es": "San Martín (Países Bajos)"
+  "Mauritian": {
+    "fr": "Mauriciens"
   },
-  "Nepalis": {
-    "es": "Nepalíes"
+  "Mauritius Time": {
+    "pt": "Horário da Maurícia",
+    "fr": "Heure normale de Maurice"
   },
-  "Caribbean Netherlands": {
-    "pt": "Países Baixos Caribenhos",
-    "fr": "Pays-Bas caribéens",
-    "it": "Paesi Bassi caraibici",
-    "es": "Caribe Neerlandés"
+  "Time in Mexico": {
+    "fr": "Heure au Mexique",
+    "es": "Husos horarios de México"
   },
-  "Caribbean guilder": {
-    "pt": "Florim do Caribe",
-    "fr": "Florin caribéen",
-    "it": "Fiorino caraibico",
-    "es": "Florín caribeño"
-  },
+  "Myanmar Standard Time": {},
   "Standard Moroccan Tamazight": {
     "fr": "Amazighe standard marocain",
     "es": "Amazig estándar marroquí"
   },
-  "Nepali language": {
-    "pt": "Língua nepali",
-    "fr": "Népalais",
-    "it": "Lingua nepalese",
-    "es": "Idioma nepalí"
+  "Aruba": {
+    "pt": "Aruba",
+    "fr": "Aruba",
+    "it": "Aruba",
+    "es": "Aruba"
   },
-  "Https://en.wiktionary.org/wiki/Nepalese": {},
+  "Amsterdam": {
+    "pt": "Amesterdão",
+    "fr": "Amsterdam",
+    "it": "Amsterdam",
+    "es": "Ámsterdam"
+  },
   "Hausa language": {
     "pt": "Língua hauçá",
     "fr": "Haoussa",
@@ -2764,11 +2903,11 @@
     "it": "Lingua coreana",
     "es": "Idioma coreano"
   },
-  "Karachi": {
-    "pt": "Carachi",
-    "fr": "Karachi",
-    "it": "Karachi",
-    "es": "Karachi"
+  "Kathmandu": {
+    "pt": "Catmandu",
+    "fr": "Katmandou",
+    "it": "Katmandu",
+    "es": "Katmandú"
   },
   "Demographics of North Korea": {
     "pt": "Coreia do Norte#Demografia",
@@ -2781,35 +2920,11 @@
     "it": "Inglese neozelandese",
     "es": "Inglés neozelandés"
   },
-  "Oslo": {
-    "pt": "Oslo",
-    "fr": "Oslo",
-    "it": "Oslo",
-    "es": "Oslo"
-  },
-  "Palestinians": {
-    "pt": "Palestinos",
-    "fr": "Palestiniens",
-    "it": "Palestinesi",
-    "es": "Pueblo palestino"
-  },
-  "Skopje": {
-    "pt": "Escópia",
-    "fr": "Skopje",
-    "it": "Skopje",
-    "es": "Skopie"
-  },
-  "Urdu": {
-    "pt": "Língua urdu",
-    "fr": "Ourdou",
-    "it": "Lingua urdu",
-    "es": "Urdu"
-  },
-  "Ramallah": {
-    "pt": "Ramala",
-    "fr": "Ramallah",
-    "it": "Ramallah",
-    "es": "Ramala"
+  "Wellington": {
+    "pt": "Wellington",
+    "fr": "Wellington",
+    "it": "Wellington",
+    "es": "Wellington"
   },
   "Pyongyang": {
     "pt": "Pyongyang",
@@ -2817,29 +2932,11 @@
     "it": "Pyongyang",
     "es": "Pionyang"
   },
-  "Islamabad": {
-    "pt": "Islamabade",
-    "fr": "Islamabad",
-    "it": "Islamabad",
-    "es": "Islamabad"
-  },
-  "Gaza City": {
-    "pt": "Gaza",
-    "fr": "Gaza",
-    "it": "Gaza",
-    "es": "Gaza"
-  },
   "Abuja": {
     "pt": "Abuja",
     "fr": "Abuja",
     "it": "Abuja",
     "es": "Abuya"
-  },
-  "Muscat": {
-    "pt": "Mascate",
-    "fr": "Mascate",
-    "it": "Mascate",
-    "es": "Mascate"
   },
   "Niamey": {
     "pt": "Niamei",
@@ -2847,29 +2944,29 @@
     "it": "Niamey",
     "es": "Niamey"
   },
-  "Panama City": {
-    "pt": "Cidade do Panamá",
-    "fr": "Panama (ville)",
-    "it": "Panama (città)",
-    "es": "Ciudad de Panamá"
+  "European Netherlands": {
+    "pt": "Províncias dos Países Baixos",
+    "fr": "Provinces des Pays-Bas",
+    "it": "Province dei Paesi Bassi",
+    "es": "Provincias de los Países Bajos"
   },
-  "Norwegian krone": {
-    "pt": "Coroa norueguesa",
-    "fr": "Couronne norvégienne",
-    "it": "Corona norvegese",
-    "es": "Corona noruega"
-  },
-  "Absolute monarchy": {
-    "pt": "Monarquia absoluta",
-    "fr": "Monarchie absolue",
-    "it": "Monarchia assoluta",
-    "es": "Monarquía absoluta"
+  "Curaçao": {
+    "pt": "Curaçau",
+    "fr": "Curaçao",
+    "it": "Curaçao",
+    "es": "Curazao"
   },
   "Lagos": {
     "pt": "Lagos (Nigéria)",
     "fr": "Lagos",
     "it": "Lagos",
     "es": "Lagos"
+  },
+  "Devolution": {
+    "pt": "Devolução",
+    "fr": "Dévolution du pouvoir",
+    "it": "Devoluzione (politica)",
+    "es": "Devolución de poder"
   },
   "New Zealand dollar": {
     "pt": "Dólar neozelandês",
@@ -2895,6 +2992,231 @@
     "it": "Coreani",
     "es": "Pueblo coreano"
   },
+  "Nepalese rupee": {
+    "pt": "Rupia nepalesa",
+    "fr": "Roupie népalaise",
+    "it": "Rupia nepalese",
+    "es": "Rupia nepalí"
+  },
+  "Kiwi (nickname)": {
+    "pt": "Kiwi (pessoas)",
+    "it": "Kiwis",
+    "es": "Kiwi (gentilicio)"
+  },
+  "Central European Summer Time": {
+    "pt": "Horário de Verão da Europa Central",
+    "fr": "Heure d'été d'Europe centrale",
+    "it": "Central European Summer Time",
+    "es": "Hora central europea de verano"
+  },
+  "New Zealand Sign Language": {
+    "pt": "Língua de sinais da Nova Zelândia",
+    "fr": "Langue des signes néo-zélandaise",
+    "it": "Lingua dei segni neozelandese",
+    "es": "Lengua de señas neozelandesa"
+  },
+  "Time in New Zealand": {},
+  "New Zealanders": {
+    "pt": "Neozelandeses",
+    "fr": "Néo-Zélandais"
+  },
+  "Dutch people": {
+    "pt": "Neerlandeses",
+    "fr": "Néerlandais (peuple)",
+    "it": "Olandesi",
+    "es": "Pueblo neerlandés"
+  },
+  "Nepal Standard Time": {
+    "pt": "Horário do Nepal"
+  },
+  "Aruban florin": {
+    "pt": "Florim arubano",
+    "fr": "Florin arubais",
+    "it": "Fiorino arubano",
+    "es": "Florín arubeño"
+  },
+  "Nauruans": {
+    "pt": "Nauruanos",
+    "fr": "Nauruans",
+    "es": "Nauruanos"
+  },
+  "Sint Maarten": {
+    "pt": "São Martinho (Países Baixos)",
+    "fr": "Saint-Martin (royaume des Pays-Bas)",
+    "it": "Sint Maarten",
+    "es": "San Martín (Países Bajos)"
+  },
+  "Nepalis": {
+    "es": "Nepalíes"
+  },
+  "Nigerians": {
+    "fr": "Nigérians",
+    "es": "Pueblo nigeriano"
+  },
+  "Auckland": {
+    "pt": "Auckland",
+    "fr": "Auckland",
+    "it": "Auckland",
+    "es": "Auckland"
+  },
+  "UTC": {
+    "pt": "Tempo Universal Coordenado",
+    "fr": "Temps universel coordonné",
+    "it": "Tempo coordinato universale",
+    "es": "Tiempo universal coordinado"
+  },
+  "Time in North Korea": {
+    "es": "Hora de Pionyang"
+  },
+  "1856 Sewell Ministry": {},
+  "Caribbean Netherlands": {
+    "pt": "Países Baixos Caribenhos",
+    "fr": "Pays-Bas caribéens",
+    "it": "Paesi Bassi caraibici",
+    "es": "Caribe Neerlandés"
+  },
+  "Caribbean guilder": {
+    "pt": "Florim do Caribe",
+    "fr": "Florin caribéen",
+    "it": "Fiorino caraibico",
+    "es": "Florín caribeño"
+  },
+  "Nepali language": {
+    "pt": "Língua nepali",
+    "fr": "Népalais",
+    "it": "Lingua nepalese",
+    "es": "Idioma nepalí"
+  },
+  "Https://en.wiktionary.org/wiki/Nepalese": {},
+  "//en.wikipedia.org/wiki/Managua": {},
+  "//en.wikipedia.org/wiki/Nicaraguan Spanish": {},
+  "//en.wikipedia.org/wiki/Nicaraguans": {},
+  "//en.wikipedia.org/wiki/Diarchy": {},
+  "//en.wikipedia.org/wiki/Socialist state": {},
+  "//en.wikipedia.org/wiki/Authoritarianism": {},
+  "//en.wikipedia.org/wiki/Central Time Zone": {},
+  "UTC%2B05:45": {},
+  "M%C4%81ori language": {},
+  "//en.wikipedia.org/wiki/Nicaraguan c%C3%B3rdoba": {},
+  "Karachi": {
+    "pt": "Carachi",
+    "fr": "Karachi",
+    "it": "Karachi",
+    "es": "Karachi"
+  },
+  "Oslo": {
+    "pt": "Oslo",
+    "fr": "Oslo",
+    "it": "Oslo",
+    "es": "Oslo"
+  },
+  "Palestinians": {
+    "pt": "Palestinos",
+    "fr": "Palestiniens",
+    "it": "Palestinesi",
+    "es": "Pueblo palestino"
+  },
+  "Demographics of Papua New Guinea": {
+    "pt": "Demografia da Papua-Nova Guiné",
+    "fr": "Démographie de la Papouasie-Nouvelle-Guinée",
+    "es": "Demografía de Papúa Nueva Guinea"
+  },
+  "Skopje": {
+    "pt": "Escópia",
+    "fr": "Skopje",
+    "it": "Skopje",
+    "es": "Skopie"
+  },
+  "Urdu": {
+    "pt": "Língua urdu",
+    "fr": "Ourdou",
+    "it": "Lingua urdu",
+    "es": "Urdu"
+  },
+  "Ramallah": {
+    "pt": "Ramala",
+    "fr": "Ramallah",
+    "it": "Ramallah",
+    "es": "Ramala"
+  },
+  "Islamabad": {
+    "pt": "Islamabade",
+    "fr": "Islamabad",
+    "it": "Islamabad",
+    "es": "Islamabad"
+  },
+  "Gaza City": {
+    "pt": "Gaza",
+    "fr": "Gaza",
+    "it": "Gaza",
+    "es": "Gaza"
+  },
+  "Asunción": {
+    "pt": "Assunção",
+    "fr": "Asuncion",
+    "it": "Asunción",
+    "es": "Asunción"
+  },
+  "Muscat": {
+    "pt": "Mascate",
+    "fr": "Mascate",
+    "it": "Mascate",
+    "es": "Mascate"
+  },
+  "Panama City": {
+    "pt": "Cidade do Panamá",
+    "fr": "Panama (ville)",
+    "it": "Panama (città)",
+    "es": "Ciudad de Panamá"
+  },
+  "Port Moresby": {
+    "pt": "Porto Moresby",
+    "fr": "Port Moresby",
+    "it": "Port Moresby",
+    "es": "Puerto Moresby"
+  },
+  "Norwegian krone": {
+    "pt": "Coroa norueguesa",
+    "fr": "Couronne norvégienne",
+    "it": "Corona norvegese",
+    "es": "Corona noruega"
+  },
+  "Absolute monarchy": {
+    "pt": "Monarquia absoluta",
+    "fr": "Monarchie absolue",
+    "it": "Monarchia assoluta",
+    "es": "Monarquía absoluta"
+  },
+  "Tok Pisin": {
+    "pt": "Língua tok pisin",
+    "fr": "Tok pisin",
+    "it": "Lingua tok pisin",
+    "es": "Tok pisin"
+  },
+  "Lima": {
+    "pt": "Lima",
+    "fr": "Lima",
+    "it": "Lima (Perù)",
+    "es": "Lima"
+  },
+  "Manila": {
+    "pt": "Manila",
+    "fr": "Manille",
+    "it": "Manila",
+    "es": "Manila"
+  },
+  "Quezon City": {
+    "pt": "Cidade Quezon",
+    "fr": "Quezon City",
+    "it": "Quezon City",
+    "es": "Ciudad Quezon"
+  },
+  "Panamanian balboa": {
+    "pt": "Balboa (moeda)",
+    "fr": "Balboa (monnaie)",
+    "it": "Balboa panamense",
+    "es": "Balboa (moneda de Panamá)"
+  },
   "Macedonian denar": {
     "pt": "Dinar macedónio",
     "fr": "Denar macédonien",
@@ -2906,11 +3228,6 @@
     "fr": "Palau (langue)",
     "it": "Lingua palauana",
     "es": "Idioma palauano"
-  },
-  "Kiwi (nickname)": {
-    "pt": "Kiwi (pessoas)",
-    "it": "Kiwis",
-    "es": "Kiwi (gentilicio)"
   },
   "Pakistani rupee": {
     "pt": "Rupia do Paquistão",
@@ -2925,18 +3242,26 @@
     "it": "Norvegesi",
     "es": "Pueblo noruego"
   },
-  "New Zealand Sign Language": {
-    "pt": "Língua de sinais da Nova Zelândia",
-    "fr": "Langue des signes néo-zélandaise",
-    "it": "Lingua dei segni neozelandese",
-    "es": "Lengua de señas neozelandesa"
-  },
   "Palauan people": {
     "fr": "Micronésiens"
   },
-  "New Zealanders": {
-    "pt": "Neozelandeses",
-    "fr": "Néo-Zélandais"
+  "Paraguayan guaraní": {
+    "pt": "Guarani (moeda)",
+    "fr": "Guaraní (monnaie)",
+    "it": "Guaraní paraguaiano",
+    "es": "Guaraní (moneda)"
+  },
+  "Hiri Motu": {
+    "pt": "Língua hiri motu",
+    "fr": "Hiri motu",
+    "it": "Lingua hiri motu",
+    "es": "Hiri motu"
+  },
+  "Papua New Guinean kina": {
+    "pt": "Kina",
+    "fr": "Kina",
+    "it": "Kina papuana",
+    "es": "Kina (moneda)"
   },
   "Omani rial": {
     "pt": "Rial omanense",
@@ -2944,20 +3269,41 @@
     "it": "Riyal dell'Oman",
     "es": "Rial omaní"
   },
-  "Nigerians": {
-    "fr": "Nigérians",
-    "es": "Pueblo nigeriano"
+  "Gulf Standard Time": {
+    "pt": "UTC+4",
+    "fr": "UTC+04:00",
+    "it": "UTC+4",
+    "es": "UTC+04:00"
+  },
+  "Pakistan Standard Time": {
+    "fr": "Heure normale du Pakistan"
+  },
+  "Peruvian sol": {
+    "pt": "Sol (moeda)",
+    "fr": "Sol (monnaie du Pérou)",
+    "it": "Sol peruviano",
+    "es": "Sol (moneda de Perú)"
+  },
+  "Paraguayans": {
+    "pt": "Paraguaios",
+    "es": "Pueblo paraguayo"
+  },
+  "Peruvians": {
+    "pt": "Peruanos",
+    "fr": "Péruviens",
+    "es": "Pueblo peruano"
+  },
+  "Papua New Guinean English": {
+    "pt": "Línguas da Papua-Nova Guiné",
+    "fr": "Langues en Papouasie-Nouvelle-Guinée"
+  },
+  "Time in Peru": {
+    "es": "Huso horario del Perú"
   },
   "Panamanian Spanish": {
     "fr": "Espagnol panaméen",
     "it": "Lingua spagnola a Panama",
     "es": "Español panameño"
-  },
-  "Auckland": {
-    "pt": "Auckland",
-    "fr": "Auckland",
-    "it": "Auckland",
-    "es": "Auckland"
   },
   "Omanis": {},
   "Ngerulmud": {
@@ -2966,9 +3312,25 @@
     "it": "Ngerulmud",
     "es": "Ngerulmud"
   },
-  "1856 Sewell Ministry": {},
+  "Paraguayan Spanish": {
+    "pt": "Espanhol paraguaio",
+    "fr": "Espagnol paraguayen",
+    "es": "Español paraguayo"
+  },
   "Pakistani people": {
     "es": "Pakistaníes"
+  },
+  "Time in Paraguay": {},
+  "Peruvian Spanish": {
+    "fr": "Espagnol péruvien",
+    "es": "Español peruano"
+  },
+  "Panamanians": {},
+  "Palestine Standard Time": {},
+  "Papua New Guinean Sign Language": {
+    "pt": "Língua de sinais da Papua-Nova Guiné",
+    "fr": "Langue des signes papouasienne",
+    "es": "Lengua de signos de Papúa Nueva Guinea"
   },
   "Koror City": {
     "pt": "Koror",
@@ -2976,14 +3338,8 @@
     "it": "Koror (città)",
     "es": "Koror (ciudad)"
   },
-  "//en.wikipedia.org/wiki/Managua": {},
-  "//en.wikipedia.org/wiki/Nicaraguan Spanish": {},
-  "//en.wikipedia.org/wiki/Nicaraguans": {},
-  "//en.wikipedia.org/wiki/Diarchy": {},
-  "//en.wikipedia.org/wiki/Socialist state": {},
-  "//en.wikipedia.org/wiki/Authoritarianism": {},
-  "M%C4%81ori language": {},
-  "//en.wikipedia.org/wiki/Nicaraguan c%C3%B3rdoba": {},
+  "Time in Papua New Guinea": {},
+  "UTC%2B01:00": {},
   "Lisbon": {
     "pt": "Lisboa",
     "fr": "Lisbonne",
@@ -3002,17 +3358,17 @@
     "it": "Lingua polacca",
     "es": "Idioma polaco"
   },
-  "Demographics of Papua New Guinea": {
-    "pt": "Demografia da Papua-Nova Guiné",
-    "fr": "Démographie de la Papouasie-Nouvelle-Guinée",
-    "es": "Demografía de Papúa Nueva Guinea"
-  },
   "Saint Lucian people": {
     "pt": "Demografia de Santa Lúcia",
     "fr": "Démographie de Sainte-Lucie"
   },
   "Demographics of Saint Vincent and the Grenadines": {
     "fr": "Démographie de Saint-Vincent-et-les-Grenadines"
+  },
+  "Senegalese people": {
+    "pt": "Senegal#Demografia",
+    "fr": "Démographie du Sénégal",
+    "es": "Demografía de Senegal"
   },
   "Warsaw": {
     "pt": "Varsóvia",
@@ -3025,6 +3381,18 @@
     "fr": "Bucarest",
     "it": "Bucarest",
     "es": "Bucarest"
+  },
+  "Dakar": {
+    "pt": "Dacar",
+    "fr": "Dakar",
+    "it": "Dakar",
+    "es": "Dakar"
+  },
+  "Riyadh": {
+    "pt": "Riade",
+    "fr": "Riyad",
+    "it": "Riad",
+    "es": "Riad"
   },
   "Basseterre": {
     "pt": "Basseterre",
@@ -3044,17 +3412,11 @@
     "it": "Kigali",
     "es": "Kigali"
   },
-  "Asunción": {
-    "pt": "Assunção",
-    "fr": "Asuncion",
-    "it": "Asunción",
-    "es": "Asunción"
-  },
-  "Port Moresby": {
-    "pt": "Porto Moresby",
-    "fr": "Port Moresby",
-    "it": "Port Moresby",
-    "es": "Puerto Moresby"
+  "Apia": {
+    "pt": "Apia",
+    "fr": "Apia",
+    "it": "Apia",
+    "es": "Apia"
   },
   "Russian people": {
     "pt": "Russos",
@@ -3067,24 +3429,6 @@
     "fr": "Złoty",
     "it": "Złoty",
     "es": "Esloti"
-  },
-  "Tok Pisin": {
-    "pt": "Língua tok pisin",
-    "fr": "Tok pisin",
-    "it": "Lingua tok pisin",
-    "es": "Tok pisin"
-  },
-  "Lima": {
-    "pt": "Lima",
-    "fr": "Lima",
-    "it": "Lima (Perù)",
-    "es": "Lima"
-  },
-  "Manila": {
-    "pt": "Manila",
-    "fr": "Manille",
-    "it": "Manila",
-    "es": "Manila"
   },
   "Philippine peso": {
     "pt": "Peso filipino",
@@ -3110,11 +3454,11 @@
     "it": "Polacchi",
     "es": "Pueblo polaco"
   },
-  "Quezon City": {
-    "pt": "Cidade Quezon",
-    "fr": "Quezon City",
-    "it": "Quezon City",
-    "es": "Ciudad Quezon"
+  "São Tomé": {
+    "pt": "São Tomé (São Tomé e Príncipe)",
+    "fr": "São Tomé (ville)",
+    "it": "São Tomé",
+    "es": "Santo Tomé (capital)"
   },
   "Romanian people": {
     "pt": "Romenos",
@@ -3128,11 +3472,41 @@
     "it": "Lingua kinyarwanda",
     "es": "Kiñaruanda"
   },
-  "Panamanian balboa": {
-    "pt": "Balboa (moeda)",
-    "fr": "Balboa (monnaie)",
-    "it": "Balboa panamense",
-    "es": "Balboa (moneda de Panamá)"
+  "Samoan language": {
+    "pt": "Língua samoana",
+    "fr": "Samoan",
+    "it": "Lingua samoana",
+    "es": "Idioma samoano"
+  },
+  "City of San Marino": {
+    "pt": "San Marino (cidade)",
+    "fr": "Ville de Saint-Marin",
+    "it": "Città di San Marino",
+    "es": "Ciudad de San Marino"
+  },
+  "Saudi riyal": {
+    "pt": "Rial saudita",
+    "fr": "Riyal saoudien",
+    "it": "Riyal saudita",
+    "es": "Riyal saudí"
+  },
+  "Forro Creole": {
+    "pt": "Língua são-tomense",
+    "fr": "Forro",
+    "it": "Lingua forro",
+    "es": "Criollo forro"
+  },
+  "Angolar Creole": {
+    "pt": "Língua angolar",
+    "fr": "Angolar",
+    "it": "Angolar",
+    "es": "Criollo angolar"
+  },
+  "Principense Creole": {
+    "pt": "Língua principense",
+    "fr": "Principense",
+    "it": "Lingua principense",
+    "es": "Criollo principense"
   },
   "Romanian leu": {
     "pt": "Leu romeno",
@@ -3160,23 +3534,8 @@
   "Pinoy": {
     "es": "Pinoy"
   },
-  "Paraguayan guaraní": {
-    "pt": "Guarani (moeda)",
-    "fr": "Guaraní (monnaie)",
-    "it": "Guaraní paraguaiano",
-    "es": "Guaraní (moneda)"
-  },
-  "Hiri Motu": {
-    "pt": "Língua hiri motu",
-    "fr": "Hiri motu",
-    "it": "Lingua hiri motu",
-    "es": "Hiri motu"
-  },
-  "Papua New Guinean kina": {
-    "pt": "Kina",
-    "fr": "Kina",
-    "it": "Kina papuana",
-    "es": "Kina (moneda)"
+  "Samoans": {
+    "fr": "Samoans"
   },
   "Qatari riyal": {
     "pt": "Rial catarense",
@@ -3190,20 +3549,30 @@
     "it": "Franco ruandese",
     "es": "Franco ruandés"
   },
+  "Tālā": {
+    "pt": "Tala (moeda)",
+    "fr": "Tālā",
+    "it": "Tālā samoano",
+    "es": "Tālā (moneda)"
+  },
+  "São Tomé and Príncipe dobra": {
+    "pt": "Dobra são-tomense",
+    "fr": "Dobra (monnaie)",
+    "it": "Dobra di São Tomé e Príncipe",
+    "es": "Dobra santotomense"
+  },
   "Filipinos": {
     "pt": "Filipinos",
     "fr": "Philippins",
     "es": "Pueblo filipino"
   },
-  "Peruvian sol": {
-    "pt": "Sol (moeda)",
-    "fr": "Sol (monnaie du Pérou)",
-    "it": "Sol peruviano",
-    "es": "Sol (moneda de Perú)"
+  "Time in Russia": {
+    "fr": "Heure en Russie",
+    "it": "Fusi orari della Russia",
+    "es": "Husos horarios de Rusia"
   },
-  "Paraguayans": {
-    "pt": "Paraguaios",
-    "es": "Pueblo paraguayo"
+  "Philippine Standard Time": {
+    "fr": "Heure normale des Philippines"
   },
   "English Language": {
     "pt": "Língua inglesa",
@@ -3211,14 +3580,11 @@
     "it": "Lingua inglese",
     "es": "Idioma inglés"
   },
-  "Peruvians": {
-    "pt": "Peruanos",
-    "fr": "Péruviens",
-    "es": "Pueblo peruano"
-  },
-  "Papua New Guinean English": {
-    "pt": "Línguas da Papua-Nova Guiné",
-    "fr": "Langues en Papouasie-Nouvelle-Guinée"
+  "Sammarinese": {},
+  "Dogana": {
+    "pt": "Dogana",
+    "it": "Dogana (San Marino)",
+    "es": "Dogana"
   },
   "Doha": {
     "pt": "Doha",
@@ -3226,37 +3592,32 @@
     "it": "Doha",
     "es": "Doha"
   },
-  "Paraguayan Spanish": {
-    "pt": "Espanhol paraguaio",
-    "fr": "Espagnol paraguayen",
-    "es": "Español paraguayo"
-  },
-  "Peruvian Spanish": {
-    "fr": "Espagnol péruvien",
-    "es": "Español peruano"
+  "Saudis": {
+    "fr": "Saoudiens"
   },
   "Philippine peso sign": {},
-  "Panamanians": {},
-  "Papua New Guinean Sign Language": {
-    "pt": "Língua de sinais da Papua-Nova Guiné",
-    "fr": "Langue des signes papouasienne",
-    "es": "Lengua de signos de Papúa Nueva Guinea"
-  },
   "₽": {
     "it": "Simbolo del rublo russo"
   },
   "Qataris": {
     "fr": "Qatariens"
   },
+  "Cape Town": {
+    "pt": "Cidade do Cabo",
+    "fr": "Le Cap",
+    "it": "Città del Capo",
+    "es": "Ciudad del Cabo"
+  },
+  "Pretoria": {
+    "pt": "Pretória",
+    "fr": "Pretoria",
+    "it": "Pretoria",
+    "es": "Pretoria"
+  },
   "Demographics of South Korea": {
     "pt": "Coreia do Sul#Demografia",
     "fr": "Démographie de la Corée du Sud",
     "es": "Demografía de Corea del Sur"
-  },
-  "Senegalese people": {
-    "pt": "Senegal#Demografia",
-    "fr": "Démographie du Sénégal",
-    "es": "Demografía de Senegal"
   },
   "Sierra Leonean people": {
     "pt": "Demografia de Serra Leoa",
@@ -3293,17 +3654,11 @@
     "it": "Lubiana",
     "es": "Liubliana"
   },
-  "Dakar": {
-    "pt": "Dacar",
-    "fr": "Dakar",
-    "it": "Dakar",
-    "es": "Dakar"
-  },
-  "Riyadh": {
-    "pt": "Riade",
-    "fr": "Riyad",
-    "it": "Riad",
-    "es": "Riad"
+  "Bloemfontein": {
+    "pt": "Bloemfontein",
+    "fr": "Bloemfontein",
+    "it": "Bloemfontein",
+    "es": "Bloemfontein"
   },
   "Belgrade": {
     "pt": "Belgrado",
@@ -3311,17 +3666,23 @@
     "it": "Belgrado",
     "es": "Belgrado"
   },
+  "Colombo": {
+    "pt": "Colombo",
+    "fr": "Colombo",
+    "it": "Colombo (Sri Lanka)",
+    "es": "Colombo"
+  },
   "Freetown": {
     "pt": "Freetown",
     "fr": "Freetown",
     "it": "Freetown",
     "es": "Freetown"
   },
-  "Apia": {
-    "pt": "Apia",
-    "fr": "Apia",
-    "it": "Apia",
-    "es": "Apia"
+  "Johannesburg": {
+    "pt": "Joanesburgo",
+    "fr": "Johannesbourg",
+    "it": "Johannesburg",
+    "es": "Johannesburgo"
   },
   "Serbs": {
     "pt": "Sérvios",
@@ -3334,6 +3695,11 @@
     "fr": "Mogadiscio",
     "it": "Mogadiscio",
     "es": "Mogadiscio"
+  },
+  "Demographics of South Africa": {
+    "pt": "Demografia da África do Sul",
+    "fr": "Démographie de l'Afrique du Sud",
+    "es": "Demografía de Sudáfrica"
   },
   "Serbian language": {
     "pt": "Língua sérvia",
@@ -3368,29 +3734,17 @@
     "it": "Slovacchi",
     "es": "Pueblo eslovaco"
   },
-  "São Tomé": {
-    "pt": "São Tomé (São Tomé e Príncipe)",
-    "fr": "São Tomé (ville)",
-    "it": "São Tomé",
-    "es": "Santo Tomé (capital)"
-  },
   "South Korean won": {
     "pt": "Won sul-coreano",
     "fr": "Won sud-coréen (depuis 1962)",
     "it": "Won sudcoreano",
     "es": "Won surcoreano"
   },
-  "Samoan language": {
-    "pt": "Língua samoana",
-    "fr": "Samoan",
-    "it": "Lingua samoana",
-    "es": "Idioma samoano"
-  },
-  "City of San Marino": {
-    "pt": "San Marino (cidade)",
-    "fr": "Ville de Saint-Marin",
-    "it": "Città di San Marino",
-    "es": "Ciudad de San Marino"
+  "Sinhala language": {
+    "pt": "Língua cingalesa",
+    "fr": "Singhalais",
+    "it": "Lingua singalese",
+    "es": "Idioma cingalés"
   },
   "Somali language": {
     "pt": "Língua somali",
@@ -3398,17 +3752,17 @@
     "it": "Lingua somala",
     "es": "Idioma somalí"
   },
-  "Saudi riyal": {
-    "pt": "Rial saudita",
-    "fr": "Riyal saoudien",
-    "it": "Riyal saudita",
-    "es": "Riyal saudí"
-  },
   "Singapore dollar": {
     "pt": "Dólar de Singapura",
     "fr": "Dollar de Singapour",
     "it": "Dollaro di Singapore",
     "es": "Dólar de Singapur"
+  },
+  "Sri Lankan rupee": {
+    "pt": "Rupia do Sri Lanka",
+    "fr": "Roupie srilankaise",
+    "it": "Rupia singalese",
+    "es": "Rupia de Sri Lanka"
   },
   "Serbian dinar": {
     "pt": "Dinar sérvio",
@@ -3416,23 +3770,11 @@
     "it": "Dinaro serbo",
     "es": "Dinar serbio"
   },
-  "Forro Creole": {
-    "pt": "Língua são-tomense",
-    "fr": "Forro",
-    "it": "Lingua forro",
-    "es": "Criollo forro"
-  },
-  "Angolar Creole": {
-    "pt": "Língua angolar",
-    "fr": "Angolar",
-    "it": "Angolar",
-    "es": "Criollo angolar"
-  },
-  "Principense Creole": {
-    "pt": "Língua principense",
-    "fr": "Principense",
-    "it": "Lingua principense",
-    "es": "Criollo principense"
+  "Sri Jayawardenepura Kotte": {
+    "pt": "Seri Jaiavardenapura-Cota",
+    "fr": "Sri Jayawardenapura Kotte",
+    "it": "Sri Jayawardenapura Kotte",
+    "es": "Sri Jayawardenapura Kotte"
   },
   "Sierra Leonean leone": {
     "pt": "Leone (moeda)",
@@ -3452,8 +3794,11 @@
     "it": "Victoria (Seychelles)",
     "es": "Victoria (Seychelles)"
   },
-  "Samoans": {
-    "fr": "Samoans"
+  "Spaniard": {
+    "pt": "Espanhóis",
+    "fr": "Espagnols",
+    "it": "Spagnoli",
+    "es": "Pueblo español"
   },
   "Juba": {
     "pt": "Juba (Sudão do Sul)",
@@ -3479,22 +3824,13 @@
     "it": "Scellino somalo",
     "es": "Chelín somalí"
   },
-  "Tālā": {
-    "pt": "Tala (moeda)",
-    "fr": "Tālā",
-    "it": "Tālā samoano",
-    "es": "Tālā (moneda)"
-  },
-  "São Tomé and Príncipe dobra": {
-    "pt": "Dobra são-tomense",
-    "fr": "Dobra (monnaie)",
-    "it": "Dobra di São Tomé e Príncipe",
-    "es": "Dobra santotomense"
+  "Singapore Standard Time": {},
+  "Seychelles Time": {
+    "pt": "Horário das Seicheles"
   },
   "Singaporean Mandarin": {
     "fr": "Mandarin de Singapour"
   },
-  "Sammarinese": {},
   "Bratislava": {
     "pt": "Bratislava",
     "fr": "Bratislava",
@@ -3507,29 +3843,38 @@
     "it": "Seul",
     "es": "Seúl"
   },
-  "Dogana": {
-    "pt": "Dogana",
-    "it": "Dogana (San Marino)",
-    "es": "Dogana"
-  },
   "Honiara": {
     "pt": "Honiara",
     "fr": "Honiara",
     "it": "Honiara",
     "es": "Honiara"
   },
-  "Saudis": {
-    "fr": "Saoudiens"
+  "Time in South Korea": {
+    "pt": "Hora legal na Coreia do Sul",
+    "fr": "Heure en Corée du Sud",
+    "es": "Huso horario de Corea"
+  },
+  "Demographics of South Sudan": {
+    "pt": "Demografia do Sudão do Sul",
+    "fr": "Démographie du Soudan du Sud",
+    "es": "Demografía de Sudán del Sur"
+  },
+  "South Sudanese pound": {
+    "pt": "Libra sul-sudanesa",
+    "fr": "Livre sud-soudanaise",
+    "it": "Sterlina sudsudanese",
+    "es": "Libra sursudanesa"
   },
   "Singaporeans": {
     "pt": "Singapurianos"
   },
-  "Cape Town": {
-    "pt": "Cidade do Cabo",
-    "fr": "Le Cap",
-    "it": "Città del Capo",
-    "es": "Ciudad del Cabo"
+  "Madrid": {
+    "pt": "Madrid",
+    "fr": "Madrid",
+    "it": "Madrid",
+    "es": "Madrid"
   },
+  "Saudi Arabia Standard Time": {},
   "Dar es Salaam": {
     "pt": "Dar es Salaam",
     "fr": "Dar es Salam",
@@ -3553,12 +3898,6 @@
     "fr": "Khartoum",
     "it": "Khartum",
     "es": "Jartum"
-  },
-  "Pretoria": {
-    "pt": "Pretória",
-    "fr": "Pretoria",
-    "it": "Pretoria",
-    "es": "Pretoria"
   },
   "Romansh language": {
     "pt": "Língua romanche",
@@ -3586,17 +3925,16 @@
     "fr": "Démographie de la Tanzanie",
     "es": "Demografía de Tanzania"
   },
+  "Demographics of Togo": {
+    "pt": "Demografia do Togo",
+    "fr": "Démographie du Togo",
+    "es": "Demografía de Togo"
+  },
   "Tajiks": {
     "pt": "Tajiques",
     "fr": "Tadjiks",
     "it": "Tagiki",
     "es": "Tayikos"
-  },
-  "Bloemfontein": {
-    "pt": "Bloemfontein",
-    "fr": "Bloemfontein",
-    "it": "Bloemfontein",
-    "es": "Bloemfontein"
   },
   "Thai language": {
     "pt": "Língua tailandesa",
@@ -3628,12 +3966,6 @@
     "it": "Bangkok",
     "es": "Bangkok"
   },
-  "Colombo": {
-    "pt": "Colombo",
-    "fr": "Colombo",
-    "it": "Colombo (Sri Lanka)",
-    "es": "Colombo"
-  },
   "Dodoma": {
     "pt": "Dodoma",
     "fr": "Dodoma",
@@ -3652,22 +3984,23 @@
     "it": "Lomé",
     "es": "Lomé"
   },
+  "Nukuʻalofa": {
+    "pt": "Nucualofa",
+    "fr": "Nukuʻalofa",
+    "it": "Nukuʻalofa",
+    "es": "Nukualofa"
+  },
   "Paramaribo": {
     "pt": "Paramaribo",
     "fr": "Paramaribo",
     "it": "Paramaribo",
     "es": "Paramaribo"
   },
-  "Johannesburg": {
-    "pt": "Joanesburgo",
-    "fr": "Johannesbourg",
-    "it": "Johannesburg",
-    "es": "Johannesburgo"
-  },
-  "Demographics of South Africa": {
-    "pt": "Demografia da África do Sul",
-    "fr": "Démographie de l'Afrique du Sud",
-    "es": "Demografía de Sudáfrica"
+  "Port of Spain": {
+    "pt": "Port of Spain",
+    "fr": "Port-d'Espagne",
+    "it": "Port of Spain",
+    "es": "Puerto España"
   },
   "Thai baht": {
     "pt": "Baht",
@@ -3691,11 +4024,11 @@
     "it": "Lingua tagica",
     "es": "Idioma tayiko"
   },
-  "Sinhala language": {
-    "pt": "Língua cingalesa",
-    "fr": "Singhalais",
-    "it": "Lingua singalese",
-    "es": "Idioma cingalés"
+  "Tongan language": {
+    "pt": "Língua tonganesa",
+    "fr": "Tongien",
+    "it": "Lingua tongana",
+    "es": "Idioma tongano"
   },
   "Syrian pound": {
     "pt": "Libra síria",
@@ -3709,29 +4042,23 @@
     "it": "Dollaro surinamese",
     "es": "Dólar surinamés"
   },
-  "Sri Lankan rupee": {
-    "pt": "Rupia do Sri Lanka",
-    "fr": "Roupie srilankaise",
-    "it": "Rupia singalese",
-    "es": "Rupia de Sri Lanka"
-  },
-  "Sri Jayawardenepura Kotte": {
-    "pt": "Seri Jaiavardenapura-Cota",
-    "fr": "Sri Jayawardenapura Kotte",
-    "it": "Sri Jayawardenapura Kotte",
-    "es": "Sri Jayawardenapura Kotte"
-  },
   "Tajikistani somoni": {
     "pt": "Somoni",
     "fr": "Somoni",
     "it": "Somoni tagiko",
     "es": "Somoni"
   },
-  "Spaniard": {
-    "pt": "Espanhóis",
-    "fr": "Espagnols",
-    "it": "Spagnoli",
-    "es": "Pueblo español"
+  "Chaguanas": {
+    "pt": "Chaguanas",
+    "fr": "Chaguanas",
+    "it": "Chaguanas",
+    "es": "Chaguanas"
+  },
+  "Tongan paʻanga": {
+    "pt": "Pa'anga",
+    "fr": "Paʻanga",
+    "it": "Paʻanga tongano",
+    "es": "Pa'anga"
   },
   "Tanzanian shilling": {
     "pt": "Xelim tanzaniano",
@@ -3739,10 +4066,19 @@
     "it": "Scellino tanzaniano",
     "es": "Chelín tanzano"
   },
+  "Trinidadian and Tobagonian English": {
+    "pt": "Inglês de Trindade e Tobago"
+  },
   "Timor-Leste centavo coins": {
     "pt": "Centavos de Timor-Leste",
     "it": "Centavo est timorense",
     "es": "Centavos de dólar de Timor Oriental"
+  },
+  "Suriname Time": {
+    "pt": "UTC−3",
+    "fr": "UTC−03:00",
+    "it": "UTC-3",
+    "es": "UTC-03:00"
   },
   "Thai people": {
     "pt": "Tai (grupo étnico)",
@@ -3756,6 +4092,10 @@
     "it": "Sterlina sudanese",
     "es": "Libra sudanesa"
   },
+  "Tongans": {
+    "es": "Pueblo tongano"
+  },
+  "Sri Lanka Standard Time": {},
   "Swiss people": {
     "pt": "Suíços",
     "fr": "Suisses",
@@ -3772,6 +4112,7 @@
     "fr": "Portugais est-timorais",
     "es": "Portugués timorense"
   },
+  "Time in Timor-Leste": {},
   "Surinamese people": {},
   "Swedes": {
     "pt": "Suecos",
@@ -3779,29 +4120,14 @@
     "it": "Svedesi",
     "es": "Pueblo sueco"
   },
-  "Demographics of South Sudan": {
-    "pt": "Demografia do Sudão do Sul",
-    "fr": "Démographie du Soudan du Sud",
-    "es": "Demografía de Sudán del Sur"
-  },
-  "South Sudanese pound": {
-    "pt": "Libra sul-sudanesa",
-    "fr": "Livre sud-soudanaise",
-    "it": "Sterlina sudsudanese",
-    "es": "Libra sursudanesa"
-  },
   "Zurich": {
     "pt": "Zurique",
     "fr": "Zurich",
     "it": "Zurigo",
     "es": "Zúrich"
   },
-  "Madrid": {
-    "pt": "Madrid",
-    "fr": "Madrid",
-    "it": "Madrid",
-    "es": "Madrid"
-  },
+  "Tajikistan Time": {},
+  "UTC%2B07:00": {},
   "Ankara": {
     "pt": "Ancara",
     "fr": "Ankara",
@@ -3814,20 +4140,9 @@
     "it": "Londra",
     "es": "Londres"
   },
-  "Demographics of Togo": {
-    "pt": "Demografia do Togo",
-    "fr": "Démographie du Togo",
-    "es": "Demografía de Togo"
-  },
   "Tuvaluan people": {
     "fr": "Démographie des Tuvalu",
     "es": "Demografía de Tuvalu"
-  },
-  "Montevideo": {
-    "pt": "Montevidéu",
-    "fr": "Montevideo",
-    "it": "Montevideo",
-    "es": "Montevideo"
   },
   "Ukrainian language": {
     "pt": "Língua ucraniana",
@@ -3852,23 +4167,23 @@
     "fr": "Démographie de l'Ouganda",
     "es": "Demografía de Uganda"
   },
-  "Nukuʻalofa": {
-    "pt": "Nucualofa",
-    "fr": "Nukuʻalofa",
-    "it": "Nukuʻalofa",
-    "es": "Nukualofa"
-  },
-  "Port of Spain": {
-    "pt": "Port of Spain",
-    "fr": "Port-d'Espagne",
-    "it": "Port of Spain",
-    "es": "Puerto España"
+  "Port Vila": {
+    "pt": "Porto Vila",
+    "fr": "Port-Vila",
+    "it": "Port Vila",
+    "es": "Port Vila"
   },
   "Tunis": {
     "pt": "Tunes",
     "fr": "Tunis",
     "it": "Tunisi",
     "es": "Túnez (ciudad)"
+  },
+  "Bislama language": {
+    "pt": "Língua bislamá",
+    "fr": "Bichelamar",
+    "it": "Lingua bislama",
+    "es": "Bislama"
   },
   "Tuvaluan language": {
     "pt": "Língua tuvaluana",
@@ -3916,12 +4231,6 @@
     "it": "Simbolo della sterlina",
     "es": "£"
   },
-  "Tongan language": {
-    "pt": "Língua tonganesa",
-    "fr": "Tongien",
-    "it": "Lingua tongana",
-    "es": "Idioma tongano"
-  },
   "Kyiv": {
     "pt": "Kiev",
     "fr": "Kiev",
@@ -3946,18 +4255,6 @@
     "it": "Grivna ucraina",
     "es": "Grivna"
   },
-  "Chaguanas": {
-    "pt": "Chaguanas",
-    "fr": "Chaguanas",
-    "it": "Chaguanas",
-    "es": "Chaguanas"
-  },
-  "Tongan paʻanga": {
-    "pt": "Pa'anga",
-    "fr": "Paʻanga",
-    "it": "Paʻanga tongano",
-    "es": "Pa'anga"
-  },
   "Turkmenistani manat": {
     "pt": "Manate turcomeno",
     "fr": "Manat turkmène",
@@ -3976,11 +4273,11 @@
     "it": "Lira turca",
     "es": "Lira turca"
   },
-  "Uruguayan peso": {
-    "pt": "Peso uruguaio",
-    "fr": "Peso uruguayen",
-    "it": "Peso uruguaiano",
-    "es": "Peso Uruguayo"
+  "Vanuatu vatu": {
+    "pt": "Vatu",
+    "fr": "Vatu",
+    "it": "Vatu",
+    "es": "Vatu"
   },
   "Trinidad and Tobago dollar": {
     "pt": "Dólar de Trindade e Tobago",
@@ -3994,23 +4291,11 @@
     "it": "Dinaro tunisino",
     "es": "Dinar tunecino"
   },
-  "Rioplatense Spanish": {
-    "pt": "Espanhol rioplatense",
-    "fr": "Espagnol rioplatense",
-    "it": "Spagnolo rioplatense",
-    "es": "Español rioplatense"
-  },
-  "Trinidadian and Tobagonian English": {
-    "pt": "Inglês de Trindade e Tobago"
-  },
   "Turkish people": {
     "pt": "Turcos (nacionalidade)",
     "fr": "Turcs (peuple)",
     "it": "Turchi",
     "es": "Pueblo turco"
-  },
-  "Tongans": {
-    "es": "Pueblo tongano"
   },
   "Istanbul": {
     "pt": "Istambul",
@@ -4025,6 +4310,10 @@
     "es": "Dólar tuvaluano"
   },
   "₴": {},
+  "Ni-Vanuatu": {
+    "pt": "Ni-Vanuatu",
+    "fr": "Ni-Vanuatu"
+  },
   "Tunisians": {
     "fr": "Tunisiens",
     "es": "Pueblo tunecino"
@@ -4056,17 +4345,20 @@
     "it": "Statunitensi",
     "es": "Estadounidense"
   },
-  "Uruguayans": {
-    "pt": "Uruguaios",
-    "es": "Pueblo uruguayo"
-  },
+  "Time in the United Arab Emirates": {},
   "Turkish lira sign": {},
-  "Uruguayan Sign Language": {
-    "pt": "Língua de sinais uruguaia",
-    "fr": "Langue des signes uruguayenne",
-    "es": "Lengua de señas uruguaya"
+  "Time in Turkey": {
+    "pt": "Horário da Turquia",
+    "es": "Hora de Turquía"
   },
+  "Turkmenistan Time": {},
   "Trinidadians and Tobagonians": {},
+  "Time in Vanuatu": {},
+  "//en.wikipedia.org/wiki/City-state": {},
+  "//en.wikipedia.org/wiki/Italian language": {},
+  "//en.wikipedia.org/wiki/Elective monarchy": {},
+  "UTC%2B02:00": {},
+  "UTC%E2%88%9212:00": {},
   "Demographics of Uzbekistan": {
     "pt": "Demografia do Uzbequistão",
     "fr": "Démographie de l'Ouzbékistan",
@@ -4099,6 +4391,12 @@
     "it": "Demografia dello Zambia",
     "es": "Demografía de Zambia"
   },
+  "Montevideo": {
+    "pt": "Montevidéu",
+    "fr": "Montevideo",
+    "it": "Montevideo",
+    "es": "Montevideo"
+  },
   "Caracas": {
     "pt": "Caracas",
     "fr": "Caracas",
@@ -4116,12 +4414,6 @@
     "fr": "Kwacha zambien",
     "it": "Kwacha zambiano",
     "es": "Kuacha zambiano"
-  },
-  "Port Vila": {
-    "pt": "Porto Vila",
-    "fr": "Port-Vila",
-    "it": "Port Vila",
-    "es": "Port Vila"
   },
   "Tashkent": {
     "pt": "Tasquente",
@@ -4141,12 +4433,6 @@
     "it": "Lingua uzbeca",
     "es": "Idioma uzbeko"
   },
-  "Bislama language": {
-    "pt": "Língua bislamá",
-    "fr": "Bichelamar",
-    "it": "Lingua bislama",
-    "es": "Bislama"
-  },
   "Venezuelan bolívar": {
     "pt": "Bolívar venezuelano",
     "fr": "Bolivar (1879-2008)",
@@ -4159,17 +4445,23 @@
     "it": "Đồng",
     "es": "Đồng vietnamita"
   },
-  "Vanuatu vatu": {
-    "pt": "Vatu",
-    "fr": "Vatu",
-    "it": "Vatu",
-    "es": "Vatu"
-  },
   "Uzbekistani soum": {
     "pt": "Som (moeda usbeque)",
     "fr": "Sum (monnaie)",
     "it": "Som uzbeko",
     "es": "Som uzbeko"
+  },
+  "Uruguayan peso": {
+    "pt": "Peso uruguaio",
+    "fr": "Peso uruguayen",
+    "it": "Peso uruguaiano",
+    "es": "Peso Uruguayo"
+  },
+  "Rioplatense Spanish": {
+    "pt": "Espanhol rioplatense",
+    "fr": "Espagnol rioplatense",
+    "it": "Spagnolo rioplatense",
+    "es": "Español rioplatense"
   },
   "Yemeni rial": {
     "pt": "Rial iemenita",
@@ -4183,9 +4475,9 @@
     "it": "Castigliano del Venezuela",
     "es": "Español venezolano"
   },
-  "Ni-Vanuatu": {
-    "pt": "Ni-Vanuatu",
-    "fr": "Ni-Vanuatu"
+  "Uzbekistan Time": {},
+  "Time in Venezuela": {
+    "es": "Hora legal de Venezuela"
   },
   "Sanaa": {
     "pt": "Saná",
@@ -4207,9 +4499,18 @@
     "it": "Lusaka",
     "es": "Lusaka"
   },
-  "//en.wikipedia.org/wiki/City-state": {},
-  "//en.wikipedia.org/wiki/Italian language": {},
-  "//en.wikipedia.org/wiki/Elective monarchy": {},
+  "Uruguayans": {
+    "pt": "Uruguaios",
+    "es": "Pueblo uruguayo"
+  },
+  "Uruguayan Sign Language": {
+    "pt": "Língua de sinais uruguaia",
+    "fr": "Langue des signes uruguayenne",
+    "es": "Lengua de señas uruguaya"
+  },
+  "Uruguay Time": {
+    "es": "Hora legal de Uruguay"
+  },
   "//en.wikipedia.org/wiki/Harare": {},
   "//en.wikipedia.org/wiki/Chewa language": {},
   "//en.wikipedia.org/wiki/Chibarwe": {},
@@ -4229,5 +4530,8 @@
   "//en.wikipedia.org/wiki/Zimbabwean sign languages": {},
   "//en.wikipedia.org/wiki/Zimbabwe Gold": {},
   "//en.wikipedia.org/wiki/Zimbabwean people": {},
-  "//en.wikipedia.org/wiki/Presidential system": {}
+  "UTC%2B10:00": {},
+  "UTC%2B11:00": {},
+  "//en.wikipedia.org/wiki/Presidential system": {},
+  "//en.wikipedia.org/wiki/Central Africa Time": {}
 }

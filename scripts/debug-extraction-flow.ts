@@ -10,12 +10,12 @@ import { mergeCountryData } from '../src/utils/merger.js';
 const SNAPSHOT_BASE = 'tests/snapshots';
 WikipediaAPI.useSnapshots(path.join(SNAPSHOT_BASE, 'translations.json'));
 
-type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government';
+type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
 
 async function debugFlow(countryName: string) {
   let mergedResult: Country = {
     name: {}, description: {}, capital: [], largest_city: [],
-    government: [], official_language: [], demonym: [], currency: []
+    government: [], official_language: [], demonym: [], currency: [], time_zone: []
   };
 
   console.log(`\n--- Debugging Flow for: ${countryName} ---`);
@@ -37,7 +37,8 @@ async function debugFlow(countryName: string) {
         ...(countryData.official_language?.map(i => i.articleId) || []),
         ...(countryData.currency?.map(i => i.articleId) || []),
         ...(countryData.demonym?.map(i => i.articleId) || []),
-        ...(countryData.government?.map(i => i.articleId) || [])
+        ...(countryData.government?.map(i => i.articleId) || []),
+        ...(countryData.time_zone?.map(i => i.articleId) || [])
     ].filter(Boolean) as string[],
     ['pt', 'fr', 'it', 'es']
   );
@@ -45,7 +46,7 @@ async function debugFlow(countryName: string) {
   const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...countryData };
   
   // Apply translations
-  ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'].forEach(field => {
+  ['capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
     const items = localizedDataEn[key] as any[] || [];
     items.forEach(item => {

@@ -77,7 +77,7 @@ const crawler = new CheerioCrawler({
       
       const countryData = CountryParser.parseCountry($ as any, {}, 'en');
       const linkedFields = [
-        'capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government'
+        'capital', 'largest_city', 'official_language', 'currency', 'demonym', 'government', 'time_zone'
       ];
 
       linkedFields.forEach(field => {

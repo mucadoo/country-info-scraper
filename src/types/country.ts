@@ -5,7 +5,7 @@ const LinkField = z.object({
   articleId: z.string().nullable().optional(),
 });
 
-const LocalizedField = z.object({
+export const LocalizedField = z.object({
   en: z.string().nullable().optional(),
   pt: z.string().nullable().optional(),
   fr: z.string().nullable().optional(),
@@ -13,12 +13,12 @@ const LocalizedField = z.object({
   es: z.string().nullable().optional(),
 });
 
-const MultiLangLinkField = z.object({
+export const MultiLangLinkField = z.object({
   articleId: z.string().nullable().optional(),
   name: LocalizedField,
 });
 
-const LinkedArrayField = z.array(MultiLangLinkField);
+export const LinkedArrayField = z.array(MultiLangLinkField);
 
 export const CountrySchema = z.object({
   name: LocalizedField,
@@ -36,7 +36,7 @@ export const CountrySchema = z.object({
   gdp: z.number().nullable().optional(),
   hdi: z.number().nullable().optional(),
   currency: LinkedArrayField,
-  time_zone: z.array(z.string()).nullable().optional(),
+  time_zone: LinkedArrayField,
   calling_code: z.array(z.string()).nullable().optional(),
   internet_TLD: z.array(z.string()).nullable().optional(),
 });

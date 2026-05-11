@@ -12,7 +12,8 @@ const LOCALIZED_FIELDS = [
   'official_language',
   'currency',
   'government',
-  'demonym'
+  'demonym',
+  'time_zone'
 ];
 
 async function main() {

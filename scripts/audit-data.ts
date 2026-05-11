@@ -46,7 +46,7 @@ data.forEach(country => {
   };
 
   // We only check these fields for brackets
-  const bracketCheckFields: (keyof Country)[] = ['name', 'capital', 'largest_city', 'official_language', 'government', 'demonym', 'currency'];
+  const bracketCheckFields: (keyof Country)[] = ['name', 'capital', 'largest_city', 'official_language', 'government', 'demonym', 'currency', 'time_zone'];
   bracketCheckFields.forEach(field => {
     checkBrackets(country[field], field as string);
   });

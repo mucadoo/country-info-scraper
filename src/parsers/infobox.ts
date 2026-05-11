@@ -3,7 +3,7 @@ import { AnyNode } from 'domhandler';
 import { Country } from '../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 import { processAreaAndPopulation, ParserState } from './infobox/area-population.js';
-import { parseCapital, handleOtherFields } from './infobox/standard-fields.js';
+import { parseCapital, parseLargestCity, handleOtherFields } from './infobox/standard-fields.js';
 import { parseGDP } from './infobox/gdp.js';
 import { parseCurrency } from './infobox/currency.js';
 import { processImages } from './infobox/images.js';
@@ -111,25 +111,9 @@ export class InfoboxParser {
     const matches = (key: string) => HEADER_MAPPINGS[key]?.[lang]?.some(m => lowerHeaderText.includes(m)) ?? false;
 
     if (matches('capital')) {
-      const capitals = data.find('a').toArray().map(l => ({
-        text: $(l).text().trim(),
-        articleId: $(l).attr('href')?.replace('/wiki/', '')
-      })).filter(i => i.text);
-      if (capitals.length === 0) {
-        const text = ExtractionUtils.cleanText(data);
-        if (text) capitals.push({ text });
-      }
-      country.capital = { [lang]: capitals };
+      parseCapital($, data, country, lang);
     } else if (matches('largest_city')) {
-      const cities = data.find('a').toArray().map(l => ({
-        text: $(l).text().trim(),
-        articleId: $(l).attr('href')?.replace('/wiki/', '')
-      })).filter(i => i.text);
-      if (cities.length === 0) {
-        const text = ExtractionUtils.cleanText(data);
-        if (text) cities.push({ text });
-      }
-      country.largest_city = { [lang]: cities };
+      parseLargestCity($, data, country, lang);
     } else if (matches('demonym')) {
       const demonyms = ExtractionUtils.cleanText(data).split(/[;,]/).map(d => ({ text: d.trim() })).filter(d => d.text);
       country.demonym = { [lang]: demonyms };

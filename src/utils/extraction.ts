@@ -6,7 +6,7 @@ export class ExtractionUtils {
     if (!$) return '';
     const clone = $.clone();
     // Remove footnotes, references, coordinates, and other non-textual elements
-    clone.find('sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, style, .screenreader-only').remove();
+    clone.find('sup, .reference, .geo-inline, .geo-default, .geo-dms, .geo-dec, .geo, span.plainlinks, style, .screenreader-only, .smallsup, .as_of').remove();
 
     // Normalize spaces and remove hidden Unicode markers
     return clone.text()
@@ -26,9 +26,9 @@ export class ExtractionUtils {
       .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ');
 
     // 1. Try to find km2 specifically, allowing commas or spaces as separators
-    const kmPattern = /([0-9]{1,3}(?:[ ,][0-9]{3})+(?:\.\d+)?)\s*km2?/;
+    const kmPattern = /([0-9]{1,3}(?:[ ,.][0-9]{3})+(?:\.\d+)?)\s*km2?/;
     const kmMatch = normalized.match(kmPattern);
-    if (kmMatch) return kmMatch[1].replace(/[ ,]/g, '');
+    if (kmMatch) return kmMatch[1].replace(/[ ,.]/g, (m) => m === '.' && normalized.includes(',') ? '.' : ''); // Handle . as thousands separator unless decimal exists
 
     const kmPattern2 = /([0-9]+(?:\.\d+)?)\s*km2?/;
     const kmMatch2 = normalized.match(kmPattern2);

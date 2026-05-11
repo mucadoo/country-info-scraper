@@ -26,6 +26,8 @@ function getMinimalHtml($: any, skipInfobox: boolean = false): string {
   return `<html><head><meta charset="utf-8"></head><body>${h1.toString()}${infoboxes}${paragraphs}</body></html>`;
 }
 
+const allArticleIds = new Set<string>();
+
 const crawler = new CheerioCrawler({
   maxConcurrency: 10,
   requestHandler: async ({ $, request }) => {
@@ -40,15 +42,9 @@ const crawler = new CheerioCrawler({
       const fileName = `${sanitize(baseName)}.html`;
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
-      const countryData = CountryParser.parseCountry($, {}, 'en');
-      const articleIds = new Set([
-          ...(countryData.capital?.en?.map(i => i.articleId) || []),
-          ...(countryData.official_language?.en?.map(i => i.articleId) || []),
-          ...(countryData.currency?.en?.map(i => i.articleId) || [])
-      ].filter(Boolean) as string[]);
-      
-      const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
-      Object.assign(translationsCache, translations);
+      const countryData = CountryParser.parseCountry($ as any, {}, 'en');
+      [...(countryData.capital?.en || []), ...(countryData.official_language?.en || []), ...(countryData.currency?.en || [])]
+        .forEach(i => { if (i.articleId) allArticleIds.add(i.articleId); });
 
       for (const lang of ['pt', 'fr', 'it', 'es']) {
         const href = $(`.interlanguage-link-target[lang="${lang}"]`).attr('href');
@@ -69,7 +65,11 @@ const crawler = new CheerioCrawler({
 async function run() {
   log.info('Starting Snapshot Downloader...');
   await crawler.run([{ url: 'https://en.wikipedia.org/wiki/List_of_sovereign_states', label: 'list' }]);
-  fs.writeFileSync(path.join(OUTPUT_BASE, 'translations.json'), JSON.stringify(translationsCache, null, 2));
+  
+  log.info(`Fetching translations for ${allArticleIds.size} unique articles...`);
+  const translations = await WikipediaAPI.fetchTranslations(Array.from(allArticleIds), ['pt', 'fr', 'it', 'es']);
+  
+  fs.writeFileSync(path.join(OUTPUT_BASE, 'translations.json'), JSON.stringify(translations, null, 2));
   log.info('Finished snapshots and translations.');
 }
 

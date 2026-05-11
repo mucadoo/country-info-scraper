@@ -51,10 +51,13 @@ export class DescriptionParser {
             es: 'capital'
         };
         const keyword = capitalKeywords[lang as keyof typeof capitalKeywords] || 'capital';
-        const capitalMatch = desc.match(new RegExp(`(?:${keyword}).*?([A-Z][a-z]+)`, 'i'));
+        const capitalMatch = desc.match(new RegExp(`(?:${keyword}).*?is\\s+([^,.;]+)`, 'i'));
         if (capitalMatch) {
-            const currentCapitals = capital?.[lang] || [];
-            country.capital = { ...country.capital, [lang]: [...currentCapitals, { text: capitalMatch[1] }] };
+            const capitalText = capitalMatch[1].replace(/\s+(?:and|as|with|at).*/, '').trim();
+            if (capitalText && capitalText.length > 2 && /^[A-Z\xC0-\xFF]/.test(capitalText)) {
+                const currentCapitals = capital?.[lang] || [];
+                country.capital = { ...country.capital, [lang]: [...currentCapitals, { text: capitalText }] };
+            }
         }
       }
     }

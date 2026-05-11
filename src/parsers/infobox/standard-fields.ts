@@ -5,36 +5,58 @@ import { ExtractionUtils } from '../../utils/extraction.js';
 import { parseListOrLink } from './utils.js';
 import { ParserState } from './area-population.js';
 
-export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
+export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>, lang: string): { text: string, articleId?: string }[] {
   const dataClone = data.clone();
-  dataClone.find('sup, .geo-inline, .geo-default, .geo-dms, .geo-dec, span.plainlinks, .reference, .style, style').remove();
-  let dataText = dataClone.html()?.replace(/\s*\([^)]*\)\s*/g, '') || '';
-  const cleanedData = $.load(dataText);
-  const links = cleanedData('.plainlist ul li a, a');
-  const capitals: { text: string, articleId?: string }[] = [];
+  // Remove coordinates, references, and styles
+  dataClone.find('sup, .geo-inline, .geo-default, .geo-dms, .geo-dec, .geo, span.plainlinks, .reference, .style, style, .as_of').remove();
+  
+  const results: { text: string, articleId?: string }[] = [];
+  
+  // Try to find links first
+  const links = dataClone.find('a');
   if (links.length > 0) {
     links.each((_, l) => {
-      const t = $(l).text().trim();
-      if (t && !t.includes('°') && !/\d+/.test(t)) {
-        capitals.push({
-          text: t,
-          articleId: $(l).attr('href')?.replace('/wiki/', '')
+      const $l = $(l);
+      const text = $l.text().trim();
+      const href = $l.attr('href') || '';
+      
+      // Filter out coordinate links and empty text
+      if (text && !text.includes('°') && !href.includes('geohack') && !/^-?\d+\.\d+/.test(text)) {
+        results.push({
+          text,
+          articleId: href.startsWith('/wiki/') ? decodeURIComponent(href.replace('/wiki/', '')) : href
         });
       }
     });
-  } else {
-    const text = cleanedData.root().text().trim();
-    if (text) capitals.push({ text });
   }
-  
-  const results = capitals
-    .map(c => ({
-      ...c,
-      text: c.text.replace(/\s*[0-9]+°[0-9]+′.*/g, '').replace(/\s*[0-9]+°[NSEW].*/g, '').replace(/\s*\d+\.\d+;\s*\d+\.\d+.*/g, '').trim()
-    }))
-    .filter(c => c.text.length > 0);
 
-  country.capital = { [lang]: results };
+  // Fallback to text if no valid links found or if we want to include plain text entries
+  if (results.length === 0) {
+    const text = ExtractionUtils.cleanText(dataClone);
+    if (text) {
+        // Handle cases where multiple cities are separated by commas or newlines
+        const parts = text.split(/\s*,\s*|\s*;\s*|\s*\n\s*/);
+        parts.forEach(p => {
+            const cleanP = p.replace(/\s*\(.*?\)\s*/g, '').trim();
+            if (cleanP && !cleanP.includes('°') && !/\d{1,3}°/.test(cleanP)) {
+                results.push({ text: cleanP });
+            }
+        });
+    }
+  }
+
+  return results.map(r => ({
+      ...r,
+      text: r.text.replace(/\[\d+\]/g, '').trim()
+  })).filter(r => r.text.length > 0);
+}
+
+export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
+  country.capital = { [lang]: parseCityList($, data, lang) };
+}
+
+export function parseLargestCity($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
+  country.largest_city = { [lang]: parseCityList($, data, lang) };
 }
 
 export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {

@@ -81,8 +81,15 @@ async function debugFlow(countryName: string) {
 }
 
 async function run() {
-    await debugFlow('Brazil');
-    await debugFlow('France');
+    const args = process.argv.slice(2);
+    if (args.length > 0) {
+        for (const arg of args) {
+            await debugFlow(arg);
+        }
+    } else {
+        await debugFlow('Brazil');
+        await debugFlow('France');
+    }
 }
 
 run();

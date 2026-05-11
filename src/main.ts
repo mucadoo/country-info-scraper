@@ -106,11 +106,12 @@ const crawler = new CheerioCrawler({
         ...countryData,
       };
       
-      // Enqueue interlanguage links if base language
+      // Enqueue interlanguage links
+      const interLinks = $('.interlanguage-link-target');
+      const languages = ['pt', 'fr', 'it', 'es'];
+      
+      // If we are EN, we discover all localized versions
       if (lang === 'en') {
-        const interLinks = $('.interlanguage-link-target');
-        const languages = ['pt', 'fr', 'it', 'es'];
-        
         for (const el of interLinks.toArray()) {
           const $el = $(el);
           const langCode = $el.attr('lang');

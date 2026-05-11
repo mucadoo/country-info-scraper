@@ -1,4 +1,4 @@
-import { Country, MultiLangLinkField } from '../types/country.js';
+import { Country } from '../types/country.js';
 
 type LocalizedFieldKey = 'name' | 'description';
 type LocalizedArrayFieldKey = 'capital' | 'largest_city' | 'official_language' | 'demonym' | 'currency' | 'government' | 'time_zone';
@@ -58,9 +58,6 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   if (newData.gdp !== undefined) country.gdp = newData.gdp;
   if (newData.hdi !== undefined) country.hdi = newData.hdi;
   
-  const mergeArrays = (oldArr: string[] | null | undefined, newArr: string[] | null | undefined) => 
-    Array.from(new Set([...(oldArr || []), ...(newArr || [])]));
-
   if (newData.calling_code !== undefined) country.calling_code = newData.calling_code;
   if (newData.internet_TLD !== undefined) country.internet_TLD = newData.internet_TLD;
 

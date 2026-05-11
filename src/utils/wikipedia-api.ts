@@ -1,6 +1,5 @@
 import axios from 'axios';
 import fs from 'fs';
-import path from 'path';
 
 export class WikipediaAPI {
   private static snapshotData: Record<string, Record<string, string>> | null = null;

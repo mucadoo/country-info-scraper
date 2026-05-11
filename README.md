@@ -1,122 +1,143 @@
-# WikiGeoDataScraper
+# 🌍 WikiGeoData Scraper
 
-A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia, including sovereign states, cities, regions, and thematic maps, and publishes it as a live JSON API.
+[![Build Status](https://github.com/mucadoo/wikigeo-data-scraper/actions/workflows/publish-data.yml/badge.svg)](https://github.com/mucadoo/wikigeo-data-scraper/actions/workflows/publish-data.yml)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20PT%20%7C%20FR%20%7C%20IT%20%7C%20ES-success)](https://github.com/mucadoo/wikigeo-data-scraper)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-## Overview
+A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia. It doesn't just scrape text; it **translates and links entities** across 5 different languages to build a unified, high-quality geographical dataset.
 
-This project scrapes various Wikipedia resources, starting with the [Wikipedia List of sovereign states](https://en.wikipedia.org/wiki/List_of_sovereign_states), and traverses individual pages to collect detailed metadata. The system is designed for **high reliability**, **performance**, and **automated delivery** using the 2026 recommended stack: TypeScript, Node.js, Crawlee, and Zod. The scope is expanding to include more diverse geographical and political data.
+---
 
-## Project Status & Roadmap
+## 📌 Table of Contents
+- [🔥 Key Features](#-key-features)
+- [📦 Live Data Access](#-live-data-access)
+- [📊 Sample Data Format](#-sample-data-format)
+- [🏗️ How it Works](#️-how-it-works)
+- [🛠️ Development & Tooling](#️-development--tooling)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
 
-This is an **ongoing project**. We are actively working on:
-- **Multilanguage Support**: Expanding the scraper to extract data from various language versions of Wikipedia.
-- **Data Consistency**: Improving extraction algorithms to handle the diversity of Wikipedia page structures more reliably and consistently.
-- **Expanded Data Sources**: Integrating additional Wikipedia resources to collect information on cities, regions, area codes, time zones, and other thematic geographical data.
-- **Data Crossing**: Extending the architecture to join various geographical and political datasets using an intermediate SQLite layer (`scraper.db`).
+---
 
-## Features
+## 🔥 Key Features
 
-- **High Performance**: Uses **Crawlee** with **CheerioCrawler** for rapid, lightweight HTML parsing without the overhead of a full browser.
-- **Resilient**: Implements automatic retries, request queuing, and state persistence.
-- **Data Integrity**: Every scrape is validated against a strict **Zod Schema** before being stored or published.
-- **Automated Delivery**:
-    - **Live API**: Latest data is automatically published to a dedicated `data` branch.
-    - **Historical Archive**: Daily snapshots are archived as GitHub Releases.
-- **Data Points**: Currently includes ISO Code, Flag, Capital, Population, Area, GDP, HDI, Currency, Time Zones, and more for sovereign states, with plans to expand to other geographical entities.
+- 🚀 **High Performance**: Uses [Crawlee](https://crawlee.dev/) and **CheerioCrawler** for rapid, lightweight HTML parsing.
+- 🌐 **Deep Localization**: Automatically follows interlanguage links to extract data (descriptions, capitals, currencies, etc.) in **English, Portuguese, French, Italian, and Spanish**.
+- 🛡️ **Data Integrity**: Every scrape is validated against strict **Zod Schemas**. Zero tolerance for `NaN`, missing critical fields, or Wikipedia artifacts.
+- 📸 **Snapshot Testing**: Industry-standard regression suite using local HTML snapshots to ensure extraction logic never breaks.
+- 🔗 **Linked Entities**: All list items (Capitals, Languages, Currencies) include their Wikipedia `articleId` for easy cross-referencing.
+- 📉 **Optimized Output**: High-quality JSON and minified versions ready for production use.
 
-## Use it in your Projects! 🚀
+## 📦 Live Data Access
 
-This repository is a **Public Data Resource**. You don't need to run the scraper yourself to get the data. You can integrate the live JSON directly into your web or mobile applications.
+This repository serves as a **Public Data Resource**. You can integrate the live JSON directly into your applications:
 
-### 1. Live Data (Always Latest)
-Perfect for apps that need up-to-date geographical information:
-- **JSON**: [https://mucadoo.github.io/wikigeo-data-scraper/countries.json](https://mucadoo.github.io/wikigeo-data-scraper/countries.json)
-- **Minified**: [https://mucadoo.github.io/wikigeo-data-scraper/countries.min.json](https://mucadoo.github.io/wikigeo-data-scraper/countries.min.json)
+- **Full Dataset**: [sovereign-states.json](https://mucadoo.github.io/wikigeo-data-scraper/sovereign-states.json)
+- **Minified**: [sovereign-states.min.json](https://mucadoo.github.io/wikigeo-data-scraper/sovereign-states.min.json)
 
-### 2. Historical Snapshots
-For researchers or projects requiring stable, versioned data, download a specific snapshot from the **[Releases](https://github.com/mucadoo/wikigeo-data-scraper/releases)** page.
+## 📊 Sample Data Format
 
-## Sample Data Format
+Our schema unifies multilingual data into a single, clean object:
 
 ```json
-[
-  {
-    "name": "France",
-    "ISO_code": "FR",
-    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
-    "description": "France is a country located primarily in Western Europe, consisting of metropolitan France and several overseas regions and territories.",
-    "capital": "Paris",
-    "largest_city": "Paris",
-    "population": 68373000,
-    "area_km2": 643801.0,
-    "density_km2": 106.0,
-    "government": "Unitary semi-presidential republic",
-    "official_language": "French",
-    "demonym": "French",
-    "gdp": 3130000000000,
-    "hdi": 0.910,
-    "currency": "Euro, CFP franc",
-    "time_zone": "UTC+01:00 (CET)",
-    "calling_code": "+33",
-    "internet_TLD": ".fr"
-  }
-]
+{
+  "name": {
+    "en": "France",
+    "pt": "França",
+    "fr": "France",
+    "it": "Francia",
+    "es": "Francia"
+  },
+  "capital": [
+    {
+      "articleId": "Paris",
+      "name": {
+        "en": "Paris",
+        "pt": "Paris",
+        "fr": "Paris",
+        "it": "Parigi",
+        "es": "París"
+      }
+    }
+  ],
+  "official_language": [
+    {
+      "articleId": "French_language",
+      "name": {
+        "en": "French",
+        "pt": "Língua francesa",
+        "fr": "Français",
+        "it": "Lingua francese",
+        "es": "Idioma francés"
+      }
+    }
+  ],
+  "population": 68373000
+}
 ```
 
-## Development
+## 🏗️ How it Works
+
+The scraper follows a sophisticated multi-stage pipeline:
+
+1.  **Discovery**: Scans the Wikipedia "List of sovereign states" to identify all target countries.
+2.  **Multilingual Mapping**: Uses the Wikipedia API to find the corresponding page titles in all 5 target languages.
+3.  **Concurrent Extraction**:
+    -   **English Infobox**: Extracts structured data (population, area, ISO codes).
+    -   **Localized Descriptions**: Extracts the first paragraph from each language's Wikipedia page.
+    -   **Entity Translation**: Identifies linked entities (like "Paris") and fetches their names in all languages via the API.
+4.  **Merging**: Unifies all data points into a single schema, prioritizing localized names.
+5.  **Validation**: Runs a suite of quality checks (Audit + Localization) before saving.
+
+## 🛠️ Development & Tooling
 
 ### Prerequisites
 - **Node.js 20+**
 - **npm**
 
-### Build & Test
+### Essential Commands
 ```bash
+# Install dependencies
 npm install
+
+# Build the project
 npm run build
-```
 
-### Running the Scraper Locally
-```bash
-# Development mode (ts-node)
-npm run start
-
-# Production mode (after build)
+# Run the full scraper (Production)
 npm run scrape
+
+# Run data quality validation (Audit + Localization check)
+npm run validate
+
+# Run regression tests
+npm test
 ```
 
-### Testing Strategy
-- **Validation**: Every scrape is validated against a strict **Zod schema** in `src/types/country.ts` (this will be updated as new data types are introduced).
-- **Wikipedia Watcher**: A scheduled GitHub Action job checks for Wikipedia HTML structure changes by running a limited scrape.
+## 🤝 Contributing
 
-## CI/CD Strategy: Validation-Gated Deployment
+We welcome contributions! Whether you're fixing a regex, adding a new language, or improving the schema, here's how to help:
 
-This project implements an industry-standard **Validation-Gated Deployment** pipeline. To ensure data reliability, the publishing process is strictly controlled by multiple quality gates.
+### 1. Development Workflow
+1. **Fork & Clone**: Get the repo locally.
+2. **Snapshot-First**: If you're fixing extraction for a specific country, use the debug script:
+   ```bash
+   npx tsx scripts/debug-extraction-flow.ts "Country Name"
+   ```
+3. **Validate**: Always run `npm run validate` and `npm test` before submitting. We have zero tolerance for linting errors or broken tests.
 
-### 1. Quality Gates
-- **Code Verification**: Runs `npm run build` and schema validation before any scraping begins.
-- **Schema Enforcement**: Every scraped dataset is validated against a strict **Zod Schema** (defined in `src/types/country.ts` and other relevant type definitions).
-    - **Integrity Check**: Rejects updates if the number of primary geographical entities drops suspiciously (e.g., min. 150 sovereign states).
-- **Change Detection**: The pipeline uses a `git diff` mechanism to compare new results with the current live data. If no meaningful changes are detected, it skips redundant releases.
+### 2. Quality Gates
+We use a **Validation-Gated Deployment** strategy:
+- **Linting**: Strict ESLint rules to keep the code clean.
+- **Audit**: `scripts/audit-data.ts` checks for `NaN`, citation brackets, and data suspiciousness.
+- **Localization**: `scripts/verify-localization.ts` ensures 100% translation coverage across all target languages.
 
-### 2. The "Data Branch" Pattern
-We use a dedicated, orphan `data` branch to store the scraped results. This provides several advantages:
-- **Clean Main Branch**: The `main` branch remains focused strictly on the scraper's source code.
-- **Immutable History**: Provides a full, Git-native audit trail of every data change over time.
-- **High Availability**: Data is served directly from the `data` branch via GitHub Pages, acting as a stable, versioned API.
+### 3. Adding New Data Types
+If you want to extract new fields (e.g., "Coastline length"), you'll need to update:
+1. `src/types/country.ts`: The Zod schema.
+2. `src/parsers/infobox/standard-fields.ts`: The extraction logic.
+3. `tests/snapshots/`: Update snapshots to include relevant pages.
 
-### 3. Automated Publishing Flow
-The [Publish Workflow](.github/workflows/publish-data.yml) runs daily and handles:
-- **Environment Context**: Automatically switches release naming between "Daily Snapshots" (scheduled) and "Automated Updates" (manual push).
-- **GitHub Releases**: Packages the validated `countries.json` and `countries.min.json` (and other future data files) as downloadable assets.
-- **Deployment**: Synchronizes the `data` branch and updates the live API endpoints.
+## 📜 License
 
-## Project Structure
-- `src/main.ts`: Orchestrates the scraping and publication flow using Crawlee.
-- `src/parsers/country-parser.ts`: Delegates parsing to `InfoboxParser` and `DescriptionParser` (will be expanded for other data types).
-- `src/utils/extraction.ts`: Clean, reusable regex-based extraction logic.
-- `src/types/country.ts`: Zod schema definitions (will be expanded for other data types).
-- `scraper.db`: Intermediate SQLite storage for crossing data.
-
-## License
-
-Feel free to use the generated data and the code for your own projects!
+This project is licensed under the **ISC License**. The data generated by this scraper is free to use for any purpose.

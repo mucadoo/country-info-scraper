@@ -141,6 +141,7 @@ async function run() {
   const countries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data));
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync('data/sovereign-states.json', JSON.stringify(countries, null, 2));
+  fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(countries));
 }
 
 run().catch(err => { log.error('Scraper failed', err); process.exit(1); });

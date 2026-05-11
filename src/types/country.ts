@@ -1,10 +1,5 @@
 import { z } from 'zod';
 
-const LinkField = z.object({
-  text: z.string(),
-  articleId: z.string().nullable().optional(),
-});
-
 export const LocalizedField = z.object({
   en: z.string().nullable().optional(),
   pt: z.string().nullable().optional(),

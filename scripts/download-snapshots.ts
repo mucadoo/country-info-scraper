@@ -11,7 +11,7 @@ const CATEGORY = 'sovereign_states';
 function sanitize(name: string): string {
   try {
     name = decodeURIComponent(name);
-  } catch (e) {
+  } catch {
     // Ignore decode errors
   }
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');

@@ -38,6 +38,13 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Run Scraper
+        run: |
+          rm -f scraper.db
+          npm run scrape
+          sqlite3 scraper.db "VACUUM;"
+          mv scraper.db sovereign-states.db
+
       - name: Generate Data Documentation
         run: npm run generate-docs
 
@@ -47,16 +54,6 @@ jobs:
       # NEW: Run the multilingual snapshot tests!
       - name: Run Tests
         run: npm test
-
-      # NEW: Ensure a completely fresh database
-      - name: Clean old database
-        run: rm -f scraper.db
-
-      - name: Run Scraper
-        run: |
-          npm run scrape
-          sqlite3 scraper.db "VACUUM;"
-          mv scraper.db sovereign-states.db
 
       # NEW: Upload the SQLite DB as an artifact if the scraper fails so you can debug it locally
       - name: Upload Database on Failure

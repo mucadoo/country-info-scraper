@@ -55,44 +55,78 @@ export class WikiGeoClient {
         throw new Error(`Local data not found. Please provide 'localData' in constructor or run in a Node.js environment with accessible data files.`);
     }
 
-    async getFullDatabase(): Promise<Country[]> {
-        if (this.dataSource === 'local') {
-            return await this.getLocalData();
+    async getFullDatabase(): Promise<{ data: Country[], source: 'remote' | 'local', timestamp: string }> {
+        if (this.dataSource === 'remote') {
+            try {
+                const response = await fetch(`${this.baseUrl}api/v1/all.json`);
+                if (response.ok) {
+                    const data = await response.json();
+                    return {
+                        data: z.array(CountrySchema).parse(data),
+                        source: 'remote',
+                        timestamp: new Date().toISOString()
+                    };
+                }
+            } catch (e) {
+                console.warn('Network failure fetching full database, falling back to local data.', e);
+            }
         }
-
-        const response = await fetch(`${this.baseUrl}api/v1/all.json`);
-        if (!response.ok) throw new Error(`Failed to fetch full database: ${response.statusText}`);
-
-        const data = await response.json();
-        return z.array(CountrySchema).parse(data);
+        return {
+            data: await this.getLocalData(),
+            source: 'local',
+            timestamp: new Date().toISOString()
+        };
     }
 
-    async listCountries() {
-        if (this.dataSource === 'local') {
-            const data = await this.getLocalData();
-            return CountryIndexSchema.parse(data);
+    async listCountries(): Promise<{ data: ReturnType<typeof CountryIndexSchema.parse>, source: 'remote' | 'local', timestamp: string }> {
+        if (this.dataSource === 'remote') {
+            try {
+                const response = await fetch(`${this.baseUrl}api/v1/index.json`);
+                if (response.ok) {
+                    const jsonData = await response.json();
+                    return {
+                        data: CountryIndexSchema.parse(jsonData),
+                        source: 'remote',
+                        timestamp: new Date().toISOString()
+                    };
+                }
+            } catch (e) {
+                console.warn('Network failure fetching country list, falling back to local data.', e);
+            }
         }
-
-        const response = await fetch(`${this.baseUrl}api/v1/index.json`);
-        if (!response.ok) throw new Error(`Failed to fetch country list: ${response.statusText}`);
-
-        const jsonData = await response.json();
-        return CountryIndexSchema.parse(jsonData);
+        const data = await this.getLocalData();
+        return {
+            data: CountryIndexSchema.parse(data),
+            source: 'local',
+            timestamp: new Date().toISOString()
+        };
     }
 
-    async getCountry(isoCode: string): Promise<Country> {
-        if (this.dataSource === 'local') {
-            const data = await this.getLocalData();
-            const country = data.find(c => c.isoCode === isoCode.toUpperCase());
-            if (!country) throw new Error(`Country ${isoCode} not found in local data`);
-            return CountrySchema.parse(country);
+    async getCountry(isoCode: string): Promise<{ data: Country, source: 'remote' | 'local', timestamp: string }> {
+        if (this.dataSource === 'remote') {
+            try {
+                const response = await fetch(`${this.baseUrl}api/v1/countries/${isoCode.toUpperCase()}.json`);
+                if (response.ok) {
+                    const jsonData = await response.json();
+                    return {
+                        data: CountrySchema.parse(jsonData),
+                        source: 'remote',
+                        timestamp: new Date().toISOString()
+                    };
+                }
+            } catch (e) {
+                console.warn(`Network failure fetching country ${isoCode}, falling back to local data.`, e);
+            }
         }
 
-        const response = await fetch(`${this.baseUrl}api/v1/countries/${isoCode.toUpperCase()}.json`);
-        if (!response.ok) throw new Error(`Failed to fetch country ${isoCode}: ${response.statusText}`);
-
-        const jsonData = await response.json();
-        return CountrySchema.parse(jsonData);
+        const data = await this.getLocalData();
+        const country = data.find(c => c.isoCode === isoCode.toUpperCase());
+        if (!country) throw new Error(`Country ${isoCode} not found in local data`);
+        return {
+            data: CountrySchema.parse(country),
+            source: 'local',
+            timestamp: new Date().toISOString()
+        };
     }
 }
 

@@ -4,7 +4,7 @@ import { WikiGeoClient, getEmptyCountry } from '../src/sdk/index.js';
 describe('WikiGeoClient SDK', () => {
     it('should correctly load local data using getFullDatabase', async () => {
         const client = new WikiGeoClient({ dataSource: 'local' });
-        const countries = await client.getFullDatabase();
+        const { data: countries } = await client.getFullDatabase();
         
         expect(Array.isArray(countries)).toBe(true);
         expect(countries.length).toBeGreaterThan(0);
@@ -27,7 +27,7 @@ describe('WikiGeoClient SDK', () => {
         });
 
         const client = new WikiGeoClient({ dataSource: 'remote', baseUrl: 'https://api.example.com/' });
-        const countries = await client.getFullDatabase();
+        const { data: countries } = await client.getFullDatabase();
 
         expect(fetch).toHaveBeenCalledWith('https://api.example.com/api/v1/all.json');
         expect(countries).toEqual(mockCountries);
@@ -35,7 +35,7 @@ describe('WikiGeoClient SDK', () => {
 
     it('should correctly list countries using listCountries (local)', async () => {
         const client = new WikiGeoClient({ dataSource: 'local' });
-        const list = await client.listCountries();
+        const { data: list } = await client.listCountries();
         
         expect(Array.isArray(list)).toBe(true);
         expect(list.length).toBeGreaterThan(0);

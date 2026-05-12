@@ -1,16 +1,8 @@
 import { z } from 'zod';
-import { 
-    CountrySchema, 
-    Country 
-} from '../types/country.js';
+import { CountrySchema, Country } from '../types/country.js';
+import { WikiGeoOptions, CountryIndexSchema } from './types.js';
 
-export * from '../types/country.js';
-
-export interface WikiGeoOptions {
-    dataSource?: 'local' | 'remote';
-    baseUrl?: string;
-    localData?: Country[];
-}
+export * from './types.js';
 
 export class WikiGeoClient {
     private dataSource: 'local' | 'remote';
@@ -69,7 +61,3 @@ export class WikiGeoClient {
         return CountrySchema.parse(jsonData);
     }
 }
-
-const CountryIndexSchema = z.array(
-    CountrySchema.pick({ isoCode: true, name: true, flagUrl: true })
-);

@@ -14,7 +14,8 @@
     "test:watch": "vitest",
     "audit": "npx tsx scripts/audit-data.ts",
     "verify:loc": "npx tsx scripts/verify-localization.ts",
-    "validate": "npm run audit && npm run verify:loc"
+    "validate": "npm run audit && npm run verify:loc",
+    "generate-docs": "npx tsx scripts/generate-docs.ts"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "globals": "^17.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "zod-to-json-schema": "^3.25.2"
   }
 }

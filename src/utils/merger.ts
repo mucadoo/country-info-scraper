@@ -1,7 +1,9 @@
-import { Country, CountrySchema, getEmptyCountry, getEmptyLocalizedField } from '../types/country.js';
+import { Country, CountrySchema, getEmptyCountry, getEmptyLocalizedField, MultiLangLinkField } from '../types/country.js';
+import { z } from 'zod';
 
 type LocalizedFieldKey = 'name' | 'description';
 type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
+type MultiLangLink = z.infer<typeof MultiLangLinkField>;
 
 export const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
   const empty = getEmptyCountry();
@@ -26,10 +28,10 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
 
   // 2. Merge Array Fields (Capital, Government, etc.)
   (['capital', 'largestCity', 'officialLanguage', 'demonym', 'currency', 'government', 'timeZone'] as LocalizedArrayFieldKey[]).forEach(field => {
-    const newVal = newData[field] ?? [];
-    const currentVal = (country[field] || []) as any[];
+    const newVal = (newData[field] || []) as (MultiLangLink & { isoCode?: string | null })[];
+    const currentVal = (country[field] || []) as (MultiLangLink & { isoCode?: string | null })[];
     
-    const mergedMap = new Map<string, any>();
+    const mergedMap = new Map<string, MultiLangLink & { isoCode?: string | null }>();
     
     // Seed and normalize existing
     currentVal.forEach(item => {
@@ -46,7 +48,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
       const existingItem = mergedMap.get(key);
       if (existingItem) {
         existingItem.name = { ...existingItem.name, ...newItem.name };
-        if ('isoCode' in newItem) existingItem.isoCode = (newItem as any).isoCode;
+        if (newItem.isoCode !== undefined) existingItem.isoCode = newItem.isoCode;
       } else {
         mergedMap.set(key, {
           ...newItem,

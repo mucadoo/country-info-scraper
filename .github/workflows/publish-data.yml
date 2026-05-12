@@ -38,6 +38,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Generate Data Documentation
+        run: npm run generate-docs
+
       # NEW: Run the multilingual snapshot tests!
       - name: Run Tests
         run: npm test
@@ -146,8 +149,10 @@ jobs:
 
           cp ../data/sovereign-states.json .
           cp ../data/sovereign-states.min.json .
+          cp ../data/schema.json .
+          cp ../data/DATA_MODEL.md .
 
-          git add sovereign-states.json sovereign-states.min.json
+          git add sovereign-states.json sovereign-states.min.json schema.json DATA_MODEL.md
           git commit -m "Data update: $(date -u)" || exit 0
           git push origin data
           echo "new_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
@@ -162,6 +167,8 @@ jobs:
           files: |
             data/sovereign-states.json
             data/sovereign-states.min.json
+            data/schema.json
+            data/DATA_MODEL.md
           body: |
             ### 🌍 Multilingual Data Snapshot
             
@@ -172,6 +179,10 @@ jobs:
             ${{ steps.check_changes.outputs.diff_stat || 'Initial data release' }}
             ```
             
+            #### 🗄️ Data Contract
+            - [📜 Schema JSON](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/schema.json)
+            - [📖 Data Model Docs](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/DATA_MODEL.md)
+
             #### 🔗 Links
             ${{ steps.check_changes.outputs.last_tag != '' && format('- [🔍 View Comparison](https://github.com/{0}/compare/{1}...data-{2})', github.repository, steps.check_changes.outputs.last_tag, steps.date.outputs.tag_date) || '- 🆕 _First data release_' }}
             - [📄 Full JSON](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sovereign-states.json)

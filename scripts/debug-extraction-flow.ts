@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
-import { CountryParser } from '../src/parsers/country-parser.js';
-import { DescriptionParser } from '../src/parsers/description.js';
-import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
-import { mergeCountryData } from '../src/utils/merger.js';
+import { CountryParser } from '../src/scraper/parsers/country-parser.js';
+import { DescriptionParser } from '../src/scraper/parsers/description.js';
+import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
+import { mergeCountryData } from '../src/scraper/utils/merger.js';
 import { getEmptyCountry, getEmptyLocalizedField, Country } from '../src/types/country.js';
 
 const SNAPSHOT_BASE = 'tests/snapshots';

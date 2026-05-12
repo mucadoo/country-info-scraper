@@ -1,6 +1,6 @@
 import { CheerioCrawler, log, CheerioAPI } from 'crawlee';
-import { CountryParser } from '../src/parsers/country-parser.js';
-import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
+import { CountryParser } from '../src/scraper/parsers/country-parser.js';
+import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
 import fs from 'fs';
 import path from 'path';
 

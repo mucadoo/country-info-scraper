@@ -28,7 +28,13 @@
       "types": "./dist/index.d.ts",
       "browser": "./dist/browser.js",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["dist/*"]
     }
   },
   "scripts": {

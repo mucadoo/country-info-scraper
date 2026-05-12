@@ -26,16 +26,45 @@ npm install @mucadoo/wiki-geo-data
 import { WikiGeoClient } from '@mucadoo/wiki-geo-data/browser';
 ```
 
+#### WikiGeoClient API
+
+**Constructor**
+```typescript
+new WikiGeoClient(options?: WikiGeoOptions)
+```
+- `dataSource`: `'local' | 'remote'` (Default: `'local'`)
+- `baseUrl`: The base URL for remote API requests.
+- `localData`: An array of `Country` objects for manual local data injection.
+
+**Methods**
+- `listCountries()`: Returns a summary list of all countries (ISO code, name, flag URL).
+- `getCountry(isoCode: string)`: Fetches full details for a specific country by ISO 3166-1 alpha-2 code.
+- `getFullDatabase()`: Returns the complete dataset for all countries.
+
+#### Country Data Structure
+
+The `Country` object includes the following primary fields:
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `isoCode` | `string` | ISO 3166-1 alpha-2 code. |
+| `name` | `LocalizedField` | Localized name (`en`, `pt`, `fr`, `it`, `es`). |
+| `flagUrl` | `string` | URL to the national flag image. |
+| `description`| `LocalizedField` | Localized descriptive summary. |
+| `population` | `number` | Total population count. |
+| `areaKm2` | `number` | Area in km². |
+| `capital` | `LinkedArrayField` | Capital cities with localized names. |
+| `currency` | `Array` | Official currencies with ISO codes. |
+
+*Note: Fields like `name`, `capital`, `officialLanguage`, and `description` use `LocalizedField`, an object containing versions for `en`, `pt`, `fr`, `it`, and `es`.*
+
 #### Basic Usage
 
 ```typescript
-// 'local' uses the data bundled with the package (pinned version)
-// 'remote' fetches the latest daily updates from the live API
 const client = new WikiGeoClient({ dataSource: 'local' });
 
 // 1. Get a lightweight list of all countries
 const countries = await client.listCountries();
-// Returns: { isoCode: string, name: LocalizedField, flagUrl: string }[]
 
 // 2. Get full details for a specific country by ISO code
 const france = await client.getCountry('FR');
@@ -43,9 +72,7 @@ console.log(france.name.fr); // "France"
 console.log(france.capital[0].name.en); // "Paris"
 
 // 3. Bulk Export: Get the entire database in one request
-// Best for rankings, data science, or building an offline search index.
 const allData = await client.getFullDatabase();
-console.log(`Loaded ${allData.length} countries with full details.`);
 ```
 
 #### Data Sources

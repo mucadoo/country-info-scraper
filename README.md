@@ -14,15 +14,21 @@ This project provides multiple ways to access the data, depending on your needs.
 
 The SDK provides a type-safe client with support for **Pinned (Local)** or **Live (Remote)** data sources.
 
+**For Node.js:**
 ```bash
 npm install @mucadoo/wiki-geo-data
+import { WikiGeoClient } from '@mucadoo/wiki-geo-data';
+```
+
+**For Browser/Frontend:**
+```bash
+npm install @mucadoo/wiki-geo-data
+import { WikiGeoClient } from '@mucadoo/wiki-geo-data/browser';
 ```
 
 #### Basic Usage
 
 ```typescript
-import { WikiGeoClient } from '@mucadoo/wiki-geo-data';
-
 // 'local' uses the data bundled with the package (pinned version)
 // 'remote' fetches the latest daily updates from the live API
 const client = new WikiGeoClient({ dataSource: 'local' });

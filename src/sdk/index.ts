@@ -25,9 +25,10 @@ export class WikiGeoClient {
     }
 
     private async getLocalData(): Promise<Country[]> {
+        // 1. Try constructor-injected data
         if (this.localData) return this.localData;
 
-        // Runtime check for Node.js environment
+        // 2. Try Node.js environment
         if (typeof process !== 'undefined' && process.versions && process.versions.node) {
             const fs = await import('fs');
             const path = await import('path');
@@ -50,6 +51,15 @@ export class WikiGeoClient {
                     }
                 }
             }
+        }
+
+        // 3. Try browser environment (dynamic import for bundlers)
+        try {
+            // Note: This path must be relative to this file in the source code
+            const module = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
+            return module.default.data;
+        } catch {
+            // Continue
         }
 
         throw new Error(`Local data not found. Please provide 'localData' in constructor or run in a Node.js environment with accessible data files.`);

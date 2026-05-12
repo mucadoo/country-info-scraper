@@ -1,11 +1,16 @@
 {
   "name": "@mucadoo/wiki-geo-data",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia and publishes it as a live JSON API.",
   "type": "module",
   "files": [
-    "dist",
-    "data"
+    "dist/sdk",
+    "data/*.json",
+    "data/*.csv",
+    "data/schema.json",
+    "data/DATA_MODEL.md",
+    "README.md",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"

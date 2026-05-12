@@ -1,17 +1,23 @@
 name: Publish SDK
 
 on:
-  # This triggers after your main scraper finishes successfully
   workflow_run:
     workflows: ["CI and Data Publishing"]
     types: [completed]
-  workflow_dispatch: # Allows you to run it manually for the first time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Only run if the scraper succeeded OR if you triggered it manually
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    # Run if triggered manually OR if the scraper successfully changed data
+    if: >-
+      ${{ github.event_name == 'workflow_dispatch' || 
+          (github.event.workflow_run.conclusion == 'success' && 
+           github.event.workflow_run.outputs.data_updated == 'true') }}
 
     steps:
       - name: Checkout repository
@@ -23,14 +29,24 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
 
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Install dependencies
         run: npm install
 
       - name: Build SDK
         run: npm run build:sdk
 
+      - name: Version Patch
+        run: npm version patch -m "chore: release v%s [skip ci]"
+
       - name: Publish to NPM
-        # We use the token here. Note: no 'if' check needed on the secret itself here
-        run: npm publish --access public
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push Version Change
+        run: git push --follow-tags

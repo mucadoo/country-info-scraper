@@ -86,8 +86,10 @@ jobs:
           if [ -f countries_old.json ]; then
             if git diff --no-index --exit-code countries_old.json data/countries_normalized.json > /dev/null; then
               echo "data_changed=false" >> $GITHUB_OUTPUT
+              echo "data_updated=false" >> $GITHUB_OUTPUT
             else
               echo "data_changed=true" >> $GITHUB_OUTPUT
+              echo "data_updated=true" >> $GITHUB_OUTPUT
               DIFF_STAT=$(git diff --no-index --stat countries_old.json data/countries_normalized.json || true)
               echo "diff_stat<<EOF" >> $GITHUB_OUTPUT
               echo "$DIFF_STAT" >> $GITHUB_OUTPUT
@@ -95,6 +97,7 @@ jobs:
             fi
           else
             echo "data_changed=true" >> $GITHUB_OUTPUT
+            echo "data_updated=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Ensure .nojekyll

@@ -1,0 +1,47 @@
+name: Publish SDK
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [ data ]
+  workflow_dispatch:
+
+jobs:
+  publish-sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Configure Git
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+
+      - name: Auto-patch version if data updated
+        if: github.event_name == 'push' && github.ref == 'refs/heads/data'
+        run: |
+          npm version patch
+          git push origin data --tags
+
+      - name: Build SDK
+        run: npm run build:sdk
+
+      - name: Publish to NPM
+        if: secrets.NPM_TOKEN
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 import { Country } from '../src/types/country.js';
 
 const INPUT_FILE = 'data/sovereign-states.json';

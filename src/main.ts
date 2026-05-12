@@ -183,6 +183,9 @@ async function run() {
   const index = countries.map(({ isoCode, name, flagUrl }) => ({ isoCode, name, flagUrl }));
   fs.writeFileSync(`${API_DIR}/index.json`, JSON.stringify(index, null, 2));
 
+  // Bulk export file
+  fs.writeFileSync(`${API_DIR}/all.json`, JSON.stringify(countries, null, 2));
+
   // Individual files
   countries.forEach(country => {
     if (country.isoCode) {

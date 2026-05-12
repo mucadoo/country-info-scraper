@@ -27,11 +27,28 @@ export class WikiGeoClient {
 
     private async getLocalData(): Promise<Country[]> {
         try {
-            const { default: data } = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
-            return (data as unknown) as Country[];
+            const response = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
+            const data = response.default as any;
+            return data.data as Country[];
         } catch (error) {
             throw new Error(`Failed to load local data: ${error instanceof Error ? error.message : 'Unknown error'}`, { cause: error });
         }
+    }
+
+    /**
+     * Fetches the entire database in one single request.
+     * Best for rankings, data science, or offline search.
+     */
+    async getFullDatabase(): Promise<Country[]> {
+        if (this.dataSource === 'local') {
+            return this.getLocalData();
+        }
+
+        const response = await fetch(`${this.baseUrl}api/v1/all.json`);
+        if (!response.ok) throw new Error(`Failed to fetch full database: ${response.statusText}`);
+
+        const data = await response.json();
+        return z.array(CountrySchema).parse(data);
     }
 
     async listCountries() {

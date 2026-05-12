@@ -59,7 +59,18 @@ jobs:
       - name: Fetch Data from Data Branch
         run: |
           git fetch origin data
-          git checkout origin/data -- data/sovereign-states.json data/sovereign-states.min.json data/schema.json data/DATA_MODEL.md data/sovereign-states.csv
+          # 1. Checkout files from the ROOT of the data branch
+          git checkout origin/data -- sovereign-states.json sovereign-states.min.json schema.json DATA_MODEL.md sovereign-states.csv
+          
+          # 2. Create the data directory
+          mkdir -p data
+          
+          # 3. Move the files into the directory where the SDK expects them
+          mv sovereign-states.json data/sovereign-states.json
+          mv sovereign-states.min.json data/sovereign-states.min.json
+          mv schema.json data/schema.json
+          mv DATA_MODEL.md data/DATA_MODEL.md
+          mv sovereign-states.csv data/sovereign-states.csv
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

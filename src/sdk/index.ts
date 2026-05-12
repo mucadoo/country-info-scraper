@@ -30,7 +30,7 @@ export class WikiGeoClient {
             const { default: data } = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
             return (data as unknown) as Country[];
         } catch (error) {
-            throw new Error(`Failed to load local data: ${error instanceof Error ? error.message : 'Unknown error'}`);
+            throw new Error(`Failed to load local data: ${error instanceof Error ? error.message : 'Unknown error'}`, { cause: error });
         }
     }
 

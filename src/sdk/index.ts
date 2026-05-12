@@ -56,7 +56,7 @@ export class WikiGeoClient {
         // 3. Try browser environment (dynamic import for bundlers)
         try {
             // Note: This path must be relative to this file in the source code
-            const module = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
+            const module = await import('../../data/sovereign-states.json', { assert: { type: 'json' } }) as { default: { data: Country[] } };
             return module.default.data;
         } catch {
             // Continue

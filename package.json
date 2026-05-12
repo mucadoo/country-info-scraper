@@ -1,6 +1,6 @@
 {
   "name": "@mucadoo/wiki-geo-data",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "browser": {
     "fs": false,
     "path": false,

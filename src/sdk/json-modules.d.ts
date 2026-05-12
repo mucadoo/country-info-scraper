@@ -1,4 +1,4 @@
 declare module "*/sovereign-states.json" {
-    const value: any;
+    const value: unknown;
     export default value;
 }

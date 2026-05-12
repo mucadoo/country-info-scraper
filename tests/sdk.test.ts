@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
 import { WikiGeoClient, getEmptyCountry } from '../src/sdk/index.js';
-import fs from 'fs';
 
 describe('WikiGeoClient SDK', () => {
     it('should correctly load local data using getFullDatabase', async () => {

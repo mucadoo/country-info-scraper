@@ -9,6 +9,7 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 }
 
 // 1. Generate schema.json
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const jsonSchema = zodToJsonSchema(CountrySchema as any, 'CountrySchema');
 fs.writeFileSync(path.join(OUTPUT_DIR, 'schema.json'), JSON.stringify(jsonSchema, null, 2));
 

@@ -63,6 +63,7 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
       }
     });
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     country[field] = Array.from(mergedMap.values()) as any;
   });
 

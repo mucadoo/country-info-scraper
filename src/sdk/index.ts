@@ -28,8 +28,8 @@ export class WikiGeoClient {
     private async getLocalData(): Promise<Country[]> {
         try {
             const response = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
-            const data = response.default as any;
-            return data.data as Country[];
+            const data = response.default as { data: Country[] };
+            return data.data;
         } catch (error) {
             throw new Error(`Failed to load local data: ${error instanceof Error ? error.message : 'Unknown error'}`, { cause: error });
         }

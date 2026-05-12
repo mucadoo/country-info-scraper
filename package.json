@@ -3,22 +3,28 @@
   "version": "0.1.0",
   "description": "A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia and publishes it as a live JSON API.",
   "type": "module",
+  "main": "./dist/sdk/index.cjs",
+  "module": "./dist/sdk/index.js",
+  "types": "./dist/sdk/index.d.ts",
   "files": [
     "dist/sdk",
-    "data/*.json",
-    "data/*.csv",
+    "data/sovereign-states.json",
+    "data/sovereign-states.min.json",
+    "data/sovereign-states.csv",
     "data/schema.json",
     "data/DATA_MODEL.md",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "exports": {
-    ".": "./dist/sdk/index.js"
+    ".": {
+      "import": "./dist/sdk/index.js",
+      "require": "./dist/sdk/index.cjs",
+      "types": "./dist/sdk/index.d.ts"
+    }
   },
-  "types": "./dist/sdk/index.d.ts",
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",
     "build": "tsc",

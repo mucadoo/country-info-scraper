@@ -36,7 +36,7 @@ export class WikiGeoClient {
             try {
                 // ESM
                 const { fileURLToPath } = await import('url');
-                // @ts-ignore
+                // import.meta.url is available in ESM
                 baseDir = path.dirname(fileURLToPath(import.meta.url));
             } catch {
                 // CJS: __dirname is injected by Node/tsup

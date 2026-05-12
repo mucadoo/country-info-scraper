@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generatedAt": "2026-05-12T05:33:39.153Z",
-    "version": "0.1.3",
+    "generatedAt": "2026-05-12T06:49:05.976Z",
+    "version": "0.1.4",
     "license": "ISC",
     "source": "Wikipedia"
   },
@@ -135,7 +135,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01:00 (CET)"
+        "+376"
       ],
       "internetTld": [
         ".ad"
@@ -269,7 +269,7 @@
         }
       ],
       "callingCode": [
-        "UTC+04:00 (GST)"
+        "+971"
       ],
       "internetTld": [
         ".aeامارات."
@@ -422,9 +422,7 @@
           }
         }
       ],
-      "callingCode": [
-        "UTC+4:30 (Afghanistan Time)"
-      ],
+      "callingCode": [],
       "internetTld": [
         ".af"
       ]
@@ -547,7 +545,7 @@
         }
       ],
       "callingCode": [
-        "UTC-04:00 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".ag"
@@ -671,7 +669,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+355"
       ],
       "internetTld": [
         ".al"
@@ -806,7 +804,7 @@
         }
       ],
       "callingCode": [
-        "UTC+4 (AMT)"
+        "+374"
       ],
       "internetTld": [
         ".am.հայ"
@@ -930,7 +928,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+244"
       ],
       "internetTld": [
         ".ao"
@@ -1085,7 +1083,7 @@
         }
       ],
       "callingCode": [
-        "UTC– 03:00 (ART)"
+        "+54"
       ],
       "internetTld": [
         ".ar"
@@ -1220,7 +1218,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+43"
       ],
       "internetTld": [
         ".at"
@@ -1385,11 +1383,7 @@
         }
       ],
       "callingCode": [
-        "UTC+8",
-        "+9.5",
-        "+10 (AWST",
-        "ACST",
-        "AEST)"
+        "+61"
       ],
       "internetTld": [
         ".au"
@@ -1543,7 +1537,7 @@
         }
       ],
       "callingCode": [
-        "UTC+4 (AZT)"
+        "+994"
       ],
       "internetTld": [
         ".az"
@@ -1687,7 +1681,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01 (CET)"
+        "+387"
       ],
       "internetTld": [
         ".ba"
@@ -1811,7 +1805,7 @@
         }
       ],
       "callingCode": [
-        "UTC−04:00 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".bb"
@@ -1946,7 +1940,7 @@
         }
       ],
       "callingCode": [
-        "UTC+6 (BST)"
+        "+880"
       ],
       "internetTld": [
         ".bd.বাংলা"
@@ -2111,7 +2105,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+32"
       ],
       "internetTld": [
         ".be"
@@ -2245,7 +2239,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+226"
       ],
       "internetTld": [
         ".bf"
@@ -2380,7 +2374,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+359"
       ],
       "internetTld": [
         ".bg.бг"
@@ -2504,7 +2498,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (AST)"
+        "+973"
       ],
       "internetTld": [
         ".bh"
@@ -2658,7 +2652,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+257"
       ],
       "internetTld": [
         ".bi"
@@ -2792,7 +2786,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+229"
       ],
       "internetTld": [
         ".bj"
@@ -2916,7 +2910,10 @@
         }
       ],
       "callingCode": [
-        "UTC+8 (Brunei Standard Time)"
+        "+673.mw-parser-output .citation{word-wrap:break-word}.mw-parser-output .citation:target{background-color:rgba(0",
+        "127",
+        "255",
+        "0.133)}"
       ],
       "internetTld": [
         ".bn"
@@ -3080,7 +3077,7 @@
         }
       ],
       "callingCode": [
-        "UTC−04:00 (BOT)"
+        "+591"
       ],
       "internetTld": [
         ".bo"
@@ -3204,7 +3201,7 @@
         }
       ],
       "callingCode": [
-        "UTC−02:00 to −05:00 (BT)"
+        "+55"
       ],
       "internetTld": [
         ".br"
@@ -3328,7 +3325,7 @@
         }
       ],
       "callingCode": [
-        "UTC−05:00 (EST)"
+        "+1"
       ],
       "internetTld": [
         ".bs"
@@ -3463,7 +3460,7 @@
         }
       ],
       "callingCode": [
-        "UTC+06 (BTT)"
+        "+975"
       ],
       "internetTld": [
         ".bt"
@@ -3597,7 +3594,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (Central Africa Time)"
+        "+267"
       ],
       "internetTld": [
         ".bw"
@@ -3751,7 +3748,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (MSK)"
+        "+375"
       ],
       "internetTld": [
         ".by.бел"
@@ -3875,7 +3872,7 @@
         }
       ],
       "callingCode": [
-        "UTC−06:00 (CST)"
+        "+501"
       ],
       "internetTld": [
         ".bz"
@@ -3999,7 +3996,7 @@
         }
       ],
       "callingCode": [
-        "UTC−3.5 to −8"
+        "+1"
       ],
       "internetTld": [
         ".ca"
@@ -4133,7 +4130,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 to +2 (WAT and CAT)"
+        "+243"
       ],
       "internetTld": [
         ".cd"
@@ -4267,7 +4264,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01:00 (WAT)"
+        "+236"
       ],
       "internetTld": [
         ".cf"
@@ -4391,7 +4388,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+242"
       ],
       "internetTld": [
         ".cg"
@@ -4575,7 +4572,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+41"
       ],
       "internetTld": [
         ".ch",
@@ -4710,7 +4707,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+225"
       ],
       "internetTld": [
         ".ci"
@@ -4834,11 +4831,7 @@
         }
       ],
       "callingCode": [
-        "UTC−3",
-        "−4",
-        "−6 (CLST",
-        "CLT",
-        "EAST)"
+        "+56"
       ],
       "internetTld": [
         ".cl"
@@ -4972,7 +4965,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+237"
       ],
       "internetTld": [
         ".cm"
@@ -5106,7 +5099,7 @@
         }
       ],
       "callingCode": [
-        "UTC+8 (CST)"
+        "+86 (Mainland)+852 (Hong Kong)+853 (Macau)"
       ],
       "internetTld": [
         ".cn.中国.中國 (Mainland).hk.香港 (Hong Kong).mo.澳门.澳門 (Macau)"
@@ -5230,7 +5223,7 @@
         }
       ],
       "callingCode": [
-        "UTC−5 (COT)"
+        "+57"
       ],
       "internetTld": [
         ".co"
@@ -5258,7 +5251,7 @@
           "articleId": "San_José,_Costa_Rica",
           "name": {
             "en": "San José",
-            "pt": "San José (Costa Rica)",
+            "pt": "San José",
             "fr": "San José (Costa Rica)",
             "it": "San José",
             "es": "San José (Costa Rica)"
@@ -5270,7 +5263,7 @@
           "articleId": "San_José,_Costa_Rica",
           "name": {
             "en": "San José",
-            "pt": "San José (Costa Rica)",
+            "pt": "San José",
             "fr": "San José (Costa Rica)",
             "it": "San José",
             "es": "San José (Costa Rica)"
@@ -5285,7 +5278,7 @@
           "articleId": "Presidential_republic",
           "name": {
             "en": "presidential republic",
-            "pt": "Presidencialismo",
+            "pt": "presidential republic",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -5333,7 +5326,7 @@
           "articleId": "Costa Rican colón",
           "name": {
             "en": "Costa Rican colón",
-            "pt": "Colón costa-riquenho",
+            "pt": "Costa Rican colón",
             "fr": "Colón costaricien",
             "it": "Colón costaricano",
             "es": "Colón (moneda de Costa Rica)"
@@ -5346,7 +5339,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -5356,7 +5349,7 @@
           "articleId": "Central_Time_Zone",
           "name": {
             "en": "CST",
-            "pt": "Horário Padrão Central",
+            "pt": "CST",
             "fr": "Heure du Centre",
             "it": "CST",
             "es": "Hora estándar del centro"
@@ -5364,7 +5357,7 @@
         }
       ],
       "callingCode": [
-        "UTC−6 (CST)"
+        "+506"
       ],
       "internetTld": [
         ".cr.co.cr"
@@ -5419,7 +5412,7 @@
           "articleId": "Communist_state",
           "name": {
             "en": "Communist state",
-            "pt": "Estado comunista",
+            "pt": "Communist state",
             "fr": "État communiste",
             "it": "Stato comunista",
             "es": "Estado comunista"
@@ -5431,7 +5424,7 @@
           "articleId": "Cuban_Spanish",
           "name": {
             "en": "Spanish",
-            "pt": "Espanhol cubano",
+            "pt": "Spanish",
             "fr": "Espagnol cubain",
             "it": "Spanish",
             "es": "Español cubano"
@@ -5443,7 +5436,7 @@
           "articleId": "Cubans",
           "name": {
             "en": "Cuban",
-            "pt": "Cubanos",
+            "pt": "Cuban",
             "fr": "Cubains",
             "it": "Cuban",
             "es": "Cubanos"
@@ -5457,7 +5450,7 @@
           "articleId": "Cuban peso",
           "name": {
             "en": "Cuban peso",
-            "pt": "Peso cubano",
+            "pt": "Cuban peso",
             "fr": "Peso cubain",
             "it": "Peso cubano",
             "es": "Peso (moneda de Cuba)"
@@ -5470,7 +5463,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -5488,7 +5481,7 @@
         }
       ],
       "callingCode": [
-        "UTC−05:00 (CST)"
+        "+53"
       ],
       "internetTld": [
         ".cu"
@@ -5612,7 +5605,7 @@
         }
       ],
       "callingCode": [
-        "UTC−01:00 (CVT)"
+        "+238"
       ],
       "internetTld": [
         ".cv"
@@ -5757,7 +5750,7 @@
         }
       ],
       "callingCode": [
-        "UTC+02:00 (EET)"
+        "+357"
       ],
       "internetTld": [
         ".cy"
@@ -5788,7 +5781,7 @@
             "pt": "Praga",
             "fr": "Prague",
             "it": "Praga",
-            "es": "Prague"
+            "es": "Praga"
           }
         }
       ],
@@ -5800,7 +5793,7 @@
             "pt": "Praga",
             "fr": "Prague",
             "it": "Praga",
-            "es": "Prague"
+            "es": "Praga"
           }
         }
       ],
@@ -5827,7 +5820,7 @@
             "pt": "Língua tcheca",
             "fr": "Tchèque",
             "it": "Lingua ceca",
-            "es": "Czech"
+            "es": "Idioma checo"
           }
         }
       ],
@@ -5839,7 +5832,7 @@
             "pt": "Checos",
             "fr": "Tchèques",
             "it": "Cechi",
-            "es": "Czech"
+            "es": "Pueblo checo"
           }
         }
       ],
@@ -5853,7 +5846,7 @@
             "pt": "Coroa checa",
             "fr": "Couronne tchèque",
             "it": "Corona ceca",
-            "es": "Czech koruna"
+            "es": "Corona checa"
           },
           "isoCode": "CZK"
         }
@@ -5866,7 +5859,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -5876,12 +5869,12 @@
             "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
-            "es": "CET"
+            "es": "Hora central europea"
           }
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+420"
       ],
       "internetTld": [
         ".cz"
@@ -6016,7 +6009,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+49"
       ],
       "internetTld": [
         ".de"
@@ -6044,7 +6037,7 @@
           "articleId": "Djibouti_City",
           "name": {
             "en": "Djibouti City",
-            "pt": "Djibouti City",
+            "pt": "Djibuti (cidade)",
             "fr": "Djibouti (ville)",
             "it": "Gibuti (città)",
             "es": "Ciudad de Yibuti"
@@ -6056,7 +6049,7 @@
           "articleId": "Djibouti_City",
           "name": {
             "en": "Djibouti City",
-            "pt": "Djibouti City",
+            "pt": "Djibuti (cidade)",
             "fr": "Djibouti (ville)",
             "it": "Gibuti (città)",
             "es": "Ciudad de Yibuti"
@@ -6071,7 +6064,7 @@
           "articleId": "Presidential_system",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -6081,7 +6074,7 @@
           "articleId": "Hereditary_dictatorship",
           "name": {
             "en": "hereditary dictatorship",
-            "pt": "hereditary dictatorship",
+            "pt": "Dinastia",
             "fr": "Dynastie",
             "it": "Dinastia",
             "es": "Dinastía"
@@ -6093,7 +6086,7 @@
           "articleId": "Modern_Standard_Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Árabe moderno padrão",
             "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
@@ -6103,7 +6096,7 @@
           "articleId": "French_language",
           "name": {
             "en": "French",
-            "pt": "French",
+            "pt": "Língua francesa",
             "fr": "Français",
             "it": "Lingua francese",
             "es": "Idioma francés"
@@ -6129,7 +6122,7 @@
           "articleId": "Djiboutian franc",
           "name": {
             "en": "Djiboutian franc",
-            "pt": "Djiboutian franc",
+            "pt": "Franco do Jibuti",
             "fr": "Franc Djibouti",
             "it": "Franco gibutiano",
             "es": "Franco yibutiano"
@@ -6142,7 +6135,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -6152,7 +6145,7 @@
           "articleId": "East_Africa_Time",
           "name": {
             "en": "EAT",
-            "pt": "EAT",
+            "pt": "Horário da África Oriental",
             "fr": "Heure d'Afrique orientale",
             "it": "EAT",
             "es": "Tiempo de África Oriental"
@@ -6160,7 +6153,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+253"
       ],
       "internetTld": [
         ".dj"
@@ -6188,7 +6181,7 @@
           "articleId": "Copenhagen",
           "name": {
             "en": "Copenhagen",
-            "pt": "Copenhagen",
+            "pt": "Copenhaga",
             "fr": "Copenhague",
             "it": "Copenaghen",
             "es": "Copenhague"
@@ -6200,7 +6193,7 @@
           "articleId": "Copenhagen",
           "name": {
             "en": "Copenhagen",
-            "pt": "Copenhagen",
+            "pt": "Copenhaga",
             "fr": "Copenhague",
             "it": "Copenaghen",
             "es": "Copenhague"
@@ -6215,7 +6208,7 @@
           "articleId": "Unitary_state",
           "name": {
             "en": "Unitary",
-            "pt": "Unitary",
+            "pt": "Estado unitário",
             "fr": "État unitaire",
             "it": "Stato unitario",
             "es": "Estado unitario"
@@ -6225,7 +6218,7 @@
           "articleId": "Constitutional_monarchy",
           "name": {
             "en": "constitutional monarchy",
-            "pt": "constitutional monarchy",
+            "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -6237,7 +6230,7 @@
           "articleId": "Faroese_language",
           "name": {
             "en": "Faroese",
-            "pt": "Faroese",
+            "pt": "Língua feroesa",
             "fr": "Féroïen",
             "it": "Lingua faroense",
             "es": "Idioma feroés"
@@ -6247,7 +6240,7 @@
           "articleId": "Greenlandic_language",
           "name": {
             "en": "Greenlandic",
-            "pt": "Greenlandic",
+            "pt": "Língua groenlandesa",
             "fr": "Groenlandais",
             "it": "Lingua groenlandese",
             "es": "Idioma groenlandés"
@@ -6259,7 +6252,7 @@
           "articleId": "Danes",
           "name": {
             "en": "Danish",
-            "pt": "Danish",
+            "pt": "Dinamarqueses",
             "fr": "Danois (nation)",
             "it": "Danesi",
             "es": "Pueblo danés"
@@ -6279,7 +6272,7 @@
           "articleId": "Faroe_Islander",
           "name": {
             "en": "Faroe Islander",
-            "pt": "Faroe Islander",
+            "pt": "Faroeses",
             "fr": "Féroïens",
             "it": "Faroensi",
             "es": "Faroe Islander"
@@ -6293,7 +6286,7 @@
           "articleId": "Danish krone",
           "name": {
             "en": "Danish krone",
-            "pt": "Danish krone",
+            "pt": "Coroa dinamarquesa",
             "fr": "Couronne danoise",
             "it": "Corona danese",
             "es": "Corona danesa"
@@ -6304,7 +6297,7 @@
           "articleId": "Faroese króna",
           "name": {
             "en": "Faroese króna",
-            "pt": "Faroese króna",
+            "pt": "Coroa feroesa",
             "fr": "Couronne féroïenne",
             "it": "Corona delle Fær Øer",
             "es": "Corona feroesa"
@@ -6317,7 +6310,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -6327,7 +6320,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "CET",
+            "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -6337,7 +6330,7 @@
           "articleId": "Western_European_Time",
           "name": {
             "en": "WET",
-            "pt": "WET",
+            "pt": "Horário da Europa Ocidental",
             "fr": "Heure d'Europe de l'Ouest",
             "it": "Western European Time",
             "es": "Hora de Europa Occidental"
@@ -6347,7 +6340,7 @@
           "articleId": "Atlantic_Time_Zone",
           "name": {
             "en": "AST",
-            "pt": "AST",
+            "pt": "Horário Padrão do Atlântico",
             "fr": "AST",
             "it": "AST",
             "es": "Zona horaria del Atlántico (América del Norte)"
@@ -6377,7 +6370,7 @@
           "articleId": "Greenwich_Mean_Time",
           "name": {
             "en": "GMT",
-            "pt": "GMT",
+            "pt": "Tempo Médio de Greenwich",
             "fr": "Temps moyen de Greenwich",
             "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
@@ -6385,10 +6378,7 @@
         }
       ],
       "callingCode": [
-        "List\n UTC+1 (CET) (Denmark)\n   UTC (WET) (Faroe Islands)\n   UTC-4 to 0 (AST",
-        "WGT",
-        "EGT",
-        "GMT) (Greenland)"
+        "3 codes\n +45      (Denmark)\n   +298    (Faroe Islands)\n   +299    (Greenland)"
       ],
       "internetTld": [
         "3 TLDs\n .dk  (Denmark)\n   .fo  (Faroe Islands)\n   .gl  (Greenland)"
@@ -6522,7 +6512,7 @@
         }
       ],
       "callingCode": [
-        "UTC–4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".dm"
@@ -6656,7 +6646,7 @@
         }
       ],
       "callingCode": [
-        "UTC-04:00 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".do"
@@ -6780,7 +6770,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+213"
       ],
       "internetTld": [
         ".dz.الجزائر"
@@ -6934,7 +6924,7 @@
         }
       ],
       "callingCode": [
-        "UTC−5 / −6 (ECT / GALT)"
+        "+593"
       ],
       "internetTld": [
         ".ec"
@@ -7069,7 +7059,7 @@
         }
       ],
       "callingCode": [
-        "UTC+02:00 (EET)"
+        "+372"
       ],
       "internetTld": [
         ".ee"
@@ -7203,7 +7193,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+20"
       ],
       "internetTld": [
         ".egمصر."
@@ -7337,7 +7327,7 @@
         }
       ],
       "callingCode": [
-        "UTC+03:00 (EAT)"
+        "+291"
       ],
       "internetTld": [
         ".er"
@@ -7392,7 +7382,7 @@
           "articleId": "Parliamentary_constitutional_monarchy",
           "name": {
             "en": "parliamentary constitutional monarchy",
-            "pt": "Monarquia constitucional",
+            "pt": "parliamentary constitutional monarchy",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -7416,7 +7406,7 @@
           "articleId": "Spaniard",
           "name": {
             "en": "Spaniard",
-            "pt": "Espanhóis",
+            "pt": "Spaniard",
             "fr": "Espagnols",
             "it": "Spagnoli",
             "es": "Pueblo español"
@@ -7464,7 +7454,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -7474,7 +7464,7 @@
           "articleId": "Western_European_Time",
           "name": {
             "en": "WET",
-            "pt": "Horário da Europa Ocidental",
+            "pt": "WET",
             "fr": "Heure d'Europe de l'Ouest",
             "it": "Western European Time",
             "es": "Hora de Europa Occidental"
@@ -7484,7 +7474,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "Horário da Europa Central",
+            "pt": "CET",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -7492,7 +7482,7 @@
         }
       ],
       "callingCode": [
-        "UTC⁠±0 to +1 (WET and CET)"
+        "+34"
       ],
       "internetTld": [
         ".es"
@@ -7626,7 +7616,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+251"
       ],
       "internetTld": [
         ".et"
@@ -7781,7 +7771,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+358"
       ],
       "internetTld": [
         ".fi",
@@ -7926,7 +7916,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12 (FJT)"
+        "+679"
       ],
       "internetTld": [
         ".fj"
@@ -8050,7 +8040,7 @@
         }
       ],
       "callingCode": [
-        "UTC+10 and +11"
+        "+691"
       ],
       "internetTld": [
         ".fm"
@@ -8196,7 +8186,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+33"
       ],
       "internetTld": [
         ".fr"
@@ -8330,7 +8320,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+241"
       ],
       "internetTld": [
         ".ga"
@@ -8485,7 +8475,7 @@
         }
       ],
       "callingCode": [
-        "UTC+0 (GMT)"
+        "+44"
       ],
       "internetTld": [
         ".uk"
@@ -8609,7 +8599,7 @@
         }
       ],
       "callingCode": [
-        "UTC−4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".gd"
@@ -8733,7 +8723,7 @@
         }
       ],
       "callingCode": [
-        "UTC+4 (GET)"
+        "+995"
       ],
       "internetTld": [
         ".ge",
@@ -8858,7 +8848,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+233"
       ],
       "internetTld": [
         ".gh"
@@ -8982,7 +8972,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+220"
       ],
       "internetTld": [
         ".gm"
@@ -9106,7 +9096,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+224"
       ],
       "internetTld": [
         ".gn"
@@ -9260,7 +9250,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+240"
       ],
       "internetTld": [
         ".gq"
@@ -9405,7 +9395,7 @@
         }
       ],
       "callingCode": [
-        "UTC+02:00 (EET)"
+        "+30"
       ],
       "internetTld": [
         ".gr.ελ"
@@ -9529,7 +9519,7 @@
         }
       ],
       "callingCode": [
-        "UTC−6 (CST)"
+        "+502"
       ],
       "internetTld": [
         ".gt"
@@ -9663,7 +9653,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+245"
       ],
       "internetTld": [
         ".gw"
@@ -9787,7 +9777,7 @@
         }
       ],
       "callingCode": [
-        "UTC-04:00 (GYT)"
+        "+592"
       ],
       "internetTld": [
         ".gy"
@@ -9921,7 +9911,7 @@
         }
       ],
       "callingCode": [
-        "UTC−6 (CST)"
+        "+504"
       ],
       "internetTld": [
         ".hn"
@@ -9988,7 +9978,7 @@
           "articleId": "Croatian_language",
           "name": {
             "en": "Croatian",
-            "pt": "Língua croata",
+            "pt": "Croatian",
             "fr": "Croate",
             "it": "Lingua croata",
             "es": "Idioma croata"
@@ -10000,7 +9990,7 @@
           "articleId": "Croat",
           "name": {
             "en": "Croatian",
-            "pt": "Croatas",
+            "pt": "Croatian",
             "fr": "Croates",
             "it": "Croati",
             "es": "Pueblo croata"
@@ -10038,7 +10028,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -10048,7 +10038,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "Horário da Europa Central",
+            "pt": "CET",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -10056,7 +10046,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+385"
       ],
       "internetTld": [
         ".hr and .eu"
@@ -10190,7 +10180,7 @@
         }
       ],
       "callingCode": [
-        "UTC−05:00 (EST)"
+        "+509"
       ],
       "internetTld": [
         ".ht"
@@ -10314,7 +10304,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+36"
       ],
       "internetTld": [
         ".hu"
@@ -10438,11 +10428,7 @@
         }
       ],
       "callingCode": [
-        "UTC+7",
-        "+8",
-        "+9 (WIB",
-        "WITA",
-        "WIT)"
+        "+62"
       ],
       "internetTld": [
         ".id"
@@ -10587,7 +10573,7 @@
         }
       ],
       "callingCode": [
-        "UTC  (GMT)"
+        "+353"
       ],
       "internetTld": [
         ".ie"
@@ -10618,7 +10604,7 @@
             "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
-            "es": "Jerusalén"
+            "es": "Jerusalem"
           }
         },
         {
@@ -10640,7 +10626,7 @@
             "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
-            "es": "Jerusalén"
+            "es": "Jerusalem"
           }
         },
         {
@@ -10689,7 +10675,7 @@
             "pt": "Israelenses",
             "fr": "Israéliens",
             "it": "Israeliani",
-            "es": "Pueblo israelí"
+            "es": "Israeli"
           }
         }
       ],
@@ -10703,7 +10689,7 @@
             "pt": "Novo shekel israelense",
             "fr": "Shekel",
             "it": "Nuovo shekel israeliano",
-            "es": "Nuevo séquel"
+            "es": "New shekel"
           },
           "isoCode": "ILS"
         }
@@ -10716,7 +10702,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "Tiempo universal coordinado"
+            "es": "UTC"
           }
         },
         {
@@ -10731,7 +10717,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2:00 (IST)"
+        "+972"
       ],
       "internetTld": [
         ".il"
@@ -10886,7 +10872,7 @@
         }
       ],
       "callingCode": [
-        "UTC+05:30 (IST)"
+        "+91"
       ],
       "internetTld": [
         ".in (others)"
@@ -11020,7 +11006,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (AST)"
+        "+964"
       ],
       "internetTld": [
         ".iq.العراق"
@@ -11175,7 +11161,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3:30 (IRST)"
+        "+98"
       ],
       "internetTld": [
         ".irایران."
@@ -11319,7 +11305,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT/WET)"
+        "+354"
       ],
       "internetTld": [
         ".is"
@@ -11349,7 +11335,7 @@
             "en": "Rome",
             "pt": "Roma",
             "fr": "Rome",
-            "it": "Roma",
+            "it": "Rome",
             "es": "Roma"
           }
         }
@@ -11361,7 +11347,7 @@
             "en": "Rome",
             "pt": "Roma",
             "fr": "Rome",
-            "it": "Roma",
+            "it": "Rome",
             "es": "Roma"
           }
         }
@@ -11388,7 +11374,7 @@
             "en": "Italian",
             "pt": "Língua italiana",
             "fr": "Italien",
-            "it": "Lingua italiana",
+            "it": "Italian",
             "es": "Idioma italiano"
           }
         }
@@ -11400,7 +11386,7 @@
             "en": "Italian",
             "pt": "Italianos",
             "fr": "Italiens",
-            "it": "Italiani",
+            "it": "Italian",
             "es": "Pueblo italiano"
           }
         }
@@ -11427,7 +11413,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -11437,13 +11423,13 @@
             "en": "CET",
             "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
-            "it": "Central European Time",
+            "it": "CET",
             "es": "Hora central europea"
           }
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+39"
       ],
       "internetTld": [
         ".it"
@@ -11567,7 +11553,7 @@
         }
       ],
       "callingCode": [
-        "UTC-5:00 (EST)"
+        "+1"
       ],
       "internetTld": [
         ".jm"
@@ -11691,7 +11677,7 @@
         }
       ],
       "callingCode": [
-        "UTC+03:00 (AST)"
+        "+962"
       ],
       "internetTld": [
         ".jo.الاردن"
@@ -11826,7 +11812,7 @@
         }
       ],
       "callingCode": [
-        "UTC+09:00 (JST)"
+        "+81"
       ],
       "internetTld": [
         ".jp"
@@ -11960,7 +11946,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (East Africa Time)"
+        "+254"
       ],
       "internetTld": [
         ".ke"
@@ -12094,7 +12080,7 @@
         }
       ],
       "callingCode": [
-        "UTC+6 (KGT)"
+        "+996"
       ],
       "internetTld": [
         ".kg"
@@ -12239,7 +12225,7 @@
         }
       ],
       "callingCode": [
-        "UTC+07:00 (ICT)"
+        "+855"
       ],
       "internetTld": [
         ".kh"
@@ -12393,9 +12379,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12",
-        "+13",
-        "+14"
+        "+686"
       ],
       "internetTld": [
         ".ki"
@@ -12549,7 +12533,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+269"
       ],
       "internetTld": [
         ".km"
@@ -12693,7 +12677,7 @@
         }
       ],
       "callingCode": [
-        "UTC-4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".kn"
@@ -12827,7 +12811,7 @@
         }
       ],
       "callingCode": [
-        "UTC+09:00 (PYT)"
+        "+850"
       ],
       "internetTld": [
         ".kp"
@@ -12961,7 +12945,7 @@
         }
       ],
       "callingCode": [
-        "UTC+9 (Korea Standard Time)"
+        "+82"
       ],
       "internetTld": [
         ".kr.한국"
@@ -13085,7 +13069,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (AST)"
+        "+965"
       ],
       "internetTld": [
         ".kw"
@@ -13219,7 +13203,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5"
+        "+7"
       ],
       "internetTld": [
         ".kz.қаз"
@@ -13343,7 +13327,7 @@
         }
       ],
       "callingCode": [
-        "UTC+7 (ICT)"
+        "+856"
       ],
       "internetTld": [
         ".la"
@@ -13371,7 +13355,7 @@
           "articleId": "Beirut",
           "name": {
             "en": "Beirut",
-            "pt": "Beirut",
+            "pt": "Beirute",
             "fr": "Beyrouth",
             "it": "Beirut",
             "es": "Beirut"
@@ -13383,7 +13367,7 @@
           "articleId": "Beirut",
           "name": {
             "en": "Beirut",
-            "pt": "Beirut",
+            "pt": "Beirute",
             "fr": "Beyrouth",
             "it": "Beirut",
             "es": "Beirut"
@@ -13408,7 +13392,7 @@
           "articleId": "Confessionalism_(politics)",
           "name": {
             "en": "confessionalism",
-            "pt": "confessionalism",
+            "pt": "Confessionalismo",
             "fr": "Confessionnalisme (politique)",
             "it": "Confessionalismo",
             "es": "Confesionalismo"
@@ -13420,7 +13404,7 @@
           "articleId": "Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Língua árabe",
             "fr": "Arabe",
             "it": "Lingua araba",
             "es": "Idioma árabe"
@@ -13432,7 +13416,7 @@
           "articleId": "Lebanese_people",
           "name": {
             "en": "Lebanese",
-            "pt": "Lebanese",
+            "pt": "Libaneses",
             "fr": "Lebanese",
             "it": "Lebanese",
             "es": "Pueblo libanés"
@@ -13446,7 +13430,7 @@
           "articleId": "Lebanese pound",
           "name": {
             "en": "Lebanese pound",
-            "pt": "Lebanese pound",
+            "pt": "Libra libanesa",
             "fr": "Livre libanaise",
             "it": "Lira libanese",
             "es": "Libra libanesa"
@@ -13459,7 +13443,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -13469,7 +13453,7 @@
           "articleId": "Eastern_European_Time",
           "name": {
             "en": "EET",
-            "pt": "EET",
+            "pt": "Horário do Leste Europeu",
             "fr": "Heure normale d'Europe de l'Est",
             "it": "Eastern European Time",
             "es": "Hora de Europa Oriental"
@@ -13477,7 +13461,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+961"
       ],
       "internetTld": [
         ".lb.لبنان"
@@ -13601,7 +13585,7 @@
         }
       ],
       "callingCode": [
-        "UTC−4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".lc"
@@ -13735,7 +13719,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01:00 (CET)"
+        "+423"
       ],
       "internetTld": [
         ".li"
@@ -13763,7 +13747,7 @@
           "articleId": "Sri_Jayawardenepura_Kotte",
           "name": {
             "en": "Sri Jayawardenepura Kotte",
-            "pt": "Seri Jaiavardenapura-Cota",
+            "pt": "Sri Jayawardenepura Kotte",
             "fr": "Sri Jayawardenapura Kotte",
             "it": "Sri Jayawardenapura Kotte",
             "es": "Sri Jayawardenapura Kotte"
@@ -13800,7 +13784,7 @@
           "articleId": "Semi-presidential_republic",
           "name": {
             "en": "semi-presidential republic",
-            "pt": "Semipresidencialismo",
+            "pt": "semi-presidential republic",
             "fr": "Régime semi-présidentiel",
             "it": "Repubblica semipresidenziale",
             "es": "Semipresidencialismo"
@@ -13812,7 +13796,7 @@
           "articleId": "Sinhala_language",
           "name": {
             "en": "Sinhala",
-            "pt": "Língua cingalesa",
+            "pt": "Sinhala",
             "fr": "Singhalais",
             "it": "Lingua singalese",
             "es": "Idioma cingalés"
@@ -13822,7 +13806,7 @@
           "articleId": "Tamil_language",
           "name": {
             "en": "Tamil",
-            "pt": "Língua tâmil",
+            "pt": "Tamil",
             "fr": "Tamoul",
             "it": "Lingua tamil",
             "es": "Idioma tamil"
@@ -13834,7 +13818,7 @@
           "articleId": "Sri_Lankan_people",
           "name": {
             "en": "Sri Lankan",
-            "pt": "Demografia do Sri Lanka",
+            "pt": "Sri Lankan",
             "fr": "Démographie du Sri Lanka",
             "it": "Sri Lankan",
             "es": "Demografía de Sri Lanka"
@@ -13848,7 +13832,7 @@
           "articleId": "Sri Lankan rupee",
           "name": {
             "en": "Rs",
-            "pt": "Rupia do Sri Lanka",
+            "pt": "Rs",
             "fr": "Roupie srilankaise",
             "it": "Rupia singalese",
             "es": "Rupia de Sri Lanka"
@@ -13861,7 +13845,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -13879,7 +13863,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5:30 (SLST)"
+        "+94"
       ],
       "internetTld": [
         ".lk.ලංකා.இலங்கை"
@@ -13907,7 +13891,7 @@
           "articleId": "Monrovia",
           "name": {
             "en": "Monrovia",
-            "pt": "Monrovia",
+            "pt": "Monróvia",
             "fr": "Monrovia",
             "it": "Monrovia",
             "es": "Monrovia"
@@ -13919,7 +13903,7 @@
           "articleId": "Monrovia",
           "name": {
             "en": "Monrovia",
-            "pt": "Monrovia",
+            "pt": "Monróvia",
             "fr": "Monrovia",
             "it": "Monrovia",
             "es": "Monrovia"
@@ -13934,7 +13918,7 @@
           "articleId": "Presidential_system",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -13946,7 +13930,7 @@
           "articleId": "English_language",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Língua inglesa",
             "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
@@ -13958,7 +13942,7 @@
           "articleId": "Liberian_people",
           "name": {
             "en": "Liberian",
-            "pt": "Liberian",
+            "pt": "Demografia da Libéria",
             "fr": "Démographie du Liberia",
             "it": "Liberian",
             "es": "Demografía de Liberia"
@@ -13972,7 +13956,7 @@
           "articleId": "United States dollar",
           "name": {
             "en": "United States dollar",
-            "pt": "United States dollar",
+            "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
@@ -13983,7 +13967,7 @@
           "articleId": "Liberian dollar",
           "name": {
             "en": "Liberian dollar",
-            "pt": "Liberian dollar",
+            "pt": "Dólar liberiano",
             "fr": "Dollar libérien",
             "it": "Dollaro liberiano",
             "es": "Dólar liberiano"
@@ -13996,7 +13980,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -14006,7 +13990,7 @@
           "articleId": "Greenwich_Mean_Time",
           "name": {
             "en": "GMT",
-            "pt": "GMT",
+            "pt": "Tempo Médio de Greenwich",
             "fr": "Temps moyen de Greenwich",
             "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
@@ -14014,7 +13998,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+231"
       ],
       "internetTld": [
         ".lr"
@@ -14069,7 +14053,7 @@
           "articleId": "Parliamentary_constitutional_monarchy",
           "name": {
             "en": "parliamentary constitutional monarchy",
-            "pt": "parliamentary constitutional monarchy",
+            "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -14081,7 +14065,7 @@
           "articleId": "Sotho_language",
           "name": {
             "en": "Sesotho",
-            "pt": "Sesotho",
+            "pt": "Sesoto",
             "fr": "Sotho du Sud",
             "it": "Lingua sotho del sud",
             "es": "Sesoto"
@@ -14091,7 +14075,7 @@
           "articleId": "South_African_English",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Inglês sul-africano",
             "fr": "Anglais sud-africain",
             "it": "English",
             "es": "Inglés sudafricano"
@@ -14117,7 +14101,7 @@
           "articleId": "Lesotho loti",
           "name": {
             "en": "Lesotho loti",
-            "pt": "Lesotho loti",
+            "pt": "Loti",
             "fr": "Loti",
             "it": "Loti lesothiano",
             "es": "Loti"
@@ -14128,7 +14112,7 @@
           "articleId": "South African rand",
           "name": {
             "en": "South African rand",
-            "pt": "South African rand",
+            "pt": "Rand",
             "fr": "Rand (monnaie)",
             "it": "Rand sudafricano",
             "es": "Rand sudafricano"
@@ -14141,7 +14125,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -14151,7 +14135,7 @@
           "articleId": "South_African_Standard_Time",
           "name": {
             "en": "SAST",
-            "pt": "SAST",
+            "pt": "Hora Legal da África do Sul",
             "fr": "Heure normale d'Afrique du Sud",
             "it": "SAST",
             "es": "SAST"
@@ -14159,7 +14143,7 @@
         }
       ],
       "callingCode": [
-        "UTC+02:00 (SAST)"
+        "+266"
       ],
       "internetTld": [
         ".ls"
@@ -14294,7 +14278,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+370"
       ],
       "internetTld": [
         ".lt"
@@ -14449,7 +14433,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+352"
       ],
       "internetTld": [
         ".lu"
@@ -14519,7 +14503,7 @@
             "pt": "Língua letã",
             "fr": "Letton",
             "it": "Lingua lettone",
-            "es": "Latvian"
+            "es": "Idioma letón"
           }
         }
       ],
@@ -14531,7 +14515,7 @@
             "pt": "Letões",
             "fr": "Lettons",
             "it": "Lettoni",
-            "es": "Latvian"
+            "es": "Pueblo letón"
           }
         }
       ],
@@ -14556,7 +14540,7 @@
             "pt": "€",
             "fr": "Symbole euro",
             "it": "Simbolo dell'euro",
-            "es": "€"
+            "es": "Símbolo del euro"
           },
           "isoCode": "EUR"
         }
@@ -14569,7 +14553,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -14579,12 +14563,12 @@
             "pt": "Horário do Leste Europeu",
             "fr": "Heure normale d'Europe de l'Est",
             "it": "Eastern European Time",
-            "es": "EET"
+            "es": "Hora de Europa Oriental"
           }
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+371"
       ],
       "internetTld": [
         ".lv"
@@ -14728,7 +14712,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+218"
       ],
       "internetTld": [
         ".lyليبيا."
@@ -14872,7 +14856,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1UTC+0 (during Ramadan)"
+        "+212"
       ],
       "internetTld": [
         ".ma.المغرب"
@@ -15027,7 +15011,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+377"
       ],
       "internetTld": [
         ".mc"
@@ -15151,7 +15135,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+373"
       ],
       "internetTld": [
         ".md"
@@ -15286,7 +15270,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+382"
       ],
       "internetTld": [
         ".me"
@@ -15430,7 +15414,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+261"
       ],
       "internetTld": [
         ".mg"
@@ -15565,7 +15549,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12 (MHT)"
+        "+692"
       ],
       "internetTld": [
         ".mh"
@@ -15699,7 +15683,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+389"
       ],
       "internetTld": [
         ".mk.мкд"
@@ -15953,7 +15937,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+223"
       ],
       "internetTld": [
         ".ml"
@@ -16097,7 +16081,7 @@
         }
       ],
       "callingCode": [
-        "UTC+06:30 (MMT)"
+        "+95"
       ],
       "internetTld": [
         ".mm"
@@ -16231,7 +16215,7 @@
         }
       ],
       "callingCode": [
-        "UTC+7/+8"
+        "+976"
       ],
       "internetTld": [
         ".mn",
@@ -16356,7 +16340,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+222"
       ],
       "internetTld": [
         ".mr"
@@ -16511,7 +16495,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+356"
       ],
       "internetTld": [
         ".mt"
@@ -16645,7 +16629,7 @@
         }
       ],
       "callingCode": [
-        "UTC+4 (MUT)"
+        "+230"
       ],
       "internetTld": [
         ".mu"
@@ -16769,7 +16753,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5 (MVT)"
+        "+960"
       ],
       "internetTld": [
         ".mv"
@@ -16893,7 +16877,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+265"
       ],
       "internetTld": [
         ".mw"
@@ -17017,7 +17001,7 @@
         }
       ],
       "callingCode": [
-        "UTC−8 to −5 (See Time in Mexico)"
+        "+52"
       ],
       "internetTld": [
         ".mx"
@@ -17161,7 +17145,7 @@
         }
       ],
       "callingCode": [
-        "UTC+8 (MST)"
+        "+60"
       ],
       "internetTld": [
         ".my"
@@ -17295,7 +17279,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+258"
       ],
       "internetTld": [
         ".mz"
@@ -17430,7 +17414,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+264"
       ],
       "internetTld": [
         ".na"
@@ -17564,7 +17548,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (WAT)"
+        "+227"
       ],
       "internetTld": [
         ".ne"
@@ -17688,7 +17672,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01:00 (WAT)"
+        "+234"
       ],
       "internetTld": [
         ".ng"
@@ -17842,7 +17826,7 @@
         }
       ],
       "callingCode": [
-        "UTC−6 (CST)"
+        "+505"
       ],
       "internetTld": [
         ".ni"
@@ -17899,7 +17883,7 @@
             "en": "Devolved",
             "pt": "Devolução",
             "fr": "Dévolution du pouvoir",
-            "it": "Devoluzione (politica)",
+            "it": "Devolved",
             "es": "Devolución de poder"
           }
         },
@@ -17909,7 +17893,7 @@
             "en": "constitutional monarchy",
             "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
-            "it": "Monarchia costituzionale",
+            "it": "constitutional monarchy",
             "es": "Monarquía constitucional"
           }
         }
@@ -17921,7 +17905,7 @@
             "en": "Dutch",
             "pt": "Língua neerlandesa",
             "fr": "Néerlandais",
-            "it": "Lingua olandese",
+            "it": "Dutch",
             "es": "Idioma neerlandés"
           }
         }
@@ -17933,7 +17917,7 @@
             "en": "Dutch",
             "pt": "Neerlandeses",
             "fr": "Néerlandais (peuple)",
-            "it": "Olandesi",
+            "it": "Dutch",
             "es": "Pueblo neerlandés"
           }
         }
@@ -17958,7 +17942,7 @@
             "en": "Europe",
             "pt": "Províncias dos Países Baixos",
             "fr": "Provinces des Pays-Bas",
-            "it": "Province dei Paesi Bassi",
+            "it": "Europe",
             "es": "Provincias de los Países Bajos"
           },
           "isoCode": "EUR"
@@ -17969,7 +17953,7 @@
             "en": "United States dollar",
             "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
-            "it": "Dollaro statunitense",
+            "it": "United States dollar",
             "es": "Dólar estadounidense"
           },
           "isoCode": "EUR"
@@ -17980,7 +17964,7 @@
             "en": "Caribbean Netherlands",
             "pt": "Países Baixos Caribenhos",
             "fr": "Pays-Bas caribéens",
-            "it": "Paesi Bassi caraibici",
+            "it": "Caribbean Netherlands",
             "es": "Caribe Neerlandés"
           },
           "isoCode": "EUR"
@@ -17991,7 +17975,7 @@
             "en": "Caribbean guilder",
             "pt": "Florim do Caribe",
             "fr": "Florin caribéen",
-            "it": "Fiorino caraibico",
+            "it": "Caribbean guilder",
             "es": "Florín caribeño"
           },
           "isoCode": "EUR"
@@ -18024,7 +18008,7 @@
             "en": "Aruban florin",
             "pt": "Florim arubano",
             "fr": "Florin arubais",
-            "it": "Fiorino arubano",
+            "it": "Aruban florin",
             "es": "Florín arubeño"
           },
           "isoCode": "EUR"
@@ -18048,7 +18032,7 @@
             "en": "CET",
             "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
-            "it": "Central European Time",
+            "it": "CET",
             "es": "Hora central europea"
           }
         },
@@ -18058,7 +18042,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -18068,7 +18052,7 @@
             "en": "CEST",
             "pt": "Horário de Verão da Europa Central",
             "fr": "Heure d'été d'Europe centrale",
-            "it": "Central European Summer Time",
+            "it": "CEST",
             "es": "Hora central europea de verano"
           }
         },
@@ -18084,7 +18068,7 @@
         }
       ],
       "callingCode": [
-        "European Netherlands:CET (UTC+1)CEST (UTC+2) (DST)\nCaribbean Netherlands:AST (UTC-4)DST not observed"
+        "4 codes\n +31      (Netherlands)\n   +297    (Aruba)\n   +599    (Curaçao / Caribbean)\n   +1 721 (Sint Maarten)"
       ],
       "internetTld": [
         "6 TLDs\n .nl  (Netherlands)\n   .frl  (Fryslân)\n   .aw  (Aruba)\n   .cw  (Curaçao)\n   .sx  (Sint Maarten)\n   .bq  (Caribbean Netherlands)"
@@ -18208,7 +18192,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+47"
       ],
       "internetTld": [
         ".no"
@@ -18237,7 +18221,7 @@
           "name": {
             "en": "Kathmandu",
             "pt": "Catmandu",
-            "fr": "Katmandou",
+            "fr": "Kathmandu",
             "it": "Katmandu",
             "es": "Katmandú"
           }
@@ -18249,7 +18233,7 @@
           "name": {
             "en": "Kathmandu",
             "pt": "Catmandu",
-            "fr": "Katmandou",
+            "fr": "Kathmandu",
             "it": "Katmandu",
             "es": "Katmandú"
           }
@@ -18264,7 +18248,7 @@
           "name": {
             "en": "parliamentary republic",
             "pt": "República parlamentarista",
-            "fr": "République parlementaire",
+            "fr": "parliamentary republic",
             "it": "Repubblica parlamentare",
             "es": "República parlamentaria"
           }
@@ -18276,7 +18260,7 @@
           "name": {
             "en": "Nepali",
             "pt": "Língua nepali",
-            "fr": "Népalais",
+            "fr": "Nepali",
             "it": "Lingua nepalese",
             "es": "Idioma nepalí"
           }
@@ -18312,7 +18296,7 @@
           "name": {
             "en": "Nepalese rupee",
             "pt": "Rupia nepalesa",
-            "fr": "Roupie népalaise",
+            "fr": "Nepalese rupee",
             "it": "Rupia nepalese",
             "es": "Rupia nepalí"
           },
@@ -18325,7 +18309,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "Temps universel coordonné",
+            "fr": "UTC",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -18352,7 +18336,7 @@
         }
       ],
       "callingCode": [
-        "UTC+05:45 (Nepal Standard Time)"
+        "+977"
       ],
       "internetTld": [
         ".np"
@@ -18496,7 +18480,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12"
+        "+674"
       ],
       "internetTld": [
         ".nr"
@@ -18543,7 +18527,7 @@
           }
         }
       ],
-      "population": 5347900,
+      "population": 5347960,
       "areaKm2": 263310,
       "densityKm2": 19.9,
       "government": [
@@ -18563,7 +18547,7 @@
           "articleId": "New_Zealand_English",
           "name": {
             "en": "English",
-            "pt": "Inglês neozelandês",
+            "pt": "English",
             "fr": "Anglais néo-zélandais",
             "it": "Inglese neozelandese",
             "es": "Inglés neozelandés"
@@ -18583,7 +18567,7 @@
           "articleId": "New_Zealand_Sign_Language",
           "name": {
             "en": "NZ Sign Language",
-            "pt": "Língua de sinais da Nova Zelândia",
+            "pt": "NZ Sign Language",
             "fr": "Langue des signes néo-zélandaise",
             "it": "Lingua dei segni neozelandese",
             "es": "Lengua de señas neozelandesa"
@@ -18595,7 +18579,7 @@
           "articleId": "New_Zealanders",
           "name": {
             "en": "New Zealander",
-            "pt": "Neozelandeses",
+            "pt": "New Zealander",
             "fr": "Néo-Zélandais",
             "it": "New Zealander",
             "es": "New Zealander"
@@ -18605,7 +18589,7 @@
           "articleId": "Kiwi_(nickname)",
           "name": {
             "en": "Kiwi",
-            "pt": "Kiwi (pessoas)",
+            "pt": "Kiwi",
             "fr": "Kiwi",
             "it": "Kiwis",
             "es": "Kiwi (gentilicio)"
@@ -18619,7 +18603,7 @@
           "articleId": "New Zealand dollar",
           "name": {
             "en": "New Zealand dollar",
-            "pt": "Dólar neozelandês",
+            "pt": "New Zealand dollar",
             "fr": "Dollar néo-zélandais",
             "it": "Dollaro neozelandese",
             "es": "Dólar neozelandés"
@@ -18632,7 +18616,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -18650,7 +18634,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12 (NZST)"
+        "+64"
       ],
       "internetTld": [
         ".nz"
@@ -18679,7 +18663,7 @@
           "name": {
             "en": "Muscat",
             "pt": "Mascate",
-            "fr": "Muscat",
+            "fr": "Mascate",
             "it": "Mascate",
             "es": "Mascate"
           }
@@ -18691,7 +18675,7 @@
           "name": {
             "en": "Muscat",
             "pt": "Mascate",
-            "fr": "Muscat",
+            "fr": "Mascate",
             "it": "Mascate",
             "es": "Mascate"
           }
@@ -18706,7 +18690,7 @@
           "name": {
             "en": "absolute monarchy",
             "pt": "Monarquia absoluta",
-            "fr": "absolute monarchy",
+            "fr": "Monarchie absolue",
             "it": "Monarchia assoluta",
             "es": "Monarquía absoluta"
           }
@@ -18718,7 +18702,7 @@
           "name": {
             "en": "Arabic",
             "pt": "Árabe moderno padrão",
-            "fr": "Arabic",
+            "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
           }
@@ -18744,7 +18728,7 @@
           "name": {
             "en": "Omani rial",
             "pt": "Rial omanense",
-            "fr": "Omani rial",
+            "fr": "Rial omanais",
             "it": "Riyal dell'Oman",
             "es": "Rial omaní"
           },
@@ -18757,7 +18741,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -18767,14 +18751,14 @@
           "name": {
             "en": "GST",
             "pt": "UTC+4",
-            "fr": "GST",
+            "fr": "UTC+04:00",
             "it": "UTC+4",
             "es": "UTC+04:00"
           }
         }
       ],
       "callingCode": [
-        "UTC+4 (GST)"
+        "+968"
       ],
       "internetTld": [
         ".om",
@@ -18910,7 +18894,7 @@
         }
       ],
       "callingCode": [
-        "UTC−5 (EST)"
+        "+507"
       ],
       "internetTld": [
         ".pa"
@@ -19034,7 +19018,7 @@
         }
       ],
       "callingCode": [
-        "UTC−05:00 (PET)"
+        "+51"
       ],
       "internetTld": [
         ".pe"
@@ -19188,8 +19172,7 @@
         }
       ],
       "callingCode": [
-        "UTC+10",
-        "+11 (PNGST)"
+        "+675"
       ],
       "internetTld": [
         ".pg"
@@ -19374,7 +19357,7 @@
         }
       ],
       "callingCode": [
-        "UTC+8 (PhST)"
+        "+63"
       ],
       "internetTld": [
         ".ph"
@@ -19402,7 +19385,7 @@
           "articleId": "Islamabad",
           "name": {
             "en": "Islamabad",
-            "pt": "Islamabad",
+            "pt": "Islamabade",
             "fr": "Islamabad",
             "it": "Islamabad",
             "es": "Islamabad"
@@ -19414,7 +19397,7 @@
           "articleId": "Karachi",
           "name": {
             "en": "Karachi",
-            "pt": "Karachi",
+            "pt": "Carachi",
             "fr": "Karachi",
             "it": "Karachi",
             "es": "Karachi"
@@ -19429,7 +19412,7 @@
           "articleId": "Federal_republic",
           "name": {
             "en": "Federal",
-            "pt": "Federal",
+            "pt": "República federal",
             "fr": "Federal",
             "it": "Repubblica federale",
             "es": "República federal"
@@ -19439,7 +19422,7 @@
           "articleId": "Islamic_republic",
           "name": {
             "en": "Islamic republic",
-            "pt": "Islamic republic",
+            "pt": "República islâmica",
             "fr": "République islamique",
             "it": "Repubblica islamica",
             "es": "República islámica"
@@ -19451,7 +19434,7 @@
           "articleId": "Urdu",
           "name": {
             "en": "Urdu",
-            "pt": "Urdu",
+            "pt": "Língua urdu",
             "fr": "Ourdou",
             "it": "Lingua urdu",
             "es": "Urdu"
@@ -19487,7 +19470,7 @@
           "articleId": "Pakistani rupee",
           "name": {
             "en": "Pakistani rupee",
-            "pt": "Pakistani rupee",
+            "pt": "Rupia do Paquistão",
             "fr": "Roupie pakistanaise",
             "it": "Rupia pakistana",
             "es": "Rupia pakistaní"
@@ -19500,7 +19483,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -19518,7 +19501,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5 (PKT)"
+        "+92"
       ],
       "internetTld": [
         ".pkپاکستان."
@@ -19652,7 +19635,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+48"
       ],
       "internetTld": [
         ".pl"
@@ -19680,7 +19663,7 @@
           "articleId": "Jerusalem",
           "name": {
             "en": "Jerusalem",
-            "pt": "Jerusalem",
+            "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
             "es": "Jerusalén"
@@ -19690,7 +19673,7 @@
           "articleId": "Status_of_Jerusalem",
           "name": {
             "en": "limited recognition",
-            "pt": "limited recognition",
+            "pt": "Posições sobre Jerusalém",
             "fr": "limited recognition",
             "it": "Status di Gerusalemme",
             "es": "limited recognition"
@@ -19700,7 +19683,7 @@
           "articleId": "Ramallah",
           "name": {
             "en": "Ramallah",
-            "pt": "Ramallah",
+            "pt": "Ramala",
             "fr": "Ramallah",
             "it": "Ramallah",
             "es": "Ramala"
@@ -19727,7 +19710,7 @@
           "articleId": "Semi-presidential_republic",
           "name": {
             "en": "semi-presidential republic",
-            "pt": "semi-presidential republic",
+            "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
             "it": "Repubblica semipresidenziale",
             "es": "Semipresidencialismo"
@@ -19739,7 +19722,7 @@
           "articleId": "Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Língua árabe",
             "fr": "Arabe",
             "it": "Lingua araba",
             "es": "Idioma árabe"
@@ -19751,7 +19734,7 @@
           "articleId": "Palestinians",
           "name": {
             "en": "Palestinian",
-            "pt": "Palestinian",
+            "pt": "Palestinos",
             "fr": "Palestiniens",
             "it": "Palestinesi",
             "es": "Pueblo palestino"
@@ -19765,7 +19748,7 @@
           "articleId": "Israeli new shekel",
           "name": {
             "en": "Israeli new shekel",
-            "pt": "Israeli new shekel",
+            "pt": "Novo shekel israelense",
             "fr": "Shekel",
             "it": "Nuovo shekel israeliano",
             "es": "Nuevo séquel"
@@ -19776,7 +19759,7 @@
           "articleId": "Jordanian dinar",
           "name": {
             "en": "Jordanian dinar",
-            "pt": "Jordanian dinar",
+            "pt": "Dinar jordano",
             "fr": "Dinar jordanien",
             "it": "Dinaro giordano",
             "es": "Dinar jordano"
@@ -19787,7 +19770,7 @@
           "articleId": "Egyptian pound",
           "name": {
             "en": "Egyptian pound",
-            "pt": "Egyptian pound",
+            "pt": "Libra egípcia",
             "fr": "Livre égyptienne",
             "it": "Sterlina egiziana",
             "es": "Libra egipcia"
@@ -19800,7 +19783,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -19818,7 +19801,8 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (Palestine Standard Time)"
+        "+970",
+        "+972"
       ],
       "internetTld": [
         ".ps"
@@ -19943,7 +19927,7 @@
         }
       ],
       "callingCode": [
-        "UTC+0 and -1"
+        "+351"
       ],
       "internetTld": [
         ".pt"
@@ -19998,7 +19982,7 @@
           "articleId": "Presidential_republic",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -20008,7 +19992,7 @@
           "articleId": "Non-partisan_democracy",
           "name": {
             "en": "non-partisan democracy",
-            "pt": "non-partisan democracy",
+            "pt": "Democracia não partidária",
             "fr": "Démocratie non partisane",
             "it": "non-partisan democracy",
             "es": "Democracia sin partidos"
@@ -20020,7 +20004,7 @@
           "articleId": "Palauan_language",
           "name": {
             "en": "Palauan",
-            "pt": "Palauan",
+            "pt": "Língua palauense",
             "fr": "Palau (langue)",
             "it": "Lingua palauana",
             "es": "Idioma palauano"
@@ -20030,7 +20014,7 @@
           "articleId": "English_language",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Língua inglesa",
             "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
@@ -20056,7 +20040,7 @@
           "articleId": "United States dollar",
           "name": {
             "en": "United States dollar",
-            "pt": "United States dollar",
+            "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
@@ -20069,7 +20053,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -20077,7 +20061,7 @@
         }
       ],
       "callingCode": [
-        "UTC+9 (PWT)"
+        "+680"
       ],
       "internetTld": [
         ".pw"
@@ -20211,7 +20195,7 @@
         }
       ],
       "callingCode": [
-        "UTC–03:00 (PYT)"
+        "+595"
       ],
       "internetTld": [
         ".py"
@@ -20345,7 +20329,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3:00 (AST)"
+        "+974"
       ],
       "internetTld": [
         ".qaقطر."
@@ -20469,7 +20453,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+40"
       ],
       "internetTld": [
         ".ro"
@@ -20603,7 +20587,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+381"
       ],
       "internetTld": [
         ".rs.срб"
@@ -20748,7 +20732,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 to +12"
+        "+7"
       ],
       "internetTld": [
         ".ru.рф"
@@ -20932,7 +20916,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+250"
       ],
       "internetTld": [
         ".rw"
@@ -21066,7 +21050,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (SAST)"
+        "+966"
       ],
       "internetTld": [
         ".saالسعودية."
@@ -21180,7 +21164,7 @@
         }
       ],
       "callingCode": [
-        "UTC+11 (Solomon Islands Time)"
+        "+677"
       ],
       "internetTld": [
         ".sb"
@@ -21344,7 +21328,7 @@
         }
       ],
       "callingCode": [
-        "UTC+04:00 (SCT)"
+        "+248"
       ],
       "internetTld": [
         ".sc"
@@ -21372,7 +21356,7 @@
           "articleId": "Khartoum",
           "name": {
             "en": "Khartoum",
-            "pt": "Cartum",
+            "pt": "Khartoum",
             "fr": "Khartoum",
             "it": "Khartum",
             "es": "Jartum"
@@ -21384,7 +21368,7 @@
           "articleId": "Khartoum",
           "name": {
             "en": "Khartoum",
-            "pt": "Cartum",
+            "pt": "Khartoum",
             "fr": "Khartoum",
             "it": "Khartum",
             "es": "Jartum"
@@ -21399,7 +21383,7 @@
           "articleId": "Federal_republic",
           "name": {
             "en": "Federal republic",
-            "pt": "República federal",
+            "pt": "Federal republic",
             "fr": "Federal republic",
             "it": "Repubblica federale",
             "es": "República federal"
@@ -21409,7 +21393,7 @@
           "articleId": "Military_junta",
           "name": {
             "en": "military junta",
-            "pt": "Junta militar",
+            "pt": "military junta",
             "fr": "Junte militaire",
             "it": "Giunta militare",
             "es": "Junta militar"
@@ -21421,7 +21405,7 @@
           "articleId": "Modern_Standard_Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Árabe moderno padrão",
+            "pt": "Arabic",
             "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
@@ -21431,7 +21415,7 @@
           "articleId": "English_language",
           "name": {
             "en": "English",
-            "pt": "Língua inglesa",
+            "pt": "English",
             "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
@@ -21443,7 +21427,7 @@
           "articleId": "Demographics_of_Sudan",
           "name": {
             "en": "Sudanese",
-            "pt": "Demografia do Sudão",
+            "pt": "Sudanese",
             "fr": "Démographie du Soudan",
             "it": "Sudanese",
             "es": "Demografía de Sudán"
@@ -21457,7 +21441,7 @@
           "articleId": "Sudanese pound",
           "name": {
             "en": "Sudanese pound",
-            "pt": "Libra sudanesa",
+            "pt": "Sudanese pound",
             "fr": "Livre soudanaise",
             "it": "Sterlina sudanese",
             "es": "Libra sudanesa"
@@ -21470,7 +21454,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -21480,7 +21464,7 @@
           "articleId": "Central_Africa_Time",
           "name": {
             "en": "CAT",
-            "pt": "Horário da África Central",
+            "pt": "CAT",
             "fr": "Heure d'Afrique centrale",
             "it": "CAT",
             "es": "CAT"
@@ -21488,7 +21472,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+249"
       ],
       "internetTld": [
         ".sd.السودان"
@@ -21612,7 +21596,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+46"
       ],
       "internetTld": [
         ".se"
@@ -21766,7 +21750,7 @@
         }
       ],
       "callingCode": [
-        "UTC+8 (SGT)"
+        "+65"
       ],
       "internetTld": [
         ".sg"
@@ -21901,7 +21885,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+386"
       ],
       "internetTld": [
         ".si"
@@ -22036,7 +22020,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+421"
       ],
       "internetTld": [
         ".sk and .eu"
@@ -22160,7 +22144,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+232"
       ],
       "internetTld": [
         ".sl"
@@ -22295,7 +22279,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01 (CET)"
+        "+378 (+39 0549 calling via Italy)"
       ],
       "internetTld": [
         ".sm"
@@ -22419,7 +22403,7 @@
         }
       ],
       "callingCode": [
-        "UTC±00:00 (GMT)"
+        "+221"
       ],
       "internetTld": [
         ".sn"
@@ -22543,7 +22527,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+252"
       ],
       "internetTld": [
         ".so"
@@ -22667,7 +22651,7 @@
         }
       ],
       "callingCode": [
-        "UTC-03:00 (SRT)"
+        "+597"
       ],
       "internetTld": [
         ".sr"
@@ -22791,7 +22775,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+211"
       ],
       "internetTld": [
         ".ss"
@@ -22945,7 +22929,7 @@
         }
       ],
       "callingCode": [
-        "UTC+0 (GMT)"
+        "+239"
       ],
       "internetTld": [
         ".st"
@@ -23080,7 +23064,7 @@
         }
       ],
       "callingCode": [
-        "UTC−6 (CST)"
+        "+503"
       ],
       "internetTld": [
         ".sv"
@@ -23204,7 +23188,7 @@
         }
       ],
       "callingCode": [
-        "UTC+03:00 (AST)"
+        "+963"
       ],
       "internetTld": [
         ".syسوريا."
@@ -23369,7 +23353,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (SAST)"
+        "+268"
       ],
       "internetTld": [
         ".sz"
@@ -23523,7 +23507,7 @@
         }
       ],
       "callingCode": [
-        "UTC+01:00 (WAT)"
+        "+235"
       ],
       "internetTld": [
         ".td"
@@ -23590,7 +23574,7 @@
           "articleId": "French_language",
           "name": {
             "en": "French",
-            "pt": "French",
+            "pt": "Língua francesa",
             "fr": "Français",
             "it": "Lingua francese",
             "es": "Idioma francés"
@@ -23602,7 +23586,7 @@
           "articleId": "Demographics_of_Togo",
           "name": {
             "en": "Togolese",
-            "pt": "Togolese",
+            "pt": "Demografia do Togo",
             "fr": "Démographie du Togo",
             "it": "Togolese",
             "es": "Demografía de Togo"
@@ -23616,7 +23600,7 @@
           "articleId": "West African CFA franc",
           "name": {
             "en": "West African CFA franc",
-            "pt": "West African CFA franc",
+            "pt": "Franco CFA da África Ocidental",
             "fr": "Franc CFA (UEMOA)",
             "it": "West African CFA franc",
             "es": "Franco CFA de África Occidental"
@@ -23629,7 +23613,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -23639,7 +23623,7 @@
           "articleId": "Greenwich_Mean_Time",
           "name": {
             "en": "GMT",
-            "pt": "GMT",
+            "pt": "Tempo Médio de Greenwich",
             "fr": "Temps moyen de Greenwich",
             "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
@@ -23647,7 +23631,7 @@
         }
       ],
       "callingCode": [
-        "UTC+00:00 (GMT)"
+        "+228"
       ],
       "internetTld": [
         ".tg"
@@ -23705,7 +23689,7 @@
             "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
-            "es": "parliamentary constitutional monarchy"
+            "es": "Monarquía constitucional"
           }
         }
       ],
@@ -23717,7 +23701,7 @@
             "pt": "Língua tailandesa",
             "fr": "Thaï",
             "it": "Lingua thailandese",
-            "es": "Thai"
+            "es": "Idioma tailandés"
           }
         }
       ],
@@ -23729,7 +23713,7 @@
             "pt": "Tai (grupo étnico)",
             "fr": "Thaï (peuple)",
             "it": "Thai",
-            "es": "Thai"
+            "es": "Tailandeses"
           }
         }
       ],
@@ -23743,7 +23727,7 @@
             "pt": "Baht",
             "fr": "Baht",
             "it": "Baht thailandese",
-            "es": "Thai baht"
+            "es": "Bat tailandés"
           },
           "isoCode": "THB"
         }
@@ -23756,7 +23740,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -23771,7 +23755,7 @@
         }
       ],
       "callingCode": [
-        "UTC+7 (ICT)"
+        "+66"
       ],
       "internetTld": [
         ".th.ไทย"
@@ -23925,7 +23909,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5 (TJT)"
+        "+992"
       ],
       "internetTld": [
         ".tj"
@@ -23983,7 +23967,7 @@
             "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
             "it": "Repubblica semipresidenziale",
-            "es": "semi-presidential republic"
+            "es": "Semipresidencialismo"
           }
         }
       ],
@@ -23995,7 +23979,7 @@
             "pt": "Português timorense",
             "fr": "Portugais est-timorais",
             "it": "Portuguese",
-            "es": "Portuguese"
+            "es": "Portugués timorense"
           }
         },
         {
@@ -24005,7 +23989,7 @@
             "pt": "Língua tétum",
             "fr": "Tétoum",
             "it": "Lingua tetum",
-            "es": "Tetun"
+            "es": "Idioma tetun"
           }
         }
       ],
@@ -24027,7 +24011,7 @@
             "pt": "Timor-Leste#Demografia",
             "fr": "Démographie du Timor oriental",
             "it": "Timorese",
-            "es": "Timorese"
+            "es": "Demografía de Timor Oriental"
           }
         },
         {
@@ -24051,7 +24035,7 @@
             "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
-            "es": "United States dollar"
+            "es": "Dólar estadounidense"
           },
           "isoCode": "USD"
         },
@@ -24062,7 +24046,7 @@
             "pt": "Centavos de Timor-Leste",
             "fr": "Timor-Leste centavo",
             "it": "Centavo est timorense",
-            "es": "Timor-Leste centavo"
+            "es": "Centavos de dólar de Timor Oriental"
           },
           "isoCode": "USD"
         }
@@ -24075,7 +24059,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -24090,7 +24074,7 @@
         }
       ],
       "callingCode": [
-        "UTC+9 (Timor-Leste Time)"
+        "+670"
       ],
       "internetTld": [
         ".tl"
@@ -24224,7 +24208,7 @@
         }
       ],
       "callingCode": [
-        "UTC+05:00 (TMT)"
+        "+993"
       ],
       "internetTld": [
         ".tm"
@@ -24348,7 +24332,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+216"
       ],
       "internetTld": [
         ".tn.تونس"
@@ -24482,7 +24466,7 @@
         }
       ],
       "callingCode": [
-        "UTC+13"
+        "+676"
       ],
       "internetTld": [
         ".to"
@@ -24627,7 +24611,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (TRT)"
+        "+90"
       ],
       "internetTld": [
         ".tr"
@@ -24761,7 +24745,7 @@
         }
       ],
       "callingCode": [
-        "UTC-4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".tt"
@@ -24896,7 +24880,7 @@
         }
       ],
       "callingCode": [
-        "UTC+12"
+        "+688"
       ],
       "internetTld": [
         ".tv"
@@ -25030,7 +25014,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (East Africa Time)"
+        "+255"
       ],
       "internetTld": [
         ".tz"
@@ -25175,7 +25159,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (EET)"
+        "+380"
       ],
       "internetTld": [
         ".ua.укр"
@@ -25299,7 +25283,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (EAT)"
+        "+256"
       ],
       "internetTld": [
         ".ug"
@@ -25464,9 +25448,7 @@
         }
       ],
       "callingCode": [
-        "UTC−4 to −12",
-        "+10",
-        "+11"
+        "+1"
       ],
       "internetTld": [
         ".us"
@@ -25600,7 +25582,7 @@
         }
       ],
       "callingCode": [
-        "UTC−03:00 (UYT)"
+        "+598"
       ],
       "internetTld": [
         ".uy"
@@ -25734,7 +25716,7 @@
         }
       ],
       "callingCode": [
-        "UTC+5 (UZT)"
+        "+998"
       ],
       "internetTld": [
         ".uz"
@@ -25869,7 +25851,7 @@
         }
       ],
       "callingCode": [
-        "UTC+1 (CET)"
+        "+379"
       ],
       "internetTld": [
         ".va"
@@ -25993,7 +25975,7 @@
         }
       ],
       "callingCode": [
-        "UTC-4 (AST)"
+        "+1"
       ],
       "internetTld": [
         ".vc"
@@ -26127,7 +26109,7 @@
         }
       ],
       "callingCode": [
-        "UTC−04:00 (VET)"
+        "+58"
       ],
       "internetTld": [
         ".ve"
@@ -26251,7 +26233,7 @@
         }
       ],
       "callingCode": [
-        "UTC+07:00 (Vietnam Standard Time)"
+        "+84"
       ],
       "internetTld": [
         ".vn"
@@ -26395,7 +26377,7 @@
         }
       ],
       "callingCode": [
-        "UTC+11 (VUT (Vanuatu Time))"
+        "+678"
       ],
       "internetTld": [
         ".vu"
@@ -26530,7 +26512,7 @@
         }
       ],
       "callingCode": [
-        "UTC+13 (WST)"
+        "+685"
       ],
       "internetTld": [
         ".ws"
@@ -26674,7 +26656,7 @@
         }
       ],
       "callingCode": [
-        "UTC+3 (AST)"
+        "+967"
       ],
       "internetTld": [
         "List\n .ye\n   اليمن."
@@ -26818,7 +26800,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (SAST)"
+        "+27"
       ],
       "internetTld": [
         ".za"
@@ -26942,7 +26924,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+260"
       ],
       "internetTld": [
         ".zm"
@@ -27238,7 +27220,7 @@
         }
       ],
       "callingCode": [
-        "UTC+2 (CAT)"
+        "+263"
       ],
       "internetTld": [
         ".zw"

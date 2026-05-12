@@ -67,11 +67,13 @@ jobs:
       - name: Check for data changes
         id: check_changes
         run: |
-          # 1. Fetch all tags so we can find the last release
+          # 1. Fetch all tags from the server
           git fetch --tags --force
           
-          # 2. Get the latest data tag
-          LATEST_TAG=$(git describe --tags --abbrev=0 --match "data-*" 2>/dev/null || echo "")
+          # 2. Find the newest tag matching 'data-*' globally (not just on this branch)
+          # --sort=-creatordate puts the most recently created tag at the top
+          LATEST_TAG=$(git tag -l "data-*" --sort=-creatordate | head -n 1)
+          echo "Found latest tag: $LATEST_TAG"
           echo "last_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
           
           # 3. Pull previous data from the data branch to compare
@@ -91,14 +93,11 @@ jobs:
             if git diff --no-index --exit-code countries_old.json data/countries_normalized.json > /dev/null; then
               echo "data_changed=false" >> $GITHUB_OUTPUT
               echo "data_updated=false" >> $GITHUB_OUTPUT
-              echo "Data is identical. Skipping release."
             else
               echo "data_changed=true" >> $GITHUB_OUTPUT
               echo "data_updated=true" >> $GITHUB_OUTPUT
-              echo "Changes detected."
             fi
           else
-            # If no old file exists, it's definitely a change
             echo "data_changed=true" >> $GITHUB_OUTPUT
             echo "data_updated=true" >> $GITHUB_OUTPUT
           fi

@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/mucadoo/wikigeo-data-scraper/actions/workflows/publish-data.yml/badge.svg)](https://github.com/mucadoo/wikigeo-data-scraper/actions/workflows/publish-data.yml)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20PT%20%7C%20FR%20%7C%20IT%20%7C%20ES-success)](https://github.com/mucadoo/wikigeo-data-scraper)
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20PT%20%7C%20FR%20%7C%20IT%20%7C%20ES-success)](https://www.wikipedia.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?logo=typescript)](https://www.typescriptlang.org/)
 
 A modern, high-performance TypeScript-based web scraper that extracts comprehensive geographical and political information from Wikipedia. It doesn't just scrape text; it **translates and links entities** across 5 different languages to build a unified, high-quality geographical dataset.
@@ -13,8 +13,10 @@ A modern, high-performance TypeScript-based web scraper that extracts comprehens
 - [🔥 Key Features](#-key-features)
 - [📦 Live Data Access](#-live-data-access)
 - [📊 Sample Data Format](#-sample-data-format)
+- [🚀 Roadmap](#-roadmap)
 - [🏗️ How it Works](#️-how-it-works)
-- [🛠️ Development & Tooling](#️-development--tooling)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
 - [📜 License](#-license)
 
@@ -121,17 +123,36 @@ The scraper follows a sophisticated multi-stage pipeline:
 4.  **Merging**: Unifies all data points into a single schema, prioritizing localized names.
 5.  **Validation**: Runs a suite of quality checks (Audit + Localization) before saving.
 
-## 🛠️ Development & Tooling
+## 📁 Project Structure
+
+A brief overview of the project's key directories:
+
+-   `src/`: Contains the core TypeScript source code for the scraper, including parsers, types, and the main scraping logic.
+-   `data/`: Stores the generated JSON data files (e.g., `sovereign-states.json`).
+-   `scripts/`: Utility scripts for debugging, validation, and other development tasks.
+-   `tests/`: Unit and integration tests, including snapshot tests for extraction logic.
+-   `dist/`: Compiled JavaScript output from the TypeScript source.
+
+## 🚀 Getting Started
+
+To get started with development or to run the scraper locally, follow these steps:
 
 ### Prerequisites
 - **Node.js 20+**
 - **npm**
 
-### Essential Commands
+### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/mucadoo/wikigeo-data-scraper.git
+cd wikigeo-data-scraper
+
 # Install dependencies
 npm install
+```
 
+### Essential Commands
+```bash
 # Build the project (SDK & Source)
 npm run build
 npm run build:sdk

@@ -25,10 +25,10 @@
   },
   "exports": {
     ".": {
-      "browser": "./dist/sdk/browser.js",
-      "import": "./dist/sdk/index.js",
-      "require": "./dist/sdk/index.cjs",
-      "types": "./dist/sdk/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/browser.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {

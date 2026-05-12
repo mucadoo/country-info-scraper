@@ -171,8 +171,9 @@ jobs:
           cp ../data/sovereign-states.min.json .
           cp ../data/schema.json .
           cp ../data/DATA_MODEL.md .
+          cp ../data/sovereign-states.csv .
 
-          git add sovereign-states.json sovereign-states.min.json schema.json DATA_MODEL.md
+          git add sovereign-states.json sovereign-states.min.json schema.json DATA_MODEL.md sovereign-states.csv
           git commit -m "Data update: $(date -u)" || exit 0
           git push origin data
           echo "new_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT

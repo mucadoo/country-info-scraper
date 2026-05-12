@@ -13,5 +13,5 @@ export default defineConfig({
   noExternal: ['../data/sovereign-states.json'],
   // Set platform to 'node' or 'neutral' depending on usage. 
   // 'neutral' works best for isomorphic JS.
-  platform: 'neutral',
+  platform: 'node',
 });

@@ -1,10 +1,15 @@
 import { z } from 'zod';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { 
     CountrySchema, 
     Country 
 } from '../types/country.js';
 
 export * from '../types/country.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const CountryIndexSchema = z.array(
     CountrySchema.pick({ isoCode: true, name: true, flagUrl: true })
@@ -25,14 +30,25 @@ export class WikiGeoClient {
         if (!this.baseUrl.endsWith('/')) this.baseUrl += '/';
     }
 
-    private async getLocalData(): Promise<Country[]> {
-        try {
-            const response = await import('../../data/sovereign-states.json', { assert: { type: 'json' } });
-            const data = response.default as { data: Country[] };
-            return data.data;
-        } catch (error) {
-            throw new Error(`Failed to load local data: ${error instanceof Error ? error.message : 'Unknown error'}`, { cause: error });
+    private getLocalData(): Country[] {
+        const potentialPaths = [
+            path.resolve(process.cwd(), 'data/sovereign-states.json'),
+            path.resolve(__dirname, '../../data/sovereign-states.json'),
+        ];
+
+        for (const p of potentialPaths) {
+            if (fs.existsSync(p)) {
+                try {
+                    const content = fs.readFileSync(p, 'utf-8');
+                    const data = JSON.parse(content) as { data: Country[] };
+                    return data.data;
+                } catch {
+                    // Continue to next path if current one fails
+                }
+            }
         }
+
+        throw new Error(`Failed to load local data: checked ${potentialPaths.join(', ')}`);
     }
 
     /**
@@ -53,7 +69,7 @@ export class WikiGeoClient {
 
     async listCountries() {
         if (this.dataSource === 'local') {
-            const data = await this.getLocalData();
+            const data = this.getLocalData();
             return CountryIndexSchema.parse(data);
         }
 
@@ -66,7 +82,7 @@ export class WikiGeoClient {
 
     async getCountry(isoCode: string): Promise<Country> {
         if (this.dataSource === 'local') {
-            const data = await this.getLocalData();
+            const data = this.getLocalData();
             const country = data.find(c => c.isoCode === isoCode.toUpperCase());
             if (!country) throw new Error(`Country ${isoCode} not found in local data`);
             return CountrySchema.parse(country);

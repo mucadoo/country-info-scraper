@@ -11,7 +11,6 @@ permissions:
   id-token: write
 
 jobs:
-  # JOB 1: Determine if we should actually publish
   check-requirements:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
@@ -35,7 +34,7 @@ jobs:
         if: github.event_name == 'workflow_run'
         id: run_check
         run: |
-          STATUS=$(cat data_updated.txt | xargs) # xargs trims whitespace
+          STATUS=$(cat data_updated.txt | xargs)
           echo "data_updated=$STATUS" >> $GITHUB_OUTPUT
 
       - name: Final Decision
@@ -47,7 +46,6 @@ jobs:
             echo "should_publish=${{ steps.run_check.outputs.data_updated }}" >> $GITHUB_OUTPUT
           fi
 
-  # JOB 2: The actual build and publish logic
   publish:
     needs: check-requirements
     if: needs.check-requirements.outputs.should_publish == 'true'
@@ -56,7 +54,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required for npm version bumps
+          fetch-depth: 0 
 
       - name: Fetch Data from Data Branch
         run: |
@@ -81,14 +79,15 @@ jobs:
         run: npm run build:sdk
 
       - name: Version Patch
-        run: npm version patch -m "chore: release v%s [skip ci]"
+        run: |
+          npm version patch -m "chore: release v%s [skip ci]"
 
       - name: Publish to NPM
-        # Removed --provenance if using static NPM_TOKEN, 
-        # keep it only if you have finished OIDC/Trusted Publishing setup.
-        run: npm publish --access public
+        run: |
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Push Version Change
-        run: git push --follow-tags
+        run: |
+          git push --follow-tags

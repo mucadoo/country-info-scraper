@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generatedAt": "2026-05-12T08:24:52.213Z",
-    "version": "0.1.9",
+    "generatedAt": "2026-05-12T15:18:54.964Z",
+    "version": "0.1.10",
     "license": "ISC",
     "source": "Wikipedia"
   },
@@ -5778,7 +5778,7 @@
           "articleId": "Prague",
           "name": {
             "en": "Prague",
-            "pt": "Praga",
+            "pt": "Prague",
             "fr": "Prague",
             "it": "Praga",
             "es": "Praga"
@@ -5790,7 +5790,7 @@
           "articleId": "Prague",
           "name": {
             "en": "Prague",
-            "pt": "Praga",
+            "pt": "Prague",
             "fr": "Prague",
             "it": "Praga",
             "es": "Praga"
@@ -5817,7 +5817,7 @@
           "articleId": "Czech_language",
           "name": {
             "en": "Czech",
-            "pt": "Língua tcheca",
+            "pt": "Czech",
             "fr": "Tchèque",
             "it": "Lingua ceca",
             "es": "Idioma checo"
@@ -5829,7 +5829,7 @@
           "articleId": "Czechs",
           "name": {
             "en": "Czech",
-            "pt": "Checos",
+            "pt": "Czech",
             "fr": "Tchèques",
             "it": "Cechi",
             "es": "Pueblo checo"
@@ -5843,7 +5843,7 @@
           "articleId": "Czech koruna",
           "name": {
             "en": "Czech koruna",
-            "pt": "Coroa checa",
+            "pt": "Czech koruna",
             "fr": "Couronne tchèque",
             "it": "Corona ceca",
             "es": "Corona checa"
@@ -5856,7 +5856,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -5866,7 +5866,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "Horário da Europa Central",
+            "pt": "CET",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -6040,7 +6040,7 @@
             "pt": "Djibuti (cidade)",
             "fr": "Djibouti (ville)",
             "it": "Gibuti (città)",
-            "es": "Djibouti City"
+            "es": "Ciudad de Yibuti"
           }
         }
       ],
@@ -6052,7 +6052,7 @@
             "pt": "Djibuti (cidade)",
             "fr": "Djibouti (ville)",
             "it": "Gibuti (città)",
-            "es": "Djibouti City"
+            "es": "Ciudad de Yibuti"
           }
         }
       ],
@@ -6067,7 +6067,7 @@
             "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
-            "es": "presidential republic"
+            "es": "Presidencialismo"
           }
         },
         {
@@ -6077,7 +6077,7 @@
             "pt": "Dinastia",
             "fr": "Dynastie",
             "it": "Dinastia",
-            "es": "hereditary dictatorship"
+            "es": "Dinastía"
           }
         }
       ],
@@ -6089,7 +6089,7 @@
             "pt": "Árabe moderno padrão",
             "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
-            "es": "Arabic"
+            "es": "Árabe estándar moderno"
           }
         },
         {
@@ -6099,7 +6099,7 @@
             "pt": "Língua francesa",
             "fr": "Français",
             "it": "Lingua francese",
-            "es": "French"
+            "es": "Idioma francés"
           }
         }
       ],
@@ -6125,7 +6125,7 @@
             "pt": "Franco do Jibuti",
             "fr": "Franc Djibouti",
             "it": "Franco gibutiano",
-            "es": "Djiboutian franc"
+            "es": "Franco yibutiano"
           },
           "isoCode": "DJF"
         }
@@ -6138,7 +6138,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -6148,7 +6148,7 @@
             "pt": "Horário da África Oriental",
             "fr": "Heure d'Afrique orientale",
             "it": "EAT",
-            "es": "EAT"
+            "es": "Tiempo de África Oriental"
           }
         }
       ],
@@ -6181,7 +6181,7 @@
           "articleId": "Copenhagen",
           "name": {
             "en": "Copenhagen",
-            "pt": "Copenhaga",
+            "pt": "Copenhagen",
             "fr": "Copenhague",
             "it": "Copenaghen",
             "es": "Copenhague"
@@ -6193,7 +6193,7 @@
           "articleId": "Copenhagen",
           "name": {
             "en": "Copenhagen",
-            "pt": "Copenhaga",
+            "pt": "Copenhagen",
             "fr": "Copenhague",
             "it": "Copenaghen",
             "es": "Copenhague"
@@ -6208,7 +6208,7 @@
           "articleId": "Unitary_state",
           "name": {
             "en": "Unitary",
-            "pt": "Estado unitário",
+            "pt": "Unitary",
             "fr": "État unitaire",
             "it": "Stato unitario",
             "es": "Estado unitario"
@@ -6218,7 +6218,7 @@
           "articleId": "Constitutional_monarchy",
           "name": {
             "en": "constitutional monarchy",
-            "pt": "Monarquia constitucional",
+            "pt": "constitutional monarchy",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -6230,7 +6230,7 @@
           "articleId": "Faroese_language",
           "name": {
             "en": "Faroese",
-            "pt": "Língua feroesa",
+            "pt": "Faroese",
             "fr": "Féroïen",
             "it": "Lingua faroense",
             "es": "Idioma feroés"
@@ -6240,7 +6240,7 @@
           "articleId": "Greenlandic_language",
           "name": {
             "en": "Greenlandic",
-            "pt": "Língua groenlandesa",
+            "pt": "Greenlandic",
             "fr": "Groenlandais",
             "it": "Lingua groenlandese",
             "es": "Idioma groenlandés"
@@ -6252,7 +6252,7 @@
           "articleId": "Danes",
           "name": {
             "en": "Danish",
-            "pt": "Dinamarqueses",
+            "pt": "Danish",
             "fr": "Danois (nation)",
             "it": "Danesi",
             "es": "Pueblo danés"
@@ -6272,7 +6272,7 @@
           "articleId": "Faroe_Islander",
           "name": {
             "en": "Faroe Islander",
-            "pt": "Faroeses",
+            "pt": "Faroe Islander",
             "fr": "Féroïens",
             "it": "Faroensi",
             "es": "Faroe Islander"
@@ -6286,7 +6286,7 @@
           "articleId": "Danish krone",
           "name": {
             "en": "Danish krone",
-            "pt": "Coroa dinamarquesa",
+            "pt": "Danish krone",
             "fr": "Couronne danoise",
             "it": "Corona danese",
             "es": "Corona danesa"
@@ -6297,7 +6297,7 @@
           "articleId": "Faroese króna",
           "name": {
             "en": "Faroese króna",
-            "pt": "Coroa feroesa",
+            "pt": "Faroese króna",
             "fr": "Couronne féroïenne",
             "it": "Corona delle Fær Øer",
             "es": "Corona feroesa"
@@ -6310,7 +6310,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -6320,7 +6320,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "Horário da Europa Central",
+            "pt": "CET",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -6330,7 +6330,7 @@
           "articleId": "Western_European_Time",
           "name": {
             "en": "WET",
-            "pt": "Horário da Europa Ocidental",
+            "pt": "WET",
             "fr": "Heure d'Europe de l'Ouest",
             "it": "Western European Time",
             "es": "Hora de Europa Occidental"
@@ -6340,7 +6340,7 @@
           "articleId": "Atlantic_Time_Zone",
           "name": {
             "en": "AST",
-            "pt": "Horário Padrão do Atlântico",
+            "pt": "AST",
             "fr": "AST",
             "it": "AST",
             "es": "Zona horaria del Atlántico (América del Norte)"
@@ -6370,7 +6370,7 @@
           "articleId": "Greenwich_Mean_Time",
           "name": {
             "en": "GMT",
-            "pt": "Tempo Médio de Greenwich",
+            "pt": "GMT",
             "fr": "Temps moyen de Greenwich",
             "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
@@ -6445,7 +6445,7 @@
           "articleId": "English_language",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Língua inglesa",
             "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
@@ -6457,7 +6457,7 @@
           "articleId": "Demographics_of_Dominica",
           "name": {
             "en": "Dominican",
-            "pt": "Dominican",
+            "pt": "Demografia da Dominica",
             "fr": "Démographie de la Dominique",
             "it": "Dominican",
             "es": "Demografía de Dominica"
@@ -6467,7 +6467,7 @@
           "articleId": "Help:IPA/English",
           "name": {
             "en": "/",
-            "pt": "/",
+            "pt": "Wikipédia:AFI para inglês",
             "fr": "Aide:Alphabet phonétique anglais",
             "it": "Aiuto:IPA per l'inglese",
             "es": "Ayuda:AFI/Inglés"
@@ -6481,7 +6481,7 @@
           "articleId": "East Caribbean dollar",
           "name": {
             "en": "East Caribbean dollar",
-            "pt": "East Caribbean dollar",
+            "pt": "Dólar do Caribe Oriental",
             "fr": "Dollar des Caraïbes orientales",
             "it": "Dollaro dei Caraibi Orientali",
             "es": "Dólar del Caribe Oriental"
@@ -6494,7 +6494,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -6504,7 +6504,7 @@
           "articleId": "Atlantic_Standard_Time",
           "name": {
             "en": "AST",
-            "pt": "AST",
+            "pt": "Horário Padrão do Atlântico",
             "fr": "AST",
             "it": "AST",
             "es": "Zona horaria del Atlántico (América del Norte)"
@@ -6540,7 +6540,7 @@
           "articleId": "Santo_Domingo",
           "name": {
             "en": "Santo Domingo",
-            "pt": "Santo Domingo",
+            "pt": "São Domingos (República Dominicana)",
             "fr": "Saint-Domingue (ville)",
             "it": "Santo Domingo",
             "es": "Santo Domingo"
@@ -6552,7 +6552,7 @@
           "articleId": "Santo_Domingo",
           "name": {
             "en": "Santo Domingo",
-            "pt": "Santo Domingo",
+            "pt": "São Domingos (República Dominicana)",
             "fr": "Saint-Domingue (ville)",
             "it": "Santo Domingo",
             "es": "Santo Domingo"
@@ -6567,7 +6567,7 @@
           "articleId": "Presidential_system",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -6605,7 +6605,7 @@
           "articleId": "Dominican peso",
           "name": {
             "en": "Dominican peso",
-            "pt": "Dominican peso",
+            "pt": "Peso dominicano",
             "fr": "Peso dominicain",
             "it": "Peso dominicano",
             "es": "Peso dominicano"
@@ -6618,7 +6618,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -6628,7 +6628,7 @@
           "articleId": "UTC-04:00",
           "name": {
             "en": "-04:00",
-            "pt": "-04:00",
+            "pt": "UTC−04:00",
             "fr": "UTC−04:00",
             "it": "UTC-4",
             "es": "UTC-04:00"
@@ -6638,7 +6638,7 @@
           "articleId": "Atlantic_Standard_Time",
           "name": {
             "en": "AST",
-            "pt": "AST",
+            "pt": "Horário Padrão do Atlântico",
             "fr": "AST",
             "it": "AST",
             "es": "Zona horaria del Atlántico (América del Norte)"
@@ -11869,7 +11869,7 @@
             "en": "presidential republic",
             "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
-            "it": "Repubblica presidenziale",
+            "it": "presidential republic",
             "es": "Presidencialismo"
           }
         }
@@ -11881,7 +11881,7 @@
             "en": "Swahili",
             "pt": "Língua suaíli",
             "fr": "Swahili",
-            "it": "Lingua swahili",
+            "it": "Swahili",
             "es": "Idioma suajili"
           }
         },
@@ -11891,7 +11891,7 @@
             "en": "English",
             "pt": "Língua inglesa",
             "fr": "Anglais",
-            "it": "Lingua inglese",
+            "it": "English",
             "es": "Idioma inglés"
           }
         }
@@ -11917,7 +11917,7 @@
             "en": "Kenyan shilling",
             "pt": "Xelim queniano",
             "fr": "Shilling kényan",
-            "it": "Scellino keniota",
+            "it": "Kenyan shilling",
             "es": "Chelín keniano"
           },
           "isoCode": "KES"
@@ -11930,7 +11930,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -11974,7 +11974,7 @@
           "articleId": "Bishkek",
           "name": {
             "en": "Bishkek",
-            "pt": "Bisqueque",
+            "pt": "Bishkek",
             "fr": "Bichkek",
             "it": "Biškek",
             "es": "Biskek"
@@ -11986,7 +11986,7 @@
           "articleId": "Bishkek",
           "name": {
             "en": "Bishkek",
-            "pt": "Bisqueque",
+            "pt": "Bishkek",
             "fr": "Bichkek",
             "it": "Biškek",
             "es": "Biskek"
@@ -12001,7 +12001,7 @@
           "articleId": "Presidential_republic",
           "name": {
             "en": "presidential republic",
-            "pt": "Presidencialismo",
+            "pt": "presidential republic",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -12013,7 +12013,7 @@
           "articleId": "Kyrgyz_language",
           "name": {
             "en": "Kyrgyz",
-            "pt": "Língua quirguiz",
+            "pt": "Kyrgyz",
             "fr": "Kirghize",
             "it": "Lingua kirghisa",
             "es": "Idioma kirguís"
@@ -12025,7 +12025,7 @@
           "articleId": "Kyrgyz_people",
           "name": {
             "en": "Kyrgyz",
-            "pt": "Quirguizes",
+            "pt": "Kyrgyz",
             "fr": "Kirghizes",
             "it": "Kirghisi",
             "es": "Kirguises"
@@ -12049,7 +12049,7 @@
           "articleId": "Kyrgyzstani som",
           "name": {
             "en": "Kyrgyzstani som",
-            "pt": "Som (moeda quirguiz)",
+            "pt": "Kyrgyzstani som",
             "fr": "Som",
             "it": "Som kirghiso",
             "es": "Som kirguís"
@@ -12062,7 +12062,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -12294,7 +12294,7 @@
             "en": "English",
             "pt": "Língua inglesa",
             "fr": "Anglais",
-            "it": "Lingua inglese",
+            "it": "English",
             "es": "Idioma inglés"
           }
         },
@@ -12304,7 +12304,7 @@
             "en": "Gilbertese",
             "pt": "Língua gilbertesa",
             "fr": "Gilbertin",
-            "it": "Lingua gilbertese",
+            "it": "Gilbertese",
             "es": "Idioma gilbertés"
           }
         }
@@ -12330,7 +12330,7 @@
             "en": "Australian dollar",
             "pt": "Dólar australiano",
             "fr": "Dollar australien",
-            "it": "Dollaro australiano",
+            "it": "Australian dollar",
             "es": "Dólar australiano"
           },
           "isoCode": "AUD"
@@ -12343,7 +12343,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -12746,7 +12746,7 @@
             "en": "Korean",
             "pt": "Língua coreana",
             "fr": "Coréen",
-            "it": "Lingua coreana",
+            "it": "Korean",
             "es": "Idioma coreano"
           }
         }
@@ -12768,7 +12768,7 @@
             "en": "Korean",
             "pt": "Coreanos",
             "fr": "Coréens",
-            "it": "Coreani",
+            "it": "Korean",
             "es": "Pueblo coreano"
           }
         }
@@ -12782,7 +12782,7 @@
             "en": "Korean People's won",
             "pt": "Won norte-coreano",
             "fr": "Won nord-coréen",
-            "it": "Won nordcoreano",
+            "it": "Korean People's won",
             "es": "Won norcoreano"
           },
           "isoCode": "KPW"
@@ -12795,7 +12795,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -12973,7 +12973,7 @@
           "articleId": "Kuwait_City",
           "name": {
             "en": "Kuwait City",
-            "pt": "Kuwait (cidade)",
+            "pt": "Kuwait City",
             "fr": "Koweït (ville)",
             "it": "Al Kuwait",
             "es": "Kuwait (ciudad)"
@@ -12985,7 +12985,7 @@
           "articleId": "Kuwait_City",
           "name": {
             "en": "Kuwait City",
-            "pt": "Kuwait (cidade)",
+            "pt": "Kuwait City",
             "fr": "Koweït (ville)",
             "it": "Al Kuwait",
             "es": "Kuwait (ciudad)"
@@ -13000,7 +13000,7 @@
           "articleId": "Semi-constitutional_monarchy",
           "name": {
             "en": "semi-constitutional monarchy",
-            "pt": "Monarquia constitucional",
+            "pt": "semi-constitutional monarchy",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -13012,7 +13012,7 @@
           "articleId": "Modern_Standard_Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Árabe moderno padrão",
+            "pt": "Arabic",
             "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
@@ -13038,7 +13038,7 @@
           "articleId": "Kuwaiti dinar",
           "name": {
             "en": "Kuwaiti dinar",
-            "pt": "Dinar kuwaitiano",
+            "pt": "Kuwaiti dinar",
             "fr": "Dinar koweïtien",
             "it": "Dinaro kuwaitiano",
             "es": "Dinar kuwaití"
@@ -13051,7 +13051,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -13355,7 +13355,7 @@
           "articleId": "Beirut",
           "name": {
             "en": "Beirut",
-            "pt": "Beirut",
+            "pt": "Beirute",
             "fr": "Beyrouth",
             "it": "Beirut",
             "es": "Beirut"
@@ -13367,7 +13367,7 @@
           "articleId": "Beirut",
           "name": {
             "en": "Beirut",
-            "pt": "Beirut",
+            "pt": "Beirute",
             "fr": "Beyrouth",
             "it": "Beirut",
             "es": "Beirut"
@@ -13392,7 +13392,7 @@
           "articleId": "Confessionalism_(politics)",
           "name": {
             "en": "confessionalism",
-            "pt": "confessionalism",
+            "pt": "Confessionalismo",
             "fr": "Confessionnalisme (politique)",
             "it": "Confessionalismo",
             "es": "Confesionalismo"
@@ -13404,7 +13404,7 @@
           "articleId": "Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Língua árabe",
             "fr": "Arabe",
             "it": "Lingua araba",
             "es": "Idioma árabe"
@@ -13416,7 +13416,7 @@
           "articleId": "Lebanese_people",
           "name": {
             "en": "Lebanese",
-            "pt": "Lebanese",
+            "pt": "Libaneses",
             "fr": "Lebanese",
             "it": "Lebanese",
             "es": "Pueblo libanés"
@@ -13430,7 +13430,7 @@
           "articleId": "Lebanese pound",
           "name": {
             "en": "Lebanese pound",
-            "pt": "Lebanese pound",
+            "pt": "Libra libanesa",
             "fr": "Livre libanaise",
             "it": "Lira libanese",
             "es": "Libra libanesa"
@@ -13443,7 +13443,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -13453,7 +13453,7 @@
           "articleId": "Eastern_European_Time",
           "name": {
             "en": "EET",
-            "pt": "EET",
+            "pt": "Horário do Leste Europeu",
             "fr": "Heure normale d'Europe de l'Est",
             "it": "Eastern European Time",
             "es": "Hora de Europa Oriental"
@@ -13891,7 +13891,7 @@
           "articleId": "Monrovia",
           "name": {
             "en": "Monrovia",
-            "pt": "Monrovia",
+            "pt": "Monróvia",
             "fr": "Monrovia",
             "it": "Monrovia",
             "es": "Monrovia"
@@ -13903,7 +13903,7 @@
           "articleId": "Monrovia",
           "name": {
             "en": "Monrovia",
-            "pt": "Monrovia",
+            "pt": "Monróvia",
             "fr": "Monrovia",
             "it": "Monrovia",
             "es": "Monrovia"
@@ -13918,7 +13918,7 @@
           "articleId": "Presidential_system",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -13930,7 +13930,7 @@
           "articleId": "English_language",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Língua inglesa",
             "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
@@ -13942,7 +13942,7 @@
           "articleId": "Liberian_people",
           "name": {
             "en": "Liberian",
-            "pt": "Liberian",
+            "pt": "Demografia da Libéria",
             "fr": "Démographie du Liberia",
             "it": "Liberian",
             "es": "Demografía de Liberia"
@@ -13956,7 +13956,7 @@
           "articleId": "United States dollar",
           "name": {
             "en": "United States dollar",
-            "pt": "United States dollar",
+            "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
@@ -13967,7 +13967,7 @@
           "articleId": "Liberian dollar",
           "name": {
             "en": "Liberian dollar",
-            "pt": "Liberian dollar",
+            "pt": "Dólar liberiano",
             "fr": "Dollar libérien",
             "it": "Dollaro liberiano",
             "es": "Dólar liberiano"
@@ -13980,7 +13980,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -13990,7 +13990,7 @@
           "articleId": "Greenwich_Mean_Time",
           "name": {
             "en": "GMT",
-            "pt": "GMT",
+            "pt": "Tempo Médio de Greenwich",
             "fr": "Temps moyen de Greenwich",
             "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
@@ -14053,7 +14053,7 @@
           "articleId": "Parliamentary_constitutional_monarchy",
           "name": {
             "en": "parliamentary constitutional monarchy",
-            "pt": "parliamentary constitutional monarchy",
+            "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -14065,7 +14065,7 @@
           "articleId": "Sotho_language",
           "name": {
             "en": "Sesotho",
-            "pt": "Sesotho",
+            "pt": "Sesoto",
             "fr": "Sotho du Sud",
             "it": "Lingua sotho del sud",
             "es": "Sesoto"
@@ -14075,7 +14075,7 @@
           "articleId": "South_African_English",
           "name": {
             "en": "English",
-            "pt": "English",
+            "pt": "Inglês sul-africano",
             "fr": "Anglais sud-africain",
             "it": "English",
             "es": "Inglés sudafricano"
@@ -14101,7 +14101,7 @@
           "articleId": "Lesotho loti",
           "name": {
             "en": "Lesotho loti",
-            "pt": "Lesotho loti",
+            "pt": "Loti",
             "fr": "Loti",
             "it": "Loti lesothiano",
             "es": "Loti"
@@ -14112,7 +14112,7 @@
           "articleId": "South African rand",
           "name": {
             "en": "South African rand",
-            "pt": "South African rand",
+            "pt": "Rand",
             "fr": "Rand (monnaie)",
             "it": "Rand sudafricano",
             "es": "Rand sudafricano"
@@ -14125,7 +14125,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -14135,7 +14135,7 @@
           "articleId": "South_African_Standard_Time",
           "name": {
             "en": "SAST",
-            "pt": "SAST",
+            "pt": "Hora Legal da África do Sul",
             "fr": "Heure normale d'Afrique du Sud",
             "it": "SAST",
             "es": "SAST"
@@ -14501,7 +14501,7 @@
           "name": {
             "en": "Latvian",
             "pt": "Língua letã",
-            "fr": "Latvian",
+            "fr": "Letton",
             "it": "Lingua lettone",
             "es": "Idioma letón"
           }
@@ -14513,7 +14513,7 @@
           "name": {
             "en": "Latvian",
             "pt": "Letões",
-            "fr": "Latvian",
+            "fr": "Lettons",
             "it": "Lettoni",
             "es": "Pueblo letón"
           }
@@ -14538,7 +14538,7 @@
           "name": {
             "en": "€",
             "pt": "€",
-            "fr": "€",
+            "fr": "Symbole euro",
             "it": "Simbolo dell'euro",
             "es": "Símbolo del euro"
           },
@@ -14551,7 +14551,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -14561,7 +14561,7 @@
           "name": {
             "en": "EET",
             "pt": "Horário do Leste Europeu",
-            "fr": "EET",
+            "fr": "Heure normale d'Europe de l'Est",
             "it": "Eastern European Time",
             "es": "Hora de Europa Oriental"
           }
@@ -14596,7 +14596,7 @@
           "articleId": "Tripoli,_Libya",
           "name": {
             "en": "Tripoli",
-            "pt": "Tripoli",
+            "pt": "Trípoli",
             "fr": "Tripoli (Libye)",
             "it": "Tripoli",
             "es": "Trípoli"
@@ -14608,7 +14608,7 @@
           "articleId": "Tripoli,_Libya",
           "name": {
             "en": "Tripoli",
-            "pt": "Tripoli",
+            "pt": "Trípoli",
             "fr": "Tripoli (Libye)",
             "it": "Tripoli",
             "es": "Trípoli"
@@ -14623,7 +14623,7 @@
           "articleId": "Unitary_state",
           "name": {
             "en": "Unitary",
-            "pt": "Unitary",
+            "pt": "Estado unitário",
             "fr": "État unitaire",
             "it": "Stato unitario",
             "es": "Estado unitario"
@@ -14633,7 +14633,7 @@
           "articleId": "Provisional_government",
           "name": {
             "en": "provisional government",
-            "pt": "provisional government",
+            "pt": "Governo provisório",
             "fr": "Gouvernement provisoire",
             "it": "Governo provvisorio",
             "es": "Gobierno provisional"
@@ -14643,7 +14643,7 @@
           "articleId": "Government_of_National_Unity_(Libya)",
           "name": {
             "en": "GNU",
-            "pt": "GNU",
+            "pt": "Governo de Unidade Nacional (Líbia)",
             "fr": "Gouvernement Dbeibah",
             "it": "Governo di unità nazionale (Libia)",
             "es": "GNU"
@@ -14655,7 +14655,7 @@
           "articleId": "Modern_Standard_Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Árabe moderno padrão",
             "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
@@ -14667,7 +14667,7 @@
           "articleId": "Demographics_of_Libya",
           "name": {
             "en": "Libyan",
-            "pt": "Libyan",
+            "pt": "Demografia da Líbia",
             "fr": "Démographie de la Libye",
             "it": "Libyan",
             "es": "Demografía de Libia"
@@ -14681,7 +14681,7 @@
           "articleId": "Libyan dinar",
           "name": {
             "en": "Libyan dinar",
-            "pt": "Libyan dinar",
+            "pt": "Dinar líbio",
             "fr": "Dinar libyen",
             "it": "Dinaro libico",
             "es": "Dinar libio"
@@ -14694,7 +14694,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -14704,7 +14704,7 @@
           "articleId": "Eastern_European_Time",
           "name": {
             "en": "EET",
-            "pt": "EET",
+            "pt": "Horário do Leste Europeu",
             "fr": "Heure normale d'Europe de l'Est",
             "it": "Eastern European Time",
             "es": "Hora de Europa Oriental"
@@ -15644,7 +15644,7 @@
             "en": "Macedonian denar",
             "pt": "Dinar macedónio",
             "fr": "Denar macédonien",
-            "it": "Dinaro macedone",
+            "it": "Macedonian denar",
             "es": "Denar macedonio"
           },
           "isoCode": "MKD"
@@ -15657,7 +15657,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -15677,7 +15677,7 @@
             "en": "CET",
             "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
-            "it": "Central European Time",
+            "it": "CET",
             "es": "Hora central europea"
           }
         }
@@ -15702,7 +15702,7 @@
       "description": {
         "en": "Mali, officially the Republic of Mali, is a landlocked country in West Africa. It is the eighth-largest country in Africa and the 23rd largest country in the world, with an area of over 1,240,192 square kilometres.",
         "pt": "O Mali ou Máli, oficialmente República do Mali, é um país africano sem saída para o mar na África Ocidental. O Mali é o sétimo maior país da África. Limita-se com sete países, a norte pela Argélia, a leste pelo Níger, a oeste pela Mauritânia e Senegal e ao sul pela Costa do Marfim, Guiné e Burquina Fasso. O Mali tem uma área de 1 240 000 km² e a sua população é estimada em cerca de 24,5 milhões de habitantes. A capital do país é Bamaco.",
-        "fr": "Le Mali, en forme longue la république du Mali, est un État d'Afrique de l'Ouest, frontalier de la Mauritanie au nord-ouest, de l'Algérie au nord-est, du Niger à l'est, du Burkina Faso au sud-est, de la Côte d'Ivoire au sud, de la Guinée au sud-ouest et du Sénégal à l'ouest. Sa capitale est Bamako, dont l'aire urbaine compte 2,529 millions d'habitants en 2019. Le pays fait partie de l'Union africaine mais est depuis 2021 suspendu de cette organisation en raison de la dictature militaire.",
+        "fr": "Le Mali l'un des plus beau pays d'Afrique, en forme longue la république du Mali, est un État d'Afrique de l'Ouest, frontalier de la Mauritanie au nord-ouest, de l'Algérie au nord-est, du Niger à l'est, du Burkina Faso au sud-est, de la Côte d'Ivoire au sud, de la Guinée au sud-ouest et du Sénégal à l'ouest. Sa capitale est Bamako, dont l'aire urbaine compte 2,529 millions d'habitants en 2019. Le pays fait partie de l'Union africaine mais est depuis 2021 suspendu de cette organisation en raison de la dictature militaire.",
         "it": "Il Mali, ufficialmente Repubblica del Mali, è uno Stato situato nell'Africa occidentale e senza sbocco al mare. È l'ottavo Stato più esteso dell'Africa, con un'area di oltre 1240000 km²; la popolazione ammonta a 21,3 milioni di abitanti, il 67% dei quali veniva stimato essere al di sotto dei 25 anni nel 2017. A nord confina con l'Algeria, a est con il Niger, a sud con il Burkina Faso e la Costa d'Avorio, a sud-ovest con la Guinea e a ovest con il Senegal e la Mauritania; la capitale è Bamako, che è anche la maggiore città del Paese. Lo Stato consiste di otto regioni, e il suo confine settentrionale raggiunge le profondità del deserto del Sahara, mentre la parte meridionale del Paese è compresa nella savana sudanese, attraverso la quale scorrono sia il fiume Niger sia il fiume Senegal, e dove vive la maggior parte degli abitanti. L'economia nazionale è centrata sull'agricoltura e l'estrazione mineraria: una delle principali risorse naturali del Mali è l'oro, di cui è il terzo produttore nel continente africano; esporta anche il sale.",
         "es": "Mali o Malí, cuyo nombre oficial es República de Mali o República de Malí, es un Estado sin litoral situado en África Occidental. Su capital y ciudad más poblada es Bamako."
       },
@@ -18787,7 +18787,7 @@
           "articleId": "Panama_City",
           "name": {
             "en": "Panama City",
-            "pt": "Panama City",
+            "pt": "Cidade do Panamá",
             "fr": "Panama (ville)",
             "it": "Panama (città)",
             "es": "Ciudad de Panamá"
@@ -18799,7 +18799,7 @@
           "articleId": "Panama_City",
           "name": {
             "en": "Panama City",
-            "pt": "Panama City",
+            "pt": "Cidade do Panamá",
             "fr": "Panama (ville)",
             "it": "Panama (città)",
             "es": "Ciudad de Panamá"
@@ -18814,7 +18814,7 @@
           "articleId": "Presidential_republic",
           "name": {
             "en": "presidential republic",
-            "pt": "presidential republic",
+            "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
@@ -18852,7 +18852,7 @@
           "articleId": "Panamanian balboa",
           "name": {
             "en": "Balboa",
-            "pt": "Balboa",
+            "pt": "Balboa (moeda)",
             "fr": "Balboa (monnaie)",
             "it": "Balboa panamense",
             "es": "Balboa (moneda de Panamá)"
@@ -18863,7 +18863,7 @@
           "articleId": "United States dollar",
           "name": {
             "en": "United States dollar",
-            "pt": "United States dollar",
+            "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
@@ -18876,7 +18876,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -18886,7 +18886,7 @@
           "articleId": "Eastern_Time_Zone",
           "name": {
             "en": "EST",
-            "pt": "EST",
+            "pt": "Zona de Tempo Oriental",
             "fr": "Heure de l'Est",
             "it": "Ora standard orientale",
             "es": "Horario del este de América del Norte"
@@ -19415,7 +19415,7 @@
             "pt": "República federal",
             "fr": "Federal",
             "it": "Repubblica federale",
-            "es": "Federal"
+            "es": "República federal"
           }
         },
         {
@@ -19425,7 +19425,7 @@
             "pt": "República islâmica",
             "fr": "République islamique",
             "it": "Repubblica islamica",
-            "es": "Islamic republic"
+            "es": "República islámica"
           }
         }
       ],
@@ -19459,7 +19459,7 @@
             "pt": "Pakistani",
             "fr": "Pakistani",
             "it": "Pakistani",
-            "es": "Pakistani"
+            "es": "Pakistaníes"
           }
         }
       ],
@@ -19473,7 +19473,7 @@
             "pt": "Rupia do Paquistão",
             "fr": "Roupie pakistanaise",
             "it": "Rupia pakistana",
-            "es": "Pakistani rupee"
+            "es": "Rupia pakistaní"
           },
           "isoCode": "PKR"
         }
@@ -19486,7 +19486,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -19663,7 +19663,7 @@
           "articleId": "Jerusalem",
           "name": {
             "en": "Jerusalem",
-            "pt": "Jerusalem",
+            "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
             "es": "Jerusalén"
@@ -19673,7 +19673,7 @@
           "articleId": "Status_of_Jerusalem",
           "name": {
             "en": "limited recognition",
-            "pt": "limited recognition",
+            "pt": "Posições sobre Jerusalém",
             "fr": "limited recognition",
             "it": "Status di Gerusalemme",
             "es": "limited recognition"
@@ -19683,7 +19683,7 @@
           "articleId": "Ramallah",
           "name": {
             "en": "Ramallah",
-            "pt": "Ramallah",
+            "pt": "Ramala",
             "fr": "Ramallah",
             "it": "Ramallah",
             "es": "Ramala"
@@ -19710,7 +19710,7 @@
           "articleId": "Semi-presidential_republic",
           "name": {
             "en": "semi-presidential republic",
-            "pt": "semi-presidential republic",
+            "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
             "it": "Repubblica semipresidenziale",
             "es": "Semipresidencialismo"
@@ -19722,7 +19722,7 @@
           "articleId": "Arabic",
           "name": {
             "en": "Arabic",
-            "pt": "Arabic",
+            "pt": "Língua árabe",
             "fr": "Arabe",
             "it": "Lingua araba",
             "es": "Idioma árabe"
@@ -19734,7 +19734,7 @@
           "articleId": "Palestinians",
           "name": {
             "en": "Palestinian",
-            "pt": "Palestinian",
+            "pt": "Palestinos",
             "fr": "Palestiniens",
             "it": "Palestinesi",
             "es": "Pueblo palestino"
@@ -19748,7 +19748,7 @@
           "articleId": "Israeli new shekel",
           "name": {
             "en": "Israeli new shekel",
-            "pt": "Israeli new shekel",
+            "pt": "Novo shekel israelense",
             "fr": "Shekel",
             "it": "Nuovo shekel israeliano",
             "es": "Nuevo séquel"
@@ -19759,7 +19759,7 @@
           "articleId": "Jordanian dinar",
           "name": {
             "en": "Jordanian dinar",
-            "pt": "Jordanian dinar",
+            "pt": "Dinar jordano",
             "fr": "Dinar jordanien",
             "it": "Dinaro giordano",
             "es": "Dinar jordano"
@@ -19770,7 +19770,7 @@
           "articleId": "Egyptian pound",
           "name": {
             "en": "Egyptian pound",
-            "pt": "Egyptian pound",
+            "pt": "Libra egípcia",
             "fr": "Livre égyptienne",
             "it": "Sterlina egiziana",
             "es": "Libra egipcia"
@@ -19783,7 +19783,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -19968,7 +19968,7 @@
           "name": {
             "en": "Koror",
             "pt": "Koror",
-            "fr": "Koror",
+            "fr": "Koror (ville)",
             "it": "Koror (città)",
             "es": "Koror (ciudad)"
           }
@@ -19983,7 +19983,7 @@
           "name": {
             "en": "presidential republic",
             "pt": "Presidencialismo",
-            "fr": "presidential republic",
+            "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
           }
@@ -19993,7 +19993,7 @@
           "name": {
             "en": "non-partisan democracy",
             "pt": "Democracia não partidária",
-            "fr": "non-partisan democracy",
+            "fr": "Démocratie non partisane",
             "it": "non-partisan democracy",
             "es": "Democracia sin partidos"
           }
@@ -20005,7 +20005,7 @@
           "name": {
             "en": "Palauan",
             "pt": "Língua palauense",
-            "fr": "Palauan",
+            "fr": "Palau (langue)",
             "it": "Lingua palauana",
             "es": "Idioma palauano"
           }
@@ -20015,7 +20015,7 @@
           "name": {
             "en": "English",
             "pt": "Língua inglesa",
-            "fr": "English",
+            "fr": "Anglais",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
           }
@@ -20027,7 +20027,7 @@
           "name": {
             "en": "Palauan",
             "pt": "Palauan",
-            "fr": "Palauan",
+            "fr": "Micronésiens",
             "it": "Palauan",
             "es": "Palauan"
           }
@@ -20041,7 +20041,7 @@
           "name": {
             "en": "United States dollar",
             "pt": "Dólar dos Estados Unidos",
-            "fr": "United States dollar",
+            "fr": "Dollar américain",
             "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
           },
@@ -20054,7 +20054,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -21394,7 +21394,7 @@
           "name": {
             "en": "military junta",
             "pt": "Junta militar",
-            "fr": "Junte militaire",
+            "fr": "military junta",
             "it": "Giunta militare",
             "es": "Junta militar"
           }
@@ -21406,7 +21406,7 @@
           "name": {
             "en": "Arabic",
             "pt": "Árabe moderno padrão",
-            "fr": "Arabe standard moderne",
+            "fr": "Arabic",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
           }
@@ -21416,7 +21416,7 @@
           "name": {
             "en": "English",
             "pt": "Língua inglesa",
-            "fr": "Anglais",
+            "fr": "English",
             "it": "Lingua inglese",
             "es": "Idioma inglés"
           }
@@ -21428,7 +21428,7 @@
           "name": {
             "en": "Sudanese",
             "pt": "Demografia do Sudão",
-            "fr": "Démographie du Soudan",
+            "fr": "Sudanese",
             "it": "Sudanese",
             "es": "Demografía de Sudán"
           }
@@ -21442,7 +21442,7 @@
           "name": {
             "en": "Sudanese pound",
             "pt": "Libra sudanesa",
-            "fr": "Livre soudanaise",
+            "fr": "Sudanese pound",
             "it": "Sterlina sudanese",
             "es": "Libra sudanesa"
           },
@@ -21455,7 +21455,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "Temps universel coordonné",
+            "fr": "UTC",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -21465,7 +21465,7 @@
           "name": {
             "en": "CAT",
             "pt": "Horário da África Central",
-            "fr": "Heure d'Afrique centrale",
+            "fr": "CAT",
             "it": "CAT",
             "es": "CAT"
           }
@@ -21500,7 +21500,7 @@
           "articleId": "Stockholm",
           "name": {
             "en": "Stockholm",
-            "pt": "Estocolmo",
+            "pt": "Stockholm",
             "fr": "Stockholm",
             "it": "Stoccolma",
             "es": "Estocolmo"
@@ -21512,7 +21512,7 @@
           "articleId": "Stockholm",
           "name": {
             "en": "Stockholm",
-            "pt": "Estocolmo",
+            "pt": "Stockholm",
             "fr": "Stockholm",
             "it": "Stoccolma",
             "es": "Estocolmo"
@@ -21527,7 +21527,7 @@
           "articleId": "Constitutional_monarchy",
           "name": {
             "en": "constitutional monarchy",
-            "pt": "Monarquia constitucional",
+            "pt": "constitutional monarchy",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -21539,7 +21539,7 @@
           "articleId": "Swedish_language",
           "name": {
             "en": "Swedish",
-            "pt": "Língua sueca",
+            "pt": "Swedish",
             "fr": "Suédois",
             "it": "Lingua svedese",
             "es": "Idioma sueco"
@@ -21551,7 +21551,7 @@
           "articleId": "Swedes",
           "name": {
             "en": "Swede",
-            "pt": "Suecos",
+            "pt": "Swede",
             "fr": "Suédois (peuple)",
             "it": "Svedesi",
             "es": "Pueblo sueco"
@@ -21565,7 +21565,7 @@
           "articleId": "Swedish krona",
           "name": {
             "en": "Swedish krona",
-            "pt": "Coroa sueca",
+            "pt": "Swedish krona",
             "fr": "Couronne suédoise",
             "it": "Corona svedese",
             "es": "Corona sueca"
@@ -21578,7 +21578,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -21588,7 +21588,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "Horário da Europa Central",
+            "pt": "CET",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -22583,7 +22583,7 @@
           "name": {
             "en": "assembly-independent",
             "pt": "Lista de países por sistema de governo",
-            "fr": "Liste de pays par forme de gouvernement",
+            "fr": "assembly-independent",
             "it": "Stati per forma di governo",
             "es": "assembly-independent"
           }
@@ -22621,7 +22621,7 @@
           "name": {
             "en": "Surinamese dollar",
             "pt": "Dólar do Suriname",
-            "fr": "Dollar du Suriname",
+            "fr": "Surinamese dollar",
             "it": "Dollaro surinamese",
             "es": "Dólar surinamés"
           },
@@ -22634,7 +22634,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "Temps universel coordonné",
+            "fr": "UTC",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -22644,7 +22644,7 @@
           "name": {
             "en": "SRT",
             "pt": "UTC−3",
-            "fr": "UTC−03:00",
+            "fr": "SRT",
             "it": "UTC-3",
             "es": "UTC-03:00"
           }
@@ -23689,7 +23689,7 @@
             "pt": "Monarquia constitucional",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
-            "es": "parliamentary constitutional monarchy"
+            "es": "Monarquía constitucional"
           }
         }
       ],
@@ -23701,7 +23701,7 @@
             "pt": "Língua tailandesa",
             "fr": "Thaï",
             "it": "Lingua thailandese",
-            "es": "Thai"
+            "es": "Idioma tailandés"
           }
         }
       ],
@@ -23713,7 +23713,7 @@
             "pt": "Tai (grupo étnico)",
             "fr": "Thaï (peuple)",
             "it": "Thai",
-            "es": "Thai"
+            "es": "Tailandeses"
           }
         }
       ],
@@ -23727,7 +23727,7 @@
             "pt": "Baht",
             "fr": "Baht",
             "it": "Baht thailandese",
-            "es": "Thai baht"
+            "es": "Bat tailandés"
           },
           "isoCode": "THB"
         }
@@ -23740,7 +23740,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -23966,7 +23966,7 @@
             "en": "semi-presidential republic",
             "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
-            "it": "semi-presidential republic",
+            "it": "Repubblica semipresidenziale",
             "es": "Semipresidencialismo"
           }
         }
@@ -23988,7 +23988,7 @@
             "en": "Tetun",
             "pt": "Língua tétum",
             "fr": "Tétoum",
-            "it": "Tetun",
+            "it": "Lingua tetum",
             "es": "Idioma tetun"
           }
         }
@@ -24034,7 +24034,7 @@
             "en": "United States dollar",
             "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
-            "it": "United States dollar",
+            "it": "Dollaro statunitense",
             "es": "Dólar estadounidense"
           },
           "isoCode": "USD"
@@ -24045,7 +24045,7 @@
             "en": "Timor-Leste centavo",
             "pt": "Centavos de Timor-Leste",
             "fr": "Timor-Leste centavo",
-            "it": "Timor-Leste centavo",
+            "it": "Centavo est timorense",
             "es": "Centavos de dólar de Timor Oriental"
           },
           "isoCode": "USD"
@@ -24058,7 +24058,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "UTC",
+            "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
         },

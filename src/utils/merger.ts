@@ -19,10 +19,13 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
   // 1. Merge String Fields (Name, Description)
   (['name', 'description'] as LocalizedFieldKey[]).forEach(field => {
     const newVal = newData[field] || {};
+    const filteredNewVal = Object.fromEntries(
+      Object.entries(newVal).filter(([_, v]) => v !== null && v !== undefined)
+    );
     country[field] = {
       ...getEmptyLocalizedField(),
       ...(country[field] || getEmptyLocalizedField()),
-      ...newVal
+      ...filteredNewVal
     };
   });
 

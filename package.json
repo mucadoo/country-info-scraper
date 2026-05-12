@@ -1,6 +1,6 @@
 {
   "name": "@mucadoo/wiki-geo-data",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "browser": {
     "fs": false,
     "path": false,
@@ -34,7 +34,9 @@
   },
   "typesVersions": {
     "*": {
-      "*": ["dist/*"]
+      "*": [
+        "dist/*"
+      ]
     }
   },
   "scripts": {

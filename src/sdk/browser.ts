@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { CountrySchema, Country } from '../types/country.js';
-import { WikiGeoOptions, CountryIndexSchema } from './types.js';
+import { WikiGeoOptions, CountryIndexSchema, WikiGeoResponse, CountryIndex } from './types.js';
 
 export * from './types.js';
 
@@ -21,43 +21,67 @@ export class WikiGeoClient {
         throw new Error(`Local data not found. Please provide 'localData' in constructor.`);
     }
 
-    async getFullDatabase(): Promise<Country[]> {
+    async getFullDatabase(): Promise<WikiGeoResponse<Country[]>> {
         if (this.dataSource === 'local') {
-            return await this.getLocalData();
+            return {
+                data: await this.getLocalData(),
+                source: 'local',
+                timestamp: new Date().toISOString()
+            };
         }
 
         const response = await fetch(`${this.baseUrl}api/v1/all.json`);
         if (!response.ok) throw new Error(`Failed to fetch full database: ${response.statusText}`);
 
         const data = await response.json();
-        return z.array(CountrySchema).parse(data);
+        return {
+            data: z.array(CountrySchema).parse(data),
+            source: 'remote',
+            timestamp: new Date().toISOString()
+        };
     }
 
-    async listCountries() {
+    async listCountries(): Promise<WikiGeoResponse<CountryIndex>> {
         if (this.dataSource === 'local') {
             const data = await this.getLocalData();
-            return CountryIndexSchema.parse(data);
+            return {
+                data: CountryIndexSchema.parse(data),
+                source: 'local',
+                timestamp: new Date().toISOString()
+            };
         }
 
         const response = await fetch(`${this.baseUrl}api/v1/index.json`);
         if (!response.ok) throw new Error(`Failed to fetch country list: ${response.statusText}`);
 
         const jsonData = await response.json();
-        return CountryIndexSchema.parse(jsonData);
+        return {
+            data: CountryIndexSchema.parse(jsonData),
+            source: 'remote',
+            timestamp: new Date().toISOString()
+        };
     }
 
-    async getCountry(isoCode: string): Promise<Country> {
+    async getCountry(isoCode: string): Promise<WikiGeoResponse<Country>> {
         if (this.dataSource === 'local') {
             const data = await this.getLocalData();
             const country = data.find(c => c.isoCode === isoCode.toUpperCase());
             if (!country) throw new Error(`Country ${isoCode} not found in local data`);
-            return CountrySchema.parse(country);
+            return {
+                data: CountrySchema.parse(country),
+                source: 'local',
+                timestamp: new Date().toISOString()
+            };
         }
 
         const response = await fetch(`${this.baseUrl}api/v1/countries/${isoCode.toUpperCase()}.json`);
         if (!response.ok) throw new Error(`Failed to fetch country ${isoCode}: ${response.statusText}`);
 
         const jsonData = await response.json();
-        return CountrySchema.parse(jsonData);
+        return {
+            data: CountrySchema.parse(jsonData),
+            source: 'remote',
+            timestamp: new Date().toISOString()
+        };
     }
 }

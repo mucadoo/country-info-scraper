@@ -9,6 +9,12 @@ export interface WikiGeoOptions {
     localData?: Country[];
 }
 
+export interface WikiGeoResponse<T> {
+    data: T;
+    source: 'remote' | 'local';
+    timestamp: string;
+}
+
 export const CountryIndexSchema = z.array(
     CountrySchema.pick({ isoCode: true, name: true, flagUrl: true })
 );

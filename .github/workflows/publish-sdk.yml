@@ -59,18 +59,20 @@ jobs:
       - name: Fetch Data from Data Branch
         run: |
           git fetch origin data
-          # 1. Checkout files from the ROOT of the data branch
-          git checkout origin/data -- sovereign-states.json sovereign-states.min.json schema.json DATA_MODEL.md sovereign-states.csv
-          
-          # 2. Create the data directory
           mkdir -p data
           
-          # 3. Move the files into the directory where the SDK expects them
-          mv sovereign-states.json data/sovereign-states.json
-          mv sovereign-states.min.json data/sovereign-states.min.json
-          mv schema.json data/schema.json
-          mv DATA_MODEL.md data/DATA_MODEL.md
-          mv sovereign-states.csv data/sovereign-states.csv
+          # List of files we want from the data branch
+          FILES=("sovereign-states.json" "sovereign-states.min.json" "schema.json" "DATA_MODEL.md" "sovereign-states.csv")
+          
+          for file in "${FILES[@]}"; do
+            echo "Checking out $file..."
+            # Force checkout from origin/data to the root, then move to data/ folder
+            if git checkout origin/data -- "$file"; then
+              mv "$file" "data/$file"
+            else
+              echo "Warning: Could not find $file on data branch."
+            fi
+          done
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

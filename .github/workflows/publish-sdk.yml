@@ -61,17 +61,12 @@ jobs:
           git fetch origin data
           mkdir -p data
           
-          # List of files we want from the data branch
+          # Use 'git show' to get the file content without affecting the git index
           FILES=("sovereign-states.json" "sovereign-states.min.json" "schema.json" "DATA_MODEL.md" "sovereign-states.csv")
           
           for file in "${FILES[@]}"; do
-            echo "Checking out $file..."
-            # Force checkout from origin/data to the root, then move to data/ folder
-            if git checkout origin/data -- "$file"; then
-              mv "$file" "data/$file"
-            else
-              echo "Warning: Could not find $file on data branch."
-            fi
+            echo "Extracting $file from data branch..."
+            git show origin/data:"$file" > "data/$file" || echo "Warning: $file not found"
           done
 
       - name: Set up Node.js
@@ -93,7 +88,9 @@ jobs:
 
       - name: Version Patch
         run: |
-          npm version patch -m "chore: release v%s [skip ci]"
+          # The --force flag ensures npm proceeds even if there are 
+          # local-only files (like our fetched data)
+          npm version patch -m "chore: release v%s [skip ci]" --force
 
       - name: Publish to NPM
         run: |

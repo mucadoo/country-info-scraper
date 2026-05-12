@@ -33,6 +33,12 @@ jobs:
         if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         uses: actions/checkout@v4
 
+      - name: Fetch Data from Data Branch
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
+        run: |
+          git fetch origin data
+          git checkout origin/data -- data/sovereign-states.json data/sovereign-states.min.json data/schema.json data/DATA_MODEL.md
+
       - name: Set up Node.js
         if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         uses: actions/setup-node@v4

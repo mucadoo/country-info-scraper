@@ -52,6 +52,27 @@ const HEADER_MAPPINGS: Record<string, Record<string, string[]>> = {
     it: ['valuta'], 
     es: ['moneda'] 
   },
+  timeZone: {
+    en: ['time zone'],
+    pt: ['fuso horário'],
+    fr: ['fuseau horaire'],
+    it: ['fuso orario'],
+    es: ['huso horario']
+  },
+  callingCode: {
+    en: ['calling code'],
+    pt: ['código de chamada', 'ddi'],
+    fr: ['indicatif téléphonique'],
+    it: ['prefisso tel.'],
+    es: ['prefijo telefónico']
+  },
+  internetTld: {
+    en: ['internet tld'],
+    pt: ['tld na internet', 'domínio de topo'],
+    fr: ['domaine internet'],
+    it: ['dominio di primo livello'],
+    es: ['dominio de internet']
+  }
 };
 
 export class InfoboxParser {
@@ -95,7 +116,7 @@ export class InfoboxParser {
     });
 
     if (lang === 'en') {
-        if (!country.densityKm2 && country.population && country.areaKm2) {
+        if (!country.densityKm2 && country.population && country.areaKm2 && country.areaKm2 > 0) {
           country.densityKm2 = country.population / country.areaKm2;
         }
     }
@@ -147,7 +168,7 @@ export class InfoboxParser {
           isoCode: item.isoCode || null
         };
       });
-    } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
+    } else if (matches('timeZone')) {
       const tz = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
       country.timeZone = tz.map(item => {
         const name = getEmptyLocalizedField();
@@ -157,12 +178,13 @@ export class InfoboxParser {
           name
         };
       });
+    } else if (matches('callingCode')) {
       const dataClone = data.clone();
       dataClone.find('sup, .reference').remove();
       country.callingCode = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);
-    } else if (lang === 'en' && headerText.includes('ISO 3166 code')) {
+    } else if (lang === 'en' && headerText.toLowerCase().includes('iso 3166 code')) {
       country.isoCode = ExtractionUtils.cleanText(data);
-    } else if (lang === 'en' && lowerHeaderText.includes('internet tld')) {
+    } else if (matches('internetTld')) {
       const tldClone = data.clone();
       tldClone.find('sup, .reference, style, script, link, meta').remove();
       country.internetTld = tldClone.text().split('[')[0].trim().split(/[;,]/).map(t => t.trim()).filter(t => t);

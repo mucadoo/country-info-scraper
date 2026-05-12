@@ -25,14 +25,51 @@ export class ExtractionUtils {
       .replace(/&nbsp;/g, ' ')
       .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ');
 
-    // 1. Try to find km2 specifically, allowing commas or spaces as separators
-    const kmPattern = /([0-9]{1,3}(?:[ ,.][0-9]{3})+(?:\.\d+)?)\s*km2?/;
-    const kmMatch = normalized.match(kmPattern);
-    if (kmMatch) return kmMatch[1].replace(/[ ,.]/g, (m) => m === '.' && normalized.includes(',') ? '.' : ''); // Handle . as thousands separator unless decimal exists
+    // 1. Try to find the numeric part before km2.
+    // We look for a number that might contain spaces, commas, or dots.
+    const kmMatch = normalized.match(/([0-9][0-9,.\s]*)\s*km2?/);
+    if (kmMatch) {
+      let numStr = kmMatch[1].trim();
+      
+      const hasComma = numStr.includes(',');
+      const hasDot = numStr.includes('.');
+      const hasSpace = numStr.includes(' ');
 
-    const kmPattern2 = /([0-9]+(?:\.\d+)?)\s*km2?/;
-    const kmMatch2 = normalized.match(kmPattern2);
-    if (kmMatch2) return kmMatch2[1];
+      if (hasSpace) {
+        // Strip spaces, check if it's thousands or decimal
+        const stripped = numStr.replace(/\s/g, '');
+        if (stripped.includes(',') || stripped.includes('.')) {
+          numStr = stripped;
+        }
+      }
+
+      if (hasComma && hasDot) {
+        const lastComma = numStr.lastIndexOf(',');
+        const lastDot = numStr.lastIndexOf('.');
+        if (lastComma > lastDot) {
+          // 1.234,56 -> comma is decimal
+          return numStr.replace(/[.\s]/g, '').replace(',', '.');
+        } else {
+          // 1,234.56 -> dot is decimal
+          return numStr.replace(/[, \s]/g, '');
+        }
+      } else if (hasComma) {
+        const parts = numStr.split(',');
+        // If it looks like thousands (e.g., 1,234 or 1,234,567)
+        if (parts.length > 2 || (parts.length === 2 && parts[1].length === 3)) {
+          return numStr.replace(/,/g, '');
+        }
+        // Otherwise assume decimal (e.g., 1,23)
+        return numStr.replace(',', '.');
+      } else if (hasDot) {
+        const parts = numStr.split('.');
+        if (parts.length > 2 || (parts.length === 2 && parts[1].length === 3)) {
+          return numStr.replace(/\./g, '');
+        }
+        return numStr;
+      }
+      return numStr.replace(/\s/g, '');
+    }
 
     const fallbackPattern = /([0-9]{1,3}(?:[., ][0-9]{3})*(?:\.\d+)?)(?:\s*sq\s*mi|\s*<|\s*$)/;
     const fallbackMatch = normalized.match(fallbackPattern);
@@ -52,8 +89,15 @@ export class ExtractionUtils {
     const rangePattern = /([0-9,.]+)\s*[–-]\s*([0-9,.]+)\s*(million|billion)?(?=\s*(?:\(|\s|$))/i;
     const rangeMatch = normalized.match(rangePattern);
     if (rangeMatch) {
-      const low = parseFloat(rangeMatch[1].replace(/,/g, ''));
-      const high = parseFloat(rangeMatch[2].replace(/,/g, ''));
+      const parseVal = (s: string) => {
+        const clean = s.includes(',') && s.includes('.') 
+          ? (s.lastIndexOf(',') > s.lastIndexOf('.') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/,/g, ''))
+          : (s.includes(',') ? (s.split(',')[1]?.length === 3 ? s.replace(/,/g, '') : s.replace(',', '.')) : s);
+        return parseFloat(clean);
+      };
+
+      const low = parseVal(rangeMatch[1]);
+      const high = parseVal(rangeMatch[2]);
       let average = (low + high) / 2;
 
       const multiplier = rangeMatch[3]?.toLowerCase();
@@ -67,7 +111,12 @@ export class ExtractionUtils {
     const singlePattern = /([0-9,.]+)\s*(million|billion)(?=\s*(?:\(|\s|$))/i;
     const singleMatch = normalized.match(singlePattern);
     if (singleMatch) {
-      let val = parseFloat(singleMatch[1].replace(/,/g, ''));
+      const s = singleMatch[1];
+      const clean = s.includes(',') && s.includes('.') 
+        ? (s.lastIndexOf(',') > s.lastIndexOf('.') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/,/g, ''))
+        : (s.includes(',') ? (s.split(',')[1]?.length === 3 ? s.replace(/,/g, '') : s.replace(',', '.')) : s);
+      
+      let val = parseFloat(clean);
       const multiplier = singleMatch[2].toLowerCase();
       if (multiplier === 'million') val *= 1_000_000;
       else if (multiplier === 'billion') val *= 1_000_000_000;

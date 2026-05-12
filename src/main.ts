@@ -1,3 +1,4 @@
+import { DataValidator } from './utils/validator.js';
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
 import { DescriptionParser } from './parsers/description.js';
@@ -147,7 +148,7 @@ async function run() {
   
   const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-  // Normalize all countries
+  // Normalize and validate all countries
   const countries = rawCountries
     .sort((a, b) => (a.isoCode || '').localeCompare(b.isoCode || ''))
     .map(country => {
@@ -155,7 +156,7 @@ async function run() {
       normalized.callingCode = normalized.callingCode || [];
       normalized.internetTld = normalized.internetTld || [];
       const { isoCode, ...rest } = normalized;
-      return { isoCode, ...rest };
+      return DataValidator.validate({ isoCode, ...rest });
     });
 
   // 1. Generate standard full files

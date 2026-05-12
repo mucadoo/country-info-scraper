@@ -3,9 +3,9 @@ import path from 'path';
 import * as cheerio from 'cheerio';
 import { CountryParser } from '../src/parsers/country-parser.js';
 import { DescriptionParser } from '../src/parsers/description.js';
-import { Country } from '../src/types/country.js';
 import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
 import { mergeCountryData } from '../src/utils/merger.js';
+import { getEmptyCountry, getEmptyLocalizedField, Country } from '../src/types/country.js';
 
 const SNAPSHOT_BASE = 'tests/snapshots';
 WikipediaAPI.useSnapshots(path.join(SNAPSHOT_BASE, 'translations.json'));
@@ -13,10 +13,7 @@ WikipediaAPI.useSnapshots(path.join(SNAPSHOT_BASE, 'translations.json'));
 type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 async function debugFlow(countryName: string) {
-  let mergedResult: Country = {
-    name: {}, description: {}, capital: [], largestCity: [],
-    government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
-  };
+  let mergedResult: Country = getEmptyCountry();
 
   console.log(`\n--- Debugging Flow for: ${countryName} ---`);
 
@@ -43,12 +40,14 @@ async function debugFlow(countryName: string) {
     ['pt', 'fr', 'it', 'es']
   );
   
-  const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...countryData };
+  const nameLoc = getEmptyLocalizedField();
+  nameLoc.en = countryName;
+  const countryDataEn: Country = { ...getEmptyCountry(), ...countryData, name: nameLoc };
   
   // Apply translations
   ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
     const key = field as LocalizedArrayFieldKey;
-    const items = (localizedDataEn[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
+    const items = (countryDataEn[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
     items.forEach(item => {
       const articleId = item.articleId?.replace(/_/g, ' ');
       ['pt', 'fr', 'it', 'es'].forEach(l => {
@@ -62,7 +61,7 @@ async function debugFlow(countryName: string) {
     });
   });
 
-  mergedResult = mergeCountryData(JSON.stringify(mergedResult), localizedDataEn);
+  mergedResult = mergeCountryData(JSON.stringify(mergedResult), countryDataEn);
 
   // 2. Localized Passes
   for (const lang of ['pt', 'fr', 'it', 'es']) {
@@ -71,10 +70,12 @@ async function debugFlow(countryName: string) {
 
     const html = fs.readFileSync(filePath, 'utf-8');
     const $ = cheerio.load(html);
-    const localizedData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
+    const nameLoc = getEmptyLocalizedField();
+    nameLoc[lang as keyof typeof nameLoc] = $('h1#firstHeading').text().trim();
+    const localizedData: Partial<Country> = { name: nameLoc };
     DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], localizedData, lang);
     
-    mergedResult = mergeCountryData(JSON.stringify(mergedResult), localizedData);
+    mergedResult = mergeCountryData(JSON.stringify(mergedResult), localizedData as Country);
   }
 
   console.log('\n--- Final Merged Record ---');

@@ -1,75 +1,73 @@
-import { Country, CountrySchema } from '../types/country.js';
+import { Country, CountrySchema, getEmptyCountry, getEmptyLocalizedField } from '../types/country.js';
 
 type LocalizedFieldKey = 'name' | 'description';
 type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 export const mergeCountryData = (existingJson: string | null, newData: Partial<Country>): Country => {
+  const empty = getEmptyCountry();
   let existing: Country;
   try {
-    existing = existingJson ? CountrySchema.parse(JSON.parse(existingJson)) : {
-      name: {}, description: {}, capital: [], largestCity: [],
-      government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
-    } as Country;
+    existing = existingJson ? CountrySchema.parse(JSON.parse(existingJson)) : empty;
   } catch {
-    // Fallback if parsing fails (e.g. old schema or invalid data)
-    existing = {
-      name: {}, description: {}, capital: [], largestCity: [],
-      government: [], officialLanguage: [], demonym: [], currency: [], timeZone: []
-    } as Country;
+    existing = empty;
   }
   
-  const country = { ...existing };
+  const country: Country = { ...empty, ...existing };
   
-  // Merge fields
-  const localizedStringFields: LocalizedFieldKey[] = ['name', 'description'];
-  const localizedArrayFields: LocalizedArrayFieldKey[] = ['capital', 'largestCity', 'officialLanguage', 'demonym', 'currency', 'government', 'timeZone'];
-  
-  localizedStringFields.forEach(field => {
-    const newVal = newData[field] as Record<string, string | null | undefined> | undefined;
-    if (newVal) {
-      country[field] = { ...(country[field] || {}), ...newVal } as Country[LocalizedFieldKey];
-    }
+  // 1. Merge String Fields (Name, Description)
+  (['name', 'description'] as LocalizedFieldKey[]).forEach(field => {
+    const newVal = newData[field] || {};
+    country[field] = {
+      ...getEmptyLocalizedField(),
+      ...(country[field] || getEmptyLocalizedField()),
+      ...newVal
+    };
   });
 
-  localizedArrayFields.forEach(field => {
-    const newVal = newData[field] as { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }[] | undefined;
-    if (newVal) {
-      const currentVal = (country[field] as { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }[]) || [];
-      const mergedMap = new Map<string, { articleId?: string | null; name: Record<string, string | null | undefined>; isoCode?: string | null }>();
-      
-      // Seed with existing
-      currentVal.forEach(item => {
-        const key = item.articleId ? `id:${item.articleId.replace(/_/g, ' ')}` : `text:${item.name.en}`;
-        mergedMap.set(key, item);
+  // 2. Merge Array Fields (Capital, Government, etc.)
+  (['capital', 'largestCity', 'officialLanguage', 'demonym', 'currency', 'government', 'timeZone'] as LocalizedArrayFieldKey[]).forEach(field => {
+    const newVal = newData[field] ?? [];
+    const currentVal = (country[field] || []) as any[];
+    
+    const mergedMap = new Map<string, any>();
+    
+    // Seed and normalize existing
+    currentVal.forEach(item => {
+      const key = item.articleId ? `id:${item.articleId}` : `text:${item.name.en}`;
+      mergedMap.set(key, { 
+        ...item, 
+        name: { ...getEmptyLocalizedField(), ...item.name } 
       });
-      
-      // Merge new
-      newVal.forEach(newItem => {
-        const key = newItem.articleId ? `id:${newItem.articleId.replace(/_/g, ' ')}` : `text:${newItem.name.en}`;
-        const existingItem = mergedMap.get(key);
-        if (existingItem) {
-          existingItem.name = { ...existingItem.name, ...newItem.name };
-          if (newItem.isoCode) existingItem.isoCode = newItem.isoCode;
-        } else {
-          mergedMap.set(key, newItem);
-        }
-      });
-      
-      Object.assign(country, { [field]: Array.from(mergedMap.values()) });
-    }
+    });
+    
+    // Merge and normalize new
+    newVal.forEach(newItem => {
+      const key = newItem.articleId ? `id:${newItem.articleId}` : `text:${newItem.name.en}`;
+      const existingItem = mergedMap.get(key);
+      if (existingItem) {
+        existingItem.name = { ...existingItem.name, ...newItem.name };
+        if ('isoCode' in newItem) existingItem.isoCode = (newItem as any).isoCode;
+      } else {
+        mergedMap.set(key, {
+          ...newItem,
+          name: { ...getEmptyLocalizedField(), ...newItem.name }
+        });
+      }
+    });
+    
+    country[field] = Array.from(mergedMap.values()) as any;
   });
 
-  // Keep root fields if present
-  if (newData.isoCode !== undefined) country.isoCode = newData.isoCode;
-  if (newData.flagUrl !== undefined) country.flagUrl = newData.flagUrl;
-  if (newData.population !== undefined) country.population = newData.population;
-  if (newData.areaKm2 !== undefined) country.areaKm2 = newData.areaKm2;
-  if (newData.densityKm2 !== undefined) country.densityKm2 = newData.densityKm2;
-  if (newData.gdp !== undefined) country.gdp = newData.gdp;
-  if (newData.hdi !== undefined) country.hdi = newData.hdi;
-  
-  if (newData.callingCode !== undefined) country.callingCode = newData.callingCode;
-  if (newData.internetTld !== undefined) country.internetTld = newData.internetTld;
+  // 3. Keep/Reset root fields
+  country.isoCode = newData.isoCode !== undefined ? newData.isoCode : country.isoCode;
+  country.flagUrl = newData.flagUrl !== undefined ? newData.flagUrl : country.flagUrl;
+  country.population = newData.population !== undefined ? newData.population : country.population;
+  country.areaKm2 = newData.areaKm2 !== undefined ? newData.areaKm2 : country.areaKm2;
+  country.densityKm2 = newData.densityKm2 !== undefined ? newData.densityKm2 : country.densityKm2;
+  country.gdp = newData.gdp !== undefined ? newData.gdp : country.gdp;
+  country.hdi = newData.hdi !== undefined ? newData.hdi : country.hdi;
+  country.callingCode = newData.callingCode !== undefined ? newData.callingCode : (country.callingCode || []);
+  country.internetTld = newData.internetTld !== undefined ? newData.internetTld : (country.internetTld || []);
 
   return country;
 };

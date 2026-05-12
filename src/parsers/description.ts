@@ -1,6 +1,6 @@
 import { CheerioAPI, Cheerio } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country } from '../types/country.js';
+import { Country, getEmptyLocalizedField } from '../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 
 export class DescriptionParser {
@@ -44,7 +44,10 @@ export class DescriptionParser {
         .trim();
       desc = desc.replace(/\s+([,.])/g, '$1');
 
-      country.description = { ...country.description, [lang]: desc };
+      if (!country.description) {
+        country.description = getEmptyLocalizedField();
+      }
+      country.description[lang as keyof typeof country.description] = desc;
     }
   }
 }

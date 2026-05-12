@@ -6,7 +6,7 @@ import { CountryParser } from '../src/parsers/country-parser.js';
 import { DescriptionParser } from '../src/parsers/description.js';
 import { WikipediaAPI } from '../src/utils/wikipedia-api.js';
 import { mergeCountryData } from '../src/utils/merger.js';
-import { Country } from '../src/types/country.js';
+import { Country, getEmptyCountry, getEmptyLocalizedField } from '../src/types/country.js';
 
 describe('Regression Tests', () => {
   const snapshotsDir = path.join(process.cwd(), 'tests/snapshots');
@@ -34,10 +34,7 @@ describe('Regression Tests', () => {
 
   Object.entries(grouped).forEach(([countryName, langs]) => {
     it(`should process all languages for ${countryName}`, async () => {
-      let countryData: Country = { 
-        name: {}, description: {}, 
-        capital: [], largestCity: [], government: [], officialLanguage: [], demonym: [], currency: [], timeZone: [] 
-      };
+      let countryData: Country = getEmptyCountry();
 
       // 1. Process EN Pass
       if (langs['en']) {
@@ -58,7 +55,9 @@ describe('Regression Tests', () => {
           ['pt', 'fr', 'it', 'es']
         );
 
-        const localizedDataEn: Partial<Country> = { name: { en: countryName }, ...rawParsed };
+        const name = getEmptyLocalizedField();
+        name.en = countryName;
+        const localizedDataEn: Partial<Country> = { name, ...rawParsed };
         
         ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
           const key = field as keyof Country;
@@ -85,7 +84,9 @@ describe('Regression Tests', () => {
           const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
           const $ = cheerio.load(html);
           
-          const locData: Partial<Country> = { name: { [lang]: $('h1#firstHeading').text().trim() } };
+          const name = getEmptyLocalizedField();
+          name[lang as keyof typeof name] = $('h1#firstHeading').text().trim();
+          const locData: Partial<Country> = { name };
           DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], locData, lang);
 
           countryData = mergeCountryData(JSON.stringify(countryData), locData);

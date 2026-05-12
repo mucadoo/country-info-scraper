@@ -1,7 +1,7 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
 import { DescriptionParser } from './parsers/description.js';
-import { Country } from './types/country.js';
+import { Country, getEmptyCountry, getEmptyLocalizedField } from './types/country.js';
 import { WikipediaAPI } from './utils/wikipedia-api.js';
 import { mergeCountryData } from './utils/merger.js';
 import Database from 'better-sqlite3';
@@ -98,9 +98,12 @@ const crawler = new CheerioCrawler({
         
         const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
         
-        const localizedData: Partial<Country> = {
-          name: { en: name },
+        const nameLoc = getEmptyLocalizedField();
+        nameLoc.en = name;
+        const localizedData: Country = {
+          ...getEmptyCountry(),
           ...countryData,
+          name: nameLoc,
         };
 
         // Fill translations
@@ -124,10 +127,12 @@ const crawler = new CheerioCrawler({
         const merged = mergeCountryData(existing?.data || null, localizedData);
         insertCountry.run(countryId, JSON.stringify(merged));
       } else {
-        const localizedData: Partial<Country> = { name: { [lang]: name } };
+        const nameLoc = getEmptyLocalizedField();
+        nameLoc[lang as keyof typeof nameLoc] = name;
+        const localizedData: Partial<Country> = { name: nameLoc };
         DescriptionParser.parse($, localizedData, lang);
         const existing = getCountry.get(countryId) as { data: string } | undefined;
-        const merged = mergeCountryData(existing?.data || null, localizedData);
+        const merged = mergeCountryData(existing?.data || null, localizedData as Country);
         insertCountry.run(countryId, JSON.stringify(merged));
       }
     } finally {
@@ -142,11 +147,19 @@ async function run() {
   
   const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-  // Sort by ISO code and ensure isoCode is the first property
+  // Sort and normalize countries
   const countries = rawCountries
     .sort((a, b) => (a.isoCode || '').localeCompare(b.isoCode || ''))
     .map(country => {
-      const { isoCode, ...rest } = country;
+      // Merge with empty to guarantee all fields exist
+      const normalized = { ...getEmptyCountry(), ...country };
+      
+      // Ensure specific arrays are never null
+      normalized.callingCode = normalized.callingCode || [];
+      normalized.internetTld = normalized.internetTld || [];
+      
+      // Destructure to ensure isoCode is first
+      const { isoCode, ...rest } = normalized;
       return { isoCode, ...rest };
     });
 

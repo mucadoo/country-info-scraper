@@ -1,6 +1,6 @@
 import { CheerioAPI, Cheerio } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country } from '../types/country.js';
+import { Country, getEmptyLocalizedField } from '../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 import { processAreaAndPopulation, ParserState } from './infobox/area-population.js';
 import { parseCapital, parseLargestCity, handleOtherFields } from './infobox/standard-fields.js';
@@ -117,31 +117,46 @@ export class InfoboxParser {
       parseLargestCity($, data, country, lang);
     } else if (matches('demonym')) {
       const demonyms = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.demonym = demonyms.map(item => ({
-        articleId: item.articleId,
-        name: { [lang]: item.text }
-      }));
+      country.demonym = demonyms.map(item => {
+        const name = getEmptyLocalizedField();
+        name[lang as keyof typeof name] = item.text;
+        return {
+          articleId: item.articleId || null,
+          name
+        };
+      });
     } else if (matches('government')) {
       const gov = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.government = gov.map(item => ({
-        articleId: item.articleId,
-        name: { [lang]: item.text }
-      }));
+      country.government = gov.map(item => {
+        const name = getEmptyLocalizedField();
+        name[lang as keyof typeof name] = item.text;
+        return {
+          articleId: item.articleId || null,
+          name
+        };
+      });
     } else if (lang === 'en' && lowerHeaderText.includes('gdp') && lowerHeaderText.includes('nominal')) {
       parseGDP($, row, country);
     } else if (matches('currency')) {
-      country.currency = parseCurrency(data).map(item => ({
-        articleId: item.articleId,
-        name: { [lang]: item.text },
-        isoCode: item.isoCode
-      }));
+      country.currency = parseCurrency(data).map(item => {
+        const name = getEmptyLocalizedField();
+        name[lang as keyof typeof name] = item.text;
+        return {
+          articleId: item.articleId || null,
+          name,
+          isoCode: item.isoCode || null
+        };
+      });
     } else if (lang === 'en' && headerText.toLowerCase() === 'time zone') {
       const tz = parseListOrLink(data, '.hlist ul li, .plainlist ul li, a');
-      country.timeZone = tz.map(item => ({
-        articleId: item.articleId,
-        name: { [lang]: item.text }
-      }));
-    } else if (lang === 'en' && lowerHeaderText.includes('calling code')) {
+      country.timeZone = tz.map(item => {
+        const name = getEmptyLocalizedField();
+        name[lang as keyof typeof name] = item.text;
+        return {
+          articleId: item.articleId || null,
+          name
+        };
+      });
       const dataClone = data.clone();
       dataClone.find('sup, .reference').remove();
       country.callingCode = dataClone.text().split('[')[0].trim().split(/[;,]/).map(c => c.trim()).filter(c => c);

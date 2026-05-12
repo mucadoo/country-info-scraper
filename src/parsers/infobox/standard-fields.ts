@@ -1,6 +1,6 @@
 import { CheerioAPI, Cheerio } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country } from '../../types/country.js';
+import { Country, getEmptyLocalizedField } from '../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 import { parseListOrLink } from './utils.js';
 import { ParserState } from './area-population.js';
@@ -53,18 +53,26 @@ export function parseCityList($: CheerioAPI, data: Cheerio<AnyNode>): { text: st
 
 export function parseCapital($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
   const list = parseCityList($, data);
-  country.capital = list.map(item => ({
-    articleId: item.articleId,
-    name: { [lang]: item.text }
-  }));
+  country.capital = list.map(item => {
+    const name = getEmptyLocalizedField();
+    name[lang as keyof typeof name] = item.text;
+    return {
+      articleId: item.articleId || null,
+      name
+    };
+  });
 }
 
 export function parseLargestCity($: CheerioAPI, data: Cheerio<AnyNode>, country: Partial<Country>, lang: string): void {
   const list = parseCityList($, data);
-  country.largestCity = list.map(item => ({
-    articleId: item.articleId,
-    name: { [lang]: item.text }
-  }));
+  country.largestCity = list.map(item => {
+    const name = getEmptyLocalizedField();
+    name[lang as keyof typeof name] = item.text;
+    return {
+      articleId: item.articleId || null,
+      name
+    };
+  });
 }
 
 export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, country: Partial<Country>, state: ParserState, lang: string = 'en'): void {
@@ -100,10 +108,14 @@ export function handleOtherFields(headerText: string, data: Cheerio<AnyNode>, co
       }
       
       if (langs.length > 0) {
-        country.officialLanguage = langs.map(item => ({
-          articleId: item.articleId,
-          name: { [lang]: item.text }
-        }));
+        country.officialLanguage = langs.map(item => {
+          const name = getEmptyLocalizedField();
+          name[lang as keyof typeof name] = item.text;
+          return {
+            articleId: item.articleId || null,
+            name
+          };
+        });
         state.languageFound = true;
       }
   }

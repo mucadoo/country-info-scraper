@@ -2,7 +2,7 @@ import { DataValidator } from './utils/validator.js';
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
 import { DescriptionParser } from './parsers/description.js';
-import { Country, getEmptyCountry, getEmptyLocalizedField } from './types/country.js';
+import { Country, getEmptyCountry, getEmptyLocalizedField } from '../types/country.js';
 import { WikipediaAPI } from './utils/wikipedia-api.js';
 import { mergeCountryData } from './utils/merger.js';
 import Database from 'better-sqlite3';
@@ -138,6 +138,7 @@ const crawler = new CheerioCrawler({
       }
     } finally {
       resolveLock!();
+      delete writeLocks[countryId];
     }
   },
 });

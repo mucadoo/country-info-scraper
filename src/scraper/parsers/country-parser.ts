@@ -1,5 +1,5 @@
 import { CheerioAPI } from 'crawlee';
-import { Country } from '../types/country.js';
+import { Country } from '../../types/country.js';
 import { InfoboxParser } from './infobox.js';
 import { DescriptionParser } from './description.js';
 

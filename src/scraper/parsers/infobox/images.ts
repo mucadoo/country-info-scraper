@@ -1,6 +1,6 @@
 import { Cheerio, CheerioAPI } from 'crawlee';
 import { AnyNode, isTag } from 'domhandler';
-import { Country } from '../../types/country.js';
+import { Country } from '../../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 import { ParserState } from './area-population.js';
 

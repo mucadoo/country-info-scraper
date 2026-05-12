@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { DataValidator } from '../src/utils/validator.js';
+import { DataValidator } from '../src/scraper/utils/validator.js';
 import { getEmptyCountry } from '../src/types/country.js';
 
 describe('DataValidator', () => {

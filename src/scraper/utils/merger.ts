@@ -1,4 +1,4 @@
-import { Country, CountrySchema, getEmptyCountry, getEmptyLocalizedField, MultiLangLinkField } from '../types/country.js';
+import { Country, CountrySchema, getEmptyCountry, getEmptyLocalizedField, MultiLangLinkField } from '../../types/country.js';
 import { z } from 'zod';
 
 type LocalizedFieldKey = 'name' | 'description';

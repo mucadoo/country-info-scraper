@@ -1,6 +1,6 @@
 import { CheerioAPI, Cheerio } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country, getEmptyLocalizedField } from '../types/country.js';
+import { Country, getEmptyLocalizedField } from '../../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 
 export class DescriptionParser {

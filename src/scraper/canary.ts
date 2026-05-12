@@ -1,6 +1,6 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CountryParser } from './parsers/country-parser.js';
-import { CountrySchema, getEmptyLocalizedField } from './types/country.js';
+import { CountrySchema, getEmptyLocalizedField } from '../types/country.js';
 
 const crawler = new CheerioCrawler({
   maxConcurrency: 5,

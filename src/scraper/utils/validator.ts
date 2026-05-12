@@ -1,4 +1,4 @@
-import { CountrySchema, LANGUAGES } from '../types/country.js';
+import { CountrySchema, LANGUAGES } from '../../types/country.js';
 
 export class DataValidator {
   static validate(data: unknown) {
@@ -28,7 +28,7 @@ export class DataValidator {
     if (!country.areaKm2) errors.push('Missing area');
     
     if (errors.length > 0) {
-      throw new Error(`Quality Gate Failed for ${country.name.en || 'Unknown'}: ${errors.join(', ')}`);
+      throw new Error(`Quality Gate Failed for ${country.isoCode} (${country.name.en || 'Unknown'}): ${errors.join(', ')}`);
     }
 
     return country;

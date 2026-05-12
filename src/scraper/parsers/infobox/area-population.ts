@@ -1,6 +1,6 @@
 import { Cheerio } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country } from '../../types/country.js';
+import { Country } from '../../../types/country.js';
 import { ExtractionUtils } from '../../utils/extraction.js';
 
 export interface ParserState {

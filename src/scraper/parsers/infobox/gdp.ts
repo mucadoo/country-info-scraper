@@ -1,6 +1,6 @@
 import { Cheerio, CheerioAPI } from 'crawlee';
 import { AnyNode } from 'domhandler';
-import { Country } from '../../types/country.js';
+import { Country } from '../../../types/country.js';
 
 function parseNumericValue(text: string): number | null {
   if (!text) return null;

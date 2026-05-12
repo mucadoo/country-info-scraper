@@ -15,7 +15,8 @@
     "audit": "npx tsx scripts/audit-data.ts",
     "verify:loc": "npx tsx scripts/verify-localization.ts",
     "validate": "npm run audit && npm run verify:loc",
-    "generate-docs": "npx tsx scripts/generate-docs.ts"
+    "generate-docs": "npx tsx scripts/generate-docs.ts",
+    "generate-csv": "npx tsx scripts/generate-csv.ts"
   },
   "repository": {
     "type": "git",

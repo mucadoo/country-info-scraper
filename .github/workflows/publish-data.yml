@@ -41,6 +41,9 @@ jobs:
       - name: Generate Data Documentation
         run: npm run generate-docs
 
+      - name: Generate Data CSV
+        run: npm run generate-csv
+
       # NEW: Run the multilingual snapshot tests!
       - name: Run Tests
         run: npm test
@@ -50,7 +53,10 @@ jobs:
         run: rm -f scraper.db
 
       - name: Run Scraper
-        run: npm run scrape
+        run: |
+          npm run scrape
+          sqlite3 scraper.db "VACUUM;"
+          mv scraper.db sovereign-states.db
 
       # NEW: Upload the SQLite DB as an artifact if the scraper fails so you can debug it locally
       - name: Upload Database on Failure
@@ -169,6 +175,8 @@ jobs:
             data/sovereign-states.min.json
             data/schema.json
             data/DATA_MODEL.md
+            data/sovereign-states.csv
+            sovereign-states.db
           body: |
             ### 🌍 Multilingual Data Snapshot
             
@@ -178,6 +186,11 @@ jobs:
             ```text
             ${{ steps.check_changes.outputs.diff_stat || 'Initial data release' }}
             ```
+            
+            #### 🗄️ Formats
+            - **JSON:** Ideal for web applications and API consumers.
+            - **SQLite:** Use `sovereign-states.db` for local SQL queries and deep analytical processing.
+            - **CSV:** Use `sovereign-states.csv` for Excel, Google Sheets, or general data science exploration.
             
             #### 🗄️ Data Contract
             - [📜 Schema JSON](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/schema.json)

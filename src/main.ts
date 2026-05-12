@@ -147,22 +147,18 @@ async function run() {
   
   const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-  // Sort and normalize countries
+  // Normalize all countries
   const countries = rawCountries
     .sort((a, b) => (a.isoCode || '').localeCompare(b.isoCode || ''))
     .map(country => {
-      // Merge with empty to guarantee all fields exist
       const normalized = { ...getEmptyCountry(), ...country };
-      
-      // Ensure specific arrays are never null
       normalized.callingCode = normalized.callingCode || [];
       normalized.internetTld = normalized.internetTld || [];
-      
-      // Destructure to ensure isoCode is first
       const { isoCode, ...rest } = normalized;
       return { isoCode, ...rest };
     });
 
+  // 1. Generate standard full files
   const output = {
     metadata: {
       generatedAt: new Date().toISOString(),
@@ -176,6 +172,22 @@ async function run() {
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync('data/sovereign-states.json', JSON.stringify(output, null, 2));
   fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(output));
+
+  // 2. Generate Static REST API structure
+  const API_DIR = 'data/api/v1';
+  const COUNTRY_DIR = `${API_DIR}/countries`;
+  fs.mkdirSync(COUNTRY_DIR, { recursive: true });
+
+  // Index file
+  const index = countries.map(({ isoCode, name, flagUrl }) => ({ isoCode, name, flagUrl }));
+  fs.writeFileSync(`${API_DIR}/index.json`, JSON.stringify(index, null, 2));
+
+  // Individual files
+  countries.forEach(country => {
+    if (country.isoCode) {
+      fs.writeFileSync(`${COUNTRY_DIR}/${country.isoCode}.json`, JSON.stringify(country, null, 2));
+    }
+  });
 }
 
 run().catch(err => { log.error('Scraper failed', err); process.exit(1); });

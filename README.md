@@ -31,6 +31,14 @@ A modern, high-performance TypeScript-based web scraper that extracts comprehens
 - 🔗 **Linked Entities**: All list items (Capitals, Languages, Currencies) include their Wikipedia `articleId` for easy cross-referencing.
 - 📉 **Optimized Output**: High-quality JSON and minified versions ready for production use.
 
+## 📦 Data Consistency
+
+We provide multiple ways to access our data, depending on your application's requirements for stability versus freshness:
+
+- **Pinned Data (Default)**: By default, the SDK uses the data bundled at the time of installation. It is "pinned" to your project dependencies and will not change until you manually update the package version in your `package.json`. This ensures maximum stability and predictable builds.
+- **Live Data**: For applications requiring real-time updates, initialize the `WikiGeoClient` with `{ dataSource: "remote" }`. This forces the SDK to fetch the latest daily snapshot from our GitHub Pages host instead of using the local bundled data.
+- **Historical Data**: All data releases are archived in this repository using Git tags (e.g., `data-2024.05.12`). If you need to access or compare specific versions of the raw JSON files, you can check out these tags or access the release archives directly through the GitHub Releases tab.
+
 ## 📦 Live Data Access
 
 This repository serves as a **Public Data Resource**. You can integrate the live JSON directly into your applications:

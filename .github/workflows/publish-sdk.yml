@@ -41,7 +41,7 @@ jobs:
         run: npm run build:sdk
 
       - name: Publish to NPM
-        if: secrets.NPM_TOKEN
+        if: ${{ secrets.NPM_TOKEN != '' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -132,16 +132,17 @@ The scraper follows a sophisticated multi-stage pipeline:
 # Install dependencies
 npm install
 
-# Build the project
+# Build the project (SDK & Source)
 npm run build
+npm run build:sdk
 
-# Run the full scraper (Production)
+# Run the full scraper
 npm run scrape
 
 # Run data quality validation (Audit + Localization check)
 npm run validate
 
-# Run regression tests
+# Run tests
 npm test
 ```
 

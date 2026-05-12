@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import * as cheerio from 'cheerio';
-import { ExtractionUtils } from '../src/utils/extraction.js';
-import { parseListOrLink } from '../src/parsers/infobox/utils.js';
-import { parseCurrency } from '../src/parsers/infobox/currency.js';
+import { ExtractionUtils } from '../src/scraper/utils/extraction.js';
+import { parseListOrLink } from '../src/scraper/parsers/infobox/utils.js';
+import { parseCurrency } from '../src/scraper/parsers/infobox/currency.js';
 
 describe('ExtractionUtils', () => {
   // ... existing tests ...

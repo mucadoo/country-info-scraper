@@ -48,7 +48,7 @@
     "build:sdk": "tsup",
     "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts' 'scripts/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' 'tests/**/*.ts' 'scripts/**/*.ts' --fix",
-    "scrape": "node dist/src/main.js",
+    "scrape": "node dist/src/scraper/main.js",
     "canary": "node --loader ts-node/esm src/canary.ts",
     "test": "vitest run",
     "test:watch": "vitest",

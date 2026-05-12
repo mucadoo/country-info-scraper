@@ -1,7 +1,11 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/sdk/index.ts', 'src/sdk/browser.ts'],
+  entry: {
+    index: 'src/sdk/index.ts',
+    browser: 'src/sdk/browser.ts',
+  },
+  outDir: 'dist',
   format: ['cjs', 'esm'],
   dts: true,
   splitting: false,
@@ -9,4 +13,13 @@ export default defineConfig({
   clean: true,
   minify: true,
   platform: 'node',
+  external: [
+    /sovereign-states\.json/,  // never bundle the data
+  ],
+  esbuildOptions(opts) {
+    // Silence the import.meta warning for CJS by providing a shim
+    opts.define = {
+      ...opts.define,
+    };
+  },
 });

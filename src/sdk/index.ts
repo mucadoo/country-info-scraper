@@ -25,44 +25,45 @@ export class WikiGeoClient {
     }
 
     private async getLocalData(): Promise<Country[]> {
-        // 1. Try constructor-injected data
         if (this.localData) return this.localData;
 
-        // 2. Try Node.js environment
-        if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+        if (typeof process !== 'undefined' && process.versions?.node) {
             const fs = await import('fs');
             const path = await import('path');
-            const { fileURLToPath } = await import('url');
-            const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-            const potentialPaths = [
+            // Works in both CJS (__dirname) and ESM (import.meta.url)
+            let baseDir: string;
+            try {
+                // ESM
+                const { fileURLToPath } = await import('url');
+                // @ts-ignore
+                baseDir = path.dirname(fileURLToPath(import.meta.url));
+            } catch {
+                // CJS: __dirname is injected by Node/tsup
+                baseDir = __dirname;
+            }
+
+            const candidates = [
                 path.resolve(process.cwd(), 'data/sovereign-states.json'),
-                path.resolve(__dirname, '../../data/sovereign-states.json'),
+                path.resolve(baseDir, '../../data/sovereign-states.json'),
+                path.resolve(baseDir, '../data/sovereign-states.json'),
             ];
 
-            for (const p of potentialPaths) {
+            for (const p of candidates) {
                 if (fs.existsSync(p)) {
                     try {
                         const content = fs.readFileSync(p, 'utf-8');
                         const data = JSON.parse(content) as { data: Country[] };
                         return data.data;
-                    } catch {
-                        // Continue to next path
-                    }
+                    } catch { /* try next */ }
                 }
             }
         }
 
-        // 3. Try browser environment (dynamic import for bundlers)
-        try {
-            // Note: This path must be relative to this file in the source code
-            const module = await import('../../data/sovereign-states.json', { assert: { type: 'json' } }) as { default: { data: Country[] } };
-            return module.default.data;
-        } catch {
-            // Continue
-        }
-
-        throw new Error(`Local data not found. Please provide 'localData' in constructor or run in a Node.js environment with accessible data files.`);
+        throw new Error(
+            `Local data not found. Provide 'localData' in constructor, ` +
+            `or ensure data/sovereign-states.json is accessible at runtime.`
+        );
     }
 
     async getFullDatabase(): Promise<{ data: Country[], source: 'remote' | 'local', timestamp: string }> {

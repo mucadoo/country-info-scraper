@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-05-12T01:23:33.438Z",
+    "generatedAt": "2026-05-12T01:30:19.313Z",
     "version": "0.1",
     "license": "ISC",
     "source": "Wikipedia"
@@ -145,17 +145,17 @@
       "isoCode": "AE",
       "name": {
         "en": null,
-        "pt": "Emirados Árabes Unidos",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Emirati Arabi Uniti",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/250px-Flag_of_the_United_Arab_Emirates.svg.png",
       "description": {
         "en": null,
-        "pt": "Os Emirados Árabes Unidos são uma confederação árabe localizada no Golfo Pérsico, formada por monarquias, cada uma detendo sua soberania, chamadas emirados. Os Emirados Árabes Unidos estão situados no sudeste da península Arábica e fazem fronteira com Omã e com a Arábia Saudita. Os sete emirados são Abu Dabi, Dubai, Xarja, Ajmã, Caluão, Recoima e Fujeira. A capital e a segunda maior cidade dos Emirados Árabes Unidos é Abu Dabi. A cidade também é o centro de atividades políticas, industriais e culturais.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Gli Emirati Arabi Uniti, ufficialmente Stato degli Emirati Arabi Uniti, sono un Paese arabo del Medio Oriente situato nel sud-est della penisola arabica, in Asia occidentale, che confina con l'Oman a sud-est, con l'Arabia Saudita a sud-ovest ed è bagnato dal Golfo Persico a nord. Lo Stato è composto da sette emirati: Abu Dhabi, ʿAjmān, Dubai, Fujaira, Ra's al-Khayma, Sharja e Umm al-Qaywayn.",
         "es": null
       },
       "capital": [
@@ -279,18 +279,18 @@
       "isoCode": "AF",
       "name": {
         "en": null,
-        "pt": "Afeganistão",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Afganistán"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/250px-Flag_of_the_Taliban.svg.png",
       "description": {
         "en": null,
-        "pt": "O Afeganistão, oficialmente Emirado Islâmico do Afeganistão ainda reconhecido internacionalmente como República Islâmica do Afeganistão, é um país sem litoral, montanhoso, localizado no centro da Ásia, estando na encruzilhada entre o Sul da Ásia, a Ásia Central e a Ásia Ocidental. Faz fronteira com o Paquistão ao sul e ao leste, com o Irã ao oeste, com o Turcomenistão, Uzbequistão e Tajiquistão ao norte e com a China no nordeste. Ocupando 652 230 km², sendo o 41.º maior do mundo em área, o Afeganistão é predominantemente montanhoso, com planícies no norte e sudoeste. Cabul é a capital e a maior cidade, com uma população estimada em 4,6 milhões, sendo o 37.º país mais populoso do mundo, composta principalmente de etnias pastós, tajiques, hazaras e usbeques.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Afganistán, oficialmente el Emirato Islámico de Afganistán, es un país montañoso sin salida al mar ubicado en Asia del Sur. Es un Estado islámico teocrático basado en los principios religiosos del islam sunní. Limita con Pakistán al sur y al este, con Irán al oeste, con Turkmenistán, Uzbekistán y Tayikistán al norte, y con China al noreste, a través del corredor de Waján. Su forma de gobierno es la de una monarquía religiosa constituida como emirato islámico. Su capital y ciudad más grande es Kabul, con una población estimada de 4,6 millones de personas, en su mayoría pastunes, tayikos, hazaras, uzbekos y turcomanos."
       },
       "capital": [
         {
@@ -433,18 +433,18 @@
       "isoCode": "AG",
       "name": {
         "en": null,
-        "pt": "Antígua e Barbuda",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Antigua y Barbuda"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/250px-Flag_of_Antigua_and_Barbuda.svg.png",
       "description": {
         "en": null,
-        "pt": "Antígua e Barbuda, ou, mais raramente, Antiga e Barbuda, é um país independente das Américas constituído por 37 ilhas situadas entre o mar do Caribe e o Oceano Atlântico. É constituída por duas grandes ilhas, Antiga e Barbuda, e outras seis ilhotas: Great Bird, Green, Guinea, Long, Maiden e York; além de outras 29 ilhotas desabitadas. Separada por poucas milhas marítimas, o arquipélago faz parte das ilhas de Barlavento das Pequenas Antilhas, na América central; cerca de 17° norte da linha do Equador.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Antigua y Barbuda es uno de los trece países que forman la América Insular, Antillas o Islas del mar Caribe, uno de los treinta y cinco que forman el continente americano. Está ubicado al norte de las Antillas Menores, limitando al sur con Guadalupe, al suroeste con Montserrat, al oeste con San Cristóbal y Nieves y al noroeste con San Martín. El país consta de dos islas principales, Antigua y Barbuda, que están separadas por aproximadamente 40 km, y varias islas más pequeñas. La población permanente es de aproximadamente 97.120 personas, de los cuales el 97 % reside en Antigua. Su capital, ciudad más poblada y puerto más grande es Saint John, situada en la isla de Antigua. Codrington es la ciudad más grande de Barbuda."
       },
       "capital": [
         {
@@ -557,18 +557,18 @@
       "isoCode": "AL",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Albânia",
         "fr": null,
         "it": null,
-        "es": "Albania"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/250px-Flag_of_Albania.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Albânia, oficialmente República da Albânia, é um pequeno país montanhoso da península Balcânica, no sudeste da Europa. Tem uma área total de 28,748 km² e uma população de quase 3 milhões de habitantes.",
         "fr": null,
         "it": null,
-        "es": "Albania, oficialmente República de Albania, es un país situado en el sudeste de Europa. Se encuentra en el mar Adriático y Jónico dentro del mar Mediterráneo y comparte fronteras terrestres con Montenegro al noroeste, con Kosovo al noreste, Macedonia del Norte al este, Grecia al sur; y un límite marítimo con Grecia, Montenegro e Italia al oeste. Tirana es su capital y ciudad más grande, seguida de Durrës, Vlorë y Shkodër."
+        "es": null
       },
       "capital": [
         {
@@ -940,18 +940,18 @@
       "isoCode": "AR",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Argentina",
         "fr": null,
         "it": null,
-        "es": "Argentina"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Argentina, oficialmente República Argentina, é o segundo maior país da América do Sul em território e o terceiro em termos de população, constituída como uma federação de 23 províncias e uma cidade autônoma, Buenos Aires, capital do país. É o oitavo maior país do mundo em área territorial e o maior entre as nações de língua espanhola, embora México, Colômbia e Espanha, que possuem menor território, sejam mais populosos.",
         "fr": null,
         "it": null,
-        "es": "Argentina, oficialmente República Argentina, es un país soberano ubicado en el extremo sur y sudeste de América del Sur. Adopta la forma de gobierno democrática, federal, representativa y republicana. Se constituye como un país federal descentralizado, compuesto por veintitrés provincias más la Ciudad Autónoma de Buenos Aires, designada como capital federal."
+        "es": null
       },
       "capital": [
         {
@@ -1095,18 +1095,18 @@
       "isoCode": "AT",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Áustria",
         "fr": null,
         "it": null,
-        "es": "Austria"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/250px-Flag_of_Austria.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Áustria, oficialmente República da Áustria, é um país de cerca de 9 milhões de habitantes, localizado na Europa Central. É limitada pela Alemanha e Chéquia a norte, Eslováquia e Hungria a leste, Eslovênia e Itália a sul, e Suíça e Liechtenstein a oeste. O seu território abrange 83 872 quilômetros quadrados e é influenciado por um clima temperado e alpino. O terreno é muito montanhoso, devido à presença dos Alpes; apenas 32% do país é inferior a 500 metros de altitude e seu ponto culminante chega aos 3 797 metros. A maioria da população fala alemão, que também é língua oficial do país. Outros idiomas regionais reconhecidos são croata, húngaro e esloveno.",
         "fr": null,
         "it": null,
-        "es": "Austria, oficialmente República de Austria, es un país de Europa central y Estado de la Unión Europea. Limita con la República Checa y Alemania al norte, Eslovaquia y Hungría al este, Eslovenia e Italia al sur y Suiza y Liechtenstein al oeste. No tiene salida al mar, aunque está atravesada en una parte significativa por el río Danubio, navegable en gran parte de su recorrido. Su capital es Viena. El territorio abarca 83 871 km² de superficie y el clima predominante es el alpino. Solo el 32 % del país está por debajo de los 500 metros de altitud, y el punto más alto es el pico Grossglockner con 3798 m s. n. m. Si bien el alemán austriaco es el idioma oficial del país, muchos austriacos se comunican informalmente en una variedad de dialectos bávaros."
+        "es": null
       },
       "capital": [
         {
@@ -1230,17 +1230,17 @@
       "isoCode": "AU",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Austrália",
         "fr": null,
-        "it": "Australia",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/250px-Flag_of_Australia_%28converted%29.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Austrália, oficialmente Comunidade da Austrália, é um país do hemisfério sul, localizado na Oceania, que compreende a menor área continental do mundo, a ilha da Tasmânia e várias ilhas adjacentes nos oceanos Índico e Pacífico. O continente-ilha, como a Austrália por vezes é chamada, é banhado pelo oceano Índico, ao sul, e a oeste pelo mar de Timor, mar de Arafura e Estreito de Torres, a norte, e pelo mar de Coral e mar da Tasmânia, a leste. Através destes mares, tem fronteira marítima com a Indonésia, Timor-Leste e Papua-Nova Guiné, a norte, e com o território francês da Nova Caledónia, a leste, e a Nova Zelândia a sudeste.",
         "fr": null,
-        "it": "L'Australia, ufficialmente Commonwealth dell'Australia, è uno Stato dell'Oceania. È il sesto paese del mondo per estensione e il più grande del continente. Ha una popolazione di oltre 25 milioni di abitanti, quasi interamente residenti sulle coste.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -1555,16 +1555,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Bosnia y Herzegovina"
+        "it": "Bosnia ed Erzegovina",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/250px-Flag_of_Bosnia_and_Herzegovina.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Bosnia y Herzegovina, comúnmente llamada Bosnia-Herzegovina, o simplemente Bosnia, es un país soberano europeo, con capital en Sarajevo, situado en la confluencia de Europa Central y del sudeste europeo, y que limita con Croacia, al norte, oeste y sur; con Serbia al este; con Montenegro al este y al sur, y con el mar Adriático al suroeste a lo largo de 21,2 km."
+        "it": "La Bosnia ed Erzegovina, comunemente indicata anche come Bosnia-Erzegovina e a volte chiamata con la sineddoche Bosnia, è uno Stato dell'Europa situato nei Balcani occidentali.",
+        "es": null
       },
       "capital": [
         {
@@ -1822,17 +1822,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Bangladesh",
         "it": null,
-        "es": "Bangladés"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/250px-Flag_of_Bangladesh.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Le Bangladesh, en forme longue la république populaire du Bangladesh, est un pays sud-asiatique. Situé au nord du golfe du Bengale, quasiment enclavé dans l'Inde, il a une petite frontière commune avec la Birmanie.",
         "it": null,
-        "es": "Bangladés o Bangladesh, oficialmente República Popular de Bangladés es un país soberano ubicado en Asia del Sur. Su territorio se encuentra rodeado casi por completo por la India, a excepción de una pequeña franja al sureste donde limita con Birmania. Geográficamente, el país se sitúa en el terreno fértil del delta del Ganges, por lo que está sujeto a las inundaciones anuales provocadas por los monzones y los ciclones. Junto con la provincia india de Bengala Occidental, constituye la región etnolingüística de Bengala. De hecho, en bengalí, el nombre «Bangladesh» significa «país de Bengala»."
+        "es": null
       },
       "capital": [
         {
@@ -1956,17 +1956,17 @@
       "isoCode": "BE",
       "name": {
         "en": null,
-        "pt": "Bélgica",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Belgio",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/250px-Flag_of_Belgium.svg.png",
       "description": {
         "en": null,
-        "pt": "A Bélgica, oficialmente Reino da Bélgica, é um país situado na Europa ocidental. É um dos membros fundadores da União Europeia, inclusive hospedando a sede, bem como as de outras grandes organizações internacionais, como a Organização do Tratado do Atlântico Norte. A Bélgica tem uma área de 30 528 quilômetros quadrados e uma população de cerca de 11,8 milhões de habitantes.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Belgio, ufficialmente Regno del Belgio, è uno Stato federale retto da una monarchia parlamentare. È uno Stato membro dell'Unione europea situato nell'Europa occidentale. Confina a nord con i Paesi Bassi, a est con la Germania e con il Lussemburgo, a sud e sud-ovest con la Francia e a nord-ovest si affaccia sul mare del Nord.",
         "es": null
       },
       "capital": [
@@ -2122,17 +2122,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": "Burkina Faso",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Burkina Faso"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/250px-Flag_of_Burkina_Faso.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": "Le Burkina Faso, « patrie des intègres » ou « patrie de l'intégrité » ou Burkina, anciennement république de Haute-Volta, est un pays d'Afrique de l'Ouest. Sans accès à la mer, il est entouré de six pays : le Niger à l'est-nord-est, le Bénin à l'est-sud-est, le Togo au sud-est, le Ghana au sud, la Côte d'Ivoire au sud-ouest et le Mali au nord-ouest. Sa capitale politique, Ouagadougou, est située au centre du pays. Sa capitale économique, Bobo-Dioulasso, est située dans les Hauts Bassins, dans le sud-ouest du pays.",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Burkina Faso es un país sin litoral de África Occidental que limita al noroeste con Malí, al este con Níger, al sureste con Benín y al sur con Costa de Marfil, Ghana y Togo. En 2025 la ONU estimó su población en 24 074 580 habitantes. Anteriormente llamada República del Alto Volta, el país fue nombrado «Burkina Faso» el 4 de agosto de 1984 por el entonces presidente Thomas Sankara, y su capital y ciudad más grande es Uagadugú. En Burkina Faso se hablan 59 idiomas nativos, y el más común, el moré, lo habla aproximadamente el 50 % de la población."
       },
       "capital": [
         {
@@ -2255,17 +2255,17 @@
       "isoCode": "BG",
       "name": {
         "en": null,
-        "pt": "Bulgária",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Bulgaria",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/250px-Flag_of_Bulgaria.svg.png",
       "description": {
         "en": null,
-        "pt": "Bulgária, oficialmente República da Bulgária, é um país do sudeste da Europa. Faz fronteira com a Romênia a norte, a Sérvia e a Macedônia do Norte a oeste, a Grécia e a Turquia a sul, e o Mar Negro a leste. A capital e maior cidade é Sófia; outras grandes cidades são Plovdiv, Varna e Burgas. Com um território de 110 994 km², a Bulgária é o 16.º maior país da Europa.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Bulgaria, ufficialmente Repubblica di Bulgaria, è uno Stato membro dell'Unione europea situato nella metà orientale della penisola balcanica.",
         "es": null
       },
       "capital": [
@@ -2802,18 +2802,18 @@
       "isoCode": "BN",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Brunei",
         "fr": null,
         "it": null,
-        "es": "Brunéi"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/250px-Flag_of_Brunei.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Brunei, oficialmente Estado de Brunei Darussalam ou Darussalã, é um Estado soberano localizado na costa norte da ilha de Bornéu, no Sudeste Asiático. Além de seu litoral com o mar da China Meridional, é completamente cercado pelo estado de Sarauaque, na Malásia, e é dividido em duas partes pelo distrito de Sarauaque, Limbang. É o único Estado soberano situado completamente na ilha de Bornéu, com o restante da ilha formando partes da Malásia e Indonésia. A população de Brunei era estimada em 423 196 em 2016.",
         "fr": null,
         "it": null,
-        "es": "Brunéi es uno de los cincuenta y un países que componen el continente asiático. Su capital y ciudad más poblada es Bandar Seri Begawan."
+        "es": null
       },
       "capital": [
         {
@@ -2926,17 +2926,17 @@
       "isoCode": "BO",
       "name": {
         "en": null,
-        "pt": "Bolívia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Bolivia",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/250px-Flag_of_Bolivia.svg.png",
       "description": {
         "en": null,
-        "pt": "Bolívia, oficialmente Estado Plurinacional da Bolívia, é um país encravado no centro-oeste da América do Sul. Faz fronteira com o Brasil ao norte e leste, Paraguai e Argentina ao sul, Chile e Peru ao oeste.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Bolivia, ufficialmente Stato Plurinazionale della Bolivia, è uno Stato dell'America meridionale, situato nel centro del continente. La sua superficie è di 1 098 581 km². Secondo il censimento svolto nel 2012 contava 10 027 254 abitanti. Confina a nord, nord-est e a est con il Brasile, a nord-ovest con il Perù, a sud con l'Argentina, a sud-est con il Paraguay e a sud-ovest con il Cile. La Bolivia ha come capitale costituzionale e giudiziaria Sucre, e come centro legislativo e governativo La Paz. Stato senza sbocco al mare, nel 2010 ha stretto un accordo con il vicino Perù, grazie al quale ha ottenuto per 99 anni l'uso del porto di Ilo.",
         "es": null
       },
       "capital": [
@@ -3214,17 +3214,17 @@
       "isoCode": "BS",
       "name": {
         "en": null,
-        "pt": "Bahamas",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Bahamas",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/250px-Flag_of_the_Bahamas.svg.png",
       "description": {
         "en": null,
-        "pt": "As Bahamas ou Baamas, oficialmente Comunidade das Bahamas, são um país insular membro da comunidade do Caribe constituído por mais de 700 ilhas, cayos e ilhéus no oceano Atlântico, a norte de Cuba e da ilha Espanhola, na qual se situam Haiti e República Dominicana, a noroeste do território ultramarino britânico das ilhas Turcas e Caicos e a sudeste do estado americano da Flórida. Sua capital é Nassau, na ilha de Nova Providência. Geograficamente, as Bahamas situam-se no mesmo arquipélago que Cuba, Espanhola e as ilhas Turcas e Caicos. A moeda do país é o dólar bahamense — equiparado com o dólar dos EUA.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Le Bahamas o Bahama, ufficialmente Commonwealth delle Bahamas, sono uno Stato insulare dell'America centrale costituito da un arcipelago corallino di 700 isole e isolette alcune delle quali disabitate, situate nell'Oceano Atlantico, a est della Florida, a nord di Cuba e del resto dei Caraibi, e a ovest della dipendenza britannica delle Isole Turks e Caicos. Le Bahamas sono un'ex colonia della Gran Bretagna e fanno parte del Commonwealth delle nazioni; la lingua ufficiale è l'inglese.",
         "es": null
       },
       "capital": [
@@ -3338,18 +3338,18 @@
       "isoCode": "BT",
       "name": {
         "en": null,
-        "pt": "Butão",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Bután"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/250px-Flag_of_Bhutan.svg.png",
       "description": {
         "en": null,
-        "pt": "O Butão, oficialmente Reino do Butão, é um país interior localizado no sul da Ásia, no extremo leste dos Himalaias. Faz fronteira a norte com a China e para o sul, leste e oeste pela Índia. Mais a oeste, está separado do Nepal pelo estado indiano de Siquim, enquanto mais ao sul está separado de Bangladesh pelos estados indianos de Assam e Bengala Ocidental. A capital e maior cidade do Butão é Thimbu.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Bután es un país del sur de Asia ubicado en la cordillera del Himalaya y sin salida al mar. Limita al norte con la República Popular China y al sur con la India. Se trata de una nación regida por una monarquía constitucional, cuyos órganos y sede de gobierno se hallan en la capital, Timbu. Con una superficie de 40 994 km² y una población inferior a los 800 000 habitantes, Bután es uno de los países más pequeños y con menos población del planeta. Su territorio está dividido en veinte distritos."
       },
       "capital": [
         {
@@ -3473,18 +3473,18 @@
       "isoCode": "BW",
       "name": {
         "en": null,
-        "pt": "Botswana",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Botsuana"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/250px-Flag_of_Botswana.svg.png",
       "description": {
         "en": null,
-        "pt": "Botsuana ou Botswana, anteriormente Bechuana, oficialmente República do Botsuana, é um país sem costa marítima da África Austral. Anteriormente um protetorado britânico chamado Bechuanalândia, adotou seu novo nome após tornar-se independente, em 30 de setembro de 1966. Desde sua independência, o país teve governos democráticos e eleições ininterruptas, sem sofrer qualquer golpe de estado. Sua capital é Gaborone, que é também a maior cidade do país.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Botsuana es un país soberano sin salida al mar del sur de África cuya forma de Gobierno es la república presidencialista y unitaria. Su territorio está dividido en quince distritos, nueve rurales y seis urbanos. La capital del país es la ciudad de Gaborone."
       },
       "capital": [
         {
@@ -3761,17 +3761,17 @@
       "isoCode": "BZ",
       "name": {
         "en": null,
-        "pt": "Belize",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Belize",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/250px-Flag_of_Belize.svg.png",
       "description": {
         "en": null,
-        "pt": "Belize (pronunciado em português europeu: [bɨˈlizɨ]; pronunciado em português brasileiro: [bɛˈlizi, beˈlizi]; pronunciado em inglês: [bəˈliːz] é um país situado na costa nordeste da América Central. Faz fronteira com o México a norte, com o Mar das Caraíbas a leste e com a Guatemala a oeste e sul. Também partilha uma fronteira marítima com as Honduras a sudeste. Belize é membro da Comunidade das Caraíbas e é considerado parte da região caribenha e das históricas Índias Ocidentais Britânicas.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Belize è uno Stato indipendente dell'America centro-settentrionale che si estende per 22966 km² con una popolazione di 422 086 abitanti. La sua capitale è Belmopan, nel distretto di Cayo.",
         "es": null
       },
       "capital": [
@@ -4143,18 +4143,18 @@
       "isoCode": "CF",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "República Centro-Africana",
         "fr": null,
         "it": null,
-        "es": "República Centroafricana"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/250px-Flag_of_the_Central_African_Republic.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A República Centro-Africana, também chamada República da África-Central e Centráfrica, é um país localizado no centro da África, limitado a norte pelo Chade, a nordeste pelo Sudão, a leste pelo Sudão do Sul, a sul pela República Democrática do Congo e pela República do Congo, e a oeste pelos Camarões. A capital do país é a cidade de Bangui.",
         "fr": null,
         "it": null,
-        "es": "La República Centroafricana, o simplemente Centroáfrica, es un país sin litoral ubicado en África Central. Limita con Chad al norte, Sudán al noreste, Sudán del Sur al este, la República Democrática del Congo y la República del Congo al sur y Camerún al oeste. Cubre una superficie de 622 984 kilómetros cuadrados y en 2026 tuvo una población estimada de 6 736 000 habitantes. La capital y ciudad más poblada es Bangui."
+        "es": null
       },
       "capital": [
         {
@@ -4277,18 +4277,18 @@
       "isoCode": "CG",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "República do Congo",
         "fr": null,
         "it": null,
-        "es": "República del Congo"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/250px-Flag_of_the_Republic_of_the_Congo.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A República do Congo, também denominada Congo ou por vezes Congo-Brazavile/Congo-Brazzaville para a distinguir da vizinha República Democrática do Congo, é um país africano limitado a norte pelos Camarões e a República Centro-Africana, a leste e a sul pela República Democrática do Congo, através do Rio Congo, a sul pelo exclave angolano de Cabinda e a oeste pelo Gabão e o Oceano Atlântico. Sua capital é a cidade de Brazavile. O Congo é um país em desenvolvimento, membro da ONU, União Africana, Comunidade Económica e Monetária da África Central, ZPCAS e da Francofonia.",
         "fr": null,
         "it": null,
-        "es": "El Congo, oficialmente la República del Congo, también conocida con los nombres de Congo-Brazzaville o simplemente Congo del Oeste, es un país de África Central."
+        "es": null
       },
       "capital": [
         {
@@ -4586,17 +4586,17 @@
       "isoCode": "CI",
       "name": {
         "en": null,
-        "pt": "Costa do Marfim",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Costa d'Avorio",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/250px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png",
       "description": {
         "en": null,
-        "pt": "A Costa do Marfim, oficial e protocolarmente República de Côte d'Ivoire, é um país africano, limitado a norte pelo Mali e pelo Burquina Fasso, a leste pelo Gana, a sul pelo Oceano Atlântico e a oeste pela Libéria e pela Guiné. Sua capital é Iamussucro, mas a maior cidade é Abijã.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Costa d'Avorio, ufficialmente Repubblica della Costa d'Avorio, è uno Stato indipendente dell'Africa occidentale.",
         "es": null
       },
       "capital": [
@@ -4848,18 +4848,18 @@
       "isoCode": "CM",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Camarões",
         "fr": null,
         "it": null,
-        "es": "Camerún"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/250px-Flag_of_Cameroon.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Camarões, oficialmente República dos Camarões, são um país da região ocidental da África Central. Os Camarões fazem fronteira com a Nigéria a oeste; Chade a nordeste; República Centro-Africana a leste; e Guiné Equatorial, Gabão e República do Congo, ao sul. O litoral dos Camarões encontra-se no Golfo do Biafra, parte do Golfo da Guiné e do Oceano Atlântico. O país é muitas vezes referido como \"África em miniatura\", pela sua diversidade geológica e cultural. Recursos naturais incluem praias, desertos, montanhas, florestas tropicais e savanas. O ponto mais alto é o Monte Camarões no sudoeste, e as cidades mais populosas são Douala, a capital Iaundé e Garoua. Os Camarões são o lar de mais de 200 grupos linguísticos diferentes. O país é conhecido por seus estilos musicais nativos, especialmente makossa e bikutsi, e pela sua bem-sucedida seleção nacional de futebol. Francês e inglês são as línguas oficiais.",
         "fr": null,
         "it": null,
-        "es": "Camerún, oficialmente la República de Camerún, es un Estado unitario organizado como república en el África central. Limita al sur con Guinea Ecuatorial, a continuación con Gabón, y con República del Congo. Al este limita con República Centroafricana, al noreste con Chad, y al oeste con Nigeria. Su litoral se encuentra en el golfo de Biafra, que forma parte del golfo de Guinea. Su capital es Yaundé y su ciudad más poblada es Douala. El país ha sido llamado \"África en miniatura\" por su diversidad geológica y cultural: tiene playas, desiertos, montañas, selvas y sabanas. Su punto más alto es el monte Camerún, en el sudoeste, y sus principales ciudades son Duala, Yaundé y Garua. Habitan el país más de doscientos grupos étnicos y lingüísticos, pero sus lenguas oficiales son el francés y el inglés."
+        "es": null
       },
       "capital": [
         {
@@ -5117,17 +5117,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Colombie",
         "it": null,
-        "es": "Colombia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/250px-Flag_of_Colombia.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "La Colombie, en forme longue la république de Colombie est une république unitaire d'Amérique du Sud comprenant 32 départements. Le pays est situé dans le Nord-Ouest du continent sud-américain ; il est bordé à l'ouest par l'océan Pacifique, au nord-ouest par le Panama, au nord par la mer des Caraïbes, au nord-est par le Venezuela, au sud-est par le Brésil, au sud par le Pérou et au sud-ouest par l'Équateur. La Colombie est le 26 plus grand pays par sa superficie et le 4 en Amérique du Sud. Avec plus de 51 millions d'habitants, la Colombie est le 28 pays le plus peuplé du monde et le 2 de tous les pays de langue espagnole après le Mexique. La Colombie est une moyenne puissance, la 4 plus grande économie d'Amérique latine, et la 3 en Amérique du Sud. La production de café, de fleurs, d'émeraudes, de charbon et de pétrole forme le principal secteur de l'économie colombienne.",
         "it": null,
-        "es": "Colombia, oficialmente República de Colombia, es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es de república presidencialista; con dos cámaras legislativas, cuyos miembros son elegidos por sufragio directo, voluntario y secreto, con cuatro años de mandato, pero que en cambio sí pueden ser reelegidos. Su capital y ciudad más poblada es Bogotá. Es una república organizada políticamente en treinta y dos departamentos descentralizados y el Distrito Capital de Bogotá, sede del Gobierno Nacional."
+        "es": null
       },
       "capital": [
         {
@@ -5259,7 +5259,7 @@
           "name": {
             "en": "San José",
             "pt": "San José (Costa Rica)",
-            "fr": "San José",
+            "fr": "San José (Costa Rica)",
             "it": "San José",
             "es": "San José (Costa Rica)"
           }
@@ -5271,7 +5271,7 @@
           "name": {
             "en": "San José",
             "pt": "San José (Costa Rica)",
-            "fr": "San José",
+            "fr": "San José (Costa Rica)",
             "it": "San José",
             "es": "San José (Costa Rica)"
           }
@@ -5286,7 +5286,7 @@
           "name": {
             "en": "presidential republic",
             "pt": "Presidencialismo",
-            "fr": "presidential republic",
+            "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
           }
@@ -5298,7 +5298,7 @@
           "name": {
             "en": "Spanish",
             "pt": "Spanish",
-            "fr": "Spanish",
+            "fr": "Espagnol costaricain",
             "it": "Spanish",
             "es": "Español costarricense"
           }
@@ -5334,7 +5334,7 @@
           "name": {
             "en": "Costa Rican colón",
             "pt": "Colón costa-riquenho",
-            "fr": "Costa Rican colón",
+            "fr": "Colón costaricien",
             "it": "Colón costaricano",
             "es": "Colón (moneda de Costa Rica)"
           },
@@ -5347,7 +5347,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -5357,7 +5357,7 @@
           "name": {
             "en": "CST",
             "pt": "Horário Padrão Central",
-            "fr": "CST",
+            "fr": "Heure du Centre",
             "it": "CST",
             "es": "Hora estándar del centro"
           }
@@ -5376,16 +5376,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Cuba"
+        "it": "Cuba",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/250px-Flag_of_Cuba.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Cuba, oficialmente República de Cuba, es un Estado soberano e insular ubicado en las Antillas del mar Caribe. El territorio está organizado en quince provincias y un municipio especial con La Habana como capital y ciudad más poblada."
+        "it": "Cuba, ufficialmente Repubblica di Cuba, è uno Stato insulare dell'America centrale, posto tra il mar dei Caraibi, il golfo del Messico e l'oceano Atlantico. A nord si trovano gli Stati Uniti e le Bahamas, a nord-est le Isole Turks e Caicos, a ovest il Messico, a sud le isole Cayman e la Giamaica, a sud-est Hispaniola.",
+        "es": null
       },
       "capital": [
         {
@@ -5419,7 +5419,7 @@
           "articleId": "Communist_state",
           "name": {
             "en": "Communist state",
-            "pt": "Communist state",
+            "pt": "Estado comunista",
             "fr": "État communiste",
             "it": "Stato comunista",
             "es": "Estado comunista"
@@ -5431,7 +5431,7 @@
           "articleId": "Cuban_Spanish",
           "name": {
             "en": "Spanish",
-            "pt": "Spanish",
+            "pt": "Espanhol cubano",
             "fr": "Espagnol cubain",
             "it": "Spanish",
             "es": "Español cubano"
@@ -5443,7 +5443,7 @@
           "articleId": "Cubans",
           "name": {
             "en": "Cuban",
-            "pt": "Cuban",
+            "pt": "Cubanos",
             "fr": "Cubains",
             "it": "Cuban",
             "es": "Cubanos"
@@ -5457,7 +5457,7 @@
           "articleId": "Cuban peso",
           "name": {
             "en": "Cuban peso",
-            "pt": "Cuban peso",
+            "pt": "Peso cubano",
             "fr": "Peso cubain",
             "it": "Peso cubano",
             "es": "Peso (moneda de Cuba)"
@@ -5470,7 +5470,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -5499,17 +5499,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": "Cap-Vert",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Cabo Verde"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/250px-Flag_of_Cape_Verde.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": "Le Cap-Vert, officiellement Cabo Verde, en forme longue la république du Cap-Vert ou république de Cabo Verde est un État insulaire d'Afrique de l'Ouest, composé d'un archipel de dix îles volcaniques. Situé dans l'océan Atlantique, au large des côtes du Sénégal et de la Mauritanie, il couvre une superficie d'environ 4 000 km. Praia, la capitale, se trouve à 644 km à l'ouest de la presqu'île du Cap-Vert, au Sénégal. L'archipel se divise en deux séries d'îles : au sud, les îles de Sotavento et au nord, les îles de Barlavento. L'île de Santiago comprend à elle seule plus de la moitié de la population du pays, et Praia est la plus grande ville du pays.",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Cabo Verde, cuyo nombre oficial es República de Cabo Verde, es un Estado soberano insular de África, situado en el océano Atlántico, más concretamente en el archipiélago volcánico macaronésico de Cabo Verde, frente a las costas senegalesas, que consta de diez islas volcánicas con una superficie terrestre combinada de aproximadamente 4033 km². Estas islas se encuentran entre 600 a 850 km al oeste de la península de Cabo Verde, situado en el punto más occidental de África continental. Las islas de Cabo Verde forman parte de la ecorregión de la Macaronesia, junto con las Azores, las Canarias, Madeira y las Islas Salvajes. Su forma de gobierno es la república semipresidencialista."
       },
       "capital": [
         {
@@ -5769,16 +5769,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "República Checa"
+        "it": "Repubblica Ceca",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/250px-Flag_of_the_Czech_Republic.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "La República Checa, también conocida como Chequia, es un país soberano de Europa Central sin litoral. Limita con Alemania al oeste, con Austria al sur, con Eslovaquia al este y con Polonia al norte. Su capital y mayor ciudad es Praga. La República Checa está formada por los territorios históricos de Bohemia y Moravia, además de una pequeña parte de Silesia. Es uno de los veintisiete Estados soberanos que forman la Unión Europea."
+        "it": "La Repubblica Ceca o Cechia è uno Stato indipendente senza sbocco al mare dell'Europa centrale, membro dell'Unione europea. La sua capitale è Praga.",
+        "es": null
       },
       "capital": [
         {
@@ -6170,16 +6170,16 @@
       "isoCode": "DK",
       "name": {
         "en": null,
-        "pt": "Reino da Dinamarca",
-        "fr": null,
+        "pt": null,
+        "fr": "Danemark",
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/250px-Flag_of_Denmark.svg.png",
       "description": {
         "en": null,
-        "pt": "O Reino da Dinamarca é uma monarquia constitucional que se constitui numa comunidade de nações, sendo os países constituintes a própria Dinamarca, na Europa setentrional, e dois países autônomos ultramarinos - as Ilhas Faroé no Atlântico Norte e a Groenlândia no extremo setentrional da América do Norte. O relacionamento entre esses países constituintes é referido como Rigsfællesskabet.",
-        "fr": null,
+        "pt": null,
+        "fr": "Le Danemark, en forme longue le royaume de Danemark, est un pays transcontinental dont le territoire métropolitain est situé en Europe du Nord et en Scandinavie. Il comprend également les régions autonomes des Îles Féroé, en Atlantique Nord, et le Groenland, en Amérique du Nord. Sa capitale et plus grande ville est Copenhague.",
         "it": null,
         "es": null
       },
@@ -6398,16 +6398,16 @@
       "isoCode": "DM",
       "name": {
         "en": null,
-        "pt": null,
-        "fr": "Dominique (pays)",
+        "pt": "Dominica",
+        "fr": null,
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/250px-Flag_of_Dominica.svg.png",
       "description": {
         "en": null,
-        "pt": null,
-        "fr": "La Dominique en forme longue le Commonwealth de la Dominique ou Commonwealth de Dominique, est un pays insulaire de la mer des Caraïbes situé dans l'archipel des Petites Antilles, entre les îles françaises des Saintes et de Marie-Galante au nord, et la Martinique au sud. Son nom kalinago est Wai'tu kubuli qui signifie « Son corps est grand ».",
+        "pt": "A Dominica é um Estado soberano insular constituído pela ilha homónima e situado no mar das Caraíbas, mais precisamente na região das Pequenas Antilhas. Os seus vizinhos são dois departamentos ultramarinos franceses: Guadalupe, a nor-noroeste, e Martinica, a sudeste. Tem uma área de 750 km², sendo o seu ponto mais alto o Morne Diablotins, com 1 447 m. A Comunidade da Dominica tem 71 293 habitantes, de acordo com o censo de 2011. A sua capital e maior cidade é Roseau.",
+        "fr": null,
         "it": null,
         "es": null
       },
@@ -6532,17 +6532,17 @@
       "isoCode": "DO",
       "name": {
         "en": null,
-        "pt": "República Dominicana",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Repubblica Dominicana",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/250px-Flag_of_the_Dominican_Republic.svg.png",
       "description": {
         "en": null,
-        "pt": "A República Dominicana é uma nação na ilha de Hispaniola, parte do arquipélago das Grandes Antilhas na região do Caribe. A parte ocidental da ilha é ocupada pelo Haiti, fazendo da ilha uma das duas no Caribe, juntamente com São Martinho, que é compartilhada por dois países. Tanto por área quanto por população, a República Dominicana é o segundo maior país do Caribe, com 48 445 km e uma população estimada em 10 milhões de habitantes, um milhão dos quais vivem na capital, São Domingos.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Repubblica Dominicana è una repubblica presidenziale situata nei due terzi orientali dell'isola caraibica di Hispaniola, nelle Grandi Antille. Confina a ovest con la repubblica di Haiti ed è bagnata a nord dall'oceano Atlantico, a sud dal mar dei Caraibi e ad est dal canale della Mona, che la separa da Porto Rico. La capitale è Santo Domingo, la lingua ufficiale è lo spagnolo.",
         "es": null
       },
       "capital": [
@@ -7213,17 +7213,17 @@
       "isoCode": "ER",
       "name": {
         "en": null,
-        "pt": "Eritreia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Eritrea",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/250px-Flag_of_Eritrea.svg.png",
       "description": {
         "en": null,
-        "pt": "Eritreia, oficialmente Estado da Eritreia, é um país localizado no Chifre da África. Sua capital é Asmara. Faz fronteira com o Sudão a oeste, a Etiópia a sul, e Djibuti a sudeste. As partes nordeste e leste da Eritreia têm um extenso litoral ao longo do Mar Vermelho, tendo na outra margem a Arábia Saudita e o Iémen. O arquipélago de Dalaque e várias das ilhas Hanish também fazem parte da Eritreia. O país tem uma área total de 117 600 km², com uma população estimada em cerca de 5 milhões de habitantes. O nome do país é baseado no nome grego para o Mar Vermelho, que foi adotado pela primeira vez para a Eritreia italiana em 1890.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "L'Eritrea, ufficialmente Stato di Eritrea, è uno Stato che si trova nell'estremità settentrionale del Corno d'Africa, confinante con il Sudan a ovest, con l'Etiopia a sud e con il Gibuti a sud-est. L'est ed il nord-est del Paese possiedono una lunga linea costiera sul Mar Rosso, che lo separa da Arabia Saudita e Yemen. Sono parte dell'Eritrea l'arcipelago delle isole Dahlak e alcune isole a ridosso delle isole Hanish.",
         "es": null
       },
       "capital": [
@@ -7349,16 +7349,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "España"
+        "it": "Spagna",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/250px-Bandera_de_Espa%C3%B1a.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "España, formalmente Reino de España, es un país soberano transcontinental, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la monarquía parlamentaria. Es uno de los veintisiete Estados soberanos que forman la Unión Europea. Su territorio, con capital en Madrid, está organizado en diecisiete comunidades autónomas, formadas a su vez por cincuenta provincias, dos ciudades autónomas y distintas plazas de soberanía ubicadas en el norte del continente africano."
+        "it": "La Spagna, il cui nome ufficiale è Regno di Spagna, è uno Stato dell'Europa occidentale ed è membro dell'Unione europea. Monarchia parlamentare, la Spagna è situata all'estremità occidentale dell'Europa e occupa buona parte della superficie della penisola iberica.",
+        "es": null
       },
       "capital": [
         {
@@ -7503,16 +7503,16 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
-        "it": "Etiopia",
+        "fr": "Éthiopie",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/250px-Flag_of_Ethiopia.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
-        "it": "L'Etiopia, ufficialmente denominata Repubblica Federale Democratica d'Etiopia, è uno Stato dell'Africa orientale situato nel Corno d'Africa, con una popolazione di circa 121,4 milioni di abitanti e con capitale Addis Abeba.",
+        "fr": "L'Éthiopie, en forme longue la république démocratique fédérale d'Éthiopie est un État de la Corne de l'Afrique. L'Éthiopie a des frontières communes avec l'Érythrée au nord, la Somalie à l'est-sud-est, le Soudan au nord-ouest, le Soudan du Sud à l'ouest-sud-ouest, le Kenya au sud et la république de Djibouti au nord-est. Depuis l'indépendance de l'Érythrée en 1993, l'Éthiopie n'a plus d'accès à la mer.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -7637,17 +7637,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Finlande",
         "it": null,
-        "es": "Finlandia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/250px-Flag_of_Finland.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "La Finlande, en forme longue la république de Finlande, est un État souverain d'Europe du Nord dont le territoire s'étend sur le flanc est et sur 100 000 îles de la mer Baltique. La partie continentale possède près de 200 000 lacs et partage ses frontières terrestres avec la Russie à l'est, et avec la Suède et la Norvège au nord, tandis que les archipels de Turku et d'Åland constituent l'essentiel de la partie insulaire du pays.",
         "it": null,
-        "es": "Finlandia, oficialmente la República de Finlandia, es uno de los veintisiete Estados soberanos que forman la Unión Europea. Está situado en el noreste de Europa. Tiene fronteras al oeste con Suecia, al este con Rusia y al norte con Noruega. Por el oeste y el sur está rodeada por el mar Báltico, que la separa de Suecia y Estonia, cruzando los golfos de Botnia y Finlandia, respectivamente. La capital y ciudad más importante del país es Helsinki, y la segunda ciudad más grande y área urbana más grande es Tampere, 180 kilómetros al norte de Helsinki."
+        "es": null
       },
       "capital": [
         {
@@ -8207,17 +8207,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Gabon",
         "it": null,
-        "es": "Gabón"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/250px-Flag_of_Gabon.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Le Gabon, en forme longue la République gabonaise, est un pays situé en Afrique centrale, traversé par l'équateur, frontalier à l'est, au sud-est et au sud de la république du Congo, au nord-nord-ouest de la Guinée équatoriale et au nord du Cameroun. Sa capitale administrative est Libreville et Port-Gentil la capitale économique.",
         "it": null,
-        "es": "Gabón, oficialmente la República Gabonesa, es un país situado en la costa oeste de África central. Limita con Guinea Ecuatorial y Camerún al norte, la República del Congo al este y sur y con el océano Atlántico al oeste. Tiene un área de 267 667 km², y su población se estima en 2,3 millones de personas. Su capital y mayor ciudad es Libreville. Hay llanuras costeras, montañas y una sabana al este."
+        "es": null
       },
       "capital": [
         {
@@ -8342,16 +8342,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Reino Unido"
+        "it": "Regno Unito",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/250px-Flag_of_the_United_Kingdom_%281-2%29.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "El Reino Unido, oficialmente el Reino Unido de Gran Bretaña e Irlanda del Norte,es un país soberano e insular ubicado al noroeste de la Europa continental. Su territorio está formado geográficamente por la isla de Gran Bretaña, el noreste de la isla de Irlanda y pequeñas islas adyacentes. Su capital y ciudad más poblada es Londres. Desde la independencia de la República de Irlanda, Irlanda del Norte ha sido la única parte del país con una frontera terrestre, hasta la inauguración del Eurotúnel, que es conocido por unir por tierra a la isla de Gran Bretaña con Francia y las tierras continentales europeas. Gran Bretaña limita al norte y al oeste con el océano Atlántico, al este con el mar del Norte, al sur con el canal de la Mancha y al oeste con el mar de Irlanda. El inglés es el idioma de facto y como tal comprende una de las naciones centrales de la angloesfera."
+        "it": "Il Regno Unito, ufficialmente Regno Unito di Gran Bretagna e Irlanda del Nord, è uno Stato insulare dell'Europa occidentale con una popolazione di circa 69,6 milioni di abitanti. Il Regno Unito di Gran Bretagna e Irlanda nacque con l'Atto di Unione del 1800, che univa il Regno di Gran Bretagna e il Regno d'Irlanda. Gran parte dell'Irlanda si separò poi nel 1922, costituendo lo Stato Libero d'Irlanda.",
+        "es": null
       },
       "capital": [
         {
@@ -8495,18 +8495,18 @@
       "isoCode": "GD",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Granada (país)",
         "fr": null,
         "it": null,
-        "es": "Granada (país)"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/250px-Flag_of_Grenada.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Granada é um país caribenho, constituído pela ilha homónima e pela metade sul das ilhas Granadinas, das quais a maior é Carriacou. Tem fronteira marítima com São Vicente e Granadinas, a nordeste, e está também próxima de Trinidad e Tobago, a sudeste, e da Venezuela, a sudoeste. A capital do país é São Jorge.",
         "fr": null,
         "it": null,
-        "es": "Granada es un país insular de América, que forma parte de las Antillas Menores, en el mar Caribe. Es el segundo país independiente más pequeño del hemisferio occidental por lo que es considerado un micro-Estado. Se encuentra en la zona sureste del mar Caribe, al sur de San Vicente y las Granadinas, a 160 km al norte de Trinidad y Tobago y al nordeste del territorio continental de Venezuela, y a 109 km al sur de San Vicente y las Granadinas."
+        "es": null
       },
       "capital": [
         {
@@ -8619,18 +8619,18 @@
       "isoCode": "GE",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Geórgia",
         "fr": null,
         "it": null,
-        "es": "Georgia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/250px-Flag_of_Georgia.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Geórgia é um país transcontinental localizado na fronteira entre a Europa Oriental e a Ásia Ocidental. Limita-se com a Rússia a norte e a leste, a sul com a Turquia e a Arménia, a leste e a sul com o Azerbaijão e a oeste com o mar Negro. Sua capital é Tiblíssi, que também é sua maior cidade. O país é uma república unitária, semipresidencial, com o governo eleito através de uma democracia representativa. Seu território é de 69 700 km² e sua população, conforme estimativas de 2017, é de cerca de 3,718 milhões de habitantes. Mais de um quarto da população vive na região de Tiblíssi, com outras grandes cidades sendo Cutáissi, Batumi e Rustavi.",
         "fr": null,
         "it": null,
-        "es": "Georgia es un país soberano localizado en la región del Cáucaso, en la costa este del mar Negro, en el límite entre la Europa Oriental y el Asia Occidental. Geográficamente, su territorio se ha clasificado como euroasiático o como bicontinental dependiendo de la correspondiente convención, aunque cultural, histórica y políticamente, Georgia se considera como parte de Europa. Comparte fronteras con Rusia al norte y noreste, con Turquía y Armenia al sur, y con Azerbaiyán al sudeste. Georgia abarca una superficie de 69.700 kilómetros cuadrados. Cuenta con una población de 3,9 millones de habitantes, de los cuales más de un tercio reside en Tiflis, la capital y ciudad más grande del país, aunque desde 2012 el Parlamento tiene su sede en la ciudad de Kutaisi.Los georgianos —pobladores nativos de la región que constituyen la mayoría de la población— se distinguen etnolingüísticamente de todas las naciones vecinas y hablan principalmente georgiano, una lengua kartveliana que no guarda relación con ninguna otra familia lingüística del mundo."
+        "es": null
       },
       "capital": [
         {
@@ -8744,18 +8744,18 @@
       "isoCode": "GH",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Gana",
         "fr": null,
         "it": null,
-        "es": "Ghana"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/250px-Flag_of_Ghana.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Gana é um país da África Ocidental, limitado a norte pela Burquina Fasso, a leste pelo Togo, a sul pelo Golfo da Guiné e a oeste pela Costa do Marfim. A capital e maior cidade do Gana é Acra. A palavra Gana significa \"guerreiro\" e é derivada do nome do antigo Império do Gana.",
         "fr": null,
         "it": null,
-        "es": "Ghana, oficialmente la República de Ghana, es un país de África Occidental constituido como una república presidencialista. Limita al norte con Burkina Faso, al este con Togo, al oeste con Costa de Marfil y al sur con el golfo de Guinea. Su capital y ciudad más grande es Acra, y otras ciudades importantes son Tema, Kumasi, Sunyani, Ho, Costa del Cabo, Techiman, Tamale y Sekondi-Takoradi."
+        "es": null
       },
       "capital": [
         {
@@ -8868,17 +8868,17 @@
       "isoCode": "GM",
       "name": {
         "en": null,
-        "pt": "Gâmbia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Gambia",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/250px-Flag_of_The_Gambia.svg.png",
       "description": {
         "en": null,
-        "pt": "Gâmbia, oficialmente República da Gâmbia, é um pequeno país da África Ocidental que rodeia o curso inferior do Rio Gâmbia. É rodeado pelo Senegal por todos os lados exceto a oeste, onde faz fronteira com o Oceano Alântico. A sua capital é Banjul, que tem a área metropolitana mais extensa em todo o país.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Gambia, ufficialmente Repubblica del Gambia o Repubblica della Gambia, è uno Stato dell'Africa occidentale. È completamente circondato dal Senegal, a eccezione del punto in cui il fiume Gambia sfocia nell'Oceano Atlantico. Il Gambia è il più piccolo Stato dell'Africa continentale. Nel 1965 ottenne l'indipendenza dall'Impero britannico. La sua capitale è Banjul, ma i maggiori agglomerati urbani sono Serekunda e Brikama.",
         "es": null
       },
       "capital": [
@@ -8992,18 +8992,18 @@
       "isoCode": "GN",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Guiné",
         "fr": null,
         "it": null,
-        "es": "Guinea"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/250px-Flag_of_Guinea.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Guiné, oficialmente República da Guiné é um país da África Ocidental limitado a norte pela Guiné-Bissau e pelo Senegal, a norte e leste pelo Mali, a leste pela Costa do Marfim, a sul pela Libéria e pela Serra Leoa e a oeste pelo oceano Atlântico. Com 246 000 km e dez milhões de habitantes, a Guiné é uma república e a capital, sede do governo e maior cidade é Conacri.",
         "fr": null,
         "it": null,
-        "es": "Guinea, oficialmente la República de Guinea, frecuentemente llamada Guinea-Conakri para diferenciarla de otros dos países africanos, su vecino Guinea-Bisáu y Guinea Ecuatorial, es un país de África occidental, antiguamente conocido como Guinea Francesa. Limita con Guinea-Bisáu y Senegal al norte, con Malí al norte y este, con Costa de Marfil al este, con Liberia y Sierra Leona al sur y con el océano Atlántico al oeste."
+        "es": null
       },
       "capital": [
         {
@@ -9118,16 +9118,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Guinea Ecuatorial"
+        "it": "Guinea Equatoriale",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/250px-Flag_of_Equatorial_Guinea.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Guinea Ecuatorial, oficialmente República de Guinea Ecuatorial, es un país africano bañado por las aguas del golfo de Guinea que se define en su constitución como Estado independiente, republicano, unitario, social y democrático, y cuya forma de gobierno es la república presidencialista. Su territorio está formado por ocho provincias. Su capital desde el 2 de enero de 2026 es Ciudad de la Paz, que reemplazó a la anterior capital, Malabo."
+        "it": "La Guinea Equatoriale, ufficialmente Repubblica della Guinea Equatoriale, è uno Stato dell'Africa centrale.",
+        "es": null
       },
       "capital": [
         {
@@ -9270,17 +9270,17 @@
       "isoCode": "GR",
       "name": {
         "en": null,
-        "pt": "Grécia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Grecia",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/250px-Flag_of_Greece.svg.png",
       "description": {
         "en": null,
-        "pt": "Grécia, oficialmente República Helênica ou Helénica e historicamente conhecida como Hélade, é um país localizado no sul da Europa. De acordo com dados do censo de 2011, a população grega é de cerca de 11 milhões de pessoas. Atenas é a capital e a maior cidade do país.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Grecia, ufficialmente Repubblica Ellenica, è uno Stato dell'Europa meridionale, posto sul lembo meridionale della penisola balcanica. È una repubblica parlamentare unitaria e la capitale è la città di Atene. La lingua ufficiale è il greco moderno.",
         "es": null
       },
       "capital": [
@@ -9415,18 +9415,18 @@
       "isoCode": "GT",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Guatemala",
         "fr": null,
         "it": null,
-        "es": "Guatemala"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/250px-Flag_of_Guatemala.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Guatemala, oficialmente República da Guatemala, é um país da América Central, limitado a oeste e a norte pelo México, a leste pelo Belize, pelo Golfo das Honduras e pelas Honduras e a sul por El Salvador e pelo Oceano Pacífico. Com uma população estimada em cerca de 18 917 714 é o país mais populoso da América Central e o 10º da América, e também a sua economia é a 9ª maior da América Latina. A Guatemala é uma democracia representativa; sua capital e maior cidade é Nueva Guatemala de la Asunción, também conhecida como Cidade da Guatemala.",
         "fr": null,
         "it": null,
-        "es": "Guatemala, oficialmente República de Guatemala, es un país soberano situado en el extremo noroccidental de América Central. De acuerdo con su constitución, su forma de gobierno consiste en una república democrática, laica y representativa para su administración en 22 departamentos y 340 municipios, los cuales están organizados en 8 regiones administrativas. Su capital y ciudad más poblada es Ciudad de Guatemala. Es el décimo país más poblado de América y la octava economía más grande de América Latina."
+        "es": null
       },
       "capital": [
         {
@@ -9539,18 +9539,18 @@
       "isoCode": "GW",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Guiné-Bissau",
         "fr": null,
         "it": null,
-        "es": "Guinea-Bisáu"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/250px-Flag_of_Guinea-Bissau.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Guiné-Bissau, oficialmente República da Guiné-Bissau, é um país da África Ocidental que faz fronteira com o Senegal ao norte, Guiné-Conacri ao sul e ao leste e com o Oceano Atlântico a oeste. O território guineense abrange 36 125 km de área, com uma população estimada de 2 milhões de pessoas segundo o censo de 2009.",
         "fr": null,
         "it": null,
-        "es": "Guinea-Bisáu o Guinea-Bissau, oficialmente la República de Guinea-Bisáu, es un país del oeste de África que cubre 36 125 km² con una población estimada de 1 644 000 habitantes. Limita con Senegal al norte, Guinea al sur y al este, y con el océano Atlántico al oeste."
+        "es": null
       },
       "capital": [
         {
@@ -9797,18 +9797,18 @@
       "isoCode": "HN",
       "name": {
         "en": null,
-        "pt": "Honduras",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Honduras"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Honduras_%281949%E2%80%932022%2C_2026%E2%80%93present%29.svg/250px-Flag_of_Honduras_%281949%E2%80%932022%2C_2026%E2%80%93present%29.svg.png",
       "description": {
         "en": null,
-        "pt": "Honduras, oficialmente República das Honduras ou República de Honduras, é um país da América Central, limitado a norte pelo Golfo das Honduras, e a leste pelo Mar do Caribe, a sul pela Nicarágua, pelo Golfo de Fonseca e por El Salvador e a oeste pela Guatemala. Sua capital é Tegucigalpa.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Honduras, oficialmente República de Honduras, es un país ubicado en el centro de América Central con costas en el mar Caribe al norte y en el océano Pacífico al sur. Honduras es un estado unitario, y se autodefine como libre, soberano e independiente. Tegucigalpa, junto con Comayagüela, constituyen el Distrito Central, por lo tanto las dos ciudades juntas forman la capital del país, siendo el primer y más grande núcleo urbano de Honduras."
       },
       "capital": [
         {
@@ -9843,7 +9843,7 @@
           "name": {
             "en": "presidential republic",
             "pt": "Presidencialismo",
-            "fr": "Régime présidentiel",
+            "fr": "presidential republic",
             "it": "Repubblica presidenziale",
             "es": "Presidencialismo"
           }
@@ -9855,7 +9855,7 @@
           "name": {
             "en": "Spanish",
             "pt": "Spanish",
-            "fr": "Espagnol hondurien",
+            "fr": "Spanish",
             "it": "Spanish",
             "es": "Español hondureño"
           }
@@ -9891,7 +9891,7 @@
           "name": {
             "en": "Lempira",
             "pt": "Lempira",
-            "fr": "Lempira (monnaie)",
+            "fr": "Lempira",
             "it": "Lempira honduregna",
             "es": "Lempira (moneda)"
           },
@@ -9904,7 +9904,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "Temps universel coordonné",
+            "fr": "UTC",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -9914,7 +9914,7 @@
           "name": {
             "en": "CST",
             "pt": "Horário Padrão Central",
-            "fr": "Heure du Centre",
+            "fr": "CST",
             "it": "CST",
             "es": "Hora estándar del centro"
           }
@@ -9988,7 +9988,7 @@
           "articleId": "Croatian_language",
           "name": {
             "en": "Croatian",
-            "pt": "Croatian",
+            "pt": "Língua croata",
             "fr": "Croate",
             "it": "Lingua croata",
             "es": "Idioma croata"
@@ -10000,7 +10000,7 @@
           "articleId": "Croat",
           "name": {
             "en": "Croatian",
-            "pt": "Croatian",
+            "pt": "Croatas",
             "fr": "Croates",
             "it": "Croati",
             "es": "Pueblo croata"
@@ -10038,7 +10038,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -10048,7 +10048,7 @@
           "articleId": "Central_European_Time",
           "name": {
             "en": "CET",
-            "pt": "CET",
+            "pt": "Horário da Europa Central",
             "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
@@ -10113,7 +10113,7 @@
             "en": "semi-presidential republic",
             "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
-            "it": "Repubblica semipresidenziale",
+            "it": "semi-presidential republic",
             "es": "Semipresidencialismo"
           }
         }
@@ -10125,7 +10125,7 @@
             "en": "Haitian Creole",
             "pt": "Língua crioula haitiana",
             "fr": "Créole haïtien",
-            "it": "Lingua creola haitiana",
+            "it": "Haitian Creole",
             "es": "Criollo haitiano"
           }
         },
@@ -10161,7 +10161,7 @@
             "en": "Gourde",
             "pt": "Gourde",
             "fr": "Gourde (monnaie)",
-            "it": "Gourde haitiano",
+            "it": "Gourde",
             "es": "Gourde (moneda de Haití)"
           },
           "isoCode": "HTG"
@@ -10174,7 +10174,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "Tempo coordinato universale",
+            "it": "UTC",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -10184,7 +10184,7 @@
             "en": "EST",
             "pt": "Zona de Tempo Oriental",
             "fr": "Heure de l'Est",
-            "it": "Ora standard orientale",
+            "it": "EST",
             "es": "Horario del este de América del Norte"
           }
         }
@@ -10202,16 +10202,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Hungría"
+        "it": "Ungheria",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/250px-Flag_of_Hungary.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Hungría es uno de los veintisiete Estados soberanos que forman la Unión Europea. Está situado en la llanura panónica, y tiene fronteras con Eslovaquia, con Ucrania y Rumanía, con Serbia y Croacia, con Eslovenia y con Austria. Su capital y mayor ciudad es Budapest. Su idioma oficial es el húngaro, también conocido como magiar, que pertenece al grupo ugrofinés y que, además, es la lengua no indoeuropea con más hablantes de toda Europa."
+        "it": "L'Ungheria è uno Stato membro dell'Unione europea, costituito come repubblica e situato nell'Europa centro-orientale, nella Pianura Pannonica. La lingua ufficiale è l'ungherese.",
+        "es": null
       },
       "capital": [
         {
@@ -10324,18 +10324,18 @@
       "isoCode": "ID",
       "name": {
         "en": null,
-        "pt": "Indonésia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Indonesia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/250px-Flag_of_Indonesia.svg.png",
       "description": {
         "en": null,
-        "pt": "Indonésia, oficialmente República da Indonésia, é um país localizado entre o Sudeste Asiático e a Austrália, sendo o maior arquipélago do mundo, composto pelas Ilhas de Sonda, a metade ocidental da Nova Guiné e compreendendo no total 17 508 ilhas. Por ser um arquipélago, tem fronteiras terrestres com a parte oriental da Malásia, Timor-Leste e Papua-Nova Guiné ; e marítimas com as Filipinas, Malásia, Singapura, Palau, Austrália e com o território indiano de Andamão e Nicobar. A localização entre dois continentes — Ásia e Oceania — faz da Indonésia uma nação transcontinental. O país é uma república, com poder legislativo e presidente eleitos por sufrágio universal, sendo sua capital a cidade de Jacarta, com uma população de cerca de 10 milhões de pessoas. É um dos membros fundadores da Associação de Nações do Sudeste Asiático e membro do G20. A economia indonésia é a décima sexta maior economia do mundo e a sétima maior em paridade do poder de compra.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Indonesia, oficialmente la República de Indonesia, es un país ubicado al sudeste de Asia y al norte de Oceanía, entre los océanos Índico y Pacífico. Se compone de más de 17 000 islas, incluidas Sumatra, Java, Célebes y partes de Borneo y Nueva Guinea. Indonesia es el mayor Estado archipelágico del mundo y el decimocuarto país más extenso, con una superficie de 1 904 569 kilómetros cuadrados. Con más de 280 millones de habitantes, Indonesia es el cuarto país más poblado del mundo y el país con mayor población de mayoría musulmana. Java, la isla más poblada del mundo, alberga a más de la mitad de la población del país."
       },
       "capital": [
         {
@@ -10472,7 +10472,7 @@
             "en": "Dublin",
             "pt": "Dublin",
             "fr": "Dublin",
-            "it": "Dublin",
+            "it": "Dublino",
             "es": "Dublín"
           }
         }
@@ -10484,7 +10484,7 @@
             "en": "Dublin",
             "pt": "Dublin",
             "fr": "Dublin",
-            "it": "Dublin",
+            "it": "Dublino",
             "es": "Dublín"
           }
         }
@@ -10511,7 +10511,7 @@
             "en": "Irish",
             "pt": "Língua irlandesa",
             "fr": "Irlandais",
-            "it": "Irish",
+            "it": "Lingua irlandese",
             "es": "Idioma irlandés"
           }
         },
@@ -10533,7 +10533,7 @@
             "en": "Irish",
             "pt": "Irlandeses",
             "fr": "Irlandais (peuple)",
-            "it": "Irish",
+            "it": "Irlandesi",
             "es": "Pueblo irlandés"
           }
         }
@@ -10558,7 +10558,7 @@
             "en": "€",
             "pt": "€",
             "fr": "Symbole euro",
-            "it": "€",
+            "it": "Simbolo dell'euro",
             "es": "Símbolo del euro"
           },
           "isoCode": "EUR"
@@ -10571,7 +10571,7 @@
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
-            "it": "UTC",
+            "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
         },
@@ -10581,7 +10581,7 @@
             "en": "GMT",
             "pt": "Tempo Médio de Greenwich",
             "fr": "Temps moyen de Greenwich",
-            "it": "GMT",
+            "it": "Ora media di Greenwich",
             "es": "Hora media de Greenwich"
           }
         }
@@ -10598,24 +10598,24 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": "Israël",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Israel"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/250px-Flag_of_Israel.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": "Israël, en forme longue l'État d'Israël, également appelé de manière informelle l'État hébreu, est un pays situé sur la côte orientale de la mer Méditerranée au Proche-Orient, en Asie de l'Ouest. Le pays fait géographiquement partie du Levant et borde le Liban, la Syrie, la Jordanie, l'Égypte ainsi que la Palestine, constituée de la Cisjordanie et de la bande de Gaza.",
+        "fr": null,
         "it": null,
-        "es": null
+        "es": "Israel, oficialmente Estado de Israel, es un estado soberano de Asia occidental ubicado en la región de Oriente Próximo, en el Levante mediterráneo. Limita al norte con el Líbano, al noreste con Siria, al este con Jordania, Cisjordania y el mar Muerto, al oeste con la Franja de Gaza, al suroeste con la península del Sinaí y al sur con el golfo de Áqaba, en el mar Rojo. Con una población de casi 10 millones de habitantes, la mayoría de los cuales son judíos, Israel es el único Estado judío del mundo. Es también el hogar de árabes musulmanes, cristianos, drusos y samaritanos, así como otros grupos religiosos y étnicos minoritarios. La capital —con reconocimiento internacional limitado—, sede del gobierno y mayor ciudad del país es Jerusalén. El principal centro económico y financiero se encuentra en la ciudad de Tel Aviv, y el mayor centro industrial se localiza en Haifa."
       },
       "capital": [
         {
           "articleId": "Jerusalem",
           "name": {
             "en": "Jerusalem",
-            "pt": "Jerusalem",
+            "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
             "es": "Jerusalén"
@@ -10625,7 +10625,7 @@
           "articleId": "Status_of_Jerusalem",
           "name": {
             "en": "limited recognition",
-            "pt": "limited recognition",
+            "pt": "Posições sobre Jerusalém",
             "fr": "limited recognition",
             "it": "Status di Gerusalemme",
             "es": "limited recognition"
@@ -10637,7 +10637,7 @@
           "articleId": "Jerusalem",
           "name": {
             "en": "Jerusalem",
-            "pt": "Jerusalem",
+            "pt": "Jerusalém",
             "fr": "Jérusalem",
             "it": "Gerusalemme",
             "es": "Jerusalén"
@@ -10647,7 +10647,7 @@
           "articleId": "Status_of_Jerusalem",
           "name": {
             "en": "limited recognition",
-            "pt": "limited recognition",
+            "pt": "Posições sobre Jerusalém",
             "fr": "limited recognition",
             "it": "Status di Gerusalemme",
             "es": "limited recognition"
@@ -10686,7 +10686,7 @@
           "articleId": "Israelis",
           "name": {
             "en": "Israeli",
-            "pt": "Israeli",
+            "pt": "Israelenses",
             "fr": "Israéliens",
             "it": "Israeliani",
             "es": "Pueblo israelí"
@@ -10700,7 +10700,7 @@
           "articleId": "Israeli new shekel",
           "name": {
             "en": "New shekel",
-            "pt": "New shekel",
+            "pt": "Novo shekel israelense",
             "fr": "Shekel",
             "it": "Nuovo shekel israeliano",
             "es": "Nuevo séquel"
@@ -10713,7 +10713,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -10896,17 +10896,17 @@
       "isoCode": "IQ",
       "name": {
         "en": null,
-        "pt": "Iraque",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Iraq",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/250px-Flag_of_Iraq.svg.png",
       "description": {
         "en": null,
-        "pt": "O Iraque, oficialmente República do Iraque é um país do Oriente Médio, limitado a norte pela Turquia, a leste pelo Irã, a sul pelo Golfo Pérsico, pelo Kuwait e pela Arábia Saudita e a oeste pela Jordânia e pela Síria. Sua capital é a cidade de Bagdá, no centro do país, às margens do rio Tigre.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "L'Iraq o Irak, ufficialmente Repubblica d'Iraq, è uno Stato del Medio Oriente. Confina con la Turchia a nord, con l'Arabia Saudita e il Kuwait a sud, la Siria e la Giordania a ovest, e l'Iran a est. A sud-est, per un breve tratto, è bagnato dal golfo Persico. Il territorio dell'Iraq corrisponde approssimativamente alla regione geografica della Mesopotamia, il cui toponimo significa \"terra in mezzo ai fiumi\" ; il nome Iraq deriva dal nome dell'antica città di Uruk, che a sua volta corrisponde all'odierna città di Warka, e pare fosse usato anche come nome per la regione di Babilonia. I costituenti del nome Ur+uk in lingua sumera significano \"città+pensiero/esistenza\", mentre i radicali consonantici irq e urq delle successive lingue semitiche indicano fiumi e in generale il raccogliersi dell'acqua. La capitale è Baghdad.",
         "es": null
       },
       "capital": [
@@ -11032,16 +11032,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "Iran",
-        "es": null
+        "it": null,
+        "es": "Irán"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_Iran_%28official%29.svg/250px-Flag_of_Iran_%28official%29.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "L'Iran, ufficialmente Repubblica Islamica dell'Iran è uno Stato dell'Asia situato all'estremità orientale del Medio Oriente. Con capitale Teheran, ha una popolazione di circa 92 milioni di abitanti al 2025. Il gruppo etnico maggioritario è rappresentato dai persiani; minoranze etniche significative nel Paese sono gli azeri, i curdi, i luri e i beluci.",
-        "es": null
+        "it": null,
+        "es": "Irán, oficialmente la República Islámica de Irán ; también conocida históricamente en Occidente como Persia, es un país soberano de Oriente Próximo y Asia Occidental. Es una república islámica teocrática basada en los principios religiosos del islam chií. Limita con Irak y Turquía al oeste, con Azerbaiyán y Armenia al noroeste, con el mar Caspio y Turkmenistán al norte, con Afganistán y Pakistán al este, y con el golfo de Omán y el golfo Pérsico al sur."
       },
       "capital": [
         {
@@ -11453,18 +11453,18 @@
       "isoCode": "JM",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Jamaica",
         "fr": null,
         "it": null,
-        "es": "Jamaica"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/250px-Flag_of_Jamaica.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Jamaica é um país insular situado no mar do Caribe, que compreende a terceira maior ilha das Grandes Antilhas. A Jamaica é o quinto maior país insular do Caribe/Caraíbas. Os povos indígenas da ilha, os taínos, chamavam-na de Xaymaca em aruaque, ou seja, a \"terra da madeira e da água\" ou a \"terra dos mananciais\".",
         "fr": null,
         "it": null,
-        "es": "Jamaica es uno de los trece países que forman la América insular, Antillas o islas del mar Caribe, uno de los treinta y cinco del continente americano. Su capital y ciudad más poblada es Kingston. El país está formado por una sola isla, que cuenta con 240 km de largo y un máximo de 80 km de ancho, situada en el mar Caribe. Está a 630 km del subcontinente centroamericano, a 150 km al sur de Cuba y a 180 km al oeste de la isla de La Española, en la cual están Haití y la República Dominicana y a unos 621 km de Puerto Rico."
+        "es": null
       },
       "capital": [
         {
@@ -11970,18 +11970,18 @@
       "isoCode": "KG",
       "name": {
         "en": null,
-        "pt": "Quirguistão",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Kirguistán"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/250px-Flag_of_Kyrgyzstan.svg.png",
       "description": {
         "en": null,
-        "pt": "Quirguistão (em quirguiz: Кыргызстан; romaniz.: Kirgistan; pronunciado: [qɯrʁɯsˈstɑn]; por vezes Quirguizistão ou ainda Quirguízia, oficialmente República Quirguiz, é um país da Ásia Central, ex-integrante da antiga União Soviética. Tem fronteira ao norte com o Cazaquistão, a oeste com o Uzbequistão, a sul com o Tajiquistão e a leste com a China. Sua capital é Bisqueque, a maior cidade do país.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Kirguistán o Kirguizistán, oficialmente República Kirguisa,es un país montañoso, sin litoral, ubicado en Asia Central. Comparte fronteras con Kazajistán al norte, con China al este, con Tayikistán al Sur y Uzbekistán al oeste. Su capital y ciudad más poblada es Biskek."
       },
       "capital": [
         {
@@ -12251,16 +12251,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Kiribati"
+        "it": "Kiribati",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/250px-Flag_of_Kiribati.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Kiribati, oficialmente la República de Kiribati, es un archipiélago y país insular ubicado en la zona central oeste del océano Pacífico, al noreste de Australia. Está integrado por un grupo de 33 atolones coralinos y la isla volcánica de Banaba, conectados en un área de más de tres millones de kilómetros cuadrados. Entre ellos destaca Kiritimati, el atolón más grande del mundo y uno de los primeros lugares poblados en dar la vuelta al calendario cada año. Alcanzó su independencia en 1979 y se convirtió en miembro pleno de la ONU en 1999. Su capital y ciudad más poblada es Tarawa Sur."
+        "it": "Le Kiribati, ufficialmente Repubblica delle Kiribati, sono uno Stato insulare dell'Oceania di circa 135.000 abitanti.",
+        "es": null
       },
       "capital": [
         {
@@ -12405,16 +12405,16 @@
       "isoCode": "KM",
       "name": {
         "en": null,
-        "pt": "Comores",
-        "fr": null,
+        "pt": null,
+        "fr": "Comores (pays)",
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/250px-Flag_of_the_Comoros.svg.png",
       "description": {
         "en": null,
-        "pt": "Comores, oficialmente União das Comores, são um país independente formado por um grupo de ilhas da África austral, localizado no extremo norte do canal de Moçambique na costa oriental da África. Sua capital e maior cidade é Moroni, na Grande Comore.",
-        "fr": null,
+        "pt": null,
+        "fr": "Les Comores, en forme longue l'union des Comores, sont un État indépendant d'Afrique australe composé de trois îles situées dans le nord du canal du Mozambique, un espace maritime de l'océan Indien.",
         "it": null,
         "es": null
       },
@@ -12559,18 +12559,18 @@
       "isoCode": "KN",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "São Cristóvão e Neves",
         "fr": null,
         "it": null,
-        "es": "San Cristóbal y Nieves"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/250px-Flag_of_Saint_Kitts_and_Nevis.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "São Cristóvão e Neves, ou São Cristóvão e Névis, oficialmente Federação de São Cristóvão e Neves ou Névis é um país das Caraíbas, localizado entre as ilhas de Barlavento, é uma federação constituída por 14 paróquias, nove localizadas em São Cristóvão e cinco localizadas em Neves. É também o menor Estado soberano da América, tanto em extensão territorial quanto em número de habitantes.",
         "fr": null,
         "it": null,
-        "es": "San Cristóbal y Nieves o Saint Kitts y Nevis, oficialmente Federación de San Cristóbal y Nieves, es un país insular del norte antillano, en concreto de las Islas de Barlovento, debiendo su nombre precisamente a este par de islas. Cristóbal Colón colonizó estas islas en su segundo viaje a este continente, llamando a la mayor San Cristóbal en honor al colonizador de América y Nieves a la segunda por la nieve de su cumbre, en alusión a un milagro de la Virgen María con la advocación de Nuestra Señora de las Nieves y ocurrido en el monte Esquilino, en Roma, en el siglo IV."
+        "es": null
       },
       "capital": [
         {
@@ -12839,16 +12839,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Corea del Sur"
+        "it": "Corea del Sud",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "La República de Corea, comúnmente Corea del Sur, es un Estado soberano de Asia Oriental, ubicado en la parte sur de la península de Corea. Limita al norte con Corea del Norte, con la cual integró un solo país hasta 1945. Al este está ubicado el mar del Japón, al sur el estrecho de Corea, que lo separa de Japón, y al oeste el mar Amarillo. Su territorio comprende la mitad sur de la península de Corea, englobando unas tres mil islas que la rodean, entre las cuales se destacan Jeju, Ulleungdo y Dokdo."
+        "it": "La Corea del Sud, ufficialmente Repubblica di Corea è uno Stato dell'Asia orientale che occupa la metà meridionale della penisola coreana. Confina a nord con la Corea del Nord, a ovest con il Mar Giallo, a sud col Mar Cinese Orientale, a sud-est con lo stretto di Corea e a est con il Mar del Giappone. La capitale è Seul, che, con approssimativamente più di 10 milioni di persone nella sua area metropolitana, è una delle città più popolate del mondo. Con un paesaggio prevalentemente montuoso e 52 milioni di abitanti, la Corea del Sud è il ventesimo Paese più densamente popolato al mondo.",
+        "es": null
       },
       "capital": [
         {
@@ -13094,18 +13094,18 @@
     {
       "isoCode": "KZ",
       "name": {
-        "en": "Kazakhstan",
+        "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Kazakistan",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/250px-Flag_of_Kazakhstan.svg.png",
       "description": {
-        "en": "Kazakhstan, officially the Republic of Kazakhstan, is a landlocked country situated primarily in Central Asia, with a portion of its territory extending into Eastern Europe. It borders Russia to the north and west, China to the east, Kyrgyzstan to the southeast, Uzbekistan to the south, and Turkmenistan to the southwest, and it has a coastline along the Caspian Sea. The capital is Astana and the country's largest city and principal cultural and economic center is Almaty, which served as the capital until 1997.",
+        "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Kazakistan, ufficialmente Repubblica del Kazakistan, o più raramente in italiano Cosacchia, è uno Stato transcontinentale a cavallo tra Asia ed Europa; i territori geograficamente asiatici costituiscono la maggior parte del paese. La sua capitale è Astana e la sua città più popolosa è Almaty.",
         "es": null
       },
       "capital": [
@@ -13229,18 +13229,18 @@
       "isoCode": "LA",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Laos",
         "fr": null,
         "it": null,
-        "es": "Laos"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/250px-Flag_of_Laos.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Laos, oficialmente República Democrática Popular do Laos, é um país do Sudeste Asiático, localizado na Indochina e limitado a norte pela China, a leste pelo Vietnã, a sul pelo Camboja, a sul e oeste pela Tailândia e a noroeste por Myanmar. Sua população foi estimada em 6,5 milhões de habitantes em 2012.",
         "fr": null,
         "it": null,
-        "es": "Laos, oficialmente República Democrática Popular Lao, es un Estado soberano situado en la península de Indochina. Limita con Myanmar y China al noroeste, Vietnam al este, Camboya al sureste, y Tailandia al oeste y suroeste, y es el único país sin salida al mar en el Sudeste Asiático. Su capital y ciudad más poblada es Vientián. Posee una superficie de 236 800 km² y una población estimada en 2016 de 6 758 353 habitantes, siendo con diferencia el menos poblado de los 5 países que conforman la península de Indochina."
+        "es": null
       },
       "capital": [
         {
@@ -13889,18 +13889,18 @@
       "isoCode": "LR",
       "name": {
         "en": null,
-        "pt": "Libéria",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Liberia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/250px-Flag_of_Liberia.svg.png",
       "description": {
         "en": null,
-        "pt": "A Libéria, oficialmente República da Libéria, é uma república presidencialista localizada na África Ocidental. Faz fronteira ao norte com a Serra Leoa e Guiné, a leste com a Costa do Marfim e a sul e oeste com o Oceano Atlântico. Segundo o censo de 2008, a população do país é de 3 955 000 habitantes, divididos em uma área de 111 369 km. A cidade de Monróvia é sua capital. A Libéria possui um clima quente equatorial, com chuvas intensas na estação chuvosa e ventos na estação seca. A vegetação é composta, na maior parte, por florestas de mangue, enquanto o interior é escassamente povoado de florestas, com predominância de pastagens secas.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Liberia, oficialmente la República de Liberia, es un país ubicado en la costa oeste de África y que limita con Sierra Leona al noroeste, Costa de Marfil al este y Guinea al norte. Por el sur y el oeste limita con el golfo de Guinea, parte del océano Atlántico, en el punto más cercano del continente africano con Sudamérica, de la cual dista unos 2 840 km. Abarca 111 369 km² de superficie y cuenta con una población de 4 294 000 habitantes. Su lengua oficial es el inglés aunque también se hablan alrededor de treinta lenguas indígenas, de las que destacan el kpelle, bassa, vai, grebo, craví, guisí, gola y el criollo «inglés liberiano»."
       },
       "capital": [
         {
@@ -14024,16 +14024,16 @@
       "isoCode": "LS",
       "name": {
         "en": null,
-        "pt": "Lesoto",
-        "fr": null,
+        "pt": null,
+        "fr": "Lesotho",
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/250px-Flag_of_Lesotho.svg.png",
       "description": {
         "en": null,
-        "pt": "Lesoto ou Lessoto é um pequeno país da África Austral. Um enclave incrustado na África do Sul, montanhoso e sem saída para o mar, o país é o antigo reino da Basutolândia, um dos países etnicamente mais homogêneos da África: 99% de sua população é da etnia soto. O país vive da agricultura e criação de ovelhas na cordilheira do Dracoberga, que domina a maior parte do território e atingem mais de 3 mil metros de altitude. É bastante dependente da África do Sul; o dinheiro enviado por seus cidadãos empregados nas minas e fábricas sul-africanas representa 26% do PIB.",
-        "fr": null,
+        "pt": null,
+        "fr": "Le Lesotho ou Lésotho, en forme longue le royaume du Lesotho ou royaume du Lésotho, est un État d'Afrique australe, montagneux et sans accès à la mer, entièrement enclavé dans le territoire de l'Afrique du Sud, dont il est économiquement dépendant. Son territoire est entièrement situé à plus de 1 400 m d'altitude, avec des hauts plateaux et des chaînes montagneuses pouvant dépasser 3 000 m. Sa capitale et seule grande ville est Maseru. Le Lesotho compte environ deux millions d'habitants. Les Sothos — qui ont donné leur nom au pays — y sont majoritaires. La plupart sont chrétiens. Les deux langues officielles sont l'anglais et le sotho du Sud.",
         "it": null,
         "es": null
       },
@@ -14169,18 +14169,18 @@
       "isoCode": "LT",
       "name": {
         "en": null,
-        "pt": "Lituânia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Lituania"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/250px-Flag_of_Lithuania.svg.png",
       "description": {
         "en": null,
-        "pt": "A Lituânia, oficialmente República da Lituânia,é um país europeu que forma uma das três repúblicas bálticas. Limita ao norte com a Letônia, ao leste e ao sul com a Bielorrússia, ao sul com a Polônia, ao sul e ao oeste com o exclave russo de Kaliningrado e ao oeste com o mar Báltico. Sua capital é a cidade de Vilnius, no leste do país. Outras cidades importantes são Kaunas e Klaipėda.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Lituania, oficialmente la República de Lituania, es uno de los veintisiete Estados soberanos que forman la Unión Europea, constituido como un Estado social y democrático de derecho, cuya forma de gobierno es la república semipresidencialista unitaria. Su territorio está organizado en diez condados. Su capital y, a su vez, la ciudad más poblada es Vilna. El pueblo lituano es étnica y lingüísticamente hermano del letón y tiene lazos históricos y culturales con los países bálticos, aunque —a diferencia de estos— la mayoría de su población es católica."
       },
       "capital": [
         {
@@ -14304,18 +14304,18 @@
       "isoCode": "LU",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Luxemburgo",
         "fr": null,
         "it": null,
-        "es": "Luxemburgo"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/250px-Flag_of_Luxembourg.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Luxemburgo oficialmente Grão-Ducado do Luxemburgo ou de Luxemburgo é um pequeno país sem litoral na Europa Ocidental. Faz fronteira com a Bélgica a oeste e norte, com a Alemanha a leste e com a França ao sul. A sua capital e cidade mais populosa, Luxemburgo, é uma das quatro sedes institucionais da União Europeia e a sede de várias instituições da UE, notadamente o Tribunal de Justiça da União Europeia, a mais alta autoridade judicial. A cultura, o povo e os idiomas de Luxemburgo estão altamente interligados com seus vizinhos franceses e alemães; enquanto o luxemburguês é legalmente a única língua nacional do povo luxemburguês, o francês e o alemão também são usados em assuntos administrativos e judiciais e todos os três são considerados idiomas administrativos do país.",
         "fr": null,
         "it": null,
-        "es": "Luxemburgo, denominado oficialmente Gran Ducado de Luxemburgo, es uno de los veintisiete estados soberanos que forman la Unión Europea. Se trata de un estado sin litoral, rodeado por Alemania, Bélgica y Francia. Luxemburgo cuenta con una población de 660 809 habitantes sobre un área de 2586 km²."
+        "es": null
       },
       "capital": [
         {
@@ -14459,18 +14459,18 @@
       "isoCode": "LV",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Letónia",
         "fr": null,
         "it": null,
-        "es": "Letonia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/250px-Flag_of_Latvia.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Letónia ou Letônia, oficialmente República da Letónia / Letônia, é uma nação do Norte da Europa, sendo uma das três repúblicas bálticas. Faz fronteira ao norte com a Estónia, a leste com a Rússia, a sudeste com a Bielorrússia, a sul com a Lituânia e a oeste com o mar Báltico.",
         "fr": null,
         "it": null,
-        "es": "Letonia, oficialmente República de Letonia, es un país soberano de Europa Septentrional, constituido en estado social y democrático de derecho y cuya forma de gobierno es la república parlamentaria. Es uno de los veintisiete Estados soberanos que forman la Unión Europea. Su territorio, con capital en Riga, está organizado en 110 municipios y 9 ciudades con su propia administración."
+        "es": null
       },
       "capital": [
         {
@@ -14796,7 +14796,7 @@
           "name": {
             "en": "Arabic",
             "pt": "Árabe moderno padrão",
-            "fr": "Arabic",
+            "fr": "Arabe standard moderne",
             "it": "Lingua araba standard",
             "es": "Árabe estándar moderno"
           }
@@ -14806,7 +14806,7 @@
           "name": {
             "en": "Tamazight",
             "pt": "Tamazight",
-            "fr": "Tamazight",
+            "fr": "Amazighe standard marocain",
             "it": "Tamazight",
             "es": "Amazig estándar marroquí"
           }
@@ -14818,7 +14818,7 @@
           "name": {
             "en": "Moroccan",
             "pt": "Marroquinos",
-            "fr": "Moroccan",
+            "fr": "Marocains",
             "it": "Moroccan",
             "es": "Moroccan"
           }
@@ -14832,7 +14832,7 @@
           "name": {
             "en": "Moroccan dirham",
             "pt": "Dirrã marroquino",
-            "fr": "Moroccan dirham",
+            "fr": "Dirham marocain",
             "it": "Dirham marocchino",
             "es": "Dírham marroquí"
           },
@@ -14845,7 +14845,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -14882,18 +14882,18 @@
       "isoCode": "MC",
       "name": {
         "en": null,
-        "pt": "Mónaco",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Mónaco"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/250px-Flag_of_Monaco.svg.png",
       "description": {
         "en": null,
-        "pt": "Mónaco, oficialmente Principado do Mónaco ou Principado de Mônaco, é uma cidade-estado soberana, e, portanto, um microestado, situado ao sul da França. Fazendo costa com o mar Mediterrâneo, o principado, fundado em 1297 pela Casa de Grimaldi — até hoje sua soberana —, fica a menos de 20 km a leste da cidade de Nice e 20 km a oeste da cidade de Ventimiglia. Possui aproximadamente uma área de 202 ha, sendo o segundo menor Estado do mundo, atrás apenas do Vaticano, com 44 hectares de área, e é o estado com a densidade populacional mais alta do mundo. Tem como forma de governo a monarquia constitucional, em que o monarca é Sua Alteza Sereníssima, o Príncipe Alberto II do Mónaco.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Mónaco, oficialmente el Principado de Mónaco, es un micro-Estado, situado en Europa Occidental, constituido en Estado de derecho que profesa el respeto de los derechos y libertades fundamentales, y cuya forma de gobierno es la monarquía constitucional. Su territorio está organizado en nueve distritos residenciales, agrupados en cuatro distritos tradicionales."
       },
       "capital": [
         {
@@ -15037,17 +15037,17 @@
       "isoCode": "MD",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Moldávia",
         "fr": null,
-        "it": "Moldavia",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/250px-Flag_of_Moldova.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Moldávia ou Moldova, protocolarmente, República da Moldova, é um país sem costa marítima da Europa Oriental, que faz fronteira com a Ucrânia e com a Romênia. Sua capital e maior cidade é Quixinau,.",
         "fr": null,
-        "it": "La Moldavia o Moldova, ufficialmente Repubblica di Moldavia, è uno Stato dell'Europa orientale racchiuso tra Romania e Ucraina, senza sbocco sul mare. La capitale è Chișinău.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -15298,16 +15298,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Madagascar"
+        "it": "Madagascar",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/250px-Flag_of_Madagascar.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Madagascar, oficialmente República de Madagascar, es un país insular situado en el océano Índico, frente a la costa sureste del continente africano, al este de Mozambique. La nación está comprendida por la isla homónima, la más grande de África y la cuarta más grande del mundo, y por pequeñas y numerosas islas periféricas. Está separada del continente por el canal de Mozambique. A pesar de su cercanía actual al continente africano, Madagascar formaba parte en su origen del subcontinente indio, del cual se separó hace unos 88 millones de años. Por ello, su aislamiento ha favorecido la conservación en su territorio de multitud de especies únicas en el mundo, la mayoría de ellas endémicas de la isla. Las más notables son los lémures, el fosa carnívoro, cinco familias endémicas de aves y seis especies endémicas de baobabs."
+        "it": "Il Madagascar, ufficialmente Repubblica del Madagascar, è uno Stato insulare situato nell'oceano indiano, al largo della costa orientale dell'Africa, di fronte al Mozambico.",
+        "es": null
       },
       "capital": [
         {
@@ -15442,16 +15442,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Islas Marshall"
+        "it": "Isole Marshall",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_of_the_Marshall_Islands.svg/250px-Flag_of_the_Marshall_Islands.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Las Islas Marshall, oficialmente conocidas como República de las Islas Marshall, es un país insular ubicado en Oceanía, localizado el océano Pacífico, en la región de Micronesia."
+        "it": "Le isole Marshall, ufficialmente Repubblica delle Isole Marshall, sono uno Stato insulare dell'Oceania situato nell'oceano Pacifico a metà strada tra le Isole Hawaii e le Filippine, con capitale Majuro o più propriamente Dalap-Uliga-Darrit. La nazione è una repubblica presidenziale composta dagli arcipelaghi Ratak e Ralik, situati fra gli Stati Federati di Micronesia a sud-ovest, le isole Marianne a ovest e le Kiribati a sud. Le lingue ufficiali sono il marshallese e l'inglese; il tedesco e il giapponese sono parlati da una minima parte della popolazione. Dal 1884 al 1919 furono una colonia dell'Impero tedesco, facendo parte della Nuova Guinea tedesca.",
+        "es": null
       },
       "capital": [
         {
@@ -15709,18 +15709,18 @@
       "isoCode": "ML",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Mali",
         "fr": null,
         "it": null,
-        "es": "Mali"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/250px-Flag_of_Mali.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Mali ou Máli, oficialmente República do Mali, é um país africano sem saída para o mar na África Ocidental. O Mali é o sétimo maior país da África. Limita-se com sete países, a norte pela Argélia, a leste pelo Níger, a oeste pela Mauritânia e Senegal e ao sul pela Costa do Marfim, Guiné e Burquina Fasso. O Mali tem uma área de 1 240 000 km² e a sua população é estimada em cerca de 24,5 milhões de habitantes. A capital do país é Bamaco.",
         "fr": null,
         "it": null,
-        "es": "Mali o Malí, cuyo nombre oficial es República de Mali o República de Malí, es un Estado sin litoral situado en África Occidental. Su capital y ciudad más poblada es Bamako."
+        "es": null
       },
       "capital": [
         {
@@ -15963,25 +15963,25 @@
       "isoCode": "MM",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Myanmar",
         "fr": null,
         "it": null,
-        "es": "Birmania"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/250px-Flag_of_Myanmar.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Myanmar ou Birmânia, oficialmente República da União de Myanmar, é um país do sul da Ásia continental, limitado ao norte e nordeste pela China; a leste pelo Laos; a sudeste pela Tailândia; ao sul e sudoeste pelo mar de Andamão e pelo golfo de Bengala; e a noroeste pelo Bangladesh e pela Índia. Em 2006, a capital do país foi transferida de Rangum para Nepiedó.",
         "fr": null,
         "it": null,
-        "es": "Birmania o Myanmar, cuya denominación oficial es República de la Unión de Myanmar, es un Estado soberano del Sudeste Asiático. Limita con India y Bangladés al oeste, Tailandia y Laos al este, China al norte y noreste, y con la bahía de Bengala y el mar de Andamán al sur. Tiene 676 578 km² y una población de casi 60 millones de habitantes. Su ciudad más poblada es Rangún, la ex capital que fue mudada desde 2005 a Naipyidó."
+        "es": null
       },
       "capital": [
         {
           "articleId": "Naypyidaw",
           "name": {
             "en": "Naypyidaw",
-            "pt": "Naypyidaw",
+            "pt": "Nepiedó",
             "fr": "Naypyidaw",
             "it": "Naypyidaw",
             "es": "Naipyidó"
@@ -15993,7 +15993,7 @@
           "articleId": "Yangon",
           "name": {
             "en": "Yangon",
-            "pt": "Yangon",
+            "pt": "Rangum",
             "fr": "Rangoun",
             "it": "Yangon",
             "es": "Rangún"
@@ -16008,7 +16008,7 @@
           "articleId": "Assembly-independent_republic",
           "name": {
             "en": "assembly-independent republic",
-            "pt": "assembly-independent republic",
+            "pt": "Lista de países por sistema de governo",
             "fr": "Liste de pays par forme de gouvernement",
             "it": "Stati per forma di governo",
             "es": "assembly-independent republic"
@@ -16020,7 +16020,7 @@
           "articleId": "Burmese_language",
           "name": {
             "en": "Burmese",
-            "pt": "Burmese",
+            "pt": "Língua birmanesa",
             "fr": "Birman (langue)",
             "it": "Lingua birmana",
             "es": "Idioma birmano"
@@ -16066,7 +16066,7 @@
           "articleId": "Myanmar kyat",
           "name": {
             "en": "Myanmar kyat",
-            "pt": "Myanmar kyat",
+            "pt": "Quiate",
             "fr": "Kyat",
             "it": "Kyat birmano",
             "es": "Kyat birmano"
@@ -16079,7 +16079,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "UTC",
+            "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -16109,16 +16109,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "Mongolia",
-        "es": null
+        "it": null,
+        "es": "Mongolia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/250px-Flag_of_Mongolia.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "La Mongolia è uno Stato dell'Asia orientale privo di accesso al mare, confinante a nord con la Russia e a sud con la Cina, e sebbene non condivida un confine con il Kazakistan, il suo punto più occidentale dista solo 39,45 km dalla punta orientale di quest'ultimo. Gran parte del suo territorio è coperto da steppe, con montagne a nord e a ovest e il deserto del Gobi a sud. La superficie coltivabile è molto limitata a causa del clima freddo.",
-        "es": null
+        "it": null,
+        "es": "Mongolia es un Estado soberano sin acceso al mar, situado en Asia Oriental. Limita al norte con Rusia y al sur con China. Su capital es Ulán Bator, donde reside la mitad de la población total."
       },
       "capital": [
         {
@@ -16242,18 +16242,18 @@
       "isoCode": "MR",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Mauritânia",
         "fr": null,
         "it": null,
-        "es": "Mauritania"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/250px-Flag_of_Mauritania.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A Mauritânia, oficialmente República Islâmica da Mauritânia, é um país soberano no noroeste da África. Faz fronteira com o Oceano Atlântico a oeste, o Saara Ocidental a norte e noroeste, a Argélia a nordeste, o Mali a leste e sudeste e o Senegal a sudoeste. Em termos de área territorial, a Mauritânia é o 11º maior país da África e o 28º maior do mundo; 90% do seu território está no Saara. A maior parte da sua população, cerca de 4,3 milhões, vive no sul temperado do país, com cerca de um terço concentrado na capital e maior cidade, Nuaquexote, na costa atlântica.",
         "fr": null,
         "it": null,
-        "es": "Mauritania, oficialmente la República Islámica de Mauritania, es un país ubicado en el noroeste de África. Limita con el océano Atlántico al oeste, con Senegal al suroeste, con Malí al este y al sureste, con Argelia al noreste y con el territorio del Sahara Occidental al norte. El 90 por ciento de su territorio está ubicado en el Sahara y la mayor parte de su población de 4,4 millones habita el sur templado del país, con aproximadamente un tercio concentrado en la capital y mayor ciudad, Nuakchot situada en la costa del océano Atlántico."
+        "es": null
       },
       "capital": [
         {
@@ -16520,19 +16520,19 @@
     {
       "isoCode": "MU",
       "name": {
-        "en": "Mauritius",
+        "en": null,
         "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Mauricio"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/250px-Flag_of_Mauritius.svg.png",
       "description": {
-        "en": "Mauritius, officially the Republic of Mauritius, is an island country in the Indian Ocean, located about 1,100 nautical miles off the southeastern coast of East Africa, east of Madagascar. It includes the main island, as well as Rodrigues, Agaléga, and St. Brandon. The islands of Mauritius and Rodrigues, along with nearby Réunion, are part of the Mascarene Islands. The main island of Mauritius, where the population is concentrated, hosts the capital and largest city, Port Louis. The country spans 2,040 square kilometres and has an exclusive economic zone covering approximately 580,000 square nautical miles.",
+        "en": null,
         "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Mauricio —oficialmente en español, República de Mauricio — es un país soberano insular ubicado al suroeste del océano Índico, a unos novecientos kilómetros de Toamasina, ciudad en la costa oriental más cercana de Madagascar en África, y aproximadamente a 3 800 kilómetros en dirección suroeste del cabo Comorin en el extremo sur de la India. Tiene una superficie de 2 045 km², siendo el tercer Estado africano más pequeño, mientras que su población en 2025 es de aproximadamente 1,3 millones de habitantes. Su capital y localidad más poblada es Port Louis."
       },
       "capital": [
         {
@@ -16657,16 +16657,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Maldivas"
+        "it": "Maldive",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/250px-Flag_of_Maldives.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Las Maldivas, oficialmente la República de Maldivas, es un país soberano insular situado en el océano Índico, cuya forma de gobierno es la república presidencial. Su territorio está organizado en 26 atolones. Su capital y ciudad más poblada es Malé, con una población de 103 693 habitantes."
+        "it": "Le Maldive, ufficialmente Repubblica delle Maldive, sono uno Stato insulare dell'Asia meridionale di 529 414 abitanti composto da un gruppo di atolli situati nell'oceano Indiano a sud-ovest dell'India. La costa orientale dell'arcipelago costituisce il confine occidentale del mar delle Laccadive.",
+        "es": null
       },
       "capital": [
         {
@@ -16779,18 +16779,18 @@
       "isoCode": "MW",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Malawi",
         "fr": null,
         "it": null,
-        "es": "Malaui"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/250px-Flag_of_Malawi.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Malawi ou Maláui, oficialmente República do Malawi, é um país da África Oriental, limitado a norte e a leste pela Tanzânia, a leste, sul e oeste por Moçambique e a oeste pela Zâmbia. Sua capital é Lilongué. Parte da região oriental do país é banhada pelo Lago Niassa. O inglês é a língua oficial.",
         "fr": null,
         "it": null,
-        "es": "Malaui o Malawi, oficialmente la República de Malaui o República de Malawi es un país sin salida al mar ubicado en el sureste de África, antiguamente conocido como Nyasalandia, que tiene como su capital a la ciudad de Lilongüe. Limita con Zambia al noroeste, con Tanzania al noreste y con Mozambique al sureste, sur y suroeste. El país está separado de Tanzania y Mozambique por el lago Malaui, uno de los lagos con mayor superficie del continente africano. Su topónimo proviene de los antiguos reinos Maravi, una serie de Estados formados por tribus bantúes que habitaron el área."
+        "es": null
       },
       "capital": [
         {
@@ -17027,18 +17027,18 @@
       "isoCode": "MY",
       "name": {
         "en": null,
-        "pt": "Malásia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Malasia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/250px-Flag_of_Malaysia.svg.png",
       "description": {
         "en": null,
-        "pt": "Malásia é um país do Sudeste Asiático que compreende dois territórios distintos: a parte sul da península Malaia e ilhas adjacentes, e uma seção do norte da ilha de Bornéu. A península da Malásia confina a norte com a Tailândia, a leste com o mar da China Meridional, e a sul e a oeste com o estreito de Malaca, fazendo fronteiras marítimas com a Indonésia, a leste, sul e oeste, com Singapura a sul e com o Vietnã a nordeste. A Malásia Insular limita a oeste e a norte com o mar da China Meridional, a norte com o Brunei, a leste com o mar de Sulu e a sul com a Indonésia, fazendo fronteira marítima com as Filipinas a norte e a leste. A capital do país é Kuala Lumpur, sendo Putrajaia a sede do governo federal.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Malasia es uno de los cincuenta y un países que componen el continente asiático. La capital legislativa y oficial de la federación es Kuala Lumpur, que es además la ciudad más poblada, mientras que Putrajaya es la sede del Gobierno."
       },
       "capital": [
         {
@@ -17219,7 +17219,7 @@
             "pt": "Semipresidencialismo",
             "fr": "Régime semi-présidentiel",
             "it": "Repubblica semipresidenziale",
-            "es": "semi-presidential republic"
+            "es": "Semipresidencialismo"
           }
         },
         {
@@ -17229,7 +17229,7 @@
             "pt": "Autoritarismo",
             "fr": "Autoritarisme",
             "it": "Stato autoritario",
-            "es": "authoritarian"
+            "es": "Autoritarismo"
           }
         }
       ],
@@ -17241,7 +17241,7 @@
             "pt": "Língua portuguesa",
             "fr": "Portugais",
             "it": "Lingua portoghese",
-            "es": "Portuguese"
+            "es": "Idioma portugués"
           }
         }
       ],
@@ -17253,7 +17253,7 @@
             "pt": "Demografia de Moçambique",
             "fr": "Démographie du Mozambique",
             "it": "Mozambican",
-            "es": "Mozambican"
+            "es": "Demografía de Mozambique"
           }
         }
       ],
@@ -17267,7 +17267,7 @@
             "pt": "Metical",
             "fr": "Metical",
             "it": "Metical mozambicano",
-            "es": "Metical"
+            "es": "Metical mozambiqueño"
           },
           "isoCode": "MZN"
         }
@@ -17280,7 +17280,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -17305,18 +17305,18 @@
       "isoCode": "NA",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Namíbia",
         "fr": null,
         "it": null,
-        "es": "Namibia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/250px-Flag_of_Namibia.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Namíbia, oficialmente República da Namíbia é um país da África Austral limitado a norte por Angola e Zâmbia, a leste pelo Botsuana, a sul pela África do Sul e a oeste pelo oceano Atlântico. Embora não faça fronteira com o Zimbábue, menos de 200 metros da fronteira com a Zâmbia e Botsuana separa-os em seus pontos mais próximos. O país ganhou a independência da África do Sul em 21 de março de 1990, após a Guerra de Independência da Namíbia. Sua capital e maior cidade é Vinduque. A Namíbia é um país membro da Organização das Nações Unidas, da Comunidade para o Desenvolvimento da África Austral, da União Africana e da Comunidade das Nações.",
         "fr": null,
         "it": null,
-        "es": "Namibia, oficialmente República de Namibia, es un país del suroeste de África. Comparte fronteras terrestres con Angola al norte, con Zambia al noreste, con Botsuana al este, con Sudáfrica al sureste y sur y con el océano Atlántico al oeste. Aunque no limita con Zimbabue, menos de 200 metros del margen derecho de Botsuana del río Zambeze separan a los dos países. Su capital y ciudad más poblada es Windhoek."
+        "es": null
       },
       "capital": [
         {
@@ -17440,18 +17440,18 @@
       "isoCode": "NE",
       "name": {
         "en": null,
-        "pt": "Níger",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Níger"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/250px-Flag_of_Niger.svg.png",
       "description": {
         "en": null,
-        "pt": "O Níger, oficialmente República do Níger, é um país da África Ocidental. Faz fronteira com a Argélia e Líbia ao norte, a leste com o Chade, a sul com a Nigéria e Benim e a oeste com Burquina Fasso e Mali. O país abrange uma área de quase 1 270 000 km², fazendo desta a maior nação da África Ocidental, com mais de 75% de sua área de terra coberta pelo Deserto do Saara. A população é predominantemente islâmica, sendo estimada em 17 138 707 habitantes, conforme dados de 2013. A capital é Niamei, localizado no sudoeste do país, que é a sua cidade mais populosa.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Níger, oficialmente República del Níger o República de Níger, es un país sin litoral de África Occidental. Limita al sur con Nigeria y Benín, al oeste con Burkina Faso y Malí, al norte con Argelia y Libia, y al este con Chad. Sus zonas septentrional y central se encuentra en las áreas desérticas del Sahara y el Sahel."
       },
       "capital": [
         {
@@ -17853,16 +17853,16 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
-        "it": "Regno dei Paesi Bassi",
+        "fr": "Pays-Bas",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/250px-Flag_of_the_Netherlands.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
-        "it": "Il Regno dei Paesi Bassi è uno Stato situato tra l'Europa occidentale e l'America centrale con una popolazione di circa 17 milioni di abitanti, membro dell'Unione europea. La capitale è Amsterdam.",
+        "fr": "Les Pays-Bas, en forme longue le royaume des Pays-Bas, parfois appelés la Hollande par métonymie, sont un pays transcontinental dont le territoire métropolitain est situé en Europe du Nord-Ouest et le territoire d'outre-mer, dans les Antilles.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -18220,16 +18220,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "Nepal",
-        "es": null
+        "it": null,
+        "es": "Nepal"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/250px-Flag_of_Nepal.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "Il Nepal, ufficialmente Repubblica Federale Democratica del Nepal, è uno Stato dell'Asia meridionale di 147516 km² con una popolazione di 30034989 abitanti, e la cui capitale è Katmandu; confina a nord con la Cina e a sud con l'India ed è uno Stato senza sbocco sul mare. Il territorio dello Stato himalayano, compreso tra la pianura del Gange e la catena montuosa dell'Himalaya, è prevalentemente montuoso, presenta un dislivello notevole ed è geograficamente parte del subcontinente indiano.",
-        "es": null
+        "it": null,
+        "es": "Nepal, cuyo nombre oficial es República Democrática Federal de Nepal es un país sin salida al mar ubicado en Asia del Sur. Geográficamente se encuentra ubicado en el Himalaya, rodeado en el norte por la República Popular China y en el sur por la India. Se encuentra separado de Bután por el estado indio de Sikkim, por el llamado Corredor de Siliguri. Es un país de 147 182 kilómetros cuadrados de naturaleza montañosa en cuyo territorio se encuentran, total o parcialmente, algunas de las cumbres más altas de la Tierra, destacando el monte Everest, así como otros siete de los llamados ochomiles."
       },
       "capital": [
         {
@@ -18362,18 +18362,18 @@
       "isoCode": "NR",
       "name": {
         "en": null,
-        "pt": "Nauru",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Nauru"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Nauru.svg/250px-Flag_of_Nauru.svg.png",
       "description": {
         "en": null,
-        "pt": "Nauru, oficialmente República de Nauru e antes conhecido por Pleasant Island, é um país insular do hemisfério sul, localizado na Oceania, que compreende uma área de 21 quilômetros quadrados, o que faz dele o menor país insular do mundo. A ilha mais próxima ao país é a ilha Banaba, no Quiribáti, 300 quilômetros a leste.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Nauru o Naurú, oficialmente la República de Nauru, es un país, y estado de Micronesia, situado en el océano Pacífico central, que comprende una sola isla justo al sur de la línea del ecuador."
       },
       "capital": [
         {
@@ -18660,18 +18660,18 @@
       "isoCode": "OM",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Omã",
         "fr": null,
         "it": null,
-        "es": "Omán"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/250px-Flag_of_Oman.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Omã, ou, mais raramente, Omão, oficialmente Sultanato de Omã, é um país árabe na costa sudeste da Península Arábica. Com uma posição de importância estratégica na foz do Golfo Pérsico, o país faz fronteira com os Emirados Árabes Unidos a noroeste, Arábia Saudita a oeste, e Iémen ao sul e sudoeste, e compartilha fronteiras marítimas com o Irão e Paquistão. A costa é formada pelo Mar da Arábia, no sudeste, e pelo Golfo de Omã no nordeste. Os enclaves de Mada e Moçandão estão rodeados pelos Emirados Árabes em suas fronteiras terrestres, com o Estreito de Ormuz e o Golfo de Omã formando os limites costeiros de Moçandão. O Omã é o único país do mundo cujo nome, na língua portuguesa, começa com a letra O.",
         "fr": null,
         "it": null,
-        "es": "Omán, oficialmente el Sultanato de Omán, es un país localizado al occidente de Asia, en la costa oriental de la península arábiga. Limita con los Emiratos Árabes Unidos al noroeste, con Arabia Saudita al oeste y con Yemen al suroeste. La costa está conformada por el mar Arábigo al sur y al este, y por el golfo de Omán al noreste. Posee también dos enclaves, la península de Musandam, al norte de los EAU, y Madha, al este de ese mismo país."
+        "es": null
       },
       "capital": [
         {
@@ -18806,7 +18806,7 @@
             "pt": "Cidade do Panamá",
             "fr": "Panama (ville)",
             "it": "Panama (città)",
-            "es": "Ciudad de Panamá"
+            "es": "Panama City"
           }
         }
       ],
@@ -18818,7 +18818,7 @@
             "pt": "Cidade do Panamá",
             "fr": "Panama (ville)",
             "it": "Panama (città)",
-            "es": "Ciudad de Panamá"
+            "es": "Panama City"
           }
         }
       ],
@@ -18833,7 +18833,7 @@
             "pt": "Presidencialismo",
             "fr": "Régime présidentiel",
             "it": "Repubblica presidenziale",
-            "es": "Presidencialismo"
+            "es": "presidential republic"
           }
         }
       ],
@@ -18845,7 +18845,7 @@
             "pt": "Spanish",
             "fr": "Espagnol panaméen",
             "it": "Lingua spagnola a Panama",
-            "es": "Español panameño"
+            "es": "Spanish"
           }
         }
       ],
@@ -18871,7 +18871,7 @@
             "pt": "Balboa (moeda)",
             "fr": "Balboa (monnaie)",
             "it": "Balboa panamense",
-            "es": "Balboa (moneda de Panamá)"
+            "es": "Balboa"
           },
           "isoCode": "PAB"
         },
@@ -18882,7 +18882,7 @@
             "pt": "Dólar dos Estados Unidos",
             "fr": "Dollar américain",
             "it": "Dollaro statunitense",
-            "es": "Dólar estadounidense"
+            "es": "United States dollar"
           },
           "isoCode": "PAB"
         }
@@ -18895,7 +18895,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "Tiempo universal coordinado"
+            "es": "UTC"
           }
         },
         {
@@ -18905,7 +18905,7 @@
             "pt": "Zona de Tempo Oriental",
             "fr": "Heure de l'Est",
             "it": "Ora standard orientale",
-            "es": "Horario del este de América del Norte"
+            "es": "EST"
           }
         }
       ],
@@ -18921,17 +18921,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Pérou",
         "it": null,
-        "es": "Perú"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/250px-Flag_of_Peru.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Le Pérou, en forme longue la république du Pérou, est un pays de l'ouest de l'Amérique du Sud. Il est bordé au nord par l'Équateur et la Colombie, à l'est par le Brésil, au sud-est par la Bolivie, au sud par le Chili, et au sud et à l'ouest par l'océan Pacifique. Le Pérou est un pays mégadivers avec des habitats allant des plaines arides de la région côtière du Pacifique à l'ouest aux sommets des montagnes des Andes s'étendant du nord au sud-est du pays à la forêt tropicale du bassin amazonien à l'est avec le fleuve Amazone. Le Pérou compte 34 millions d'habitants et sa capitale et plus grande ville est Lima. Avec 1,28 million de km, le Pérou est le 20 plus grand pays du monde et le troisième d'Amérique du Sud.",
         "it": null,
-        "es": "El Perú, oficialmente República del Perú, es un Estado soberano, ubicado en el oeste de América del Sur. Limita al norte, con Ecuador y Colombia; al este, con Brasil y Bolivia; al sur, con Chile; y al oeste, con el océano Pacífico, que bordea sus 2250 km de costa. Su territorio se compone de diversos paisajes: los valles, las mesetas y las altas cumbres de los Andes se despliegan al oeste hacia la costa desértica y el este hacia la Amazonia. Es uno de los países con mayor diversidad biológica y mayores recursos minerales del mundo."
+        "es": null
       },
       "capital": [
         {
@@ -19044,25 +19044,25 @@
       "isoCode": "PG",
       "name": {
         "en": null,
-        "pt": "Papua-Nova Guiné",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Papúa Nueva Guinea"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/250px-Flag_of_Papua_New_Guinea.svg.png",
       "description": {
         "en": null,
-        "pt": "Papua-Nova Guiné, Papua Nova Guiné ou Papuásia-Nova Guiné, oficialmente Estado Independente da Papua-Nova Guiné, é um país da Oceania que ocupa a metade oriental da Ilha da Nova Guiné, e uma série de ilhas e arquipélagos, a leste e a nordeste, embora sempre na Melanésia. A única fronteira terrestre que tem é com as províncias indonésias de Alta Papua, Papua e Papua Meridional, a oeste, mas tem fronteiras marítimas com Palau e os Estados Federados da Micronésia, a norte, com as Ilhas Salomão, a sudeste, e com a Austrália, através do mar de Coral, estreito de Torres e mar de Arafura, a sul. A sua capital é Porto Moresby.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Papúa Nueva Guinea, oficialmente denominado Estado Independiente de Papúa Nueva Guinea, es un país soberano de Oceanía que ocupa la mitad oriental de la isla de Nueva Guinea y una numerosa cantidad de islas situadas alrededor de esta. La otra mitad de la isla pertenece a Indonesia, y se compone de la región denominada Nueva Guinea Occidental. Su capital y ciudad más poblada es Puerto Moresby. Papúa Nueva Guinea está al norte de Australia, al oeste de las Islas Salomón y al suroeste del océano Pacífico, en una región definida desde inicios del siglo XIX como Melanesia."
       },
       "capital": [
         {
           "articleId": "Port_Moresby",
           "name": {
             "en": "Port Moresby",
-            "pt": "Porto Moresby",
+            "pt": "Port Moresby",
             "fr": "Port Moresby",
             "it": "Port Moresby",
             "es": "Puerto Moresby"
@@ -19074,7 +19074,7 @@
           "articleId": "Port_Moresby",
           "name": {
             "en": "Port Moresby",
-            "pt": "Porto Moresby",
+            "pt": "Port Moresby",
             "fr": "Port Moresby",
             "it": "Port Moresby",
             "es": "Puerto Moresby"
@@ -19089,7 +19089,7 @@
           "articleId": "Constitutional_monarchy",
           "name": {
             "en": "constitutional monarchy",
-            "pt": "Monarquia constitucional",
+            "pt": "constitutional monarchy",
             "fr": "Monarchie constitutionnelle",
             "it": "Monarchia costituzionale",
             "es": "Monarquía constitucional"
@@ -19101,7 +19101,7 @@
           "articleId": "Papua_New_Guinean_English",
           "name": {
             "en": "English",
-            "pt": "Línguas da Papua-Nova Guiné",
+            "pt": "English",
             "fr": "Langues en Papouasie-Nouvelle-Guinée",
             "it": "English",
             "es": "English"
@@ -19111,7 +19111,7 @@
           "articleId": "Hiri_Motu",
           "name": {
             "en": "Hiri Motu",
-            "pt": "Língua hiri motu",
+            "pt": "Hiri Motu",
             "fr": "Hiri motu",
             "it": "Lingua hiri motu",
             "es": "Hiri motu"
@@ -19121,7 +19121,7 @@
           "articleId": "Papua_New_Guinean_Sign_Language",
           "name": {
             "en": "PNG Sign Language",
-            "pt": "Língua de sinais da Papua-Nova Guiné",
+            "pt": "PNG Sign Language",
             "fr": "Langue des signes papouasienne",
             "it": "PNG Sign Language",
             "es": "Lengua de signos de Papúa Nueva Guinea"
@@ -19131,7 +19131,7 @@
           "articleId": "Tok_Pisin",
           "name": {
             "en": "Tok Pisin",
-            "pt": "Língua tok pisin",
+            "pt": "Tok Pisin",
             "fr": "Tok pisin",
             "it": "Lingua tok pisin",
             "es": "Tok pisin"
@@ -19143,7 +19143,7 @@
           "articleId": "Demographics_of_Papua_New_Guinea",
           "name": {
             "en": "Papua New Guinean",
-            "pt": "Demografia da Papua-Nova Guiné",
+            "pt": "Papua New Guinean",
             "fr": "Démographie de la Papouasie-Nouvelle-Guinée",
             "it": "Papua New Guinean",
             "es": "Demografía de Papúa Nueva Guinea"
@@ -19170,7 +19170,7 @@
           "articleId": "Coordinated_Universal_Time",
           "name": {
             "en": "UTC",
-            "pt": "Tempo Universal Coordenado",
+            "pt": "UTC",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
@@ -19662,17 +19662,17 @@
       "isoCode": "PS",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Estado da Palestina",
         "fr": null,
-        "it": "Stato di Palestina",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/250px-Flag_of_Palestine.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Palestina, oficialmente Estado da Palestina, é um país de reconhecimento limitado situado no Oriente Médio. Reconhecido por 157 dos 193 Estados-membros da ONU, o país abrange a Cisjordânia ocupada por Israel e a Faixa de Gaza, incluíndo Jerusalém Oriental, que são coletivamente conhecidos como territórios palestinos ocupados, dentro da região geográfica e histórica mais ampla da Palestina. A Palestina designa Jerusalém Oriental como sua capital, mas seu centro administrativo está localizado na cidade de Ramala. A sua independência foi declarada em 15 de novembro de 1988 pela Organização para a Libertação da Palestina e por seu governo no exílio em Argel, na Argélia. No entanto, a maioria das áreas reivindicadas pelos palestinos estão ocupadas por Israel desde a Guerra dos Seis Dias, em 1967. Após a Segunda Guerra Mundial, em 1947, as Nações Unidas adotaram um Plano para Partilha da Palestina, recomendando a criação de dois estados árabe e judeu independentes, com uma Jerusalém internacionalizada. Em 1993, os Acordos de Oslo estabeleceram a Autoridade Nacional Palestina, que realiza a administração sociopolítica de áreas delimitadas dos territórios, enquanto o Hamas controla a Faixa de Gaza.",
         "fr": null,
-        "it": "La Palestina, ufficialmente Stato di Palestina, è uno Stato a riconoscimento limitato situato nel Medio Oriente, osservatore permanente presso le Nazioni Unite, de facto in gran parte occupato da Israele. Lo Stato di Palestina rivendica sovranità sui territori palestinesi della Cisgiordania e della Striscia di Gaza, con Gerusalemme Est come capitale designata, sebbene il suo centro amministrativo si trovi a Ramallah. Tali territori sono stati prima occupati nel 1948 da Giordania ed Egitto e successivamente da Israele dal 1967 a seguito della guerra dei sei giorni. La Palestina ha una popolazione di 5 051 953 abitanti a febbraio 2020, al 121º posto nel mondo.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -19828,18 +19828,18 @@
       "isoCode": "PT",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Portugal",
         "fr": null,
         "it": null,
-        "es": "Portugal"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Flag_of_Portugal_%28official%29.svg/250px-Flag_of_Portugal_%28official%29.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Portugal, oficialmente República Portuguesa, é um país soberano unitário localizado no sudoeste da Europa, cujo território se situa na zona ocidental da Península Ibérica e em arquipélagos no Atlântico Norte. O território português tem uma área total de 92 090 km², sendo delimitado a norte e leste pela Espanha e a sul e oeste pelo oceano Atlântico, compreendendo uma parte continental e duas regiões autónomas: os arquipélagos dos Açores e da Madeira. Portugal é a nação mais a ocidente do continente europeu. O nome do país provém da sua segunda maior cidade, Porto, cujo nome latino-celta era Portus Cale.",
         "fr": null,
         "it": null,
-        "es": "Portugal, oficialmente la República Portuguesa, es un país soberano del suroeste de Europa, ubicado en la península ibérica. Es uno de los veintisiete Estados miembros de la Unión Europea. Su capital y ciudad más poblada es Lisboa. Limita al este y al norte con España, y al sur y al oeste con el océano Atlántico. Su territorio comprende también los archipiélagos autónomos de las Azores y Madeira, situados en el océano Atlántico Norte. Su punto más alto, la Montaña del Pico, alcanza los 2351 metros sobre el nivel del mar."
+        "es": null
       },
       "capital": [
         {
@@ -19953,18 +19953,18 @@
       "isoCode": "PW",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Palau",
         "fr": null,
         "it": null,
-        "es": "Palaos"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/250px-Flag_of_Palau.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Palau, oficialmente República de Palau é um pequeno país insular da Micronésia, no Oceano Pacífico, entre os mares das Filipinas a oeste e norte, Indonésia e Papua-Nova Guiné a sul e Estados Federados da Micronésia a leste e nordeste. Constituído por oito ilhas principais e diversos pequenos ilhéus e atóis.",
         "fr": null,
         "it": null,
-        "es": "Palaos, oficialmente la República de Palaos, es un país insular, uno de los cuatro que forman Micronesia y uno de los catorce que conforman Oceanía. Su capital es Ngerulmud y su ciudad más poblada es Koror."
+        "es": null
       },
       "capital": [
         {
@@ -20087,16 +20087,16 @@
       "isoCode": "PY",
       "name": {
         "en": null,
-        "pt": "Paraguai",
-        "fr": null,
+        "pt": null,
+        "fr": "Paraguay",
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/250px-Flag_of_Paraguay.svg.png",
       "description": {
         "en": null,
-        "pt": "Paraguai, oficialmente República do Paraguai, é um país do centro da América do Sul, limitado a norte e oeste pela Bolívia, a nordeste e leste pelo Brasil e a sul e oeste pela Argentina. Possui uma área de 406 752 quilômetros quadrados, um pouco maior que o estado brasileiro de Mato Grosso do Sul. Segundo o último Censo em 2022, a população paraguaia foi de 6,1 milhões de habitantes, a maioria dos quais estão concentrados na região sudeste do país. Ao lado da Bolívia, o Paraguai é um dos dois países da América do Sul que não possuem uma saída para o mar.",
-        "fr": null,
+        "pt": null,
+        "fr": "Le Paraguay, en forme longue république du Paraguay depuis 1813, est un État souverain enclavé d'Amérique du Sud. Néanmoins, il dispose d'un accès à la mer via le rio Paraná qui se jette dans l'océan Atlantique. Le pays a des frontières terrestres avec l'Argentine, la Bolivie et le Brésil.",
         "it": null,
         "es": null
       },
@@ -20221,18 +20221,18 @@
       "isoCode": "QA",
       "name": {
         "en": null,
-        "pt": "Catar",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Catar"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/250px-Flag_of_Qatar.svg.png",
       "description": {
         "en": null,
-        "pt": "Catar, ou Qatar, oficialmente Estado do Catar, é um país árabe do Sudoeste Asiático que ocupa a pequena península do Catar, na costa nordeste da península Arábica, no Oriente Médio. Sua única fronteira terrestre é com a Arábia Saudita ao sul, enquanto o restante de seu território é cercado pelo golfo Pérsico. Um estreito também separa a península do estado insular do Barém através do golfo do Barém. A capital do país é Doha, lar de mais de 80% de seus habitantes. O Catar também sediou a Copa do Mundo FIFA de 2022.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Catar, cuyo nombre oficial es Estado de Catar, es un Estado soberano árabe ubicado en el oeste de Asia que ocupa la pequeña península homónima en el este de la península arábiga. Tiene una única frontera terrestre, por el sur con Arabia Saudita, mientras que el resto del territorio lo bañan las aguas del golfo Pérsico. Un estrecho de agua separa esta península del Estado insular de Baréin."
       },
       "capital": [
         {
@@ -20479,18 +20479,18 @@
       "isoCode": "RS",
       "name": {
         "en": null,
-        "pt": "Sérvia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Serbia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/250px-Flag_of_Serbia.svg.png",
       "description": {
         "en": null,
-        "pt": "A Sérvia, oficialmente República da Sérvia, é um país europeu, cuja capital é Belgrado, localizado no sudeste da Europa, na região balcânica. Faz fronteira a sudoeste com Montenegro, país do qual se separou em 2006, a oeste com a Bósnia e Herzegovina, a noroeste com a Croácia, ao sul com a Macedônia do Norte e com a Albânia, ao leste com a Romênia e com a Bulgária e ao norte com a Hungria.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Serbia, oficialmente República de Serbia, es un país soberano, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la república parlamentaria. Situado en la península balcánica, en el sureste de Europa, sin litoral, según su Constitución, limita con Hungría al norte; con Rumania y Bulgaria al este; con Macedonia del Norte y Albania al sur; y con Bosnia y Herzegovina, Croacia y Montenegro al oeste. Su capital y ciudad más poblada es Belgrado."
       },
       "capital": [
         {
@@ -20942,18 +20942,18 @@
       "isoCode": "SA",
       "name": {
         "en": null,
-        "pt": "Arábia Saudita",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Arabia Saudita"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/250px-Flag_of_Saudi_Arabia.svg.png",
       "description": {
         "en": null,
-        "pt": "Arábia Saudita, oficialmente Reino da Arábia Saudita, é considerado por tamanho de território, o maior país árabe na Ásia e na península Arábica, constituindo a maior parte da península Arábica, e o segundo maior país árabe do mundo. Tem fronteiras com Jordânia e Iraque ao norte; Cuaite a nordeste; Catar, Barém e Emirados Árabes Unidos a leste; Omã a sudeste; Iêmen ao sul; mar Vermelho a oeste e com o golfo Pérsico a leste. Sua população é estimada em 16 milhões de cidadãos nativos, 9 milhões de expatriados estrangeiros e 2 milhões de imigrantes ilegais registrados. Suas principais cidades são: Riade, a capital; Gidá, principal porto e antiga capital; Meca e Medina, cidades sagradas do islamismo; e Damã, banhada pelo golfo Pérsico.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Arabia Saudita o Arabia Saudí, oficialmente Reino de Arabia Saudita o Reino de Arabia Saudí, es un país de Asia Occidental, ubicado en la península arábiga —Oriente Próximo—, cuya forma de gobierno es la monarquía absoluta. Su capital y ciudad más poblada es Riad."
       },
       "capital": [
         {
@@ -21076,18 +21076,18 @@
       "isoCode": "SB",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Ilhas Salomão",
         "fr": null,
         "it": null,
-        "es": "Islas Salomón"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/250px-Flag_of_the_Solomon_Islands.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "As Ilhas Salomão são um país no oceano Pacífico, na Melanésia, situados no arquipélago de mesmo nome. O país inclui também as ilhas Santa Cruz e outras ilhas e atóis isolados. Tem fronteiras marítimas com a Papua-Nova Guiné, a oeste, com Nauru, a nordeste, e com Vanuatu, a sudeste. A capital e maior cidade do país é Honiara.",
         "fr": null,
         "it": null,
-        "es": "Las Islas Salomón son un país soberano insular ubicado en Oceanía, en la Melanesia tradicional. Forma parte de la Mancomunidad de Naciones. Su territorio está formado por más de 990 islas, de las cuales seis cuentan con una mayor superficie, repartidas las cuales mayoritariamente se encuentran en el archipiélago homónimo, situado al sureste de Papúa Nueva Guinea, y al norte de Vanuatu. Las islas Santa Cruz y Rennell y Bellona se encuentran fuera del archipiélago principal. Su capital y ciudad más poblada es Honiara, ubicada en la isla de Guadalcanal. Cuenta con una superficie de 28 896 km², y una población de 740 424 habitantes."
+        "es": null
       },
       "capital": [
         {
@@ -21192,16 +21192,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Seychelles"
+        "it": "Seychelles",
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/250px-Flag_of_Seychelles.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": null,
-        "es": "Las Seychelles, oficialmente la República de Seychelles, son un grupo de 115 islas ubicadas en el océano Índico, al noreste de Madagascar, con una superficie total de 455 km² y una población de 99.202 habitantes. Pertenece a la Mancomunidad de Naciones."
+        "it": "Le Seychelles, in italiano anche Seicelle, ufficialmente Repubblica delle Seychelles, sono uno Stato insulare africano il cui territorio è costituito da un arcipelago di 115 isole, localizzato nell'Oceano Indiano a circa 1500 km a est delle coste della Tanzania.",
+        "es": null
       },
       "capital": [
         {
@@ -21354,18 +21354,18 @@
       "isoCode": "SD",
       "name": {
         "en": null,
-        "pt": "Sudão",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Sudán"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/250px-Flag_of_Sudan.svg.png",
       "description": {
         "en": null,
-        "pt": "Sudão, oficialmente a República do Sudão, é um país localizado no Nordeste da África. Faz fronteira com a República Centro-Africana a sudoeste, Chade a oeste, Líbia a noroeste, Egito ao norte, o Mar Vermelho a leste, Eritreia e Etiópia a sudeste, e o Sudão do Sul ao sul. O Sudão tem uma população de 51,8 milhões de pessoas em 2025 e ocupa 1.886.068 quilômetros quadrados, tornando-se o terceiro maior país da África em área. A capital e cidade mais populosa do Sudão é Cartum.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Sudán, oficialmente República del Sudán, es uno de los cincuenta y cinco países que forman el continente africano. Su capital es Jartum y la ciudad más poblada es Omdurmán."
       },
       "capital": [
         {
@@ -21498,18 +21498,18 @@
       "isoCode": "SE",
       "name": {
         "en": null,
-        "pt": "Suécia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Suecia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/250px-Flag_of_Sweden.svg.png",
       "description": {
         "en": null,
-        "pt": "Suécia, oficialmente Reino da Suécia, é um país nórdico, situado no lado oriental da península Escandinava, localizada na Europa do Norte. Tem fronteiras terrestres com a Noruega, a norte e a oeste, e com a Finlândia, a norte e leste, sendo banhada pelo Mar Báltico a leste e a sul. Está separada da Dinamarca a sudoeste pelos estreitos de Öresund e Categate. Com uma área terrestre de 407 311 quilômetros quadrados, um comprimento de 1 572 km e uma largura de 499 km, a Suécia é o terceiro maior país da União Europeia em termos de superfície. É constituída por um terreno plano ou ondulado na sua parte sul, enquanto a parte norte apresenta uma planície costeira seguida de um interior acidentado culminando em alta montanha junto à fronteira com a Noruega.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Suecia, oficialmente el Reino de Suecia, es un país escandinavo de Europa del Norte, constituido en estado social y democrático, con la monarquía parlamentaria como sistema de gobierno. Es uno de los veintisiete Estados soberanos que forman la Unión Europea. Limita al norte con Noruega y Finlandia, al este con Finlandia y el golfo de Botnia, al sur con el mar Báltico y al oeste con el mar del Norte y Noruega. Tiene fronteras terrestres con Noruega y Finlandia, y está conectado a Dinamarca por el puente de Øresund. Su capital es Estocolmo, que es también su ciudad más poblada."
       },
       "capital": [
         {
@@ -21643,7 +21643,7 @@
             "pt": "Cidade-estado",
             "fr": "Cité-État",
             "it": "Città-Stato",
-            "es": "city-state"
+            "es": "Ciudad-Estado"
           }
         }
       ],
@@ -21655,7 +21655,7 @@
             "pt": "Cidade-estado",
             "fr": "Cité-État",
             "it": "Città-Stato",
-            "es": "city-state"
+            "es": "Ciudad-Estado"
           }
         }
       ],
@@ -21682,7 +21682,7 @@
             "pt": "English",
             "fr": "English",
             "it": "English",
-            "es": "English"
+            "es": "Inglés de Singapur"
           }
         },
         {
@@ -21692,7 +21692,7 @@
             "pt": "Língua malaia",
             "fr": "Malais (langue)",
             "it": "Lingua malese",
-            "es": "Malay"
+            "es": "Idioma malayo"
           }
         },
         {
@@ -21712,7 +21712,7 @@
             "pt": "Língua tâmil",
             "fr": "Tamoul",
             "it": "Lingua tamil",
-            "es": "Tamil"
+            "es": "Idioma tamil"
           }
         }
       ],
@@ -21738,7 +21738,7 @@
             "pt": "Dólar de Singapura",
             "fr": "Dollar de Singapour",
             "it": "Dollaro di Singapore",
-            "es": "Singapore dollar"
+            "es": "Dólar de Singapur"
           },
           "isoCode": "SGD"
         }
@@ -21751,7 +21751,7 @@
             "pt": "Tempo Universal Coordenado",
             "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
-            "es": "UTC"
+            "es": "Tiempo universal coordinado"
           }
         },
         {
@@ -21776,18 +21776,18 @@
       "isoCode": "SI",
       "name": {
         "en": null,
-        "pt": "Eslovénia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Eslovenia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/250px-Flag_of_Slovenia.svg.png",
       "description": {
         "en": null,
-        "pt": "A Eslovénia ou Eslovênia, oficialmente República da Eslovénia, é um pequeno país da Europa Central, limitado a norte pela Áustria, a leste pela Hungria, a leste e a sul pela Croácia e a oeste pela Itália e pelo mar Adriático. O país está localizado no encontro de quatro grandes regiões europeias: a região dos Alpes, a dinárica, a panónica e a mediterrânica.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Eslovenia, cuyo nombre oficial es República de Eslovenia es un país ubicado en Europa Central, siendo uno de los veintisiete Estados soberanos que forman la Unión Europea. Limita con Italia al oeste; con el mar Adriático, al suroeste; con Croacia al sur y al este; con Hungría, al noreste; y con Austria, al norte. Tiene una población de 2.123.949 habitantes a fecha del 1 de enero de 2024. La capital y ciudad más poblada es Liubliana."
       },
       "capital": [
         {
@@ -21911,17 +21911,17 @@
       "isoCode": "SK",
       "name": {
         "en": null,
-        "pt": "Eslováquia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Slovacchia",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/250px-Flag_of_Slovakia.svg.png",
       "description": {
         "en": null,
-        "pt": "Eslováquia, cujo nome oficial é República Eslovaca, é um país na Europa Central. É limitado pela Chéquia e pela Áustria a oeste, pela Polônia ao norte, pela Ucrânia ao leste e Hungria ao sul. O território eslovaco se estende por cerca de 49 000 km e é em grande parte montanhoso. A população é de mais de 5 milhões e é composta principalmente de eslovacos étnicos. A capital e maior cidade é Bratislava. A língua oficial é o eslovaco, um membro da família de línguas eslavas.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Slovacchia, ufficialmente Repubblica Slovacca, è uno Stato senza sbocco al mare costituito come repubblica parlamentare, situato nell'Europa centro-orientale. Ha una popolazione di circa 5 milioni di abitanti e un'area di circa 49 000 km. La città più grande, nonché capitale del Paese, è Bratislava, che dista circa 50 km da Vienna, in Austria, ossia la seconda distanza più corta al mondo tra due capitali di Stato, dopo quella tra Brazzaville e Kinshasa. La seconda città per popolazione è Košice, mentre altre città importanti sono Prešov, Nitra, Žilina, Banská Bystrica, Trnava e Trenčín.",
         "es": null
       },
       "capital": [
@@ -21969,7 +21969,7 @@
           "name": {
             "en": "Slovak",
             "pt": "Língua eslovaca",
-            "fr": "Slovak",
+            "fr": "Slovaque",
             "it": "Lingua slovacca",
             "es": "Idioma eslovaco"
           }
@@ -21981,7 +21981,7 @@
           "name": {
             "en": "Slovak",
             "pt": "Eslovacos",
-            "fr": "Slovak",
+            "fr": "Slovaques",
             "it": "Slovacchi",
             "es": "Pueblo eslovaco"
           }
@@ -22006,7 +22006,7 @@
           "name": {
             "en": "€",
             "pt": "€",
-            "fr": "€",
+            "fr": "Symbole euro",
             "it": "Simbolo dell'euro",
             "es": "Símbolo del euro"
           },
@@ -22019,7 +22019,7 @@
           "name": {
             "en": "UTC",
             "pt": "Tempo Universal Coordenado",
-            "fr": "UTC",
+            "fr": "Temps universel coordonné",
             "it": "Tempo coordinato universale",
             "es": "Tiempo universal coordinado"
           }
@@ -22029,7 +22029,7 @@
           "name": {
             "en": "CET",
             "pt": "Horário da Europa Central",
-            "fr": "CET",
+            "fr": "Heure normale d'Europe centrale",
             "it": "Central European Time",
             "es": "Hora central europea"
           }
@@ -22170,17 +22170,17 @@
       "isoCode": "SM",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "San Marino",
         "fr": null,
-        "it": "San Marino",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/250px-Flag_of_San_Marino.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "A República de San Marino ou Sereníssima República de San Marino é um país situado nos Apeninos. É um enclave, completamente envolta pela Itália. Faz fronteira com as províncias italianas da Emília-Romanha e das Marcas. Sua área é de apenas 61 km² com uma população estimada em 30 000 habitantes, e a sua capital é a Cidade de San Marino. San Marino é um dos microestados europeus, junto com Liechtenstein, Vaticano, Mônaco, Andorra, e Malta, e tem a menor população de todos os membros do Conselho da Europa.",
         "fr": null,
-        "it": "San Marino, ufficialmente Serenissima Repubblica di San Marino, nota anche come Repubblica di San Marino, è uno Stato senza sbocco al mare dell'Europa meridionale, situato nel centro-nord della penisola italiana, al confine tra le regioni Emilia-Romagna e Marche, e costituisce un'enclave all'interno della Repubblica Italiana.",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -22305,18 +22305,18 @@
       "isoCode": "SN",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Senegal",
         "fr": null,
         "it": null,
-        "es": "Senegal"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/250px-Flag_of_Senegal.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Senegal, oficialmente República do Senegal, é um país localizado na África Ocidental. Faz fronteira com o Oceano Atlântico a oeste, com a Mauritânia ao norte e ao leste, com o Mali, a leste, e com a Guiné e a Guiné-Bissau ao sul. A Gâmbia forma um quase-enclave no Senegal, penetrando mais de 300 km para o interior. As ilhas de Cabo Verde estão localizados 560 km da costa do Senegal. O país deve o seu nome ao rio que faz fronteira com ele para o leste e para o sul e sobe no Futa Jalom na Guiné. O clima é tropical e seco com duas estações: a estação seca e a estação chuvosa.",
         "fr": null,
         "it": null,
-        "es": "Senegal, cuyo nombre oficial es República del Senegal, es un estado soberano de África Occidental cuya forma de gobierno es la república semipresidencialista. Su territorio está organizado en catorce regiones."
+        "es": null
       },
       "capital": [
         {
@@ -22429,18 +22429,18 @@
       "isoCode": "SO",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Somália",
         "fr": null,
         "it": null,
-        "es": "Somalia"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/250px-Flag_of_Somalia.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Somália, oficialmente República Federal da Somália é um país localizado no chifre da África, no nordeste do continente africano. Faz fronteira com o Djibuti no noroeste, Quênia no sudoeste, o golfo de Adem com o Iémen a norte, o oceano Índico a leste e com a Etiópia no oeste.",
         "fr": null,
         "it": null,
-        "es": "Somalia, cuyo nombre oficial es República Federal de Somalia, es un país ubicado en el Cuerno de África, al este del continente africano. Limita al oeste y noroeste con Etiopía y Yibuti, al sur con Kenia, al norte con el golfo de Adén, y al este con el océano Índico. Su capital y ciudad más poblada es Mogadiscio."
+        "es": null
       },
       "capital": [
         {
@@ -22677,18 +22677,18 @@
       "isoCode": "SS",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Sudão do Sul",
         "fr": null,
         "it": null,
-        "es": "Sudán del Sur"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/250px-Flag_of_South_Sudan.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Sudão do Sul ou Sudão Meridional, oficialmente República do Sudão do Sul é um país encravado localizado no nordeste da África. Tem esse nome devido à localização geográfica, ao sul do Sudão.",
         "fr": null,
         "it": null,
-        "es": "Sudán del Sur, oficialmente República de Sudán del Sur es un país soberano sin litoral ubicado en África Oriental, con capital en la ciudad de Yuba, pero en 2011 Ramciel ha sido seleccionada como el lugar donde se construirá la nueva capital para descentralizar y mejorar la administración del país. Sudán del Sur limita con Sudán al norte, Etiopía al este, Kenia, Uganda y la República Democrática del Congo al sur y con la República Centroafricana al oeste. Es hasta la fecha el país con menos IDH del mundo."
+        "es": null
       },
       "capital": [
         {
@@ -23090,18 +23090,18 @@
       "isoCode": "SY",
       "name": {
         "en": null,
-        "pt": "Síria",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Siria"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Syria_%282025-%29.svg/250px-Flag_of_Syria_%282025-%29.svg.png",
       "description": {
         "en": null,
-        "pt": "Síria, oficialmente República Árabe Síria é um país localizado na Ásia Ocidental. O território sírio de jure faz fronteira com o Líbano e o Mar Mediterrâneo a oeste; a Turquia ao norte; o Iraque a leste; a Jordânia ao sul e Israel ao sudoeste. Um país de planícies férteis, altas montanhas e desertos, é o lar de diversos grupos étnicos e religiosos, inclusive árabes, gregos, armênios, assírios, curdos, circassianos, mandeus e turcos. Os grupos religiosos incluem sunitas, cristãos, alauitas, drusos, mandeus e iazidis. Os árabes sunitas formam o maior grupo populacional do país.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Siria, oficialmente República Árabe Siria, es un país soberano del Oriente Próximo, bañado por la costa levantina mediterránea. Comparte fronteras con Turquía por el norte, con Irak por el este, con Israel y Jordania al sur, y con Líbano y el mar Mediterráneo por el oeste, pudiéndose ver desde sus costas a lo lejos la isla de Chipre. Siria es miembro de la Organización de las Naciones Unidas desde su fundación."
       },
       "capital": [
         {
@@ -23379,17 +23379,17 @@
       "isoCode": "TD",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Chade",
         "fr": null,
-        "it": "Ciad",
+        "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/250px-Flag_of_Chad.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Chade, também chamado de Tchade, oficialmente República do Chade é um país sem acesso ao mar, localizado no centro-norte da África. Faz fronteira com a Líbia a norte, com o Sudão a leste, com a República Centro-Africana a sul, com Camarões e Nigéria a sudoeste e com o Níger a oeste. Encontra-se dividido em três grandes regiões geográficas: a zona desértica no norte, o cinturão árido do Sael no centro e a savana sudanesa fértil no sul. O Lago Chade, do qual o país obteve o seu nome, é o segundo maior corpo de água da África e o maior do país. O ponto mais alto do Chade é o Emi Koussi no Deserto do Saara. Sua capital e cidade mais populosa é Jamena. O país abriga mais de duzentas etnias. Os idiomas oficiais são o árabe e o francês, enquanto as religiões oficiais são o islã e o cristianismo.",
         "fr": null,
-        "it": "Il Ciad, ufficialmente Repubblica del Ciad, è uno Stato dell'Africa centrale che confina a nord con la Libia, a est con il Sudan, a sud-ovest con Camerun e Nigeria, a ovest con il Niger e a sud con la Repubblica Centrafricana. Ha una superficie di 1.284.000 km² e una popolazione di 16.877.357 abitanti, per una densità di 8,9 ab/km².",
+        "it": null,
         "es": null
       },
       "capital": [
@@ -23657,18 +23657,18 @@
       "isoCode": "TH",
       "name": {
         "en": null,
-        "pt": "Tailândia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Tailandia"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/250px-Flag_of_Thailand.svg.png",
       "description": {
         "en": null,
-        "pt": "Tailândia, oficialmente Reino da Tailândia, anteriormente conhecida como Sião é um estado soberano no centro da península da Indochina, no Sudeste asiático. É limitado a norte por Myanmar e Laos, a leste por Laos e Camboja, a sul pelo Golfo da Tailândia e pela Malásia, e a oeste pelo Mar de Andamão e pela extremidade sul de Mianmar. Suas fronteiras marítimas incluem o Vietnã, no Golfo da Tailândia, para o sudeste; e a Indonésia e a Índia no mar de Andamão, a sudoeste.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Tailandia, oficialmente denominado Reino de Tailandia, es un país ubicado en el Sudeste Asiático. Su capital y ciudad más poblada es Bangkok, centro de la actividad política, comercial e industrial."
       },
       "capital": [
         {
@@ -23782,17 +23782,17 @@
       "name": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Tadjikistan",
         "it": null,
-        "es": "Tayikistán"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/250px-Flag_of_Tajikistan.svg.png",
       "description": {
         "en": null,
         "pt": null,
-        "fr": null,
+        "fr": "Le Tadjikistan, en forme longue la république du Tadjikistan, est un pays montagneux d'Asie centrale, sans accès à la mer. Sa capitale est Douchanbé. Il est limitrophe du Kirghizistan au nord-nord-est, de la Chine à l'est, de l'Afghanistan au sud-sud-ouest et de l'Ouzbékistan à l'ouest. C'est le seul État issu de l'ancienne Asie centrale soviétique où la langue dominante n'est pas une langue turcique mais iranienne, le tadjik. Les Tadjiks, qui forment le groupe ethnique majoritaire, appartiennent à la famille des peuples iraniens.",
         "it": null,
-        "es": "Tayikistán, oficialmente la República de Tayikistán, es un país soberano sin litoral ubicado en Asia Central. Cuenta con una población estimada de 10 millones de habitantes y una superficie de 144 100 km². Limita con Afganistán al sur, Uzbekistán al oeste, Kirguistán al norte, y la República Popular China al este. Pakistán se encuentra al sur, separados por el corredor de Waján. La patria tradicional del pueblo tayiko se extiende por la actual Tayikistán, Afganistán y Uzbekistán. Su capital es Dusambé."
+        "es": null
       },
       "capital": [
         {
@@ -23935,18 +23935,18 @@
       "isoCode": "TL",
       "name": {
         "en": null,
-        "pt": "Timor-Leste",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Timor Oriental"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/250px-Flag_of_East_Timor.svg.png",
       "description": {
         "en": null,
-        "pt": "Timor-Leste, oficialmente República Democrática de Timor-Leste, é um dos países mais jovens do mundo, e ocupa a parte oriental da ilha de Timor, no Sudeste Asiático, além do exclave de Oe-Cusse Ambeno, na costa norte da parte ocidental de Timor, da ilha de Ataúro, a norte, e do ilhéu de Jaco, ao largo da ponta leste da ilha. As únicas fronteiras terrestres que o país tem ligam-no à Indonésia, a oeste da porção principal do território, e a leste, sul e oeste de Oe-Cusse Ambeno, mas tem também fronteira marítima com a Austrália, no Mar de Timor, a sul. Com 14 874 km de extensão territorial, Timor-Leste tem superfície equivalente às áreas dos distritos portugueses de Beja e Faro somadas, o que ainda é consideravelmente menor que o menor dos estados brasileiros, Sergipe. Sua capital é Díli, situada na costa norte.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Timor Oriental, cuyo nombre oficial es República Democrática de Timor-Leste, es un país del Sudeste Asiático. Su territorio comprende la mitad oriental de la isla de Timor, las cercanas islas de Atauro y Jaco, y el enclave de Oecusse, rodeado del territorio indonesio de Timor Occidental. En total suman 14 874 km² y más de 1 100 000 habitantes."
       },
       "capital": [
         {
@@ -24234,17 +24234,17 @@
       "isoCode": "TN",
       "name": {
         "en": null,
-        "pt": "Tunísia",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Tunisia",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/250px-Flag_of_Tunisia.svg.png",
       "description": {
         "en": null,
-        "pt": "Tunísia, oficialmente República Tunisina, é um país da África do Norte que pertence à região do Magrebe. É limitada ao norte e o leste pelo mar Mediterrâneo, através do qual faz fronteira com a Itália, ficando especialmente próxima da ilha de Pantelária e das ilhas Pelágias. Sua fronteira ocidental é com a Argélia e a leste e sul com a Líbia. A sua capital e maior cidade é Túnis, que está situada no nordeste do país.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "La Tunisia, ufficialmente Repubblica di Tunisia, è lo Stato più settentrionale dell'Africa. Fa parte della regione del Maghreb del Nordafrica. Confina con l'Algeria a ovest, la Libia a sud-est ed è bagnata dal Mar Mediterraneo a nord e a est. Presenta i siti archeologici di Cartagine risalenti al IX secolo a.C., così come la Grande moschea di Qayrawan.",
         "es": null
       },
       "capital": [
@@ -24771,16 +24771,16 @@
       "isoCode": "TV",
       "name": {
         "en": null,
-        "pt": null,
-        "fr": "Tuvalu",
+        "pt": "Tuvalu",
+        "fr": null,
         "it": null,
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tuvalu.svg/250px-Flag_of_Tuvalu.svg.png",
       "description": {
         "en": null,
-        "pt": null,
-        "fr": "Les Tuvalu, en forme longue l'État des Tuvalu, en tuvaluan Tuvalu, en anglais Tuvalu et State of Tuvalu, sont un État et un archipel polynésien, situés dans l'ouest de l'océan Pacifique Sud, au sud de l'équateur, à 699 km au sud-sud-est de l'atoll d'Arorae, la plus méridionale des îles Gilbert, et à 856 km au nord de Vanua Levu, aux îles Fidji. Il est indépendant depuis 1978.",
+        "pt": "Tuvalu é um Estado da Polinésia formado por um grupo de nove ilhas e atóis, antigamente chamado Ilhas Ellice. Tem fronteiras marítimas com o Quiribáti, a norte e a nordeste; com o território neozelandês de Toquelau, a leste; com Samoa, a sudeste; com o território francês de Wallis e Futuna a sul; e com Fiji, também a sul. Fica estrategicamente localizado no sul da Oceania. A oeste o vizinho mais próximo são as Ilhas Salomão, mas a distância entre os dois grupos de ilhas é considerável.",
+        "fr": null,
         "it": null,
         "es": null
       },
@@ -24908,16 +24908,16 @@
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "Tanzania",
-        "es": null
+        "it": null,
+        "es": "Tanzania"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/250px-Flag_of_Tanzania.svg.png",
       "description": {
         "en": null,
         "pt": null,
         "fr": null,
-        "it": "La Tanzania, formalmente Repubblica Unita di Tanzania, è uno Stato dell'Africa orientale. Confina a nord con Kenya e Uganda, a ovest con Ruanda, Burundi e Repubblica Democratica del Congo, e a sud con Zambia, Malawi e Mozambico. A est è bagnata dall'oceano Indiano.",
-        "es": null
+        "it": null,
+        "es": "Tanzania, oficialmente la República Unida de Tanzania, es un país situado en la costa oriental del África Central. Limita al norte con Kenia y Uganda, al oeste con Ruanda, Burundi, la República Democrática del Congo, con el cual no tiene una frontera terrestre, ya que el lago Tanganica los divide, al sur con Zambia, Malaui, Mozambique y al este con el océano Índico. Su capital es Dodoma y su ciudad más poblada es Dar es-Salam, sede del gobierno y centro del poder político del país. El nombre del país proviene de la unión de las palabras «Tanganica» y «Zanzíbar»."
       },
       "capital": [
         {
@@ -25040,18 +25040,18 @@
       "isoCode": "UA",
       "name": {
         "en": null,
-        "pt": "Ucrânia",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Ucrania"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/250px-Flag_of_Ukraine.svg.png",
       "description": {
         "en": null,
-        "pt": "Ucrânia é um país do Leste Europeu. É o segundo maior país em área da Europa depois da Rússia, que faz fronteira a leste e nordeste. Também faz fronteira com a Bielorrússia ao norte; Polônia, Eslováquia e Hungria a oeste; Romênia e Moldávia ao sul; e tem um litoral ao longo do mar de Azov e do mar Negro. Abrange uma área de 603 628 km² e em 2021 tinha cerca de 41,5 milhões habitantes, o oitavo país mais populoso da Europa. A capital e a maior cidade do país é Kiev.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "Ucrania es un Estado soberano ubicado en Europa Oriental. Su forma de Estado es la república que se rige por un sistema de gobierno semipresidencial, con la separación de los poderes ejecutivo, legislativo y judicial. Su territorio está organizado según un Estado unitario compuesto por veinticuatro óblast, la República Autónoma de Crimea y dos ciudades con un estatus especial: Kiev y Sebastopol. Ucrania cuenta con una superficie de 603 628 km² y una población de 36 744 636 habitantes. La ciudad de Kiev es la capital y la ciudad más poblada del país. El idioma oficial de Ucrania es el idioma ucraniano y la religión predominante es el cristianismo ortodoxo."
       },
       "capital": [
         {
@@ -25185,18 +25185,18 @@
       "isoCode": "UG",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Uganda",
         "fr": null,
         "it": null,
-        "es": "Uganda"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/250px-Flag_of_Uganda.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Uganda, oficialmente República de Uganda ou do Uganda é um país sem ligação com o mar no leste da África. Faz fronteira a leste com o Quénia, a norte com o Sudão do Sul, a oeste com a República Democrática do Congo, a sudoeste com Ruanda e a sul com a Tanzânia. Uganda é o segundo país sem litoral mais populoso no continente africano. A parte sul do país inclui uma parcela substancial do Lago Vitória, compartilhado com o Quênia e Tanzânia, situando o país na região dos Grandes Lagos Africanos. Uganda também se encontra dentro da bacia do Nilo e tem um clima variado, mas geralmente clima de savana.",
         "fr": null,
         "it": null,
-        "es": "Uganda, oficialmente República de Uganda es un país soberano sin salida al mar situado en África oriental. El país limita al este con Kenia, al norte con Sudán del Sur, al oeste con República Democrática del Congo y al sur con Ruanda y al suroeste con Tanzania. Uganda se encuentra en la región de los Grandes Lagos de África, la parte sur del país incluye una parte sustancial del lago Victoria, compartido con Kenia y Tanzania. Uganda se encuentra en la región de los Grandes Lagos africanos y también dentro de la cuenca del Nilo y tiene un clima variado pero generalmente ecuatorial. A fecha de 2024 tiene una población de 49,3 millones de habitantes, de los cuales 8,5 millones viven en el área metropolitana de la capital y ciudad más grande, Kampala."
+        "es": null
       },
       "capital": [
         {
@@ -25879,18 +25879,18 @@
       "isoCode": "VC",
       "name": {
         "en": null,
-        "pt": "São Vicente e Granadinas",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "San Vicente y las Granadinas"
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/250px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png",
       "description": {
         "en": null,
-        "pt": "São Vicente e Granadinas é um país do Caribe localizado nas Pequenas Antilhas. Sua população estimada em 2018 é de 110,211 habitantes. Constituído pela ilha de São Vicente e pelos dois terços norte da cadeia das Granadinas. Tem fronteiras marítimas com Santa Lúcia, a nordeste, e com Granada, a sudoeste, e é um dos países mais próximos de Barbados. De influência colonial britânica, é hoje parte da Commonwealth e do CARICOM. A capital é Kingstown, o principal centro urbano do território.",
+        "pt": null,
         "fr": null,
         "it": null,
-        "es": null
+        "es": "San Vicente y las Granadinas es un país insular de América, situado en la cadena de las Antillas Menores al este del mar Caribe y limitando al norte con Santa Lucía, al este con Barbados, al sur y oeste con Venezuela y al sur con Granada. Su territorio de 389 km² comprende un total de 32 islas, la isla principal de San Vicente y las dos terceras partes del norte del archipiélago de las Granadinas."
       },
       "capital": [
         {
@@ -26137,17 +26137,17 @@
       "isoCode": "VN",
       "name": {
         "en": null,
-        "pt": "Vietnã",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Vietnam",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/250px-Flag_of_Vietnam.svg.png",
       "description": {
         "en": null,
-        "pt": "Vietnã ou Vietname, oficialmente República Socialista do Vietnã/Vietname, é um estado soberano localizado no leste da península da Indochina, no Sudeste Asiático. Faz fronteira com a China a norte, com Laos e com o Camboja a oeste, com o golfo da Tailândia a sudoeste, e a leste e sul com o mar da China Meridional, onde há mais de 4 000 ilhas próximas e distantes da costa, muitas destas reivindicadas pelo Vietnã, sendo que ainda estão em disputa outros países, como a República da China, a República Popular da China, a Malásia e as Filipinas. Com uma população de mais de 90 milhões de habitantes, é o 16.º país mais populoso do mundo, tendo Hanói como sua capital desde sua reunificação, em 1976. É um dos estados socialistas marxistas-leninistas existentes.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Vietnam o Viet Nam, ufficialmente Repubblica Socialista del Vietnam, è uno Stato del sud-est asiatico. Confina a nord con la Cina, a ovest con il Laos e la Cambogia, mentre a est e a sud si affaccia sul Mar Cinese Meridionale, che tra l'isola cinese di Hainan e il nord del Vietnam forma il golfo del Tonchino. A sud, per un breve tratto, il Vietnam si affaccia sul golfo del Siam. La capitale è Hanoi.",
         "es": null
       },
       "capital": [
@@ -26261,18 +26261,18 @@
       "isoCode": "VU",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Vanuatu",
         "fr": null,
         "it": null,
-        "es": "Vanuatu"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flag_of_Vanuatu_%28official%29.svg/250px-Flag_of_Vanuatu_%28official%29.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "Vanuatu, oficialmente República de Vanuatu, é um Estado soberano insular da Melanésia, que ocupa o arquipélago das Novas Hébridas, na Oceania. Tem fronteiras marítimas com as ilhas Salomão, a norte; com o território francês da Nova Caledónia a sul; e com Fiji a leste. A capital é Porto Vila.",
         "fr": null,
         "it": null,
-        "es": "Vanuatu, oficialmente la República de Vanuatu, es un país soberano insular ubicado en Oceanía, localizado en el océano Pacífico Sur. El archipiélago, que es de origen volcánico, se encuentra a unos 1750 km al este de Australia, 500 km al noreste de Nueva Caledonia, al oeste de Fiyi y al sur de las Islas Salomón, cerca de Nueva Guinea. Su nombre inicial fue Austrialia del Espíritu Santo, y posteriormente los ingleses le cambiaron el nombre al de Nuevas Hébridas."
+        "es": null
       },
       "capital": [
         {
@@ -26540,18 +26540,18 @@
       "isoCode": "YE",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Iémen",
         "fr": null,
         "it": null,
-        "es": "Yemen"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/250px-Flag_of_Yemen.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Iémen ou Iêmen é um país árabe que ocupa a extremidade sudoeste da Península da Arábia. É limitado a norte pela Arábia Saudita, a leste por Omã, a sul pelo mar da Arábia e pelo golfo de Adem, do outro lado do qual se estende a costa da Somália e a oeste pelo estreito de Babelmândebe, que o separa de Jibuti, e pelo mar Vermelho, que providencia uma ligação à Eritreia. Além do território continental, o Iémen inclui também algumas ilhas situadas ao largo do Corno de África, das quais a maior é Socotorá.",
         "fr": null,
         "it": null,
-        "es": "Yemen, oficialmente la República de Yemen, es un país bicontinental situado en el Oriente Próximo asiático, que comparte fronteras con Omán y Arabia Saudita. La parte asiática está situada en el Mashreq, al sur de la península arábiga, limitado por el golfo de Adén y el mar Rojo ; la isla de Socotora está en la plataforma continental africana, más allá del cuerno de África. Es la única república de la península arábiga. Su capital y ciudad más poblada es Saná."
+        "es": null
       },
       "capital": [
         {
@@ -26684,17 +26684,17 @@
       "isoCode": "ZA",
       "name": {
         "en": null,
-        "pt": "África do Sul",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Sudafrica",
         "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/250px-Flag_of_South_Africa.svg.png",
       "description": {
         "en": null,
-        "pt": "África do Sul, oficialmente República da África do Sul e mais raramente referida como Suláfrica, é um país localizado no extremo sul da África, entre os oceanos Atlântico e Índico, com 2 798 quilômetros de litoral. É limitado pela Namíbia, Botsuana e Zimbábue ao norte; Moçambique e Essuatíni a leste; e com o Lesoto, um enclave totalmente rodeado pelo território sul-africano. O país é conhecido por sua biodiversidade e pela grande variedade de culturas, idiomas e crenças religiosas. A Constituição reconhece 11 línguas oficiais. Duas dessas línguas são de origem europeia: o africâner, uma língua que se originou principalmente a partir do neerlandês e que é falado pela maioria dos brancos e mestiços sul-africanos, e o inglês sul-africano, que é a língua mais falada na vida pública oficial e comercial, mas é apenas o quinto idioma mais falado em casa.",
+        "pt": null,
         "fr": null,
-        "it": null,
+        "it": "Il Sudafrica, ufficialmente Repubblica del Sudafrica, è uno Stato indipendente dell'Africa australe.",
         "es": null
       },
       "capital": [
@@ -26952,18 +26952,18 @@
       "isoCode": "ZW",
       "name": {
         "en": null,
-        "pt": null,
+        "pt": "Zimbabwe",
         "fr": null,
         "it": null,
-        "es": "Zimbabue"
+        "es": null
       },
       "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/250px-Flag_of_Zimbabwe.svg.png",
       "description": {
         "en": null,
-        "pt": null,
+        "pt": "O Zimbábue, Zimbabué ou Zimbabwe, oficialmente República do Zimbábue, é um país encravado no sul da África, entre os rios Zambeze e Limpopo. É limitado a norte pela Zâmbia, a norte e a leste por Moçambique, a sul pela África do Sul e a sul e oeste pelo Botsuana. A capital do país é a cidade de Harare. Com uma população de cerca de 15 milhões de habitantes, o Zimbábue tem 16 idiomas oficiais, sendo o inglês, o xona e o andebele setentrional os mais usados.",
         "fr": null,
         "it": null,
-        "es": "Zimbabue ―oficialmente República de Zimbabue es un país sin litoral situado en el sudeste de África, entre el río Zambeze, las cataratas Victoria y el río Limpopo. Limita al oeste con Botsuana, al norte con Zambia, al sur con Sudáfrica y al este con Mozambique."
+        "es": null
       },
       "capital": [
         {

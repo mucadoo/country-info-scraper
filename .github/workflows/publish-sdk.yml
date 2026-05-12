@@ -13,40 +13,55 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Run if triggered manually OR if the scraper successfully changed data
-    if: >-
-      ${{ github.event_name == 'workflow_dispatch' || 
-          (github.event.workflow_run.conclusion == 'success' && 
-           github.event.workflow_run.outputs.data_updated == 'true') }}
-
     steps:
+      - name: Download data-status artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: data-status
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Check status
+        id: check_status
+        run: |
+          STATUS=$(cat data_updated.txt)
+          echo "data_updated=$STATUS" >> $GITHUB_OUTPUT
+
       - name: Checkout repository
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         uses: actions/checkout@v4
 
       - name: Set up Node.js
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
 
       - name: Configure Git
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install dependencies
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: npm install
 
       - name: Build SDK
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: npm run build:sdk
 
       - name: Version Patch
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: npm version patch -m "chore: release v%s [skip ci]"
 
       - name: Publish to NPM
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Push Version Change
+        if: github.event_name == 'workflow_dispatch' || steps.check_status.outputs.data_updated == 'true'
         run: git push --follow-tags

@@ -38,7 +38,7 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
   const FIELD_MAP = {
     capital: ['capital', 'capital_city', 'capitale', 'capitaux'],
     largestCity: ['largest_city', 'largest_settlement', 'plus_grande_ville'],
-    population: ['population_estimate', 'population_census', 'population_total', 'population', 'population_totale'],
+    population: ['population_estimate', 'population_census', 'population_total', 'population', 'population_totale', 'population_estimate'],
     areaKm2: ['area_km2', 'area_sqkm', 'area', 'superficie_totale', 'superficie'],
     densityKm2: ['density_km2', 'population_density_km2', 'densité'],
     government: ['government_type', 'type_gouvernement'],
@@ -50,7 +50,7 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
     hdi: ['hdi', 'idh'],
     gdp: ['gdp_nominal', 'pib'],
     flagUrl: ['flag_image', 'flag', 'image_drapeau'],
-    isoCode: ['iso3166code', 'cctld', 'iso3166-1'],
+    isoCode: ['iso3166code', 'cctld', 'iso3166-1', 'iso3166_1', 'iso_3166-1'],
   };
 
   const getField = (keys: string[]) => {
@@ -128,6 +128,8 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
     console.log('[DEBUG] Infobox body was:', infoboxBody.substring(0, 200));
   }
 
+  console.log(`[DEBUG] Final result keys: ${Object.keys(result)}`);
+  console.log(`[DEBUG] Final result object: ${JSON.stringify(result)}`);
   return result;
 }
 

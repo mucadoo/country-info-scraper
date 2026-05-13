@@ -40,9 +40,9 @@ export class ExtractionUtils {
     if (!text) return '';
     console.log(`[DEBUG] extractPopulation input: "${text}"`);
 
-    // Remove templates and references first
+    // Remove templates, references, and other junk more aggressively
     let clean = text
-      .replace(/\{\{[^}]*\}\}/g, '')
+      .replace(/{{[^}]*}}/g, '')
       .replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, '')
       .replace(/,/g, '')
       .replace(/[\u00A0\u200B-\u200F\uFEFF]/g, '');

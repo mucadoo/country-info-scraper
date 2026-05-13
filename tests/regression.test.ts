@@ -1,33 +1,32 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import fs from 'fs';
 import path from 'path';
-import * as cheerio from 'cheerio';
-import { CountryParser } from '../src/scraper/parsers/country-parser.js';
-import { DescriptionParser } from '../src/scraper/parsers/description.js';
 import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
 import { mergeCountryData } from '../src/scraper/utils/merger.js';
-import { Country, getEmptyCountry, getEmptyLocalizedField } from '../src/types/country.js';
+import { Country, getEmptyCountry } from '../src/types/country.js';
+import { parseCountryFromWikitext } from '../src/scraper/parsers/wikitext-country-parser.js';
 
 describe('Regression Tests', () => {
   const snapshotsDir = path.join(process.cwd(), 'tests/snapshots');
+  const wikitextSnapshotsDir = path.join(snapshotsDir, 'wikitext');
   
   beforeAll(() => {
     WikipediaAPI.useSnapshots(path.join(snapshotsDir, 'translations.json'));
   });
 
-  if (!fs.existsSync(snapshotsDir)) {
-    it.skip('Snapshots directory not found', () => {});
+  if (!fs.existsSync(wikitextSnapshotsDir)) {
+    it.skip('Wikitext snapshots directory not found', () => {});
     return;
   }
 
   const grouped: Record<string, Record<string, string>> = {};
   ['en', 'pt', 'fr', 'it', 'es'].forEach(lang => {
-    const langDir = path.join(snapshotsDir, lang, 'sovereign_states');
+    const langDir = path.join(wikitextSnapshotsDir, lang);
     if (fs.existsSync(langDir)) {
-      fs.readdirSync(langDir).filter(f => f.endsWith('.html')).forEach(file => {
-        const country = file.replace('.html', '');
+      fs.readdirSync(langDir).filter(f => f.endsWith('.txt')).forEach(file => {
+        const country = file.replace('.txt', '');
         if (!grouped[country]) grouped[country] = {};
-        grouped[country][lang] = path.join(lang, 'sovereign_states', file);
+        grouped[country][lang] = path.join(lang, file);
       });
     }
   });
@@ -38,26 +37,23 @@ describe('Regression Tests', () => {
 
       // 1. Process EN Pass
       if (langs['en']) {
-        const html = fs.readFileSync(path.join(snapshotsDir, langs['en']), 'utf-8');
-        const $ = cheerio.load(html);
-        const rawParsed = CountryParser.parseCountry($ as unknown as Parameters<typeof CountryParser.parseCountry>[0], {}, 'en');
+        const wikitext = fs.readFileSync(path.join(wikitextSnapshotsDir, langs['en']), 'utf-8');
+        const parsed = parseCountryFromWikitext(wikitext, 'en');
         
-        const translations = await WikipediaAPI.fetchTranslations(
-          [
-              ...(rawParsed.capital?.map(i => i.articleId) || []),
-              ...(rawParsed.largestCity?.map(i => i.articleId) || []),
-              ...(rawParsed.officialLanguage?.map(i => i.articleId) || []),
-              ...(rawParsed.currency?.map(i => i.articleId) || []),
-              ...(rawParsed.demonym?.map(i => i.articleId) || []),
-              ...(rawParsed.government?.map(i => i.articleId) || []),
-              ...(rawParsed.timeZone?.map(i => i.articleId) || [])
-          ].filter(Boolean) as string[],
-          ['pt', 'fr', 'it', 'es']
-        );
-
-        const name = getEmptyLocalizedField();
-        name.en = countryName;
-        const localizedDataEn: Partial<Country> = { name, ...rawParsed };
+        const articleIds = new Set([
+            ...(parsed.capital?.map(i => i.articleId) || []),
+            ...(parsed.largestCity?.map(i => i.articleId) || []),
+            ...(parsed.officialLanguage?.map(i => i.articleId) || []),
+            ...(parsed.currency?.map(i => i.articleId) || []),
+            ...(parsed.demonym?.map(i => i.articleId) || []),
+            ...(parsed.government?.map(i => i.articleId) || []),
+            ...(parsed.timeZone?.map(i => i.articleId) || [])
+        ].filter(Boolean) as string[]);
+        
+        const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
+        
+        const name = { ...parsed.name!, en: countryName };
+        const localizedDataEn: Partial<Country> = { ...parsed, name };
         
         ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
           const key = field as keyof Country;
@@ -75,21 +71,15 @@ describe('Regression Tests', () => {
           });
         });
 
-        countryData = mergeCountryData(JSON.stringify(countryData), localizedDataEn);
+        countryData = mergeCountryData(JSON.stringify(countryData), localizedDataEn as Country);
       }
 
       // 2. Localized Passes
       ['pt', 'fr', 'it', 'es'].forEach(lang => {
         if (langs[lang]) {
-          const html = fs.readFileSync(path.join(snapshotsDir, langs[lang]), 'utf-8');
-          const $ = cheerio.load(html);
-          
-          const name = getEmptyLocalizedField();
-          name[lang as keyof typeof name] = $('h1#firstHeading').text().trim();
-          const locData: Partial<Country> = { name };
-          DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], locData, lang);
-
-          countryData = mergeCountryData(JSON.stringify(countryData), locData);
+          const wikitext = fs.readFileSync(path.join(wikitextSnapshotsDir, langs[lang]), 'utf-8');
+          const locData = parseCountryFromWikitext(wikitext, lang);
+          countryData = mergeCountryData(JSON.stringify(countryData), locData as Country);
         }
       });
 

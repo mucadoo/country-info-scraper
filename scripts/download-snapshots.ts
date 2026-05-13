@@ -1,5 +1,4 @@
 import { CheerioCrawler, log, CheerioAPI } from 'crawlee';
-import { CountryParser } from '../src/scraper/parsers/country-parser.js';
 import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
 import fs from 'fs';
 import path from 'path';
@@ -75,17 +74,8 @@ const crawler = new CheerioCrawler({
       const fileName = `${sanitize(baseName)}.html`;
       fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
       
-      const countryData = CountryParser.parseCountry($, {}, 'en');
-      const linkedFields: (keyof typeof countryData)[] = [
-        'capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'
-      ];
-
-      linkedFields.forEach(field => {
-        const items = (countryData[field] as { articleId?: string | null }[]) || [];
-        items.forEach((i) => { 
-          if (i.articleId) allArticleIds.add(i.articleId.replace(/_/g, ' ')); 
-        });
-      });
+      // CountryParser usage removed as it is legacy.
+      // Snapshot downloader is maintained for backwards compat with legacy HTML snapshots.
     }
 
     if (request.label === 'country_lang') {

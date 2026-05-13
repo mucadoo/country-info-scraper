@@ -1,16 +1,11 @@
-import fs from 'fs';
 import path from 'path';
-import * as cheerio from 'cheerio';
-import { CountryParser } from '../src/scraper/parsers/country-parser.js';
-import { DescriptionParser } from '../src/scraper/parsers/description.js';
 import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
 import { mergeCountryData } from '../src/scraper/utils/merger.js';
 import { getEmptyCountry, getEmptyLocalizedField, Country } from '../src/types/country.js';
+import { parseCountryFromWikitext } from '../src/scraper/parsers/wikitext-country-parser.js';
 
 const SNAPSHOT_BASE = 'tests/snapshots';
 WikipediaAPI.useSnapshots(path.join(SNAPSHOT_BASE, 'translations.json'));
-
-type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
 
 async function debugFlow(countryName: string) {
   let mergedResult: Country = getEmptyCountry();
@@ -18,36 +13,29 @@ async function debugFlow(countryName: string) {
   console.log(`\n--- Debugging Flow for: ${countryName} ---`);
 
   // 1. English Pass
-  const enHtmlPath = path.join(SNAPSHOT_BASE, 'en', 'sovereign_states', `${countryName.toLowerCase().replace(/ /g, '_')}.html`);
-  if (!fs.existsSync(enHtmlPath)) {
-      console.error(`English snapshot not found: ${enHtmlPath}`);
-      return;
-  }
-  const enHtml = fs.readFileSync(enHtmlPath, 'utf-8');
-  const $en = cheerio.load(enHtml);
-  const countryData = CountryParser.parseCountry($en as unknown as Parameters<typeof CountryParser.parseCountry>[0], {}, 'en');
+  const enWikitext = await WikipediaAPI.fetchWikitext(countryName, 'en');
+  const enData = parseCountryFromWikitext(enWikitext, 'en');
   
-  const translations = await WikipediaAPI.fetchTranslations(
-    [
-        ...(countryData.capital?.map(i => i.articleId) || []),
-        ...(countryData.largestCity?.map(i => i.articleId) || []),
-        ...(countryData.officialLanguage?.map(i => i.articleId) || []),
-        ...(countryData.currency?.map(i => i.articleId) || []),
-        ...(countryData.demonym?.map(i => i.articleId) || []),
-        ...(countryData.government?.map(i => i.articleId) || []),
-        ...(countryData.timeZone?.map(i => i.articleId) || [])
-    ].filter(Boolean) as string[],
-    ['pt', 'fr', 'it', 'es']
-  );
+  const articleIds = new Set([
+      ...(enData.capital?.map(i => i.articleId) || []),
+      ...(enData.largestCity?.map(i => i.articleId) || []),
+      ...(enData.officialLanguage?.map(i => i.articleId) || []),
+      ...(enData.currency?.map(i => i.articleId) || []),
+      ...(enData.demonym?.map(i => i.articleId) || []),
+      ...(enData.government?.map(i => i.articleId) || []),
+      ...(enData.timeZone?.map(i => i.articleId) || [])
+  ].filter(Boolean) as string[]);
+  
+  const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
   
   const nameLoc = getEmptyLocalizedField();
   nameLoc.en = countryName;
-  const countryDataEn: Country = { ...getEmptyCountry(), ...countryData, name: nameLoc };
+  const countryDataEn: Country = { ...getEmptyCountry(), ...enData, name: nameLoc };
   
   // Apply translations
   ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
-    const key = field as LocalizedArrayFieldKey;
-    const items = (countryDataEn[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
+    const key = field as keyof Country;
+    const items = (countryDataEn[key] as any[] || []);
     items.forEach(item => {
       const articleId = item.articleId?.replace(/_/g, ' ');
       ['pt', 'fr', 'it', 'es'].forEach(l => {
@@ -65,15 +53,8 @@ async function debugFlow(countryName: string) {
 
   // 2. Localized Passes
   for (const lang of ['pt', 'fr', 'it', 'es']) {
-    const filePath = path.join(SNAPSHOT_BASE, lang, 'sovereign_states', `${countryName.toLowerCase().replace(/ /g, '_')}.html`);
-    if (!fs.existsSync(filePath)) continue;
-
-    const html = fs.readFileSync(filePath, 'utf-8');
-    const $ = cheerio.load(html);
-    const nameLoc = getEmptyLocalizedField();
-    nameLoc[lang as keyof typeof nameLoc] = $('h1#firstHeading').text().trim();
-    const localizedData: Partial<Country> = { name: nameLoc };
-    DescriptionParser.parse($ as unknown as Parameters<typeof DescriptionParser.parse>[0], localizedData, lang);
+    const locWikitext = await WikipediaAPI.fetchWikitext(countryName, lang); // Simplified debug: assuming country name translates predictably or using a translation map
+    const localizedData: Partial<Country> = parseCountryFromWikitext(locWikitext, lang);
     
     mergedResult = mergeCountryData(JSON.stringify(mergedResult), localizedData as Country);
   }

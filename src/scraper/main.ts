@@ -1,10 +1,8 @@
 import { DataValidator } from './utils/validator.js';
-import { CheerioCrawler, log } from 'crawlee';
-import { CountryParser } from './parsers/country-parser.js';
-import { DescriptionParser } from './parsers/description.js';
 import { Country, getEmptyCountry, getEmptyLocalizedField } from '../types/country.js';
 import { WikipediaAPI } from './utils/wikipedia-api.js';
 import { mergeCountryData } from './utils/merger.js';
+import { parseCountryFromWikitext } from './parsers/wikitext-country-parser.js';
 import Database from 'better-sqlite3';
 import fs from 'fs';
 
@@ -18,138 +16,102 @@ try {
       data TEXT
     )
   `);
-  log.info('Database initialized successfully.');
 } catch (e) {
-  log.error('Database initialization failed: ' + (e instanceof Error ? e.message : String(e)));
+  console.error('Database initialization failed: ' + (e instanceof Error ? e.message : String(e)));
 }
 const insertCountry = db.prepare('INSERT OR REPLACE INTO countries (name, data) VALUES (?, ?)');
 const getCountry = db.prepare('SELECT data FROM countries WHERE name = ?');
 
 const writeLocks: Record<string, Promise<void>> = {};
 
-type LocalizedArrayFieldKey = 'capital' | 'largestCity' | 'officialLanguage' | 'demonym' | 'currency' | 'government' | 'timeZone';
+async function run() {
+  // 1. DISCOVERY
+  const limitArg = process.argv.find(arg => arg.startsWith('--limit='));
+  const limit = limitArg ? parseInt(limitArg.split('=')[1], 10) : undefined;
+  
+  const discoveryUrl = `https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Member_states_of_the_United_Nations&cmlimit=500&format=json`;
+  const response = await fetch(discoveryUrl);
+  const data = await response.json();
+  let titles = data.query.categorymembers.map((m: any) => m.title);
+  if (limit) titles = titles.slice(0, limit);
 
-const crawler = new CheerioCrawler({
-  maxConcurrency: 10,
-  requestHandler: async ({ $, request }) => {
-    if (request.url.includes('List_of_sovereign_states')) {
-      const table = $('table.wikitable').first();
-      const rows = table.find('tbody > tr').toArray();
-      const countryLinks = rows.map(r => {
-        const a = $(r).find('td').first().find('a');
-        return { 
-          title: a.attr('title'), 
-          href: a.attr('href') 
-        };
-      }).filter(l => l.title && l.href && !l.href.includes('redlink=1'));
+  // 2. TRANSLATION PREFETCH
+  const allLangLinks = await WikipediaAPI.fetchTranslations(titles, ['pt', 'fr', 'it', 'es']);
 
-      const titles = countryLinks.map(l => l.title!) as string[];
-      log.info(`Found ${titles.length} countries. Fetching translations...`);
-      const languages = ['pt', 'fr', 'it', 'es'];
-      const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
-
-      for (const link of countryLinks) {
-        const baseName = link.title!;
-        const enUrl = `https://en.wikipedia.org${link.href}`;
-        
-        const requests = [];
-        // Enqueue English
-        requests.push({ url: enUrl, label: 'country', userData: { baseName, lang: 'en' } });
-        
-        // Enqueue Localized
-        const langLinks = allLangLinks[baseName];
-        if (langLinks) {
-          for (const lang of languages) {
-            if (langLinks[lang]) {
-              const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
-              requests.push({ url: locUrl, label: 'country', userData: { baseName, lang } });
-            }
-          }
-        }
-        await crawler.addRequests(requests);
-      }
-      return;
-    }
-
-    const lang = request.userData.lang || 'en';
-    const name = $('h1#firstHeading').text();
-    const countryId = request.userData.baseName || name;
-
-    // Use a simple lock to prevent race conditions during database updates
-    if (!writeLocks[countryId]) {
-      writeLocks[countryId] = Promise.resolve();
-    }
-
-    await writeLocks[countryId];
-    let resolveLock: () => void;
-    writeLocks[countryId] = new Promise((resolve) => { resolveLock = resolve; });
-
+  // 3. PER-COUNTRY PROCESSING
+  const semaphore = new Semaphore(5);
+  await Promise.all(titles.map(async (title: string) => {
+    await semaphore.acquire();
     try {
-      if (lang === 'en') {
-        const countryData = CountryParser.parseCountry($, {}, lang);
-        const articleIds = new Set([
-            ...(countryData.capital?.map(i => i.articleId) || []),
-            ...(countryData.largestCity?.map(i => i.articleId) || []),
-            ...(countryData.officialLanguage?.map(i => i.articleId) || []),
-            ...(countryData.currency?.map(i => i.articleId) || []),
-            ...(countryData.demonym?.map(i => i.articleId) || []),
-            ...(countryData.government?.map(i => i.articleId) || []),
-            ...(countryData.timeZone?.map(i => i.articleId) || [])
-        ].filter(Boolean) as string[]);
-        
-        const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
-        
-        const nameLoc = getEmptyLocalizedField();
-        nameLoc.en = name;
-        const localizedData: Country = {
-          ...getEmptyCountry(),
-          ...countryData,
-          name: nameLoc,
-        };
+      const countryId = title;
+      
+      // Fetch English data
+      const enWikitext = await WikipediaAPI.fetchWikitext(title, 'en');
+      const enData = parseCountryFromWikitext(enWikitext, 'en');
+      
+      const articleIds = new Set([
+        ...(enData.capital?.map(i => i.articleId) || []),
+        ...(enData.largestCity?.map(i => i.articleId) || []),
+        ...(enData.officialLanguage?.map(i => i.articleId) || []),
+        ...(enData.currency?.map(i => i.articleId) || []),
+        ...(enData.demonym?.map(i => i.articleId) || []),
+        ...(enData.government?.map(i => i.articleId) || []),
+        ...(enData.timeZone?.map(i => i.articleId) || [])
+      ].filter(Boolean) as string[]);
+      
+      const translations = await WikipediaAPI.fetchTranslations(Array.from(articleIds), ['pt', 'fr', 'it', 'es']);
+      
+      const nameLoc = getEmptyLocalizedField();
+      nameLoc.en = title;
+      const countryData: Country = {
+        ...getEmptyCountry(),
+        ...enData,
+        name: nameLoc,
+      };
 
-        // Fill translations
-        ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
-          const key = field as LocalizedArrayFieldKey;
-          const items = (localizedData[key] as { articleId?: string | null; name: Record<string, string | null | undefined> }[]) || [];
-          items.forEach(item => {
-            const articleId = item.articleId?.replace(/_/g, ' ');
-            ['pt', 'fr', 'it', 'es'].forEach(l => {
-              const translation = articleId ? translations[articleId]?.[l] : null;
-              if (translation) {
-                item.name[l] = translation;
-              } else if (!item.name[l]) {
-                item.name[l] = item.name.en;
-              }
-            });
+      // Fill translations for En pass
+      ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
+        const key = field as keyof Country;
+        const items = (countryData[key] as any[] || []);
+        items.forEach(item => {
+          const articleId = item.articleId?.replace(/_/g, ' ');
+          ['pt', 'fr', 'it', 'es'].forEach(l => {
+            const translation = articleId ? translations[articleId]?.[l] : null;
+            if (translation) item.name[l] = translation;
+            else if (!item.name[l]) item.name[l] = item.name.en;
           });
         });
+      });
 
-        const existing = getCountry.get(countryId) as { data: string } | undefined;
-        const merged = mergeCountryData(existing?.data || null, localizedData);
-        insertCountry.run(countryId, JSON.stringify(merged));
-      } else {
-        const nameLoc = getEmptyLocalizedField();
-        nameLoc[lang as keyof typeof nameLoc] = name;
-        const localizedData: Partial<Country> = { name: nameLoc };
-        DescriptionParser.parse($, localizedData, lang);
-        const existing = getCountry.get(countryId) as { data: string } | undefined;
-        const merged = mergeCountryData(existing?.data || null, localizedData as Country);
-        insertCountry.run(countryId, JSON.stringify(merged));
+      // Localized passes
+      const langLinks = allLangLinks[title] || {};
+      for (const lang of ['pt', 'fr', 'it', 'es']) {
+        const locTitle = langLinks[lang];
+        if (locTitle) {
+          const wikitext = await WikipediaAPI.fetchWikitext(locTitle, lang);
+          const localizedData = parseCountryFromWikitext(wikitext, lang);
+          mergeIntoCountry(countryData, localizedData, lang);
+        }
       }
-    } finally {
-      resolveLock!();
-      delete writeLocks[countryId];
-    }
-  },
-});
 
-async function run() {
-  await crawler.run(['https://en.wikipedia.org/wiki/List_of_sovereign_states']);
+      // Write with lock
+      if (!writeLocks[countryId]) writeLocks[countryId] = Promise.resolve();
+      await writeLocks[countryId];
+      writeLocks[countryId] = (async () => {
+        const existing = getCountry.get(countryId) as { data: string } | undefined;
+        const merged = mergeCountryData(existing?.data || null, countryData);
+        insertCountry.run(countryId, JSON.stringify(merged));
+      })();
+      await writeLocks[countryId];
+    } finally {
+      semaphore.release();
+    }
+  }));
+
+  // 4. POST-PROCESSING (Copy verbatim from existing main.ts)
   const rawCountries = (db.prepare('SELECT data FROM countries').all() as { data: string }[]).map(row => JSON.parse(row.data) as Country);
-  
   const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-  // Normalize and validate all countries
   const countries = rawCountries
     .sort((a, b) => (a.isoCode || '').localeCompare(b.isoCode || ''))
     .map(country => {
@@ -160,7 +122,6 @@ async function run() {
       return DataValidator.validate({ isoCode, ...rest });
     });
 
-  // 1. Generate standard full files
   const output = {
     metadata: {
       generatedAt: new Date().toISOString(),
@@ -175,19 +136,14 @@ async function run() {
   fs.writeFileSync('data/sovereign-states.json', JSON.stringify(output, null, 2));
   fs.writeFileSync('data/sovereign-states.min.json', JSON.stringify(output));
 
-  // 2. Generate Static REST API structure
   const API_DIR = 'data/api/v1';
   const COUNTRY_DIR = `${API_DIR}/countries`;
   fs.mkdirSync(COUNTRY_DIR, { recursive: true });
 
-  // Index file
   const index = countries.map(({ isoCode, name, flagUrl }) => ({ isoCode, name, flagUrl }));
   fs.writeFileSync(`${API_DIR}/index.json`, JSON.stringify(index, null, 2));
-
-  // Bulk export file
   fs.writeFileSync(`${API_DIR}/all.json`, JSON.stringify(countries, null, 2));
 
-  // Individual files
   countries.forEach(country => {
     if (country.isoCode) {
       fs.writeFileSync(`${COUNTRY_DIR}/${country.isoCode}.json`, JSON.stringify(country, null, 2));
@@ -195,4 +151,23 @@ async function run() {
   });
 }
 
-run().catch(err => { log.error('Scraper failed', err); process.exit(1); });
+function mergeIntoCountry(target: any, source: any, lang: string) {
+  if (source.name) target.name[lang] = source.name[lang];
+  if (source.description) target.description[lang] = source.description[lang];
+}
+
+class Semaphore {
+  private count: number;
+  private queue: (() => void)[] = [];
+  constructor(count: number) { this.count = count; }
+  async acquire() {
+    if (this.count > 0) { this.count--; return; }
+    await new Promise(resolve => this.queue.push(resolve as any));
+  }
+  release() {
+    if (this.queue.length > 0) { const resolve = this.queue.shift(); resolve!(); }
+    else this.count++;
+  }
+}
+
+run().catch(err => { console.error('Scraper failed', err); process.exit(1); });

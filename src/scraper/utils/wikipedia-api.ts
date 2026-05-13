@@ -26,6 +26,7 @@ interface WikipediaQueryResponse {
 export class WikipediaAPI {
   private static snapshotData: Record<string, Record<string, string>> | null = null;
   private static isSnapshotMode = false;
+  private static USER_AGENT = 'WikiGeoDataScraper/1.0 (mucadoo@personal.dev)';
 
   /**
    * Enables snapshot mode and loads translations from a file.
@@ -36,6 +37,63 @@ export class WikipediaAPI {
     if (fs.existsSync(filePath)) {
       this.snapshotData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     }
+  }
+
+  private static sanitize(name: string): string {
+    try {
+      name = decodeURIComponent(name);
+    } catch {
+      // Ignore decode errors
+    }
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  }
+
+  /**
+   * Fetches wikitext for a given Wikipedia article title.
+   */
+  static async fetchWikitext(title: string, lang: string = 'en'): Promise<string> {
+    if (this.isSnapshotMode) {
+      const filePath = `tests/snapshots/wikitext/${lang}/${this.sanitize(title)}.txt`;
+      if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, 'utf-8');
+      }
+    }
+
+    const url = `https://${lang}.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=${encodeURIComponent(title)}`;
+    let retries = 3;
+
+    while (retries > 0) {
+      try {
+        const response = await axios.get(url, {
+          headers: { 'User-Agent': this.USER_AGENT }
+        });
+
+        const data = response.data;
+        const pages = data?.query?.pages;
+        if (!pages) throw new Error('Unexpected API response shape');
+
+        const pageId = Object.keys(pages)[0];
+        if (pageId === '-1') throw new Error(`Page '${title}' not found`);
+
+        const page = pages[pageId];
+        const wikitext = page?.revisions?.[0]?.slots?.main?.['*'];
+
+        if (typeof wikitext !== 'string') {
+          throw new Error(`Wikitext not found for page '${title}'`);
+        }
+
+        return wikitext;
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error) && error.response?.status === 429 && retries > 1) {
+          const delay = (4 - retries) * 2000;
+          await new Promise(resolve => setTimeout(resolve, delay));
+          retries--;
+          continue;
+        }
+        throw error;
+      }
+    }
+    throw new Error('Failed to fetch wikitext after retries');
   }
 
   /**
@@ -71,7 +129,7 @@ export class WikipediaAPI {
         while (retries > 0) {
           try {
             const response = await axios.get(url, {
-              headers: { 'User-Agent': 'WikiGeoDataScraper/1.0 (mucadoo@personal.dev)' }
+              headers: { 'User-Agent': this.USER_AGENT }
             });
             const query = (response.data as WikipediaQueryResponse).query;
             if (!query || !query.pages) break;

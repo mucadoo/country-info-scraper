@@ -1,0 +1,1121 @@
+{{coord|-0.68|11.5|scale:1000000|display=title}}
+{{Infobox Pays
+ | nom_français            = République gabonaise
+ | langue                  = 
+ | image_drapeau           = Flag of Gabon.svg
+ | lien_drapeau            = Drapeau du Gabon
+ | image_blason            = Coat of arms of Gabon.svg
+ | lien_blason             = Armoiries du Gabon
+ | image_carte             = Gabon (orthographic projection).svg
+ | image_carte2            = Carte Gabon-fr.svg
+ | devise                  = Union, Travail, Justice
+ | langues_officielles     = [[Français]]
+ | capitale                = [[Libreville]]
+ | coordonnées_capitale    = {{coord|0|23|24|N|9|24|7|E|type:city}}
+ | lien_villes             = Liste de villes du Gabon
+ | titre_plus_grande_ville = Plus grandes villes
+ | plus_grande_ville       = [[Libreville]], [[Port-Gentil]], [[Franceville]]
+ | type_gouvernement       = [[République]] [[État unitaire|unitaire]] à [[régime présidentiel]]
+ | titre_dirigeant         = [[Président de la République gabonaise|Président]]
+ | nom_dirigeant           = [[Brice Oligui Nguema]]
+ | titre_dirigeant2        = [[Vice-président de la République gabonaise|Vice-président]]
+ | nom_dirigeant2          = [[Alexandre Barro Chambrier]]
+ | titre_dirigeant3        = Vice-président du gouvernement
+ | nom_dirigeant3          = [[Hermann Immongault]]
+ | titre_dirigeant4        = [[Assemblée nationale (Gabon)|Président de l'Assemblée nationale]]
+ | nom_dirigeant4          = [[Régis Onanga Ndiaye]]
+ | titre_dirigeant5        = [[Sénat (Gabon)|Présidente du Sénat]]
+ | nom_dirigeant5          = [[Huguette Nyana Ekoume]]
+ | titre_parlement         = [[Parlement]]
+ | nom_parlement           = [[Parlement du Gabon|Parlement]]
+ | titre_parlement2        = [[Chambre haute]]<br>[[Chambre basse]]
+ | nom_parlement2          = [[Sénat (Gabon)|Sénat]]<br>[[Assemblée nationale (Gabon)|Assemblée nationale]]
+ | superficie_rang         = 76
+ | superficie_totale       = 267667
+ | pourcentage_eau         = Négligeable
+ | population_rang         = 146
+ | population_totale       = 2397368
+ | population_année        = 2023<ref name="CIA">{{Lien web |langue=en |titre=Africa : Gabon |url=https://www.cia.gov/the-world-factbook/countries/gabon/ |site=[[Central Intelligence Agency|cia.gov]] |consulté le=2023-08-26}}.</ref>
+ | groupes_ethniques       = [[Fang (peuple)|Fang]], [[Punu (peuple)|Punu]]-[[Échira (peuple)|Échira]]/[[Vili (peuple)|Vili]], [[Myènè (peuple)|Myènè]], [[Nzebi (peuple)|Nzebi]]/[[Adouma (peuple)|Adouma]], [[Teke (peuple)|Teke]]-[[Mbete (peuple)|Mbete]] <!-- seulement les ethnies les plus importantes numériquement (selon World Factbook de la CIA et ULaval) -->
+ | type_indépendance       = Date
+ | pays_indépendance       = {{France}}
+ | date_indépendance       = {{date|17 août 1960}}<ref name="pers">{{Lien web |titre=17 août 1960, Proclamation de l'indépendance du Gabon |url=http://perspective.usherbrooke.ca/bilan/servlet/BMEve?codeEve=303 |site=Perspective monde |éditeur=[[Université de Sherbrooke]]}}.</ref>
+ | gentilé                 = Gabonais, Gabonaise
+ | PIB                     = {{unité|20.9|milliards}} de dollars<ref> https://datacommons.org/place/country/GAB?mprop=amount&popt=EconomicActivity&cpv=activitySource%2CGrossDomesticProduction&hl=fr</ref>
+ | PIB_année               = 2024
+ | PIB_rang                = {{123e}}
+ | PIB_HAB                 = {{unité|15103|dollars}}<ref>{{Lien web |langue=en |titre=Gabon - PIB par habitant (Parité pouvoir d'achat) ($ international courant) |url=https://perspective.usherbrooke.ca/bilan/servlet/BMTendanceStatPays?codeTheme=2&codeStat=NY.GDP.PCAP.PP.CD&codePays=GAB&optionsPeriodes=Aucune&codeTheme2=1&codeStat2=x&codePays2=GAB&optionsDetPeriodes=avecNomP&langue=fr |site=perspective.usherbrooke.ca |consulté le=2020-08-22}}</ref>
+ | PIBHAB_année            = 2015
+ | PIBHAB_rang             = {{98e}}
+ | monnaie                 = [[Franc CFA (CEMAC)]]
+ | code_monnaie            = XAF
+ | IDH                     = {{diminution}} {{formatnum:0.706}}<ref name="hdr2021-22">{{HDR|2022}}</ref>
+ | IDH_année               = 2021
+ | IDH_catégorie           = élevé
+ | IDH_rang                = {{112e}}
+ | IDHI                    = {{diminution}} {{formatnum:0.554}}<ref name="hdr2021-22" />
+ | IDHI_année              = 2021
+ | IDHI_rang               = {{93e}}
+ | Gini                    = {{diminution positive}} 38,0 %<ref name="Gini_BM">{{Lien web |langue=en |titre=Gini index |url=https://data.worldbank.org/indicator/SI.POV.GINI?most_recent_value_desc=false |consulté le=24 avril 2023 |site=[[Banque mondiale]]}}.</ref>
+ | Gini_année              = 2017
+ | Gini_rang               = 
+ | IIG                     = {{diminution positive}} {{formatnum:0.541}}<ref name="hdr2021-22" />
+ | IIG_année               = 2021
+ | IIG_rang                = {{140e}}
+ | IPE                     = {{diminution}} {{formatnum:49.7}}<ref name="IPE2022">{{Ouvrage |langue=en |auteur1=Martin J. Wolf |auteur2=John W. Emerson |auteur3=Daniel C. Esty |auteur4=Alex de Sherbinin |auteur5=Zachary A. Wendling |et al.=oui |titre=2022 Environmental Performance Index |lieu=New Haven, Connecticut, États-Unis |éditeur=Yale Center for Environmental Law & Policy |année=2022 |pages totales=192 |isbn= |lire en ligne=https://epi.yale.edu/downloads/epi2022report06062022.pdf |format électronique=pdf}}.</ref>
+ | IPE_année               = 2022
+ | IPE_rang                = {{51e}}
+ | fuseau_horaire          = + 1
+ | hymne_national          = [[La Concorde]]
+ | audio_hymne             = La Concorde.ogg
+ | fête_nationale          = {{date|17 août}}
+ | fête_evt                = [[Histoire du Gabon#Les premiers temps de l'indépendance|Indépendance]] vis-à-vis de la [[France]] ({{date|1960}})
+ | domaine_internet        = [[.ga]]
+ | iso3166-1               = GAB, GA
+ | indicatif_téléphonique  = 241
+ | PIB_HABPPA              = 
+ | PIBHABPPA_année         = 
+ | PIBHABPPA_rang          = 
+ | code_plaque             = G
+ | organisations_internationales = {{drapeau|ONU}} [[Organisation des nations unies|ONU]]<br> {{drapeau|UA}} [[Union Africaine|UA]]<br>{{Commonwealth}}<br>{{drapeau|Francophonie}} [[Organisation internationale de la francophonie|OIF]]<br> {{drapeau|OPEP}} [[Organisation des pays exportateurs de pétrole|OPEP]]<br> [[Fichier:Logo Afrikanische Entwicklungsbank.svg|20px|]] [[Banque africaine de développement|BAD]]<br> [[Groupe des vingt-quatre|G24]]<br> [[Commission du golfe de Guinée|CGG]]<br> [[Communauté économique des États de l'Afrique centrale|CEEAC]]<br>[[Organisation pour l'harmonisation en Afrique du droit des affaires|OHADA]]<br>[[Organisation des producteurs africains|APO]]<br>[[Zone de paix et de coopération de l'Atlantique Sud|ZPCAS]]<br>[[Centre international des civilisations bantu|CICIBA]]<br> [[Conseil africain et malgache pour l'enseignement supérieur|CAMES]]
+}}
+
+Le '''Gabon''', en forme longue la '''République gabonaise'''<ref name="CNIG">{{Ouvrage |format=pdf |titre=Pays, territoires et villes du monde juillet 2021 |nom1=Commission nationale de toponymie, conseil national de l'information géographique |date=01-07-2021 |pages=34 |passage=16 |lire en ligne=https://cnig.gouv.fr/IMG/pdf/ptvm_1er-juillet-2021_ok.pdf |présentation en ligne=https://cnig.gouv.fr/ressources-toponymie-a10578.html |consulté le=10-03-2025}}</ref>, est un pays situé en [[Afrique centrale]], traversé par l'[[Équateur terrestre|équateur]], frontalier à l'est, au sud-est et au sud de la [[république du Congo]], au nord-nord-ouest de la [[Guinée équatoriale]] et au nord du [[Cameroun]]. Sa capitale administrative est [[Libreville]] et [[Port-Gentil]] la capitale économique. 
+
+Ce qui est aujourd'hui le Gabon est colonisé par la [[France]] et intégré à la colonie du [[Congo français]] en 1882. Le territoire devient une [[Colonie du Gabon|colonie distincte]] en 1906 et obtient son indépendance en 1960 sous la présidence de [[Léon Mba]], qui gouverne le pays jusqu'à sa mort en 1967. Son vice-président, [[Omar Bongo]], lui succède et déclare le [[Parti démocratique gabonais]] (PDG) [[parti unique]] en 1968. Bien que le [[multipartisme]] soit instauré au début des années 1990, le PDG reste toujours le parti dominant tandis que Bongo se maintient au pouvoir jusqu'à sa propre mort en 2009. Son fils, [[Ali Bongo]], devient alors le nouveau président, et gouverne le pays jusqu'à son renversement par le [[Coup d'État de 2023 au Gabon|coup d'État de 2023]].
+
+C’est un pays forestier où la [[Faune (biologie)|faune]] et la [[flore]] sont encore bien conservées et protégées dans treize parcs nationaux dont le [[parc national de la Lopé]] et celui d'[[parc national d'Ivindo|Ivindo]], inscrits au [[Liste du patrimoine mondial au Gabon|patrimoine mondial]] de l'[[Organisation des Nations unies pour l'éducation, la science et la culture|UNESCO]].
+
+Une faible population, d'importantes [[sylviculture|ressources forestières]] et un [[pétrole]] abondant ont permis au Gabon d'être l'un des pays les plus prospères d'[[Afrique]]. Le pays affiche l'[[indice de développement humain]] le plus élevé d'[[Afrique subsaharienne]] selon l'[[Organisation des Nations unies]], disposant du deuxième revenu par habitant le plus élevé derrière la [[Guinée équatoriale]] et devant le [[Botswana]]. Le [[produit intérieur brut]] a augmenté de plus de 6 % par an pour la période 2010-2012. Cependant, du fait de grandes inégalités dans la répartition des revenus, une proportion importante de la population reste pauvre.
+
+La langue officielle est le [[français]]. La quasi-totalité des habitants sont membres des groupes ethniques [[bantous]]. Le [[christianisme]] est la religion la plus pratiquée.
+
+== Histoire ==
+{{Article détaillé|Histoire du Gabon|Chronologie du Gabon}}
+
+=== Histoire géologique, géochimique et paléontologique ===
+{{Article détaillé|Groupe fossile de Franceville}}
+
+
+Le bassin de [[Franceville]], conserve des sédiments du [[protérozoïque inférieur]] (environ 2,1 Ga), notamment la formation [[Francevillien|Francevillian B]], un schiste noir intact sur le plan métamorphique. Ces couches exceptionnelles abritent des structures macroscopiques fossilisées appelées [[Groupe fossile de Franceville|Gabonionta]] ou groupe fossile de [[Franceville]], considérées par certains chercheurs comme les plus anciens animaux multicellulaires connus — ou du moins des organismes très complexes et organisés —, notamment grâce à la présence possible de [[Stérol|stérols]], marqueurs typiques des [[Eukaryota|eucaryotes]]<ref>{{Article|prénom1=Abderrazak|nom1=El Albani|prénom2=Stefan|nom2=Bengtson|prénom3=Donald E.|nom3=Canfield|prénom4=Armelle|nom4=Riboulleau|titre=The 2.1 Ga old Francevillian biota: biogenicity, taphonomy and biodiversity|périodique=PloS One|volume=9|numéro=6|pages=e99438|date=2014|issn=1932-6203|pmid=24963687|pmcid=4070892|doi=10.1371/journal.pone.0099438|lire en ligne=https://pmc.ncbi.nlm.nih.gov/articles/PMC4070892/|consulté le=2025-08-27}}</ref>.
+
+
+
+Ce pays recèle les traces d'[[Organisme multicellulaire|organismes multicellulaires]] les plus anciens connus {{quand|à ce jour}}. Elles remontent à {{unité|2.1|milliards d'années}} et ont été découvertes dans le [[Francevillien]] de la région de [[Franceville]] en 2008<ref>{{Article|auteur1=Cyril Langlois|titre=De Burgess au Gabon : les plus anciennes traces fossiles de pluricellulaires|périodique=Planet-Terre|éditeur=ENS Lyon|date=15 sept. 2010|lire en ligne=http://planet-terre.ens-lyon.fr/article/fossiles-pluricellulaires.xml}}.</ref>{{,}}<ref>{{Article|auteur1=AFP|titre=Et si la vie multicellulaire avait {{unité|1.5|milliard d'années}} de plus ?|périodique=L'Express|date={{1er}} juil. 2010|lire en ligne=https://www.lexpress.fr/sciences-sante/sciences/et-si-la-vie-multicellulaire-avait-1-5-milliard-d-annees-de-plus_903256.html?cmp_redirect=true}}.</ref>{{,}}<ref>{{Article|auteur1=Grégory Raymond|titre=L’histoire de la vie bouleversée|périodique=lejdd.fr|date={{1er}} juillet 2010|lire en ligne=https://www.lejdd.fr/Societe/L-histoire-de-la-vie-bouleversee-204267-3262787}}.</ref>.
+
+En {{date|juin 2014}}, le [[Centre national de la recherche scientifique]] annonce la découverte de nouveaux fossiles macroscopiques d'une taille allant jusqu'à {{unité|17|cm}} et confirme l'âge du gisement fossile à {{unité|2.1|milliards d'années}}<ref>{{Lien web |titre=Une vie complexe il y a 2 milliards d’années : l’hypothèse se confirme ! |url=http://www.futura-sciences.com/magazines/terre/infos/actu/d/paleontologie-vie-complexe-il-y-2-milliards-annees-hypothese-confirme-54231/ |site=[[Futura (portail web)|futura-sciences.com]] |date=26 juin 2014}}.</ref>.
+
+Le [[Réacteur nucléaire naturel d'Oklo|réacteur nucléaire naturel d’Oklo]] est un phénomène géologique unique découvert en 1972 dans la mine d’uranium d’Oklo, près de [[Franceville]], dans le sud-est du Gabon<ref name=":4">{{Lien web |langue=fr |titre=Découvrez Oklo, le seul réacteur nucléaire naturel connu au monde vieux de deux milliards d’années |url=https://www.iaea.org/fr/newscenter/news/decouvrez-oklo-le-seul-reacteur-nucleaire-naturel-connu-au-monde-vieux-de-deux-milliards-dannees |site=www.iaea.org |date=2018-08-10 |consulté le=2025-08-27}}</ref>.
+
+Il s’agit d’anciens réacteurs nucléaires naturels qui se sont formés il y a environ 2 milliards d’années, lorsque la proportion d’[[uranium 235]] (environ 3 %) permettait le déclenchement d’une [[fission nucléaire]] spontanée. Les conditions géologiques locales — forte concentration en [[uranium]], présence d’eau comme modérateur et configuration des roches — ont permis une réaction nucléaire en chaîne auto-entretenue pendant plusieurs centaines de milliers d’années, produisant une puissance estimée à quelques mégawatts<ref name=":4" />.
+
+Ce phénomène est unique sur Terre et a apporté des données importantes sur la stabilité à long terme des déchets radioactifs ainsi que sur les processus naturels de fission<ref name=":4" />. 
+
+=== Préhistoire et protohistoire ===
+Il existe des traces d'un peuplement préhistorique du Gabon remontant à {{nombre|400000|ans}} et se poursuivant jusqu'à l'[[âge du fer]]. Les [[Pygmée]]s actuels, qui seraient issus de ce peuplement, sont les premiers habitants connus de ce qui est actuellement le Gabon. [[Chasseur-cueilleur|Chasseurs-cueilleurs]], ils s'installent environ {{nombre|5000 ans}} avant notre ère. Une vague de peuplements [[bantous]] leur succède durant le [[Néolithique]].  
+
+Les Bantous étant eux-mêmes partis il y a {{nombre|5000 ans}} de la zone [[Sahel|sahélienne]] en voie d'assèchement, leur expansion vers le sud et l'est de l’[[Afrique]] date d'environ {{nombre|1000|ou=2000|ans}} avant notre ère<ref>{{Lien web |auteur=Luc de Heusch |titre=Bantou |url=http://www.universalis.fr/encyclopedie/bantou/ |site=universalis.fr}}.</ref>{{,}}<ref name="hga2">{{Ouvrage |auteur1=Collectif |titre=Histoire générale de l'Afrique |volume=2 |titre volume=Afrique ancienne |éditeur=Unesco |année= |passage=582 |isbn= |id=hga2}}.</ref>.
+
+À la différence des Pygmées, les peuples [[bantous]] sont semi-sédentaires et pratiquent l'[[élevage]] ; ils maîtrisent aussi la [[métallurgie]] dès le {{-mi|i}} Arrivés au Gabon, ils trouvent donc un peuplement pygmée sur place<ref name="universalis_histoire" />.
+
+En 2016, des prospections archéologiques menées sur le tronçon routier Loubomo-Moungagara, dans le sud-ouest du Gabon, ont permis de découvrir deux nouveaux sites, ''BGP 1'' et ''Panga 3'', caractérisés par la présence de fragments de céramique<ref name="HISTARC n°4 - Abstracts {{!}} CESAC - IRSH - Gabon">{{Lien web |titre=HISTARC n°4 - Abstracts {{!}} CESAC - IRSH - Gabon |url=https://labarcgabon.com/histarc_4_Asbstracts_2019.html |site=labarcgabon.com |consulté le=2025-08-26}}</ref>.
+
+Le site de ''BGP 1'' présente différents types de récipients, dont certains à contours simples et ellipsoïdaux, ainsi que d’autres à contours complexes avec des formes galbées et des ouvertures variées (rétrécies ou évasées).
+
+Le site de ''Panga 3'' se distingue par des céramiques non décorées, comprenant des formes variées : ellipsoïdales, cylindriques ou hyperboloïdes, avec des bords éversés ou redressés<ref name="HISTARC n°4 - Abstracts {{!}} CESAC - IRSH - Gabon" />.
+
+Découverte en 2018 à [[Mouila]] (province de la [[Ngounié]]), la [[grotte d'Iroungou]] est une sépulture collective unique en Afrique centrale. 
+
+Elle a livré les restes d’au moins 28 individus, accompagnés de 512 artefacts en fer, cuivre, coquillages marins, dents percées, houes-monnaie, bracelets, [[Gong (instrument)|gongs]], couteaux, et même des tiges spatulaires en fer jamais documentées ailleurs sur le continent  .
+
+Les [[Datation au carbone 14|datations au carbone-14]] situent les inhumations entre les [[XIVe siècle|XIVᵉ]] et [[XVe siècle|XVᵉ]] siècles ap. J.-C<ref>{{Lien web |langue=fr-FR |titre=Gabon : la grotte d'Iroungou, vestige inespéré d'une Afrique médiévale méconnue |url=https://www.franceinfo.fr/culture/patrimoine/archeologie/gabon-la-grotte-d-iroungou-vestige-inespere-d-une-afrique-medievale-meconnue_3858701.html |site=Franceinfo |date=2020-03-09 |consulté le=2025-08-27}}</ref>.  
+
+En 2021, des [[Pierre taillée|pierres taillées]] découvertes sur le site d'Elarmékora sont datées indirectement d'au moins {{nombre|650000 ans}}. La datation repose sur celle des échantillons de [[sol (pédologie)|sol]] prélevés depuis la surface jusqu'à la strate où se trouvaient les pierres, datés par les [[nucléide cosmogénique|nucléides cosmogéniques]] [[aluminium 26]] et [[béryllium 10]]<ref>{{Article| langue=en| titre=In situ-produced 10 Be and 26 Al indirect dating of Elarmékora Earlier Stone Age artifacts: first attempt in a savannah forest mosaic in the middle Ogooué valley, Gabon| auteur1=Regis Braucher| auteur2=R. Oslisly| auteur3=I. Mesfin| auteur4=P. Ntoutoume Mba| auteur5=Aster Team| périodique=Philosophical Transactions of the Royal Society B. Biological Sciences| date=2021| pages=| doi=10.1098/rstb.2020.0482| lire en ligne=https://hal.archives-ouvertes.fr/hal-03426405/| accès url=libre| consulté le=22 janvier 2022| issn = 0962-8436 }}.</ref>. Ces pierres taillées attestent d’une présence humaine au Gabon, remontant au [[paléolithique inférieur]].
+
+Des fouilles à Youmbidi, un [[abri sous roche]] près de [[Lastoursville]], a mis en lumière une occupation humaine de {{nombre|25000 ans}}, avec des outils taillés, céramiques, restes animaux et végétaux, offrant des indices sur les régimes alimentaires [[protohistoire|protohistoriques]]. Parmi les trouvailles, on compte également l’un des plus anciens tessons de poterie d’Afrique centrale (daté de plus de 6 500 ans), une perle façonnée à partir d’une coquille d’escargot (vieille de 3 300 à 4 900 ans), et des dents humaines susceptibles de fournir un ADN ancien<ref>{{Article|langue=fr|titre=Au Gabon, sonder l’histoire commune des hommes et de la forêt|périodique=Le Monde|date=2024-09-14|lire en ligne=https://www.lemonde.fr/afrique/article/2024/09/14/au-gabon-sonder-l-histoire-commune-des-hommes-et-de-la-foret_6317642_3212.html|consulté le=2025-08-27}}</ref>. Ces découvertes aident à comprendre l’impact humain sur la forêt et la genèse de l’agriculture<ref>{{Article|langue=fr|titre=Au Gabon, sonder l’histoire commune des hommes et de la forêt|périodique=Le Monde|date=2024-09-14|lire en ligne=https://www.lemonde.fr/afrique/article/2024/09/14/au-gabon-sonder-l-histoire-commune-des-hommes-et-de-la-foret_6317642_3212.html|consulté le=2025-08-26}}.</ref>.
+
+=== Peuplement du Gabon ===
+Les [[Pygmée|Pygmées]] constituent les premiers occupants connus du Gabon, descendants de communautés de [[Chasseur-cueilleur|chasseurs-cueilleurs]] forestiers. Leurs ancêtres sont présents dans le pays depuis des millénaires, comme le montrent tant les [[Tradition orale|traditions orales]] des ethnies locales que les [[Analyse génétique|analyses génétiques]]. 
+
+Une étude basée sur l’[[ADN mitochondrial]] montre une divergence génétique entre [[Pygmée|Pygmées]] et [[Bantous]] remontant à environ 70 000 ans au plus, suivie de mélanges principalement via l’intégration de femmes pygmées dans des populations bantoues, il y a entre 40 000 et quelques milliers d’années<ref>{{Lien web |langue=fr |titre=L'histoire des populations de Pygmées et d'agriculteurs bantous d'Afrique Centrale |url=https://www.pasteur.fr/fr/histoire-populations-pygmees-agriculteurs-bantous-afrique-centrale |site=Institut Pasteur |date=2013-09-23 |consulté le=2025-08-27}}</ref>. Dans la [[Ogooué-Maritime|province de l’Ogooué-Maritime]] (zones d’Iguéla et d’Ikéngué), des fouilles datantes des traditions de [[Chasseurs-cueilleurs en Afrique|chasseurs-cueilleurs]] allant de 7 000 à 2 000 ans avant notre ère, confirment la présence ancienne des précurseurs des Pygmées<ref>{{Lien web |langue=fr-FR |titre=Tribune libre/LE PEUPLEMENT DE L’OGOOUÉ-MARITIME : L’ ‘AUTOCHTONIE’ EN QUESTION - Gabon Info |url=https://gabon-info.com/2025/03/03/tribune-libre-le-peuplement-de-logooue-maritime-l-autochtonie-en-question/ |date=2025-03-03 |consulté le=2025-08-27}}</ref>.
+
+Bien que certains récits évoquent des mélanges entre Pygmées et Bantous dès cette période, des études récentes suggèrent que les interactions génétiques importantes ont débuté moins de mille ans avant notre ère, traduisant des tabous culturels persistants <ref>{{Lien web |langue=fr-FR |titre=Le génome des pygmées, clef d’une histoire oubliée |url=https://www.jeuneafrique.com/depeches/22442/politique/le-genome-des-pygmees-clef-dune-histoire-oubliee/ |site=JeuneAfrique.com |consulté le=2025-08-27}}</ref>.
+
+Cependant, les migrations bantoues ont apporté une transformation majeure du peuplement au Gabon<ref name=":5">{{Lien web |langue=fr-FR |prénom=Stéphane |nom=Gaudry |titre=Gabon — pays (pays) |url=https://www.gaudry.be/lieu/ga.html |site=Infobrol - Stéphane Gaudry |date=2018-01-03 |consulté le=2025-08-27}}</ref>.
+
+Originaires de la [[Sahel|zone sahélienne]], les Bantous ont commencé à s’étendre vers l’[[Afrique centrale]] à partir de 5 000 ans [[av. J.-C.]], avec une arrivée progressive sur le territoire gabonais entre 2 000 et 1 000 av. J.-C., apportant l’[[agriculture]], l’[[élevage]] et la [[Métallurgie en Afrique ancienne|métallurgie du fer]] du fait du mode de vie semi-[[sédentaire]]<ref name=":5" />.
+
+Les [[Mpongwe]]s s'installent au Gabon au milieu du {{s-|XI}} dans la zone de l'actuelle [[Estuaire (province)|province de l'Estuaire]]<ref name="universalis_histoire">{{Lien web |auteur=Nicolas Métégué N'nah |auteur2=Roland Pourtier |titre=Gabon, histoire |url=http://www.universalis.fr/encyclopedie/gabon/2-histoire/ |site=Universalis.fr}}.</ref>{{,}}<ref>{{Ouvrage|auteur=Nicolas Métégué N'Nah |titre=Histoire du Gabon|sous-titre=des origines à l'aube du {{s-|XXI}} |éditeur=L'Harmattan |année=2006 |lire en ligne=https://books.google.fr/books?id=RMZFVvASHGAC&pg=PA18}}.</ref>. Les principaux clans étaient : les ''Agoulamba'' (rive gauche, roi Rassondji dit Georges), les ''Adoni'' ([[île Coniquet]], roi François), les ''Asiga'' (rive gauche, [[Denis Rapontchombo|roi Denis]]), les ''Aguékaza'' (rive droite, scindés en trois branches, celle du roi [[Louis Ré-Dowé|Louis Dowé]], du roi Quaben et celle du prince [[Roi Glass|Glass]]). 
+
+En 1550, les [[Orungu]] débarquent dans la région des Lacs Nord (Lagune Nkomi, Lac Onangué, Lac Nkonié et Lac Azingo), dans la province de l’[[Ogooué-Maritime]]<ref name=":3" />.
+
+Quant aux [[Enenga]], ils s’installeront vers 1600 aux abords du Lac Zilé, à [[Lambaréné]]. Durant la même période, on observe également le début des grandes migrations [[Apindjis|Apindji]] et [[Mitsogho]].  
+
+Le [[XVIe siècle|XVIe]] siècle voit l’arrivée d'autres peuples bantous, notamment les [[Galoas]] et [[Nkomi|Nkomis]] vers le [[Lagune Fernan Vaz|Cap Fernan-Vez]]. 
+
+Vers 1750, les [[Adouma (peuple)|Adouma]] venus des [[Plateaux Batéké|plateaux batekés]] et ayant suivi le fleuve Sébé arrivent jusqu’aux [[Rapides (hydrologie)|Rapides]] de Mboungou Badouma et de Doumé, zone actuelle allant de [[Moanda (Gabon)|Moanda]] à [[Lastoursville]] (rive gauche du fleuve l’[[Ogooué]])<ref>{{Lien web |titre=Adouma:
+Les Badouma (Adouma des explorateurs) occupent la rive gauche de l'Ogooué aux environs de Lastoursville. Pagayeurs réputés, ils ont joué un grand rôle à l'époque de Brazza. |url=https://www.amazinggabon.com/fr/portfolio/adouma/}}</ref>. 
+
+Au Sud-Ouest s’installent les [[Punu (peuple)|Bapunus]], et à l’extrémité du sud-ouest les [[Nzebi (peuple)|Nzébis]], [[Obamba (peuple)|Obambas]] et [[Teke (peuple)|Batékés]].  
+
+En 1846, l’avant-garde [[Fang (peuple)|fang]] atteint le confluent du [[Mbini (cours d'eau)|Mbini]] et du [[Komo (fleuve)|Komo]] en provenance du Nord-Est. Dix ans plus tard, le peuple [[Fang (peuple)|fang]] fait la rencontre de l’explorateur [[Paul Belloni Du Chaillu|Du Chaillu]] près des sources de ces deux cours d’eau. 
+
+Au cours des vingt années suivantes, les [[Fang (peuple)|Fang]] parvinrent à occuper l’ensemble du Nord-Ouest du Gabon ainsi que la [[Guinée espagnole]], actuelle [[Guinée équatoriale|Guinée Équatoriale]]. 
+
+À l’époque pré-coloniale, le Gabon est constitué de petits royaumes tribaux, avec une partie du pays qui est subordonnée au [[Royaume du Kongo]].
+
+=== Histoire pré-coloniale ===
+En 1472, les Portugais furent les premiers Européens à pénétrer la province de l’[[Estuaire du Gabon|Estuaire]] du Gabon. 
+
+Par la suite, l’explorateur portugais [[Lopo Gonçalves]] va découvrir le [[Cap Lopez]] en 1473<ref name=":3">{{Ouvrage|auteur1=Abbé André Raponda Walker|titre=Notes d’histoire du Gabon|lieu=Brazzaville|année=1960|isbn=2-9510473-0-4}}</ref>. En 1475, l’explorateur portugais [[Rui de Sequeira]] découvre le Cap Sainte-Catherine, situé dans l’actuelle province de l’[[Ogooué-Maritime]], au Gabon. 
+
+Le nom Gabon apparaît sur la mappemonde de l’Afrique établie en 1493 par [[Juan de la Cosa]]<ref>{{Lien web |langue=fr |titre=Atlas de La Formation Territoriale Du Gabon {{!}} PDF |url=https://fr.scribd.com/document/705391600/Atlas-de-la-Formation-Territoriale-du-Gabon |site=Scribd |consulté le=2025-08-25}}</ref>. 
+
+Le littoral gabonais retint particulièrement l’attention des explorateurs portugais du fait de sa proximité avec [[Sao Tomé-et-Principe|Sao Tomé]], qui était le principal centre des activités portugaises dans le [[golfe de Guinée]]. Dès lors, ce rivage entra dans le circuit du commerce de « troque » de la [[Golfe de Guinée|Côte occidentale d'Afrique]]. Les [[Traite négrière occidentale|négriers]] portugais fréquentaient les cotés gabonaises principalement à la recherche du « bois d'ébène » (captifs africains). Les rois et chefs locaux échangeaient souvent ces richesses ([[ébène]], [[ivoire]], [[cire]], kevazingo ou [[guibourtia tessmannii]] et bois d’okoumé) contre de la [[Pacotille (marchandises)|pacotille]] (armes, étoffes, [[eau-de-vie]]){{Référence nécessaire|date=août 2025}}.
+
+Le nom Gabon tire son origine du mot "Gabão" qui signifie [[caban]] en [[portugais]], en référence à la forme de l’estuaire situé près de l’actuelle [[Libreville]]. Cependant, le ''Dictionnaire de l’Origine des noms et surnoms des pays africains d'Arol Ketchiemen<ref>{{Ouvrage|auteur1=Arol Ketchiemen|titre=Dictionnaire de l'origine des noms et surnoms des pays africains|éditeur=[[Éditions Favre|Favre]]|année=2014|passage=141 à 145|isbn=}}.</ref>'' n’exclut pas l’hypothèse que le nom Gabon ait été emprunté aux populations côtières locales.
+
+Dès 1515, les navires français commencent à fréquenter les côtes gabonaises.  
+
+Les côtes gabonaises devinrent un carrefour commercial fréquenté par les négriers européens, notamment les Portugais, Français, Hollandais (îles [[Corisco]] et [[Elobey Grande|Élobey]] conjointement en 1600), Espagnols et Anglais. 
+
+En 1601, un groupe [[Mpongwe|mpongwé]] attaque et pille un [[comptoir]] hollandais à [[Corisco]]<ref>{{Ouvrage|auteur1=André Raponda Walker|titre=Notes d’histoires du Gabon: suivi de toponymie de l'estuaire Libreville et toponymie du Fernan-vaz, Port-Gentil|lieu=Libreville (Gabon)|éditeur=Édition Raponda Walker|année=1996|isbn=9782951047303}}</ref>. 
+
+Du [[XIVe siècle|XIVe]] au milieu du {{s|XVIII}}, les chefs des tribus côtières et îles environnantes du Gabon entretiennent des relations diplomatiques et commerciales avec les Européens<ref>{{Article|prénom1=Guy|nom1=Lasserre|titre=Bordeaux et les origines de Libreville|périodique=Revue historique de Bordeaux et du département de la Gironde|volume=5|numéro=2|pages=107–116|date=1956|doi=10.3406/rhbg.1956.1769|lire en ligne=https://www.persee.fr/doc/rhbg_0242-6838_1956_num_5_2_1769|consulté le=2025-08-25}}</ref>. 
+
+Ils se livreront par la suite à la [[Traites négrières|traite négrière]], en commerçant notamment avec les [[Mpongwe]]s, établis dans l'estuaire du [[Komo (fleuve)|Komo]] ainsi que les [[Orungu]]s présents dans le delta de l'[[Ogooué]]. 
+
+Les esclaves sont d'abord destinés aux plantations de [[canne à sucre]] de [[São Tomé (île)|São Tomé]] avant le [[commerce triangulaire]]. 
+
+Durant cette période qui s'étend jusqu'au {{s-|XIX}}, les Européens ne chercheront pas à pénétrer l’intérieur du pays; ils établiront des [[Comptoir|comptoirs]] et des fortins dans la zone littorale et les relations avec l'intérieur du pays passeront par les peuples côtiers<ref>{{Ouvrage|auteur1=Collectif|titre=Histoire générale de l'Afrique|volume=5|titre volume=L’Afrique du {{sp-|XVI|au|XVIII}}|éditeur=Unesco|passage=31 et sq.}}</ref>{{,}}<ref>{{Article|auteur1=Elikia M'Bokolo|titre=Le Gabon précolonial|sous-titre=étude sociale et économique|périodique=Cahiers d'études africaines|volume=17|numéro=66-67|pages=331-344|année=|date=1977|doi=10.3406/cea.1977.2457|lire en ligne=https://www.persee.fr/doc/cea_0008-0055_1977_num_17_66_2457}}.</ref>.
+
+=== Période coloniale ===
+Après la signature d’un traité le 9 février 1839 entre [[Édouard Bouët-Willaumez]] et [[Denis Rapontchombo|Antchuwè Kowè Rapontchombo]], chef [[Mpongwe|mpongwé]] de la rive gauche, la France va progressivement occuper le littoral gabonais.  
+
+Le 8 mars 1842, [[Édouard Bouët-Willaumez|Édouard Bouet-Willaumez]] signe un autre accord avec [[Louis Ré-Dowé|Anguilè Ré-Dowé]], chef [[Mpongwe|mpongwé]] de la rive droite, qui va permettre à la [[France]] d’obtenir la souveraineté du territoire situé entre le village du [[roi Glass]] et celui du roi Quaben<ref>{{Article|prénom1=Guy|nom1=Lasserre|titre=Bordeaux et les origines de Libreville|périodique=Revue historique de Bordeaux et du département de la Gironde|volume=5|numéro=2|pages=107–116|date=1956|doi=10.3406/rhbg.1956.1769|lire en ligne=https://www.persee.fr/doc/rhbg_0242-6838_1956_num_5_2_1769|consulté le=2025-08-24}}</ref>.
+
+'''''Les protestants''''' 
+
+C'est en 1825 que l'[[American Board of Commissioners for Foreign Missions]] de [[Boston]] décide d'envoyer des missions sur la côte d'Afrique<ref>{{Ouvrage|auteur1=Hubert Deschamps|titre=Quinze ans de Gabon (1839 à 1853)|lire en ligne=https://www.persee.fr/issue/outre_0300-9513_1965_num_52_186?sectionId=outre_0300-9513_1965_num_52_186_1394}}</ref>.
+
+En janvier 1834, le révérend [[John Leighton Wilson]] arrive à [[Cap des Palmes|Cap Palmas]] au sud du [[Liberia]]. Du fait de nombreux décès de ses compagnons, il décide en juin 1842 de transférer son établissement au Gabon. 
+
+'''''Les catholiques''''' 
+
+[[Jean-Rémi Bessieux]], nommé "[[Vicaire apostolique]] des deux Guinées", arrive le 29 septembre 1844 au Gabon à bord du navire français ''"Le Zèbre"'', avec son compagnon le frère Grégoire. Ensemble, ils fonderont la mission Sainte-Marie de [[Libreville]].
+
+Ils sont suivis, le 30 juillet 1848 des sœurs de l’Immaculée Conception de [[Castres]].
+
+Les explorateurs commencent à pénétrer l’[[arrière-pays]] (tels le Franco-Américain [[Paul Belloni Du Chaillu]], qui donnera son nom au [[massif du Chaillu]], ou [[Pierre Savorgnan de Brazza]] qui remonte le cours de l'[[Ogooué]] en 1874, puis 1876-1878 et 1879-1882).
+
+En 1886, le Gabon devient une [[colonie française]]. 
+
+Deux ans plus tard, le Gabon fusionne avec le Congo pour donner le Gabon-Congo. Puis en {{date|1898}}, le '''Gabon-Congo''' prendra l’appellation de [[Congo français]]{{sfn|Archives nationales d'outre-mer|2015|id=Archives nationales d'outre-mer-2015}}. 
+
+À la suite d'un décret du {{date|29 décembre 1903}}<ref>{{Lien web |description=Décret du 29 décembre 1903 |url=https://gallica.bnf.fr/ark:/12148/bpt6k5492365f/f35}} portant organisation du Congo français et dépendances.</ref>, le Gabon redevient une colonie distincte des autres colonies du [[Congo français]]{{sfn|Archives nationales d'outre-mer|2015|id=Archives nationales d'outre-mer-2015}}. 
+
+En {{date|1910}}, le Gabon et le [[République du Congo|Congo]] sont intégrés dans l'[[Afrique-Équatoriale française]] (AEF){{sfn|Archives nationales d'outre-mer|2015|id=Archives nationales d'outre-mer-2015}}.
+
+À la suite de l’accord franco-allemand de 1911, conclu dans le contexte de la [[Coup d'Agadir|crise d’Agadir]], le territoire gabonais va connaître sa première troncature. Le Gabon est dépossédé de certains territoires dans le [[Woleu-Ntem]], notamment l’[[Okano]] et du [[Ogooué-Ivindo]] ([[Mvoung (département)|Mvoung]]) qui passeront sous occupation allemande pour faire partie intégrante du [[Neukamerun|Neu Kamerun]]. Les autres régions et unités administratives demeureront inchangées<ref name="Atlas de La Formation Territoriale Du Gabon {{!}} PDF">{{Lien web |langue=fr |titre=Atlas de La Formation Territoriale Du Gabon {{!}} PDF |url=https://fr.scribd.com/document/705391600/Atlas-de-la-Formation-Territoriale-du-Gabon |site=Scribd |consulté le=2025-08-20}}</ref>.
+
+En 1916, l’administration coloniale française réorganise le territoire gabonais. Les unités administratives sont diminuées, passant de 22 à 16. C’est à cette période que des dénominations de provinces comme le [[Moyen-Ogooué]] et [[Haut-Ogooué]] apparaissent<ref name="Atlas de La Formation Territoriale Du Gabon {{!}} PDF" />.
+
+À la suite de la défaite de l’Allemagne en 1916, la province du [[Woleu-Ntem]] est réintégrée au Gabon tandis que les départements  de [[Kouilou]] et [[Niari]] sont définitivement rattachées au [[Moyen-Congo (colonie)|Moyen-Congo]]. 
+
+En 1940, le Gabon est d'abord tenu par des forces [[régime de Vichy|vichystes]], mais après la brève [[campagne du Gabon]], il passe, avec l'AEF, dans le camp de la [[France libre]]. Ses dirigeants coloniaux sont alors internés<ref>{{Ouvrage |auteur1=Étienne Schlumberger |titre=L'honneur et les rebelles de la Marine française 1940-1944 |lieu=Paris |éditeur=Maisonneuve & Larose |année=2004 |passage=39-42 |isbn=}}.</ref>.
+
+En 1946, le Gabon devient un [[Territoire d'outre-mer (France)|territoire d'outre-mer]]{{sfn|Archives nationales d'outre-mer|2015|id=Archives nationales d'outre-mer-2015}}.
+
+En octobre 1958, la [[Communauté française (Cinquième République)|Communauté française]] étant nouvellement créée, le Conseil de gouvernement du Gabon, s'appuyant sur l'article 76 de la nouvelle Constitution de la [[Cinquième République (France)|{{nobr|{{Ve}} République}}]] (version de 1958), demande la transformation du Gabon en [[département français]]. [[Léon Mba]], président de ce Conseil, charge [[Louis Sanmarco]], administrateur colonial, de présenter la demande auprès du gouvernement métropolitain. Sanmarco reçoit une fin de non recevoir, le [[Charles de Gaulle|général de Gaulle]] n'y étant pas favorable, au grand dam de Léon Mba<ref>{{Ouvrage |prénom1=Louis |nom1=Sanmarco |titre=Le colonisateur colonisé |éditeur=Pierre-Marcel Favre |année= |passage=210-211 |isbn=}}.</ref>{{,}}<ref>{{Lien web |auteur1=Alexandre Gerbi |titre=Aux origines du mal ou L’affaire gabonaise (1958) |url=http://fusionnisme.blogspot.com/2008/10/ |jour=16 |mois=10 |année=2008}}.</ref>.
+
+=== Indépendance ===
+Le {{date|17 août 1960}}, comme la grande majorité des colonies françaises d'[[Afrique subsaharienne]], le Gabon accède à l'indépendance. Celle-ci est contraire au souhait de son Premier ministre [[Léon Mba]], qui avait demandé que le Gabon devienne un département français d'outremer<ref>{{Lien web |auteur=Yves-Laurent Goma |titre=Léon Mba le président qui ne voulait pas de l'indépendance du Gabon |url=http://www.rfi.fr/afrique/20100816-leon-mba-le-president-voulait-pas-independance-gabon |site=rfi.fr |date=23-08-2010}}.</ref>. Ce dernier en devient le premier président<ref name="pers" />. Il est soutenu par la France qui assure même militairement son maintien au pouvoir ([[Coup d'État de 1964 au Gabon|intervention de l'armée française en 1964 à son profit]])<ref>{{Lien web |titre=Présentation du Gabon, géographie et histoire |url=https://www.diplomatie.gouv.fr/fr/dossiers-pays/gabon/presentation-du-gabon/ |site=diplomatie.gouv.fr |éditeur=Ministère des affaires étrangères}}.</ref>, jusqu'à son décès en 1967 où il est remplacé par le vice-président, [[Omar Bongo|Albert-Bernard Bongo]] (appelé par la suite « Omar Bongo Ondimba »).
+
+Le président Omar Bongo instaure aussitôt le monopartisme avec la création du [[Parti démocratique gabonais]] (PDG). L'exploitation des richesses naturelles du pays ([[bois]], [[minerai]]s et surtout [[pétrole]]) assure une relative prospérité au Gabon. Le président Bongo devient un chef d'État très courtisé, notamment par la France qui en fait un de ses alliés africains les plus sûrs. En échange du soutien de l’Élysée, qui peut intervenir pour le destituer, Bongo consent à mettre à disposition de la France une partie des richesses du Gabon et en particulier son pétrole et son [[uranium]], ressources stratégiques. Sur les questions de politique internationale, le Gabon s'aligne sur Paris<ref>{{Lien web |auteur=Olivier Piot |titre=Au Gabon, la mécanique du népotisme s’enraye |url=https://www.monde-diplomatique.fr/2016/10/PIOT/56406 |site=Le Monde diplomatique |date=2016-10-01}}.</ref>.
+
+[[Fichier:Omar Bongo crop.jpg|vignette|Le [[Président de la République gabonaise|président]] [[Omar Bongo]] en 2004.]]
+[[Fichier:Ali Bongo Ondimba.jpg|vignette|Le [[Président de la République gabonaise|président]] [[Ali Bongo]] en 2010.]]
+
+En 1968, Omar Bongo, toujours sous l'influence de [[Jacques Foccart]], est contraint par la France de reconnaître la pseudo-indépendance du [[Biafra]] (sud-est du Nigeria). Il doit même accepter que l'aéroport de Libreville serve de plaque tournante aux livraisons d'armes opérées en faveur du colonel [[Odumegwu Emeka Ojukwu]] (le dirigeant sécessionniste du Biafra). C'est aussi depuis le Gabon que les mercenaires de [[Bob Denard]] tentent de déstabiliser le régime marxiste-léniniste du [[Bénin]]<ref>{{Lien web |prénom1=Boubacar Boris |nom1=Diop |titre=Omar Bongo, une passion française |url=https://www.monde-diplomatique.fr/2009/07/DIOP/17545 |site=Le Monde diplomatique |date=2009-07-01}}.</ref>.
+
+À la fin des [[années 1980]], la chute du cours du pétrole plonge le Gabon dans une grave crise économique, incitant la population à multiplier les revendications sociales et politiques<ref>{{Ouvrage |titre=Thème : Le consensus politique au Gabon, de 1960 à nos jours |éditeur=MALD CNRS - Université Paris I |année= |format livre=pdf |isbn= |lire en ligne=http://mald.univ-paris1.fr/doctorants/rencontres/intervention_gabon.pdf}}.</ref>.
+
+Une conférence nationale se tient en mars-avril 1990. À l'issue de celle-ci, et de manifestations, d'importantes réformes politiques sont adoptées, dont la création d'un sénat national, la décentralisation des finances, la liberté de rassemblement et de la presse, l'abolition du [[Visa (document)#Visa de sortie|visa de sortie]] obligatoire et le multipartisme. Les premières élections législatives multipartites en presque trente ans ont lieu en septembre-octobre 1990<ref name="LM1990">{{Article|auteur=AFP |titre=Gabon. La conférence nationale se prononce pour le multipartisme " immédiat " |périodique=[[Le Monde]] |date=12 avril 1990|lire en ligne=https://www.lemonde.fr/archives/article/1990/04/12/gabon-la-conference-nationale-se-prononce-pour-le-multipartisme-immediat_3958275_1819218.html}}.</ref>{{,}}<ref>{{Article|titre=Gabon : en raison de nombreuses irrégularités, les élections législatives auront de nouveau lieu fin octobre dans 62 circonscriptions sur 120|périodique=[[Le Monde]]|date=22 septembre 1990|url=https://www.lemonde.fr/archives/article/1990/09/22/gabon-en-raison-de-nombreuses-irregularites-les-elections-legislatives-auront-de-nouveau-lieu-fin-octobre-dans-62-circonscriptions-sur-120_3977667_1819218.html}}.</ref>.
+
+Après cette conférence nationale, dans le cadre d'élections où il n'est plus seul candidat, Omar Bongo est de nouveau élu en 1993, 1998 et 2005, quoique dans des conditions souvent contestées. Le {{Date|3 septembre 2009}}, [[Ali Bongo]], ministre de la Défense et fils d'Omar Bongo, devient le troisième président du Gabon, élu à l'occasion d'un [[Scrutin uninominal majoritaire à un tour|scrutin majoritaire à un tour]]<ref>{{Lien web |titre=Gabon |url=http://recef.org/francophonie-electorale/fiches-pays/gabon/ |site=recef.org |éditeur=Réseau des compétences électorales francophones}}.</ref>, avec 41,79 % des suffrages exprimés, soit environ {{nombre|141000|voix}} sur un total de {{nombre|800000 électeurs}} inscrits. Il devance [[Pierre Mamboundou]], crédité de 25,64 % des voix, et [[André Mba Obame]], le nouveau chef de l'opposition gabonaise et ancien ministre de l'Intérieur<ref name="libe_2009">{{Article |titre=La cour constitutionnelle du Gabon valide l'élection d'Ali Bongo |périodique=[[Libération (journal)|Libération]] |date=4 septembre 2009 |lire en ligne=http://www.liberation.fr/monde/2009/09/04/la-cour-constitutionnelle-du-gabon-valide-l-election-d-ali-bongo_579517}}.</ref>. Les [[Élection présidentielle gabonaise de 2009|résultats]] sont fortement contestés et à la suite de forts soupçons de fraude, des émeutes éclatent et sont violemment réprimées par les forces de l'ordre, fidèles au pouvoir<ref>{{Article |titre=L'élection gabonaise est un coup de force |périodique=Le Monde |date=2009-09-04 |issn=1950-6244 |url=https://www.lemonde.fr/afrique/article/2009/09/04/l-election-gabonaise-est-un-coup-de-force_1236029_3212.html |consulté le=2017-02-12}}.</ref>.
+
+Par la suite, plusieurs enquêtes attestent que les scores ont été truqués. Dans un documentaire diffusé sur [[France 2]] en décembre 2010, le diplomate [[Michel de Bonnecorse]], ex-conseiller Afrique du président [[Jacques Chirac]], confirme cette version des faits. L'ambassadeur américain [[Charles Rivkin]], dans un télégramme transmis en novembre 2009 à la secrétaire d’État, le confirme également : « octobre 2009, Ali Bongo inverse le décompte des voix et se déclare président »<ref name=":0">{{Article|auteur=[[Olivier Piot]] |titre=Au Gabon, la mécanique du népotisme s’enraye |périodique=Le Monde Diplomatique |date=octobre 2016|url=https://www.monde-diplomatique.fr/2016/10/PIOT/56406}}</ref>.
+
+Le [[Élection présidentielle gabonaise de 2016|31 août 2016]], à la suite de nouvelles élections présidentielles, la commission électorale annonce qu'Ali Bongo remporte le scrutin à cinq mille voix près. L'opposition dénonce immédiatement ces résultats. Des [[Violences post-électorales de 2016 au Gabon|émeutes]] encore plus violemment réprimées que celles de 2009 éclatent, avec comme point d'orgue l'attaque du quartier général de l'opposition par la garde présidentielle qui fait de nombreux morts. Le {{date|24 septembre 2016}}, Ali Bongo est proclamé vainqueur par la Cour constitutionnelle avec 50,66 % des voix, suivi de [[Jean Ping]] avec 47,24 % des suffrages.
+
+Le {{date|2 février 2017}}, le Parlement européen adopte une résolution déclarant que les résultats de la présidentielle « manquent de transparence » et sont « extrêmement douteux »<ref>{{Article |titre=Crise post-électorale : l'UE adopte une résolution contre le Gabon |périodique=RFI Afrique |date=2 février 2017 |lire en ligne=http://www.rfi.fr/afrique/20170202-crise-post-electorale-UE-adopte-resolution-contre-gabon |consulté le=2017-02-12}}.</ref>.
+
+Le {{date|7 janvier 2019}}, une unité de soldats mutinés, prétextant l'état de santé d'Ali Bongo, en convalescence après un [[accident vasculaire cérébral]], prend brièvement le contrôle de Radio Gabon et transmet un appel au soulèvement, dans une apparente [[Tentative de coup d'État de 2019 au Gabon|tentative de coup d'État]]. Cette insurrection échoue le même jour ; sur cinq mutins, deux sont tués et les autres arrêtés<ref>{{Lien web |titre=Coup d'État avorté au Gabon : retour sur le fil des évènements de la journée |url=http://www.rfi.fr/afrique/20190107-direct-suivez-evolution-situation-gabon-tentative-putsch |éditeur=RFI |date=7 janvier 2019}}.</ref>{{,}}<ref>{{Article |auteur=Laurent Larcher|titre=Après le coup d’État au Gabon, un retour à l’anormal |périodique=La Croix |date=7 janvier 2019 |lire en ligne=https://www.la-croix.com/Monde/Afrique/coup-dEtat-Gabon-retour-lanormal-2019-01-07-1200993699}}.</ref>. Le {{Date|12 janvier 2019-}}, un nouveau Premier ministre est nommé, [[Julien Nkoghe Bekalé]]<ref>{{Article |auteur1=Georges Dougueli |titre=Gabon : Julien Nkoghe Bekale nommé Premier ministre et Faustin Boukoubi élu président de l'Assemblée nationale |périodique=[[Jeune Afrique]] |date=12 janvier 2019 |lire en ligne=https://www.jeuneafrique.com/702739/politique/gabon-julien-nkoghe-bekale-nomme-premier-ministre-et-faustin-boukoubi-elu-president-de-lassemblee-nationale/ |consulté le=13 janvier 2019}}.</ref>. Le pouvoir gabonais connaît une guerre des clans au sommet. Les remaniements ministériels se succèdent entre janvier et décembre 2019, alors que l'incertitude demeure sur l'état de santé d'Ali Bongo<ref>{{Article |auteur1=Georges Dougueli |titre=Au Gabon, interrogations et rumeurs en l’absence du président Ali Bongo |périodique=[[Le Monde]] |date=8 janvier 2019 |lire en ligne=https://www.lemonde.fr/afrique/article/2019/01/08/au-gabon-interrogations-et-rumeurs-en-l-absence-du-president-ali-bongo_5406266_3212.html |consulté le=13 janvier 2019}}.</ref>{{,}}<ref>{{Article|auteur=AFP|titre=Gabon : Bongo sort du silence et se pose en maître du jeu politique|périodique=[[Le Point]]|date=9 juin 2019|url=https://www.lepoint.fr/monde/gabon-bongo-sort-du-silence-et-demande-un-nouveau-gouvernement-08-06-2019-2317737_24.php}}.</ref>. [[Rose Christiane Ossouka Raponda]] est nommée première ministre en juillet 2020, puis [[Alain Claude Bilie By Nze]] lui succède en {{date|janvier 2023}}.
+
+Le {{date|30 août 2023}}, Ali Bongo, annoncé comme réélu quelques heures plus tôt, est renversé par un coup d'État militaire mené par le général [[Brice Oligui Nguema]]. Celui-ci est investi le {{date|4 septembre 2023-}}<ref>{{Ouvrage|titre=Le Bilan du Monde|lieu=Paris|éditeur=Le Monde|année=2024|passage=156|isbn=978-2-36804-159-8}}.</ref>.
+
+== Politique ==
+
+{{Article détaillé|Politique au Gabon}}
+
+[[Fichier:Omar Bongo with George Bush May 26 2004-02.jpg|vignette|Rencontre entre [[George W. Bush]] (président des États-Unis) et Omar Bongo Ondimba (président du Gabon) dans le [[Bureau ovale]].]]
+
+De 1960 à 2023, le Gabon a un régime hybride. Il comporte à la fois les caractéristiques du régime présidentiel et de celui dit parlementaire. Le premier président de la République gabonaise est [[Léon Mba]] en 1960. [[Omar Bongo]] devient le deuxième président de la République gabonaise en 1967, à la mort de Léon Mba. Il est alors, à {{nobr|32 ans}}, le plus jeune chef d'état au monde<ref name="larousse" />. Il reste au pouvoir de 1967 jusqu'à son décès en 2009.
+
+Entre 1968 et 1990, le pays est sous le régime du [[parti unique]], le [[Parti démocratique gabonais]] (PDG). Une conférence nationale se tient en mars-avril 1990. À l'issue de celle-ci, d'importantes réformes politiques sont adoptées, dont la création d'un sénat national, la décentralisation des finances, la liberté de rassemblement et de la presse, l'abolition du visa de sortie obligatoire et le multipartisme, avec les premières élections législatives multipartites en presque trente ans en septembre-octobre 1990<ref name="LM1990" />{{,}}<ref>{{Article |langue=fr |titre=Gabon : Octobre 1989 - mai 1990 Complots, troubles, libéralisation... |périodique=[[Le Monde]] |jour=26 |mois=mai |année=1990 |lire en ligne=https://www.lemonde.fr/archives/article/1990/05/26/gabon-octobre-1989-mai-1990-complots-troubles-liberalisation_3993697_1819218.html}}</ref>.
+
+Malgré cette certaine démocratisation, la situation économique du pays n'évolue guère tandis qu'Omar Bongo et son parti présidentiel se maintiennent au pouvoir. Il meurt le {{Date|8|juin|2009}}, à l'âge de {{nobr|73 ans}}<ref>{{Article |titre=Omar Bongo Ondimba (1935-2009) |périodique=[[Jeune Afrique]] |numéro=2527 |date=15 juin 2009}}.</ref>. L'intérim est assuré par la présidente du Sénat, [[Rose Rogombé]], jusqu'à l'élection anticipée de 2009<ref>{{Article |titre=Rose Francine Rogombé, présidente du Gabon par intérim |périodique=[[Libération (journal)|Libération]] |jour=11 |mois=6 |année=2009 |lire en ligne=http://www.liberation.fr/monde/2009/06/11/rose-francine-rogombe-presidente-du-gabon-par-interim_564027}}.</ref>. Ali Bongo succède alors à son père<ref name="libe_2009" />.
+
+Le {{date|30 août 2023}}, alors que les résultats de l'élection présidentielle déclarent Ali Bongo réélu pour la troisième fois, un [[Coup d'État de 2023 au Gabon|coup d'État militaire]] destitue Ali Bongo<ref>{{Lien web |langue=fr |titre=Coup d’Etat au Gabon : des officiers de l'armée affirment avoir pris le pouvoir |url=https://www.bbc.com/afrique/articles/cpw84w3j5plo |site=BBC News Afrique |date=2023-08-30 |consulté le=2023-08-30}}</ref>. [[Brice Oligui Nguema]] est désigné chef de l'État par la junte, qui porte le nom de [[Comité pour la transition et la restauration des institutions]]<ref>{{Lien web|url=https://www.rfi.fr/fr/afrique/20230830-coup-d-%C3%A9tat-au-gabon-le-g%C3%A9n%C3%A9ral-brice-oligui-nguema-nomm%C3%A9-pr%C3%A9sident-de-la-transition|titre=Coup d’État au Gabon: le général Brice Oligui Nguema nommé «président de la Transition»|éditeur=Radio France internationale|date=30 8 2023}}</ref>. Il est [[Élection présidentielle gabonaise de 2025|élu président en 2025]] avec près de 95 % des voix.
+
+=== Françafrique ===
+{{article détaillé|Françafrique}}
+
+L'expression « Françafrique » désigne le système de relations (économiques, politiques, militaires…) et les réseaux d'influence utilisés par la France pour son action en [[Afrique]], essentiellement auprès de ses ex-colonies. Le Gabon est considéré comme un des symboles de la Françafrique<ref>{{Article |titre=Omar Bongo, le symbole de la Françafrique |périodique=Le Point |date=8 juin 2009 |lire en ligne=http://www.lepoint.fr/actualites-monde/2009-06-08/omar-bongo-le-symbole-de-la-francafrique/924/0/350493}}.</ref>{{,}}<ref>{{Article |titre=Jean-Christophe Rufin : « Sarkozy n'a jamais rompu avec la Françafrique » |périodique=Jeune Afrique |date=6 mars 2012 |lire en ligne=http://www.jeuneafrique.com/Article/JA2668p020-027.xml2/france-diplomatie-tchad-senegaljean-christophe-rufin-sarkozy-n-a-jamais-rompu-avec-la-francafrique.html}}.</ref>{{,}}<ref>{{Article |titre=Armée française en Afrique : renégociation des accords de défense, rompre avec la « Françafrique » |périodique=Jeune Afrique |date=16 mai 2012 |lire en ligne=http://www.jeuneafrique.com/Article/JA2678p036-037.xml0/france-diplomatie-senegal-comoresarmee-francaise-en-afrique-renegociation-des-accords-de-defense-rompre-avec-la-francafrique.html}}.</ref>, les deux pays entretenant des liens très étroits ; ils sont liés par de nombreux accords<ref>{{Lien web |titre=Liste des accords et traités entre la France et le Gabon, de 1960 à nos jours |url=http://www.affaires-etrangeres.gouv.ga/ambassade/france/37-informations-generales/293--la-liste-des-accords-et-traites-entre-la-france-et-le-gabon-de-1960-a-nos-jours-/ |site=www.affaires-etrangeres.gouv.ga}}.</ref> et, particulièrement, un accord de défense<ref>Un nouvel accord de défense a été signé en 2011, plus restrictif que celui en vigueur jusqu'à l'heure, qui stipulait qu'en cas d'agression du Gabon, la France interviendrait immédiatement. ''Cf.'' {{Lien web |format=pdf |auteur1=Philippe Vittel (député) |titre=Avis présenté au nom de la commission de la défense nationale et des forces armées sur le projet de loi ({{n°|3195}}) adopté par le Sénat, autorisant la ratification du traité instituant un partenariat de défense entre la République française et la République gabonaise |url=http://www.assemblee-nationale.fr/13/pdf/rapports/r3290.pdf |site=assemblee-nationale.fr |date=30 mars 2011}}, {{lien web |url=http://www.diplomatie.gouv.fr/fr/dossiers-pays/gabon/la-france-et-le-gabon/ |éditeur=Ministère des Affaires étrangères et du Développement international |titre=La France et le Gabon}}.</ref>. Le Gabon, à [[Libreville]] et [[Port-Gentil]], abrite une des dernières bases permanentes françaises en Afrique, celle du [[6e bataillon d'infanterie de marine|{{6e|bataillon}} d'infanterie de marine]], forte de {{nombre|1000|soldats}}<ref>{{Lien web |titre={{6e}} bataillon d'infanterie de marine |url=https://www.defense.gouv.fr/terre/presentation/organisation-des-forces/troupes-de-marine/6e-bataillon-d-infanterie-de-marine |site=defense.gouv.fr}}.</ref>{{,}}<ref>{{Lien web |titre=Forces prépositionnées |url=https://www.defense.gouv.fr/ema/forces-prepositionnees |site=defense.gouv.fr}}.</ref>. Économiquement, l'entreprise [[TotalEnergies|Total]] est le principal producteur de pétrole du pays<ref>{{Lien web |titre=Le secteur pétrolier au Gabon 2014 |url=http://www.tresor.economie.gouv.fr/10211_le-secteur-petrolier-au-gabon-2013 |éditeur=Direction générale du Trésor}}.</ref> ; la France, réciproquement, reste le principal fournisseur du Gabon<ref>{{citation|La France demeure le principal fournisseur du Gabon, représentant en 2011 le chiffre record de 780 millions d’euros, marquant une progression de +37 % par rapport à 2010.}} ''in'' {{Lien web |titre=Plan stratégique « Gabon Émergent » : projets prioritaires et opportunités d'affaires pour les entreprises françaises |url=http://www.ubifrance.fr/programme-france/001prg-20434+plan-strategique-gabon-emergent-projets-prioritaires-et-opportunites-d-af.html |éditeur=[[Ubifrance]]}}.</ref>.
+
+L'[[affaire Elf]], datant de 1994, qui éclate en France et ne tarde pas à éclabousser Omar Bongo et son entourage<ref>La FIBA (''{{Langue|en|texte=French international bank of Africa}}''), banque d'affaire dont la famille Bongo est actionnaire, au même titre que la [[République du Congo]] (dont la fille aînée du président [[Denis Sassou-Nguesso]], [[Édith Bongo|Édith]], est la seconde épouse d'Omar Bongo), est mêlée à cette [[affaire politico-financière]].</ref>, ou « [[Bien mal acquis|l'affaire des biens mal acquis]] » de 2007<ref>{{Lien web |titre=L'affaire des biens mal acquis |url=http://www.transparency-france.org/ewb_pages/a/affaire_biens_mal_acquis.php |site=transparency-france.org}}.</ref>{{,}}<ref>{{Lien web |titre=L'affaire dite des « biens mal acquis » franchit une nouvelle étape |url=http://www.france24.com/fr/20120217-affaire-biens-mal-acquis-franchit-nouvelle-etape-france-afrique-justice/ |éditeur=[[France 24]] |date=17 janv. 2012}}.</ref> sont considérées comme représentatives de la face sombre du système « Françafrique »<ref>{{Article |titre=« Françafrique », un mot-valise entre mallettes et scandales |périodique=Le Monde |date=16 sept. 2011 |lire en ligne=https://www.lemonde.fr/politique/article/2011/09/16/francafrique-un-mot-valise-entre-mallettes-et-scandales_1571935_823448.html}}.</ref>{{,}}<ref>{{Article |titre=La Françafrique, mode d'emploi d'une filière occulte |périodique=Le Figaro |date=14 sept. 2011 |lire en ligne=http://www.lefigaro.fr/actualite-france/2011/09/13/01016-20110913ARTFIG00450-la-francafrique-mode-d-emploi-d-une-filiere-occulte.php}}.</ref>{{,}}<ref>{{Article |auteur1=Antoine de Ravignan |titre=Le scandale des biens mal acquis. Enquête sur les milliards volés de la Françafrique (Xavier Harel et Thomas Hofnung) La Découverte |périodique=Alternatives Internationales |numéro=53 |mois=12 |année=2011}}{{commentaire biblio SRL|Recension du livre.}}.</ref>.
+
+=== Commonwealth ===
+Le Gabon et le [[Togo]] rejoignent le [[Commonwealth]] le {{date|25 juin 2022}}<ref name="Adhésion">{{lien web |titre=Adhésion au Commonwealth : réactions mitigées à Lomé et Libreville |site= Africanews |date=25/069/2022 |consulté le=26/06/2022 |url=https://fr.africanews.com/2022/06/25/le-togo-et-le-gabon-rejoignent-le-commonwealth/}}</ref>.
+
+=== Diplomatie et relations internationales ===
+Du fait du poids économique de son pays et de la longévité du président [[Omar Bongo]] à son poste, qui lui a permis d'entretenir des relations suivies avec les dirigeants internationaux, le Gabon occupe une place non négligeable dans la diplomatie africaine, voire au-delà<ref>{{Lien web |titre=Gabon, vue d'ensemble |url=http://www.banquemondiale.org/fr/country/gabon/overview |éditeur=[[Banque mondiale]]}} : {{citation|Le Gabon a joué un rôle stratégique en faveur de la paix et de la stabilité dans la région.}}.</ref>{{,}}<ref>{{Lien web |auteur1=Hamidou Anne |titre=Diplomatie et hégémonie régionale en Afrique subsaharienne (2) |url=http://terangaweb.com/diplomatie-et-hegemonie-regionale-en-afrique-subsaharienne-2/ |site=terangaweb.com |consulté le=27 janv. 2014}}.</ref>. Le pays s'est investi dans les conflits entre le Tchad et la Libye, en Angola, Namibie… et, plus récemment, dans le conflit syrien ou en Centrafrique, y compris militairement<ref>C'est ainsi qu'en 2014 le Gabon participe à la « Mission de consolidation de la paix en Centrafrique » ([[Mission de consolidation de la paix en Centrafrique|MICOPAX]]), ''cf.'' {{Lien web |titre=Fiche d'information de l'état : Gabon |url=http://www.operationspaix.net/65-fiche-d-information-de-l-etat-gabon.html |site=operationspaix.net}} et {{lien web |titre=Présentation du Gabon |url=http://www.diplomatie.gouv.fr/fr/dossiers-pays/gabon/presentation-du-gabon#sommaire_7 |site=diplomatie.gouv.fr |éditeur=Ministère des Affaires étrangères}} ; c'est à Libreville, en 2008, qu'avait été signé l'« accord de paix global » entre les protagonistes Centrafricains de l'époque, ''cf.'' {{lien web |titre=Historique de l'opération MICOPAX |url=http://www.operationspaix.net/77-historique-micopax.html |site=operationspaix.net}}.</ref>.
+
+Le Gabon est membre de plusieurs organisations internationales dont les [[Organisation des Nations unies|Nations unies]], l'[[Union africaine]], la [[Communauté économique et monétaire de l'Afrique centrale]] (CEMAC), la [[Communauté économique des États de l'Afrique centrale]] (CEEAC)<ref>{{Lien web |titre=Le Gabon et les organismes internationaux |url=http://www.gabon-international.com/le-gabon-l-international/le-gabon-et-les-organismes-internationaux |site=gabon-international.com}}.</ref>, la [[francophonie]]<ref name="francophonie">{{Lien web |titre=77 États et gouvernements |url=http://www.francophonie.org/-77-Etats-et-gouvernements-.html |site=francophonie.org}}.</ref>, le [[Commonwealth]]<ref name="Adhésion" /> et l'[[Organisation de la coopération islamique]] (OCI)<ref>{{Lien web |langue=en fr ar |titre=Les états membres |url=http://www.oic-oci.org/oicv2/states/ |site=OIC-OCI.org}}.</ref>.
+
+== Géographie ==
+{{Article détaillé|contenu=Voir l'article détaillé [[Géographie du Gabon]]}}
+
+=== Géographie physique ===
+==== Climat ====
+Le Gabon est situé en [[Afrique centrale]]<ref>Selon la classification de l'[[Organisation des Nations unies|ONU]] : {{Lien web |langue=fr |titre=Composition des régions macrogéographiques (continentales), composantes géographiques des régions et composition de groupements sélectionnés économiques et d'autres groupements |url=http://unstats.un.org/unsd/methods/m49/m49regnf.htm#ftna |date=31 oct. 2013}}.</ref>, à hauteur de l'[[Équateur terrestre|équateur]]. Le [[climat]] est de type [[Climat équatorial|équatorial]], chaud et humide, avec une alternance de [[Saison sèche|saisons sèches]] et de [[Saison humide|saisons des pluies]] au cours de l'année. On distingue deux saisons humides (février-mai, grande saison des pluies et septembre-décembre, petite saison des pluies) et deux saisons sèches (mai-septembre, grande saison sèche et décembre-janvier, petite saison sèche).
+
+Les températures moyennes sont comprises entre {{tmp|21|°C}} au sud-ouest du pays ([[Port-Gentil]], [[Lambaréné]], [[Mouila]], [[Tchibanga]], [[Mayumba]]) et {{tmp|27|°C}} sur la côte et à l'intérieur du pays<ref name="fao_phyto">{{Ouvrage |langue=fr |auteur1=Ministère de l'Agriculture |titre=Gabon : rapport de pays pour la conférence technique internatinale de la FAO sur les ressources phytogénétiques |éditeur=FAO |année=1995 |format livre=pdf |isbn= |lire en ligne=http://www.fao.org/fileadmin/templates/agphome/documents/PGR/SoW1/africa/GABON.PDF}}.</ref>. Les extrêmes vont de {{tmp|18|°C}} à {{tmp|36|°C}}<ref>{{Lien web |langue=fr |titre=Cadre physique |url=http://www.stat-gabon.org/index.php?option=com_content&view=article&id=46&Itemid=53 |site=stat-gabon.org}}.</ref>. Les [[précipitations]] varient de {{unité|1500|mm/an}} au nord-est et dans les régions de [[savane]] à {{unité|3300|mm/an}} au nord-ouest et au sud-ouest<ref>{{Ouvrage |langue=fr |auteur1=Michel Mbadinga |titre=État, entreprises et développement au Gabon |sous-titre=contribution à une étude géographique |éditeur=Maison de la géographie de Montpellier - Université Montpellier III, Paul Valéry |année=2006 |isbn= |lire en ligne=http://www.mgm.fr/UMR/Mbadinga/These1-2.pdf}}.{{commentaire biblio SRL|Thèse de doctorat en géographie.}}.</ref>. Le taux d'humidité atmosphérique est en moyenne de 85 %, il peut atteindre 100 % en saison des pluies<ref>{{Lien web |langue=fr |titre=Conseil aux voyageurs, Gabon |url=http://diplomatie.belgium.be/fr/Services/voyager_a_letranger/conseils_par_destination/afrique/gabon/ra_gabon.jsp |site=diplomatie.belgium.be |éditeur=Royaume de Belgique, Affaires étrangères, Commerce extérieur et Coopération au développement}}.</ref>.
+
+==== Topographie ====
+[[Fichier:Gabon Topography.png|vignette|Topographie du Gabon.]]
+
+On distingue trois types de relief<ref name="fao_phyto" /> :
+* les plaines côtières (larges de 20 à {{unité|300|km}}) à l'ouest du pays ; les plaines et dépressions (plaines karstiques de la [[Nyanga (Gabon)|Nyanga]] et de la [[Ngounié]], plaine de la [[Lopé (département)|Lopé]], plaines de la région des Lacs, aux alentours de [[Lambaréné]]) ; les deltas maritime et intérieur de l'[[Ogooué]].
+* les massifs montagneux qui comprennent les [[monts de Cristal]] au nord-est de Libreville, le [[massif du Chaillu]] au centre (culminant à {{unité|1020|mètres}} au [[mont Milondo]]) et le massif du [[Mayombe]] qui s'étend sur {{unité|800|km}} parallèlement à la côte de l'[[océan Atlantique|Atlantique]]<ref name="Britannica">{{Lien web |langue=en |titre=Chaillu Massif |url=http://www.britannica.com/EBchecked/topic/104382/Chaillu-Massif?anchor=ref215424 |éditeur=[[Encyclopædia Britannica]]}}.</ref> ;
+* les plateaux et collines. Le plus grand ensemble de plateaux est localisé au nord-est ([[Woleu-Ntem]] et [[Ogooué-Ivindo]]) ; les [[plateaux Batéké]], à l'est de la province du [[Haut-Ogooué]], présentent un paysage de savane au milieu de la forêt<ref>{{Lien web |langue=fr |titre=Le parc national des plateaux Batéké |url=http://www.gabon-services.com/les-parcs-nationaux/les-13-parcs-nationaux/le-parc-national-des-plateaux-bateke |site=gabon-services.com}}.</ref>.
+
+Selon les estimations, 77 à 85 %<ref>La FAO donne le chiffre de 85 % ({{lien web |langue=fr |titre=Processus programmes forestiers nationaux au Gabon |url=http://www.fao.org/docrep/005/AC916F/AC916F02.htm |site=fao.org}}) tandis que l'annuaire statistique officiel de 2009 donne 80 % ({{Ouvrage|langue=fr|titre=Annuaire statistique 2009|éditeur=Direction générale des statistiques du Gabon|année=|format livre=pdf|passage=1|isbn=|lire en ligne=http://www.stat-gabon.org/documents/PDF/Donnees%20stat/Compteannuaire/Ann09.pdf}}) et le PNUE 84,5 % ({{Ouvrage|langue=fr|titre=Afrique. Atlas d'un environnement en mutation|éditeur=[[Programme des Nations unies pour l'environnement|PNUE]]|année=2008|format=pdf|passage=175|isbn=|lire en ligne=http://www.unep.org/dewa/Africa/AfricaAtlas/PDF/fr/Africa_Atlas_Full_fr.pdf|id=atlas2008}}).</ref> du territoire est recouvert par la forêt. Le Gabon possède ainsi le plus fort taux de superficie forestière par habitant en Afrique<ref name="afd">{{Lien web |langue=fr |titre=La gestion durable de la forêt au Gabon : un enjeu pour l’AFD |url=http://www.afd.fr/webdav/site/afd/groups/Agence_Gabon/public/Plaquette%20for%C3%AAt%20AFD%20Gabon%20.pdf |éditeur=[[Agence française de développement|AFD]]}}, {{p.|3}}.</ref>{{,}}<ref>{{Ouvrage |langue=fr |auteur1=Chris Wilks |titre=La conservation des ecosystèmes forestiers du Gabon |éditeur=IUCN |année=1990 |pages totales=215 |isbn= |lire en ligne=https://books.google.fr/books?id=OH1-F-ebDioC&pg=PA39&dq=gabon+couverture+foresti%C3%A8re}}.</ref>.
+
+La longueur du [[littoral]] est de {{unité|885|km}}<ref name="CIA" />.
+
+Le point culminant du Gabon est le [[mont Bengoué]], {{unité|1070|mètres}}, {{coord|0.960572|13.681698|format=dms}}, dans le nord-est du pays dans la province de l'[[Ogooué-Ivindo]]<ref>{{Lien web |langue=en |titre=Relief and drainage |url=http://www.britannica.com/EBchecked/topic/223148/Gabon?anchor=ref1010520 |site=[[Encyclopædia Britannica]]}}.{{commentaire biblio SRL|notice Gabon de l'Encyclopædia Britannica.}}.</ref>.
+
+{{Article détaillé|Forêt du bassin du Congo}}
+
+{{clr}}
+
+==== Principaux cours d'eau ====
+[[Fichier:Hydrographie du Gabon.svg|vignette|Hydrographie du Gabon.]]
+
+{| class="wikitable gauche"
+! scope=col|Nom
+! scope=col|Type
+! scope=col|Longueur
+! scope=col|Bassin ou sous-bassin
+|-
+| [[Ogooué]]
+| fleuve
+|align="right" | {{unité|1200|km}}
+|align="right" | {{unité|215000|km|2}}
+|-
+| [[Ivindo]]
+| rivière
+|align="right" | {{unité|500|km}}
+|align="right" | {{unité|59000|km|2}}
+|-
+| [[Ngounié (cours d'eau)|Ngounié]]
+| rivière
+|align="right" | {{unité|300|km}}
+|align="right" | {{unité|33100|km|2}}
+|-
+| [[Nyanga (fleuve)|Nyanga]]
+| fleuve
+|align="right" |{{unité|600|km}}
+|align="right" | {{unité|22000|km|2}}
+|-
+| [[Komo (fleuve)|Komo]] (ou Como)
+| fleuve
+|align="right" | {{unité|230|km}}
+|align="right" | {{unité|5000|km|2}}
+|}
+
+{{Clr|left}}
+
+Le [[bassin hydrographique]] de l'[[Ogooué]] couvre l'essentiel du territoire gabonais. C'est la raison pour laquelle cinq des [[provinces du Gabon|neuf provinces administratives]] portent son nom. L'[[Ivindo]], qui draine le quart nord-est du pays, et la [[Ngounié (cours d'eau)|Ngounié]] en sont les principaux affluents.
+
+Le second bassin versant est celui de la [[Nyanga (fleuve)|Nyanga]], le fleuve le plus méridional du pays. Le troisième est celui du [[Komo (fleuve)|Komo]], qui prend source en [[Guinée équatoriale]]. C'est son estuaire, où est installée [[Libreville]], qui a d'abord attiré les Européens au Gabon, plutôt que le delta marécageux de l'Ogooué.
+
+Le [[Ntem (fleuve)|Ntem]], au nord, sert partiellement de frontière avec le [[Cameroun]]<ref name="bch-cdb">{{Lien web |langue=fr |titre=Caractéristiques physiques du Gabon |url=http://bch-cbd.naturalsciences.be/gabon/gabondef/contribution/documentsnat/strategienat/part1chapa.htm |site=bch-cbd.naturalsciences.be}}.</ref>{{,}}<ref>{{Chapitre |langue=fr |auteur1=Jacques Lerique |titre chapitre=Hydrographie hydrodrologie |titre ouvrage=Géographie et cartographie du Gabon, atlas illustré |éditeur=Ministère de l'Éducation de la République gabonaise |format=pdf |lire en ligne=http://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_5/b_fdi_16-17/21240.pdf}}.</ref>.
+
+{{clr}}
+
+==== Faune et flore ====
+[[Fichier:FLII_Gabon.png|vignette|Le Gabon avait un score moyen de l'[[Indice d'intégrité du paysage forestier]] 2019 de 9.07, le classant neuvième sur {{nobr|172 pays}}<ref name="FLII_Supplementary">{{article|nom1=Grantham|prénom1=H. S.|nom2=Duncan|prénom2=A.|nom3=Evans|prénom3=T. D.|nom4=Jones|prénom4=K. R.|nom5=Beyer|prénom5=H. L.|nom6=Schuster|prénom6=R.|nom7=Walston|prénom7=J.|nom8=Ray|prénom8=J. C.|nom9=Robinson|prénom9=J. G.|nom10=Callow|prénom10=M.|nom11=Clements|prénom11=T.|nom12=Costa|prénom12=H. M.|nom13=DeGemmis|prénom13=A.|nom14=Elsen|prénom14=P. R.|nom15=Ervin|prénom15=J.|nom16=Franco|prénom16=P.|nom17=Goldman|prénom17=E.|nom18=Goetz|prénom18=S.|nom19=Hansen|prénom19=A.|nom20=Hofsvang|prénom20=E.|nom21=Jantz|prénom21=P.|nom22=Jupiter|prénom22=S.|nom23=Kang|prénom23=A.|nom24=Langhammer|prénom24=P.|nom25=Laurance|prénom25=W. F.|nom26=Lieberman|prénom26=S.|nom27=Linkie|prénom27=M.|nom28=Malhi|prénom28=Y.|nom29=Maxwell|prénom29=S.|nom30=Mendez|prénom30=M.|nom31=Mittermeier|prénom31=R.|nom32=Murray|prénom32=N. J.|nom33=Possingham|prénom33=H.|nom34=Radachowsky|prénom34=J.|nom35=Saatchi|prénom35=S.|nom36=Samper|prénom36=C.|nom37=Silverman|prénom37=J.|nom38=Shapiro|prénom38=A.|nom39=Strassburg|prénom39=B.|nom40=Stevens|prénom40=T.|nom41=Stokes|prénom41=E.|nom42=Taylor|prénom42=R.|nom43=Tear|prénom43=T.|nom44=Tizard|prénom44=R.|nom45=Venter|prénom45=O.|nom46=Visconti|prénom46=P.|nom47=Wang|prénom47=S.|nom48=Watson|prénom48=J. E. M.|langue=en|titre=Anthropogenic modification of forests means only 40% of remaining forests have high ecosystem integrity - Supplementary material|journal=Nature Communications|volume=11|numéro=1|année=2020|issn=2041-1723|doi=10.1038/s41467-020-19493-3}}</ref>.]]
+La faune et la flore du Gabon sont remarquables car la forêt équatoriale y est encore relativement bien préservée. Un grand nombre d'espèces animales et végétales sont protégées<ref>{{Ouvrage |langue=fr |titre=Guide d'identification des espèces de faune gabonaise inscrites à la convention CITES, année 2012 |éditeur=Ministère des eaux et forêts |année= |format livre=pdf |isbn= |lire en ligne=http://www.ssn.org/Documents/Gabon_species.pdf}}.</ref>. La [[biodiversité]] gabonaise est sans doute l'une des plus élevées de la planète<ref>{{Ouvrage |langue=fr |auteur1=Chris Wilks |titre=La conservation des ecosystèmes forestiers du Gabon |éditeur=IUCN |année=1990 |pages totales=215 |passage=16 |isbn= |présentation en ligne=https://books.google.fr/books?id=OH1-F-ebDioC&pg=PA16}}.</ref> avec {{citation|700 espèces d’oiseaux, 98 espèces d’amphibiens, entre 95 et 160 espèces de reptiles, près de {{nombre|10000|espèces}} de plantes, plus de 400 essences forestières et 198 espèces différentes de mammifères<ref>{{Lien web |langue=fr |titre=Le Gabon, berceau de la biodiversité |url=http://www.gabon-international.com/decouvrir-le-gabon/connaitre/le-gabon-berceau-de-la-biodiversite |site=gabon-international.com |éditeur=Présidence du Gabon}}.</ref>.}} On y trouve de nombreuses espèces animales rares (le [[Manidae|pangolin]] du Gabon, le [[Picatharte du Cameroun|picatharte]]…) ou endémiques ([[cercopithèque à queue de soleil]]…).
+
+Le pays est une des réserves de faune les plus variées et les plus importantes d’Afrique<ref>{{Ouvrage |langue=fr |titre=La protection de la faune sauvage |sous-titre=mémento juridique |éditeur=Ministère des eaux et de forêts |année=2011 |format livre=pdf |isbn= |lire en ligne=http://wcs-gabon.org/index.php?option=com_remository&Itemid=27&func=startdown&id=89&lang=en}}.</ref> : c'est un important refuge pour les [[chimpanzé]]s (dont le nombre est estimé, en 2003, entre {{formatnum:27000}} et {{formatnum:64000}}<ref>{{Ouvrage |langue=fr |auteur1=Rebecca Kormos |titre=Chimpanzés d'Afrique de l'Ouest : état de conservation de l'espèce et plan d'action |éditeur=IUCN/SSC |année= |passage=18 |isbn= |présentation en ligne=https://books.google.fr/books?id=CPCvudN1OoEC&pg=PA18}}.</ref>) et les [[Gorille]]s ({{formatnum:35000}} recensés en 1983<ref>{{Ouvrage |langue=fr |auteur1=Chris Wilks |titre=La conservation des ecosystèmes forestiers du Gabon |éditeur=IUCN |année=1990 |pages totales=215 |passage=17 |isbn= |présentation en ligne=https://books.google.fr/books?id=OH1-F-ebDioC&pg=PA17}}.</ref>). La « Station d'études des gorilles et chimpanzés » à l'intérieur du [[parc national de la Lopé]]<ref>{{Lien web |langue=en |titre=Station d'études des gorilles et chimpanzés |url=http://pin.primate.wisc.edu/idp/idp/entry/214 |éditeur=National Primate Research Center, University of Wisconsin, Madison}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Une station dédiée à la Recherche |url=http://www.ecotrop.com/ECOTROP/SEGC.html |site=ecotrop.com |consulté le=13 février 2014}}.</ref> se consacre à leur étude.
+
+Il abrite aussi plus de la moitié de la population des [[Éléphant de forêt d'Afrique|éléphants de forêt d'Afrique]]<ref>{{Article |langue=fr |auteur1=AFP |titre=Gabon : 11 000 éléphants tués depuis 2004 |périodique=Sciences et Avenir |date=7 fév. 2013 |lire en ligne=https://www.sciencesetavenir.fr/nature-environnement/20130206.AFP2923/gabon-11-000-elephants-tues-depuis-2004.html}}.</ref> avec {{nombre|22000|individus}} (2005) dans le [[parc national de Minkébé]]<ref>{{Article |langue=fr |titre=Les jardiniers de la forêt équatoriale |périodique=Gabon Magazine |date=Hiver 2007 |lire en ligne=http://www.gabonmagazine.com/images/G10-FRENCH/G10.FRNCH.elephants28-33.pdf}}.</ref>.
+
+===== Faune, galerie photographique =====
+[[Fichier:Air Gabon 747-200 Bidini.jpg|vignette|Perroquet stylisé sur la gouverne arrière d'un boeing d'Air Gabon.]]
+
+L'emblème animal du Gabon est le [[Perroquet jaco|perroquet gris]] ; il figurait sur les avions de la défunte compagnie nationale [[Air Gabon]]<ref>{{Ouvrage |langue=fr |auteur1=Jean-Paul Labourdette |titre=Gabon, São Tomé et Principe 2008-2009 |éditeur=Petit Futé |année=2008 |pages totales=370 |passage=110 |isbn=}}.</ref> et il est celui de La Poste gabonaise depuis 2007.
+
+{{boîte déroulante/début|titre=Faune du Gabon}}
+<gallery>
+Image:Boa constrictor.jpg|[[Boa (genre)|Boa]]
+Image:Bongo Burger Zoo.jpg|[[bongo (animal)|Bongo]]
+Image:African_Buffalo.JPG|[[Buffle]]
+Image:Bycanistes albotibialis 248449303.jpg |[[Bucerotidae|Calao]]
+Image:Chameleon02.jpg|[[chamaeleonidae|Caméléon]]
+Image:Lightmatter_caracal.jpg|[[Caracal]]
+Image:FelisAurataKeulemans.jpg|[[Chat doré africain]]
+Image:Schimpanse_zoo-leipig.jpg|[[Chimpanzé]]
+Image:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg|[[Crabe bleu]]
+Image:Stumpfkrokodil (Ostaeolaemus tetraspis).jpg|[[Crocodile nain]]
+Image:Assapan-drawing.jpg|[[Écureuil volant]]
+Image:Loxodontacyclotis.jpg|[[Éléphant de forêt d'Afrique|Éléphant de forêt]]
+Image:Crocodylus_cataphractus_faux-gavial_d'Afrique2.JPG|[[Faux-gavial d'Afrique]]
+Image:Gorilla_gorilla_gorilla8.jpg|[[Gorille]]
+Image:Tragelaphus_scriptus_(male).jpg|[[Guib harnaché]]
+Image:Hippo_pod_edit.jpg|[[Hippopotamidae|Hippopotame]]
+Image:Hylochoerus_meinertzhageni.jpg|[[Hylochoerus meinertzhageni|Hylochère]]
+Image:Australia_Cairns_04.jpg|[[Ibis (oiseau)|Ibis]]
+Image:Trichechus senegalensis.jpg|[[Trichechus senegalensis|Lamantin d'Afrique de l'Ouest]]
+Image:Namibie_Etosha_Leopard_01edit.jpg|[[Léopard d'Afrique]]
+Image:Dendroaspis_angusticeps_P1380312.JPG|[[Dendroaspis angusticeps|Mamba vert]]
+Image:Dendroaspis polylepis by Bill Love.jpg|[[Dendroaspis polylepis|Mamba noir]]
+Image:Mandrill_at_Las_Aguilas_Jungle_Park.JPG|[[Mandrillus sphinx|Mandrill]]
+Image:Vosmangoesten_zoo_Lille.JPG|[[Herpestidae|Mangouste]]
+Image:Pangolin_borneo.jpg|[[Manidae|Pangolin]]
+Image:Picathartes.jpg|[[Picathartidae|Picatharte]]
+Image:Potamochoerus_porcus_stuffed.jpg|[[Potamochères|Potamochère]]
+Image:Psittacus_erithacus_qtl1.jpg|[[Perroquet jaco|Perroquet gris]]
+Image:IndPorcupine.jpg|[[Porc-épic]]
+Image:Silure.JPG|[[Silure]]
+Image:TortueLuth_Leatherback.jpg|[[Tortue luth]]
+Image:Vipere_gabon_28.JPG|[[Vipère du Gabon]]
+</gallery>
+{{boîte déroulante/fin}}
+{{Boîte déroulante/début|titre=Emblème animal de la poste}}
+[[Fichier:Gabon2006-laposte-mouila.jpg|vignette|gauche|Mouila 2006.]]
+[[Fichier:Gabon2010-laposte-moanda.jpg|vignette|droite|Moanda 2010.]]
+La poste gabonaise a longtemps eu un pélican comme emblème animal ; depuis 2007 et son changement de statut, elle a adopté le [[Perroquet jaco|perroquet gris du Gabon]].
+{{boîte déroulante/fin}}
+
+===== Flore, galerie photographique =====
+L'arbre typique du pays est l'[[Aucoumea|okoumé]]<ref name="saga_okoume">{{Article |langue=fr |prénom1=Claude |nom1=Bouet |titre=La saga de l'okoumé au Gabon |périodique=Sciences humaines |volume=XVII |numéro=3-4 |éditeur=ORSTOM |année=1980 |pages=269-272}}.</ref>. En effet la forêt à okoumé a fait la richesse du Gabon colonial depuis que ses qualités comme bois de déroulage pour la production de placages et de contreplaqués ont été reconnues, à l'extrême fin du {{s-|XIX}}. Jusqu'à l'indépendance, l'okoumé a représenté la quasi-totalité des exportations gabonaises.
+
+{{Boîte déroulante/début|titre=Flore du Gabon}}
+<gallery>
+Image:Safoutier.jpg|[[Safou|Atangatier]]
+Image:Terminalia-catappa-Réunion.jpg|[[Badamier]]
+Image:Colbanana01.jpg|[[Bananier]]
+Image:Koeh-136.jpg|[[Cacaoyer]] <br><small>Principalement dans la région de [[Makokou]] dans l'[[Ogooué-Ivindo]]</small>
+Image:Koeh-187.jpg|[[Cocotier]]
+Image:Ebonytreeforest.jpg|[[Ébène]]
+Image:Iboga.jpg|[[Iboga]]
+Image:Mangifera_indica_old.JPG|[[Manguier]]
+Image:Adjapaletuvier.jpg|[[Palétuvier]]
+Image:1859-Martinique.web.jpg|[[Arecaceae|Palmier]]
+Image:Spathodea_campanulata_2.JPG|[[Tulipier du Gabon]]
+</gallery>
+{{Boîte déroulante/fin}}
+
+===== Parcs nationaux =====
+À l'occasion du [[sommet mondial sur le développement durable|sommet de la Terre]], à [[Johannesbourg]], en 2002, le Gabon a annoncé la création d'un réseau de 13 [[parc national|parcs nationaux]], couvrant au total plus de 10 % du territoire du pays<ref name="afd" />{{,}}{{sfn|id=Atlas interactif |texte=Atlas interactif|p=ix}}. Le [[parc national de la Lopé]] est inscrit sur la liste du patrimoine mondial de l'UNESCO<ref name="unesco">{{Lien web |titre=Écosystème et paysage culturel relique de Lopé-Okanda |url=http://whc.unesco.org/fr/list/1147/ |site=whc.unesco.org |éditeur=[[Organisation des Nations unies pour l'éducation, la science et la culture|Unesco]]}}.</ref>.
+
+{| class="wikitable sortable centre"
+|+Parcs nationaux au Gabon<ref>{{Lien web |titre=Agence nationale des parcs nationaux |url=http://www.parcsgabon.org/ |site=parcsgabon.org}}.</ref>
+! scope=col|Parc national
+! scope=col|Province
+! scope=col|Superficie
+! scope=col|Type de paysage
+|rowspan=14|{{Début de carte}}
+
+[[Fichier:{{Géolocalisation/Gabon|image}}|500px]]
+{{G|Gabon|0.38333|9.4500|Libreville|Ville|1|w}}
+<!-- Provinces -->
+{{G|Gabon|-0.19226|9.864807|Estuaire (province){{!}}Estuaire|Région}}
+{{G|Gabon|-1.158979|13.797912|Haut-Ogooué|Région}}
+{{G|Gabon|-0.326841|10.7|Moyen-Ogooué|Région}}
+{{G|Gabon|-1.511818|10.825424|Ngounié|Région}}
+{{G|Gabon|-3.2|10.9|Nyanga (Gabon){{!}}Nyanga|Région}}
+{{G|Gabon|0.428463|12.171936|Ogooué-Ivindo|Région}}
+{{G|Gabon|-0.856902|11.963654|Ogooué-Lolo|Région}}
+{{G|Gabon|-1.218704|9.55|Ogooué-Maritime|Région}}
+{{G|Gabon|1.384143|12.007599|Woleu-Ntem|Région}}
+<!-- Parcs nationaux -->
+<!-- {{G|Gabon|0.616666|9.55|Parc national d'Akanda{{!}}Parc national d'Akanda|Aire protégée|w}} -->
+{{G/Disque|Gabon|0.616666|9.55|Parc national d'Akanda{{!}}<small>Parc national <br>d'Akanda</small>|540|n|30130}}
+<!-- {{G|Gabon|-1.768518|12.26532|Parc national de Birougou{{!}}Parc national de Birougou|Aire protégée|s}} -->
+{{G/Disque|Gabon|-1.768518|12.26532|Parc national de Birougou{{!}}<small>Parc national <br>de Birougou</small>|690|s|30130}}
+<!-- {{G|Gabon|0.113983|12.628555|Parc national d'Ivindo{{!}}Parc national d'Ivindo|Aire protégée|s}} -->
+{{G/Disque|Gabon|0.113983|12.628555|Parc national d'Ivindo{{!}}<small>Parc national <br>d'Ivindo</small>|3000|s|30130}}
+<!-- {{G|Gabon|-2.102037|9.610062|Parc national de Loango{{!}}Parc national de Loango|Aire protégée|w}}-->
+{{G/Disque|Gabon|-2.102037|9.610062|Parc national de Loango{{!}}<small>Parc national <br>de Loango</small>|1550|n|30130}}
+<!-- {{G|Gabon|-3.818986|11.023035|Parc national de Mayumba{{!}}Parc national<br>de Mayumba|Aire protégée|w}} -->
+{{G/Disque|Gabon|-3.818986|11.023035|Parc national de Mayumba{{!}}<small>Parc national <br>de Mayumba</small>|970|n|30130}}
+<!-- {{G|Gabon|-0.43945|11.51367|Parc national de la Lopé{{!}}Parc national <br>de la Lopé|Aire protégée|e}} -->
+{{G/Disque|Gabon|-0.43945|11.51367|Parc national de la Lopé{{!}}<small>Parc national <br>de la Lopé</small>|4970|n|30130}}
+<!-- {{G|Gabon|1.67977222|12.75950278|Parc national de Minkébé{{!}}Parc national de Minkébé|Aire protégée|w}} -->
+{{G/Disque|Gabon|1.67977222|12.75950278|Parc national de Minkébé{{!}}<small>Parc national <br>de Minkébé</small>|7560|s|30130}}
+<!-- {{G|Gabon|0.711346|10.288238|Parc national des Monts de Cristal{{!}}Parc national des Monts de Cristal|Aire protégée|e}} -->
+{{G/Disque|Gabon|0.711346|10.288238|Parc national des Monts de Cristal{{!}}<small>Parc national <br>des Monts de Cristal</small>|1200|s|30130}}
+<!-- {{G|Gabon|-2.435484|10.421677|Parc national de Moukalaba-Doudou{{!}}Parc national de Moukalaba-Doudou|Aire protégée|n}} -->
+{{G/Disque|Gabon|-2.435484|10.421677|Parc national de Moukalaba-Doudou{{!}}<small>Parc national de <br>Moukalaba-Doudou</small>|4500|s|30130}}
+<!-- {{G|Gabon|0.484079|13.780861|Parc national de Mwagna{{!}}Parc national de Mwagna|Aire protégée|w}} -->
+{{G/Disque|Gabon|0.484079|13.780861|Parc national de Mwagna{{!}}<small>Parc national <br>de Mwagna</small>|1160|s|30130}}
+<!-- {{G|Gabon|-2.086941|14.009857|Parc national des plateaux Batéké{{!}}Parc national des plateaux Batéké|Aire protégée|e}} -->
+{{G/Disque|Gabon|-2.086941|14.009857|Parc national des plateaux Batéké{{!}}<small>Parc national <br>des plateaux Batéké</small>|2050|n|30130}}
+<!-- {{G|Gabon|0.142822|9.609489|Parc national de Pongara{{!}}Parc national de Pongara|Aire protégée|se}} -->
+{{G/Disque|Gabon|0.142822|9.609489|Parc national de Pongara{{!}}<small>Parc national <br>de Pongara</small>|870|s|30130}}
+<!-- {{G|Gabon|-1.227628|11.06575|Parc national de la Waka{{!}}Parc national de la Waka|Aire protégée|e}} -->
+{{G/Disque|Gabon|-1.227628|11.06575|Parc national de la Waka{{!}}<small>Parc national <br>de la Waka</small>|1070|n|30130}}
+<!-- Réserves -->
+<!-- {{G|Gabon|-0.51841|9.455681|Réserve de Wonga Wongué{{!}}Réserve de <br>Wonga Wongué|Aire protégée|w}} -->
+{{G/Disque|Gabon|-0.51841|9.455681|Réserve de Wonga Wongué{{!}}<small>Réserve de <br>Wonga Wongué</small>|3800|s|30130}}
+
+{{Fin de carte}}
+|-
+| [[parc national d'Akanda|Akanda]]
+| [[Estuaire (province)|Estuaire]]
+| align="right" |{{unité|540|km|2}}
+| Mangrove
+|-
+| [[parc national de Birougou|Birougou]]
+| [[Ngounié]], [[Ogooué-Lolo]]
+| align="right" |{{unité|690|km|2}}
+| Montagne
+|-
+| [[Parc national d'Ivindo|Ivindo]]
+| [[Ogooué-Ivindo]]
+| align="right" |{{unité|3000|km|2}}
+| Forêt équatoriale
+|-
+| [[Parc national de Loango|Loango]]
+| [[Ogooué-Maritime]]
+| align="right" |{{unité|1550|km|2}}
+| Côte sableuse
+|-
+| [[Parc national de la Lopé|Lopé]]
+| [[Ogooué-Ivindo]]
+| align="right" |{{unité|4970|km|2}}
+| Forêt et savane
+|-
+| [[Parc national de Mayumba|Mayumba]]
+| [[Nyanga (Gabon)|Nyanga]]
+| align="right" |{{unité|970|km|2}}
+| Côte sableuse
+|-
+| [[parc national de Minkébé|Minkébé]]
+| [[Woleu-Ntem]]
+| align="right" |{{unité|7560|km|2}}
+| Forêt équatoriale
+|-
+| [[Parc national des Monts de Cristal|Monts de Cristal]]
+| [[Estuaire (province)|Estuaire]]
+| align="right" |{{unité|1200|km|2}}
+| Montagne
+|-
+| [[Parc national de Moukalaba-Doudou|Moukalaba-Doudou]]
+| [[Nyanga (Gabon)|Nyanga]]
+| align="right" |{{unité|4500|km|2}}
+| Forêt équatoriale
+|-
+| [[Parc national de Mwagna|Mwagna]]
+| [[Ogooué-Ivindo]]
+| align="right" |{{unité|1160|km|2}}
+| Forêt équatoriale
+|-
+| [[Parc national des plateaux Batéké|Plateaux Batéké]]
+| [[Haut-Ogooué]]
+| align="right" |{{unité|2050|km|2}}
+| Forêt équatoriale
+|-
+| [[Parc national de Pongara|Pongara]]
+| [[Estuaire (province)|Estuaire]]
+| align="right" |{{unité|870|km|2}}
+| Mangrove, côte sableuse
+|-
+| [[Parc national de la Waka|Waka]]
+| [[Ngounié]]
+| align="right" |{{unité|1070|km|2}}
+| Montagne
+|}
+
+=== Géographie administrative ===
+==== Pays frontaliers ====
+Les frontières terrestres du Gabon sont de {{unité|2551|km}} et se décomposent comme suit : {{unité|1903|km}} de [[frontière entre le Gabon et la république du Congo|frontière commune avec la république du Congo]], {{unité|350|km}} [[Frontière entre le Gabon et la Guinée équatoriale|avec la Guinée équatoriale]] et {{unité|298|km}} [[Frontière entre le Cameroun et le Gabon|avec le Cameroun]]<ref name="CIA" />.
+
+==== Subdivisions ====
+{{Article détaillé|Provinces du Gabon}}
+
+Le Gabon est divisé en neuf provinces, dirigées chacune par un gouverneur, elles-mêmes subdivisées en départements dépendant d'un préfet et, parfois, en districts, dépendant d'un sous-préfet<ref>{{Lien web |langue=fr |titre=Découpage administratif |url=http://www.stat-gabon.org/index.php?option=com_content&view=article&id=49&Itemid=55 |site=stat-gabon.org}}.</ref>.
+
+{{col-début}}
+{{col-2}}
+{{Début de carte|style=}}
+[[Fichier:{{Géolocalisation/Gabon|image}}|600px|Carte du Gabon]]
+{{Début d'incrustation}}{{Tnavbar|Carte/Gabon|nodiv=1|mini=1}}{{Fin d'incrustation}}
+<!-- équateur -->
+{{G|Gabon|0|0|Équateur|Parallèle sans lien}}
+<!--provinces-->
+{{G|Gabon|-0.19226|9.864807|Estuaire (province){{!}}Estuaire|Région}}
+{{G|Gabon|-1.158979|13.797912|Haut-Ogooué|Région}}
+{{G|Gabon|-0.326841|10.7|Moyen-Ogooué|Région}}
+{{G|Gabon|-1.511818|10.825424|Ngounié|Région}}
+{{G|Gabon|-3.2|10.9|Nyanga (Gabon){{!}}Nyanga|Région}}
+{{G|Gabon|0.428463|12.171936|Ogooué-Ivindo|Région}}
+{{G|Gabon|-0.856902|11.963654|Ogooué-Lolo|Région}}
+{{G|Gabon|-1.218704|9.55|Ogooué-Maritime|Région}}
+{{G|Gabon|1.384143|12.007599|Woleu-Ntem|Région}}
+<!-- Villes chef-lieu -->
+{{G|Gabon|-1.6207|13.5827|Franceville|Ville|2|n}}
+{{G|Gabon|-1.13907|12.466722|Koulamoutou|Ville|2|ne}}
+{{G|Gabon|-0.6961|10.2332|Lambaréné|Ville|2|e}}
+{{G|Gabon|0.38333|9.4500|Libreville|Ville|1|w}}
+{{G|Gabon|0.56667|12.8667|Makokou|Ville|2|w}}
+{{G|Gabon|-1.86667|11.01667|Mouila|Ville|2|e}}
+{{G|Gabon|1.61667|11.58333|Oyem|Ville|2|e}}
+{{G|Gabon|-0.7167|8.7751|Port-Gentil|Ville|2|e}}
+{{G|Gabon|-2.933|10.983|Tchibanga|Ville|2|e}}
+<!-- Montagnes -->
+{{G|Gabon|0.960572|13.681698|mont Bengoué|Montagne|s}}
+{{G|Gabon|-1.709494|12.10104|mont Milondo|Montagne|e}}
+{{G|Gabon|-1.665224|12.018642|mont Iboundji|Montagne|ne}}
+
+<!-- Pays frontaliers -->
+{{G|Gabon|1.85|10.5|Guinée équatoriale|Région sans lien}}
+{{G|Gabon|-2.95|13|République du Congo|Région sans lien}}
+{{G|Gabon|2.4|12|Cameroun|Région sans lien}}
+{{Fin de carte}}
+
+{{col-2}}
+
+[[Fichier:Gabon provinces numbered.png|vignette|Numérotation des provinces du Gabon]]
+
+;Provinces (chef-lieu entre parenthèses)
+# [[Estuaire (province)|Estuaire]] ([[Libreville]])
+# [[Haut-Ogooué]] ([[Franceville]])
+# [[Moyen-Ogooué]] ([[Lambaréné]])
+# [[Ngounié]] ([[Mouila]])
+# [[Nyanga (Gabon)|Nyanga]] ([[Tchibanga]])
+# [[Ogooué-Ivindo]] ([[Makokou]])
+# [[Ogooué-Lolo]] ([[Koulamoutou]])
+# [[Ogooué-Maritime]] ([[Port-Gentil]])
+# [[Woleu-Ntem]] ([[Oyem]])
+{{col-fin}}
+
+== Économie ==
+{{Article détaillé|Économie du Gabon}}
+
+=== Généralités ===
+[[Fichier:GDP per capita development of Gabon.svg|vignette|Évolution historique du produit intérieur brut par habitant du Gabon]]
+Le Gabon est un pays au sous-sol très riche. Il exporte du [[manganèse]], du [[pétrole]] (il adhère à l'[[Organisation des pays exportateurs de pétrole]] (OPEP) en 1975 et s'en retire en 1995<ref name="larousse">{{Lien web |langue=fr |titre=Gabon |url=http://www.larousse.fr/encyclopedie/pays/Gabon/120610 |éditeur=Encyclopédie Larousse en ligne}}.</ref> puis réintègre l'organisation en 2016<ref>{{Article |langue=fr |titre=Hydrocarbures : le Gabon réintègre l’Opep |périodique=Jeune Afrique |date=2016-07-01 |lire en ligne=http://www.jeuneafrique.com/338339/economie/gabon-reintegre-officiellement-lopep/}}.</ref>), du [[gaz naturel]], du [[fer]], du [[bois]] et bien d'autres produits de son sol et de son sous-sol depuis longtemps. L'exploitation des mines d'[[uranium]] de [[Mounana]], situées à {{Unité|90|km}} de [[Franceville]], a été interrompue en 2001 du fait de l'arrivée sur le marché mondial de nouveaux concurrents<ref>{{Lien web |langue=fr |titre=COMUF, premier site uranifère réaménagé d'Afrique centrale |url=http://www.areva.com/FR/activites-604/comuf-premier-site-uranifere-reamenage-d-afrique-centrale.html |site=areva.com}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Reportage au Gabon : Mounana, 40 ans d’extraction de l’uranium… et après ? |url=http://www.rfi.fr/emission/20110528-2-reportage-gabon-mounana-40-ans-extraction-uranium-apres |éditeur=[[Radio France internationale]]}}.</ref>. La relance de l'exploitation de ses importants gisements d'uranium est aujourd'hui d'actualité. Le train de Franceville à Libreville (le [[Transgabonais]]) exporte, depuis les [[années 1980]], les ressources des mines de manganèse, d'uranium et de fer situées à [[Moanda (Gabon)|Moanda]]. Les gisements ferreux de [[Bélinga]] au nord-est de [[Makokou]], dont les réserves sont estimées à un milliard de tonnes<ref>{{Lien web |langue=fr |titre=Les enjeux par secteur, le fer |url=http://www.gabon-services.com/le-pilier-gabon-industriel/les-enjeux-par-secteur/le-fer |site=gabon-services.com}}.</ref>, ne sont pas encore exploités<ref>{{Lien web |langue=fr |titre=Le Gabon engage la renégociation du contrat d’exploitation de Bélinga avec la partie chinoise |url=http://www.gabon-services.com/l-actualite/l-actualite/958/le-gabon-engage-la-renegociation-du-contrat-d-exploitation-de-belinga |site=gabon-services.com}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Le Gabon choisira le partenaire stratégique de la mine de Belinga dans 18 mois |url=http://www.agenceecofin.com/investissement/3108-6466-le-gabon-choisira-le-partenaire-strategique-de-la-mine-de-belinga-dans-18-mois |site=agenceecofin.com |date=31 août 2012}}.</ref>{{,}}<ref name="ja_2012" />. Cependant, globalement, la « manne pétrolière » n'a que très partiellement servi à moderniser le pays et à diversifier l'économie.
+
+Le pays possède l'[[indice de développement humain]] le plus élevé d'[[Afrique subsaharienne]], [[Maurice (pays)|Maurice]] et les [[Seychelles]] exclues<ref>{{Lien web |titre=Indice de développement humain en Afrique |url=http://www.statistiques-mondiales.com/idh_afrique.htm}}.</ref>. Il dispose, pour ce qui concerne l'Afrique continentale, du deuxième revenu par habitant derrière la [[Guinée équatoriale]] et devant le [[Botswana]]<ref>{{Lien web |langue=fr |titre=RNB par habitant, méthode Atlas ($ US courants) |url=http://donnees.banquemondiale.org/indicateur/NY.GNP.PCAP.CD?order=wbapi_data_value_2012+wbapi_data_value+wbapi_data_value-last&sort=desc |éditeur=[[Banque mondiale]]}}.</ref>. Le [[produit intérieur brut par habitant]] est relativement élevé, évalué entre 15 et {{unité|16000|$ US}}<ref name="pers_eco">{{Lien web |langue=fr |titre=Gabon |url=http://www.africaneconomicoutlook.org/fr/pays/afrique-centrale/gabon/ |site=Africaneconomicoutlook.org |éditeur=Perspectives économiques en Afrique}}.</ref> avec le {{73e|rang}} mondial. Et, quoique touché par la [[crise économique mondiale de 2008]], le [[produit intérieur brut]] (PIB) gabonais a, depuis, augmenté de plus de 6 % par an pour la période 2010-2012<ref name="CIA" />.
+
+Cependant, du fait de l'inégalité dans la répartition des revenus, une proportion importante de la population reste pauvre. Le PIB en [[parité de pouvoir d'achat]] place le pays à la {{113e|place}}<ref name="CIA"/> et la [[Banque mondiale]] estime qu'en 2005 un tiers de la population est touché par la pauvreté<ref>{{Lien web |langue=fr |titre=Gabon |url=http://donnees.banquemondiale.org/pays/gabon |éditeur=Banque mondiale |consulté le=13 février 2014}}.{{commentaire biblio SRL|1=Ratio de la population pauvre en fonction du seuil de pauvreté national (% de la population) = 32,7 %.}}{{,}}{{lien web |langue=fr |url=http://www.tresor.economie.gouv.fr/10207_situation-economique-et-financiere-du-gabon-en-2014 |titre=Situation économique et financière du Gabon en 2014 |site=tresor.economie.gouv.fr |consulté le=13 mars 2015}}.</ref>. Du point de vue social, {{citation|le Gabon est confronté au paradoxe socio-économique d’appartenir du fait de son PIB par tête au groupe des Pays à Revenus Intermédiaires (PRI) tout en s’apparentant du fait de ses indicateurs sociaux au groupe des [[Pays les moins avancés]] (PMA)}}<ref>« Plan stratégique Gabon émergent : vision 2025 et orientations stratégiques 2011 2016 », {{p.|9}}.</ref> sachant que le pays connaît en outre un taux de chômage élevé, à 27 % de la population active en 2012<ref name="pers_eco" />. Les Gabonais doivent également faire face à la {{quand|dégradation}} de l’accès aux soins, à la déficience des services publics, ou encore à des coupures récurrentes d’électricité<ref name=":0" />. À partir de 2014, la baisse des cours du pétrole entraîne une baisse des recettes de l'État et une augmentation de l'endettement public. Le Gabon se rapproche alors du [[Fonds monétaire international]], de la Banque mondiale, de la [[Banque africaine de développement]] et de l'État français pour obtenir des aides à hauteur de plusieurs centaines de millions d'euros sur trois ans<ref>{{Lien web|url=https://www.tresor.economie.gouv.fr/Pays/GA/la-situation-economique-du-gabon|titre=La situation économique du Gabon|date=29 janvier 2019|éditeur=ministère de l'Économie et des Finances français}}</ref>.
+
+=== Secteurs économiques ===
+Les [[hydrocarbure]]s représentent près de 50 % du PIB, 60 % des recettes fiscales et 80 % des exportations<ref>{{Ouvrage |langue=fr |titre=République gabonaise, Document de stratégie pays 2011-2015 |éditeur=Banque africaine de développement |année= |format livre=pdf |isbn= |lire en ligne=http://www.afdb.org/fileadmin/uploads/afdb/Documents/Project-and-Operations/Gabon%20-%20Document%20de%20strat%C3%A9gie%20pays%202011-2015%20%28Final%29.pdf}}.</ref>. Shell Gabon et Total Gabon assurent 60 % de la production<ref>{{Lien web |langue=fr |titre=Les enjeux par secteur, le pétrole |url=http://www.gabon-services.com/le-pilier-gabon-industriel/les-enjeux-par-secteur/le-petrole |site=gabon-services.com}}.</ref>. La ville de [[Port-Gentil]] et ses environs ([[cap Lopez]]) concentrent la majeure partie des [[Industrie pétrolière|activités pétrolières]] ([[Raffinage du pétrole|raffinage]], [[oléoduc]], [[terminal pétrolier]])<ref>{{Lien web |langue=fr |titre=Commercialisation |url=http://www.total-gabon.com/index.php/activites/commercialisation |site=total-gabon.com}}.</ref>.
+
+Le deuxième secteur économique, en poids dans le PIB, est celui du bois<ref>{{Lien web |langue=fr |titre=Gabon, l'émergence par les matières premières |url=http://www.africadiligence.com/gabon-lemergence-par-les-matieres-premieres/ |site=africadiligence.com |date=21 mai 2014}}.</ref>, qui représente 13 % des exportations et 60 % des recettes d'exportation hors pétrole. C'est, après l'État, le premier employeur du pays, avec 28 % de la population active{{sfn|id=Atlas interactif|texte=Atlas interactif|p=5}}. Une soixantaine d'essences de bois sont exploitées, l'okoumé et l'ozigo étant les deux principales. Le Gabon est le second producteur mondial d'okoumé (après le Cameroun) et le premier exportateur mondial<ref>{{Lien web |langue=en |titre=Country profile, Gabon |url=http://www.forestsmonitor.org/fr/reports/540539/549944 |éditeur=Forests monitor |année=2006}}.</ref>. Depuis le {{date|1 janvier 2010}}<ref>En pratique l'interdiction est entrée en vigueur le 15 mai 2010.</ref>, le Gabon interdit l’exportation des [[grume]]s pour favoriser la transformation locale du bois<ref>{{Lien web |langue=fr |titre=Indicateurs clés |url=http://www.gabon-services.com/investir-au-gabon/indicateurs-cles-1 |site=gabon-services.com}}.</ref>{{,}}<ref>{{Lien web|titre=Le Gabon interdit l’exportation de grumes |url=http://www.rfi.fr/contenu/20100518-le-gabon-interdit-exportation-grumes |éditeur=Radio France internationale |date=18 mai 2010}}.</ref>.
+
+Le troisième secteur économique est celui des minerais, notamment le manganèse, qui représente 4 % du PIB et 6 % des exportations du pays<ref>{{Lien web |langue=fr |titre=Présentation du Gabon |url=http://www.diplomatie.gouv.fr/fr/dossiers-pays/gabon/presentation-du-gabon/ |éditeur=Ministère des Affaires étrangères}}.</ref>. Le Gabon est le deuxième producteur mondial de manganèse, après la Chine<ref name="ja_2012">{{Article |langue=fr |auteur1=Christophe Le Bec |titre=Gabon : fin de monopole pour la Comilog |périodique=Jeune Afrique |date=8 fév. 2012 |lire en ligne=http://www.jeuneafrique.com/Articles/Dossier/JA2664p084-085.xml0/petrole-gabon-mines-comiloggabon-fin-de-monopole-pour-la-comilog.html}}.</ref>.
+
+L'agriculture gabonaise est peu développée, l'essentiel de la production agricole est vivrière. Le secteur agricole représente, en 2007, 3,5 % du PIB<ref>{{Ouvrage |langue=fr |titre=Gabon |éditeur=Banque africaine de développement, [[Organisation de coopération et de développement économiques|OCDE]] |collection=Perspectives économiques en Afrique |année=2008 |isbn= |lire en ligne=http://www.oecd.org/fr/dev/emoa/40570404.pdf}}.</ref>. Il existe une filière cacao-café héritée de la période coloniale ; elle est en déclin constant depuis les années 1970<ref>{{harvsp|id=annuaire_2009|texte=Annuaire statistique 2009|p=149}}.</ref>. La production de caoutchouc s'est stabilisée depuis le milieu des années 1990 mais le niveau de production est très faible (l'ordre de grandeur est de 1 à 20) par rapport aux principaux producteurs<ref>{{Lien web |langue=fr |titre=Gabon, production de caoutchouc en milliers de tonnes |url=http://perspective.usherbrooke.ca/bilan/servlet/BMTendanceStatPays?codeTheme=5&codeStat=RS.RUB.PROD.PP.MT&codePays=GAB&codeTheme2=5&codeStat2=x&codePays2=CHN |éditeur=Perspective monde, Université de Sherbrooke}}.</ref>. L'élevage est, quant à lui, essentiellement « villageois », commercialisé sur place<ref>{{harvsp|id=annuaire_2009|texte=Annuaire statistique 2009|p=151}}.</ref>. Enfin le potentiel halieutique du Gabon est élevé, mais sous-exploité ; les Gabonais sont les plus gros consommateurs de poisson par habitant de la sous-région et la pêche ne couvre qu'un tiers des besoins<ref>{{Lien web |langue=fr |titre=Gabon |url=http://acpfish2-eu.org/index.php?page=gabon-fr |site=acpfhish2-eu.org}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=La pêche industrielle ne constitue pas une priorité au Gabon |url=http://www.panapress.com/La-peche-industrielle-ne-constitue-pas-une-priorite-au-Gabon--13-701859-18-lang4-index.html |site=panapress.com}}.</ref>.
+
+=== Transports ===
+La prédominance des forêts au Gabon est telle que la problématique du transport, tant pour les personnes que pour les marchandises, est un sujet crucial pour le pays et son économie. Les cours d'eau ont toujours été le principal moyen de communication dans l'inextricable végétation car la navigation aérienne est très coûteuse, le réseau routier est limité et le chemin de fer (le [[Transgabonais]]) se résume à une seule ligne.
+
+Cela fait que l'[[Ogooué]] reste une importante voie d'évacuation pour l'[[Aucoumea|okoumé]]<ref>{{harvsp|id=Les réseaux de transport terrestres au Gabon|texte=Les réseaux de transport terrestres au Gabon|p=210}}.</ref> et que les deux principales villes du pays, Libreville et Port-Gentil, ne sont pas reliées par route, sa construction devant s'achever en 2017<ref>{{Lien web |langue=fr |titre=Le premier tronçon de la route Libreville-Port-Gentil sera livré dans quatre ans (officiel) |url=http://fr.starafrica.com/actualites/le-premier-troncon-de-la-route-libreville-port-gentil-sera-livre-dans-quatre-ans-officiel.html |site=fr.starafrica.com |date=20 août 2013 |consulté le=24 janv. 2014}}.</ref>{{,}}<ref>{{Lien web |langue=fr |auteur1=Loic Ntoutoume |titre=Un prêt chinois de 64,8 milliards CFA pour la route vers Port-Gentil |url=http://gabonreview.com/blog/un-pret-chinois-de-648-milliards-cfa-pour-la-route-vers-port-gentil/ |site=gabonreview.com |date={{1er}} octobre 2013 |consulté le=24 janv. 2014}}.</ref>.
+
+==== Transport routier ====
+{{Article détaillé|Routes du Gabon}}
+
+La densité et la qualité du réseau routier gabonais sont très faibles. L'Afrique a la densité la plus faible du monde<ref>{{Lien web |langue=fr |titre=Afrique : la plus faible densité du réseau routier au monde |url=http://www.lesafriques.com/afrique/afrique-la-plus-faible-densite-du-reseau-routier-au-monde.html?Itemid=64?articleid=38404 |site=lesafriques.com |date=6 mai 2013}}.</ref> et la densité du réseau gabonais est inférieure de plus de la moitié à celle du continent dans son ensemble (Afrique {{unité|81.5|km pour 1 000 km|2}}, Gabon {{formatnum:34.26}}<ref>{{Lien web |langue=fr |titre=Carte d'Afrique par densité du réseau routier |url=http://fr.worldstat.info/Africa/List_of_countries_by_Density_of_road_network |consulté le=24 janv. 2014}}.</ref>). Le réseau routier est estimé à {{unité|9170|km}} dont environ 10 % est bitumé ({{unité|1055|km}}) ; parmi ces routes bitumées, moins de 20 % sont considérées comme en bon état<ref>{{Article |langue=fr |titre=Infrastructures : routes et transports |périodique=Les cahiers de l'émergence |éditeur=legabon.org, portail officiel de la République gabonaise |date=juin 2013 |lire en ligne=http://medias.legabon.net/PROD/0000005475.pdf |pages=2}}.</ref>.
+
+==== Transport ferroviaire ====
+Le [[Transgabonais]], long de {{unité|669|km}}, construit entre 1978 et 1986, est essentiellement dédié aux matières premières extraites dans l'Est du pays, dans la région de [[Franceville]]. Il permet d'acheminer le minerai jusqu'au port d'[[Owendo]]. Sa construction a aussi bénéficié aux exploitants de bois, le train « lourd » comportant jusqu'à 270 wagons, étant bien adapté au transport pondéreux<ref name="ReferenceA">{{harvsp|id=Les réseaux de transport terrestres au Gabon|texte=Les réseaux de transport terrestres au Gabon|p=220}}.</ref>. La mise en exploitation du gisement de fer de Bélinga devrait s'accompagner de la création d'un nouvel axe ferroviaire reliant Bélinga à [[Booué]], gare du Transgabonais et, par ailleurs, porte d'entrée du parc national de la Lopé<ref>{{harvsp|id=Les réseaux de transport terrestres au Gabon|texte=Les réseaux de transport terrestres au Gabon|p=226}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Les enjeux du gisement de Bélinga au Gabon |url=http://www.coopgabon.net/yeng/les-enjeux-du-gisement-de-belinga-au-gabon |site=coopgabon.net}}.</ref>{{,}}<ref>{{Ouvrage |langue=en |titre=The report |sous-titre=Gabon 2012 |éditeur=Oxford Business Group |année= |isbn= |lire en ligne=http://www.oxfordbusinessgroup.com/news/getting-moving-investment-infrastructure-will-support-economic-diversification}}.</ref>.
+
+==== Transport fluvial ====
+Le transport fluvial est opéré essentiellement à partir des ports d'[[Owendo]], près de Libreville et de [[Port-Gentil]] car c'est là que convergent les marchandises de ce pays tourné vers la mer pour son commerce extérieur.
+
+Le transport fluvial et maritime de passagers se concentre essentiellement sur les liaisons Libreville - Port-Gentil (via l'océan, du fait de l'absence de route) et sur la desserte régionale de la zone des lacs (département d'[[Ogooué et des Lacs]]) aux alentours de [[Lambaréné]]<ref>{{harvsp|id=annuaire_2009|texte=Annuaire statistique 2009|p=197}}.</ref>{{,}}<ref name="ReferenceA" />. La longueur des voies navigables est estimée à {{unité|1600|km}} en 2010<ref name="CIA" />.
+
+==== Transport aérien ====
+Le Gabon dispose de trois aéroports internationaux : l'[[aéroport international Léon-Mba]] ([[Libreville]]), celui de [[Aéroport international de Port-Gentil|Port-Gentil]], celui de [[Aéroport de Franceville|Franceville]] ainsi que de soixante aérodromes locaux dont trente à vocation commerciale<ref>{{Lien web |langue=fr |titre=Transport aérien au Gabon |url=http://www.adlgabon.com/fr/transport-aerien.php |éditeur=Aéroport de Libreville}}.</ref>{{,}}<ref>{{harvsp|id=annuaire_2009|texte=Annuaire statistique 2009|p=206}}.</ref>.
+
+== Démographie ==
+{{Article détaillé|Démographie du Gabon}}
+
+Le Gabon fait partie de la « zone de sous-peuplement » de l'espace Gabon-Congo avec une densité de population très faible ({{unité|7.4|hab./km|2}}<ref name="Encyclopedia Universalis">{{Lien web |langue=fr |titre=Data Pays Encyclopædia Universalis [en ligne], consulté le 18 juillet 2021|url=https://www.universalis.fr/datapays/d97fc46375b4e2b0590883aca8557b4e/ |site=universalis.fr}}.</ref> contre {{unité|37|hab./km|2}} pour l'ensemble du continent africain) et une fécondité sensiblement inférieure à la moyenne : en 2016 l'[[Taux de fécondité|indice synthétique de fécondité]] était de 3,79<ref>Il est estimé à 4.1 enfants/femme en 2012 selon {{Lien web |langue=fr |titre=Data Pays |url=https://www.universalis.fr/datapays/d97fc46375b4e2b0590883aca8557b4e/ |éditeur=Direction générale des statistiques, Banque mondiale}}</ref> et le taux de croissance annuelle de 2 %, contre 5,8 et 2,8 % pour l'Afrique subsaharienne<ref name="universalis_geographie">{{Lien web |langue=fr |titre=Gabon, géographie |url=http://www.universalis.fr/encyclopedie/gabon/1-geographie/ |site=universalis.fr}}.</ref>{{,}}<ref name="mboutsou">{{Article |langue=fr |auteur1=Charles Mboutsou |titre=Hypofécondité gabonaise en question : problème résolu ou mise en jachère d’une préoccupation majeure pour le développement du Gabon |périodique=Gabonica |numéro=5 |éditeur=Université Omar Bongo, CERGEP |mois=11 |année=2011 |lire en ligne=http://cergep.org/bibliotheque/gabonica5/Mboutsou.pdf}}.</ref>.
+
+Cette faible fécondité, notamment dans l'est du pays, a été une des raisons de la création du « [[Centre international de recherches médicales de Franceville]] » en 1979<ref name="universalis_geographie" />{{,}}<ref name="mboutsou" />{{,}}<ref>{{Lien web |langue=fr |format=pdf |auteur1=Jean-Paul Gonzales |titre=Centre international de recherches médicales de Franceville |url=http://blogs.senat.fr/maladies-emergentes/files/CIRMF-JP-Gonzalez.pdf |site=blogs.senat.fr |date=13 oct. 2011}}.</ref>.
+
+Le paradoxe de ce pays peu peuplé est que la moitié de sa population vit dans les deux grandes villes (Libreville et Port-Gentil) ce qui donne au Gabon l'un des plus forts taux d'urbanisation de l'Afrique avec une concentration de peuplement élevée. En comparaison, à l'intérieur du pays, la densité hors agglomération est similaire à celle des pays désertiques sahariens, inférieure à 2 {{hab.}}/km²<ref>{{Lien web |langue=fr |format=pdf |titre=Fiche pays : Gabon |url=http://www.e-geopolis.eu/africapolis/Rubrique70_Metadata/FICHE_PAYS_GABON.pdf |site=e-geopolis.eu}}.</ref>.
+{{Pyramide des âges
+|float=left
+|width=50%
+|maxvalue=110
+|bg=rgb(100%,100%,100%)
+|border=0px solid Black|margin-top=1ex
+|charte=
+|caption=[[Pyramide des âges]] du Gabon en 2010 (milliers)
+|90-94|0|1
+|85-89|1|2
+|80-84|3|4
+|75-79|5|7
+|70-74|8|9
+|65-69|12|12
+|60-64|16|16
+|55-59|22|22
+|50-54|26|26
+|45-49|32|31
+|40-44|37|37
+|35-39|44|45
+|30-34|53|53
+|25-29|63|63
+|20-24|74|73
+|15-19|86|85
+|10-14|87|86
+|5-9|89|87
+|0-4|94|92
+}}
+<timeline>
+Colors=
+  id:lightgrey value:gray(0.9)
+  id:darkgrey value:gray(0.7)
+  id:sfondo value:rgb(1,1,1)
+  id:barra value:rgb(0.6,0.7,0.8)
+ImageSize = width:500 height:350
+PlotArea = left:50 bottom:50 top:30 right:30
+DateFormat = x.y
+Period = from:400 till:1550
+TimeAxis = orientation:vertical
+AlignBars = early #justify
+ScaleMajor = gridcolor:darkgrey increment:100 start:400
+ScaleMinor = gridcolor:lightgrey increment:50 start:400
+BackgroundColors = canvas:sfondo
+BarData=
+ Bar:1950 text:1950
+ Bar:1955 text:1955
+ Bar:1960 text:1960
+ Bar:1965 text:1965
+ Bar:1970 text:1970
+ Bar:1975 text:1975
+ Bar:1980 text:1980
+ Bar:1985 text:1985
+ Bar:1990 text:1990
+ Bar:1995 text:1995
+ Bar:2000 text:2000
+ Bar:2005 text:2005
+ Bar:2010 text:2010
+PlotData=
+ color:barra width:20 align:center fontsize:XS
+ Bar:1950 from:start till:469 text:473
+ Bar:1955 from:start till:476 text:482
+ Bar:1960 from:start till:486 text:499
+ Bar:1965 from:start till:502 text:532
+ Bar:1970 from:start till:530 text:589
+ Bar:1975 from:start till:595 text:648
+ Bar:1980 from:start till:683 text:726
+ Bar:1985 from:start till:794 text:826
+ Bar:1990 from:start till:929 text:947
+ Bar:1995 from:start till:1087 text:1080
+ Bar:2000 from:start till:1235 text:1226
+ Bar:2005 from:start till:1371 text:1379
+ Bar:2010 from:start till:1505 text:1556
+TextData=
+  fontsize:S pos:(50,30)
+  text:Population du Gabon en milliers - 2012
+</timeline>
+
+Source des graphiques<ref name="wpp">{{Lien web |titre=U.N. World Population Prospects, révision 2012 |url=http://esa.un.org/wpp/unpp/panel_population.htm |consulté le=7 fév. 2014}}.</ref> U.N. World Population Prospects, révision 2012.
+----
+* '''Population :''' {{nombre|0-14|ans}} : 42,2 % ; {{nombre|15-64|ans}} : 54 % ; + {{nobr|65 ans}} : 3,9 %
+* '''Taux de migration :''' 0 % (en 2007), -0,2 % (est. 2013<ref name="CIA" />)
+
+{{clr}}
+
+=== Langues et ethnies ===
+{{Article détaillé|Langues au Gabon}}
+
+[[Fichier:Musee National Libreville 1.JPG|vignette|upright|Pancarte en français au musée national de Libreville.]]
+
+La langue officielle du Gabon est le [[français]] qui, selon les estimations, est parlé par 80 % de la population<ref>{{Lien web |titre=Rapport d'information Assemblée nationale |url=http://www.assemblee-nationale.fr/12/rap-info/i3693.asp |site=www.assemblee-nationale.fr |consulté le=2 juillet 2010}}.</ref>{{,}}<ref>{{Lien web |titre=Rapport 2006-2008 |url=http://www.francophonie.org/Rapport-2006-2008.html |site=www.francophonie.org |consulté le=22 janv. 2014}}.</ref>. Il s'agit de la plus forte proportion de tous les pays du continent africain. Le Gabon est membre de plein droit de l'[[Organisation internationale de la francophonie]]<ref name="francophonie" /> de même que de l'[[Assemblée parlementaire de la francophonie]]<ref>{{Lien web|titre=Les membres |url=http://apf.francophonie.org/spip.php?rubrique2 |éditeur=Assemblée parlementaire de la francophonie}}.</ref>.
+
+Avant la [[Seconde Guerre mondiale]], très peu de Gabonais avaient appris le français et presque tous ceux qui connaissaient le français travaillaient alors dans l'administration coloniale. Après la guerre, la France introduit l'éducation primaire pour tous dans toutes ses colonies africaines et le recensement de 1960 montre que 47 % des Gabonais de plus de quatorze ans parlent le français, même si seulement 13 % savent lire et écrire dans cette langue. Dans les années 1990, le taux d'alphabétisation atteint environ 60 %. Le français est la langue maternelle d'un tiers des Gabonais.
+
+Plus de {{nb|10000 Français}} vivent au Gabon<ref>{{Lien web|titre=Gabon |url=http://www.mfe.org/index.php/Portails-Pays/Gabon |site=mfe.org |éditeur=[[Ministère de l'Europe et des Affaires étrangères|Ministère des Affaires étrangères]] - [[Maison des Français de l'étranger]]}}.</ref> et l'influence de la France reste prédominante économiquement et culturellement.
+
+Le Gabon abrite la première [[station de radio]] internationale du continent africain, [[Africa Radio|Africa {{numéro|1}}]], qui diffuse ses émissions en français. Les émetteurs sont installés à Moyabi, à {{unité|600|km}} au sud de Libreville<ref>{{Lien web|titre=Qui sommes-nous ? |url=http://www.africa1.com/spip.php?rubrique26 |site=africa1.com}}.</ref>.
+
+Une cinquantaine de [[langues bantoues]]<ref name="laval">{{Lien web|titre=Gabon |url=http://www.axl.cefan.ulaval.ca/afrique/gabon.htm |éditeur=[[Université Laval]]}}.</ref> ainsi que le [[Baka (langue oubanguienne)|baka]], langue pygmée, sont pratiquées au Gabon<ref>{{ethnologue|bkc}}.</ref>.
+
+Le Gabon compte près d'une cinquantaine d'[[ethnie]]s. Aucune des ethnies gabonaises n'est majoritaire, mais les plus importantes au point de vue numérique sont<ref name="CIA" />{{,}}<ref name="laval" /> :
+* les [[Fang (peuple)|Fangs]] (32 à 23,3 %), présents dans cinq des neuf régions, mais surtout dans le Woleu-Ntem (nord) et dans l’Estuaire (région de Libreville)<ref name="Debain">{{Article |langue=fr |auteur1=Mathilde Debain |titre=Chronique d'une victoire assurée. Retour sur la campagne présidentielle de 2009 au Gabon |périodique=[[Politique africaine]] |volume=3 |numéro=115 |date=2009 |lire en ligne=https://www.cairn.info/revue-politique-africaine-2009-3.htm-page-27.htm |consulté le=29 novembre 2018 |pages=27-46}}.</ref>
+* les Punu-Eshira/Vili (18,9 à 12 %)
+* les [[Nzebi (peuple)|Nzebis]] (dont les Bandjabi, Adouma, Awandji, Batsiagui, Sihou, Bassissihou, Ivili, Tsaangi) (11,3 %), sont établis dans 4 provinces du pays : l'Ogooué-Lolo (G7), le Haut-Ogooué (G2) et la Ngounié (G4) et le Moyen-Ogooué (G3)
+* les Tékés-Mbédés (Obambas) (14 à 6,9 %)
+* les [[Mpongwe|Mpongwès]] (sous-groupe Myènès) (15 à 5 %).
+
+Viennent ensuite les [[Kota (peuple)|Bakotas]] (ou Kotas, Ikotas ou Ba-Kotas), les [[Varamas|Vungus]], les [[Massango (peuple)|Massangos]] (ou Massangus), les [[Myènè (peuple)|Myènès]], etc. D'autres ethnies comptent seulement quelques centaines d'individus<ref>{{Lien web |langue=fr |titre=Les principales ethnies du Gabon et leur localisation |url=http://www.cesbc.org/gabon/fichiers_pdf/gab_ethnies.pdf |éditeur=Centre d'études stratégiques du bassin du Congo}}.</ref>. Culturellement, certaines sont amenées à se fondre progressivement dans la masse et à perdre leur langue et leurs particularités.
+
+Il est difficile de donner une liste exhaustive d'ethnies car certaines ne sont que des sous-ensembles d'autres groupes et tout dépend du niveau de détail utilisé.
+
+Les noms ou orthographes peuvent varier pour désigner la même ethnie. En effet, le préfixe Ba est souvent la marque du pluriel dans les langues bantoues si bien que « Bapunu » et « Punu » désignent la même ethnie, envisagée au pluriel ou au singulier. On peut aussi trouver une forme plus ou moins francisée du même nom ; « Punu » et « Pounou » sont un seul et même mot différemment orthographié<ref>{{Ouvrage |langue=fr |auteur1=Mabik-ma-Kombil |titre=Parlons yipunu : langue et culture des Punu du Gabon-Congo |éditeur=[[Éditions L'Harmattan|L'Harmattan]] |année=2001 |pages totales=210 |passage=9 |isbn= |présentation en ligne=https://books.google.fr/books?id=J-EYLAQ2SGMC&pg=PA9}}.</ref>.
+
+{{Boîte déroulante/début|titre=Peuples du Gabon}}
+{{Début de colonnes|nombre=2}}
+# [[Adouma (peuple)|Adoumas, Adumas ou Badumas]]
+# [[Adyumba (peuple)|Adyumbas ou Adjumbas]]
+# [[Akélé|Akélés, Bakélés ou Nkélés]] (dont [[Bungome]]s, [[Nkomon]]s, [[Mbahoin]]s, [[Métombolo]]s)
+# [[Apindjis]]
+# [[Assimbika]]s
+# [[Awandjis]]
+# [[Baka (peuple du Cameroun et du Gabon)|Bakas]], peuple pygmée
+# [[Akanigui|Bakaniguis]]
+# [[Nzebi (peuple)|Bandjabis ou Banzabis]]
+# [[Batsangui]]s
+# [[Benga (peuple)|Bengas]]
+# [[Bungomou]]s
+# [[Enenga]]s
+# [[Échira (peuple)|Échiras]]
+# [[Fang (peuple)|Fangs]]
+# [[Galoas|Galoas ou Galwas]]
+# [[Ghisir]]
+# [[Humbu|Humbus, Houmbous ou Bawoumbous]]
+# [[Haoussas]]
+# [[Kota (peuple)|Kotas ou Bakotas]]
+# [[Balumbus|Lumbus, Loumbous ou Baloumbous]]
+# [[Mahongwé (peuple)|Mahongwés]]
+# [[Makina (peuple)|Makinas]]
+# [[Massango (peuple)|Massangos]]
+# [[Mbahoin]]s
+# [[Mbedé|Mbedés ou M'Bedés]]
+# [[Meimbè]]s (dont [[Simbaka]]s, [[Mokanke]]s, [[Mopindzi]]s [[Motsogho]]s)
+# [[Mindumu]]s
+# [[Mitsogo|Mitsogos, Mitsoghos ou Tsogos]]
+# [[Mpongwe|Mpongwès]]
+# [[Myènè (peuple)|Omyènès ou Ngwè-Myènès]]
+# [[Ndumu (peuple)|Ndumus]]
+# [[Nzebi (peuple)|Nzebis]] (dont [[Adouma (peuple)|Adoumas]], [[Akanigui]]s, [[Awandjis]], [[Batsiagui]]s, [[Badjabi]]s, [[Sihou]]s, [[Sissihou]]s)
+# [[Ngowé]]s
+# [[Nkomi|Nkomis ou N'komis]]
+# [[Obamba (peuple)|Obambas]]
+# [[Okandé]]s
+# [[Orungu|Orungus ou Oroungous]]
+# [[Punu (peuple)|Punus, Pounous ou Bapounous]]
+# [[Puvi]]s
+# [[Pygmée|Pygmées (Akowas, Bakas, Bekuis, Bakongos, Babingas, Barimbas, etc.)]]
+# [[Shaké]]s
+# [[Sangu (ethnie)|Sangus]]
+# [[Sékyani|Sékyanis ou Sékianis]]
+# [[Teke (peuple)|Tékés (dont Batsitségues) ou Batekés]]<ref>{{Lien web |langue=fr |auteur1=Notice [[Répertoire d’autorité matière encyclopédique et alphabétique unifié|RAMEAU]] |titre=Teke (peuple d'Afrique) |url=http://data.bnf.fr/12038285/teke__peuple_d_afrique_/ |éditeur=[[Bibliothèque nationale de France|BnF]]}}.</ref>
+# [[Varamas]]
+# [[Vili (peuple)|Vilis ou Bavilis]]
+# [[Varamas|Vungus, Voungous ou Bavungus, Varamas]]
+{{fin de colonnes}}
+{{Boîte déroulante/fin}}
+
+=== Données sanitaires ===
+L'indicateur sanitaire le plus préoccupant est le taux de mortalité infantile qui s'établit à 51 décès/{{nombre|1000|naissances}} normales en 2010<ref name="wpp" />. Le [[programme des Nations unies pour le développement]] constate que, parmi les huit [[objectifs du millénaire pour le développement|objectifs du millénaire]], c'est celui qui a le moins progressé<ref>{{Ouvrage |titre=Objectifs du millénaire pour le développement, troisième rapport national, Gabon |éditeur=[[Programme des Nations unies pour le développement|PNUD]] |date=sept. 2010 |format livre=pdf |passage=59 |isbn= |lire en ligne=http://www.undp.org/content/dam/undp/library/MDG/english/MDG%20Country%20Reports/Gabon/gabon_september2010.pdf}}.</ref>.
+
+La [[prévalence]] du [[Syndrome d'immunodéficience acquise|SIDA]] est, à l’instar de l’ensemble de l'Afrique, élevée, avec, en 2012, un taux de 4,1 % de personnes infectées dans la tranche d'âge {{nombre|15-49|ans}}<ref>{{Lien web |format=pdf |titre=Prévalence du VIH/sida au Gabon : résultats de l’EDSG-II 2012 |url=http://www.measuredhs.com/pubs/pdf/HF44/HF44.pdf |site=measuredhs.com}}.</ref>{{,}}<ref>{{Lien web |titre=Gabon |url=http://www.unaids.org/fr/regionscountries/countries/gabon/ |éditeur=[[ONUSIDA]]}}.</ref>. Ce taux est cependant en baisse constante depuis le maximum historique constaté en 2008<ref>Prévalence : 5,0 (2009), 4,6 (2010), 4,3 (2011), 4,0 (2012) selon {{Lien web |titre=Prévalence du VIH, total (% de la population âgée de 15 à 49 ans) |url=http://donnees.banquemondiale.org/indicateur/SH.DYN.AIDS.ZS |éditeur=Banque mondiale}}.</ref>{{,}}<ref>{{Lien web |titre=OMD But 6 : Combattre le VIH/SIDA, Tuberculose, Paludisme et autres maladies - CIBLE 7 : Stopper d’ici 2015, la propagation du VIH et commencer à inverser la tendance - graphique 13 |url=http://www.aho.afro.who.int/profiles_information/index.php/Gabon:MDG_Goal_6:_Combat_HIV/AIDS,_TB,_malaria_and_other_diseases/fr#cite_note-0 |éditeur=[[Organisation mondiale de la santé|OMS]]}}.</ref>.
+
+L'état sanitaire global du Gabon s'améliore, l'[[Organisation mondiale de la santé]] (OMS) constatant qu'{{citation|on assiste vraisemblablement à une transition du profil national vers un poids des maladies non transmissibles surpassant celui des maladies transmissibles<ref>{{Lien web |titre=Résumé analytique |url=http://www.aho.afro.who.int/profiles_information/index.php/Gabon:Analytical_summary_-_Health_Status_and_Trends/fr |éditeur=[[Organisation mondiale de la santé|OMS]]}}.</ref>}}.
+* Espérance de vie des hommes : {{nb|64,382|ans}} (2019)<ref name="bm">{{Lien web |titre=Indicateurs |url=https://donnees.banquemondiale.org/indicator/SP.DYN.LE00.MA.IN?locations=GA |éditeur=Banque mondiale}}.</ref>
+* Espérance de vie des femmes : {{nb|63 ans}} (2009)<ref name="bm" />
+* Taux de croissance de la population : 1,9 % (en 2010)<ref name="wppc">{{Lien web |titre=Statistiques des Nations unies |url=http://esa.un.org/wpp/Sorting-Tables/tab-sorting_population.htm}}.</ref>
+* Taux de natalité brut : {{Unité|29.51|‰}} (en 2016)
+* Taux de mortalité brut : {{Unité|7,62|‰}} (est. 2016)<ref>{{Lien web|titre=Data Pays, Encyclopædia Universalis [en ligne], consulté le 18 juillet 2021
+|url=https://www.universalis.fr/datapays/d97fc46375b4e2b0590883aca8557b4e}}.</ref>
+
+{{clr}}
+
+=== Éducation ===
+{{Article détaillé|Système éducatif au Gabon}}
+Parmi les [[objectifs du millénaire pour le développement|objectifs du millénaire]], ceux concernant l'éducation (« Assurer l'éducation primaire pour tous ; promouvoir l'égalité des sexes et l'autonomisation des femmes ») sont en passe d'être atteints. En 2010, le « taux net de scolarisation dans le primaire » atteint 94,7 % en 2010 et « l'indice de parité entre sexes (IPS) dans l’enseignement primaire » s'établit à 96,7 % (2005)<ref>{{Lien web |langue=fr |titre=Les OMD au Gabon |url=http://www.ga.undp.org/index.php/omd/les-omd-au-gabon |site=ga.undp.org |éditeur=Programme des Nations unies pour le Développement}}.</ref>. Le taux global d'alphabétisation de la population est un des plus élevés de la région à 85,4 % (en 2005)<ref>{{Lien web |langue=fr |format=pdf |titre=Profil pays, Gabon |url=http://www.ga.undp.org/publications/Profil_Pays_du_Gabon_Jan_2006.pdf |site=ga.undp.org |éditeur=Programme des Nations unies pour le Développement |année=2006}}.</ref>{{,}}<ref>{{Lien web |langue=fr |format=pdf |titre=Vers la scolarisation universelle de qualité pour 2015, évaluation diagnostique Gabon |url=http://www.confemen.org/wp-content/uploads/2012/06/Rapport_Final_Gabon.pdf |éditeur=Organisation internationale de la francophonie, République gabonaise, Ministère de l'Éducation nationale et de l'Instruction civique, conférence des ministres de l'Éducation des pays ayant le français en partage |année=2008}}.</ref>. En revanche, au niveau secondaire, l'efficacité du système d'enseignement est faible {{citation|marqué par des taux de redoublement (31 %) et d’abandons et d’exclusions élevés (20,1 % de taux d’exclusion), tout comme les résultats aux
+examens nationaux (23 % de réussite au BEPC et 30 % au baccalauréat en 2007)<ref>{{Ouvrage |langue=fr |titre=Données mondiales de l’éducation, Gabon |éditeur=UNESCO |année=2010 |numéro d'édition=7 |format livre=pdf |passage=14 |isbn= |lire en ligne=http://www.ibe.unesco.org/fileadmin/user_upload/Publications/WDE/2010/pdf-versions/Gabon.pdf}}.</ref>}}.
+
+== Culture ==
+{{Article détaillé|Culture du Gabon}}
+
+=== Arts traditionnels au Gabon ===
+[[Fichier:WLA metmuseum Mask Mukudj Punu.jpg|vignette|redresse|Masque de danse ''mukudji'',<br>du peuple [[Punu (peuple)|Punu]].<br> [[Metropolitan Museum of Art]]]]
+{{Article détaillé|Masque gabonais|Kota (peuple)|Fang (peuple)}}
+
+Les [[masque]]s traditionnels ont une part importante dans la culture gabonaise. Chaque ethnie a ses propres masques aux significations et utilisations variées<ref>{{Article |auteur1=Vincent Bobanga |responsabilité1=Musée national des arts et traditions du Gabon |titre=Le Masque, une source documentaire pour l’histoire du Gabon |périodique=ScienceSud |volume=2 |numéro=1 |date=Janvier-juin 2009 |lire en ligne=http://editions.cenarestgabon.com/sciencesud/Bobango%20Final.pdf |format=pdf}}.</ref>{{,}}<ref>{{Lien web |titre=Les origines et traditions, les masques |url=http://www.gabonart.com/la-culture-gabonaise/les-origines-et-traditions/les-masques |site=gabonart.com |éditeur=Présidence du Gabon}}.</ref>. Ils sont fréquemment utilisés dans les cérémonies traditionnelles<ref>{{Ouvrage |titre=Les masques du Gabon |éditeur= |année= |format livre=pdf |isbn= |lire en ligne=http://institutfrancais-fondsgabon.org/livres-numeriques/masques-du-gabon.pdf}}.{{commentaire biblio SRL|Publié à l’occasion de l’exposition Masques du Gabon présentée au musée de l’Hôtel-Dieu de Mantes-la-Jolie du 8 décembre 2007 au 20 juillet 2008.}}.</ref> (mariage, naissance, deuil, etc.).
+
+Les plus connus et les plus recherchés sur les grands marchés de l'art sont les masques [[Teke (peuple)|téké]], [[Obamba (peuple)|obamba]], [[Kota (peuple)|kota]], [[Punu (peuple)|punu]] et [[Fang (peuple)|fang]] que l'on retrouve dans de grands musées européens, nord-américains et asiatiques<ref>{{Lien web |titre=Art africain, marché de l'art |url=http://artkhade.com/fr/articles/1/1/art-africain-march%C3%A9-de-lart |site=artkhade.com |date=1-7-2019}}.</ref>{{,}}<ref>{{Lien web |auteur1=Dominique Raizon |titre=Plus de 500 œuvres d’art africain mises aux enchères, à Paris |url=http://www.rfi.fr/actufr/articles/078/article_44406.asp |site=rfi.fr |date=16 juin 2006}}.</ref>.<!--({{cf}} les travaux de Louis Perrois, Fernandez et Gunter Tessman). Les traditionalistes mettant en exergue leur art pour la sculpture du bois — en général des bois précieux — et des matières rares.-->
+
+=== Religions ===
+==== Généralités ====
+Avant la colonisation, les peuples du Gabon partageaient des croyances [[animisme|animistes]] caractérisées par des mythes et des rites variés mais ayant comme points communs le culte des ancêtres, dont l'esprit pouvait toujours influer sur l'existence des vivants, et le recours aux fétiches<ref>{{Lien web|auteurs=Étienne Tassé et Isaac De Bilanga |titre=Gabon : les crimes rituels ouvertement dénoncés |url=http://www.syfia.info/index.php5?view=articles&action=voir&idArticle=4694 |éditeur=Syfia international |année=2007 |consulté le=14 septembre 2008}}.</ref>{{,}}<ref>{{Lien web |titre=Gabon - Crime rituel : À vif, on lui arrache la langue, les reins, le cœur et le cerveau |url=http://www.gabonlibre.com/Gabon-Crime-rituel-A-vif-on-lui-arrache-la-langue-les-reins-le-coeur-et-le-cerveau_a19676.html |éditeur=Gabon libre |année=2013 |consulté le=12 mars 2013}}.</ref>. Il y eut, à partir du {{s-|XIX}}, une véritable compétition entre [[missionnaire chrétien|missionnaires]] catholiques et protestants pour évangéliser les Gabonais<ref>{{Article |langue=en |auteur1=David E. Gardinier |titre=The Schools of the American Protestant Mission in Gabon (1842-1870) |périodique=Revue française d'histoire d'outre-mer |volume=75 |numéro=279 |année=1988 |résumé=http://cat.inist.fr/?aModele=afficheN&cpsidt=11895414 |pages=168-184}}.</ref>{{,}}<ref>{{Ouvrage|auteur1=Emmanuelle Nguema Minko|titre=Gabon : l'unité nationale ou la rancune comme mode de gouvernance|éditeur=[[Éditions L'Harmattan|L'Harmattan]]|année=2010|pages totales=289|passage=89|isbn=|lire en ligne=https://books.google.fr/books?id=kbEn2Ccx4IIC&pg=PA89}}.</ref>. En pratique, beaucoup de personnes associent aujourd'hui une foi chrétienne et d'anciennes croyances autochtones. Il faut noter le succès au Gabon de toutes sortes d'Églises, notamment évangéliques, inspirées de modèles américains ou africains<ref>{{Lien web|auteurs=André Mary et Maixant Mebiame Zomo |titre=Gabon |url=http://www.ird.fr/relitrans/?Gabon,360 |éditeur=[[Institut de recherche pour le développement|IRD]], Relitrans}}.</ref>.
+
+Le Gabon est un pays membre de l'[[Organisation de la coopération islamique]].
+
+==== Christianisme ====
+[[Fichier:Lbv-StMichel-de-NKembo.jpg|vignette|Église Saint-Michel de Nkembo à Libreville.]]
+
+La population est estimée à 75 % catholique, 20 % protestante<ref>Le gouvernement gabonais donne le chiffre de 20 % ({{Lien web |langue=fr |titre=Démographie |url=http://www.presidentalibongo.com/histoire-chiffres-cles/les-chiffres-cles/les-chiffres-cles-demographie |éditeur=Présidence de la République gabonaise}}), tandis que l'Université de Sherbrooke l'estime à 33,5 % en 2005 ({{lien web |langue=fr |titre=Protestants |url=http://perspective.usherbrooke.ca/bilan/stats/0/2005/fr/14/carte/WR.RELG.PRA.PROT.ZS/x.html |éditeur=Université de Sherbrooke, Perspective Monde}}) sur la base de la « World christian database ».</ref>.
+
+L'Église catholique au Gabon forme une [[province ecclésiastique]] composée de l'[[Archidiocèse de Libreville|archidiocèse métropolitain de Libreville]] (depuis avril 1998)<ref>{{Lien web |langue=en |titre=Living Bishops of Gabon |url=http://www.catholic-hierarchy.org/country/bga2.html |site=catholic-hierarchy.org |consulté le=23 janv. 2014}}.</ref> et de quatre diocèses : [[diocèse de Franceville|Franceville]], [[diocèse de Mouila|Mouila]], [[Diocèse d'Oyem|Oyem]] et [[diocèse de Port-Gentil|Port-Gentil]].
+
+==== Islam ====
+
+Il existe dans le pays une minorité [[musulman]]e. Le [[The World Factbook|''World Factbook'' de la CIA]] l'estime à 9 %<ref name="CIA"/>, le département d'État américain à 12 %<ref>{{Lien web |langue=en |titre=Gabon, International Religious Freedom Report 2006 |url=http://www.state.gov/j/drl/rls/irf/2006/71302.htm |éditeur=US Department of State}}).</ref> composée essentiellement d'immigrés d'[[Afrique de l'Ouest]]<ref>{{Lien web |langue=en |titre=Gabon, International Religious Freedom Report 2006 |url=http://www.state.gov/j/drl/rls/irf/2006/71302.htm |éditeur=US Department of State}}.</ref>. Le président gabonais, [[Ali Bongo]] est devenu musulman, comme son père, [[Omar Bongo]]<ref>{{Lien web |langue=fr |titre=Ali Bongo Ondimba désigné Khalife général des musulmans du Gabon |url=http://www.gabonlibre.com/Ali-Bongo-Ondimba-designe-Khalife-general-des-Musulmans-du-Gabon_a1227.html |site=gabonlibre.com |date=20 sept. 2009}}.</ref>, converti en 1973<ref>{{Article |langue=fr |titre=Gabon : Omar Bongo Ondimba, un président œcuménique |périodique=JeuneAfrique |jour=16 |mois=6 |année=2009 |lire en ligne=http://www.jeuneafrique.com/Article/DEPAFP20090616T125749Z/}}.</ref>.
+
+==== Franc-maçonnerie ====
+{{article connexe|Liste_d'obédiences_maçonniques#Gabon{{!}}Liste d'obédiences maçonniques}}
+[[Fichier:MOSQUEEPORTGENTIL.JPG|vignette|Mosquée à Port-Gentil.]]
+La [[franc-maçonnerie]] au Gabon compte un nombre notable d'adhérents. Il existe une « Grande Loge du Gabon », appartenant à la même obédience que la GNLF ([[Grande Loge nationale française]]) et un « Grand rite équatorial gabonais »<ref>{{Article |langue=fr |auteur1=Georges Dougueli |titre=République maçonnique gabonaise |périodique=Jeune Afrique |date=13 avril 2011 |lire en ligne=http://www.jeuneafrique.com/Articles/Dossier/ARTJAJA2621p030-039.xml8/france-gabon-internet-librevillerepublique-maconnique-gabonaise.html}}.</ref>.
+
+==== Mouvements ésotérico-religieux ====
+Il existe aussi un mouvement [[rose-Croix|rosicrucien]] au Gabon<ref>{{Lien web |langue=fr |titre=École gnostique la rose-croix d'or, accueil Gabon |url=http://gabon.rose-croix-d-or.org/}}.</ref>{{,}}<ref>{{Lien web |langue=fr |auteur1=Achille Moutsinga |titre=Gabon, la Rose-Croix se dévoile |url=http://africa-info.org/societe/1492-gabon-la-rose-croix-se-devoile.html |site=africa-info.org}}.</ref>.
+
+Les rites et traditions mystiques ethniques, en lien avec la symbolique des masques, de la musique et des danses sont encore très présents au Gabon<ref>{{Ouvrage|langue=fr|auteur1=[[André Raponda-Walker]]|auteur2=Roger Sillans|préface=[[Théodore Monod]] et [[Hubert Deschamps (historien)|Hubert Deschamps]]|titre=Rites et croyances des peuples du Gabon : essai sur les pratiques religieuses d'autrefois et d'aujourd'hui|lieu=Paris|éditeur=[[Présence africaine]]|collection=Enquêtes et études|année=1962}}</ref>, particulièrement le [[Bwiti]] qui s'est largement diffusé<ref name="rite">{{Lien web |langue=fr |titre=Les rites et les danses |url=http://www.gabonart.com/la-culture-gabonaise/culture-et-traditions/les-rites-et-les-danses |site=gabonart.com |éditeur=Présidence du Gabon}}.</ref>.
+
+On retrouve notamment<ref>{{Article|langue=fr|prénom1=Ghislain Desire Megne|nom1=M'Ella|titre=L'organisation sociale du sport au GABON, de l'indépendance à nos jours (1960-2012). Analyse socio-historique des facteurs de facilitations et des contraintes. Perspectives comparatives : Caméroun-Sénégal|périodique=?|éditeur=Université de Bordeaux|date=2014-12-16|lire en ligne=https://theses.hal.science/tel-01501204|consulté le=2024-02-03}}</ref> :
+* [[Bwiti]]<ref>{{Article |langue=fr |prénom1=Luc |nom1=Heusch |titre=Considérations sur le symbolisme des religions bantoues |périodique=L'Homme |volume=4 |numéro=184 |année=2007 |lire en ligne=http://www.cairn.info/revue-l-homme-2007-4-page-167.htm |pages=167-189}}.</ref>{{,}}<ref>{{Article |langue=fr |auteur1=Stanislaw Swiderski |titre=Le Bwiti, société d'initiation chez les Apindji au Gabon |périodique=Anthropos |volume=60 |année=1965 |lire en ligne=https://www.jstor.org/stable/40457908}}.</ref>
+* [[Ndjembé]]<ref>{{Article |langue=fr |auteur1=Gérard Collomb |titre=Fragments d'une cosmologie Banzèbi |périodique=Journal des africanistes |volume=53 |numéro=1-2 |année=1983 |lire en ligne=http://www.persee.fr/web/revues/home/prescript/article/jafr_0399-0346_1983_num_53_1_2040 |consulté le=30 janv. 2014 |pages=107-118}}.</ref>
+* [[Ndjobi]]<ref>{{Ouvrage |langue=fr |prénom1=Jacques Alain |nom1=Nitsi |titre=Processus de symbolisation et appartenances culturelles |éditeur=Université Lumière-Lyon-2 |année=2005 |isbn= |lire en ligne=http://theses.univ-lyon2.fr/documents/lyon2/2005/bitsi_ja}}{{commentaire biblio SRL|thèse de doctorat}}.</ref>{{,}}<ref>{{Ouvrage |langue=fr |auteur1=Claude-Richard M'Bissa |titre=Le Ndjobi au Congo et au Gabon |sous-titre=Histoire et fonction sociale |éditeur=L'Harmattan RD Congo |date=juil. 2013 |pages totales=266 pages |isbn= |présentation en ligne=https://books.google.fr/books?id=p1hQgKbgbP8C}}.</ref>
+* [[Mouiri|Mouiri ou mwiri]]<ref>{{Lien web |langue=fr |titre=Chants du Mwiri chez les Akélé du Gabon |url=http://www.sorosoro.org/chants-du-mwiri-chez-les-akele-du-gabon |site=sorosoro.org}}.</ref>{{,}}<ref>{{Lien web |langue=fr |format=vidéo |titre=Sociétés secrètes du Gabon |url=http://www.ina.fr/video/CPF86621655 |site=ina.fr}}.</ref>
+* [[Mvett]]<ref>{{Article |langue=fr |auteur1=Angèle Christine Ondo |titre=L’espace corporel intérieur dans le mvet |périodique=Journal des africanistes |volume=79 |numéro=2 |année=2010 |lire en ligne=http://africanistes.revues.org/2991 |consulté le=2 février 2014 |date={{1er}} avril 2013}}.</ref>{{,}}<ref>{{Ouvrage |langue=fr |auteur1=Grégoire Biyogo |titre=L'encyclopédie du mvett |tome=1 |titre volume=Du haut Nil en Afrique centrale |éditeur=Menaibuc |année=2002 |isbn=}}.</ref>
+* <!-- ??* [[Melane]]?? inconnu au bataillon... -->[[Byeri]]<ref>{{Ouvrage |langue=fr |auteur1=Bernardin Minko Mve |titre=Gabon entre tradition et post-modernité |sous-titre=dynamique des structures d'accueil fang |éditeur=Harmattan |année=2003 |pages totales=250 |isbn= |présentation en ligne=https://books.google.fr/books?id=oCE8KVd2H-8C&pg=PA122}}.</ref>{{,}}<ref>{{Article |langue=fr |auteur1=Camille Gonzales |titre=Byéri, le culte des ancêtres fang |périodique=La vie protestante |mois=9 |année=2011 |lire en ligne=http://www.vieprotestantegeneve.ch/applic/ge/WebDocs.nsf/bdedfca988b2db3c85256207004f45a9/3b2b6dd212954782c1257904003671b6/$FILE/VP%20septembre%202011_PDF%20HD%2021.pdf |format=pdf}}.</ref>
+
+=== Musique et danses ===
+{{Article détaillé|contenu=Voir l'article détaillé [[Musique gabonaise]]}}
+
+La [[musique gabonaise]] plonge ses racines dans la musique traditionnelle. La musique d'aujourd'hui est un mélange de sonorités traditionnelles et modernes<ref>{{Lien web |langue=fr |titre=Tableau synoptique de la chanson gabonaise du {{s-|XX}} |url=http://gabonreview.com/blog/tableau-synoptique-de-la-chanson-gabonaise-du-xxe-siecle/ |site=gabonreview.com |date=12.01.2012}}.</ref>. Les danses typiques gabonaises sont l'[[ingwala]] de l'ethnie [[Nzebi (peuple)|Nzebi]], l'eko de l'ethnie [[Fang (peuple)|Fang]], l'[[ikokou]]<ref name="ikoku">{{Lien web |langue=fr |titre=Gabon, À la découverte du patrimoine culturel gabonais : la danse Ikoku |url=http://www.gaboneco.com/nouvelles_africaines_24828.html |site=gaboneco.com |date=5 mars 2012}}.</ref> et le mbouanda des [[Punu (peuple)|Punus]] ainsi que les danses [[Mpongwe|mpongwè]] et [[teke (peuple)|téké]]<ref name=rite/>. En 2016, afin de valoriser ce patrimoine, une association socioculturelle décide d'organiser [[Tournoi des neuf provinces du Gabon|le tournoi des 9 provinces]], le premier concours de danses traditionnelles africaines au Gabon, dans les vestiges du [[Centre international des civilisations bantu|CICIBA]]<ref>{{Lien web |nom1=Espoir Gabon |titre=Résumé du TOURNOI DES 9 PROVINCES - ESPOIR GABON - CULTURE 7 MAG |url=https://www.youtube.com/watch?v=5R1Hma2Fg5g |date=2016-09-21 |consulté le=2017-09-08}}.</ref>.
+
+{{boîte déroulante | titre = Chanteurs gabonais<ref>{{Article |prénom1=Joseph D. |nom1=Gauthier |prénom2=Tsira Ndong |nom2=Ndoutoume |titre=Le mvett |périodique=Books Abroad |volume=45 |numéro=3 |date=1971 |issn=0006-7431 |doi=10.2307/40125666 |lire en ligne=http://dx.doi.org/10.2307/40125666 |consulté le=2020-12-15 |pages=560 }}</ref> | contenu =
+{{Début de colonnes|nombre=2}}
+* [[Pierre Akendengué]]
+* Hilarion Nguema
+* Espérance Ngaba
+* [[Pierre Claver Zeng]]
+* André Pépé Nze
+* Maman Dédé
+* Pierre Marie Ondo Mebale
+* Jean Louis Evoung
+* Prince Martin Rompavet
+* Kaki Disco
+* [[Annie-Flore Batchiellilys]]
+* [[Patience Dabany]]
+* [[Mackjoss]]
+* Vickoss'Ekondo
+* Shan’L
+* [[Oliver N'Goma]]
+* Angele Assélé
+* Nicole Amogho
+* Ba'ponga
+* Koba
+* Olga Lesly
+* [[Darenn Mbadinga]]
+*[[Ndong Mboula]]
+* [[Jann Halexander]]
+* [[SeBa]]
+* Stéphanie Afene
+*Chérubin Praise
+* [[Lord Ekomy Ndong]] du groupe [[Movaizhaleine]]
+* Yvon-Martial Moussodou-Mam
+{{fin de colonnes}}
+| align = left }}
+
+=== Littérature ===
+Comme de nombreux pays africains jusqu'au {{s-|XX}}, la littérature du Gabon reposait essentiellement sur une riche tradition orale qui comprend un corpus de fables, de légendes, de contes et d'épopées tels le chant épique [[Mvett]] chez les [[Fang (peuple)|Fang]]<ref>{{Article |langue=fr |auteur1=Seydou Christian |titre=Épopée et identité : exemples africains |périodique=Journal des africanistes |volume=58 (fascicule 1) |année=1988 |lire en ligne=http://www.persee.fr/web/revues/home/prescript/article/jafr_0399-0346_1988_num_58_1_2246 |pages=7-22}}.</ref>{{,}}<ref>{{Article |langue=fr |auteur1=Pierre Smith |titre=Comptes rendus : Tsira Ndong Ndoutoume, Le Mvett |périodique=L'Homme |volume=17 |numéro=1 |année=1977 |lire en ligne=http://www.persee.fr/web/revues/home/prescript/article/hom_0439-4216_1977_num_17_1_367731 |pages=136-137}}.</ref> ou l'[[Ingwala]] chez les [[Nzebi (peuple)|Nzebi]] que certains conteurs anciens et modernes s'efforcent de maintenir vivants. Les épopées fang, par exemple, ont fait l’objet de transcription et traduction par [[Philippe Tsira Ndong Ndoutoume]]<ref>{{Article |prénom1=Philippe |nom1=Ndong Ndoutoumé |titre=Le Mvett |périodique=Présence Africaine |volume=59 |numéro=3 |date=1966 |issn=0032-7638 |issn2=2271-197X |doi=10.3917/presa.059.0057 |lire en ligne=http://dx.doi.org/10.3917/presa.059.0057 |consulté le=2020-12-15 |pages=57 }}</ref>, Daniel Assoumou Ndoutoume<ref>{{Ouvrage|langue=fr|auteur1=Daniel Assoumou Ndoutoume|titre=Du Mvett|sous-titre=essai sur la dynastie Ekang Nna|éditeur=|année=1986|isbn=}}</ref> et [[Herbert Pepper]]<ref>{{Lien web |langue=français |auteur=Herbert Pepper |titre=Un mvet de Zwè Nguéma : chant épique fang |url=https://www.documentation.ird.fr/hor/fdi:03814}}</ref>, dont les ouvrages sont devenus incontournables dans la connaissance et l'étude du [[Mvett]]. [[Vincent de Paul Nyonda]], davantage connu comme dramaturge, est l'auteur d'un récit mythique et populaire de l'ethnie [[gisir]] intitulé ''[[Épopée Mulombi]]'' (1987). Le poète et romancier [[Maurice Okoumba-Nkoghé|Maurice Okoumba-Nkoghe]] a transmis à la postérité le récit ''Olende : une épopée du Gabon'' (1989), tiré d'une des douze branches de l'olende, celle des « fantômes ». Il s'agit d'une quête initiatique d'amour et de vérité dans les mondes visibles et invisibles pour découvrir les lois fondamentales de la vie. Okoumba-Nkoghe est également l'auteur de l'épopée [[Nzebi (peuple)|Nzébi]] (2001), qui retrace la genèse de ce peuple d’Afrique centrale.
+
+Dans le registre des contes et des légendes, le révérend père [[Henri Trilles]]<ref name=":1">{{Ouvrage|langue=fr|auteur1=Henri Trilles|titre=Contes et légendes fang du Gabon|lieu=Paris|éditeur=[[Éditions Karthala|Karthala]]|année=1905|pages totales=266|isbn=9782811104788|lire en ligne=https://books.google.fr/books?id=blhseuYnyjEC}}</ref>, de même qu'[[André Raponda-Walker]] (1871-1968) ont publié, chacun, une anthologie de ''Contes gabonais'', rassemblés au cours de leur longue existence auprès des populations gabonaises<ref name=":2">{{Ouvrage|langue=fr|prénom1=André|nom1=Raponda Walker|titre=Contes gabonais|lieu=Paris|éditeur=Éditions Présence africaine|année=2001|année première édition=1967|pages totales=384|isbn=2-7087-0571-7}}.</ref>. D'innombrables autres auteurs ont poursuivi le travail de collecte de la littérature orale gabonaise : Jean-Martin Nzamba, ''Contes et débats traditionnels chez les punu'', présente l'usage des contes dans le contexte du deuil et du mariage traditionnel ; Nza Mateki, ''Contes autour du feu'' (2004) ; Estelle Florence Ondo, ''Les Contes du soir'' (2012). Ce récit invite à être attentif aux sonorités de la nuit et de la forêt tant elles sont chargées de significations. Sur l'île et dans la savane se côtoient les hommes et les animaux avec les divers caractères : cruauté, tendresse, ruse... Dans ces contes imaginés ou inspirés des traditions orales fang, le fantastique se mêle à l'humour pour le bonheur de la communauté. ''Mythes et légendes fang'' (2009) de [[Paulin Obame Nguema|Paulin Nguema-Obam]] propose une herméneutique du mythe fondateur du peuple fang à partir de « Eyo », dont le souffle engendra « Aki Ngos », l'œuf de cuivre qui, en éclatant, donna naissance à la vie. Ce texte propose aussi une analyse des légendes de Ngourangourane et de Ozamboga qui sont une remémoration symbolique de la migration des Fang. La culture fang naît à Ozamboga par la création du conseil des sages et la célébration du culte des ancêtres. La condition humaine fournit le mythe de l'Evu qui régit toutes les croyances fang. Les dieux, les esprits célestes sont absents des mythes et des légendes fang. Le devant et l'arrière de la scène sont occupés par l'Homme. Car, pour les Fang, les mythes, les légendes ne racontent pas l'histoire des dieux, mais celle de l'Homme et des Ancêtres.
+[[Fichier:Raponda Walker.jpg|vignette|Raponda Walker]]
+Chez les [[Punu (peuple)|Punu]], l’artiste conteur Mabik-ma-Kombil a réalisé un travail sur l’origine d’une importante tradition orale africaine : ''Ngongo des initiés en hommage aux pleureuses du Gabon''<ref>{{Ouvrage|auteur1=Roger Mabik-ma-Kombil|titre=Ngongo des initiés en hommage aux pleureuses du Gabon|éditeur=|année=|isbn=}}</ref>{{,}}<ref>{{Lien web |langue=français |auteur=Mabil-ma-Kombil |titre=Ngonho des initiés en hommage aux pleureuses du Gabon |url=https://www.editions-harmattan.fr/index.asp?navig=catalogue&obj=livre&no=13197 |date= }}</ref>. La tradition de « l’oralitude » est très présente dans la musique gabonaise à travers les conteurs et les bardes anciens ; elle est surtout prégnante chez des artistes tels que [[Pierre-Claver Akendengue]]<ref>{{Ouvrage|langue=fr|auteur1=Juste Joris Tindy-Poaty.|titre=Pierre-Claver Akendengue ou l'épreuve du miroir|lieu=Paris|éditeur=[[Éditions L'Harmattan|L'Harmattan]]|année=2008|pages totales=232|isbn=9782296052376|lire en ligne=https://books.google.fr/books?id=fIM2b_7oZagC&pg=PA231}}</ref>, [[Pierre Claver Zeng|Pierre-Claver Zeng]]<ref>{{Ouvrage|langue=fr|auteur1=Marc Mvé Bekale|titre=Pierre-Claver Zeng et l'art poétique fang|sous-titre=esquisse d'une herméneutique|lieu=Paris|éditeur=[[Éditions L'Harmattan|L'Harmattan]]|année=2001|pages totales=191|isbn=9782747507639|lire en ligne=https://books.google.fr/books?id=SX1kAAAAMAAJ}}</ref>{{,}}<ref>{{Article|auteur1=Marc Mvé Bekale |titre="Pierre-Claver Zeng (Gabon) : le Verbe et les Ancêtres comme Chemin vers l'Être" |périodique=Médiapart |date=2020 |lire en ligne=https://blogs.mediapart.fr/marc-mve-bekale/blog/300520/pierre-claver-zeng-gabon-le-verbe-et-les-ancetres-comme-chemin-vers-letre }}</ref>{{,}}<ref>{{Ouvrage|langue=fr|auteur1=Jean-rene Ovono Mendame|titre=Le disque dur de Pierre-Claver Zeng|lieu=2015|éditeur=Gunten|année=|pages totales=252|isbn=2366820534|lire en ligne=https://books.google.fr/books?id=b5IQCwAAQBAJ}}</ref>, Hilarion Nguema, Jean-Christian Mackaya, alias [[Mackjoss]], [[Annie-Flore Batchiellilys]], François Ngwa, Alexis Abessole, Prospère Nzé, Tita Nzébi, qui font de la musique un lieu de transmission de la culture ancienne, des idéaux politiques et philosophiques.
+
+Se situant dans la continuité de l'oralité, la littérature gabonaise émerge par la poésie ([[Ndouna Dépénaud]], Wisi Magangue-Ma-Mbuju, [[Georges Rawiri]], [[Moïse Nkoghe Mvé]]). Les écrivains vont aborder le genre romanesque à partir des années 1970 et surtout 1980, genre qui culminera en 1985 avec la parution de l'ouvrage de [[Laurent Owondo]], ''[[Au bout du silence]]''. De loin, le meilleur écrivain gabonais pour la pureté de son écriture et la profondeur philosophique des questions abordées dans son œuvre, Laurent Owondo est aussi un dramaturge talentueux. En 1990, parut sa pièce ''La folle du gouverneur''<ref>{{Ouvrage|auteur1=Laurent Owondo|titre=La folle du gouverneur|éditeur=|année=|isbn=|lire en ligne=https://books.google.fr/books?id=w0AXuwz7LdgC&pg=PA7}}</ref> conçue à l'occasion d'une résidence d'écriture à Limoges, en France. D'autres auteurs vont apparaître avec des récits qui abordent des thèmes socio-politiques et féministes examinant la place de la femme dans la société africaine. C'est le cas de [[Robert Zotoumbat]], ''Histoire d'un enfant trouvé'', d'[[Angèle Rawiri]] avec ''[[Fureurs et cris de femmes]]'' (1989), [[Auguste Moussirou-Mouyama]], ''Parole de vivant'' (1992), Ludovic Obiang, ''L'enfant des masques'' (1999). [[Jean Divassa Nyama]] se révèle un des auteurs les plus prolifiques de la nouvelle génération dont les romans connaîtront un certain succès national et international. En 1997, il publie ''La vocation dignité'', suivi de ''Oncle Mâ'' et ''Le bruit de l'héritage'' (2001). Freddy-Hubert Ndong Mbeng publie ''Les matitis'', qui cherche à dépeindre la dure réalité de la vie des jeunes à Libreville au début des années 1990. Dans ''La mouche et la glu''<ref>{{Ouvrage|auteur1=Nkoghe Okoumba|titre=La mouche et la glu|éditeur=[[Présence africaine]]|année=1984|isbn=978-2-7087-0430-5}}.</ref>, [[Maurice Okoumba-Nkoghé]] présente un amour impossible entre deux jeunes gens<ref>{{Lien web|titre=Résumé de La mouche et la glu |url=http://azokhwaunblogfr.unblog.fr/2011/10/31/la-moouche-et-la-glu-de-maurice-okoumba-nkoghe-publie-en-1984-paris-presence-africaine/ |site=azokhwaunblogfr.unblog.fr |date=31 oct. 2011}}.</ref>. Au tournant des années 2000, apparut une autre vague d'écrivains composée essentiellement de femmes<ref>{{Ouvrage|auteur1=Marina Ondo|titre=Les écrivaines gabonaises|passage=Les femmes gabonaises écrivent que ce soit sur le territoire national ou hors des frontières territoriales mais très peu de lecteurs connaissent leurs productions littéraires. Ainsi, la parution d’un ouvrage critique sur les femmes écrivains du Gabon vise à leur donner une visibilité internationale. Cet ouvrage s'adresse aux étudiants, aux chercheurs, aux enseignants du secondaire et du supérieur qui veulent se familiariser avec l’histoire de la littérature produite par des femmes. La première partie de cet essai traite de la spécificité des procédés d’écriture, des problématiques soulevées, des thématiques abordées par les femmes écrivains gabonaises d’hier et d’aujourd’hui quel que soit leur lieu de résidence. Surtout, la deuxième partie propose un dictionnaire des femmes écrivains du Gabon suivi des interviews. Par rapport aux préoccupations et aux motivations intellectuelles des femmes gabonaises actuelles, les interviews proposées représentent une donnée cruciale de l’analyse littéraire.
+
+Myriam Marina Ondo est titulaire d’un doctorat en langue et littérature françaises. En tant que membre du réseau de chercheurs de l'agence universitaire de la francophonie (AUF), elle axe ses recherches sur la littérature francophone, l’expression artistique, le langage poétique et les formes sculpturales. Elle est l’auteur du roman, Tout ce qui brille n’est pas de l’or, de la pièce théâtrale, La terre des sept, du recueil de poèmes, Nourritures célestes et de l'essai, La peinture dans la poésie du {{s-|XX}}.|lieu=Paris|éditeur=Complicités Eds|date=1999|isbn=978-2351202135}}</ref>{{,}}<ref>{{Article|titre=« Les perspectives de la littérature féminine gabonaise », Revue des Ressources, 2018 (Les perspectives de la littérature féminine gabonaise) |périodique=Revue des Ressources |date=2018 |lire en ligne=https://www.larevuedesressources.org/Les-perspectives-de-la-litterature-feminine-gabonaise.html }}</ref>: [[Peggy Lucie Auleley]], ''Rêves d'enfants'' (1998), [[Chantal Magalie Mbazoo Kassa|Chantal-Magalie Mbazoo-Kassa]], ''Sidonie'' (2001), [[Justine Mintsa]], ''histoire d'Awu'' (2000), [[Honorine Ngou]], universitaire et essayiste, [[Sylvie Ntsame]], en même temps propriétaire d'une maison d'éditions éponyme. Quant à [[Bessora]], elle est davantage une écrivaine francophone, de racines partiellement gabonaises, qui commence à publier à la fin des années 1990 et reçoit des prix littéraires pour ''Les taches d'encre'' (2001) et ''Cueillez-moi jolis messieurs…'' (2007)<ref>{{Ouvrage|auteur1=[[Grégoire Biyogo]]|titre=Corpus des corpus|sous-titre=répertoire des auteurs et des livres du Gabon|volume=1|éditeur=[[Éditions L'Harmattan|L'Harmattan]]|année=|passage=98|isbn=|lire en ligne=https://books.google.fr/books?id=ZaLQoLiOBw8C&pg=PA98}}.</ref>. La littérature gabonaise n'a cessé de s'enrichir avec des auteurs qui ont la double casquette de romancier et essayiste. Dans cette catégorie, on retrouve le diplomate [[Joel-Eric Bekale]], écrivain prolifique, lauréat du [[Prix Ousman Sembène]] en 2018 pour l'ensemble de son œuvre ; [[Grégoire Biyogo]], auteur d'ouvrages académiques, d'une trilogie romanesque (''Orphée Négro, Homo Viator, La terre promise'') et d'un recueil de poèmes, ''Au bout de l'enfer : running away'' (2011) ; [[Marc Mvé Bekale]], ''Les limbes de l'enfer'' (2001)<ref>{{Article|auteur1=ce roman a reçu un bon accueil de la critique universitaire. voir Jean Paul ABENA |titre=Jean Paul ABENA Akofena {{n°|002}} Vol.2239 L’HYBRIDITÉ:UNE ODYSSÉE POÉTIQUE DANS LES LIMBES DEL’ENFER de Marc MVÉ BEKALE |périodique=Akofena |date=2020 |lire en ligne=http://revue-akofena.org/wp-content/uploads/2020/08/19-T02-19-pp.-239-250.pdf }}</ref>. À propos de ces trois écrivains, le critique français Daniel S. Lagrange remarque : « Des poètes comme [[Grégoire Biyogo]] et des romanciers, tels [[Éric-Joël Bekale et Marc|Éric-Joël Bekale et Marc Mve Bekale]] élaborent des procédures narratives inspirées du [[Mvett]], particulièrement à partir du maître Tsira Ndong Ndoutoume »<ref>{{Lien web |auteur=Daniel S. Lagrange |titre="L'écriture jazzy chez les écrivains afropéens" |url=https://savoirsenprisme.com/numeros/04-2015-langue-et-musique/lecriture-jazzy-des-ecrivains-afropeens-rhapsodies-chez-koffi-kwahule-leonora-miano-et-georges-yemy/ |site=Savoirs et Prismes |date=2015 }}</ref>. [[Daniel Mengara]], enseignant installé aux États-Unis publie ''Mema'' en anglais (2003), Jean-René Ovono Mendame, ''Le savant inutile'' (2007), Bellarmin Moutsinga, ''La malédiction de la côte'' (2009), Rodolphe Ndong Ngoua, ''Les âmes se consument en silence'' (2020).
+
+Dans cette nouvelle génération d'écrivains, [[Janis Otsiemi]] semble occuper une place à part. Non seulement il s'est spécialisé dans le roman policier à succès, mais il est aussi un essayiste talentueux qui commence à publier dès l’âge de {{nobr|24 ans}}. On note également, depuis une dizaine d'années, l'apparition des auteurs de bandes dessinées, parmi lesquels [[Pahé]], de son vrai nom Patrick Essono Nkouna, [[Jean Juste Ngomo]] et Privat Ngomo, ''Alum Ndong Minko, acte I, l’affront'' (2012). Ngomo est aussi auteur d'œuvres littéraires (''Nouvelles d'Ivoire et d'outre-tombe'', ''Nouvelles du Como et de nulle part''<ref>{{Lien web |titre=La page de l’auteur, sur le site des éditions l'Harmattan |url=http://www.editions-harmattan.fr/index.asp?navig=auteurs&obj=artiste&no=8694}}.</ref>) qui puisent leur inspiration dans le mysticisme, l'épouvante et le fétichisme gabonais<ref>{{Article |langue=fr |titre=Promouvoir l'art et la culture, numéro spécial |périodique=En seulement quelques mots |mois=12 |année=2012 |lire en ligne=http://www.enseulementquelquesmots.org/upload/pdf/2012-decembre.pdf |format=pdf}}.</ref>{{,}}<ref>{{Article|auteur1=Constance Desloire |titre=50 figures de la littérature gabonaise de 1960 à 2010 de Éric Joël Békalé |sous-titre=recension de l'ouvrage |périodique=Le Monde diplomatique |mois=11 |année=2013}}.</ref>.
+
+L’[[essai]] est un genre littéraire consacré à la réflexion sur un thème spécifique. Il porte sur des questions philosophiques, éthiques, politiques, culturelles, esthétiques, etc. Initialement, ce genre littéraire est né au Gabon à partir d’un effort d’exploration des valeurs culturelles du pays avant de prendre une orientation académique avec de nombreuses publications issues de recherches universitaires approfondies. L’essai politique connaît particulièrement un essor avec l'avènement des [[Conférences nationales en Afrique francophone|Conférences nationales]] de 1990, lorsque la parole, partout en Afrique francophone, se libéra, donnant lieu à des écrits assez critiques contre les régimes politiques en place. Dans ce genre, on peut classer les textes de [[Martin Edzodzome-Ella]], parmi lesquels ''De la démocratie au Gabon'' (1993). Cet ouvrage, qui fait écho à [[Alexis de Tocqueville]], ''[[De la démocratie en Amérique]]'', entreprend une déconstruction des institutions politiques du Gabon dans un effort de « renouveau national ». De même, [[Guy Rossatanga-Rignault]], universitaire à la production prolifique et au champ de réflexion relativement vaste, produit des essais qui cherchent à renouveler le questionnement sur l’[[ethnie|ethnicité]], la [[sociologie politique]] au Gabon, les sources anthropologiques du droit africain, le [[relativisme]] démocratique, ainsi que l'État africain moderne. Dans ''Qui t’a fait roi ? Légitimité, élections, et démocratie en Afrique'' (2011)<ref>{{Article |auteur1= |titre=https://www.erudit.org/fr/revues/ps/2013-v32-n1-ps0839/1018732ar/ |périodique=Politique et Sociétés |date=2011 |lire en ligne= |pages= }}</ref>, il examine les procédures électorales en Afrique pour souligner leurs faiblesses et montrer que la démocratie, loin d’être un produit fini, reste un édifice imparfait, dont on doit chaque fois adapter l’architecture et la structure. Cette approche relativiste de la démocratie est battue en brèche par [[Marc Mvé Bekale]] dans ''Gabon, la postcolonie en débat'' (2003)<ref>{{Lien web |titre=GABON LA POSTCOLONIE EN DÉBAT |url=https://www.editions-harmattan.fr/index.asp?navig=catalogue&obj=livre&no=15077&razSqlClone=1 |date= }}</ref> et ''démocratie et mutations culturelles en Afrique noire'' (2005). À l’instar de Martin Edzodzome-Ella, Marc Mvé Bekale mène une lecture critique du modèle institutionnel inspiré de la [[Cinquième République (France)|{{Ve}} République]] française pour montrer que son instauration en Afrique a donné lieu à un régime « hyperprésidentiel », source de dérives dictatoriales, assimilées au « [[nihilisme]] d’État » (''Gabon : éthique de la résistance face au nihilisme d’État, 2020''), du fait qu’un tel régime neutralise l’[[État de droit]] et les fondements de la [[démocratie libérale]]. Dans le courant analytique du modèle politique gabonais, l’on trouve [[Janis Otsiemi]], ''Guerre de succession au Gabon : les prétendants'' (2007), ''Les Hommes et les femmes d'Ali Bongo Ondimba'' (2011) ; Wilson-André Ndombet, ''Renouveau démocratique et pouvoir au Gabon (1990-1993)'' (2009) ; Emmanuelle Nguema Minko, ''Gabon : l’unité nationale ou la rancune comme mode de gouvernance'' (2009) ; [[Grégoire Biyogo]], ''Omar Bongo l’insoumis'' (2008) ; Télesphore Ondo, ''Plaidoyer pour un nouveau régime politique au Gabon'' (2012). L’autopsie de l'État postcolonial gabonais atteint sa phase radicale avec [[Daniel M. Mengara]], ''Le Gabon en danger. Du devoir de réforme au devoir de violence'' (2020), une somme qui fait le tour d'horizon de la vie politique gabonaise depuis la Conférence nationale de 1990 et propose des pistes de transformation de la société gabonaise.
+
+=== Cinéma ===
+{{Article détaillé|Cinéma gabonais}}
+Comme celui d'autres pays africains, le [[cinéma gabonais]] souffre d'un manque de moyens financiers<ref>{{citation|Aucun pays d'Afrique noire en dehors de la République Sud-africaine ne dispose à lui tout seul de suffisamment de moyens financiers et techniques ni de ressources humaines}} in {{Lien web |langue=fr |titre=Le cinéma gabonais |url=http://gabonreview.com/igis/le-cinema-gabonais/ |site=gabonreview.com/igis}}.</ref>, du petit nombre de salles de projection disponibles dans le pays (qui préfèrent, d'ailleurs, diffuser de grandes productions commerciales) et d'un manque de public<ref>{{Lien web|titre=Pour une relance du cinéma au Gabon ! |url=http://www.ambagabon.ma/article/pour-une-relance-du-cinema-au-gabon |site=ambagabon.ma |date=25 février 2013}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Où sont les salles de cinéma ? |url=http://www.gaboncine.com/ou-sont-les-salles-de-cinema/ |site=gaboncine.com |date=6 août 2013}}.</ref>. C'est encore à l’Institut français du Gabon (ex « centre culturel français de Libreville »<ref>{{Lien web|titre=Le CCF nouveau est arrivé : l’Institut français du Gabon |url=http://www.ambafrance-ga.org/Le-CCF-nouveau-est-arrive-l |éditeur=Ambassade de France à Libreville |date=nov. 2011}}.</ref>), qui possède une salle de projection, qu'on a le plus de chances de voir un film gabonais<ref>{{Lien web |langue=fr |titre=Site de l'Institut français du Gabon |url=http://www.institutfrancais-gabon.com/}}.</ref>.
+
+Néanmoins, un certain nombre de films, principalement des [[court métrage|courts-métrages]], ont été produits depuis les années 1970. Plusieurs cinéastes gabonais ont d'ailleurs été primés au [[Festival panafricain du cinéma et de la télévision de Ouagadougou]] (FESPACO). Il s'agit de [[Philippe Mory]] qui tourne en tant que réalisateur en 1971 le premier long-métrage gabonais, ''Les tam-tams se sont tus''. Considéré comme un précurseur et comme le père du cinéma gabonais, il joue son premier grand rôle dans le film français ''[[On n'enterre pas le dimanche]]'' ([[prix Louis-Delluc]] 1959) de Michel Drach, qui fait de lui une vedette internationale. Il est ainsi le premier comédien d'Afrique noire à tenir un rôle principal dans un film français<ref>{{Lien web|titre=Philippe Mory |url=http://www.cineclubdecaen.com/realisat/mory/mory.htm |site=cineclubdecaen.com}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Philippe Mory |url=http://www2.africultures.com/php/index.php?nav=personne&no=4001 |site=africultures.com}}.</ref>.
+
+Le Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO) reconnaîtra aussi [[Pierre-Marie Dong]] en 1972 et 1973 pour des courts-métrages, [[Imunga Ivanga]] pour son film ''[[Dôlè (l'argent)]]'' et [[Henri Joseph Koumba Bibidi]] pour ''Les couilles de l'éléphant'' (meilleure musique) en 2001 ; ce dernier film sera un grand succès africain, diffusé dans au moins huit autres pays<ref>{{Ouvrage|langue=fr|auteur1=Kanel Engandja-Ngoulou|titre=Le développement des industries culturelles au Gabon|lieu=Paris|éditeur=[[Éditions L'Harmattan|L'Harmattan]]|année=2012|pages totales=326|passage=218|isbn=978-2-296-96045-9|lire en ligne=https://books.google.fr/books?id=hKlVwsRIprwC&pg=PA218}}.</ref>. Imunga Ivanga reçoit le [[Tanit d'or]] des [[Journées cinématographiques de Carthage]] (JCC) pour ''Dolè''<ref>{{Lien web |langue=fr |titre=Afrique : le film gabonais ''Dolè'' Tanit d'or des JCC |url=http://fr.allafrica.com/stories/200010300456.html |site=fr.allafrica.com}}.</ref>. En 2013, le FESPACO consacre une journée à une rétrospective du cinéma gabonais<ref>Les films retenus sont : « La Cage » (1962) de Robert Darene avec Philippe Mory, « Les tam-tams se sont tus » (1971) de Philippe Mory, « Obali » (1976) et « Ayouma » (1977) de Pierre Marie Dong et Charles Mensah, « Ilombè » (1978) de Charles Mensah, « Demain, un Jour nouveau » (1978) de Pierre Marie Dong, « Dôlè » (1999) d’Imunga Ivanga et « Les Couilles de l’éléphant » (2000) d’Henri Joseph Koumba Bididi. ({{Lien web|titre=FESPACO 2013 : le Gabon, pays d'invité d'honneur |url=http://www.fespaco-bf.net/index.php?option=com_content&view=article&id=147%3Afespaco-2013-le-gabon-pays-dinvite-dhonneur&catid=46%3Aactualites&Itemid=68&lang=fr |site=fespaco-bf.net |consulté le=4 fév. 2014}}).</ref>.
+
+Un feuilleton produit en 1994 pour la télévision gabonaise, ''[[l'Auberge du Salut]]'', a connu un réel succès dans le pays et a été diffusé dans d'autres pays d'Afrique ([[Côte d'Ivoire]] et [[Burkina Faso]]).
+
+Le Centre national du Cinéma gabonais (CENACI), devenu en 2010 l'IGIS (Institut gabonais de l'image et du son), dirigé jusqu'en 2009 par [[Charles Mensah]] puis par Imunga Ivanga<ref>{{Lien web|titre=IGIS |url=http://www.africine.org/?menu=fichedist&no=1583 |site=africine.org |consulté le=4 fév. 2014}}.</ref>, s'efforce de soutenir la production de films de réalisateurs gabonais<ref>{{Lien web |langue=fr |titre=Mission |url=http://www.igisgabon.com/index.php/mission |site=le site de l'IGIS}}.</ref>.
+
+En 2018, le documentaire ''Boxing Libreville'' d'[[Amédée Pacôme Nkoulou]], qui met en parallèle la vie de Christ, jeune boxeur de Libreville et l'[[élection présidentielle gabonaise de 2016]], a été sélectionné dans de nombreux festivals en Afrique et en Europe et a reçu le prix du meilleur documentaire au ''Festival de cine africano'' de Tarif (Espagne)<ref>{{Lien web|auteur=Asphalt Dit|titre=Documentaire : Amédée Pacôme Nkoulou primé ! |url=https://www.gabonreview.com/blog/documentaire-amedee-pacome-nkoulou-prime/ |site=Gabonreview.com {{!}} Actualité du Gabon {{!}} |date=2018-05-06 |consulté le=2019-05-26}}</ref> et le Prix spécial du jury du Festival international du film documentaire d'Agadir (Maroc)<ref>{{Article|titre=« La création documentaire au Maroc et en Afrique a totalement explosé » |périodique=Le Monde |date=2018-06-26 |lire en ligne=https://www.lemonde.fr/afrique/article/2018/06/26/la-creation-documentaire-au-maroc-et-en-afrique-a-totalement-explose_5321541_3212.html |consulté le=2019-05-26}}</ref>.
+
+=== Sport ===
+Le [[football]] est le premier sport au Gabon. Le pays dispose d'un championnat professionnel de football à {{unité|14 clubs}}, la LINAF<ref>{{Lien web |langue=fr |titre=Présentation de la LINAF |url=http://www.linaf.net |consulté le=17 janv. 2014}}.</ref>. En 2011, le [[équipe du Gabon de football|Gabon]] est champion d'Afrique de football des moins de {{nobr|23 ans}}<ref>{{Lien web |titre=CAN U23 : le Gabon sacré, l’Égypte qualifiée pour les JO |url=https://www.afrik-foot.com/can-u23-le-gabon-sacre-legypte-qualifiee-pour-les-jo |éditeur=Afrik.com |date=10 décembre 2011}}.</ref>. En 2012, il co-organise la [[Coupe d'Afrique des nations de football 2012|coupe d'Afrique des nations de football]] avec la [[Guinée équatoriale]] ; il atteint le stade des quarts de finale<ref>{{Lien web |titre=Site officiel de la CAF |url=http://www.cafonline.com/}}.</ref>. Le Gabon accueille la [[Coupe d'Afrique des nations de football 2017]]<ref>{{Lien web |langue=fr |auteur institutionnel=AFP |titre=CAN 2017 : pour la prochaine CAN, le Gabon a été préféré à l'Algérie |url=http://www.eurosport.fr/football/coupe-d-afrique-des-nations/2015/can-2017-pour-la-prochaine-can-le-gabon-a-ete-prefere-a-l-algerie_sto4669709/story.shtml |éditeur=Eurosport |date=08 avril 2015}}.</ref>.
+
+Une palette d'autres sports existe dans le pays, tels l'[[athlétisme]], le [[basket-ball]], la [[boxe]] et les [[sport de combat|sports de combat]]<ref name="fute_2014">{{Ouvrage |langue=fr |auteur1=Dominique Auzias |auteur2=Jean-Paul Labourdette |titre=Gabon - São Tomé et Principe 2014 |éditeur=Petit Futé |année= |passage=75 |isbn=}}.</ref>, le cyclisme, avec la [[Tropicale Amissa Bongo]], compétition internationale équivalent à un « Tour du Gabon cycliste »<ref>{{Lien web |auteur1=Sébastien Barbey |titre=Tropicale Amissa Bongo - La présentation |url=http://www.cyclismactu.net/news-la_presentation-4446.html |site=cyclismactu.net |date=18 janvier 2010 |consulté le=3 février 2014}}.</ref> ainsi que le marathon du Gabon qui se déroule tous les ans, en novembre, dans les rues de [[Libreville]].
+
+Le Gabon est aussi une destination touristique pour la pêche sportive (au [[Megalops|tarpon]] notamment) avec les sites de [[Setté Cama]] et la [[lagune Fernan Vaz]]<ref name="fute_2014" />.
+
+Le Gabon a participé à dix éditions des Jeux olympiques d'été (jamais aux Jeux olympiques d'hiver). Aux [[Jeux olympiques d'été de 2012|Jeux olympiques de Londres, en août 2012]], le Gabon obtient la première (et pour l'instant la seule) médaille olympique de son histoire grâce à [[Anthony Obame]] qui remporte la médaille d'argent en [[taekwondo]] dans la catégorie des plus de {{unité|80|kg}}<ref>{{Lien web |langue=fr |titre=JO 2012/Taekwondo : le Gabonais Anthony Obame a remporté l'argent chez les +80kg, la première médaille olympique de l'histoire de son pays |url=http://www.rfi.fr/contenu/jo-2012taekwondo-le-gabonais-anthony-obame-remporte-argent-80kg-premiere-medaille-olympique- |éditeur=[[Radio France internationale]] |date=11 août 2012}}.</ref>{{,}}<ref name="afrik_obame">{{Lien web |langue=fr |titre=Gabon : Ali Bongo glorifie Anthony Obame |url=https://www.afrik.com/gabon-ali-bongo-glorifie-anthony-obame |site=afrik.com |date=23 juil. 2013}}.</ref>. Le même devient champion du monde de taekwondo en plus de {{unité|87|kg}}, le 20 juillet 2013<ref>{{Lien web |langue=fr |titre=Anthony Obame : « J’étais une autre personne aux Mondiaux » |url=http://www.rfi.fr/sports/20130729-anthony-obame-etais-autre-personne-mondiaux-taekwondo-gabon-jo2012 |éditeur=[[Radio France internationale]] |date=29 juil. 2013 |consulté le=17 janv. 2014}}.</ref>{{,}}<ref name="afrik_obame" />.
+
+== Ordres et décorations ==
+* [[Ordre de l'Étoile équatoriale|Ordre de l’Étoile équatoriale]] ;
+* [[Ordre national du Mérite (Gabon)|Ordre national du Mérite]] ;
+* Ordre de l’Éducation nationale ;
+* Ordre militaire de la Panthère noire ;
+* Ordre du mérite agricole gabonais.
+
+== Personnalités gabonaises ==
+Cette liste énumère des personnalités gabonaises ou d'origine gabonaise.
+
+=== Politique ===
+* [[Léon Mba]], homme politique, premier président du Gabon.
+* [[Omar Bongo]], homme politique, deuxième président du Gabon, au pouvoir pendant près de {{nobr|42 ans}}.
+* [[Jean-Hilaire Aubame]], homme politique, opposant.
+* [[Paul Mba Abessole]], homme politique, opposant à Omar Bongo au sortir de la conférence nationale de 1990, chef de l'opposition jusqu'en 2002, dirigeant du [[Rassemblement pour le Gabon|Rassemblement national des bûcherons]], cofondateur du MORENA (Mouvement de redressement national, parti politique).
+* [[André Mba Obame]], homme politique, plusieurs fois ministre sous Omar Bongo, et qui devient opposant à la mort de ce dernier.
+* [[Ali Bongo]], fils d'Omar Bongo, ancien ministre de la Défense, président du Gabon de 2009 à son renversement par un coup d'État le 30 août 2023.
+* [[Germain Mba]], opposant d'Omar Bongo, assassiné dans les années 1970.
+* [[Jean Ping]], homme politique, longtemps ministre des Affaires étrangères et ancien président de la commission de l'[[Union africaine]].
+* [[Pierre Mamboundou]], homme politique, opposant jusqu'à sa mort en 2011.
+* [[Georges Rawiri]], homme politique, plusieurs fois ministre et président du Sénat décédé en 2005.
+* [[Rose Rogombé|Rose Francine Rogombe]], présidente par intérim en 2009 lors du décès d'[[Omar Bongo]] et présidente du [[Sénat (Gabon)|Sénat]] jusqu’à sa mort en 2015.
+
+=== Militaire ===
+* [[Charles N'Tchoréré]], militaire ayant servi en tant que capitaine pour la France lors des deux guerres mondiales.
+
+=== Sport ===
+* [[Pierre-Emerick Aubameyang]], footballeur international gabonais.
+* [[Sarah Myriam Mazouz|Sarah Myriam Marouz]], judokate gabonaise, championne d’Afrique.
+* [[Mario Lemina]], footballeur international gabonais.
+* [[Taylor Mabika]], boxeur professionnel, Champion d’Afrique catégorie lourds-légers. 
+* [[Daniel Cousin]], footballeur gabonais qui a longtemps évolué en France ([[Racing Club de Lens|RC Lens]]).
+* [[Ruddy Zang-Milama]], sprinteuse, championne d'Afrique du {{unité|100|m}} en 2012.
+* [[Stéphane Lasme]], joueur de basket-ball ayant évolué chez les [[Warriors de Golden State]] et au [[Heat de Miami]] en NBA.
+* [[Théodore Zué Nguéma]], footballeur international, attaquant, il est le meilleur buteur de la sélection nationale avec {{nobr|31 buts}}.
+* [[Anthony Obame]], [[taekwondo]]ka, premier médaillé de l'histoire du Gabon aux [[Taekwondo aux Jeux olympiques d'été de 2012|Jeux olympiques lors de l'édition 2012]] à Londres dans la catégorie des plus de {{unité|80|kg}} (médaille d'argent).
+* [[Jérôme Efong Nzolo]], premier arbitre noir du [[championnat de Belgique de football]], il a remporté 4 fois le titre de meilleur arbitre de ce championnat (2007, 2008, 2009 et 2013<ref>{{Lien web |langue=fr |titre=Gabon Football : le Gabonais Efong Nzolo, "arbitre de l'année" en Belgique pour la quatrième fois |url=http://www.jeuneafrique.com/Article/ARTJAWEB20130514155946/gabon-belgique-jerome-efong-nzolo-pro-leaguefootball-le-gabonais-efong-nzolo-arbitre-de-l-annee-en-belgique-pour-la-quatrieme-fois.html |éditeur=Jeune Afrique}}.</ref>).
+* [[Chris Silva]], joueur de basket-ball.
+
+=== Littérature ===
+* [[André Raponda-Walker]] (1871-1968), prêtre, linguiste, dictionnariste, ethnographe, premier prêtre gabonais (1995), ''Rites et croyances des peuples du Gabon'' (1962).
+* [[Vincent de Paul Nyonda]] (1918-1995), dramaturge, homme politique. ''Le Combat de Mbombi'', ''L'Émergence d'une nouvelle société'', ''Bonjour, Bessieux'' (1979), ''La Mort de Guykafi'', ''Deux albinos à la Mpassa'', ''Le Soûlard'' (1981), puis ''Le Roi Mouanga'' (1988).
+* [[Georges Rawiri]] (1932-2006), poète, politique, diplomate. ''Le Train de la forêt vierge ou l'Épopée du Transgabonais'' (1985).
+* [[Justine Mintsa]] (1949-), universitaire, romancière, ''Un seul tournant Makôsu : journal'' (1994), ''Histoire d'Awu'' (2000), ''Larmes de cendre'' (2012).
+* [[Maurice Okoumba-Nkoghé]] (1954-), poète, romancier, professeur. ''Paroles vives écorchées'' (1979), ''La Mouche et la glu'' (1984), ''Olendé, une épopée du Gabon'' (1985), ''La Courbe du soleil'' (2016).
+* [[Angèle Rawiri]] (1954-2010, Ntyugwetondo), romancière. ''Elonga'' (1980), ''Gʾamèrakano au carrefour'' (1983), ''Fureur et cris de femme'' (1989).
+* [[Jean Divassa Nyama]] (1962-)<ref>[http://filbleu.togocultures.com/la-bio-de-jean-divassa/ Voir sur ''filbleu.togocultures.com''.]</ref>, écrivain, journaliste, critique littéraire. ''La Calebasse'' (1987-2008), ''Oncle Mâ'' (1991), ''La Vocation de Dignité'' (1997), ''Le Bruit de l’héritage'' (2002), ''Opumbi'' (2010), ''Le Roi de Libreville'' (2011), ''L’Amère Saveur de la liberté'' (2013-2014).
+* [[Chantal Magalie Mbazoo Kassa]] (1967-), poétesse francophone, romancière. ''Noir, le sang de ma terre'' (1998), ''Sidonie'' (2001), ''FAM !'' (2003), ''Amours infirmes'' (2013), ''Chienne de vie !'' (2016).
+* [[Sylvie Ntsame]] (vers 1970), romancière (jeunesse). ''La Fille du Komo'' (2004), ''Malédiction'' (2005),'' Mon amante, la femme de mon père'' (2007), ''Femme libérée battue'' (2010).
+* [[Alice Endamne]] (1974-), romancière franco-gabonaise. ''C’est demain qu'on s'fait la malle'' (2008)'', Garçons et filles'' (2010)'', Mal acquise'' (2015)'', Volatilisée'' (2022)''.''
+
+=== Musique ===
+* [[Patience Dabany]], chanteuse.
+* [[Lord Ekomy Ndong]], rappeur du groupe [[Movaizhaleine]].
+* [[Pierre Akendengué]], chanteur de folklore.
+* [[Oliver N'Goma]], chanteur d'afrozouk.
+* [[Shan'L]], chanteuse de variétés
+
+=== Cinéma ===
+* [[Philippe Mory]] (1935-2016), [[acteur]], [[scénariste]] et [[réalisateur]].
+:Père du [[cinéma gabonais]], il est aussi l'un des pionniers des cinémas d'Afrique noire. Parmi ses films les plus connus figurent, ''[[Les tam-tams se sont tus]]'', ''Les Couilles de l'éléphant'', ''Le Grand Blanc de Lambaréné'' ou encore ''Le Collier du Makoko''. Il est également le premier comédien d'origine africaine à tenir un [[rôle principal]] dans un film français avec ''[[On n'enterre pas le dimanche]]'' de [[Michel Drach]].
+
+* [[Serge Abessolo]] (1970-), [[acteur]], [[humoriste]], [[Animateur de télévision|présentateur]] et producteur.
+:Il est notamment connu pour ses rôles dans ''Le Virus'' de [[Bleu Brigitte]], ''[[Le Mec idéal]]'' d'[[Owell Brown]], ''Les Couilles de l'éléphant'', où il partage l'affiche avec [[Philippe Mory]] et l'actrice française [[Nadège Beausson-Diagne]] — qu'il retrouvera plus tard dans ''Inspecteur Sori : le mamba'' aux côtés d'[[Ériq Ebouaney]] et du rappeur [[Passi]]. Il est aussi connu pour sa participation à la [[série télévisée]] de [[Canal+]] ''[[Cacao (série télévisée)|Cacao]]''. Il est depuis le 17 décembre 2021 le directeur général de l’Institut gabonais de l’image et du son.
+
+* [[Henri-Joseph Koumba Bididi]], réalisateur de cinéma.
+:Il collabore à plusieurs reprises avec [[Philippe Mory]] et [[Jean-Claude M'Paka]].
+
+*[[Luc Bendza]], acteur et [[artiste martial]] gabonais-chinois.
+
+:Il est connu pour son rôle de boxeur [[Jesse Glover]] dans ''[[La Légende de Bruce Lee]]''.
+* [[Jann Halexander]], chanteur, acteur et réalisateur [[France|franco]]-gabonais.
+
+* [[Pauline Mvélé]], actrice, scénariste et réalisatrice de documentaires.
+
+* [[Jean-Claude M'Paka]], acteur.
+:Il est connu pour ''L'Auberge du salut'' (1995) et ''Les Couilles de l'éléphant'' (2000).
+
+* [[Alain Moussi]], acteur [[Canada|canadien]] et gabonais.
+:Spécialisé dans les [[Art martial|arts martiaux]], notamment le [[ju-jitsu]], le [[jiu-jitsu brésilien]], le [[kick-boxing]] et les [[arts martiaux mixtes]], il endosse brièvement le [[costume]] de [[Batman]] dans la [[série télévisée]] ''[[DC Titans]]''.
+
+* [[David Baiot]], acteur [[France|franco]]-gabonais.
+:Il est notamment connu pour son rôle de Djawad Sangha dans la série ''[[Plus belle la vie]]'' de 2009 à 2017.
+
+* [[Melchy Obiang]], réalisateur gabonais connu notamment pour ''[[Le Prix de la trahison (film, 2015)|Le Prix de la trahison]]'', ''[[Le Silence des femmes]]'' et ''Le Secret des Vierges''.
+
+=== Mannequins ===
+* [[Eudoxie Mbouguiengue]], mannequin et [[philanthrope]]. Elle est la fondatrice de l'organisation Unspoken Angels Foundation. Elle est mariée au [[rappeur]] [[États-Unis|américain]] [[Ludacris]]. Elle est également [[influenceuse]].
+* [[Marie-Noëlle Ada]], mannequin, et reine de beauté. Elle est directrice générale adjointe de la chaine d'information nationale [[Gabon 24]] depuis février. Elle a été élue [[Miss Gabon]] en 2012.
+*[[Ruth Jennifer Ondo Mouchita]], reine de beauté gabonaise, élue [[Miss Gabon]] en 2013.
+
+=== Militants ===
+* [[Grégory Ngbwa Mintsa]] (mort à {{nobr|57 ans}} le 10 avril 2014<ref>{{Lien web |langue=fr |titre=Décès de l’activiste gabonais Grégory Ngbwa Mintsa |url=http://www.rfi.fr/afrique/20140411-deces-activiste-gabonais-gregory-ngbwa-mintsa/ |éditeur=RFI}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Gregory Ngbwa Mintsa : "Pour que les citoyens cessent d’avoir peur" |url=http://gabonreview.com/blog/gregory-ngbwa-mintsa-pour-que-les-citoyens-cessent-davoir-peur/ |périodique=gabonreview.com |date=22 mai 2013 |consulté le=22 janvier 2014}}.</ref>), lauréat du prix de l’intégrité de [[Transparency International]] 2010<ref>{{Lien web |langue=fr |auteur1=Rosie Slater |titre=Les héros de la lutte contre la corruption : une interview avec Gregory Ngbwa Mintsa |url=http://blog.transparency.org/2013/05/16/les-heros-de-la-lutte-contre-la-corruption-une-interview-avec-gregory-ngbwa-mintsa/ |éditeur=[[Transparency International]] |date=16 mai 2013}}.</ref>.
+* {{Lien|trad=Marc Ona|Marc Ona Essangui}}, [[prix Goldman pour l'environnement]] 2009<ref>{{Lien web |langue=fr |titre=Gabon : la communauté internationale se mobilise pour Marc Ona Essangui |url=http://farmlandgrab.org/post/view/21951 |site=farmlandgrab.org |date=15 avril 2013 |consulté le=22 janvier 2014}}.</ref>{{,}}<ref>{{Lien web |langue=fr |titre=Recipient by year |url=http://www.goldmanprize.org/recipients/year |site=goldmanprize.org}}.</ref>, président de [[Tournons la page]].
+
+== Télécommunications ==
+* Lignes de téléphone fixe : {{formatnum:18700}} (2014)<ref>{{Lien web |langue=fr |format=pdf |titre=Marché de la téléphonie fixe au Gabon - {{3e}} trimestre 2014 |url=http://www.arcep.ga/documents/fixet32014.pdf |éditeur=ARCEP Gabon |page=3}}.</ref> ;
+* Téléphones portables : {{formatnum:2942719}} (2014)<ref>{{Lien web |langue=fr |format=pdf |titre=Marché de la téléphonie mobile au Gabon - {{3e}} trimestre 2014 |url=http://www.arcep.ga/documents/fixet32014.pdf |éditeur=ARCEP Gabon |page=3}}.</ref> ;
+* Utilisateurs d'Internet : {{formatnum:122740}} (2011)<ref>{{Lien web |langue=fr |titre=Gabon : nombre d'internautes |url=http://www.journaldunet.com/web-tech/chiffres-internet/gabon/pays-gab |éditeur=Journal du Net}}.</ref> ;
+* Nombre de fournisseurs d'accès [[Internet]] : 6 (2014)<ref>{{Lien web |langue=fr |format=pdf |titre=Marché de l'Internet au Gabon - {{2e}} trimestre 2014 |url=http://www.arcep.ga/documents/internett22014.pdf |éditeur=ARCEP Gabon |page=3}}.</ref>.
+
+== Notes et références ==
+{{Références nombreuses|taille=24}}
+
+== Voir aussi ==
+{{Autres projets
+ | commons     = Category:Gabon
+ | wikispecies = <!-- Wikispecies -->
+ | wiktionary  = <!-- Wiktionary --> Gabon
+ | wikiversity = <!-- Wikiversity -->
+ | wikibooks   = <!-- Wikibooks -->
+ | wikisource  = <!-- Wikisource -->
+ | wikiquote   = <!-- Wikiquote -->
+ | wikinews    = Catégorie:Gabon
+ | meta        = <!-- Metawiki -->
+ | outreach    = <!-- Outreach -->
+}}
+
+=== Bibliographie ===
+* {{Lien web |langue=fr |titre=Gabon-Congo |sous-titre=histoire administrative |url=http://anom.archivesnationales.culture.gouv.fr/ark:/61561/wz818xswxwh |site=anom.archivesnationales.culture.gouv.fr |éditeur=[[Archives nationales d'outre-mer]] |date=17 juin 2016 |consulté le=12 juin 2016 |id=Archives nationales d'outre-mer-2015}}
+* {{Article |langue=fr |titre=Spécial Gabon |sous-titre=portrait géopolitique |périodique=Enjeux |numéro=37 |lieu=Yaoundé |éditeur=Fondation Paul Ango Ela |année=2008}}
+* {{Ouvrage |langue=fr |nom1=Association Rupture-solidarité |titre=Le Gabon malgré lui |lieu=Paris |éditeur=[[Éditions Karthala|Karthala]] |année=2005 |pages totales=224 |isbn=2-84586-695-X}}
+* {{Ouvrage |langue=fr |prénom1=Xavier |nom1=Cadet |titre=Histoire des Fang, peuple gabonais |lieu=Paris |éditeur=[[Éditions L'Harmattan|L'Harmattan]] |année=2009 |pages totales=459 |isbn=978-2-296-07581-8}} {{commentaire biblio SRL|Texte remanié d'une thèse de doctorat d'histoire, Université Lille 3, 2005}}
+* {{Ouvrage |langue=fr |prénom1=Gilchrist Anicet |nom1=Nzenguet Iguemba |directeur1=oui |titre=Le Gabon |sous-titre=approche pluridisciplinaire |lieu=Paris |éditeur=[[Éditions L'Harmattan|L'Harmattan]] |année=2006 |pages totales=253 |isbn=978-2-296-01529-6}}
+* {{Ouvrage |langue=fr |prénom1=Marc-Louis |nom1=Ropivia |lien auteur1=Marc-Louis Ropivia |titre=L'Afrique et le Gabon au {{s-|XXI}} |lieu=Paris |éditeur=Mare & Martin |année=2008 |pages totales=350 |isbn=978-2-84934-047-9 |isbn2=2-84934-047-2}}
+* {{Article |langue=fr |auteur1=Léandre Edgard Ndjambou |titre=Les réseaux de transport terrestres au Gabon |périodique=Les Cahiers d’Outre-Mer |date=Janvier-juin 2008 |lire en ligne=http://com.revues.org/4112 |id=Les réseaux de transport terrestres au Gabon}}
+* {{Ouvrage |langue=fr |titre=Annuaire statistique 2009 |éditeur=Direction générale des statistiques du Gabon |année= |format livre=pdf |isbn= |lire en ligne=http://www.stat-gabon.org/documents/PDF/Donnees%20stat/Compteannuaire/Ann09.pdf |id=annuaire_2009}}
+* {{Ouvrage |langue=fr |titre=Atlas forestier interactif du Gabon |éditeur=Ministère de l'économie forestière, des eaux, de la pêche et de l'aquaculture - [[World Resources Institute]] |année=2009 |isbn= |lire en ligne=http://www.wri.org/sites/default/files/pdf/interactive_forestry_atlas_gabon_fr.pdf |id=Atlas interactif}}
+
+=== Filmographie ===
+* ''Talents du Gabon'', films documentaires gabonais réunis par Roland Duboze et Nathalie Valentin, Play Film, Paris, 2007, 156 min (DVD).
+* ''Les sentiers de l'intégration, Gabon'', film documentaire de Léonard Odambo, Unesco, Paris, 2006, 49 min (DVD).
+
+=== Articles connexes ===
+* [[Liste des administrateurs coloniaux au Gabon]]
+* [[Liste de villes du Gabon]]
+
+=== Liens externes ===
+{{Liens}}
+
+{{Palette|Gabon|Pays d'Afrique|Pays d'Afrique et organisations africaines|Francophonie|Organisation de la coopération islamique}}
+{{Portail|Gabon|Afrique|langue française et francophonie}}
+
+[[Catégorie:Gabon|*]]
+[[Catégorie:État fondé au XXe siècle]]
+[[Catégorie:Fondation en 1960]]
+[[Catégorie:État traversé par l'équateur]]
+[[Catégorie:Pays membre du Commonwealth]]

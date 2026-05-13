@@ -6,14 +6,23 @@ export function parseDescriptionFromWikitext(wikitext: string, _lang: string): s
   // 2. Remove other block templates at start of line
   text = text.replace(/^\{\{.*\}\}$/gm, '');
 
-  // 3. Find first non-empty paragraph
-  const lines = text.split('\n');
+  // 3. Find first non-empty paragraph (handling multi-line paragraphs)
+  const paragraphs = text.split(/\n\s*\n/);
   let paragraph = '';
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (trimmed && !/^==|[{[!|*]/.test(trimmed)) {
-      paragraph = trimmed;
-      break;
+  const excludeRegex = /^(=|[{[!|*"#])/;
+  
+  for (let p of paragraphs) {
+    p = p.trim();
+    if (!p) continue;
+    
+    // Check the first line of the paragraph
+    const firstLine = p.split('\n')[0].trim();
+    if (!excludeRegex.test(firstLine)) {
+      // More lenient: if it's reasonably long OR has bold OR it's one of the first few paragraphs
+      if (p.length > 20 || p.includes("'''")) {
+        paragraph = p;
+        break;
+      }
     }
   }
 
@@ -26,31 +35,45 @@ export function parseDescriptionFromWikitext(wikitext: string, _lang: string): s
   paragraph = paragraph.replace(/'''|''/g, '');
   // HTML tags
   paragraph = paragraph.replace(/<[^>]+>.*?<\/[^>]+>|<[^>]+>/g, '');
-  // Citation templates {{cite...}}
-  paragraph = paragraph.replace(/\{\{(cite|sfn)[^}]*\}\}/gi, '');
+  
+  // Remove ALL templates {{...}} including multi-line ones
+  // We use a more aggressive approach for templates in paragraphs
+  let braceCount = 0;
+  let cleanPara = '';
+  for (let i = 0; i < paragraph.length; i++) {
+    if (paragraph.startsWith('{{', i)) {
+      braceCount++;
+      i++;
+    } else if (paragraph.startsWith('}}', i)) {
+      braceCount = Math.max(0, braceCount - 1);
+      i++;
+    } else if (braceCount === 0) {
+      cleanPara += paragraph[i];
+    }
+  }
+  paragraph = cleanPara;
 
   // 5. Iteratively remove innermost (...)
   paragraph = removeNestedParentheses(paragraph);
 
   // 6. Normalize and trim
-  return paragraph.replace(/\s+/g, ' ').trim();
+  return paragraph.replace(/\s+/g, ' ').replace(/ ,/g, ',').replace(/ \./g, '.').trim();
 }
 
-function removeFirstInfobox(wikitext: string): string {
+export function removeFirstInfobox(wikitext: string): string {
   const startIdx = wikitext.toLowerCase().indexOf('{{infobox');
   if (startIdx === -1) return wikitext;
 
   let i = startIdx;
-  while (i < wikitext.length && wikitext[i] !== '{') i++;
-  
   let braceCount = 0;
   let j = i;
+  
   while (j < wikitext.length) {
-    if (wikitext.substr(j, 2) === '{{') {
-      braceCount += 2;
+    if (wikitext.startsWith('{{', j)) {
+      braceCount++;
       j += 2;
-    } else if (wikitext.substr(j, 2) === '}}') {
-      braceCount -= 2;
+    } else if (wikitext.startsWith('}}', j)) {
+      braceCount--;
       j += 2;
       if (braceCount === 0) break;
     } else {

@@ -1,4 +1,4 @@
-import { Country } from '../../types/country.js';
+import { Country, getEmptyLocalizedField } from '../../types/country.js';
 import { ExtractionUtils } from '../utils/extraction.js';
 
 export function parseWikilinks(raw: string): Array<{ articleId: string | null, text: string }> {
@@ -18,30 +18,47 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
   const infoboxBody = extractInfoboxBody(wikitext);
   if (!infoboxBody) return {};
 
-  const fields = parseFields(infoboxBody);
+  // Strip references and common non-data templates from the body
+  const cleanBody = infoboxBody
+    .replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, '')
+    .replace(/<ref[^>]*\/>/gi, '')
+    .replace(/{{refn\|[\s\S]*?}}/gi, '')
+    .replace(/{{efn\|[\s\S]*?}}/gi, '');
+
+  const fields = parseFields(cleanBody);
+  console.log(`[DEBUG] Parsed ${Object.keys(fields).length} fields from infobox body`);
+  if (fields['population_census']) {
+    console.log(`[DEBUG] Found population_census in fields: "${fields['population_census']}"`);
+  } else {
+    console.log('[DEBUG] population_census NOT found in fields');
+    console.log('[DEBUG] All keys:', Object.keys(fields));
+  }
   const result: Partial<Country> = {};
 
   const FIELD_MAP = {
-    capital: ['capital'],
-    largestCity: ['largest_city', 'largest_settlement'],
-    population: ['population_estimate', 'population_census', 'population_total', 'population'],
-    areaKm2: ['area_km2', 'area_sqkm', 'area'],
-    densityKm2: ['density_km2', 'population_density_km2'],
-    government: ['government_type'],
-    officialLanguage: ['official_languages', 'languages_type', 'languages'],
-    currency: ['currency'],
-    timeZone: ['timezone', 'utc_offset', 'time_zone'],
-    callingCode: ['calling_code'],
-    internetTld: ['cctld'],
-    hdi: ['hdi'],
-    gdp: ['gdp_nominal'],
-    flagUrl: ['flag_image', 'flag'],
-    isoCode: ['iso3166code', 'cctld'],
+    capital: ['capital', 'capital_city', 'capitale', 'capitaux'],
+    largestCity: ['largest_city', 'largest_settlement', 'plus_grande_ville'],
+    population: ['population_estimate', 'population_census', 'population_total', 'population', 'population_totale'],
+    areaKm2: ['area_km2', 'area_sqkm', 'area', 'superficie_totale', 'superficie'],
+    densityKm2: ['density_km2', 'population_density_km2', 'densité'],
+    government: ['government_type', 'type_gouvernement'],
+    officialLanguage: ['official_languages', 'languages_type', 'languages', 'langues_officielles'],
+    currency: ['currency', 'monnaie', 'code_monnaie'],
+    timeZone: ['timezone', 'utc_offset', 'time_zone', 'fuseau_horaire'],
+    callingCode: ['calling_code', 'indicatif_téléphonique'],
+    internetTld: ['cctld', 'domaine_internet'],
+    hdi: ['hdi', 'idh'],
+    gdp: ['gdp_nominal', 'pib'],
+    flagUrl: ['flag_image', 'flag', 'image_drapeau'],
+    isoCode: ['iso3166code', 'cctld', 'iso3166-1'],
   };
 
   const getField = (keys: string[]) => {
     for (const key of keys) {
       if (fields[key] !== undefined) return fields[key];
+      // Try normalized casing just in case
+      const normalizedKey = key.toLowerCase();
+      if (fields[normalizedKey] !== undefined) return fields[normalizedKey];
     }
     return undefined;
   };
@@ -59,6 +76,16 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
     if (val) result.areaKm2 = parseFloat(val);
   }
 
+  const rawCapital = getField(FIELD_MAP.capital);
+  if (rawCapital) {
+    console.log(`[DEBUG] Found capital raw: "${rawCapital}"`);
+    result.capital = parseWikilinks(rawCapital).map(link => ({
+      articleId: link.articleId,
+      name: { ...getEmptyLocalizedField(), en: link.text }
+    }));
+    console.log(`[DEBUG] Extracted capital links: ${result.capital.length}`);
+  }
+
   const rawHdi = getField(FIELD_MAP.hdi);
   if (rawHdi) {
     const match = rawHdi.match(/0\.\d{3}/);
@@ -70,7 +97,15 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
     result.gdp = parseNumericValue(rawGdp);
   }
 
-  const rawIso = getField(FIELD_MAP.isoCode);
+  let rawIso = getField(FIELD_MAP.isoCode);
+  if (!rawIso) {
+    const coordinates = fields['coordinates'];
+    if (coordinates) {
+      const regionMatch = coordinates.match(/region:([a-zA-Z]{2})/);
+      if (regionMatch) rawIso = regionMatch[1];
+    }
+  }
+
   if (rawIso) {
     const match = rawIso.match(/\b[a-zA-Z]{2}\b/);
     if (match) result.isoCode = match[0].toUpperCase();
@@ -88,46 +123,78 @@ export function parseInfoboxFromWikitext(wikitext: string, _lang: string): Parti
 
   result.flagUrl = null; // TODO: Implement thumbnail URL construction
 
+  console.log(`[DEBUG] Extracted ${Object.keys(result).length} fields for infobox`);
+  if (Object.keys(result).length === 0) {
+    console.log('[DEBUG] Infobox body was:', infoboxBody.substring(0, 200));
+  }
+
   return result;
 }
 
-function extractInfoboxBody(wikitext: string): string | null {
+export function extractInfoboxBody(wikitext: string): string | null {
   const startIdx = wikitext.toLowerCase().indexOf('{{infobox');
   if (startIdx === -1) return null;
 
-  let i = startIdx;
-  while (i < wikitext.length && wikitext[i] !== '{') i++;
-  i += 2; // skip {{
-  
+  let i = startIdx + 2; // skip the first {{
   let braceCount = 2;
-  let body = '';
+  let start = i;
+  
   while (i < wikitext.length && braceCount > 0) {
-    if (wikitext.substr(i, 2) === '{{') {
+    if (wikitext.startsWith('{{', i)) {
       braceCount += 2;
       i += 2;
-    } else if (wikitext.substr(i, 2) === '}}') {
+    } else if (wikitext.startsWith('}}', i)) {
       braceCount -= 2;
-      i += 2;
+      if (braceCount > 0) i += 2;
     } else {
-      body += wikitext[i];
       i++;
     }
   }
-  return body;
+  
+  return wikitext.substring(start, i);
 }
 
-function parseFields(body: string): Record<string, string> {
+export function parseFields(body: string): Record<string, string> {
   const fields: Record<string, string> = {};
   const lines = body.split('\n');
+  let currentKey: string | null = null;
+  let currentValue = '';
+  let braceDepth = 0;
+
   for (const line of lines) {
-    const pipeIdx = line.indexOf('|');
-    const eqIdx = line.indexOf('=');
-    if (pipeIdx !== -1 && eqIdx !== -1 && eqIdx > pipeIdx) {
-      const key = line.substring(pipeIdx + 1, eqIdx).trim().toLowerCase();
-      const value = line.substring(eqIdx + 1).trim();
-      fields[key] = value;
+    const trimmed = line.trim();
+    
+    // Track braces in the entire line
+    for (let i = 0; i < line.length; i++) {
+      if (line.startsWith('{{', i)) { braceDepth++; i++; }
+      else if (line.startsWith('}}', i)) { braceDepth--; i++; }
+    }
+
+    // Only look for new fields at depth 0
+    // We also allow fields that start with | even if braceDepth > 0 if they are at the start of the line
+    if (trimmed.startsWith('|')) {
+      if (currentKey) {
+        fields[currentKey] = currentValue.trim();
+      }
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx !== -1) {
+        currentKey = trimmed.substring(1, eqIdx).trim().toLowerCase();
+        currentValue = trimmed.substring(eqIdx + 1);
+      } else {
+        currentKey = null;
+        currentValue = '';
+      }
+    } else {
+      if (currentKey) {
+        currentValue += (currentValue ? '\n' : '') + line;
+      }
     }
   }
+
+  if (currentKey) {
+    fields[currentKey] = currentValue.trim();
+  }
+
   return fields;
 }
 

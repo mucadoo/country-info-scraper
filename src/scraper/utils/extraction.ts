@@ -17,130 +17,46 @@ export class ExtractionUtils {
 
   static extractArea(text: string): string {
     if (!text) return '';
-
-    const normalized = text
-      .replace(/\u200E/g, '')
-      .replace(/\u200F/g, '')
-      .replace(/km\u00B2/g, 'km2')
+    console.log(`[DEBUG] extractArea input: "${text}"`);
+    
+    // Clean spaces, commas (often thousands separators), and common units
+    const clean = text
+      .replace(/[\u00A0\u200B-\u200F\uFEFF]/g, '')
       .replace(/&nbsp;/g, ' ')
-      .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ');
-
-    // 1. Try to find the numeric part before km2.
-    // We look for a number that might contain spaces, commas, or dots.
-    const kmMatch = normalized.match(/([0-9][0-9,.\s]*)\s*km2?/);
-    if (kmMatch) {
-      let numStr = kmMatch[1].trim();
+      .replace(/km\u00B2/g, 'km2')
+      .replace(/km2/g, '')
+      .replace(/sq mi/g, '')
+      .replace(/,/g, '');
       
-      const hasComma = numStr.includes(',');
-      const hasDot = numStr.includes('.');
-      const hasSpace = numStr.includes(' ');
-
-      if (hasSpace) {
-        // Strip spaces, check if it's thousands or decimal
-        const stripped = numStr.replace(/\s/g, '');
-        if (stripped.includes(',') || stripped.includes('.')) {
-          numStr = stripped;
-        }
-      }
-
-      if (hasComma && hasDot) {
-        const lastComma = numStr.lastIndexOf(',');
-        const lastDot = numStr.lastIndexOf('.');
-        if (lastComma > lastDot) {
-          // 1.234,56 -> comma is decimal
-          return numStr.replace(/[.\s]/g, '').replace(',', '.');
-        } else {
-          // 1,234.56 -> dot is decimal
-          return numStr.replace(/[, \s]/g, '');
-        }
-      } else if (hasComma) {
-        const parts = numStr.split(',');
-        // If it looks like thousands (e.g., 1,234 or 1,234,567)
-        if (parts.length > 2 || (parts.length === 2 && parts[1].length === 3)) {
-          return numStr.replace(/,/g, '');
-        }
-        // Otherwise assume decimal (e.g., 1,23)
-        return numStr.replace(',', '.');
-      } else if (hasDot) {
-        const parts = numStr.split('.');
-        if (parts.length > 2 || (parts.length === 2 && parts[1].length === 3)) {
-          return numStr.replace(/\./g, '');
-        }
-        return numStr;
-      }
-      return numStr.replace(/\s/g, '');
+    const match = clean.match(/([0-9]+(?:\.[0-9]+)?)/);
+    if (match) {
+        console.log(`[DEBUG] extractArea parsed: "${match[1]}"`);
+        return match[1];
     }
-
-    const fallbackPattern = /([0-9]{1,3}(?:[., ][0-9]{3})*(?:\.\d+)?)(?:\s*sq\s*mi|\s*<|\s*$)/;
-    const fallbackMatch = normalized.match(fallbackPattern);
-    if (fallbackMatch) return fallbackMatch[1].replace(/[, ]/g, '');
-
     return '';
   }
 
   static extractPopulation(text: string): string {
     if (!text) return '';
+    console.log(`[DEBUG] extractPopulation input: "${text}"`);
 
-    const normalized = text
-      .replace(/(\d+),(\d{1,3})\s*(million|billion)/g, '$1.$2 $3')
-      .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ');
+    // Remove templates and references first
+    let clean = text
+      .replace(/\{\{[^}]*\}\}/g, '')
+      .replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, '')
+      .replace(/,/g, '')
+      .replace(/[\u00A0\u200B-\u200F\uFEFF]/g, '');
 
-    // 1. Range match
-    const rangePattern = /([0-9,.]+)\s*[–-]\s*([0-9,.]+)\s*(million|billion)?(?=\s*(?:\(|\s|$))/i;
-    const rangeMatch = normalized.match(rangePattern);
-    if (rangeMatch) {
-      const parseVal = (s: string) => {
-        const clean = s.includes(',') && s.includes('.') 
-          ? (s.lastIndexOf(',') > s.lastIndexOf('.') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/,/g, ''))
-          : (s.includes(',') ? (s.split(',')[1]?.length === 3 ? s.replace(/,/g, '') : s.replace(',', '.')) : s);
-        return parseFloat(clean);
-      };
-
-      const low = parseVal(rangeMatch[1]);
-      const high = parseVal(rangeMatch[2]);
-      let average = (low + high) / 2;
-
-      const multiplier = rangeMatch[3]?.toLowerCase();
-      if (multiplier === 'million') average *= 1_000_000;
-      else if (multiplier === 'billion') average *= 1_000_000_000;
-
-      return Math.round(average).toString();
-    }
-
-    // 2. Single value with million/billion
-    const singlePattern = /([0-9,.]+)\s*(million|billion)(?=\s*(?:\(|\s|$))/i;
-    const singleMatch = normalized.match(singlePattern);
-    if (singleMatch) {
-      const s = singleMatch[1];
-      const clean = s.includes(',') && s.includes('.') 
-        ? (s.lastIndexOf(',') > s.lastIndexOf('.') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/,/g, ''))
-        : (s.includes(',') ? (s.split(',')[1]?.length === 3 ? s.replace(/,/g, '') : s.replace(',', '.')) : s);
-      
-      let val = parseFloat(clean);
-      const multiplier = singleMatch[2].toLowerCase();
-      if (multiplier === 'million') val *= 1_000_000;
-      else if (multiplier === 'billion') val *= 1_000_000_000;
+    const multiplierMatch = clean.match(/([0-9.]+)\s*(million|billion)/i);
+    if (multiplierMatch) {
+      let val = parseFloat(multiplierMatch[1]);
+      if (multiplierMatch[2].toLowerCase() === 'million') val *= 1_000_000;
+      else if (multiplierMatch[2].toLowerCase() === 'billion') val *= 1_000_000_000;
       return Math.round(val).toString();
     }
-
-    // 3. Regular numbers
-    const numPattern = /([0-9]{1,3}(?:[., ][0-9]{3})+|[0-9]{4,})(?=\s*(?:[()\s]|$))/g;
-    let match;
-    while ((match = numPattern.exec(normalized)) !== null) {
-      const cleaned = match[1].replace(/[,. ]/g, '');
-      if (cleaned.length > 4 || (!cleaned.startsWith('20') && !cleaned.startsWith('19'))) {
-        return cleaned;
-      }
-    }
-
-    // 4. Fallback for small pops or missed ones
-    const smallPattern = /([0-9,.]+)(?=\s*(?:[()\s]|$))/g;
-    while ((match = smallPattern.exec(normalized)) !== null) {
-      const cleaned = match[1].replace(/[,.]/g, '');
-      if (cleaned.length > 4 || (!cleaned.startsWith('20') && !cleaned.startsWith('19'))) {
-        return cleaned;
-      }
-    }
+    
+    const numMatch = clean.match(/([0-9]+)/);
+    if (numMatch) return numMatch[1];
 
     return '';
   }

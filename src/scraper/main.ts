@@ -29,10 +29,8 @@ async function run() {
   const limitArg = process.argv.find(arg => arg.startsWith('--limit='));
   const limit = limitArg ? parseInt(limitArg.split('=')[1], 10) : undefined;
   
-  const discoveryUrl = `https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Member_states_of_the_United_Nations&cmlimit=500&format=json`;
-  const response = await fetch(discoveryUrl);
-  const data = await response.json();
-  let titles = data.query.categorymembers.map((m: any) => m.title);
+  let titles = await WikipediaAPI.fetchCategoryMembers('Category:Member_states_of_the_United_Nations');
+  titles = titles.filter(t => !t.startsWith('Category:') && t !== 'Member states of the United Nations');
   if (limit) titles = titles.slice(0, limit);
 
   // 2. TRANSLATION PREFETCH
@@ -85,12 +83,25 @@ async function run() {
 
       // Localized passes
       const langLinks = allLangLinks[title] || {};
-      for (const lang of ['pt', 'fr', 'it', 'es']) {
+      for (const lang of ['pt', 'fr', 'it', 'es'] as const) {
         const locTitle = langLinks[lang];
         if (locTitle) {
           const wikitext = await WikipediaAPI.fetchWikitext(locTitle, lang);
-          const localizedData = parseCountryFromWikitext(wikitext, lang);
+          const description = parseDescriptionFromWikitext(wikitext, lang);
+          
+          const localizedData: Partial<Country> = {
+            description: { ...getEmptyLocalizedField(), [lang]: description }
+          };
+          
+          if (!localizedData.name) {
+            localizedData.name = getEmptyLocalizedField();
+            localizedData.name[lang] = locTitle;
+          }
+          
           mergeIntoCountry(countryData, localizedData, lang);
+        } else {
+          // Fallback to English name if no translation exists
+          countryData.name[lang] = countryData.name.en;
         }
       }
 
@@ -154,6 +165,28 @@ async function run() {
 function mergeIntoCountry(target: any, source: any, lang: string) {
   if (source.name) target.name[lang] = source.name[lang];
   if (source.description) target.description[lang] = source.description[lang];
+  
+  ['capital', 'largestCity', 'officialLanguage', 'currency', 'demonym', 'government', 'timeZone'].forEach(field => {
+    if (source[field]) {
+      source[field].forEach((item: any) => {
+        let targetItems = target[field] || [];
+        const existing = targetItems.find((t: any) => t.articleId === item.articleId || t.name.en === item.name.en);
+        if (existing) {
+          existing.name[lang] = item.name[lang] || item.name.en;
+        } else {
+          targetItems.push({
+            ...item,
+            name: { 
+                ...getEmptyLocalizedField(), 
+                en: item.name.en, 
+                [lang]: item.name[lang] || item.name.en 
+            }
+          });
+        }
+        target[field] = targetItems;
+      });
+    }
+  });
 }
 
 class Semaphore {

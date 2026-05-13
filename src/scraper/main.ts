@@ -3,6 +3,7 @@ import { Country, getEmptyCountry, getEmptyLocalizedField } from '../types/count
 import { WikipediaAPI } from './utils/wikipedia-api.js';
 import { mergeCountryData } from './utils/merger.js';
 import { parseCountryFromWikitext } from './parsers/wikitext-country-parser.js';
+import { parseDescriptionFromWikitext } from './parsers/wikitext-description.js';
 import Database from 'better-sqlite3';
 import fs from 'fs';
 

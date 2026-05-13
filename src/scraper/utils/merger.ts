@@ -68,7 +68,8 @@ export const mergeCountryData = (existingJson: string | null, newData: Partial<C
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     country[field] = Array.from(mergedMap.values()) as any;
-    console.log(`[DEBUG] Field ${field} now has ${country[field].length} items`);
+    const fieldVal = country[field] || [];
+    console.log(`[DEBUG] Field ${field} now has ${fieldVal.length} items`);
   });
 
   // 3. Keep/Reset root fields

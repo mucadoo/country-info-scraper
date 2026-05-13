@@ -1,11 +1,11 @@
-import { CheerioCrawler, log, CheerioAPI } from 'crawlee';
-import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
 import fs from 'fs';
 import path from 'path';
+import { WikipediaAPI } from '../src/scraper/utils/wikipedia-api.js';
+import { parseCountryFromWikitext } from '../src/scraper/parsers/wikitext-country-parser.js';
 
 const OUTPUT_BASE = 'tests/snapshots';
+const WIKITEXT_BASE = path.join(OUTPUT_BASE, 'wikitext');
 const LANGS = ['en', 'pt', 'fr', 'it', 'es'];
-const CATEGORY = 'sovereign_states';
 
 function sanitize(name: string): string {
   try {
@@ -16,84 +16,80 @@ function sanitize(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
 }
 
-for (const lang of LANGS) {
-  const dir = path.join(OUTPUT_BASE, lang, CATEGORY);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-}
-
-function getMinimalHtml($: CheerioAPI, skipInfobox: boolean = false): string {
-  const h1 = $('h1#firstHeading');
-  const infoboxes = skipInfobox ? '' : $('table.infobox, table.infobox_v2, table.infobox_v3, table.sinottico, div.infobox, div.infobox_v2, div.infobox_v3').toString();
-  const paragraphs = $('#mw-content-text p').slice(0, 10).toString();
-
-  return `<html><head><meta charset="utf-8"></head><body>${h1.toString()}${infoboxes}${paragraphs}</body></html>`;
-}
-
-const allArticleIds = new Set<string>();
-
-const crawler = new CheerioCrawler({
-  maxConcurrency: 10,
-  requestHandler: async ({ $, request }) => {
-    if (request.label === 'list') {
-      const rows = $('table.wikitable').first().find('tbody > tr').toArray();
-      const countryLinks = rows.map(r => {
-        const a = $(r).find('td').first().find('a');
-        return { 
-          title: a.attr('title'), 
-          href: a.attr('href') 
-        };
-      }).filter(l => l.title && l.href && !l.href.includes('redlink=1'));
-
-      const titles = countryLinks.map(l => l.title!) as string[];
-      const languages = ['pt', 'fr', 'it', 'es'];
-      const allLangLinks = await WikipediaAPI.fetchTranslations(titles, languages);
-
-      for (const link of countryLinks) {
-        const baseName = link.title!;
-        const enUrl = `https://en.wikipedia.org${link.href}`;
-        
-        // Enqueue English
-        await crawler.addRequests([{ url: enUrl, label: 'country_en', userData: { baseName } }]);
-        
-        // Enqueue Localized
-        const langLinks = allLangLinks[baseName];
-        if (langLinks) {
-          for (const lang of languages) {
-            if (langLinks[lang]) {
-              const locUrl = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(langLinks[lang])}`;
-              await crawler.addRequests([{ url: locUrl, label: 'country_lang', userData: { baseName, lang } }]);
-            }
-          }
-        }
-      }
-      return;
-    }
-
-    if (request.label === 'country_en') {
-      const baseName = request.userData.baseName;
-      const fileName = `${sanitize(baseName)}.html`;
-      fs.writeFileSync(path.join(OUTPUT_BASE, 'en', CATEGORY, fileName), getMinimalHtml($));
-      
-      // CountryParser usage removed as it is legacy.
-      // Snapshot downloader is maintained for backwards compat with legacy HTML snapshots.
-    }
-
-    if (request.label === 'country_lang') {
-      const { baseName, lang } = request.userData;
-      fs.writeFileSync(path.join(OUTPUT_BASE, lang, CATEGORY, `${sanitize(baseName)}.html`), getMinimalHtml($, true));
-    }
-  }
-});
-
 async function run() {
-  log.info('Starting Snapshot Downloader...');
-  await crawler.run([{ url: 'https://en.wikipedia.org/wiki/List_of_sovereign_states', label: 'list' }]);
+  console.log('Starting Wikitext Snapshot Downloader...');
   
-  log.info(`Fetching translations for ${allArticleIds.size} unique articles...`);
+  // 1. DISCOVERY
+  const discoveryUrl = `https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Member_states_of_the_United_Nations&cmlimit=500&format=json`;
+  const response = await fetch(discoveryUrl);
+  const data = await response.json();
+  const titles = data.query.categorymembers.map((m: any) => m.title);
+
+  // 2. LANGLINK PREFETCH
+  const allLangLinks = await WikipediaAPI.fetchTranslations(titles, ['pt', 'fr', 'it', 'es']);
+  
+  // Initialize structure
+  if (!fs.existsSync(WIKITEXT_BASE)) fs.mkdirSync(WIKITEXT_BASE, { recursive: true });
+  for (const lang of LANGS) {
+    const dir = path.join(WIKITEXT_BASE, lang);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  }
+
+  // 3. WIKITEXT SNAPSHOTS
+  const semaphore = new Semaphore(2);
+  const allArticleIds = new Set<string>();
+
+  await Promise.all(titles.map(async (title: string) => {
+    const langLinks = allLangLinks[title] || {};
+    
+    for (const lang of LANGS) {
+      const articleTitle = lang === 'en' ? title : langLinks[lang];
+      if (!articleTitle) continue;
+
+      await semaphore.acquire();
+      try {
+        const wikitext = await WikipediaAPI.fetchWikitext(articleTitle, lang);
+        fs.writeFileSync(path.join(WIKITEXT_BASE, lang, `${sanitize(title)}.txt`), wikitext);
+        
+        // Collect articleIds for later
+        if (lang === 'en') {
+          const parsed = parseCountryFromWikitext(wikitext, 'en');
+          [
+            ...(parsed.capital?.map(i => i.articleId) || []),
+            ...(parsed.largestCity?.map(i => i.articleId) || []),
+            ...(parsed.officialLanguage?.map(i => i.articleId) || []),
+            ...(parsed.currency?.map(i => i.articleId) || []),
+            ...(parsed.demonym?.map(i => i.articleId) || []),
+            ...(parsed.government?.map(i => i.articleId) || []),
+            ...(parsed.timeZone?.map(i => i.articleId) || [])
+          ].forEach(id => id && allArticleIds.add(id.replace(/_/g, ' ')));
+        }
+      } finally {
+        semaphore.release();
+      }
+    }
+  }));
+
+  // 4. ARTICLE ID TRANSLATIONS
+  console.log(`Fetching translations for ${allArticleIds.size} unique articles...`);
   const translations = await WikipediaAPI.fetchTranslations(Array.from(allArticleIds), ['pt', 'fr', 'it', 'es']);
-  
   fs.writeFileSync(path.join(OUTPUT_BASE, 'translations.json'), JSON.stringify(translations, null, 2));
-  log.info('Finished snapshots and translations.');
+
+  console.log('Finished snapshots and translations.');
 }
 
-run();
+class Semaphore {
+  private count: number;
+  private queue: (() => void)[] = [];
+  constructor(count: number) { this.count = count; }
+  async acquire() {
+    if (this.count > 0) { this.count--; return; }
+    await new Promise(resolve => this.queue.push(resolve as any));
+  }
+  release() {
+    if (this.queue.length > 0) { const resolve = this.queue.shift(); resolve!(); }
+    else this.count++;
+  }
+}
+
+run().catch(err => { console.error('Downloader failed', err); process.exit(1); });
